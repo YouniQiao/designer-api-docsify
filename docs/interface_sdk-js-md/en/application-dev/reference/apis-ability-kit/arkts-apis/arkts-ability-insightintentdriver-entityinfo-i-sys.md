@@ -13,7 +13,8 @@ EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-i
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## className

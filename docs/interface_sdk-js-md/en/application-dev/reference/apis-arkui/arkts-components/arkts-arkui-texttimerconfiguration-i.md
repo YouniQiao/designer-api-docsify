@@ -10,6 +10,11 @@ Defines the **TextTimer** configuration used by the **ContentModifier** API. You
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## count
 
 ```TypeScript

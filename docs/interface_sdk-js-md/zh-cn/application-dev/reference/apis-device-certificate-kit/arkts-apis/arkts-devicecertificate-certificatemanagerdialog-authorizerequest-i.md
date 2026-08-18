@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## certPurpose
 
 ```TypeScript

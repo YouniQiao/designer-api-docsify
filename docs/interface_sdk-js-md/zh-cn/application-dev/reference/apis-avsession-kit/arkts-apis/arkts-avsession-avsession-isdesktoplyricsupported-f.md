@@ -1,5 +1,10 @@
 # isDesktopLyricSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isDesktopLyricSupported
 
 ```TypeScript

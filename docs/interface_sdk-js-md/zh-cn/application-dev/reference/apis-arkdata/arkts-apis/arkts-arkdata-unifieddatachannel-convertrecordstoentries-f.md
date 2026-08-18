@@ -1,5 +1,10 @@
 # convertRecordsToEntries
 
+## 导入模块
+
+```TypeScript
+```
+
 ## convertRecordsToEntries
 
 ```TypeScript

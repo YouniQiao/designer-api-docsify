@@ -3,15 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceNavigation } from 'AtomicServiceNavigation';
-import { NavDestinationBuilder } from 'NavDestinationBuilder';
-import { MixMode } from 'MixMode';
-import { GradientAlpha } from 'GradientAlpha';
-import { BackgroundTheme } from 'BackgroundTheme';
-import { TitleBarType } from 'TitleBarType';
-import { SideBarOptions } from 'SideBarOptions';
-import { TitleOptions } from 'TitleOptions';
-import { GradientBackground } from 'GradientBackground';
+import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from '@kit.ArkUI';
 ```
 
 ## Summary

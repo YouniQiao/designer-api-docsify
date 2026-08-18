@@ -1,0 +1,18 @@
+# PhotoConflictFunctions（系统接口）
+
+Photo Conflict Functions object.
+
+**继承/实现关系：** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#macroquery系统接口)
+
+**起始版本：** 23
+
+<!--Device-camera-interface PhotoConflictFunctions--><!--Device-camera-interface PhotoConflictFunctions-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+```

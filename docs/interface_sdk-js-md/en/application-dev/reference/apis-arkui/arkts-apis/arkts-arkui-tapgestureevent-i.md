@@ -10,6 +10,11 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#basegestureev
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## tapLocation
 
 ```TypeScript

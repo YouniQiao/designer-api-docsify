@@ -11,7 +11,7 @@ Describes the page routing state.
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'router';
+import { router } from '@kit.ArkUI';
 ```
 
 ## message

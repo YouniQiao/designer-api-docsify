@@ -1,5 +1,10 @@
 # getChineseCalendar
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getChineseCalendar
 
 ```TypeScript

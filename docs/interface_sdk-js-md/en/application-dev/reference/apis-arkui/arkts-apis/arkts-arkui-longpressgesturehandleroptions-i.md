@@ -10,6 +10,11 @@ Provides the parameters of the long press gesture handler. Inherits from [BaseHa
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## allowableMovement
 
 ```TypeScript

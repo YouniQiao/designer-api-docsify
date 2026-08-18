@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'shortcutManager';
+import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## deleteDynamicShortcutInfos

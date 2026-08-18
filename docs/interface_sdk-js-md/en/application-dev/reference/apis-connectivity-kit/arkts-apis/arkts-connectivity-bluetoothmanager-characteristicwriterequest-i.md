@@ -15,7 +15,7 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

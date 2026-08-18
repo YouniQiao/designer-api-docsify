@@ -13,7 +13,10 @@ Options for setting the render target of an audio renderer. This parameter takes
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'audio';
+import { audio } from '@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## streamId

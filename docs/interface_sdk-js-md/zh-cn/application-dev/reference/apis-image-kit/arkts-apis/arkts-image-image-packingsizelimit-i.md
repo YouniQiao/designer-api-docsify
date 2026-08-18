@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
+## 导入模块
+
+```TypeScript
+```
+
 ## level
 
 ```TypeScript

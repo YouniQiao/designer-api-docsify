@@ -1,5 +1,10 @@
 # getRule
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getRule
 
 ```TypeScript

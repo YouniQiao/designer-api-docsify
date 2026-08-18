@@ -8,6 +8,11 @@ AdsBlockManager是ArkWeb框架中用于管理Web组件广告过滤功能的类�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addAdsBlockAllowedList
 
 ```TypeScript

@@ -11,7 +11,7 @@ Describes the configuration options for polygon-to-polygon transformation mappin
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'matrix4';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## dst

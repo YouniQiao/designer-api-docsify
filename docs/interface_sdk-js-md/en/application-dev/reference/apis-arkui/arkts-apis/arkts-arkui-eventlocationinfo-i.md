@@ -8,6 +8,11 @@ Provides coordinate information for tap gestures.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getCurrentLocalPosition
 
 ```TypeScript

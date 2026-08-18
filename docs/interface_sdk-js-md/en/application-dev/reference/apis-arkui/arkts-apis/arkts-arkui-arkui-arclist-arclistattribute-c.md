@@ -13,10 +13,7 @@ In addition to the universal attributes, the following attributes are supported.
 ## Modules to Import
 
 ```TypeScript
-import { ArcList } from 'ArcList';
-import { ArcListItem } from 'ArcListItem';
-import { ArcListAttribute } from 'ArcListAttribute';
-import { ArcListItemAttribute } from 'ArcListItemAttribute';
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
 ## cachedCount

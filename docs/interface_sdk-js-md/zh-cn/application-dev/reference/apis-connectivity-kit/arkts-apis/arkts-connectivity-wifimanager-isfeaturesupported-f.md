@@ -1,5 +1,10 @@
 # isFeatureSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFeatureSupported
 
 ```TypeScript

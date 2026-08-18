@@ -8,6 +8,11 @@ Describes the text baseline offset style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

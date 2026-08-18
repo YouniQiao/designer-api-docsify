@@ -8,6 +8,11 @@ Sets the progress, maximum value, and color for a mask.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

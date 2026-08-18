@@ -12,6 +12,11 @@ The webNativeMessagingExtensionManager module provides the capability of managin
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

@@ -11,7 +11,7 @@ Returns child class objects specific to the network type.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'radio';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## dBm

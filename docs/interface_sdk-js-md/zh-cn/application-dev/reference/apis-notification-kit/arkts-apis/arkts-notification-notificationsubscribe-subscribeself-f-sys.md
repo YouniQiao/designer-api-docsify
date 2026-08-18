@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from 'notificationSubscribe';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## subscribeSelf

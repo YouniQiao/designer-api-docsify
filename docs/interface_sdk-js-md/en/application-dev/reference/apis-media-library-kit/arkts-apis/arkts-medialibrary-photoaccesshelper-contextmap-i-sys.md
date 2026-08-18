@@ -13,7 +13,7 @@ Provides APIs for input Context Map.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## topicField

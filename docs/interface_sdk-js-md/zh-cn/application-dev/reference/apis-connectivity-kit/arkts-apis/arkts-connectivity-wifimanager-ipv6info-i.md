@@ -8,6 +8,11 @@ WLAN IPv6信息。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
+## 导入模块
+
+```TypeScript
+```
+
 ## gateway
 
 ```TypeScript

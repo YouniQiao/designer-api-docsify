@@ -13,7 +13,8 @@ This module provides extension abilities of Basic Services Kit for static subscr
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from 'StaticSubscriberExtensionAbility';
+import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onReceiveEvent

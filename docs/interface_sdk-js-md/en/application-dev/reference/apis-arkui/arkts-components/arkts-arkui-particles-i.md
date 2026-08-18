@@ -8,6 +8,11 @@ Defines the particle array. > **NOTE：**> > To standardize anonymous object def
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## particles
 
 ```TypeScript

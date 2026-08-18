@@ -1,5 +1,10 @@
 # setNetworkInterfaceDisabledSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setNetworkInterfaceDisabledSync
 
 ```TypeScript

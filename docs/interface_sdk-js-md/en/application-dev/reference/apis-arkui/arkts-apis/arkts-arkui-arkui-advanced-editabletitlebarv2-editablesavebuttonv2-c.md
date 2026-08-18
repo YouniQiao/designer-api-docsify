@@ -11,20 +11,7 @@ Declaration of the save button configuration.
 ## Modules to Import
 
 ```TypeScript
-import { EditableLeftIconTypeV2 } from 'EditableLeftIconTypeV2';
-import { EditableTitleBarV2 } from 'EditableTitleBarV2';
-import { EditableLeftIconV2 } from 'EditableLeftIconV2';
-import { EditableLeftIconV2Options } from 'EditableLeftIconV2Options';
-import { EditableTitleV2 } from 'EditableTitleV2';
-import { EditableTitleV2Options } from 'EditableTitleV2Options';
-import { EditableTitleBarItemV2 } from 'EditableTitleBarItemV2';
-import { EditableTitleBarItemV2Options } from 'EditableTitleBarItemV2Options';
-import { EditableTitleBarMenuItemV2 } from 'EditableTitleBarMenuItemV2';
-import { EditableTitleBarMenuItemV2Options } from 'EditableTitleBarMenuItemV2Options';
-import { EditableSaveButtonV2 } from 'EditableSaveButtonV2';
-import { EditableSaveButtonV2Options } from 'EditableSaveButtonV2Options';
-import { EditableTitleBarStyleV2 } from 'EditableTitleBarStyleV2';
-import { EditableTitleBarStyleV2Options } from 'EditableTitleBarStyleV2Options';
+import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -49,7 +36,7 @@ Constructor of EditableSaveButtonV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableSaveButtonV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | No | The options of the save button |
+| options | [EditableSaveButtonV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | No | The options of the save button |
 
 ## defaultFocus
 
@@ -106,7 +93,7 @@ Whether to show the save button.
 
 Callback function when click on the save button.
 
-**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

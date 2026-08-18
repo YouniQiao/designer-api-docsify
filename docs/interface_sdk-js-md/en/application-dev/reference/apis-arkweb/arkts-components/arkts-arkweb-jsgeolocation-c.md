@@ -8,6 +8,16 @@ JsGeolocation is the authorization response object provided to the app when the 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
+```
+
 ## constructor
 
 ```TypeScript
@@ -46,5 +56,5 @@ Sets the geolocation permission status of a web page. This method must be called
 | --- | --- | --- | --- |
 | origin | string | Yes | Web origin that initiates the location permission request, used to identify the source of a geolocation request from a specific website. <br>The origin format must comply with the format defined in RFC 6454. |
 | allow | boolean | Yes | Geolocation permission status. <br>The value **true** means to enable the geolocation permission, and **false** means the opposite. |
-| retain | boolean | Yes | Whether to allow the location permission state to be saved to the system. The location permissions saved to the system can be managed through the [GeolocationPermissions](../arkts-apis/arkts-arkweb-webview-geolocationpermissions-c.md#geolocationpermissions) API. <br>The value **true** indicates that the location permission state is saved to the system, and **false** indicates that it is not saved to the system. |
+| retain | boolean | Yes | Whether to allow the location permission state to be saved to the system. The location permissions saved to the system can be managed through the [GeolocationPermissions](../../apis-na/arkts-apis/arkts-na-webview-geolocationpermissions-c.md#geolocationpermissions) API. <br>The value **true** indicates that the location permission state is saved to the system, and **false** indicates that it is not saved to the system. |
 

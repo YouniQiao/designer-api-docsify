@@ -1,5 +1,10 @@
 # getDefaultInputMethod
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDefaultInputMethod
 
 ```TypeScript

@@ -11,7 +11,8 @@ Describes information about the automatic synchronization trigger mode.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'cloudData';
+import { cloudData } from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## mode

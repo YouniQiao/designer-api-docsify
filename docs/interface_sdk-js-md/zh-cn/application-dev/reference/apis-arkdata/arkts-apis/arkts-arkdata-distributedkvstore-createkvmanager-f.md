@@ -1,5 +1,10 @@
 # createKVManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createKVManager
 
 ```TypeScript

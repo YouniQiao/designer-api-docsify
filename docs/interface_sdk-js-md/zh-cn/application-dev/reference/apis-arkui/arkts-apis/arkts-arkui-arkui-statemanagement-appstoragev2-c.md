@@ -8,6 +8,11 @@ AppStorageV2提供应用级全局共享状态变量的能力，开发者可以�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## connect
 
 ```TypeScript

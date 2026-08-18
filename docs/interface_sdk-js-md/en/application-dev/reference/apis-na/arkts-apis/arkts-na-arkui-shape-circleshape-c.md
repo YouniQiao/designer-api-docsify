@@ -2,7 +2,7 @@
 
 Defines a circle drawing class.
 
-**Inheritance/Implementation:** CircleShape extends [BaseShape](arkts-na-arkui-shape-baseshape-c.md#baseshape)
+**Inheritance/Implementation:** CircleShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md#baseshape)
 
 **Since:** 23
 
@@ -11,6 +11,11 @@ Defines a circle drawing class.
 <!--Device-unnamed-export declare class CircleShape--><!--Device-unnamed-export declare class CircleShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## constructor
 
@@ -34,5 +39,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](arkts-na-arkui-shape-shapesize-i.md) | No |  |
+| options | [ShapeSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-shapesize-i.md) | No |  |
 

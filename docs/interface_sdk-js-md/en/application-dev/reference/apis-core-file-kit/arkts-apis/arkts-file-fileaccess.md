@@ -15,7 +15,7 @@ The **fileAccess** module provides a framework for accessing and operating user 
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## Summary

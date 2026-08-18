@@ -8,6 +8,11 @@ Provides optional parameters for **ToolBarItem** configuration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## placement
 
 ```TypeScript

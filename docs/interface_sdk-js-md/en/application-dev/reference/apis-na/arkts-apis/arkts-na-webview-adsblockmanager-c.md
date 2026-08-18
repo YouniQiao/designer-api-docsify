@@ -10,6 +10,11 @@ This class is used to set adblock config.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## addAdsBlockAllowedList
 
 ```TypeScript

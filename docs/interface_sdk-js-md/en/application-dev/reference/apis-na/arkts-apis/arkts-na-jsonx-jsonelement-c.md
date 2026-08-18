@@ -10,6 +10,11 @@ Core class representing a JSON element that can hold any valid JSON value. Provi
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_get
 
 ```TypeScript

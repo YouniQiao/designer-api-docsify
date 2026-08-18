@@ -1,5 +1,10 @@
 # setxattrSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setxattrSync
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getFontDescriptorByFullName
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFontDescriptorByFullName
 
 ```TypeScript

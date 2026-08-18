@@ -11,7 +11,11 @@ CompletionHandler provides two callback functions, [onRequestSuccess](#onrequest
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandler } from 'CompletionHandler';
+import { CompletionHandler } from '@kit.AbilityKit';
+import { CompletionHandler } from '@kit.AbilityKit';
+import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
 ```
 
 ## onRequestFailure

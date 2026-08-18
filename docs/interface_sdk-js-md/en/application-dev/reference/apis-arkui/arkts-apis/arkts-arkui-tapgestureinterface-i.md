@@ -10,6 +10,11 @@ TapGesture is used to trigger a tap gesture with one, two, or more taps. > **NOT
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

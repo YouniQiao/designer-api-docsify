@@ -11,7 +11,8 @@ Defines the authentication result.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## account

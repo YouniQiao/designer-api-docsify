@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from 'NavPushPathHelper';
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## Summary

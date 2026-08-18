@@ -23,7 +23,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { commonType } from 'commonType';
+import { commonType } from '@kit.ArkData';
+import { commonType } from '@kit.ArkData';
 ```
 
 ## Summary

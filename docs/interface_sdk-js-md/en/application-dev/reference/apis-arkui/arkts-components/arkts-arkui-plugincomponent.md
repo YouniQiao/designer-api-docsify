@@ -1,6 +1,6 @@
 # PluginComponent
 
-The **PluginComponent** allows an application to display external UI from another application. To implement update through inter-process communication (IPC), see [@ohos.pluginComponent](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-n.md#plugincomponentmanager).
+The **PluginComponent** allows an application to display external UI from another application. To implement update through inter-process communication (IPC), see [@ohos.pluginComponent](../arkts-apis/arkts-arkui-plugincomponentmanager-n.md#plugincomponentmanager).
 
 ## Child Components Not supported
 

@@ -1,5 +1,10 @@
 # isTokenizerSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isTokenizerSupported
 
 ```TypeScript

@@ -12,6 +12,11 @@ Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPortraitEffect
 
 ```TypeScript

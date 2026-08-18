@@ -8,13 +8,18 @@ USB配件信息。
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## description
 
 ```TypeScript
 description: string
 ```
 
-配件的描述。
+配件的描述信息，由厂商提供，用于说明配件的功能、用途或特性。
 
 **类型：** string
 

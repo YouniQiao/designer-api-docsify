@@ -8,6 +8,11 @@ ImageSource的初始化选项。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sourceDensity
 
 ```TypeScript

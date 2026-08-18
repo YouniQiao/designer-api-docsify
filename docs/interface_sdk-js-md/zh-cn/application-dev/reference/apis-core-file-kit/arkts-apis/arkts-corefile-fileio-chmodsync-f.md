@@ -1,5 +1,10 @@
 # chmodSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## chmodSync
 
 ```TypeScript

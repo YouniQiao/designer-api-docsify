@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { logLibrary } from 'logLibrary';
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## remove

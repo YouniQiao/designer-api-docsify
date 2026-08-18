@@ -10,6 +10,11 @@ autoFillManager模块为应用提供账号、密码、地址、电话号码等�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

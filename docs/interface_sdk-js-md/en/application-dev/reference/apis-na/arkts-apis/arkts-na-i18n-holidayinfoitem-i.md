@@ -10,6 +10,11 @@ Represents the holiday information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## baseName
 
 ```TypeScript
@@ -58,7 +63,7 @@ localNames?: Array<HolidayLocalName>
 
 Local names of the holiday.
 
-**Type:** Array&lt;[HolidayLocalName](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-holidaylocalname-i.md)&gt;
+**Type:** Array&lt;[HolidayLocalName](arkts-na-i18n-holidaylocalname-i.md)&gt;
 
 **Since:** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from 'batteryInfo';
+import { batteryInfo } from '@kit.BasicServicesKit';
 ```
 
 ## estimatedRemainingChargeTime

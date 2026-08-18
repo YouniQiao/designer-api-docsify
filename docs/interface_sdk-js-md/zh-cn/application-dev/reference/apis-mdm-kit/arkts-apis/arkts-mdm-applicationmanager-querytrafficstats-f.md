@@ -1,5 +1,10 @@
 # queryTrafficStats
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryTrafficStats
 
 ```TypeScript

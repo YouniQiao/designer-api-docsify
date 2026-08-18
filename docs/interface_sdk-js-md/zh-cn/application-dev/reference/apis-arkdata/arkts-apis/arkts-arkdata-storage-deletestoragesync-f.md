@@ -1,5 +1,10 @@
 # deleteStorageSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deleteStorageSync
 
 ```TypeScript

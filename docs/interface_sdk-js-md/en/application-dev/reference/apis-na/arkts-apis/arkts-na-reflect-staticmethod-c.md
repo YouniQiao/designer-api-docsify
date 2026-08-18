@@ -12,6 +12,11 @@ Represents static method of class
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## equals
 
 ```TypeScript

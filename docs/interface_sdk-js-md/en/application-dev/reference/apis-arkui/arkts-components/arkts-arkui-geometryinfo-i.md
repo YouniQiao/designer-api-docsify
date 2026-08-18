@@ -10,6 +10,11 @@ Provides layout geometry information of the parent component (a custom component
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## borderWidth
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # uninstallUserCertificate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## uninstallUserCertificate
 
 ```TypeScript

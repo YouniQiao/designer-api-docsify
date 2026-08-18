@@ -10,6 +10,11 @@ pixelmap object with release function.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## release
 
 ```TypeScript

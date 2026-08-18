@@ -12,6 +12,13 @@ The distributed data management module implements collaboration between database
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## Summary
 
 ### Namespaces

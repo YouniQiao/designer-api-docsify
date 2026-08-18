@@ -10,6 +10,11 @@ CommonOptions defines common options for the date time picker. > **Description:*
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enableHapticFeedback
 
 ```TypeScript

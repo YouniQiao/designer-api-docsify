@@ -1,5 +1,10 @@
 # Boolean
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

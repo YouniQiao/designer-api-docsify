@@ -10,6 +10,11 @@ Defines the blankless loading parameter. Device behavior differences: Only the m
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## callback
 
 ```TypeScript
@@ -18,7 +23,7 @@ callback?: Callback<BlanklessFrameInterpolationInfo>
 
 Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
 

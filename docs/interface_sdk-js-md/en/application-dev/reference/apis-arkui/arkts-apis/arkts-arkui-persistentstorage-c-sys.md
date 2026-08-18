@@ -8,6 +8,11 @@ For details about how to use PersistentStorage on the UI, see [PersistentStorage
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

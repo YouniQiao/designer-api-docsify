@@ -8,6 +8,11 @@ Defines the click effect.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## level
 
 ```TypeScript

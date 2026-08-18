@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## didExceedMaxLines
 
 ```TypeScript

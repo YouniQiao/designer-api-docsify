@@ -1,5 +1,10 @@
 # getOriginalFileName
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getOriginalFileName
 
 ```TypeScript

@@ -13,7 +13,7 @@ Defines the network configuration for the Ethernet connection.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from 'ethernet';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## dnsServers

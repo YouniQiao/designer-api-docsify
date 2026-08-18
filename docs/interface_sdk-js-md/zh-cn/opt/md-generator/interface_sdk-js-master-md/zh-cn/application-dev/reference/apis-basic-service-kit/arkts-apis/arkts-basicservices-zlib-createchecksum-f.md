@@ -1,0 +1,38 @@
+# createChecksum
+
+## 导入模块
+
+```TypeScript
+```
+
+## createChecksum
+
+```TypeScript
+function createChecksum(): Promise<Checksum>
+```
+
+创建校验对象。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-zlib-function createChecksum(): Promise<Checksum>--><!--Device-zlib-function createChecksum(): Promise<Checksum>-End-->
+
+**系统能力：** SystemCapability.BundleManager.Zlib
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; |
+
+**示例**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+zlib.createChecksum().then((data) => {
+  console.info('createChecksum success');
+})
+```

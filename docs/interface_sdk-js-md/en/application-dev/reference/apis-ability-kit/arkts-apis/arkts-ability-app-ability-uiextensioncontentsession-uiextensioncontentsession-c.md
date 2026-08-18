@@ -11,7 +11,8 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionContentSession } from 'UIExtensionContentSession';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## getUIExtensionWindowProxy
@@ -379,7 +380,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Execution result of starting the UIExtensionAbility. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -453,7 +454,7 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 | --- | --- | --- | --- |
 | type | string | Yes | The type of target ability. |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Indicates the abilityStartCallback. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Indicates the abilityStartCallback. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of startAbility. |
 
 **Error codes:**
@@ -485,7 +486,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Execution result of starting the UIExtensionAbility. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
 
 **Return value:**
 
@@ -564,7 +565,7 @@ Starts the UIAbility or UIExtensionAbility by type. If the caller application is
 | --- | --- | --- | --- |
 | type | string | Yes | The type of target ability. |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Indicates the abilityStartCallback. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Indicates the abilityStartCallback. |
 
 **Return value:**
 

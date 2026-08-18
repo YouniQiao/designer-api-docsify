@@ -1,5 +1,10 @@
 # disallowOsAccountAddition
 
+## 导入模块
+
+```TypeScript
+```
+
 ## disallowOsAccountAddition
 
 ```TypeScript

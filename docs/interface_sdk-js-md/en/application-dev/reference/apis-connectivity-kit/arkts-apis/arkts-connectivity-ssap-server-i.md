@@ -11,7 +11,7 @@ Manages SSAP server. Before calling a SSAP server method, you must use [createSe
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'ssap';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## addService

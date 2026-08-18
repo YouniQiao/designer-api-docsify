@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript
@@ -66,5 +71,5 @@ getState(): CommonState
 
 | 类型 | 说明 |
 | --- | --- |
-| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
+| [CommonState](../../apis-na/arkts-apis/arkts-na-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
 

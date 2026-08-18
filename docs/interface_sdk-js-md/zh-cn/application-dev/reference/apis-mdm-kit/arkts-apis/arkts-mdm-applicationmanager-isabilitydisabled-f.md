@@ -1,5 +1,10 @@
 # isAbilityDisabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAbilityDisabled
 
 ```TypeScript

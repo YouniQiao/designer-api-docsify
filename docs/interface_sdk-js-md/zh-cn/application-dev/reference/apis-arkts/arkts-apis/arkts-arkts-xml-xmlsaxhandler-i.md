@@ -8,6 +8,11 @@ XmlSAXHandler定义了SAX解析xml文本时的回调方法。开发者需要实�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## characters
 
 ```TypeScript

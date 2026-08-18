@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Advertising.OAID
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

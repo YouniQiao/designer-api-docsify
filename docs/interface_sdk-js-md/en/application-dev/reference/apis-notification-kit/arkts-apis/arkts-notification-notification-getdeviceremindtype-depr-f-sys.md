@@ -1,5 +1,15 @@
 # getDeviceRemindType (System API)
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
+```
+
 ## getDeviceRemindType
 
 ```TypeScript

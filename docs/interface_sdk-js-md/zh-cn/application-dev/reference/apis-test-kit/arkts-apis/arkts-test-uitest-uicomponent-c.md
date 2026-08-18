@@ -12,6 +12,11 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## click
 
 ```TypeScript

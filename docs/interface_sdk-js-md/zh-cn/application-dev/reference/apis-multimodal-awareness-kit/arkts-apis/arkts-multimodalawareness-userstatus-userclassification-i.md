@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## ageGroup
 
 ```TypeScript

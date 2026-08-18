@@ -12,6 +12,11 @@ Represents error that is thrown when coroutines limit is reached
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

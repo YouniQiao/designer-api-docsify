@@ -1,5 +1,10 @@
 # subscribeThermalLevel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## subscribeThermalLevel
 
 ```TypeScript
@@ -22,7 +27,7 @@ function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | 是 | 回调函数，返回变化后的热档位；该参数是一个函数类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | 是 | 回调函数，返回变化后的热档位；该参数是一个函数类型。 |
 
 **示例**
 

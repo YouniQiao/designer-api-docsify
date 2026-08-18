@@ -8,6 +8,11 @@ Defines the window callback.
 
 **系统能力：** SystemCapability.Window.SessionManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

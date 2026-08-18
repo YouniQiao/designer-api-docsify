@@ -6,7 +6,7 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **Deprecated since:** 9
 
-**Substitutes:** [LRUCache](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#lrucache)
+**Substitutes:** [LRUCache](arkts-arkts-util-lrucache-c.md#lrucache)
 
 <!--Device-util-class LruBuffer--><!--Device-util-class LruBuffer-End-->
 
@@ -15,7 +15,42 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'util';
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { util } from '@kit.ArkTS';
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -62,7 +97,7 @@ Performs subsequent operations after a value is removed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [afterRemoval](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#afterremoval)
+**Substitutes:** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval)
 
 <!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
@@ -114,7 +149,7 @@ Clears key-value pairs from this cache. The **afterRemoval()** API will be calle
 
 **Deprecated since:** 9
 
-**Substitutes:** [clear](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear)
+**Substitutes:** [clear](arkts-arkts-util-lrucache-c.md#clear)
 
 <!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
 
@@ -171,7 +206,7 @@ Checks whether this cache contains the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
 
@@ -211,7 +246,7 @@ Creates a value if the value of the specified key is not available.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createDefault](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#createdefault)
+**Substitutes:** [createDefault](arkts-arkts-util-lrucache-c.md#createdefault)
 
 <!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
 
@@ -248,7 +283,7 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [entries](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#entries)
+**Substitutes:** [entries](arkts-arkts-util-lrucache-c.md#entries)
 
 <!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
 
@@ -280,7 +315,7 @@ Obtains the value of the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#get)
+**Substitutes:** [get](arkts-arkts-util-lrucache-c.md#get)
 
 <!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
 
@@ -320,7 +355,7 @@ Obtains the capacity of this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCapacity](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getcapacity)
+**Substitutes:** [getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity)
 
 <!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
 
@@ -353,7 +388,7 @@ Obtains the number of return values for **createDefault()**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCreateCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getcreatecount)
+**Substitutes:** [getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount)
 
 <!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
 
@@ -387,7 +422,7 @@ Obtains the number of times that the queried values are matched.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMatchCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getmatchcount)
+**Substitutes:** [getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount)
 
 <!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
 
@@ -422,7 +457,7 @@ Obtains the number of times that the queried values are mismatched.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMissCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getmisscount)
+**Substitutes:** [getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount)
 
 <!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
 
@@ -457,7 +492,7 @@ Obtains the number of additions to this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPutCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getputcount)
+**Substitutes:** [getPutCount](arkts-arkts-util-lrucache-c.md#getputcount)
 
 <!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
 
@@ -491,7 +526,7 @@ Obtains the number of removals from this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemovalCount](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#getremovalcount)
+**Substitutes:** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount)
 
 <!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
 
@@ -527,7 +562,7 @@ Checks whether this cache is empty.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isEmpty](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#isempty)
+**Substitutes:** [isEmpty](arkts-arkts-util-lrucache-c.md#isempty)
 
 <!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
 
@@ -561,7 +596,7 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 
 **Deprecated since:** 9
 
-**Substitutes:** [keys](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#keys)
+**Substitutes:** [keys](arkts-arkts-util-lrucache-c.md#keys)
 
 <!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
 
@@ -595,7 +630,7 @@ Adds a key-value pair to this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [put](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#put)
+**Substitutes:** [put](arkts-arkts-util-lrucache-c.md#put)
 
 <!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
 
@@ -635,7 +670,7 @@ Removes the specified key and its value from this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [remove](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#remove)
+**Substitutes:** [remove](arkts-arkts-util-lrucache-c.md#remove)
 
 <!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
 
@@ -675,7 +710,7 @@ Obtains the string representation of this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [toString](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#tostring)
+**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#tostring)
 
 <!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
 
@@ -711,7 +746,7 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateCapacity](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updatecapacity)
+**Substitutes:** [updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity)
 
 <!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
 
@@ -742,7 +777,7 @@ Obtains all values in this cache, listed from the most to the least recently acc
 
 **Deprecated since:** 9
 
-**Substitutes:** [values](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#values)
+**Substitutes:** [values](arkts-arkts-util-lrucache-c.md#values)
 
 <!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
 

@@ -15,7 +15,7 @@ Image options setted when need to get the image objects.
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'componentUtils';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## images

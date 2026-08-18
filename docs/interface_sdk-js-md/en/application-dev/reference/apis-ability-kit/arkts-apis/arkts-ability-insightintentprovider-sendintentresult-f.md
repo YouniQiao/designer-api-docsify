@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentProvider } from 'insightIntentProvider';
+import { insightIntentProvider } from '@kit.AbilityKit';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## sendIntentResult

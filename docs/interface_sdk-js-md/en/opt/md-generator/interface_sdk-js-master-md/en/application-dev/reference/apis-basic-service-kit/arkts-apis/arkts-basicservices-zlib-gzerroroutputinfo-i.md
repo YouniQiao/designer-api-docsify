@@ -1,0 +1,50 @@
+# GzErrorOutputInfo
+
+GzError return value information.
+
+**Since:** 23
+
+<!--Device-zlib-interface GzErrorOutputInfo--><!--Device-zlib-interface GzErrorOutputInfo-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+## Modules to Import
+
+```TypeScript
+```
+
+## status
+
+```TypeScript
+status: ReturnStatus
+```
+
+Return Zlib status ReturnStatus the specific meaning is defined as enum.
+
+**Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-GzErrorOutputInfo-status: ReturnStatus--><!--Device-GzErrorOutputInfo-status: ReturnStatus-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+## statusMsg
+
+```TypeScript
+statusMsg: string
+```
+
+The last status message reported on the zlib file.
+
+**Type:** string
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-GzErrorOutputInfo-statusMsg: string--><!--Device-GzErrorOutputInfo-statusMsg: string-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib

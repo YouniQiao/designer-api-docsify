@@ -1,5 +1,10 @@
 # getAudioHapticManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAudioHapticManager
 
 ```TypeScript

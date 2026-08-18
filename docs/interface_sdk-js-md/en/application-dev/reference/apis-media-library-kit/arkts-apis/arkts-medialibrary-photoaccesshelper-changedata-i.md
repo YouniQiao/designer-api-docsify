@@ -11,7 +11,7 @@ Defines the return value of the listener callback.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## extraUris

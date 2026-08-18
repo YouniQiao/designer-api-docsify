@@ -10,6 +10,11 @@ For details about how to use environment parameters, see [Environment: Device En
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## EnvProp
 
 ```TypeScript

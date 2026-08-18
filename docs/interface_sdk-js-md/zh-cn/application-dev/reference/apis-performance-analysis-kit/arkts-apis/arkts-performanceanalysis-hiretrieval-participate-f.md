@@ -1,5 +1,10 @@
 # participate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## participate
 
 ```TypeScript

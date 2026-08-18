@@ -8,6 +8,11 @@ Defines the console info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## assert
 
 ```TypeScript

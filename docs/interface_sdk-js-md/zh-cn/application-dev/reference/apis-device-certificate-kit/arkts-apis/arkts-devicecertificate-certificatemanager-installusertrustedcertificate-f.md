@@ -1,5 +1,10 @@
 # installUserTrustedCertificate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## installUserTrustedCertificate
 
 ```TypeScript

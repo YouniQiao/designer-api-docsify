@@ -11,7 +11,8 @@ The Text module provides a set of APIs for text layout and font management. It a
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'text';
+import { text } from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

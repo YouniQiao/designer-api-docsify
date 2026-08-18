@@ -12,6 +12,11 @@ DateOptions defines options for the date picker. Inherits from [CommonOptions](a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lunar
 
 ```TypeScript

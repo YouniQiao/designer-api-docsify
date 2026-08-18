@@ -1,5 +1,10 @@
 # once_SensorId.ROTATION_VECTOR
 
+## 导入模块
+
+```TypeScript
+```
+
 ## once_SensorId.ROTATION_VECTOR
 
 ```TypeScript
@@ -19,7 +24,7 @@ function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorR
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.ROTATION_VECTOR | 是 | 传感器类型，该值固定为SensorId.ROTATION_VECTOR。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为RotationVectorResponse。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为RotationVectorResponse。 |
 
 **错误码：**
 

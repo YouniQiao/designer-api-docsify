@@ -1,5 +1,10 @@
 # setFormsRecyclable（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setFormsRecyclable
 
 ```TypeScript
@@ -69,7 +74,7 @@ function setFormsRecyclable(formIds: Array<string>, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当设置卡片可回收成功时，error为undefined；否则抛出异常。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当设置卡片可回收成功时，error为undefined；否则抛出异常。 |
 
 **错误码：**
 

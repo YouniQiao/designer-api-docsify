@@ -8,6 +8,11 @@ Provide an interface for the text style of picker
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

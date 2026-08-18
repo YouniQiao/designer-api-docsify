@@ -1,5 +1,10 @@
 # getFontCount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFontCount
 
 ```TypeScript

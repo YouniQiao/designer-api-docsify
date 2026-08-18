@@ -11,7 +11,8 @@ Represents the options for setting authenticator properties.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## parameters

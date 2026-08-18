@@ -1,5 +1,10 @@
 # lib.es2019.string
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

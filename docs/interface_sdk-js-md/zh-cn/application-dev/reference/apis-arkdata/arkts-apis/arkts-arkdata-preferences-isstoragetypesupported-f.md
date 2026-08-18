@@ -1,5 +1,10 @@
 # isStorageTypeSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isStorageTypeSupported
 
 ```TypeScript

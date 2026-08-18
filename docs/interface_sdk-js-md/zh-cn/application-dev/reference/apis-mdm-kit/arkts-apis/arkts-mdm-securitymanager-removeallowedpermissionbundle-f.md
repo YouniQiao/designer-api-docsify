@@ -1,5 +1,10 @@
 # removeAllowedPermissionBundle
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeAllowedPermissionBundle
 
 ```TypeScript

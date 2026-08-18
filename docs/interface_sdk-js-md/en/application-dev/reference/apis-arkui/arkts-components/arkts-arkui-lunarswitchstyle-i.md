@@ -8,6 +8,11 @@ Defines the style of the lunar calendar switch in the **DatePickerDialog** compo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## selectedColor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # isIsolatedProcess
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isIsolatedProcess
 
 ```TypeScript

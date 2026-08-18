@@ -10,6 +10,11 @@ Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## domain
 
 ```TypeScript
@@ -144,7 +149,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 Gets the cookie's samesite policy.
 
-**Type:** [WebHttpCookieSameSitePolicy](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
+**Type:** [WebHttpCookieSameSitePolicy](arkts-na-webview-webhttpcookiesamesitepolicy-e.md)
 
 **Since:** 23
 

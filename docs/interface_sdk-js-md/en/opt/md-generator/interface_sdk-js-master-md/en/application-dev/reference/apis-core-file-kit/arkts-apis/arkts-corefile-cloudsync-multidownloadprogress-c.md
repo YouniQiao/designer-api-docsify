@@ -1,0 +1,256 @@
+# MultiDownloadProgress
+
+Represents the batch download progress of a file from the Drive Kit.
+
+**Since:** 23
+
+<!--Device-cloudSync-class MultiDownloadProgress--><!--Device-cloudSync-class MultiDownloadProgress-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## getFailedFiles
+
+```TypeScript
+getFailedFiles(): Array<FailedFileInfo>
+```
+
+Obtains the list of files that fail to be downloaded in batches.
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>--><!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[FailedFileInfo](arkts-corefile-cloudsync-failedfileinfo-i.md)&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| 22400005 |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let taskId = -1;
+let failedList: Array<cloudSync.FailedFileInfo> = [];
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (data: cloudSync.MultiDownloadProgress) => {
+  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
+  if (data.state == cloudSync.State.FAILED) {
+    console.info(`Batch download stopped, error type: ${data.errType}.`);
+    failedList = data.getFailedFiles();
+  }
+};
+
+try {
+  fileCache.on('batchDownload', callback);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
+}
+
+let uriList: Array<string> = [];
+fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((downloadId: number) => {
+  taskId = downloadId;
+  console.info("start batch download successfully");
+}).catch((err: BusinessError) => {
+  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+## getSuccessfulFiles
+
+```TypeScript
+getSuccessfulFiles(): Array<string>
+```
+
+Obtains the list of files that are successfully downloaded in batches.
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>--><!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| 22400005 |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let finishedList: Array<string> = [];
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (data: cloudSync.MultiDownloadProgress) => {
+  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
+  if (data.state == cloudSync.State.COMPLETED) {
+    console.info(`Batch download stopped, error type: ${data.errType}.`);
+    finishedList = data.getSuccessfulFiles();
+  }
+};
+
+try {
+  fileCache.on('batchDownload', callback);
+} catch (e) {
+  const error = e as BusinessError;
+  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
+}
+
+let uriList: Array<string> = [];
+fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((downloadId: number) => {
+  console.info(`start batch download successfully, taskId: ${downloadId}`);
+}).catch((err: BusinessError) => {
+  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+## downloadedSize
+
+```TypeScript
+downloadedSize: number
+```
+
+Size of the downloaded file, in bytes. The value range is [0, INT64_MAX). If the progress is abnormal, the value **INT64_MAX** is returned.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-downloadedSize: long--><!--Device-MultiDownloadProgress-downloadedSize: long-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## errType
+
+```TypeScript
+errType: DownloadErrorType
+```
+
+Type of the error returned when the batch download fails.
+
+**Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-errType: DownloadErrorType--><!--Device-MultiDownloadProgress-errType: DownloadErrorType-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## failedCount
+
+```TypeScript
+failedCount: number
+```
+
+Number of files that fail to be downloaded. The value ranges from 0 to 400. If the progress is abnormal, the value **-1** is returned.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-failedCount: int--><!--Device-MultiDownloadProgress-failedCount: int-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## state
+
+```TypeScript
+state: State
+```
+
+Execution state of the batch download.
+
+**Type:** State
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-state: State--><!--Device-MultiDownloadProgress-state: State-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## successfulCount
+
+```TypeScript
+successfulCount: number
+```
+
+Number of successfully downloaded files. The value ranges from 0 to 400. If the progress is abnormal, the value **-1** is returned.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-successfulCount: int--><!--Device-MultiDownloadProgress-successfulCount: int-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## taskId
+
+```TypeScript
+taskId: number
+```
+
+ID of a batch download task. The value ranges from 0 to INT64_MAX. If the progress is abnormal, the value **-1** is returned.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-taskId: long--><!--Device-MultiDownloadProgress-taskId: long-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## totalCount
+
+```TypeScript
+totalCount: number
+```
+
+Total number of files. The value ranges from 0 to 400. If the progress is abnormal, the value **-1** is returned.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-totalCount: int--><!--Device-MultiDownloadProgress-totalCount: int-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+## totalSize
+
+```TypeScript
+totalSize: number
+```
+
+Total size of the files to be downloaded, in bytes. The value range is [0, INT64_MAX). If the progress is abnormal, the value **INT64_MAX** is returned.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-MultiDownloadProgress-totalSize: long--><!--Device-MultiDownloadProgress-totalSize: long-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core

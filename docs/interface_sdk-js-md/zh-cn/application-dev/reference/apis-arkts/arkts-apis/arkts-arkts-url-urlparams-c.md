@@ -8,6 +8,11 @@ URLParams是一个用于解析、构造和操作URL参数的实用类。该类�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

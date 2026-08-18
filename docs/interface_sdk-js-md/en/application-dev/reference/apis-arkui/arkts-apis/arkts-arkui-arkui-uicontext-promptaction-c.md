@@ -11,40 +11,10 @@ Provides APIs to create and display toasts, dialog boxes, action menus, and cust
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar } from 'AtomicServiceBar';
-import { ComponentUtils } from 'ComponentUtils';
-import { ContextMenuController } from 'ContextMenuController';
-import { CursorController } from 'CursorController';
-import { DialogPresenter } from 'DialogPresenter';
-import { DragController } from 'DragController';
-import { Font } from 'Font';
-import { KeyboardAvoidMode } from 'KeyboardAvoidMode';
-import { MediaQuery } from 'MediaQuery';
-import { OverlayManager } from 'OverlayManager';
-import { PromptAction } from 'PromptAction';
-import { Router } from 'Router';
-import { UIContext } from 'UIContext';
-import { UIInspector } from 'UIInspector';
-import { UIObserver } from 'UIObserver';
-import { PageInfo } from 'PageInfo';
-import { SwiperDynamicSyncScene } from 'SwiperDynamicSyncScene';
-import { SwiperDynamicSyncSceneType } from 'SwiperDynamicSyncSceneType';
-import { MarqueeDynamicSyncScene } from 'MarqueeDynamicSyncScene';
-import { MarqueeDynamicSyncSceneType } from 'MarqueeDynamicSyncSceneType';
-import { MeasureUtils } from 'MeasureUtils';
-import { FrameCallback } from 'FrameCallback';
-import { OverlayManagerOptions } from 'OverlayManagerOptions';
-import { TargetInfo } from 'TargetInfo';
-import { TextMenuController } from 'TextMenuController';
-import { NodeIdentity } from 'NodeIdentity';
-import { NodeRenderState } from 'NodeRenderState';
-import { NodeRenderStateChangeCallback } from 'NodeRenderStateChangeCallback';
-import { Magnifier } from 'Magnifier';
-import { ResolvedUIContext } from 'ResolvedUIContext';
-import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
-import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
-import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
-import { LuminanceSampler } from 'LuminanceSampler';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## closeCustomDialog
@@ -395,7 +365,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and > [closeMenu](#closemenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
+Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and > [closeMenu](#closemenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
 
@@ -437,7 +407,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and > [closePopup](#closepopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
+Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and > [closePopup](#closepopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)), the [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
 

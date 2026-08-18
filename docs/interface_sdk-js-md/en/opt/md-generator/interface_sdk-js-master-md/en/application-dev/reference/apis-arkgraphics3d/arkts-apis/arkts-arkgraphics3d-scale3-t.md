@@ -1,0 +1,15 @@
+# Scale3
+
+```TypeScript
+export type Scale3 = Vec3
+```
+
+Scaling of an object in 3D space. The value is of the Vec3 type. Any 3D vector.
+
+**Since:** 23
+
+<!--Device-unnamed-export type Scale3 = Vec3--><!--Device-unnamed-export type Scale3 = Vec3-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+**Property type:** Vec3

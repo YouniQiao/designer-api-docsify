@@ -1,5 +1,10 @@
 # openInstallCertificateDialog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openInstallCertificateDialog
 
 ```TypeScript

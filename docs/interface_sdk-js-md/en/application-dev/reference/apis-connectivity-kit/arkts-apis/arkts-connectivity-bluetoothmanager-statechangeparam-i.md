@@ -15,7 +15,7 @@ Profile state change parameters.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId

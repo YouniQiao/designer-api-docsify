@@ -10,6 +10,11 @@ HeifsMetadata implements Metadata HEIF序列图像元数据类，用于存储图
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clone
 
 ```TypeScript

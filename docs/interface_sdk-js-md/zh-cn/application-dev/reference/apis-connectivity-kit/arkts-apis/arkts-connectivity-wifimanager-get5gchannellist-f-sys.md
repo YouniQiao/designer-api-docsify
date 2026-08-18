@@ -1,5 +1,10 @@
 # get5GChannelList（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## get5GChannelList
 
 ```TypeScript

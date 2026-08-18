@@ -8,6 +8,11 @@ WebSchemeHandlerResponse是自定义scheme拦截场景中用于构造HTTP响应�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

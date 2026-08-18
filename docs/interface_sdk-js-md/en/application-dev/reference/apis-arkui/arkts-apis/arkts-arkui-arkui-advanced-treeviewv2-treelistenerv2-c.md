@@ -11,12 +11,7 @@ Declare class TreeListenerV2
 ## Modules to Import
 
 ```TypeScript
-import { CallbackParamV2 } from 'CallbackParamV2';
-import { NodeParamV2 } from 'NodeParamV2';
-import { TreeControllerV2 } from 'TreeControllerV2';
-import { TreeListenerV2 } from 'TreeListenerV2';
-import { TreeListenerManagerV2 } from 'TreeListenerManagerV2';
-import { TreeViewV2 } from 'TreeViewV2';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## offNodeAdd
@@ -41,7 +36,7 @@ Destroy node add callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeClick
 
@@ -65,7 +60,7 @@ Destroy node click callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeDelete
 
@@ -89,7 +84,7 @@ Destroy node delete callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeModify
 
@@ -113,7 +108,7 @@ Destroy node modify callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## offNodeMove
 
@@ -137,7 +132,7 @@ Destroy node move callback event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | No |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | No |  |
 
 ## onNodeAdd
 
@@ -161,7 +156,7 @@ Node add event registration and processing. The event will not be destroyed afte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeClick
 
@@ -185,7 +180,7 @@ Node click event registration and processing. The event will not be destroyed af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeDelete
 
@@ -209,7 +204,7 @@ Node delete event registration and processing. The event will not be destroyed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeModify
 
@@ -233,7 +228,7 @@ Node modify event registration and processing. The event will not be destroyed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onNodeMove
 
@@ -257,7 +252,7 @@ Node move event registration and processing. The event will not be destroyed aft
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeAdd
 
@@ -281,7 +276,7 @@ Node add event registration and processing. After the event is processed once, i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeClick
 
@@ -305,7 +300,7 @@ Node click event registration and processing. After the event is processed once,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeDelete
 
@@ -329,7 +324,7 @@ Node delete event registration and processing. After the event is processed once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeModify
 
@@ -353,7 +348,7 @@ Node modify event registration and processing. After the event is processed once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 
 ## onceNodeMove
 
@@ -377,5 +372,5 @@ Node move event registration and processing. After the event is processed once, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnChangedCallback](../../apis-na/arkts-apis/arkts-na-onchangedcallback-t.md) | Yes |  |
+| callback | [OnChangedCallback](arkts-arkui-onchangedcallback-t.md) | Yes |  |
 

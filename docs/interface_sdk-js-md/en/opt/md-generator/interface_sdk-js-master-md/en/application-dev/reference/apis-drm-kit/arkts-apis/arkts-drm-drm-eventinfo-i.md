@@ -1,0 +1,50 @@
+# EventInfo(Defines the DRM capability.)
+
+Defines the DRM event information.
+
+**Since:** 23
+
+<!--Device-drm-interface EventInfo--><!--Device-drm-interface EventInfo-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## extraInfo
+
+```TypeScript
+extraInfo: string
+```
+
+Additional event context.
+
+**Type:** string
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-EventInfo-extraInfo: string--><!--Device-EventInfo-extraInfo: string-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+## info
+
+```TypeScript
+info: Uint8Array
+```
+
+Event payload data.
+
+**Type:** Uint8Array
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-EventInfo-info: Uint8Array--><!--Device-EventInfo-info: Uint8Array-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core

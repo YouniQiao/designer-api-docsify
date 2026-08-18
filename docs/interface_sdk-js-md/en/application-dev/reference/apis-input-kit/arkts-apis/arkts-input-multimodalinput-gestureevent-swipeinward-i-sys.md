@@ -13,14 +13,7 @@ Defines an inward swipe event.
 ## Modules to Import
 
 ```TypeScript
-import { ActionType } from 'ActionType';
-import { FourFingersSwipe } from 'FourFingersSwipe';
-import { Pinch } from 'Pinch';
-import { Rotate } from 'Rotate';
-import { ThreeFingersSwipe } from 'ThreeFingersSwipe';
-import { ThreeFingersTap } from 'ThreeFingersTap';
-import { SwipeInward } from 'SwipeInward';
-import { TouchGestureEvent } from 'TouchGestureEvent';
+import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from '@kit.InputKit';
 ```
 
 ## type

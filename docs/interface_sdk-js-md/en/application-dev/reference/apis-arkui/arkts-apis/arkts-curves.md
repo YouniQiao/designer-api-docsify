@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'curves';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -8,6 +8,11 @@ formInfo模块提供了卡片信息和状态等相关类型和枚举。 > **说�
 
 **系统能力：** SystemCapability.Ability.Form
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 接口

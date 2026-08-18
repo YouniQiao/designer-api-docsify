@@ -1,5 +1,10 @@
 # isSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isSupported
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getTransientTaskInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTransientTaskInfo
 
 ```TypeScript

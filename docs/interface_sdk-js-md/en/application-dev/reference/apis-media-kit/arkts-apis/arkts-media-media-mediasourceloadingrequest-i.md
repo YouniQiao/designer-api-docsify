@@ -11,7 +11,7 @@ The MediaSourceLoadingRequest class defines a loading request object. Applicatio
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## finishLoading

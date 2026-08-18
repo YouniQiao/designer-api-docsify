@@ -13,7 +13,7 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from 'AtomicServiceMenuBar';
+import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## constructor

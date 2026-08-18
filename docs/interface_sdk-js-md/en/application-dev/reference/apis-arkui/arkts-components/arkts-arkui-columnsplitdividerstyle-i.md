@@ -8,6 +8,11 @@ Sets the distance between the child component and the upper and lower dividers. 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## endMargin
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getTimeZone
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getTimeZone
 
 ```TypeScript
@@ -28,5 +33,5 @@ Obtains the TimeZone object corresponding to the specified time zone ID.
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md) | TimeZone object corresponding to the time zone ID. |
+| [TimeZone](arkts-na-i18n-timezone-c.md) | TimeZone object corresponding to the time zone ID. |
 

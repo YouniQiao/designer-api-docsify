@@ -8,6 +8,11 @@ ChipV2LocalizedLabelMarginConfig用于定义本地化文本与左右侧图标之
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## end
 
 ```TypeScript

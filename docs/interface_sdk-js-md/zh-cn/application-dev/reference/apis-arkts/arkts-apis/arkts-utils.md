@@ -1,5 +1,10 @@
 # @arkts.utils
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 命名空间

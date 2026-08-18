@@ -10,6 +10,11 @@ Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaP
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## attributes
 
 ```TypeScript
@@ -108,7 +113,7 @@ mediaSrcList: MediaSourceInfo[]
 
 Source of the media. There may be multiple sources. The application needs to select a supported source to play.
 
-**Type:** [MediaSourceInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediasourceinfo-c.md)[]
+**Type:** [MediaSourceInfo](arkts-na-webview-mediasourceinfo-c.md)[]
 
 **Since:** 23
 
@@ -180,7 +185,7 @@ preload: Preload
 
 Whether preloading is required.
 
-**Type:** [Preload](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-preload-e.md)
+**Type:** [Preload](arkts-na-webview-preload-e.md)
 
 **Since:** 23
 
@@ -198,7 +203,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 Surface information used for same-layer rendering.
 
-**Type:** [NativeMediaPlayerSurfaceInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
+**Type:** [NativeMediaPlayerSurfaceInfo](arkts-na-webview-nativemediaplayersurfaceinfo-c.md)
 
 **Since:** 23
 

@@ -11,7 +11,7 @@ Describes the parameters of the SSAP client's property read request.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'ssap';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## address

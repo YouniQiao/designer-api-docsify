@@ -1,5 +1,10 @@
 # getUpdateAuthData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUpdateAuthData
 
 ```TypeScript

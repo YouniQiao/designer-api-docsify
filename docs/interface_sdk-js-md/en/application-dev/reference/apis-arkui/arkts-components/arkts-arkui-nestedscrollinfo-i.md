@@ -8,6 +8,11 @@ Provides the information about the nested scrollable containers.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## child
 
 ```TypeScript

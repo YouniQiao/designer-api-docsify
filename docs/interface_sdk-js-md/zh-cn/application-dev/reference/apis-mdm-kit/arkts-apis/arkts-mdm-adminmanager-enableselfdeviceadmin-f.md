@@ -1,5 +1,10 @@
 # enableSelfDeviceAdmin
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableSelfDeviceAdmin
 
 ```TypeScript

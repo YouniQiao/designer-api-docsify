@@ -11,14 +11,8 @@ LinkIntentParamMapping defines the mapping between intent parameters and URI inf
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentLink } from 'InsightIntentLink';
-import { InsightIntentPage } from 'InsightIntentPage';
-import { InsightIntentFunctionMethod } from 'InsightIntentFunctionMethod';
-import { InsightIntentFunction } from 'InsightIntentFunction';
-import { InsightIntentEntry } from 'InsightIntentEntry';
-import { LinkParamCategory } from 'LinkParamCategory';
-import { InsightIntentForm } from 'InsightIntentForm';
-import { InsightIntentEntity } from 'InsightIntentEntity';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from '@kit.AbilityKit';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, LinkIntentParamMapping, InsightIntentEntity, InsightIntentForm } from '@kit.AbilityKit';
 ```
 
 ## paramCategory
@@ -27,9 +21,9 @@ import { InsightIntentEntity } from 'InsightIntentEntity';
 paramCategory?: LinkParamCategory
 ```
 
-Category of the intent parameter. If an intent parameter is of the [LINK](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md#linkparamcategory) category, the system retrieves **paramMappingName** corresponding to **paramName** and appends it to the URI as a key-value pair (where **key** is the value of **paramMappingName**, and **value** is the intent parameter value). If an intent parameter is of the [WANT](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md#linkparamcategory) category, the system retrieves **paramMappingName** corresponding to **paramName** and passes the mapping name and value using the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md#want).
+Category of the intent parameter. If an intent parameter is of the [LINK](../../apis-na/arkts-apis/arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md#linkparamcategory) category, the system retrieves **paramMappingName** corresponding to **paramName** and appends it to the URI as a key-value pair (where **key** is the value of **paramMappingName**, and **value** is the intent parameter value). If an intent parameter is of the [WANT](../../apis-na/arkts-apis/arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md#linkparamcategory) category, the system retrieves **paramMappingName** corresponding to **paramName** and passes the mapping name and value using the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md#want).
 
-**Type:** [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
+**Type:** [LinkParamCategory](../../apis-na/arkts-apis/arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md)
 
 **Since:** 20
 

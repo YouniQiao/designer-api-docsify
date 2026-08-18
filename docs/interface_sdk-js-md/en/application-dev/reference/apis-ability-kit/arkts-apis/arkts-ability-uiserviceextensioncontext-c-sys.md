@@ -313,7 +313,7 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiabilit
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target ability. |
 | wantParam | Record&lt;string, Object&gt; | Yes | Want parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
 
 **Return value:**
 
@@ -414,7 +414,7 @@ Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#uiabilit
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target ability. |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
 
 **Return value:**
 

@@ -13,6 +13,11 @@ The controller for the **TextArea** component inherits from TextContentControlle
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## caretPosition
 
 ```TypeScript

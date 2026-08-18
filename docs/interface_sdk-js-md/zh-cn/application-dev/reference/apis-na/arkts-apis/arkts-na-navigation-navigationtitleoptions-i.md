@@ -162,7 +162,7 @@ paddingEnd?: LengthMetrics
 
 标题栏结束端内间距。 仅支持以下任一场景： 1. 使用非自定义菜单，即[菜单value](arkts-na-navigation-navigationattribute-i.md#menus)为Array&lt;NavigationMenuItem&gt;； 2. 没有右上角菜单，且使用非自定义标题，即[标题value](arkts-na-navigation-navigationattribute-i.md#title)类型为ResourceStr或NavigationCommonTitle。 默认值： LengthMetrics.resource(`\$r('sys.float.margin_right')`)。
 
-**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.resource($r('sys.float.margin_right'))
 
@@ -184,7 +184,7 @@ paddingStart?: LengthMetrics
 
 标题栏起始端内间距。 仅支持以下任一场景： 1. 显示返回图标，即[hideBackButton](arkts-na-navigation-navigationattribute-i.md#hidebackbutton)为false； 2. 使用非自定义标题，即[标题value](arkts-na-navigation-navigationattribute-i.md#title)类型为ResourceStr或NavigationCommonTitle。 默认值： LengthMetrics.resource(\$r('sys.float.margin_left'))。
 
-**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.resource($r('sys.float.margin_left'))
 

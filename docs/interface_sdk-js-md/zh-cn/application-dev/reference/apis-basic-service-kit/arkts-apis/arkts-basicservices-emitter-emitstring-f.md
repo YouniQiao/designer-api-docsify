@@ -1,5 +1,10 @@
 # emit_string
 
+## 导入模块
+
+```TypeScript
+```
+
 ## emit_string
 
 ```TypeScript

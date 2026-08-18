@@ -8,6 +8,11 @@ Defines the particle configs.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## [ParticleType.IMAGE]
 
 ```TypeScript

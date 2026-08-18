@@ -8,6 +8,11 @@ ConsoleMessage是Web组件中封装JavaScript控制台输出信息的对象。�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

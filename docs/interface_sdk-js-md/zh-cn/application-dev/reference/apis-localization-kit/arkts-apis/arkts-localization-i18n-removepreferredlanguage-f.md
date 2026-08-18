@@ -1,5 +1,10 @@
 # removePreferredLanguage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removePreferredLanguage
 
 ```TypeScript

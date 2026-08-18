@@ -10,6 +10,11 @@ Date JS API-compatible class
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## UTC
 
 ```TypeScript

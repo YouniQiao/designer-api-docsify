@@ -8,6 +8,11 @@ Information about the check box group.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## group
 
 ```TypeScript

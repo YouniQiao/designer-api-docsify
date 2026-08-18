@@ -8,6 +8,11 @@ Describes the badge style. It includes the font color, font size, badge color, b
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## badgeColor
 
 ```TypeScript

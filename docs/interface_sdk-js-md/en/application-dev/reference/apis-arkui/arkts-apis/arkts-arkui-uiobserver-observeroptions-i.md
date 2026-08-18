@@ -11,7 +11,7 @@ Describes the observer options.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'uiObserver';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## id

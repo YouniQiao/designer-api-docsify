@@ -1,0 +1,101 @@
+# PublishFormErrorCode (System API)
+
+Enumerates the result codes that may be used for the operation of adding a widget to the home screen.
+
+**Since:** 23
+
+<!--Device-formInfo-enum PublishFormErrorCode--><!--Device-formInfo-enum PublishFormErrorCode-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## SUCCESS
+
+```TypeScript
+SUCCESS = 0
+```
+
+The widget is added to the home screen.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormErrorCode-SUCCESS = 0--><!--Device-PublishFormErrorCode-SUCCESS = 0-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## NO_SPACE
+
+```TypeScript
+NO_SPACE = 1
+```
+
+There is no space for adding widgets.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormErrorCode-NO_SPACE = 1--><!--Device-PublishFormErrorCode-NO_SPACE = 1-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## PARAM_ERROR
+
+```TypeScript
+PARAM_ERROR = 2
+```
+
+Parameter check fails.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormErrorCode-PARAM_ERROR = 2--><!--Device-PublishFormErrorCode-PARAM_ERROR = 2-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## INTERNAL_ERROR
+
+```TypeScript
+INTERNAL_ERROR = 3
+```
+
+An internal error occurs during widget processing.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormErrorCode-INTERNAL_ERROR = 3--><!--Device-PublishFormErrorCode-INTERNAL_ERROR = 3-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
+## NOT_SUPPORT
+
+```TypeScript
+NOT_SUPPORT = 4
+```
+
+Indicates that the host does not support the form.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormErrorCode-NOT_SUPPORT = 4--><!--Device-PublishFormErrorCode-NOT_SUPPORT = 4-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.

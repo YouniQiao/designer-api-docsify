@@ -11,7 +11,8 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -35,8 +36,8 @@ Creates an object for formatting the time and date that need to be displayed in 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Yes | Object used to format the date and time. |
-| options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No |  |
+| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md) | Yes | Object used to format the date and time. |
+| options | [StyledDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-styleddatetimeformatoptions-i.md) | No |  |
 
 **Examples**
 

@@ -1,5 +1,10 @@
 # isNewCallAllowed（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isNewCallAllowed
 
 ```TypeScript
@@ -20,7 +25,7 @@ function isNewCallAllowed(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 以回调函数的方式返回结果。true表示允许拨打，false表示不可拨打。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以回调函数的方式返回结果。true表示允许拨打，false表示不可拨打。 |
 
 **错误码：**
 

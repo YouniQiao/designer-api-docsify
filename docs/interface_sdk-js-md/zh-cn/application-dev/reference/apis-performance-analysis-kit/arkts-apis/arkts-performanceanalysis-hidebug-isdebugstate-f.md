@@ -1,5 +1,10 @@
 # isDebugState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isDebugState
 
 ```TypeScript

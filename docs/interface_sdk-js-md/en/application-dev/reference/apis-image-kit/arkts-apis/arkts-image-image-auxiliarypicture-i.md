@@ -11,7 +11,8 @@ The **AuxiliaryPicture** class is used to read or write auxiliary picture data o
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPictureInfo

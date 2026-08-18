@@ -1,5 +1,10 @@
 # getWatermarkImageApps
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getWatermarkImageApps
 
 ```TypeScript

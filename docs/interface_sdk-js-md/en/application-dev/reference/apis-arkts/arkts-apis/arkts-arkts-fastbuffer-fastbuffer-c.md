@@ -11,7 +11,7 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'fastbuffer';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## compare

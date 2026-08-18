@@ -1,5 +1,10 @@
 # lstat
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lstat
 
 ```TypeScript

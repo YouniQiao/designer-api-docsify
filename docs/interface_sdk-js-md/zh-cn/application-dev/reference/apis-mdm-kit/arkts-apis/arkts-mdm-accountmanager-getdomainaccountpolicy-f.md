@@ -1,5 +1,10 @@
 # getDomainAccountPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDomainAccountPolicy
 
 ```TypeScript

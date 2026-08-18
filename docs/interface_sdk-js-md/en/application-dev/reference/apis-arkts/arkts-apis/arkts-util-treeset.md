@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { TreeSet } from 'TreeSet';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
 ```
 
 ## Summary

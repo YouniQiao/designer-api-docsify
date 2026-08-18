@@ -27,6 +27,11 @@
  `InputMethodController.attach()`方法中，通过`TextConfig`将`InputMethodExtraConfig`传递给输入法应用。
 
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 接口

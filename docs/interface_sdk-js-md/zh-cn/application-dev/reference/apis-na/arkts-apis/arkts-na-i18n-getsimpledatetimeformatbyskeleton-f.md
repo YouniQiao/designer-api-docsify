@@ -1,5 +1,10 @@
 # getSimpleDateTimeFormatBySkeleton
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSimpleDateTimeFormatBySkeleton
 
 ```TypeScript

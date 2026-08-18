@@ -1,5 +1,10 @@
 # getShortcutInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getShortcutInfos
 
 ```TypeScript
@@ -27,7 +32,7 @@ function getShortcutInfos(bundleName: string, callback: AsyncCallback<Array<Shor
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回快捷方式信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回快捷方式信息。 |
 
 
 ## getShortcutInfos

@@ -12,6 +12,13 @@ Represents the configuration of a **KVManager** instance, including the bundle n
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## bundleName
 
 ```TypeScript

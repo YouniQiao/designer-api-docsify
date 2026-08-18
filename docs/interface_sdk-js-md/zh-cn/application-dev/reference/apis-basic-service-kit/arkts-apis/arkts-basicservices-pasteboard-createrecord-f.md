@@ -1,5 +1,10 @@
 # createRecord
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createRecord
 
 ```TypeScript

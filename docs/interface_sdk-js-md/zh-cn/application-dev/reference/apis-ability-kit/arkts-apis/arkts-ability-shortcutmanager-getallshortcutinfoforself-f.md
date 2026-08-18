@@ -1,5 +1,10 @@
 # getAllShortcutInfoForSelf
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllShortcutInfoForSelf
 
 ```TypeScript

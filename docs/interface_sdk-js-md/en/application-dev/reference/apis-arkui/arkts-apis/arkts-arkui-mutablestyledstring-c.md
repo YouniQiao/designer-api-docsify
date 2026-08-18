@@ -10,6 +10,11 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md#styledstring) cla
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## appendStyledString
 
 ```TypeScript

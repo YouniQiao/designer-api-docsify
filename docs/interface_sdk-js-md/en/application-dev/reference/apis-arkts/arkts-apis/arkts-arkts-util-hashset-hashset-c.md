@@ -11,7 +11,8 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 ## Modules to Import
 
 ```TypeScript
-import { HashSet } from 'HashSet';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
 ```
 
 ## $_iterator

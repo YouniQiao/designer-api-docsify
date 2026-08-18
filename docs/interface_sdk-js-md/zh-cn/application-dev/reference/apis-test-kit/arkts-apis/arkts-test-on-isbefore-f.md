@@ -1,5 +1,10 @@
 # isBefore
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isBefore
 
 ```TypeScript

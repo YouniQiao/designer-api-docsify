@@ -8,6 +8,11 @@ Scrollable模式下的TabBar的布局样式对象。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## margin
 
 ```TypeScript

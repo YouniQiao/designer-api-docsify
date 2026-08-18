@@ -8,6 +8,11 @@ USB Key PIN码认证请求。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## keyUri
 
 ```TypeScript

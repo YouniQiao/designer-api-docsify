@@ -8,6 +8,11 @@ Defines the options of the **GridCol** component. The values of `span`, `offset`
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## offset
 
 ```TypeScript

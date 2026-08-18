@@ -12,6 +12,11 @@ Provides information about files and directories. Before calling an API of the *
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isBlockDevice
 
 ```TypeScript

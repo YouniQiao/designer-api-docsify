@@ -1,5 +1,10 @@
 # createPlainTextRecord
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPlainTextRecord
 
 ```TypeScript

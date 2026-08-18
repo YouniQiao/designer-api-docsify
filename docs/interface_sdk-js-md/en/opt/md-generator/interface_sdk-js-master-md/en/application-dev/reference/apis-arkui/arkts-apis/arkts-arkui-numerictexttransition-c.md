@@ -1,0 +1,80 @@
+# NumericTextTransition
+
+Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the copyOption property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition).
+
+**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#contenttransition)
+
+**Since:** 20
+
+<!--Device-unnamed-declare class NumericTextTransition--><!--Device-unnamed-declare class NumericTextTransition-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## constructor
+
+```TypeScript
+constructor(options?: NumericTextTransitionOptions)
+```
+
+A constructor used to create a **NumericTextTransition** object.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-NumericTextTransition-constructor(options?: NumericTextTransitionOptions)--><!--Device-NumericTextTransition-constructor(options?: NumericTextTransitionOptions)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No |
+
+## enableBlur
+
+```TypeScript
+enableBlur?: boolean
+```
+
+Whether to enable the blur effect for the flip animation. Default value: **false** **true**: Enable the blur effect. **false**: Disable the blur effect.
+
+**Type:** boolean
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-NumericTextTransition-enableBlur?: boolean--><!--Device-NumericTextTransition-enableBlur?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## flipDirection
+
+```TypeScript
+flipDirection?: FlipDirection
+```
+
+Direction of the flip animation. Default value: **FlipDirection.DOWN**
+
+**Type:** [FlipDirection](arkts-arkui-flipdirection-e.md)
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-NumericTextTransition-flipDirection?: FlipDirection--><!--Device-NumericTextTransition-flipDirection?: FlipDirection-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

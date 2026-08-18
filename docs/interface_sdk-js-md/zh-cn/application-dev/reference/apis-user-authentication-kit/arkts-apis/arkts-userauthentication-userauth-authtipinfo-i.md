@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## tipCode
 
 ```TypeScript

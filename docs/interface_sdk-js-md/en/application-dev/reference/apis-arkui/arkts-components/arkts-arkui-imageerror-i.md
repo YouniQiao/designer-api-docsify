@@ -8,6 +8,12 @@ Describes the object returned by the image loading error callback. This event is
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from '@kit.ArkUI';
+```
+
 ## componentHeight
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 Defines an ellipse drawing class.
 
-**Inheritance/Implementation:** EllipseShape extends [BaseShape](arkts-na-arkui-shape-baseshape-c.md#baseshape)
+**Inheritance/Implementation:** EllipseShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md#baseshape)
 
 **Since:** 23
 
@@ -11,6 +11,11 @@ Defines an ellipse drawing class.
 <!--Device-unnamed-export declare class EllipseShape--><!--Device-unnamed-export declare class EllipseShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## constructor
 
@@ -34,5 +39,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](arkts-na-arkui-shape-shapesize-i.md) | No |  |
+| options | [ShapeSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-shapesize-i.md) | No |  |
 

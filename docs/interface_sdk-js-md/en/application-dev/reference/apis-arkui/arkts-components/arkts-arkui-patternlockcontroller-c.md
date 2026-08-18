@@ -10,6 +10,11 @@ Controller of the **PatternLock** component, which is used to reset the componen
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

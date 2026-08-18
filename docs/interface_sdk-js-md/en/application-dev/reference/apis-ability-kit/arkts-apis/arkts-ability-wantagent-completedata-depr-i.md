@@ -12,6 +12,11 @@ Describes the data returned by after wantAgent.trigger is called.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## extraInfo
 
 ```TypeScript

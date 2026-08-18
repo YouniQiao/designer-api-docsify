@@ -13,7 +13,8 @@ Provides APIs for uploading and downloading assets.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## download

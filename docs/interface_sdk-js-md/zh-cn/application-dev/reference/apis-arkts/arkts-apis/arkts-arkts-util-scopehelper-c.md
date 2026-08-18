@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clamp
 
 ```TypeScript
@@ -28,13 +33,13 @@ clamp(value: ScopeType): ScopeType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
 
 **示例**
 
@@ -88,8 +93,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的上限。 |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | Scope** 对象的下限。 |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | Scope** 对象的上限。 |
 
 **示例**
 
@@ -140,7 +145,7 @@ contains(value: ScopeType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
@@ -200,7 +205,7 @@ contains(range: ScopeHelper): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
+| range | [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
 
 **返回值：**
 
@@ -262,14 +267,14 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 上限。 |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 下限。 |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 上限。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定上下限的并集。 |
+| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 此 **Scope** 与给定上下限的并集。 |
 
 **示例**
 
@@ -324,13 +329,13 @@ expand(range: ScopeHelper): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
+| range | [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的并集。 |
+| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的并集。 |
 
 **示例**
 
@@ -386,13 +391,13 @@ expand(value: ScopeType): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定值的并集。 |
+| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 此 **Scope** 与给定值的并集。 |
 
 **示例**
 
@@ -446,7 +451,7 @@ getLower(): ScopeType
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的下限。 |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 此 **Scope** 的下限。 |
 
 **示例**
 
@@ -499,7 +504,7 @@ getUpper(): ScopeType
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的上限。 |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 此 **Scope** 的上限。 |
 
 **示例**
 
@@ -552,13 +557,13 @@ intersect(range: ScopeHelper): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
+| range | [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 是 | 指定的 **Scope**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的交集。 |
+| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 此 **Scope** 与给定 **Scope** 的交集。 |
 
 **示例**
 
@@ -614,14 +619,14 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 上限。 |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 下限。 |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 上限。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | 此 **Scope** 与给定上下限的交集。 |
+| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | 此 **Scope** 与给定上下限的交集。 |
 
 **示例**
 

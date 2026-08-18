@@ -11,7 +11,8 @@ Describes the attributes used for text rendering, such as size and typeface. > *
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'drawing';
+import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## countText

@@ -11,7 +11,7 @@ Provides an instance to obtain information about a distributed KV store. Before 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## closeKVStore

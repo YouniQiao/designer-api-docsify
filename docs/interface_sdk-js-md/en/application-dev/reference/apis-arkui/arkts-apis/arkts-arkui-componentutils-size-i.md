@@ -13,7 +13,7 @@ Defines the size property.
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'componentUtils';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## height

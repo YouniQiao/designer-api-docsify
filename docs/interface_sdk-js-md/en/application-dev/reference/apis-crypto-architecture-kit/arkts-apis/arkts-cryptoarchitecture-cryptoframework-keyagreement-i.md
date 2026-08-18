@@ -13,7 +13,8 @@ Key agreement interface, defining methods for generating shared secrets based on
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret

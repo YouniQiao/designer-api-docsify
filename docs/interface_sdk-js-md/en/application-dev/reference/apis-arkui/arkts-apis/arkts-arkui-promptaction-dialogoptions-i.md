@@ -13,9 +13,7 @@ Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#base
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode } from 'LevelMode';
-import { ImmersiveMode } from 'ImmersiveMode';
-import { LevelOrder } from 'LevelOrder';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle

@@ -13,7 +13,7 @@ Encapsulates the sync root information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from 'cloudDiskManager';
+import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

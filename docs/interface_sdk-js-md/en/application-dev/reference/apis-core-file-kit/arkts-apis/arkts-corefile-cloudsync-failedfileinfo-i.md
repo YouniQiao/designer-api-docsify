@@ -11,7 +11,10 @@ Represents a list of files that fail to be downloaded from the Drive Kit and fai
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## error

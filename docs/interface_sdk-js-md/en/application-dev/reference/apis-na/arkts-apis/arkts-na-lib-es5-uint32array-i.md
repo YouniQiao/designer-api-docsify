@@ -6,6 +6,11 @@ A typed array of 32-bit unsigned integer values. The contents are initialized to
 
 <!--Device-unnamed-interface Uint32Array--><!--Device-unnamed-interface Uint32Array-End-->
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## copyWithin
 
 ```TypeScript

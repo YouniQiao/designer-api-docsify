@@ -8,6 +8,11 @@ An **ImageData** object stores pixel data rendered on a canvas. > **NOTE：**> >
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

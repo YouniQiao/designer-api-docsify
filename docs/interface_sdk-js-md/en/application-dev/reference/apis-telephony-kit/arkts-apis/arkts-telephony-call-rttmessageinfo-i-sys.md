@@ -13,7 +13,7 @@ Indicates the info of the rtt message.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## callId

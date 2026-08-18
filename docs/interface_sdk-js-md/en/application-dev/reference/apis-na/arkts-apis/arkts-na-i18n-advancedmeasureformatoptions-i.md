@@ -10,6 +10,11 @@ Represents optional configuration items for AdvancedMeasureFormat object.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## unitUsage
 
 ```TypeScript
@@ -18,7 +23,7 @@ unitUsage?: UnitUsage
 
 Scenarios for MeasureFormat.
 
-**Type:** [UnitUsage](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-unitusage-e.md)
+**Type:** [UnitUsage](arkts-na-i18n-unitusage-e.md)
 
 **Since:** 23
 

@@ -11,7 +11,7 @@ Serial port object, which provides information and communication capabilities of
 ## Modules to Import
 
 ```TypeScript
-import { serial } from 'serial';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## close

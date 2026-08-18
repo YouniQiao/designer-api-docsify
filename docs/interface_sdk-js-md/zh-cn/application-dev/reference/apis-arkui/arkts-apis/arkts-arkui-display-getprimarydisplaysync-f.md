@@ -1,5 +1,10 @@
 # getPrimaryDisplaySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPrimaryDisplaySync
 
 ```TypeScript

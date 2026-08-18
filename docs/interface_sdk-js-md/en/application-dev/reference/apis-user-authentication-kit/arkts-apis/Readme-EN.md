@@ -10,7 +10,11 @@
   <!--Del-->
   - [registerDeviceSelectCallback(system api)](arkts-userauthentication-companiondeviceauth-registerdeviceselectcallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [registerPasscodePromptCallback(system api)](arkts-userauthentication-companiondeviceauth-registerpasscodepromptcallback-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [unregisterDeviceSelectCallback(system api)](arkts-userauthentication-companiondeviceauth-unregisterdeviceselectcallback-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unregisterPasscodePromptCallback(system api)](arkts-userauthentication-companiondeviceauth-unregisterpasscodepromptcallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateEnabledBusinessIds(system api)](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -22,6 +26,8 @@
   <!--Del-->
   - [DeviceStatus(system api)](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [PasscodePromptParams(system api)](arkts-userauthentication-companiondeviceauth-passcodepromptparams-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [StatusMonitor(system api)](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TemplateStatus(system api)](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)<!--DelEnd-->
@@ -31,6 +37,10 @@
   - [ContinuousAuthStatusCallback(system api)](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DeviceSelectCallback(system api)](arkts-userauthentication-companiondeviceauth-deviceselectcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PasscodePromptCallback(system api)](arkts-userauthentication-companiondeviceauth-passcodepromptcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PasscodeSubmitCallback(system api)](arkts-userauthentication-companiondeviceauth-passcodesubmitcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TemplateStatusCallback(system api)](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md)<!--DelEnd-->
   <!--Del-->

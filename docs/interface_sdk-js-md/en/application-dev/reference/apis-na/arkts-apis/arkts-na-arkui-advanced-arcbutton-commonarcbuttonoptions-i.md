@@ -10,6 +10,11 @@ Defines the arc button options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -210,7 +215,7 @@ position?: ArcButtonPosition
 
 Describes the arc button position.
 
-**Type:** [ArcButtonPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md)
+**Type:** [ArcButtonPosition](arkts-na-arkui-advanced-arcbutton-arcbuttonposition-e.md)
 
 **Default:** ArcButtonPosition.BOTTOM_EDGE
 
@@ -250,7 +255,7 @@ progressConfig?: ArcButtonProgressConfig
 
 Sets the ArcButton progress bar parameters. When not set, the button style is used. When set, the progress style is used.
 
-**Type:** [ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
+**Type:** [ArcButtonProgressConfig](arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **Since:** 23
 
@@ -310,7 +315,7 @@ status?: ArcButtonStatus
 
 Describes the arc button status.
 
-**Type:** [ArcButtonStatus](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
+**Type:** [ArcButtonStatus](arkts-na-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
 
 **Default:** ArcButtonStatus.NORMAL
 
@@ -330,7 +335,7 @@ styleMode?: ArcButtonStyleMode
 
 Describes the arc button style mode.
 
-**Type:** [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
+**Type:** [ArcButtonStyleMode](arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 
 **Default:** ArcButtonStyleMode.EMPHASIZED_LIGHT
 

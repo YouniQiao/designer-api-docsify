@@ -1,5 +1,10 @@
 # fatal
 
+## 导入模块
+
+```TypeScript
+```
+
 ## fatal
 
 ```TypeScript

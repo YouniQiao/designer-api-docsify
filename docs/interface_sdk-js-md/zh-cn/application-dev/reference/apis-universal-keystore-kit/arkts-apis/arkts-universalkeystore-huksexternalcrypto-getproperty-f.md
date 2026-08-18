@@ -1,5 +1,10 @@
 # getProperty
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getProperty
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # copy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## copy
 
 ```TypeScript
@@ -80,7 +85,7 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 | --- | --- | --- | --- |
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步拷贝之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步拷贝之后的回调。 |
 
 **错误码：**
 
@@ -134,7 +139,7 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 | srcUri | string | 是 | 待复制文件或目录的URI。 |
 | destUri | string | 是 | 目标文件或目录的URI。 |
 | options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | 是 | 拷贝进度回调。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步拷贝之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步拷贝之后的回调。 |
 
 **错误码：**
 

@@ -10,6 +10,11 @@ Defines the gesture event information. Inherits from BaseEvent.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## angle
 
 ```TypeScript

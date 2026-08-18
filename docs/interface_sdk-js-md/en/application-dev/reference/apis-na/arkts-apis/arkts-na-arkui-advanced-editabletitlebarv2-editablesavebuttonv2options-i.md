@@ -10,6 +10,11 @@ Indicates the options of the save button.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## defaultFocus
 
 ```TypeScript
@@ -62,7 +67,7 @@ onAction?: OnActionCallback
 
 Callback function when click on the save button.
 
-**Type:** [OnActionCallback](arkts-na-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

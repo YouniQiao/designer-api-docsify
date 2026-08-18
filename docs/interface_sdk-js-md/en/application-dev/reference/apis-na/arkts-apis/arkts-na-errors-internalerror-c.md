@@ -12,6 +12,11 @@ Represents an error that occurs when an internal error has occurred
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

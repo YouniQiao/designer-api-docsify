@@ -1,5 +1,10 @@
 # getMultiLinkedInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getMultiLinkedInfo
 
 ```TypeScript

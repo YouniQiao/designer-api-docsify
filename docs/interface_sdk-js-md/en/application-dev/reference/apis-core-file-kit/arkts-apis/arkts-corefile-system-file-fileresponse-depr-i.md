@@ -10,6 +10,11 @@ Returns a file, including the file information.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lastModifiedTime
 
 ```TypeScript

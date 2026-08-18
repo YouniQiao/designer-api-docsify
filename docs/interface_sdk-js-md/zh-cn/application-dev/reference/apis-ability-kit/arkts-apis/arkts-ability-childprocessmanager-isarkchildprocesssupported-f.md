@@ -1,5 +1,10 @@
 # isArkChildProcessSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isArkChildProcessSupported
 
 ```TypeScript

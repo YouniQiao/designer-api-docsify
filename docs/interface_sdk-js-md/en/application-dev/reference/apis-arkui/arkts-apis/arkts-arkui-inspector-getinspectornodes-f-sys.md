@@ -1,5 +1,11 @@
 # getInspectorNodes (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
+
 ## getInspectorNodes
 
 ```TypeScript

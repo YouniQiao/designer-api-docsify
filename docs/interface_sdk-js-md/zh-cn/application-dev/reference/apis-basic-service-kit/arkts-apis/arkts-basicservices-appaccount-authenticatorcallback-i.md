@@ -12,6 +12,11 @@ OAuth认证器回调接口。 > **说明：** > > 从API version 8开始支持�
 
 **系统能力：** SystemCapability.Account.AppAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onRequestRedirected
 
 ```TypeScript

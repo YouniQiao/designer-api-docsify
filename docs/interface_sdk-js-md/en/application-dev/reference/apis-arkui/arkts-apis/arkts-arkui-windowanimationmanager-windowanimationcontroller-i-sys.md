@@ -13,7 +13,7 @@ Window animation controller.
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from 'windowAnimationManager';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## onAppTransition

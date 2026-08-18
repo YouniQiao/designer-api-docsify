@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## modelType
 
 ```TypeScript

@@ -10,6 +10,11 @@ Defines the scroll offset of the webpage in view port, the unit is virtual pixel
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## x
 
 ```TypeScript

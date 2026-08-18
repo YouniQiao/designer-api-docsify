@@ -11,7 +11,8 @@ Describes the key runtime information of the process where the ability last exit
 ## Modules to Import
 
 ```TypeScript
-import { AbilityConstant } from 'AbilityConstant';
+import { AbilityConstant } from '@kit.AbilityKit';
+import { AbilityConstant } from '@kit.AbilityKit';
 ```
 
 ## exitMsg

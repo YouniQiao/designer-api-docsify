@@ -10,6 +10,11 @@ globalConnect 接口参数类型，ConnectOptionsCollections继承自[ConnectOpt
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## defaultCreator
 
 ```TypeScript

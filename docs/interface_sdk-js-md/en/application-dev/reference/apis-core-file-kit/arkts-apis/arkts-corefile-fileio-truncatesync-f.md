@@ -1,5 +1,10 @@
 # truncateSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## truncateSync
 
 ```TypeScript

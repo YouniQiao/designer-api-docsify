@@ -10,6 +10,11 @@ Defines the decode with stream related options parameters.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## stream
 
 ```TypeScript

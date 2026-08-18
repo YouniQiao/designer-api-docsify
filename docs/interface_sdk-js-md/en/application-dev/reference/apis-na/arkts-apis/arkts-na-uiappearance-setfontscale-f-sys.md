@@ -1,5 +1,10 @@
 # setFontScale (System API)
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setFontScale
 
 ```TypeScript

@@ -12,6 +12,11 @@ Represents the locale information, which consists of the language, script, and c
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## displayName
 
 ```TypeScript
@@ -80,7 +85,7 @@ suggestionType: SuggestionType
 
 Language or country/region suggestion type.
 
-**Type:** [SuggestionType](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-suggestiontype-e-sys.md)
+**Type:** [SuggestionType](arkts-na-i18n-suggestiontype-e-sys.md)
 
 **Since:** 23
 

@@ -8,6 +8,11 @@ Represents a style object for the label text and font.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## font
 
 ```TypeScript

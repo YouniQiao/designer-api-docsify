@@ -8,6 +8,11 @@ OperateIconV2构造函数的参数选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript
@@ -78,7 +83,7 @@ action?: OnActionCallback
 
 列表项右侧图标/箭头点击回调。 默认不设置或设置为undefined时，点击图标/箭头不触发回调。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

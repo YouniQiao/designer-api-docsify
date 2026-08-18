@@ -8,6 +8,11 @@ OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#open
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## appLinkingOnly
 
 ```TypeScript

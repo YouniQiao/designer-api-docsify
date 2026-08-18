@@ -1,12 +1,17 @@
 # getPortList
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPortList
 
 ```TypeScript
 function getPortList(): Readonly<SerialPort>[]
 ```
 
-查询串口设备清单，包括设备名称和对应的端口号。
+查询串口设备清单，包括设备名称和对应的端口号。通常在应用启动时、设备连接后或需要检测可用串口设备时调用。
 
 **起始版本：** 23
 
@@ -18,7 +23,7 @@ function getPortList(): Readonly<SerialPort>[]
 
 | 类型 | 说明 |
 | --- | --- |
-| Readonly&lt;SerialPort&gt;[] | Serial port information list. |
+| Readonly&lt;SerialPort&gt;[] | 返回可用串口设备的列表，每个元素包含串口的端口号和设备名称等属性信息。可用于获取当前系统中的所有串口设备，以便用户选择需要进行操作的串口。 |
 
 **示例**
 

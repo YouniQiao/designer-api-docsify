@@ -1,5 +1,10 @@
 # showActionMenu
 
+## 导入模块
+
+```TypeScript
+```
+
 ## showActionMenu
 
 ```TypeScript
@@ -23,7 +28,7 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ActionMenuOptions | 是 | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果回调。 |
 
 **示例**
 

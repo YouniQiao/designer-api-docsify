@@ -11,7 +11,8 @@ Represents the distributed information about an OS account.
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from 'distributedAccount';
+import { distributedAccount } from '@kit.BasicServicesKit';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## avatar

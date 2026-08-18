@@ -1,5 +1,10 @@
 # getUserDesktopDir
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUserDesktopDir
 
 ```TypeScript

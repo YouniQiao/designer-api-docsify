@@ -1,5 +1,10 @@
 # lib.es2020.sharedmemory
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

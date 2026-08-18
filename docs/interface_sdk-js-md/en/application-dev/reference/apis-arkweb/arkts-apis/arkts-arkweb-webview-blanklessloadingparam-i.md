@@ -11,7 +11,7 @@ Loading parameters of the White-Screen-Free Loading frame interpolation scheme.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## callback
@@ -22,7 +22,7 @@ callback?: Callback<BlanklessFrameInterpolationInfo>
 
 Callback invoked after frame interpolation succeeds, fails, or is removed. This takes effect only when **enable** is **true**. This parameter is optional. If not set, no operation is performed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
 

@@ -1,5 +1,10 @@
 # registerTraceListener
 
+## 导入模块
+
+```TypeScript
+```
+
 ## registerTraceListener
 
 ```TypeScript

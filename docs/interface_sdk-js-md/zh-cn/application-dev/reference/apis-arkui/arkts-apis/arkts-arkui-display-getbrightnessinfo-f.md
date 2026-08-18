@@ -1,5 +1,10 @@
 # getBrightnessInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBrightnessInfo
 
 ```TypeScript

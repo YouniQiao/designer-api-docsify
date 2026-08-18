@@ -11,7 +11,7 @@ Defines a custom URL scheme.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## isCodeCacheSupported

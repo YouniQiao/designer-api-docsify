@@ -12,6 +12,11 @@ The **BackgroundTaskManager** module provides APIs to manage background tasks. I
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

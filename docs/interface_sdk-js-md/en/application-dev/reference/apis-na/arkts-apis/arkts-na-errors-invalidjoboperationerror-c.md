@@ -12,6 +12,11 @@ Represents the error that is thrown when invalid operation is called on coroutin
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

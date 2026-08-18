@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from 'sendableResourceManager';
+import { sendableResourceManager } from '@kit.LocalizationKit';
 ```
 
 ## sendableResourceToResource

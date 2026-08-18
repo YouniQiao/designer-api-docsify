@@ -8,6 +8,11 @@ You need a custom class to implement the **GestureModifier** API.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## applyGesture
 
 ```TypeScript

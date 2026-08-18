@@ -13,7 +13,7 @@ The interface is used to generate network unique identifiers.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from 'policy';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## rule

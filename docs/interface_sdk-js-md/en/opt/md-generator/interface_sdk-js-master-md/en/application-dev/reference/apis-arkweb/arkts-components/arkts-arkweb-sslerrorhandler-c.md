@@ -1,0 +1,82 @@
+# SslErrorHandler
+
+SslErrorHandler is a class in the Web component for handling SSL certificate verification errors. When an SSL certificate error (such as certificate expiration, hostname mismatch, or untrusted CA) is encountered while loading a secure page, the app can obtain an SslErrorHandler instance through the onSslErrorEvent callback and decide whether to continue loading or cancel navigation. For sample code, see the [onSslErrorEvent](arkts-arkweb-web-attribute.md#onsslerrorevent) event.
+
+**Since:** 9
+
+<!--Device-unnamed-declare class SslErrorHandler--><!--Device-unnamed-declare class SslErrorHandler-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+Constructs a **SslErrorHandler** object.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SslErrorHandler-constructor()--><!--Device-SslErrorHandler-constructor()-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## handleCancel
+
+```TypeScript
+handleCancel(): void
+```
+
+Notifies the Web component to cancel this request and stops the current SSL certificate verification process.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SslErrorHandler-handleCancel(): void--><!--Device-SslErrorHandler-handleCancel(): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## handleCancel
+
+```TypeScript
+handleCancel(abortLoading: boolean): void
+```
+
+Cancels this request and determines whether to stop loading based on the **abortLoading** parameter.
+
+**Since:** 20
+
+<!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void--><!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| abortLoading | boolean | Yes |
+
+## handleConfirm
+
+```TypeScript
+handleConfirm(): void
+```
+
+Ignores the SSL certificate verification error and continues loading the page.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SslErrorHandler-handleConfirm(): void--><!--Device-SslErrorHandler-handleConfirm(): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core

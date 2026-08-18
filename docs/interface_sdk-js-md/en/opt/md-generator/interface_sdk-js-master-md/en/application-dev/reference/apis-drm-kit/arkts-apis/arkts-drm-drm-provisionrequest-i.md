@@ -1,0 +1,50 @@
+# ProvisionRequest(Defines the DRM capability.)
+
+Defines a device certificate provisioning request.
+
+**Since:** 23
+
+<!--Device-drm-interface ProvisionRequest--><!--Device-drm-interface ProvisionRequest-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## data
+
+```TypeScript
+data: Uint8Array
+```
+
+Binary data of the provisioning request.
+
+**Type:** Uint8Array
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ProvisionRequest-data: Uint8Array--><!--Device-ProvisionRequest-data: Uint8Array-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+## defaultURL
+
+```TypeScript
+defaultURL: string
+```
+
+URL of the device certificate provisioning server.
+
+**Type:** string
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ProvisionRequest-defaultURL: string--><!--Device-ProvisionRequest-defaultURL: string-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core

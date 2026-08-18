@@ -10,3 +10,8 @@ Defines ChipV2 options interface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

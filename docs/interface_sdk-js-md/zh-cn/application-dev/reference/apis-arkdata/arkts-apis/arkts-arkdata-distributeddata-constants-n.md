@@ -12,6 +12,11 @@ KVStore常量。
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 常量

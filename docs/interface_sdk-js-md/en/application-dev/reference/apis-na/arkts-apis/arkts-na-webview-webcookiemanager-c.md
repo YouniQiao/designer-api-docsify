@@ -10,6 +10,11 @@ Provides methods for managing the web cookies.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clearAllCookies
 
 ```TypeScript
@@ -387,7 +392,7 @@ Fetches all stored cookies asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
+| Promise&lt;Array&lt;[WebHttpCookie](arkts-na-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
 
 ## fetchCookie
 

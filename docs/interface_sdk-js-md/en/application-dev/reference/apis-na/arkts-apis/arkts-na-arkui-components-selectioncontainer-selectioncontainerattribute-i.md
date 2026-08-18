@@ -12,6 +12,11 @@ Defines the attributes of SelectionContainer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## attributeModifier
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getAppPreloadType
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppPreloadType
 
 ```TypeScript

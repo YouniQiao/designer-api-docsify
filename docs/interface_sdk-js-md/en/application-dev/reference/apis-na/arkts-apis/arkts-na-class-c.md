@@ -10,6 +10,11 @@ Class used to describe runtime types
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## createInstance
 
 ```TypeScript

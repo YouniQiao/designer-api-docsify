@@ -10,6 +10,11 @@ USB设备接口描述符。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## bClass
 
 ```TypeScript

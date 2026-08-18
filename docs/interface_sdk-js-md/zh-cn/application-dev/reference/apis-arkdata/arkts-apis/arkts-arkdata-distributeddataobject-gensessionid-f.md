@@ -1,5 +1,10 @@
 # genSessionId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## genSessionId
 
 ```TypeScript

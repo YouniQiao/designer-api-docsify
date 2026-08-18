@@ -10,6 +10,11 @@ Relative time format part.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## type
 
 ```TypeScript

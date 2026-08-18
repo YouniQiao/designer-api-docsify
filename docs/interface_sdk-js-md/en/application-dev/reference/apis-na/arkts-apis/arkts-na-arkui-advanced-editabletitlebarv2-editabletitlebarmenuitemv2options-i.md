@@ -10,6 +10,11 @@ Indicates the options of the menu item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript
@@ -80,7 +85,7 @@ action?: OnActionCallback
 
 Callback function when click on this menu item.
 
-**Type:** [OnActionCallback](arkts-na-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

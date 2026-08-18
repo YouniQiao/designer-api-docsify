@@ -13,7 +13,8 @@ Defines an intent filter, which specifies the criteria for selecting target inte
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName

@@ -8,6 +8,11 @@ Implements a layout manager object. > **NOTE：**> > After the text content is c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getCharacterPositionAtCoordinate
 
 ```TypeScript

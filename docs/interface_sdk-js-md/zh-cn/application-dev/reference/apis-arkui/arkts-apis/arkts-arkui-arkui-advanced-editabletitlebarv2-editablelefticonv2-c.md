@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -30,7 +35,7 @@ EditableLeftIconV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableLeftIconV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | 否 | 左侧图标配置选项。 |
+| options | [EditableLeftIconV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | 否 | 左侧图标配置选项。 |
 
 ## defaultFocus
 
@@ -64,7 +69,7 @@ EditableLeftIconV2的构造函数。
 
 图标类型。 默认值：EditableLeftIconTypeV2.Back。
 
-**类型：** [EditableLeftIconTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
+**类型：** [EditableLeftIconTypeV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **默认值：** EditableLeftIconTypeV2.Back
 
@@ -87,7 +92,7 @@ EditableLeftIconV2的构造函数。
 
 点击左侧图标的回调函数。未设置时，Back类型默认执行路由返回，Cancel类型无操作。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

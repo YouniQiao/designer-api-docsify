@@ -8,6 +8,11 @@ Component content cover dismiss
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## dismiss
 
 ```TypeScript

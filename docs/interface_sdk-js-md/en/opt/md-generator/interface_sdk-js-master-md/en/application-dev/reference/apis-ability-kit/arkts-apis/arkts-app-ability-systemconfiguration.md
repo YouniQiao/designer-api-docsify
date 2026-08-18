@@ -1,0 +1,38 @@
+# @ohos.app.ability.systemConfiguration
+
+The class of a system configuration.
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-declare namespace systemConfiguration--><!--Device-unnamed-declare namespace systemConfiguration-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## Summary
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) |
+
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnColorModeUpdatedFn](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md) |
+| [OnFontIdUpdatedFn](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md) |
+| [OnFontSizeScaleUpdatedFn](arkts-ability-systemconfiguration-onfontsizescaleupdatedfn-t.md) |
+| [OnFontWeightScaleUpdatedFn](arkts-ability-systemconfiguration-onfontweightscaleupdatedfn-t.md) |
+| [OnHasPointerDeviceUpdatedFn](arkts-ability-systemconfiguration-onhaspointerdeviceupdatedfn-t.md) |
+| [OnLanguageUpdatedFn](arkts-ability-systemconfiguration-onlanguageupdatedfn-t.md) |
+| [OnLocaleUpdatedFn](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) |
+| [OnMCCUpdatedFn](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) |
+| [OnMNCUpdatedFn](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) |

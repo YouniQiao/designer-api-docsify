@@ -18,6 +18,11 @@
  > - 从API Version 9开始所有接口不再维护，推荐使用新接口[@ohos.request](arkts-basicservices-request-n.md#request)。
 
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 类

@@ -12,6 +12,12 @@ Spring animation model. You can build a spring animation based on the start poin
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript

@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from 'notificationSubscribe';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## remove
@@ -36,7 +37,7 @@ function remove(
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | notificationKey | NotificationKey | 是 | 通知键值。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 **错误码：**
 
@@ -218,7 +219,7 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | hashCode | string | 是 | 通知唯一ID。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#subscribecallbackdata系统接口)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest)对象中的hashCode。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 **错误码：**
 
@@ -293,7 +294,7 @@ function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncC
 | --- | --- | --- | --- |
 | hashCodes | Array&lt;String&gt; | 是 | 通知唯一ID数组集合。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#subscribecallbackdata系统接口)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#notificationrequest)对象中的hashCode。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 **错误码：**
 

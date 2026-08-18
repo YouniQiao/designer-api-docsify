@@ -1,5 +1,10 @@
 # startScannerDiscovery
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startScannerDiscovery
 
 ```TypeScript

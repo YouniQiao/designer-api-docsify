@@ -8,6 +8,11 @@ Span的无障碍朗读功能属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript

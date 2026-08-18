@@ -8,6 +8,11 @@ Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## badgeColor
 
 ```TypeScript

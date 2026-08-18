@@ -11,7 +11,8 @@ Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Def
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'zlib';
+import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## compress

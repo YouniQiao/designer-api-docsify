@@ -11,7 +11,7 @@ Describes the contents of the ranging support types.
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from 'ranging';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## nearlinkHadm

@@ -2,13 +2,18 @@
 
 带目标节点的智慧手势处理基类。
 
-**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
+**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
 
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-export abstract class TargetedGestureProposal--><!--Device-unnamed-export abstract class TargetedGestureProposal-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## node
 

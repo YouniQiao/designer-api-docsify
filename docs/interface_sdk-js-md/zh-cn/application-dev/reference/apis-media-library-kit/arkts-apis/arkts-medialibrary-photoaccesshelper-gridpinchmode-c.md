@@ -8,6 +8,11 @@ picker内宫格的捏合模式。
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## defaultGridLevel
 
 ```TypeScript

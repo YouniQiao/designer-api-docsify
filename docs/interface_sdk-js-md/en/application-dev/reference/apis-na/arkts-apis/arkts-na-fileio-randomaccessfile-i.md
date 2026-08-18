@@ -10,6 +10,11 @@ Provides APIs for randomly reading and writing a stream based on offset pointers
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

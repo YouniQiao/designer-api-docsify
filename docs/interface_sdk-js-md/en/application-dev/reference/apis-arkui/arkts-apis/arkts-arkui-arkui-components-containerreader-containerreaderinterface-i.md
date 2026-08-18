@@ -11,9 +11,7 @@ Defines the ContainerReader Component. Used for reading and analyzing container 
 ## Modules to Import
 
 ```TypeScript
-import { ContainerReader } from 'ContainerReader';
-import { ContainerReaderAttribute } from 'ContainerReaderAttribute';
-import { BreakpointOptions } from 'BreakpointOptions';
+import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
 ```
 
 ## constructor

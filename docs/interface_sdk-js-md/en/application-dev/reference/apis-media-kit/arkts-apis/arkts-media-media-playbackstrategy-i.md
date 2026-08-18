@@ -11,7 +11,7 @@ Provides preferred playback settings for player.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableSuperResolution

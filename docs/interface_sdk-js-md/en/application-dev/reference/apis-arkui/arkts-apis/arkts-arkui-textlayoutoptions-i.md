@@ -8,6 +8,11 @@ Defines the text layout options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constraintWidth
 
 ```TypeScript

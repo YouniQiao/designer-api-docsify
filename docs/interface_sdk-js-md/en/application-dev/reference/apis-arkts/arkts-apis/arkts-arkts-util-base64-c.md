@@ -6,7 +6,7 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 
 **Deprecated since:** 9
 
-**Substitutes:** [Base64Helper](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#base64helper)
+**Substitutes:** [Base64Helper](arkts-arkts-util-base64helper-c.md#base64helper)
 
 <!--Device-util-class Base64--><!--Device-util-class Base64-End-->
 
@@ -15,7 +15,42 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'util';
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { util } from '@kit.ArkTS';
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -30,7 +65,7 @@ A constructor used to create a **Base64** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#constructor)
+**Substitutes:** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
 
 <!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
 
@@ -54,7 +89,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [decode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decode)
+**Substitutes:** [decode](arkts-arkts-util-base64helper-c.md#decode)
 
 <!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
 
@@ -95,7 +130,7 @@ Decodes the input content into a Uint8Array object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [decodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decodesync)
+**Substitutes:** [decodeSync](arkts-arkts-util-base64helper-c.md#decodesync)
 
 <!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
 
@@ -135,7 +170,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [encode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encode)
+**Substitutes:** [encode](arkts-arkts-util-base64helper-c.md#encode)
 
 <!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
 
@@ -176,7 +211,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodesync)
+**Substitutes:** [encodeSync](arkts-arkts-util-base64helper-c.md#encodesync)
 
 <!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
 
@@ -216,7 +251,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToString](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodetostring)
+**Substitutes:** [encodeToString](arkts-arkts-util-base64helper-c.md#encodetostring)
 
 <!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
 
@@ -257,7 +292,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToStringSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodetostringsync)
+**Substitutes:** [encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodetostringsync)
 
 <!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
 

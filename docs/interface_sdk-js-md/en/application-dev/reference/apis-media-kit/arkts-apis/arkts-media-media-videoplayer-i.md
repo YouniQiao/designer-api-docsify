@@ -15,7 +15,7 @@ VideoPlayer is a class for video playback management. It provides APIs to manage
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getTrackDescription

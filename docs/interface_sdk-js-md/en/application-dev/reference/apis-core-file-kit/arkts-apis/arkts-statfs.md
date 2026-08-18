@@ -12,6 +12,11 @@ The **statfs** module provides APIs for obtaining file system information, inclu
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

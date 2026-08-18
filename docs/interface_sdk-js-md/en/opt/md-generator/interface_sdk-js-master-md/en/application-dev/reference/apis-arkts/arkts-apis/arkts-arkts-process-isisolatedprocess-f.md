@@ -1,0 +1,34 @@
+# isIsolatedProcess
+
+## Modules to Import
+
+```TypeScript
+```
+
+## isIsolatedProcess
+
+```TypeScript
+function isIsolatedProcess(): boolean
+```
+
+Checks whether this process is isolated.
+
+**Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-process-function isIsolatedProcess(): boolean--><!--Device-process-function isIsolatedProcess(): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+**Examples**
+
+```TypeScript
+let result = process.isIsolatedProcess();
+```

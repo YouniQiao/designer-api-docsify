@@ -11,7 +11,8 @@ A carrier that carries the drawn content and drawing status. > **NOTE：**> > - 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'drawing';
+import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## attachBrush

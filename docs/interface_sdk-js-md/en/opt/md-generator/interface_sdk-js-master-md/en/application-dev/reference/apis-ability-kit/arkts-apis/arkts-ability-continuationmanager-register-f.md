@@ -1,0 +1,145 @@
+# register
+
+## Modules to Import
+
+```TypeScript
+```
+
+## register
+
+```TypeScript
+function register(callback: AsyncCallback<number>): void
+```
+
+Registers the continuation management service and obtains a token. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-continuationManager-function register(callback: AsyncCallback<number>): void--><!--Device-continuationManager-function register(callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.Ability.DistributedAbilityManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+continuationManager.register((err, data) => {
+  if (err.code != 0) {
+    console.error('register failed, cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('register finished, ' + JSON.stringify(data));
+  token = data;
+});
+```
+
+
+## register
+
+```TypeScript
+function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void
+```
+
+Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-continuationManager-function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void--><!--Device-continuationManager-function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.Ability.DistributedAbilityManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+
+let token: number = -1;
+continuationManager.register(
+  {
+    deviceType: ["00E"]
+  },
+  (err, data) => {
+    if (err.code != 0) {
+      console.error('register failed, cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('register finished, ' + JSON.stringify(data));
+    token = data;
+});
+```
+
+
+## register
+
+```TypeScript
+function register(options?: ContinuationExtraParams): Promise<number>
+```
+
+Registers the continuation management service and obtains a token. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondevicestatechange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-continuationManager-function register(options?: ContinuationExtraParams): Promise<number>--><!--Device-continuationManager-function register(options?: ContinuationExtraParams): Promise<number>-End-->
+
+**System capability:** SystemCapability.Ability.DistributedAbilityManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;number & gt; |
+
+**Examples**
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let token: number = -1;
+continuationManager.register(
+  { deviceType: ["00E"] }).then((data) => {
+    console.info('register finished, ' + JSON.stringify(data));
+    token = data;
+  }).catch((err: BusinessError) => {
+    console.error('register failed, cause: ' + JSON.stringify(err));
+});
+```

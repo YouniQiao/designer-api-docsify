@@ -11,7 +11,7 @@ This module provides the mutual conversion between [Resource](arkts-localization
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from 'sendableResourceManager';
+import { sendableResourceManager } from '@kit.LocalizationKit';
 ```
 
 ## Summary

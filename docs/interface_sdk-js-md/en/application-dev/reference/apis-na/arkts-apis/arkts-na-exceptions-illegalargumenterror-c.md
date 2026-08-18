@@ -12,6 +12,11 @@ Represents an error thrown when a method is passed an illegal argument.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

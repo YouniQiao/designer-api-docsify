@@ -8,6 +8,11 @@ When **cachedCount** is set to the maximum number of nodes in the display area o
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cachedCount
 
 ```TypeScript

@@ -12,6 +12,11 @@ Immersive material class, which inherits from [Material](../../apis-arkui/arkts-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getxattrSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getxattrSync
 
 ```TypeScript

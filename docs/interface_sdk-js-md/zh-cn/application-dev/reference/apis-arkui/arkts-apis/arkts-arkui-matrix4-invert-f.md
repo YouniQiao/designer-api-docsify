@@ -1,5 +1,10 @@
 # invert
 
+## 导入模块
+
+```TypeScript
+```
+
 ## invert
 
 ```TypeScript

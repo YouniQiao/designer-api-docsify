@@ -1,12 +1,17 @@
 # hasAccessoryRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasAccessoryRight
 
 ```TypeScript
 function hasAccessoryRight(accessory: USBAccessory): boolean
 ```
 
-检查应用程序是否有权访问USB配件。 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到 [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md#usbaccessory)作为参数。
+检查应用是否有权访问USB配件。 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到 [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md#usbaccessory)作为参数。
 
 **起始版本：** 23
 
@@ -24,7 +29,7 @@ function hasAccessoryRight(accessory: USBAccessory): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true表示应用程序有权访问USB配件，false表示应用程序无权访问USB配件。 |
+| boolean | true表示应用有权访问USB配件，false表示应用无权访问USB配件。 |
 
 **错误码：**
 

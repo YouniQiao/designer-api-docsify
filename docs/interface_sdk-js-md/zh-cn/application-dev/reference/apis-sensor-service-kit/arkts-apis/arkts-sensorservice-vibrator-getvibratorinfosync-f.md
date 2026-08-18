@@ -1,5 +1,10 @@
 # getVibratorInfoSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getVibratorInfoSync
 
 ```TypeScript

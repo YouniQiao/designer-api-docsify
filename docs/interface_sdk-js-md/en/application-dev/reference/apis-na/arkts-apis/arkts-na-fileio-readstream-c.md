@@ -12,6 +12,11 @@ Defines a readable stream. You need to use [fileIo.createReadStream](arkts-na-fi
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

@@ -11,40 +11,10 @@ Provides APIs for listening for UI component behavior changes. > **NOTE：**> > 
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar } from 'AtomicServiceBar';
-import { ComponentUtils } from 'ComponentUtils';
-import { ContextMenuController } from 'ContextMenuController';
-import { CursorController } from 'CursorController';
-import { DialogPresenter } from 'DialogPresenter';
-import { DragController } from 'DragController';
-import { Font } from 'Font';
-import { KeyboardAvoidMode } from 'KeyboardAvoidMode';
-import { MediaQuery } from 'MediaQuery';
-import { OverlayManager } from 'OverlayManager';
-import { PromptAction } from 'PromptAction';
-import { Router } from 'Router';
-import { UIContext } from 'UIContext';
-import { UIInspector } from 'UIInspector';
-import { UIObserver } from 'UIObserver';
-import { PageInfo } from 'PageInfo';
-import { SwiperDynamicSyncScene } from 'SwiperDynamicSyncScene';
-import { SwiperDynamicSyncSceneType } from 'SwiperDynamicSyncSceneType';
-import { MarqueeDynamicSyncScene } from 'MarqueeDynamicSyncScene';
-import { MarqueeDynamicSyncSceneType } from 'MarqueeDynamicSyncSceneType';
-import { MeasureUtils } from 'MeasureUtils';
-import { FrameCallback } from 'FrameCallback';
-import { OverlayManagerOptions } from 'OverlayManagerOptions';
-import { TargetInfo } from 'TargetInfo';
-import { TextMenuController } from 'TextMenuController';
-import { NodeIdentity } from 'NodeIdentity';
-import { NodeRenderState } from 'NodeRenderState';
-import { NodeRenderStateChangeCallback } from 'NodeRenderStateChangeCallback';
-import { Magnifier } from 'Magnifier';
-import { ResolvedUIContext } from 'ResolvedUIContext';
-import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
-import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
-import { BackgroundLuminanceSamplingConfigs } from 'BackgroundLuminanceSamplingConfigs';
-import { LuminanceSampler } from 'LuminanceSampler';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## addGlobalGestureListener
@@ -1131,7 +1101,7 @@ Listens for screen pixel density changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | Yes | Event type. The value **'densityUpdate'** indicates the pixel density changes of the screen. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.DensityInfo&gt; | Yes | Callback used to return the updated screen pixel density using a [DensityInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-densityinfo-c.md#densityinfo) object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.DensityInfo&gt; | Yes | Callback used to return the updated screen pixel density using a [DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md#densityinfo) object. |
 
 ## on_didClick
 

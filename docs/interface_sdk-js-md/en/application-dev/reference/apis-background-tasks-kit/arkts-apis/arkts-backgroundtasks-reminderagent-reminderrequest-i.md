@@ -15,7 +15,9 @@ Defines the reminder to publish.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'reminderAgent';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## actionButton

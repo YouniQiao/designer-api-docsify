@@ -8,6 +8,11 @@ UIUtils状态管理相关的工具方法，包括获取代理对象的原始对�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addMonitor
 
 ```TypeScript

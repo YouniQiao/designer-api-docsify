@@ -13,7 +13,7 @@ Represents event type information.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## eventClassify

@@ -10,6 +10,11 @@ Single-Line display mode.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## itemBorderRadius
 
 ```TypeScript

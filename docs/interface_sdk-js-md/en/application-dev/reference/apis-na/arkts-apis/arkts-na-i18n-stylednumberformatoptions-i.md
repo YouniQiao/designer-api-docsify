@@ -10,6 +10,11 @@ Represents optional configuration items for the NumberFormat object.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## decimal
 
 ```TypeScript

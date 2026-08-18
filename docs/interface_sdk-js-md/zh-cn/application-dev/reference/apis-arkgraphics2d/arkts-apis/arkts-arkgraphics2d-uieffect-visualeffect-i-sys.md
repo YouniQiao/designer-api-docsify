@@ -8,6 +8,11 @@ VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐�
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## backgroundColorBlender
 
 ```TypeScript

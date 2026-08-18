@@ -10,6 +10,11 @@ Configuration information interface for PromptOptionsV2. Used to construct Promp
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## actionText
 
 ```TypeScript

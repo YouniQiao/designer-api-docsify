@@ -1,14 +1,19 @@
 # BackPressActionProposal
 
-智慧手势返回动作处理。当通过[registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，会返回上一页面。
+智慧手势返回动作处理。当通过[registerMonitor](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-smartgesturecontroller-c.md#registermonitor)接口动态自定义智慧手势行为时，设置返回值 [GestureHandlingResolution](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-gesturehandlingresolution-c.md#gesturehandlingresolution)的selectedProposal为该类型对象，会返回上一页面。
 
-**继承/实现关系：** BackPressActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
+**继承/实现关系：** BackPressActionProposal extends [BaseGestureHandlingProposal](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
 
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-export class BackPressActionProposal--><!--Device-unnamed-export class BackPressActionProposal-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## constructor
 

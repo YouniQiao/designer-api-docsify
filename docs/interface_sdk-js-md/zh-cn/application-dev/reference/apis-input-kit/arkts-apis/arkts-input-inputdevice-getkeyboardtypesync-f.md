@@ -1,5 +1,10 @@
 # getKeyboardTypeSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getKeyboardTypeSync
 
 ```TypeScript

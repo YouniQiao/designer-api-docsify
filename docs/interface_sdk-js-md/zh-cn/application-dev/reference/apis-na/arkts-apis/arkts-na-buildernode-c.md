@@ -107,7 +107,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
 | options | [RenderOptions](arkts-na-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。<br/>默认值：undefined |
 
 ## dispose

@@ -8,6 +8,11 @@ WebResourceRequest是Web组件中表示网络资源请求的类，提供了关�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

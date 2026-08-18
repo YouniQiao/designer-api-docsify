@@ -12,6 +12,11 @@ P2P配置。
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deviceAddress
 
 ```TypeScript

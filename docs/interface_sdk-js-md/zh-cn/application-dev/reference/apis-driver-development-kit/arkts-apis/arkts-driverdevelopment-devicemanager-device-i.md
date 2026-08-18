@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## busType
 
 ```TypeScript

@@ -11,7 +11,7 @@ Implements a **BackForwardCacheOptions** object to set back-forward cache option
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

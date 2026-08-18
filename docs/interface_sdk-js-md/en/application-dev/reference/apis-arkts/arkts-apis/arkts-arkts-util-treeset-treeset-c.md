@@ -11,7 +11,9 @@ TreeSet is implemented based on TreeMap. In TreeSet, only value objects are proc
 ## Modules to Import
 
 ```TypeScript
-import { TreeSet } from 'TreeSet';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
 ```
 
 ## $_iterator

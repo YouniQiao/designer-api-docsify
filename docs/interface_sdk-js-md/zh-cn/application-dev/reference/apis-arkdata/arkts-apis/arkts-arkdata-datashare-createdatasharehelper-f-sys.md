@@ -1,5 +1,10 @@
 # createDataShareHelper（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createDataShareHelper
 
 ```TypeScript
@@ -24,7 +29,7 @@ function createDataShareHelper(context: Context, uri: string, callback: AsyncCal
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文环境。 |
 | uri | string | 是 | 要连接的服务端应用的路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | 是 | 回调函数。当创建DataShareHelper实例成功，err为undefined，data为获取到的 DataShareHelper实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | 是 | 回调函数。当创建DataShareHelper实例成功，err为undefined，data为获取到的 DataShareHelper实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -94,7 +99,7 @@ function createDataShareHelper(
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | Indicates the application context. |
 | uri | string | 是 | Indicates the path of the file to open. |
 | options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 是 | Indicates the optional config. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | 是 | {DataShareHelper}: The dataShareHelper for consumer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | 是 | {DataShareHelper}: The dataShareHelper for consumer. |
 
 **错误码：**
 

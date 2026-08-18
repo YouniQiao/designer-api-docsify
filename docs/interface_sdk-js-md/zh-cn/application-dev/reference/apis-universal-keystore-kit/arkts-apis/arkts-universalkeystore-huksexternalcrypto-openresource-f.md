@@ -1,5 +1,10 @@
 # openResource
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openResource
 
 ```TypeScript

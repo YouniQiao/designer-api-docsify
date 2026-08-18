@@ -11,7 +11,10 @@ Represents the device-cloud file version management class. It allows you to mana
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## clearFileConflict

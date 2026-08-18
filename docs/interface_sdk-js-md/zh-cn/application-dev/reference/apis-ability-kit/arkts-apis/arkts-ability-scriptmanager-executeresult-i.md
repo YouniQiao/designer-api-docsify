@@ -8,6 +8,11 @@ ArkTS脚本执行结果。
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## code
 
 ```TypeScript

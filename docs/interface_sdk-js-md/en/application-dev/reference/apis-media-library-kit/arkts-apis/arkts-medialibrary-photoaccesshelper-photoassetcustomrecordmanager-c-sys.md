@@ -13,7 +13,7 @@ Provides APIs for custom user behavior recording for Gallery.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addLcdJumpCount

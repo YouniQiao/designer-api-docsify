@@ -10,6 +10,11 @@ Toast的选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alignment
 
 ```TypeScript
@@ -222,7 +227,7 @@ showMode?: ToastShowMode
 
 设置Toast层级。 默认值：ToastShowMode.DEFAULT，默认显示在应用内。
 
-**类型：** [ToastShowMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-toastshowmode-e.md)
+**类型：** [ToastShowMode](arkts-na-promptaction-toastshowmode-e.md)
 
 **默认值：** ToastShowMode.DEFAULT
 

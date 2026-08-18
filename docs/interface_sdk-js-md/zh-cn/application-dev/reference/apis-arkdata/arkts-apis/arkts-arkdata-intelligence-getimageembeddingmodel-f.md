@@ -1,5 +1,10 @@
 # getImageEmbeddingModel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getImageEmbeddingModel
 
 ```TypeScript

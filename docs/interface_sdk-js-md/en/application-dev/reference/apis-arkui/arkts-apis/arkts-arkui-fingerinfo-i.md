@@ -8,6 +8,11 @@ Defines the finger information type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getCurrentLocalPosition
 
 ```TypeScript

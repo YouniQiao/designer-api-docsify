@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from 'continuationManager';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## on_deviceDisconnect

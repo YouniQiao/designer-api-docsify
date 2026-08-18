@@ -11,7 +11,8 @@ The **distributedAccount** module provides APIs for managing distributed account
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from 'distributedAccount';
+import { distributedAccount } from '@kit.BasicServicesKit';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

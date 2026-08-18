@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## checkPermissionInUse

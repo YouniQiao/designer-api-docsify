@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVInputCastPicker } from 'AVInputCastPicker';
+import { AVInputCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## Summary

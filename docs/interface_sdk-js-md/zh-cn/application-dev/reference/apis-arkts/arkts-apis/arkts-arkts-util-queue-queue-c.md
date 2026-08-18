@@ -8,6 +8,11 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

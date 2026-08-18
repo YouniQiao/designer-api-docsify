@@ -8,6 +8,11 @@ Navigation组件页面切换事件的监听选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## navigationId
 
 ```TypeScript

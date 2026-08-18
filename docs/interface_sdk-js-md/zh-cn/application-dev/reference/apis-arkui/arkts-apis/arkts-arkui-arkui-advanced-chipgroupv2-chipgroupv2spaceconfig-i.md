@@ -8,6 +8,11 @@ ChipGroupV2SpaceConfig定义了ChipGroupV2左右内边距，以及ChipV2与ChipV
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## endSpace
 
 ```TypeScript

@@ -4,6 +4,11 @@
 
 <!--Device-unnamed-interface Uint16ArrayConstructor--><!--Device-unnamed-interface Uint16ArrayConstructor-End-->
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

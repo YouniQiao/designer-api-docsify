@@ -1,5 +1,10 @@
 # offLinearAccelerometerChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offLinearAccelerometerChange
 
 ```TypeScript
@@ -21,7 +26,7 @@ Unsubscribe to linear acceleration sensor data, {@code SensorId.LINEAR_ACCELEROM
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 否 | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | 否 | callback linear accelerometer data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | 否 | callback linear accelerometer data. |
 
 **错误码：**
 

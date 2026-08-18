@@ -12,3 +12,8 @@ TypedArray继承Int8Array的特性与方法。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+

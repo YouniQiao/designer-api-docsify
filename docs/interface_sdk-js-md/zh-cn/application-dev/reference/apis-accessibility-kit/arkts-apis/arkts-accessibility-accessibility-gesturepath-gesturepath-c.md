@@ -8,6 +8,11 @@ GesturePath表示手势路径信息。 本模块用于创建手势路径信息�
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

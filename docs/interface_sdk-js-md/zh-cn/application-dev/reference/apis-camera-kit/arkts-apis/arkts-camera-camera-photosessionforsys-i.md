@@ -12,3 +12,8 @@ Implements a photo session for system applications, which sets the parameters of
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+

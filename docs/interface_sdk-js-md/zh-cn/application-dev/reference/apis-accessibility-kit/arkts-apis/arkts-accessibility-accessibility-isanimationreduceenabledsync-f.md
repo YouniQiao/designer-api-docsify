@@ -1,5 +1,10 @@
 # isAnimationReduceEnabledSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAnimationReduceEnabledSync
 
 ```TypeScript

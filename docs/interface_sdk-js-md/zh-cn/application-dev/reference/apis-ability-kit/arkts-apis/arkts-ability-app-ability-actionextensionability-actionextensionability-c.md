@@ -12,3 +12,8 @@ ActionExtensionAbility是为开发者提供的自定义操作业务模板，继�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+

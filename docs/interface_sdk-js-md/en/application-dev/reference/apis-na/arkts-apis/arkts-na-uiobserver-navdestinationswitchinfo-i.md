@@ -10,6 +10,11 @@ NavDestination switch info
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## context
 
 ```TypeScript

@@ -8,6 +8,11 @@ CounterV2DateData定义了日期通用属性和方法，包括年、月、日。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

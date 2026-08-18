@@ -10,6 +10,11 @@ Performance-oriented class for string construction
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## append
 
 ```TypeScript

@@ -13,7 +13,7 @@ Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#nets
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'statistics';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## endTime

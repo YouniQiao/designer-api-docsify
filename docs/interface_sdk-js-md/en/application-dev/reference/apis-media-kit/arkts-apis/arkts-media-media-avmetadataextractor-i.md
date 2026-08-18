@@ -11,7 +11,7 @@ AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtai
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## cancelAllFetchFrames

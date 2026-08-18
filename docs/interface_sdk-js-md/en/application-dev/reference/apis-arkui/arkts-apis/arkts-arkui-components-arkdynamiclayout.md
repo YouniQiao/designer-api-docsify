@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayout } from 'DynamicLayout';
-import { DynamicLayoutAttribute } from 'DynamicLayoutAttribute';
+import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## Summary

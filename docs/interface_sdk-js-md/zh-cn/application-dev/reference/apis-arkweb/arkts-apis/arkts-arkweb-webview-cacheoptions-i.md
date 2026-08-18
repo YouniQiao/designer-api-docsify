@@ -8,6 +8,11 @@ Web组件预编译JavaScript生成字节码缓存的配置对象，用于控制�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## responseHeaders
 
 ```TypeScript

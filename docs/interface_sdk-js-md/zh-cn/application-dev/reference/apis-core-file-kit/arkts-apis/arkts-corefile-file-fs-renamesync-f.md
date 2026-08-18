@@ -1,5 +1,10 @@
 # renameSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## renameSync
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # generateRandomBinaryUUID
 
+## 导入模块
+
+```TypeScript
+```
+
 ## generateRandomBinaryUUID
 
 ```TypeScript

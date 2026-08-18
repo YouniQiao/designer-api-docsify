@@ -1,5 +1,10 @@
 # stopCastDeviceDiscovery（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## stopCastDeviceDiscovery
 
 ```TypeScript
@@ -20,7 +25,7 @@ function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功停止搜索，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功停止搜索，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 

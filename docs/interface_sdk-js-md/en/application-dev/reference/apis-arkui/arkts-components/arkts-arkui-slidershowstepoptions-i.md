@@ -8,6 +8,11 @@ Provides accessibility text mapping for the slider step markers.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## stepsAccessibility
 
 ```TypeScript

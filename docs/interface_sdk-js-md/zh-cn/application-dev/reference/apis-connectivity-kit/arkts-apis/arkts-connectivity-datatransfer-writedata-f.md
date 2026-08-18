@@ -1,5 +1,10 @@
 # writeData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## writeData
 
 ```TypeScript

@@ -13,7 +13,7 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## completeButtonText

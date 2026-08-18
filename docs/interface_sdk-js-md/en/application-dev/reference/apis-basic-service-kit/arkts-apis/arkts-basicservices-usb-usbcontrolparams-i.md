@@ -15,7 +15,9 @@ Represents control transfer parameters.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'usb';
+import { usb } from '@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## data

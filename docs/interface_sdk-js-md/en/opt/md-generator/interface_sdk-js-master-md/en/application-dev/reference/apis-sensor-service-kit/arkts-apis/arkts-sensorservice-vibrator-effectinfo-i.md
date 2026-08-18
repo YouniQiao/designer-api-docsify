@@ -1,0 +1,30 @@
+# EffectInfo
+
+Defines the preset effect.
+
+**Since:** 23
+
+<!--Device-vibrator-interface EffectInfo--><!--Device-vibrator-interface EffectInfo-End-->
+
+**System capability:** SystemCapability.Sensors.MiscDevice
+
+## Modules to Import
+
+```TypeScript
+```
+
+## isEffectSupported
+
+```TypeScript
+isEffectSupported: boolean
+```
+
+Whether the preset effect is supported. The value **true** indicates that the preset effect is supported, and the value **false** indicates the opposite.
+
+**Type:** boolean
+
+**Since:** 23
+
+<!--Device-EffectInfo-isEffectSupported: boolean--><!--Device-EffectInfo-isEffectSupported: boolean-End-->
+
+**System capability:** SystemCapability.Sensors.MiscDevice

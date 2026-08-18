@@ -1,5 +1,10 @@
 # setAbilityDisabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setAbilityDisabled
 
 ```TypeScript

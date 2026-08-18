@@ -11,7 +11,7 @@ Storage usage information of the application.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'bundleManager';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## appSize

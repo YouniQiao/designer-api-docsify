@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'featureAbility';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## startAbility

@@ -13,7 +13,7 @@ This module provides system management capabilities, including NTP time server s
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## Summary

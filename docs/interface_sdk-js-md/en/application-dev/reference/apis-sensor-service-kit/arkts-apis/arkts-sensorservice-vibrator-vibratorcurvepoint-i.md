@@ -11,7 +11,7 @@ Defines the gain relative to the vibration intensity.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## frequency

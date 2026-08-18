@@ -10,6 +10,11 @@ ChipV2PrefixImageIcon定义前缀图标类。 继承自[ChipV2ImageIcon](arkts-a
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

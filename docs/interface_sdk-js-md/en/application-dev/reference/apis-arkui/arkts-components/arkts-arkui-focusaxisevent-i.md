@@ -10,6 +10,11 @@ Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-bas
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## axisMap
 
 ```TypeScript

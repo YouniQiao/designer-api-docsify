@@ -8,6 +8,11 @@ CMS封装数据的接收者信息。 > **说明：** > > 至少需要设置一�
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+```
+
 ## keyAgreeInfo
 
 ```TypeScript

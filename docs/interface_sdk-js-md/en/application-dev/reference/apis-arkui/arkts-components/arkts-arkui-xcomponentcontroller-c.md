@@ -8,6 +8,11 @@ Defines the controller of the **XComponent**. You can bind the controller to the
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

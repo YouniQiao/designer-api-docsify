@@ -11,7 +11,8 @@ The definition of the operate result.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## errorCode

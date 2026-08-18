@@ -10,6 +10,11 @@ Iterable interface representing an object whose elements can be traversed
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

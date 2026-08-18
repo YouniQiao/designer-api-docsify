@@ -12,6 +12,11 @@ Use the LayeredDrawableDescriptor class to get the foreground, the background an
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

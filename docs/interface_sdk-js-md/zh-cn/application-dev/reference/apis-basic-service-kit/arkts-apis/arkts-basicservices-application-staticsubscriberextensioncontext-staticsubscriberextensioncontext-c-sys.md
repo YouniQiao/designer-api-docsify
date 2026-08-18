@@ -12,6 +12,11 @@ StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上�
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startAbility
 
 ```TypeScript
@@ -37,7 +42,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的want信息。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于接收启动结果。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收启动结果。 |
 
 **错误码：**
 

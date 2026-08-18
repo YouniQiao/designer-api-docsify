@@ -1,5 +1,10 @@
 # registerWatermarkCallback
 
+## 导入模块
+
+```TypeScript
+```
+
 ## registerWatermarkCallback
 
 ```TypeScript

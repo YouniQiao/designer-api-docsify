@@ -11,7 +11,8 @@ Describes the image properties.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## defaultValue

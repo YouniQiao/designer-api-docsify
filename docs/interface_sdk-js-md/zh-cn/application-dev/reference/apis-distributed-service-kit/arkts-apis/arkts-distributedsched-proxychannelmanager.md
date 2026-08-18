@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

@@ -12,6 +12,11 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。 > **�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## opacity
 
 ```TypeScript

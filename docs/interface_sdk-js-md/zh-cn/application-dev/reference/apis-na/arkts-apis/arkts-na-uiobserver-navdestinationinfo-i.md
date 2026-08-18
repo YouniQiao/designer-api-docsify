@@ -10,6 +10,11 @@ NavDestination组件信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## index
 
 ```TypeScript
@@ -158,7 +163,7 @@ state: NavDestinationState
 
 NavDestination组件的状态。
 
-**类型：** [NavDestinationState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-navdestinationstate-e.md)
+**类型：** [NavDestinationState](arkts-na-uiobserver-navdestinationstate-e.md)
 
 **起始版本：** 23
 

@@ -10,6 +10,11 @@ Remote user authorization item.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## authResult
 
 ```TypeScript

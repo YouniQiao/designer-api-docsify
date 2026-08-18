@@ -13,7 +13,7 @@ Represent the asset (such as a document, image, or video). **Asset** inherits fr
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'sendableRelationalStore';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## createTime

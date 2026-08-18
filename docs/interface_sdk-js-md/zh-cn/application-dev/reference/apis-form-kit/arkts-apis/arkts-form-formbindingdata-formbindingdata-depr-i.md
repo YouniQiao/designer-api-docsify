@@ -12,6 +12,11 @@ FormBindingData提供卡片数据绑定的能力，用于存储卡片需要展�
 
 **系统能力：** SystemCapability.Ability.Form
 
+## 导入模块
+
+```TypeScript
+```
+
 ## data
 
 ```TypeScript

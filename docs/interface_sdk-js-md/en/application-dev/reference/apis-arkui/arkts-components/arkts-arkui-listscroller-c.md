@@ -10,6 +10,11 @@ Implements the scroll controller of the **List** component. A **List** component
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## closeAllSwipeActions
 
 ```TypeScript

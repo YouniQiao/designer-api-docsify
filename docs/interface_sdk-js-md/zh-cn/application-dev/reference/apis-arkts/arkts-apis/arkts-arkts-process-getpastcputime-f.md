@@ -1,5 +1,10 @@
 # getPastCpuTime
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPastCpuTime
 
 ```TypeScript

@@ -10,6 +10,11 @@ Represents chinese calendar time element for the ChineseCalendar object.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cyclicalYear
 
 ```TypeScript

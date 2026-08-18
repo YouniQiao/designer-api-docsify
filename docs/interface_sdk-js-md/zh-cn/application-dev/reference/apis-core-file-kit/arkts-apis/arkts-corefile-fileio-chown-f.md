@@ -1,5 +1,10 @@
 # chown
 
+## 导入模块
+
+```TypeScript
+```
+
 ## chown
 
 ```TypeScript
@@ -54,5 +59,5 @@ declare function chown(path: string, uid: number, gid: number, callback: AsyncCa
 | path | string | 是 | 待改变文件的应用沙箱路径。 |
 | uid | number | 是 | 新的UID。 |
 | gid | number | 是 | 新的GID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步改变文件所有者之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步改变文件所有者之后的回调。 |
 

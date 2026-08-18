@@ -8,6 +8,11 @@ Defines the frame info when fetch picture form a video.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## actualTimeUs
 
 ```TypeScript

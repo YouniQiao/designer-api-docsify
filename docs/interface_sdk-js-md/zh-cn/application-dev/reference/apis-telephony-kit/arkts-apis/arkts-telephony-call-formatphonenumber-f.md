@@ -1,5 +1,10 @@
 # formatPhoneNumber
 
+## 导入模块
+
+```TypeScript
+```
+
 ## formatPhoneNumber
 
 ```TypeScript
@@ -20,7 +25,7 @@ function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, ca
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
 | options | [NumberFormatOptions](arkts-telephony-call-numberformatoptions-i.md) | 是 | 格式化参数，如国家码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回格式化电话号码的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回格式化电话号码的结果。 |
 
 **错误码：**
 
@@ -122,7 +127,7 @@ function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回格式化电话号码的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回格式化电话号码的结果。 |
 
 **错误码：**
 

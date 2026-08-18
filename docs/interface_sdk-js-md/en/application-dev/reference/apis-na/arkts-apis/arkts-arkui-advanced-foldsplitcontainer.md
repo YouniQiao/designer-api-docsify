@@ -1,5 +1,10 @@
 # @ohos.arkui.advanced.FoldSplitContainer
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Enums

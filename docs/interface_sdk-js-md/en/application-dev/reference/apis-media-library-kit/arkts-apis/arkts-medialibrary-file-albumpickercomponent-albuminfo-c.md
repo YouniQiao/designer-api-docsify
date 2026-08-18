@@ -11,11 +11,7 @@ Represents album information.
 ## Modules to Import
 
 ```TypeScript
-import { AlbumPickerComponent } from 'AlbumPickerComponent';
-import { AlbumPickerOptions } from 'AlbumPickerOptions';
-import { AlbumInfo } from 'AlbumInfo';
-import { EmptyAreaClickCallback } from 'EmptyAreaClickCallback';
-import { AlbumPickerController } from 'AlbumPickerController';
+import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
 
 ## albumName

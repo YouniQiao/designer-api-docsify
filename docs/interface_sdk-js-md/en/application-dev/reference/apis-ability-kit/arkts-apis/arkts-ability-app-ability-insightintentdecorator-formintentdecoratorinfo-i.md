@@ -13,14 +13,8 @@ Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecor
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentLink } from 'InsightIntentLink';
-import { InsightIntentPage } from 'InsightIntentPage';
-import { InsightIntentFunctionMethod } from 'InsightIntentFunctionMethod';
-import { InsightIntentFunction } from 'InsightIntentFunction';
-import { InsightIntentEntry } from 'InsightIntentEntry';
-import { LinkParamCategory } from 'LinkParamCategory';
-import { InsightIntentForm } from 'InsightIntentForm';
-import { InsightIntentEntity } from 'InsightIntentEntity';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from '@kit.AbilityKit';
+import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, LinkIntentParamMapping, InsightIntentEntity, InsightIntentForm } from '@kit.AbilityKit';
 ```
 
 ## formName

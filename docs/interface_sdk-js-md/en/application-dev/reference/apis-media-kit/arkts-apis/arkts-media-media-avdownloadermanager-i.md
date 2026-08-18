@@ -11,7 +11,7 @@ Definition of the Offline Download Management Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAVDownloadTask

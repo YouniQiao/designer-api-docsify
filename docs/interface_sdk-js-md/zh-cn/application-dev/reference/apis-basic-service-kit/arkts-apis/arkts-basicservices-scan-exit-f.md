@@ -1,5 +1,10 @@
 # exit
 
+## 导入模块
+
+```TypeScript
+```
+
 ## exit
 
 ```TypeScript

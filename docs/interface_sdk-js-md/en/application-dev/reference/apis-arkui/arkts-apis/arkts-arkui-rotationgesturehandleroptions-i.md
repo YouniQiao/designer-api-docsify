@@ -10,6 +10,11 @@ Provides the parameters of the rotation gesture handler. Inherits from [BaseHand
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## angle
 
 ```TypeScript

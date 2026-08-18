@@ -1,5 +1,10 @@
 # getFirstPreferredLanguage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFirstPreferredLanguage
 
 ```TypeScript

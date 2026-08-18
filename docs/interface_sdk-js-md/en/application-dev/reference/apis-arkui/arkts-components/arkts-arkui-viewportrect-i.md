@@ -8,6 +8,12 @@ Describes the options of the viewport. > **NOTE：**> > To standardize anonymous
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+```
+
 ## height
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # setOverlayEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setOverlayEnabled
 
 ```TypeScript
@@ -20,7 +25,7 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 | --- | --- | --- | --- |
 | moduleName | string | 是 | overlay特征module的名称。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当设置指定module的overlay禁用使能状态成功时，err为 undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)，当设置指定module的overlay禁用使能状态成功时，err为 undefined，否则为错误对象。 |
 
 **错误码：**
 

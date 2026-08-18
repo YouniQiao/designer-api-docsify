@@ -1,5 +1,10 @@
 # createImageSource
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createImageSource
 
 ```TypeScript

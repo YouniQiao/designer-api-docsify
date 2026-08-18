@@ -1,5 +1,10 @@
 # @ohos.arkui.Parallelize
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

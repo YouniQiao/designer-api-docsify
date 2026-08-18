@@ -8,6 +8,11 @@ Define the options for background image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## repeat
 
 ```TypeScript

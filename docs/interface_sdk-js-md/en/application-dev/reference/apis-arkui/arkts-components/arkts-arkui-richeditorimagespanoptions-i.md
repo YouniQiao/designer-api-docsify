@@ -8,6 +8,11 @@ Sets the offset and style of an image span.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## gesture
 
 ```TypeScript

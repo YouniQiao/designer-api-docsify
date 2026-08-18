@@ -11,7 +11,7 @@ Provides network sharing related interfaces.
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from 'sharing';
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## Summary

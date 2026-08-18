@@ -6,6 +6,11 @@ A typed array of 64-bit signed integer values. The contents are initialized to 0
 
 <!--Device-unnamed-interface BigInt64Array--><!--Device-unnamed-interface BigInt64Array-End-->
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript

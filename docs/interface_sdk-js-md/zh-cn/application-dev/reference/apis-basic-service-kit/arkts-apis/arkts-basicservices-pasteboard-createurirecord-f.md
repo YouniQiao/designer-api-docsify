@@ -1,5 +1,10 @@
 # createUriRecord
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createUriRecord
 
 ```TypeScript

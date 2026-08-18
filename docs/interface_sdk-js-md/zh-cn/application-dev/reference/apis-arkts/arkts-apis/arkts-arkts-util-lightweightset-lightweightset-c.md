@@ -8,6 +8,11 @@ LightWeightSet可用于存储一系列值，存储元素中value唯一。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

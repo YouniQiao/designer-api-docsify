@@ -1,5 +1,10 @@
 # setCustomCursor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setCustomCursor
 
 ```TypeScript

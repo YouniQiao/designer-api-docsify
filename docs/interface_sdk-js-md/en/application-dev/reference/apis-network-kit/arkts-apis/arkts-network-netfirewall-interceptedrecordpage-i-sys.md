@@ -13,7 +13,7 @@ Intercepted record page information.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'netFirewall';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## data

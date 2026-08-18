@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.MiscServices.Download
 
+## 导入模块
+
+```TypeScript
+```
+
 ## name
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # finishAsyncTrace
 
+## 导入模块
+
+```TypeScript
+```
+
 ## finishAsyncTrace
 
 ```TypeScript

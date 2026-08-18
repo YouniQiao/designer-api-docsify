@@ -13,7 +13,7 @@ Describes wakeup intelligent voice engine callback information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from 'intelligentVoice';
+import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
 ## context

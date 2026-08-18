@@ -8,6 +8,11 @@ Defines the SearchButton options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## autoDisable
 
 ```TypeScript

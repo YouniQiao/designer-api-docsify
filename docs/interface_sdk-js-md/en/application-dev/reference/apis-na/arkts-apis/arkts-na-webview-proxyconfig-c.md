@@ -10,6 +10,11 @@ The ProxyConfig used by applyProxyOverride.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## bypassHostnamesWithoutPeriod
 
 ```TypeScript
@@ -112,7 +117,7 @@ Returns the proxy rules.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[ProxyRule](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyrule-c.md)&gt; | The proxy rules. |
+| Array&lt;[ProxyRule](arkts-na-webview-proxyrule-c.md)&gt; | The proxy rules. |
 
 ## insertBypassRule
 
@@ -162,7 +167,7 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | No | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](arkts-na-webview-proxyschemefilter-e.md) | No | The scheme filter for this rule. |
 
 **Error codes:**
 
@@ -191,7 +196,7 @@ Insert a proxy rule which indicates that requests matching the schemeFilter shou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | proxyRule | string | Yes | The proxy rule. |
-| schemeFilter | [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | No | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](arkts-na-webview-proxyschemefilter-e.md) | No | The scheme filter for this rule. |
 
 **Error codes:**
 

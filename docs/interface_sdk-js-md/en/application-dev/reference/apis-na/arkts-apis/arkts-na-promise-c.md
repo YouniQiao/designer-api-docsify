@@ -12,6 +12,11 @@ Represents the eventual completion or failure of an asynchronous operation.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## all
 
 ```TypeScript

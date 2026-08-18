@@ -12,6 +12,11 @@ Defines the options used in **readText()**. It inherits from [ReadOptions](../..
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## encoding
 
 ```TypeScript

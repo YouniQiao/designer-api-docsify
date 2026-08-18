@@ -1,5 +1,10 @@
 # getOtaUpdatePolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getOtaUpdatePolicy
 
 ```TypeScript

@@ -10,6 +10,11 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## value
 
 ```TypeScript

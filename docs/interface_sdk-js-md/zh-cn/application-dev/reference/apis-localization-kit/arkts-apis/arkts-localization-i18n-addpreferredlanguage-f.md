@@ -1,5 +1,10 @@
 # addPreferredLanguage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addPreferredLanguage
 
 ```TypeScript

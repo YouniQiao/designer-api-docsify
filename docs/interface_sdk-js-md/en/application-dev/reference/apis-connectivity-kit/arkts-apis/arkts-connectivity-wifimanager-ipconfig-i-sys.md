@@ -13,7 +13,8 @@ Wi-Fi IP configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'wifiManager';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## dnsServers

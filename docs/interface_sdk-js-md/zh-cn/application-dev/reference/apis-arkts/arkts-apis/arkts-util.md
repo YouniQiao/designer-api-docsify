@@ -20,6 +20,11 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数
@@ -34,7 +39,7 @@
 | [getErrorString](arkts-arkts-util-geterrorstring-f.md#geterrorstring) | 获取系统错误码的详细信息。 |
 | [getHash](arkts-arkts-util-gethash-f.md#gethash) | 获取对象的哈希值。 如果尚未获取过哈希值，则生成一个随机哈希值，保存到对象的 **hash** 字段中并返回。如果已经获取过哈希值，则返回保存在 **hash** 字段中的哈希值（同一对象返回相同的值）。 |
 | [getMainThreadStackTrace](arkts-arkts-util-getmainthreadstacktrace-f.md#getmainthreadstacktrace) | 获取主线程的栈追踪信息，最多返回 64 层调用帧。 该接口可能对主线程性能产生影响，建议仅在必要时使用，如日志记录、错误分析或调试场景。 |
-| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseuuid) | 将generateRandomUUID生成的string类型UUID转换为[generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid)生成的UUID， 符合RFC 4122版本规范。 |
+| [parseUUID](arkts-arkts-util-parseuuid-f.md#parseuuid) | 将generateRandomUUID生成的string类型UUID转换为[generateRandomBinaryUUID](../../apis-na/arkts-apis/arkts-na-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid)生成的UUID， 符合RFC 4122版本规范。 |
 | [printf](arkts-arkts-util-printf-f.md#printf) | 通过式样化字符串对输入的内容按特定格式输出。 |
 | [promiseWrapper](arkts-arkts-util-promisewrapper-f.md#promisewrapper) | 接收一个使用错误优先回调模式的函数（即最后一个参数为 `(err, value) => callback`），并通过 promise 返回结果。 |
 | [promisify](arkts-arkts-util-promisify-f.md#promisify) | 接收一个采用"错误优先"回调模式的函数，即以`(err, value) => callback`作为最后一个参数，并返回其Promise函数。 适用于将旧版回调式异步API转换为Promise风格，以便使用async/await语法进行调用，从而简化异步代码编写。 |

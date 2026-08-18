@@ -1,14 +1,19 @@
 # DateOptions
 
-DateOptions定义日期选择器的选项。 继承于[CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)。
+DateOptions定义日期选择器的选项。 继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)。
 
-**继承/实现关系：** DateOptions extends [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)
+**继承/实现关系：** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#commonoptions)
 
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-export declare class DateOptions--><!--Device-unnamed-export declare class DateOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## lunar
 
@@ -40,7 +45,7 @@ mode?: DateMode
 
 定义日期选择器的模式。 默认值：DateMode.DATE
 
-**类型：** [DateMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datemode-e.md)
+**类型：** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
 
 **默认值：** DateMode.DATE
 

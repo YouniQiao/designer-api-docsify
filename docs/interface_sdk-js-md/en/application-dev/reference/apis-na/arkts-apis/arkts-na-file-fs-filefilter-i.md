@@ -10,6 +10,11 @@ Describes a file name filter, which can be used to customize file name filtering
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## filter
 
 ```TypeScript

@@ -11,7 +11,7 @@ Stream to which data can be written. A writable stream allows data to be written
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'stream';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor

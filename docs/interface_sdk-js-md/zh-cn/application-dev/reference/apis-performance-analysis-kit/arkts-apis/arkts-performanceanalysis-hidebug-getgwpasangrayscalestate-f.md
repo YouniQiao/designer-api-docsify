@@ -1,5 +1,10 @@
 # getGwpAsanGrayscaleState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getGwpAsanGrayscaleState
 
 ```TypeScript

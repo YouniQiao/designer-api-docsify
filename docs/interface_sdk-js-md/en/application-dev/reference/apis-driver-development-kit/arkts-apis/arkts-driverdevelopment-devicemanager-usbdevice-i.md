@@ -13,7 +13,7 @@ USB device information, which is inherited from [Device](arkts-driverdevelopment
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## productId

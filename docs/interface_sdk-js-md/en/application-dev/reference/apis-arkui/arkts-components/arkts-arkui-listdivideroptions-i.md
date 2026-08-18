@@ -8,6 +8,11 @@ Defines the divider style of the list or list item group. > **NOTE：**> > To st
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

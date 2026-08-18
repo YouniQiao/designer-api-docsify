@@ -8,6 +8,11 @@ State-specific styles for the component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clicked
 
 ```TypeScript

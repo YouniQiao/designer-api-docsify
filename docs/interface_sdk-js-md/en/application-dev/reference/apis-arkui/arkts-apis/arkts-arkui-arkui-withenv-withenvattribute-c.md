@@ -11,8 +11,7 @@ Define the WithEnv attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { WithEnv } from 'WithEnv';
-import { WithEnvAttribute } from 'WithEnvAttribute';
+import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 ```
 
 ## customEnv

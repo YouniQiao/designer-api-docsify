@@ -1,5 +1,10 @@
 # getDispatchInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDispatchInfo
 
 ```TypeScript
@@ -22,7 +27,7 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DispatchInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)。当函数调用成功，err为undefined，data 为获取到的[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md#dispatchinfo系统接口)信息。否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DispatchInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)。当函数调用成功，err为undefined，data 为获取到的[DispatchInfo](arkts-ability-dispatchinfo-i-sys.md#dispatchinfo系统接口)信息。否则为错误对象。 |
 
 **错误码：**
 

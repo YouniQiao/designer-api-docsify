@@ -10,6 +10,11 @@ Declare Component ArcButton
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -37,7 +42,7 @@ The method to build component.
 
 Describes the arc button options.
 
-**Type:** [ArcButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**Type:** [ArcButtonOptions](arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 23
 

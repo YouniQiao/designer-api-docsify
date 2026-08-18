@@ -1,5 +1,10 @@
 # getPairedDevices
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPairedDevices
 
 ```TypeScript

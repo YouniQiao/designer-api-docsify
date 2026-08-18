@@ -11,7 +11,8 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace

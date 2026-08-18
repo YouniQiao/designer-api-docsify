@@ -10,6 +10,11 @@ The TextDecoder represents a text decoder that accepts a string as input, decode
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -47,13 +52,13 @@ Replaces the original constructor to process arguments and return a textDecoder 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | encoding | string | No | Decoding format |
-| options | [TextDecoderOptions](arkts-na-util-textdecoderoptions-i.md) | No | Options |
+| options | [TextDecoderOptions](../../apis-arkts/arkts-apis/arkts-arkts-util-textdecoderoptions-i.md) | No | Options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextDecoder](arkts-na-util-textdecoder-c.md) |  |
+| [TextDecoder](../../apis-arkts/arkts-apis/arkts-arkts-util-textdecoder-c.md) |  |
 
 ## decodeToString
 
@@ -76,7 +81,7 @@ The input is decoded and a string is returned. If options.stream is set to true,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | Uint8Array | Yes | Decoded numbers in accordance with the format. |
-| options | [DecodeToStringOptions](arkts-na-util-decodetostringoptions-i.md) | No | The default option is set to false. |
+| options | [DecodeToStringOptions](../../apis-arkts/arkts-apis/arkts-arkts-util-decodetostringoptions-i.md) | No | The default option is set to false. |
 
 **Return value:**
 

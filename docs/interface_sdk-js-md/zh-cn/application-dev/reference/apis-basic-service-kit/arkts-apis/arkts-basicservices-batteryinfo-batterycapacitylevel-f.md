@@ -1,5 +1,10 @@
 # batteryCapacityLevel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## batteryCapacityLevel
 
 ```TypeScript

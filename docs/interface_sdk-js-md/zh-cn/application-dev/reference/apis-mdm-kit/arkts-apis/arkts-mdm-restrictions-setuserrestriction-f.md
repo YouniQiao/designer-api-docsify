@@ -1,5 +1,10 @@
 # setUserRestriction
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setUserRestriction
 
 ```TypeScript

@@ -11,7 +11,8 @@ Implements a carrier that stores the text content and style. You can perform ope
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'text';
+import { text } from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines

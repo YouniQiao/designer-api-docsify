@@ -1,5 +1,10 @@
 # isMediaKeySystemSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isMediaKeySystemSupported
 
 ```TypeScript

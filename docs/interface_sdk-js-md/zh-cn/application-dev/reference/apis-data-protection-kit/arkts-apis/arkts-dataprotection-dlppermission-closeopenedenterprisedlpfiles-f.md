@@ -1,5 +1,10 @@
 # closeOpenedEnterpriseDlpFiles
 
+## 导入模块
+
+```TypeScript
+```
+
 ## closeOpenedEnterpriseDlpFiles
 
 ```TypeScript

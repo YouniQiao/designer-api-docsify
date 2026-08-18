@@ -8,6 +8,11 @@ Defines the ID, direction, and position of a guideline.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## direction
 
 ```TypeScript

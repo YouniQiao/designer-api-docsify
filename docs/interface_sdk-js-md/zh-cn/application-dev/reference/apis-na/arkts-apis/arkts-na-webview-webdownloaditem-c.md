@@ -10,6 +10,11 @@ Represents a download task, You can use this object to operate the corresponding
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancel
 
 ```TypeScript

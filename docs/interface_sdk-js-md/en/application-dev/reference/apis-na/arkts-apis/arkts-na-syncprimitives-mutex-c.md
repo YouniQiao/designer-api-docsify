@@ -12,6 +12,11 @@ A mutual exclusion lock that provides exclusive access to a shared resource
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

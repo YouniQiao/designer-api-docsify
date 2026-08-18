@@ -10,6 +10,11 @@ Defines the options used in delete().
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## complete
 
 ```TypeScript

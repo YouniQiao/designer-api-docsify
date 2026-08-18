@@ -12,6 +12,11 @@ Sub component info passed from framework when layout and measure happens.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## layout
 
 ```TypeScript

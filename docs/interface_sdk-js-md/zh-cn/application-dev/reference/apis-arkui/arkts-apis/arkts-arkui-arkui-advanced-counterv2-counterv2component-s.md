@@ -8,6 +8,11 @@ CounterV2组件用于精确调节数值，包含列表型、紧凑型、数值�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## options
 
 ```TypeScript

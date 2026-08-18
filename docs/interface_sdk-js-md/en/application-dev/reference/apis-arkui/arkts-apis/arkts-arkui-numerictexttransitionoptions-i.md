@@ -8,6 +8,11 @@ Defines the options of the numeric flip animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enableBlur
 
 ```TypeScript

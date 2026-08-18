@@ -17,7 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

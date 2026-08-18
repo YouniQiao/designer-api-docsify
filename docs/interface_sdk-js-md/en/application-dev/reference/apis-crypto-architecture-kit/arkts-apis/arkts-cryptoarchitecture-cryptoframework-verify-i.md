@@ -13,7 +13,8 @@ Signature verification interface, defining methods for verifying signatures usin
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getVerifySpec

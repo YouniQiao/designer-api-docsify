@@ -11,13 +11,7 @@ Represents information about the recent image or video.
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent } from 'RecentPhotoComponent';
-import { RecentPhotoCheckResultCallback } from 'RecentPhotoCheckResultCallback';
-import { RecentPhotoInfo } from 'RecentPhotoInfo';
-import { RecentPhotoCheckInfoCallback } from 'RecentPhotoCheckInfoCallback';
-import { RecentPhotoClickCallback } from 'RecentPhotoClickCallback';
-import { RecentPhotoOptions } from 'RecentPhotoOptions';
-import { PhotoSource } from 'PhotoSource';
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoInfo, RecentPhotoCheckInfoCallback, RecentPhotoClickCallback, RecentPhotoOptions, PhotoSource } from '@kit.MediaLibraryKit';
 ```
 
 ## dateTaken

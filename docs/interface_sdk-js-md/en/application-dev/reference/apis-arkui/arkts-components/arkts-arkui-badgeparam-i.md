@@ -8,6 +8,11 @@ Provides basic parameters for creating a badge.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## position
 
 ```TypeScript

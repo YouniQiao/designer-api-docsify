@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cachedCount
 
 ```TypeScript
@@ -478,7 +483,7 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 <br>默认值：ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 <br>默认值：ColorMetrics.numeric(0xA9FFFFFF) |
 
 **返回值：**
 
@@ -506,7 +511,7 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 <br>默认值：LengthMetrics.vp(24) <br>非按压态宽度：LengthMetrics.vp(4) <br>设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 <br>单位：vp |
+| width | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 <br>默认值：LengthMetrics.vp(24) <br>非按压态宽度：LengthMetrics.vp(4) <br>设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 <br>单位：vp |
 
 **返回值：**
 
@@ -534,7 +539,7 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 <br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
+| space | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 <br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
 
 **返回值：**
 

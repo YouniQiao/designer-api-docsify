@@ -12,6 +12,11 @@ TimeOptions defines options for the time picker. Inherits from [CommonOptions](a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## format
 
 ```TypeScript

@@ -10,6 +10,11 @@ Implements a **WebDataBase** object. > **NOTE：**> > - The sample effect is sub
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## deleteHttpAuthCredentials
 
 ```TypeScript

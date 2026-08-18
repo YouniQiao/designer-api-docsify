@@ -8,6 +8,11 @@ Defines the radial gradient parameters. > **NOTE：**> > To standardize anonymou
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## center
 
 ```TypeScript

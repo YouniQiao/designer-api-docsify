@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiRetrieval
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deviceModel
 
 ```TypeScript

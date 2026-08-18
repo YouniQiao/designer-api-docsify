@@ -1,5 +1,10 @@
 # getDelegatedPolicies
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDelegatedPolicies
 
 ```TypeScript

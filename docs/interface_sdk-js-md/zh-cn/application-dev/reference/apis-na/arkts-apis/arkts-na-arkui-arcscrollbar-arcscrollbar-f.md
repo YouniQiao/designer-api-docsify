@@ -1,5 +1,10 @@
 # ArcScrollBar
 
+## 导入模块
+
+```TypeScript
+```
+
 ## ArcScrollBar
 
 ```TypeScript

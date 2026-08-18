@@ -1,5 +1,10 @@
 # isScreenReaderOpenSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isScreenReaderOpenSync
 
 ```TypeScript

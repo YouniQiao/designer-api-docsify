@@ -10,6 +10,11 @@ HDR PixelMap分解为Picture的配置选项，分解后的Picture包含一张SDR
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## desiredPixelFormat
 
 ```TypeScript

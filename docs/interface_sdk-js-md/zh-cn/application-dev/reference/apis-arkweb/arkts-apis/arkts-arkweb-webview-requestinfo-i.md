@@ -8,6 +8,11 @@ Web组件发送的资源请求信息。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## formData
 
 ```TypeScript

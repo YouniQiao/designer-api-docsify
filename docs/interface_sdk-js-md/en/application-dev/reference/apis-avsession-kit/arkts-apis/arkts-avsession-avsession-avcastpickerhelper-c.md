@@ -11,7 +11,8 @@ A helper to enable a picker to select output devices
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'avSession';
+import { avSession } from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## constructor

@@ -1,5 +1,10 @@
 # updatePrinters（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## updatePrinters
 
 ```TypeScript
@@ -23,7 +28,7 @@ function updatePrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printers | Array&lt;[PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md)&gt; | 是 | 表示待更新的打印机列表。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步更新打印机信息之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步更新打印机信息之后的回调。 |
 
 **错误码：**
 

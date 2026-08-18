@@ -1,5 +1,10 @@
 # once_ActivityType
 
+## 导入模块
+
+```TypeScript
+```
+
 ## once_ActivityType
 
 ```TypeScript
@@ -19,7 +24,7 @@ function once(activity: ActivityType, callback: Callback<ActivityResponse>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | 设备状态类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 | 回调函数，用于接收设备状态查询结果。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 | 回调函数，用于接收设备状态查询结果。 |
 
 **示例**
 

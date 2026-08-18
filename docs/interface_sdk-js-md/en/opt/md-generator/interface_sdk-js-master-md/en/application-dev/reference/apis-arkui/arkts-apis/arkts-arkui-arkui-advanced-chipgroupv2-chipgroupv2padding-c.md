@@ -1,0 +1,80 @@
+# ChipGroupV2Padding
+
+Defines chip group padding.
+
+**Since:** 26.0.0
+
+<!--Device-unnamed-export declare class ChipGroupV2Padding--><!--Device-unnamed-export declare class ChipGroupV2Padding-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## constructor
+
+```TypeScript
+constructor(config: ChipGroupV2PaddingConfig)
+```
+
+The constructor of ChipGroupV2PaddingConfig
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Padding-constructor(config: ChipGroupV2PaddingConfig)--><!--Device-ChipGroupV2Padding-constructor(config: ChipGroupV2PaddingConfig)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| config | [ChipGroupV2PaddingConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2paddingconfig-i.md) | Yes |
+
+## bottom
+
+```TypeScript
+@Trace
+    public bottom: Length
+```
+
+Bottom of chip group padding.
+
+**Type:** [Length](arkts-arkui-length-t.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Padding-@Trace    public bottom: Length--><!--Device-ChipGroupV2Padding-@Trace    public bottom: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## top
+
+```TypeScript
+@Trace
+    public top: Length
+```
+
+Top of chip group padding.
+
+**Type:** [Length](arkts-arkui-length-t.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Padding-@Trace    public top: Length--><!--Device-ChipGroupV2Padding-@Trace    public top: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

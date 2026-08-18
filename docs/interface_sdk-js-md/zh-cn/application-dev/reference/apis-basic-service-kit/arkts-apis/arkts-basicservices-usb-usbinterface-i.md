@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alternateSetting
 
 ```TypeScript

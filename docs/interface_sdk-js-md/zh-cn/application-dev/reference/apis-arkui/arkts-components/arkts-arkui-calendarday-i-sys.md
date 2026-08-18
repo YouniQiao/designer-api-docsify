@@ -12,6 +12,11 @@ Provides a monthly view component to display information such as date, shift bre
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## day
 
 ```TypeScript

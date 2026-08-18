@@ -1,5 +1,10 @@
 # byteLength
 
+## 导入模块
+
+```TypeScript
+```
+
 ## byteLength
 
 ```TypeScript

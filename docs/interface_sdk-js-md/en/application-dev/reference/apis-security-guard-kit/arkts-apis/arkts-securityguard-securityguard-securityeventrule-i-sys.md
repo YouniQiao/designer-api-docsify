@@ -13,7 +13,7 @@ Provides the conditions of querySecurityEvent.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'securityGuard';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## beginTime

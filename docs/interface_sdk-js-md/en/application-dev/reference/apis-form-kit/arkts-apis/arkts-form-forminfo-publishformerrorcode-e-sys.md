@@ -88,7 +88,7 @@ An internal error occurs during widget processing.
 NOT_SUPPORT = 4
 ```
 
-Indicates that the host does not support the form dimension.
+Indicates that the host does not support the form.
 
 **Since:** 26.1.0
 

@@ -10,6 +10,11 @@ Provides APIs to obtain the manual exposure range supported.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getExposureBiasStep
 
 ```TypeScript

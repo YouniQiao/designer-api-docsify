@@ -11,7 +11,7 @@ Describes the information about the context of exiting the PhotoPicker. It can b
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumUri

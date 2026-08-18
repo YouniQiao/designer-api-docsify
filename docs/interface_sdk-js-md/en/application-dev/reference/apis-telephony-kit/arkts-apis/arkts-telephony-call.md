@@ -11,7 +11,7 @@ The **call** module provides call management functions, including making calls, 
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## Summary

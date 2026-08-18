@@ -1,5 +1,10 @@
 # getNativeHeapFreeSize
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getNativeHeapFreeSize
 
 ```TypeScript

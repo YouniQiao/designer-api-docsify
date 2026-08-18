@@ -1,5 +1,10 @@
 # getAppMemoryLimit
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppMemoryLimit
 
 ```TypeScript

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { ShareExtensionAbility } from 'ShareExtensionAbility';
+import { ShareExtensionAbility } from '@kit.AbilityKit';
+import { ShareExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

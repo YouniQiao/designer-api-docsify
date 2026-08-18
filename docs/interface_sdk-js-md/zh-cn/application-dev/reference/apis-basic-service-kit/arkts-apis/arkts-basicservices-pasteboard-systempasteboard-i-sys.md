@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeAppShareOptions
 
 ```TypeScript

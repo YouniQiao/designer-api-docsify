@@ -1,0 +1,63 @@
+# getSpecifiedDistributionType（系统接口）
+
+## 导入模块
+
+```TypeScript
+```
+
+## getSpecifiedDistributionType
+
+```TypeScript
+function getSpecifiedDistributionType(bundleName: string): string
+```
+
+以同步的方法查询指定bundleName的[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)，该返回值是在调用install接口时传 入的[InstallParam](arkts-ability-installer-installparam-i-sys.md#installparam系统接口)中的specifiedDistributionType字段。 获取调用方自身的信息时不需要权限。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+
+<!--Device-bundleManager-function getSpecifiedDistributionType(bundleName: string): string--><!--Device-bundleManager-function getSpecifiedDistributionType(bundleName: string): string-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+
+try {
+  let type = bundleManager.getSpecifiedDistributionType(bundleName);
+  hilog.info(0x0000, 'testTag', 'getSpecifiedDistributionType successfully, type:%{public}s', type);
+} catch (error) {
+  let message = (error as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getSpecifiedDistributionType failed. Cause: %{public}s', message);
+}
+```

@@ -8,6 +8,11 @@ Implements the swipe action menu manager for list items.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## collapse
 
 ```TypeScript

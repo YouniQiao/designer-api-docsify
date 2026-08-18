@@ -12,6 +12,11 @@ Manages directories. Before calling a method of the **Dir** class, use the **ope
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

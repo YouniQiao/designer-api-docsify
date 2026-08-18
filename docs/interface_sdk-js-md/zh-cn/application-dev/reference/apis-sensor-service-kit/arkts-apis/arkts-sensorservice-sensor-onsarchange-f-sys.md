@@ -1,5 +1,10 @@
 # onSarChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onSarChange
 
 ```TypeScript
@@ -20,7 +25,7 @@ Subscribe to SAR sensor data, {@code SensorId.SAR}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)&gt; | 是 | callback sar data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)&gt; | 是 | callback sar data. |
 | options | Options | 否 | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **错误码：**

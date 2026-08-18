@@ -12,6 +12,11 @@ A read-only array that provides methods for reading elements.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## concat
 
 ```TypeScript

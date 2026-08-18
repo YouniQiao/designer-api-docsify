@@ -8,6 +8,11 @@ Defines the ImageAttachmentInterface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## colorFilter
 
 ```TypeScript

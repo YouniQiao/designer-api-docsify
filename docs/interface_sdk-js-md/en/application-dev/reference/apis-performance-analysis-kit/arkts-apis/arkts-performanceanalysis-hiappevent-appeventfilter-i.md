@@ -11,7 +11,7 @@ Defines parameters of subscription filtering conditions of a [Watcher](arkts-per
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## domain

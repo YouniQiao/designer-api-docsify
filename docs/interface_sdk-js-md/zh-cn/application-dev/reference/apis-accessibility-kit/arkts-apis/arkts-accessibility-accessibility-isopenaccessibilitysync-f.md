@@ -1,5 +1,10 @@
 # isOpenAccessibilitySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isOpenAccessibilitySync
 
 ```TypeScript

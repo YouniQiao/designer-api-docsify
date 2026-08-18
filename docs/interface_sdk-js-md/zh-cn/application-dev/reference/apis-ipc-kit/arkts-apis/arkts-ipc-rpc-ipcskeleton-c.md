@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## flushCmdBuffer
 
 ```TypeScript

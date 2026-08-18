@@ -8,6 +8,11 @@ Defines accessibility options for the span.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript

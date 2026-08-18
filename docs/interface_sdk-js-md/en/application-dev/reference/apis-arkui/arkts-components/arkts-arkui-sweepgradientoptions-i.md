@@ -8,6 +8,11 @@ Defines the sweep gradient parameters. > **NOTE：**> > To standardize anonymous
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## center
 
 ```TypeScript

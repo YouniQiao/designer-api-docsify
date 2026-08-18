@@ -2,7 +2,7 @@
 
 Defines a path drawing class.
 
-**Inheritance/Implementation:** PathShape extends [CommonShapeMethod](arkts-na-arkui-shape-commonshapemethod-c.md#commonshapemethod)
+**Inheritance/Implementation:** PathShape extends [CommonShapeMethod](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#commonshapemethod)
 
 **Since:** 23
 
@@ -11,6 +11,11 @@ Defines a path drawing class.
 <!--Device-unnamed-export declare class PathShape--><!--Device-unnamed-export declare class PathShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## commands
 
@@ -64,5 +69,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathShapeOptions](arkts-na-arkui-shape-pathshapeoptions-i.md) | No |  |
+| options | [PathShapeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-pathshapeoptions-i.md) | No |  |
 

@@ -1,5 +1,10 @@
 # cancelScan
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancelScan
 
 ```TypeScript

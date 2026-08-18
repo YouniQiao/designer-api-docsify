@@ -1,5 +1,10 @@
 # setShortcutVisibleForSelf
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setShortcutVisibleForSelf
 
 ```TypeScript

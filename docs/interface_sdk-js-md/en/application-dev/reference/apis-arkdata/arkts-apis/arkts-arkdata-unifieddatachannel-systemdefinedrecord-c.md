@@ -13,7 +13,8 @@ Represents specific data types defined by OpenHarmony. It is a child class of [U
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## details

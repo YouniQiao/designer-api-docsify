@@ -10,6 +10,11 @@ Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

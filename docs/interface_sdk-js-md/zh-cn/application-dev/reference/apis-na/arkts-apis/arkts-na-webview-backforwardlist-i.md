@@ -10,6 +10,11 @@ Provides back and forward history list information method. related to [HistoryIt
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getItemAtIndex
 
 ```TypeScript

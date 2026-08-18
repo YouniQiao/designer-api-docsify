@@ -1,5 +1,10 @@
 # LazyColumnLayout
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## LazyColumnLayout
 
 ```TypeScript
@@ -31,7 +36,7 @@ Defines LazyColumnLayout Component.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | The attribute of the LazyColumnLayout. |
 
 
 ## LazyColumnLayout
@@ -60,12 +65,12 @@ Defines LazyColumnLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; | Yes | The style to create a LazyColumnLayout. |
+| style_ | CustomBuilderT&lt;[LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; | Yes | The style to create a LazyColumnLayout. |
 | content_ | CustomBuilder | No | content |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
+| [LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | The attribute of the LazyColumnLayout. |
 

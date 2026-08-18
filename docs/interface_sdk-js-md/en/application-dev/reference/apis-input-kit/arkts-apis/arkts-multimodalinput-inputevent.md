@@ -17,7 +17,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputEvent } from 'InputEvent';
+import { InputEvent } from '@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## Summary

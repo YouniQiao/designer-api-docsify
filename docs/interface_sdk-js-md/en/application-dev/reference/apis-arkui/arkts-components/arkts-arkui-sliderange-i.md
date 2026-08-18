@@ -8,6 +8,11 @@ Defines the callback type used in **SlideRange**. > **NOTE：**> > - Currently, 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## from
 
 ```TypeScript

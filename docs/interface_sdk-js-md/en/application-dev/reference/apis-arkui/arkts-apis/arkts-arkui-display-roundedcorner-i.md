@@ -11,7 +11,7 @@ Describes a single rounded corner on the screen.
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## position

@@ -1,0 +1,98 @@
+# NotifyCharacteristic
+
+Describes the value of the indication or notification sent by the Gatt server.
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md#notifycharacteristic)
+
+<!--Device-bluetoothManager-interface NotifyCharacteristic--><!--Device-bluetoothManager-interface NotifyCharacteristic-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## characteristicUuid
+
+```TypeScript
+characteristicUuid: string
+```
+
+The UUID of a NotifyCharacteristic instance
+
+**Type:** string
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicuuid)
+
+<!--Device-NotifyCharacteristic-characteristicUuid: string--><!--Device-NotifyCharacteristic-characteristicUuid: string-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## characteristicValue
+
+```TypeScript
+characteristicValue: ArrayBuffer
+```
+
+The value of a NotifyCharacteristic instance
+
+**Type:** ArrayBuffer
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [characteristicValue](arkts-connectivity-ble-notifycharacteristic-i.md#characteristicvalue)
+
+<!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer--><!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## confirm
+
+```TypeScript
+confirm: boolean
+```
+
+Specifies whether to request confirmation from the BLE peripheral device (indication) or send a notification. Value {@code true} indicates the former and {@code false} indicates the latter.
+
+**Type:** boolean
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [confirm](arkts-connectivity-ble-notifycharacteristic-i.md#confirm)
+
+<!--Device-NotifyCharacteristic-confirm: boolean--><!--Device-NotifyCharacteristic-confirm: boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## serviceUuid
+
+```TypeScript
+serviceUuid: string
+```
+
+The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#gattservice) instance to which the characteristic belongs
+
+**Type:** string
+
+**Since:** 9
+
+**Deprecated since:** 10
+
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-notifycharacteristic-i.md#serviceuuid)
+
+<!--Device-NotifyCharacteristic-serviceUuid: string--><!--Device-NotifyCharacteristic-serviceUuid: string-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core

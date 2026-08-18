@@ -1,5 +1,10 @@
 # onHoldingHandChanged
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onHoldingHandChanged
 
 ```TypeScript
@@ -20,7 +25,7 @@ function onHoldingHandChanged(callback: Callback<HoldingHandStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md)&gt; | 是 | 回调函数，返回握持手状态信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md)&gt; | 是 | 回调函数，返回握持手状态信息。 |
 
 **错误码：**
 

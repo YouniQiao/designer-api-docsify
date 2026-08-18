@@ -10,6 +10,11 @@ NavDestination info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## index
 
 ```TypeScript
@@ -158,7 +163,7 @@ state: NavDestinationState
 
 Changed NavDestination state.
 
-**Type:** [NavDestinationState](arkts-na-uiobserver-navdestinationstate-e.md)
+**Type:** [NavDestinationState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-navdestinationstate-e.md)
 
 **Since:** 23
 

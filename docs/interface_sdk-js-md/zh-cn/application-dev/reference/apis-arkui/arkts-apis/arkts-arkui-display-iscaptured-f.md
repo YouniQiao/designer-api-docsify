@@ -1,5 +1,10 @@
 # isCaptured
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isCaptured
 
 ```TypeScript

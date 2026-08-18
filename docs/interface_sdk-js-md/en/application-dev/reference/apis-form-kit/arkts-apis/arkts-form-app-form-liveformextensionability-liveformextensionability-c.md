@@ -13,7 +13,8 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormInfo } from 'LiveFormInfo';
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## onLiveFormCreate

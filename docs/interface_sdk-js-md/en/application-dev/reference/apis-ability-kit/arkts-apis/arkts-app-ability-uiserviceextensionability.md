@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { UIServiceExtensionAbility } from 'UIServiceExtensionAbility';
+import { UIServiceExtensionAbility } from '@kit.AbilityKit';
+import { UIServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

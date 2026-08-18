@@ -11,7 +11,7 @@ Describes the configuration for video duration filtering.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## extraVideoDuration

@@ -10,6 +10,11 @@ ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setDefaultTheme
 
 ```TypeScript
@@ -32,5 +37,5 @@ static setDefaultTheme(theme: CustomTheme | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| theme | [CustomTheme](arkts-na-arkui-theme-customtheme-i.md) \| undefined | 是 |  |
+| theme | [CustomTheme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-customtheme-i.md) \| undefined | 是 |  |
 

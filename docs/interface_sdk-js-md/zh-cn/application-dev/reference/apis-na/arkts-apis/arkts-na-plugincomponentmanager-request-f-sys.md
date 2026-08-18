@@ -1,5 +1,10 @@
 # request（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## request
 
 ```TypeScript
@@ -25,5 +30,5 @@ export function request(param: RequestParameterForStage, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | param | [RequestParameterForStage](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | 是 | 组件模板的详细请求信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | 是 | 此次请求的异步回调，通过回调接口的参数返回请求响应的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | 是 | 此次请求的异步回调，通过回调接口的参数返回请求响应的数据。 |
 

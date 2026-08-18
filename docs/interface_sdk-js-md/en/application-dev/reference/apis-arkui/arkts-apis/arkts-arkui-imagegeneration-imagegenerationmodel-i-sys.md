@@ -15,7 +15,7 @@ AI Image Model Abstract Interface.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## cancelImageGeneration

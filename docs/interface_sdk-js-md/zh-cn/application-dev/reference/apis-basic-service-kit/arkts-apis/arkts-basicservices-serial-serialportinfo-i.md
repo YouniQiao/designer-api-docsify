@@ -1,12 +1,17 @@
 # SerialPortInfo
 
-串口设备信息
+串口设备信息。
 
 **起始版本：** 26.0.0
 
 <!--Device-serial-interface SerialPortInfo--><!--Device-serial-interface SerialPortInfo-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
+
+## 导入模块
+
+```TypeScript
+```
 
 ## manufacturer
 
@@ -32,7 +37,7 @@ USB虚拟串口设备的制造商名称。
 portName: string
 ```
 
-端口名称
+端口名称。
 
 **类型：** string
 
@@ -50,7 +55,7 @@ portName: string
 productId?: int
 ```
 
-USB虚拟串口设备的productId
+USB虚拟串口设备的产品ID。
 
 **类型：** int
 
@@ -68,7 +73,7 @@ USB虚拟串口设备的productId
 vendorId?: int
 ```
 
-USB虚拟串口的vendorId
+USB虚拟串口的厂商ID。
 
 **类型：** int
 

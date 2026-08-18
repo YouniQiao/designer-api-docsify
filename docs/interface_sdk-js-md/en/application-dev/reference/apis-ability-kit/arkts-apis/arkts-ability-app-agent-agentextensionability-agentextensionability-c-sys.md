@@ -13,7 +13,8 @@ The class of agent extension ability. This class cannot be used in Harmony Archi
 ## Modules to Import
 
 ```TypeScript
-import { AgentExtensionAbility } from 'AgentExtensionAbility';
+import { AgentExtensionAbility } from '@kit.AbilityKit';
+import { AgentExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onAgentInvoked

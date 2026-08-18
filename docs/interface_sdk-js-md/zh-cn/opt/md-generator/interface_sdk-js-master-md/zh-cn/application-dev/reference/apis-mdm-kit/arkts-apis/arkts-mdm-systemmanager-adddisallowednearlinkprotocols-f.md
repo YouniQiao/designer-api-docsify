@@ -1,0 +1,69 @@
+# addDisallowedNearLinkProtocols
+
+## 导入模块
+
+```TypeScript
+```
+
+## addDisallowedNearLinkProtocols
+
+```TypeScript
+function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkProtocol>, accountId: number): void
+```
+
+为指定用户添加禁用的星闪协议名单。NearLink Kit（星闪服务）提供一种低功耗、高速率的短距离通信服务，支持星闪设备之间的连接、数据交互。本接口对键盘、手写笔等系统服务和系统应用 不生效。
+
+**起始版本：** 20
+
+**需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-systemManager-function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkProtocol>, accountId: number): void--><!--Device-systemManager-function addDisallowedNearLinkProtocols(admin: Want, protocols: Array<NearLinkProtocol>, accountId: number): void-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| protocols | Array&lt;[NearLinkProtocol](arkts-mdm-systemmanager-nearlinkprotocol-e.md)&gt; | 是 |
+| accountId | number | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+
+**示例**
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 需根据实际情况进行替换
+let protocols: systemManager.NearLinkProtocol[] = [systemManager.NearLinkProtocol.SSAP,
+  systemManager.NearLinkProtocol.DATA_TRANSFER];
+
+// 需根据实际情况进行替换
+let accountId: number = 100;
+
+try {
+  systemManager.addDisallowedNearLinkProtocols(wantTemp, protocols, accountId);
+  console.info('Succeeded in adding the disabled Starlink protocol list for the specified user.');
+} catch (err) {
+  console.error(`Failed to add the disabled Starlink protocol list for the specified user. Code is ${err.code}, message is ${err.message}`);
+}
+```

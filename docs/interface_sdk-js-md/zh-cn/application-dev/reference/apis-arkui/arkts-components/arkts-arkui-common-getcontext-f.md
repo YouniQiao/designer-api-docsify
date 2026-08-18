@@ -1,5 +1,10 @@
 # getContext
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getContext
 
 ```TypeScript
@@ -12,7 +17,7 @@ Obtains the Context object associated with a component on the page.
 
 **废弃版本：** 18
 
-**替代接口：** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)
+**替代接口：** [getHostContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#gethostcontext)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

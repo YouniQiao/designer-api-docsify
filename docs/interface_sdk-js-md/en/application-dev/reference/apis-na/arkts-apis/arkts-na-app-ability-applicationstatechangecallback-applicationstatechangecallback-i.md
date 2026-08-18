@@ -10,6 +10,11 @@ The module is used to listen for state changes of the current application proces
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onApplicationBackground
 
 ```TypeScript

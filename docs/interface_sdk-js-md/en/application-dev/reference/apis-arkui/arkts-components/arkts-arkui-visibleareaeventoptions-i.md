@@ -8,6 +8,11 @@ Describes visible area change configuration options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## expectedUpdateInterval
 
 ```TypeScript

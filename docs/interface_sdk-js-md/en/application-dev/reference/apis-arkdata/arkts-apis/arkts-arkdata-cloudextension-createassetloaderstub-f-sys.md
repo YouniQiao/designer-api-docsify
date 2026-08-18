@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## createAssetLoaderStub

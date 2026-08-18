@@ -13,7 +13,7 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'connection';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

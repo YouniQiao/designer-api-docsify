@@ -8,6 +8,11 @@ Describes the parameters of the **UIPickerComponent** container.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## selectedIndex
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getApplicationContextInstance
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getApplicationContextInstance
 
 ```TypeScript

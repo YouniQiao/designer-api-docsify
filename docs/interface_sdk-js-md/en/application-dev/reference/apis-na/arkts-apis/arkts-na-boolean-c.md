@@ -12,6 +12,11 @@ Represents boxed boolean value and related operations
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_invoke
 
 ```TypeScript

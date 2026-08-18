@@ -11,7 +11,9 @@ Describes the information about the soft keyboard window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'window';
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## animated

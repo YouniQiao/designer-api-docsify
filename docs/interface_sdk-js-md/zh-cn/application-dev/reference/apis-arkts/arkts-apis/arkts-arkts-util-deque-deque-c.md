@@ -8,6 +8,11 @@ Deque（double-ended queue）基于循环队列的数据结构实现，支持两
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

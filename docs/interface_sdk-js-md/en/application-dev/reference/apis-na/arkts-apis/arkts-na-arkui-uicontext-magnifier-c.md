@@ -10,6 +10,11 @@ Provides the method for magnifier capabilities.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## bind
 
 ```TypeScript

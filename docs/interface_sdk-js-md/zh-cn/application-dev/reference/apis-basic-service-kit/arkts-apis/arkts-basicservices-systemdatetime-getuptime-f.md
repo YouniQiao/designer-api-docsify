@@ -1,5 +1,10 @@
 # getUptime
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUptime
 
 ```TypeScript

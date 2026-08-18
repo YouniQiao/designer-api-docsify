@@ -15,7 +15,7 @@ Provides APIs for managing the device's root attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## listFile

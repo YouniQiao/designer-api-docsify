@@ -8,6 +8,11 @@ Defines motion path configuration options of the component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## from
 
 ```TypeScript

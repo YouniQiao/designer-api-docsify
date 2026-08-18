@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'connectedTag';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## on_notify

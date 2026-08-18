@@ -10,6 +10,11 @@ Provides an atomic wrapper for safe concurrent access to a byte value
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## compareAndSwap
 
 ```TypeScript

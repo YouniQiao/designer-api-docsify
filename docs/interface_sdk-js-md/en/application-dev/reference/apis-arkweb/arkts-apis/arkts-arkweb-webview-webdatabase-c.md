@@ -11,7 +11,7 @@ Implements a **WebDataBase** object. > **NOTE：**> > - You must load the **Web*
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## deleteHttpAuthCredentials

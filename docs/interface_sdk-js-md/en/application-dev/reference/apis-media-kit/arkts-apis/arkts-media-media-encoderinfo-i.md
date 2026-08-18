@@ -11,7 +11,7 @@ Describes the information about an encoder.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## bitRate

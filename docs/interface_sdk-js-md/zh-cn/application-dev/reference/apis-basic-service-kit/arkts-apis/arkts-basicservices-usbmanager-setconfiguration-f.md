@@ -1,12 +1,17 @@
 # setConfiguration
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setConfiguration
 
 ```TypeScript
 function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): int
 ```
 
-设置设备配置。
+设置设备配置。适用于多功能USB设备需要切换工作模式的场景，如打印机+扫描仪组合设备切换为打印模式或扫描模式、设备从低功耗配置切换到高功耗配置以启用全部功能等。调用成功后设备的配置将被切换为指定的配置，后续的数据传输和设备操作将基 于新配置进行。 > **说明：** > > 在调用该接口前需要调用[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) claim通信接口。
 
 **起始版本：** 23
 
@@ -18,14 +23,14 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定总线号和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
-| config | [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | 是 | 用于确定需要设置的配置，需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息并通过id用于确定唯一设置。 |
+| pipe | USBDevicePipe | 是 | 用于确定总线地址和设备地址，需要调用[connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
+| config | [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | 是 | 用于确定需要设置的配置，需要调用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息并通过id确定唯一配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 设置设备配置成功返回0；设置设备配置失败返回其他错误码如下： |
+| int | 返回设置设备配置操作的结果。设置设备配置成功返回0；设置设备配置失败返回其他错误码如下： <br>- 88080389：服务未启动，可能原因：1.无设备插入；2.服务异常退出。 <br>- 88080486：服务初始化中，请稍后重试。 <br>- 88080488：无设备访问权限，请先调用[requestRight]{ |
 
 **错误码：**
 

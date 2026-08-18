@@ -1,5 +1,10 @@
 # setSeniorModeStateForSelf
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setSeniorModeStateForSelf
 
 ```TypeScript

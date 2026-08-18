@@ -1,5 +1,10 @@
 # activateOsAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## activateOsAccount
 
 ```TypeScript

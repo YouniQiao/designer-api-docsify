@@ -1,5 +1,10 @@
 # getProfileByExtensionAbilitySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getProfileByExtensionAbilitySync
 
 ```TypeScript

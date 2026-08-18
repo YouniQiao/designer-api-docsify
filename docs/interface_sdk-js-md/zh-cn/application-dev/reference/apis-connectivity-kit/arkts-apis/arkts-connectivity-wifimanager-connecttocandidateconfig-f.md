@@ -1,5 +1,10 @@
 # connectToCandidateConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## connectToCandidateConfig
 
 ```TypeScript

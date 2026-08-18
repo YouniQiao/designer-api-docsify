@@ -11,7 +11,9 @@ Represents KeyAgree recipient information for CMS enveloped data.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'cert';
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## cert

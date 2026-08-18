@@ -8,6 +8,11 @@ Provides the text span style information returned by the backend. While **fontWe
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## decoration
 
 ```TypeScript

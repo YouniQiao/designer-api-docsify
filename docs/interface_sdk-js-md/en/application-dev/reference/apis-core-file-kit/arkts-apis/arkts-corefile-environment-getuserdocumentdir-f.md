@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from 'Environment';
+import { Environment } from '@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getUserDocumentDir

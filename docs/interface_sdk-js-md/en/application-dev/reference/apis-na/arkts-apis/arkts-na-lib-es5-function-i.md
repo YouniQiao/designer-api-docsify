@@ -6,6 +6,11 @@ Creates a new function.
 
 <!--Device-unnamed-interface Function--><!--Device-unnamed-interface Function-End-->
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## apply
 
 ```TypeScript

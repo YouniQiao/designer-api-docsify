@@ -13,7 +13,8 @@ Message digest interface, defining methods for calculating message digests. Befo
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## digest

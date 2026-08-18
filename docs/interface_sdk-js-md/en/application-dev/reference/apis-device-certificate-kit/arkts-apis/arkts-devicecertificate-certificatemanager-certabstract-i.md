@@ -11,7 +11,8 @@ Represents brief information about a certificate.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'certificateManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certAlias

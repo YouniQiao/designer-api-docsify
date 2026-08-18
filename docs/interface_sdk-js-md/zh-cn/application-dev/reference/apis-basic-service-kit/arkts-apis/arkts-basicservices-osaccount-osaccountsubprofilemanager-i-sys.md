@@ -10,6 +10,11 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createOsAccountSubProfile
 
 ```TypeScript
@@ -766,7 +771,7 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 否 | 需要取消订阅的回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 否 | 需要取消订阅的回调。 |
 
 **错误码：**
 
@@ -832,7 +837,7 @@ onOsAccountSubProfileEvent(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | events | [OsAccountSubProfileEvent](arkts-basicservices-osaccount-osaccountsubprofileevent-e-sys.md)[] | 是 | 要订阅的事件数组 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 是 | 事件发生时调用的回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSubProfileEventData](arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md)&gt; | 是 | 事件发生时调用的回调。 |
 
 **错误码：**
 

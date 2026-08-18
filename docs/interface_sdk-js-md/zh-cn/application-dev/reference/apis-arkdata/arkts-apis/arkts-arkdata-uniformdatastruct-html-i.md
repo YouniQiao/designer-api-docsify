@@ -8,6 +8,11 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## details
 
 ```TypeScript

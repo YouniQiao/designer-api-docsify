@@ -15,7 +15,7 @@ Represents information about the recent file list.
 ## Modules to Import
 
 ```TypeScript
-import { recent } from 'recent';
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## ctime

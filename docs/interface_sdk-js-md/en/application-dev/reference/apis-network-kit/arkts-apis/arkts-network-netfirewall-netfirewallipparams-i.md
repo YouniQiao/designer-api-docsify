@@ -11,7 +11,7 @@ Firewall IP parameters.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'netFirewall';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## address

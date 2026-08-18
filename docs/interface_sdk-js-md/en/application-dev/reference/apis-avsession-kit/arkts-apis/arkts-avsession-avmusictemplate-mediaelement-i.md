@@ -15,6 +15,7 @@ The definition of Singer/Radio/Banner.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 

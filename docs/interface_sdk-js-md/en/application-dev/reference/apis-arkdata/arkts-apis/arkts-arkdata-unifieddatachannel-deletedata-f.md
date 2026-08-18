@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## deleteData

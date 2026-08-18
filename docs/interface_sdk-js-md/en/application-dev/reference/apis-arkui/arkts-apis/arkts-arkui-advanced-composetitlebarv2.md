@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2 } from 'ComposeTitleBarV2';
-import { ComposeTitleBarV2MenuItem } from 'ComposeTitleBarV2MenuItem';
-import { ComposeTitleBarV2MenuItemParams } from 'ComposeTitleBarV2MenuItemParams';
+import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUI';
 ```
 
 ## Summary

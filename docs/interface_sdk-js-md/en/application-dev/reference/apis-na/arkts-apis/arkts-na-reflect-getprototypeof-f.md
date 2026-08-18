@@ -1,5 +1,10 @@
 # getPrototypeOf
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getPrototypeOf
 
 ```TypeScript

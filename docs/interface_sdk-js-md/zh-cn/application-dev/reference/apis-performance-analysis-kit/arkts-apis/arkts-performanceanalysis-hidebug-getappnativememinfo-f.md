@@ -1,5 +1,10 @@
 # getAppNativeMemInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppNativeMemInfo
 
 ```TypeScript

@@ -8,6 +8,11 @@ Provides information about the check box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## group
 
 ```TypeScript

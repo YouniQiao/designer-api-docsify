@@ -13,7 +13,7 @@ Obtains the network search results.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'radio';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## isNetworkSearchSuccess

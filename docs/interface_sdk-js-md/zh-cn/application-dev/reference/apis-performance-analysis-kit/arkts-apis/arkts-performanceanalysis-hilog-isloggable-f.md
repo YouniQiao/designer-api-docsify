@@ -1,5 +1,10 @@
 # isLoggable
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isLoggable
 
 ```TypeScript

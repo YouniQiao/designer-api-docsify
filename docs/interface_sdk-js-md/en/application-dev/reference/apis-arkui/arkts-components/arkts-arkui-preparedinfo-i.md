@@ -8,6 +8,11 @@ Describes the duration of the video. > **NOTE：**> > To standardize anonymous o
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## duration
 
 ```TypeScript

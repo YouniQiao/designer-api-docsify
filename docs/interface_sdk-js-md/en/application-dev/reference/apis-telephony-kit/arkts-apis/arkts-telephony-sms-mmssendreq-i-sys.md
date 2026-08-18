@@ -13,7 +13,7 @@ Defines an MMS message sending request.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## bcc

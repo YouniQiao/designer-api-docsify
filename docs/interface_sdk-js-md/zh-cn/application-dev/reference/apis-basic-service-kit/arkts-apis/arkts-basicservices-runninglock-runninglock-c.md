@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hold
 
 ```TypeScript

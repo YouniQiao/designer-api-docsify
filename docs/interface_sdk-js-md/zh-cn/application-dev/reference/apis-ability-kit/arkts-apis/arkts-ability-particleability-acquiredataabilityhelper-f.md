@@ -1,5 +1,10 @@
 # acquireDataAbilityHelper
 
+## 导入模块
+
+```TypeScript
+```
+
 ## acquireDataAbilityHelper
 
 ```TypeScript

@@ -8,6 +8,11 @@ Dng图像元数据类，用于存储图像的元数据。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## activeArea
 
 ```TypeScript

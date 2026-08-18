@@ -1,5 +1,10 @@
 # getFileDescriptor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFileDescriptor
 
 ```TypeScript

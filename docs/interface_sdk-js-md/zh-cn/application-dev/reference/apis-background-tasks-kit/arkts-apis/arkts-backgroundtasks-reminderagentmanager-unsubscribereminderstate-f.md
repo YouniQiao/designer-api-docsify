@@ -1,5 +1,10 @@
 # unsubscribeReminderState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## unsubscribeReminderState
 
 ```TypeScript
@@ -20,7 +25,7 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
 
 **返回值：**
 

@@ -1,5 +1,10 @@
 # isAutoStartupSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAutoStartupSupported
 
 ```TypeScript

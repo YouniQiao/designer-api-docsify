@@ -1,0 +1,74 @@
+# SwiperContentInfo
+
+Provides content area information of the **Swiper** component.
+
+**Since:** 22
+
+<!--Device-unnamed-export interface SwiperContentInfo--><!--Device-unnamed-export interface SwiperContentInfo-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## id
+
+```TypeScript
+id: string
+```
+
+ID of the **Swiper** component.
+
+**Type:** string
+
+**Since:** 22
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SwiperContentInfo-id: string--><!--Device-SwiperContentInfo-id: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## swiperItemInfos
+
+```TypeScript
+swiperItemInfos: Array<SwiperItemInfo>
+```
+
+Information about the currently visible child components within the **Swiper** container.
+
+**Type:** Array&lt;[SwiperItemInfo](arkts-arkui-arkui-uicontext-swiperiteminfo-i.md)&gt;
+
+**Since:** 22
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SwiperContentInfo-swiperItemInfos: Array<SwiperItemInfo>--><!--Device-SwiperContentInfo-swiperItemInfos: Array<SwiperItemInfo>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## uniqueId
+
+```TypeScript
+uniqueId: number
+```
+
+Unique ID of the **Swiper** component.
+
+**Type:** number
+
+**Since:** 22
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-SwiperContentInfo-uniqueId: number--><!--Device-SwiperContentInfo-uniqueId: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -11,7 +11,8 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from 'StartupTask';
+import { StartupTask } from '@kit.AbilityKit';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init
@@ -87,7 +88,7 @@ Called when the dependent startup task is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dependency | string | Yes | Name of the dependent startup task. |
-| result | Object | Yes | Execution result of [init](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#init) of the dependent startup task. |
+| result | Object | Yes | Execution result of [init](#init) of the dependent startup task. |
 
 **Examples**
 

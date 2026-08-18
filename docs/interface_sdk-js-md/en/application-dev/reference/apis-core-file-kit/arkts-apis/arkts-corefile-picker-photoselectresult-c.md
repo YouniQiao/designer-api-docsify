@@ -15,7 +15,7 @@ Defines information about the images or videos selected.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## isOriginalPhoto

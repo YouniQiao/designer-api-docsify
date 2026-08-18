@@ -13,7 +13,7 @@ This **restrictions** module provides APIs for disallowing general features of d
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from 'restrictions';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -10,6 +10,11 @@ Represents a lock that can be acquired and released
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lock
 
 ```TypeScript

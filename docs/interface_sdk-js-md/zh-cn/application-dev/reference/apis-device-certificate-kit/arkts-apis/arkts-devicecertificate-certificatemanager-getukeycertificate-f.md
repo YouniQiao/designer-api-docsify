@@ -1,5 +1,10 @@
 # getUkeyCertificate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUkeyCertificate
 
 ```TypeScript

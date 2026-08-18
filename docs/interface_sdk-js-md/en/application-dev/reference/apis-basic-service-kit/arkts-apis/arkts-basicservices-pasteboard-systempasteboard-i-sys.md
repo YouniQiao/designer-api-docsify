@@ -11,7 +11,7 @@ Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API,
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## removeAppShareOptions

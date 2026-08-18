@@ -12,6 +12,11 @@ MultiNavPathStack is used for storing pages when shown as split mode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clear
 
 ```TypeScript

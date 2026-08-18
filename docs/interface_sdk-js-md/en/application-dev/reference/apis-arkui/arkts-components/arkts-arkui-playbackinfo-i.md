@@ -8,6 +8,11 @@ Describes the current progress of video playback. > **NOTE：**> > To standardiz
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## time
 
 ```TypeScript

@@ -8,6 +8,11 @@ NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webvi
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## handleBufferedEndTimeChanged
 
 ```TypeScript

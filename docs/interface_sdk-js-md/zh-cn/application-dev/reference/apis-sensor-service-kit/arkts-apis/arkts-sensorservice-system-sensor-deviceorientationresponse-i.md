@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alpha
 
 ```TypeScript

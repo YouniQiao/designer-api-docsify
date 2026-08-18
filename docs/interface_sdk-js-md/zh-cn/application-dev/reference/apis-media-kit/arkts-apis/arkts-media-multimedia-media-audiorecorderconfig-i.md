@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
+## 导入模块
+
+```TypeScript
+```
+
 ## audioEncodeBitRate
 
 ```TypeScript

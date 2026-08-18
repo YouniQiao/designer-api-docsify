@@ -1,0 +1,9 @@
+# ColumnModifier
+
+## Summary
+
+### Classes
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ColumnModifier](arkts-arkui-columnmodifier-c.md) |

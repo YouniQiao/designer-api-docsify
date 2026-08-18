@@ -1,5 +1,10 @@
 # scale
 
+## 导入模块
+
+```TypeScript
+```
+
 ## scale
 
 ```TypeScript

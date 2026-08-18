@@ -8,6 +8,11 @@ Provides the AI image analysis options. > **NOTE：**> > The **types** parameter
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## aiController
 
 ```TypeScript

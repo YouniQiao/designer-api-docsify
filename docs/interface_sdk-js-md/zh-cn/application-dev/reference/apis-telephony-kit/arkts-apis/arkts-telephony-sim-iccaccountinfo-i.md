@@ -8,6 +8,11 @@ Defines the ICC account information.
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
+## 导入模块
+
+```TypeScript
+```
+
 ## iccId
 
 ```TypeScript

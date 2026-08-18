@@ -13,9 +13,7 @@ Extends the IDataSource API to provide a data source that can be prefetched.
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching } from 'IDataSourcePrefetching';
-import { IPrefetcher } from 'IPrefetcher';
-import { BasicPrefetcher } from 'BasicPrefetcher';
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
 ```
 
 ## cancel

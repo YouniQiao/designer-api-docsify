@@ -17,6 +17,7 @@ Represents video data. It is a child class of [File](arkts-arkdata-unifieddatach
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

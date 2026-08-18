@@ -1,5 +1,10 @@
 # getSystemRegion
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemRegion
 
 ```TypeScript

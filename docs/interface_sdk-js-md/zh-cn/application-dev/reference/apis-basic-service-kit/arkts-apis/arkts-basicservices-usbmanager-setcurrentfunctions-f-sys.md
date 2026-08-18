@@ -1,12 +1,17 @@
 # setCurrentFunctions（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setCurrentFunctions
 
 ```TypeScript
 function setCurrentFunctions(funcs: FunctionType): Promise<void>
 ```
 
-在设备模式下，设置当前的USB功能列表。使用Promise异步回调。
+在设备模式下，设置当前的USB功能列表。使用Promise异步回调。调用成功后，设备的USB功能将切换为指定的功能列表。适用于系统应用需要动态切换设备USB功能、配置设备工作模式的场景。
 
 **起始版本：** 9
 
@@ -24,13 +29,13 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码。 |
+| funcs | FunctionType | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。调用成功时无返回值，调用失败时抛出异常。 |
 
 **错误码：**
 

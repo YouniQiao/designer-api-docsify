@@ -8,6 +8,11 @@ This parameter is used to define the input of each filtering dimension.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## name
 
 ```TypeScript

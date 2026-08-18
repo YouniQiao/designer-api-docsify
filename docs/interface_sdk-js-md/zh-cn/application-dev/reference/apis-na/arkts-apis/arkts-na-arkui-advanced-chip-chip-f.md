@@ -1,5 +1,10 @@
 # Chip
 
+## 导入模块
+
+```TypeScript
+```
+
 ## Chip
 
 ```TypeScript

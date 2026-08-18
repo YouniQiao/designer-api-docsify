@@ -11,7 +11,9 @@ Describes the properties of the status bar&lt;!--Del--&gt; and three-button navi
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'window';
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## enableNavigationBarAnimation

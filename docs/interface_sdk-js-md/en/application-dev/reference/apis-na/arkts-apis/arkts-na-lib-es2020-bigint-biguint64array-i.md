@@ -6,6 +6,11 @@ A typed array of 64-bit unsigned integer values. The contents are initialized to
 
 <!--Device-unnamed-interface BigUint64Array--><!--Device-unnamed-interface BigUint64Array-End-->
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript

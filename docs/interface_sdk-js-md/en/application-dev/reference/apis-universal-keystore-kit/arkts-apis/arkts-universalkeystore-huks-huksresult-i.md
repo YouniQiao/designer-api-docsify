@@ -15,7 +15,8 @@ Represents the result returned. > **NOTE：**> > - For details about the error c
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'huks';
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## certChains

@@ -1,5 +1,10 @@
 # getFreeInodes
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFreeInodes
 
 ```TypeScript

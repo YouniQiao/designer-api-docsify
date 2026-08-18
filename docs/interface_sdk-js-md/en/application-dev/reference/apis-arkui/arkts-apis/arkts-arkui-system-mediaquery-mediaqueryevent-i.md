@@ -13,8 +13,7 @@ Defines the MediaQuery event.
 ## Modules to Import
 
 ```TypeScript
-import { MediaQueryEvent } from 'MediaQueryEvent';
-import { MediaQueryList } from 'MediaQueryList';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## matches

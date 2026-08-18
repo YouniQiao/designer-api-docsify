@@ -10,6 +10,11 @@ Declare struct RecentPhotoComponent
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -37,7 +42,7 @@ onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback
 
 Callback when check whether photos or videos exists and return the recent photo info
 
-**Type:** [RecentPhotoCheckInfoCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotocheckinfocallback-t.md)
+**Type:** [RecentPhotoCheckInfoCallback](arkts-na-recentphotocheckinfocallback-t.md)
 
 **Since:** 26.0.0
 
@@ -57,7 +62,7 @@ onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback
 
 Callback when check whether photos or videos exists
 
-**Type:** [RecentPhotoCheckResultCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotocheckresultcallback-t.md)
+**Type:** [RecentPhotoCheckResultCallback](arkts-na-recentphotocheckresultcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -77,7 +82,7 @@ onRecentPhotoClick: RecentPhotoClickCallback
 
 Callback when select photos or videos
 
-**Type:** [RecentPhotoClickCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotoclickcallback-t.md)
+**Type:** [RecentPhotoClickCallback](arkts-na-recentphotoclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -97,7 +102,7 @@ recentPhotoOptions?: RecentPhotoOptions
 
 recentPhotoOptions
 
-**Type:** [RecentPhotoOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
+**Type:** [RecentPhotoOptions](arkts-na-file-recentphotocomponent-recentphotooptions-c.md)
 
 **Since:** 26.0.0
 

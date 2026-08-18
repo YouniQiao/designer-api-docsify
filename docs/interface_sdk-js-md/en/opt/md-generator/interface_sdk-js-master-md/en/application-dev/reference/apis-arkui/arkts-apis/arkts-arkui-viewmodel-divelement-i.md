@@ -1,0 +1,55 @@
+# DivElement
+
+The &lt;div&gt; component provides a div container.
+
+**Inheritance/Implementation:** DivElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+
+**Since:** 6
+
+<!--Device-unnamed-export interface DivElement--><!--Device-unnamed-export interface DivElement-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## getScrollOffset
+
+```TypeScript
+getScrollOffset(): ScrollOffset
+```
+
+Returns the offset of the current scrolling. The return value type is Object.
+
+**Since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DivElement-getScrollOffset(): ScrollOffset--><!--Device-DivElement-getScrollOffset(): ScrollOffset-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ScrollOffset](arkts-arkui-viewmodel-scrolloffset-i.md) |
+
+## scrollBy
+
+```TypeScript
+scrollBy(data: ScrollParam): void
+```
+
+Scrolls the div for a certain distance.
+
+**Since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DivElement-scrollBy(data: ScrollParam): void--><!--Device-DivElement-scrollBy(data: ScrollParam): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| data | [ScrollParam](arkts-arkui-viewmodel-scrollparam-i.md) | Yes |

@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'common';
+import { common } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

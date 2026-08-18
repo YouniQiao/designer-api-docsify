@@ -8,6 +8,11 @@ Manual Focus Query object.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFocusDistanceSupported
 
 ```TypeScript

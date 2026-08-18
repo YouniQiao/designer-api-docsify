@@ -11,7 +11,8 @@ Represents chinese calendar time element for the ChineseCalendar object.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## cyclicalYear

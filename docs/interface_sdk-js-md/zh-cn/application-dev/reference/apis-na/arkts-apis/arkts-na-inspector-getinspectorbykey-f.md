@@ -1,5 +1,10 @@
 # getInspectorByKey
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInspectorByKey
 
 ```TypeScript

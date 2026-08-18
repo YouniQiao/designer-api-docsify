@@ -1,5 +1,10 @@
 # queryPrintJobById（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryPrintJobById
 
 ```TypeScript
@@ -23,7 +28,7 @@ function queryPrintJobById(jobId: string, callback: AsyncCallback<PrintJob>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PrintJob](arkts-basicservices-print-printjob-i-sys.md)&gt; | 是 | 异步按打印任务ID查询打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PrintJob](arkts-basicservices-print-printjob-i-sys.md)&gt; | 是 | 异步按打印任务ID查询打印任务之后的回调。 |
 
 **错误码：**
 

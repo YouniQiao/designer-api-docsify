@@ -15,7 +15,7 @@ Provides APIs for reading and writing data in specific format. During RPC, the s
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor

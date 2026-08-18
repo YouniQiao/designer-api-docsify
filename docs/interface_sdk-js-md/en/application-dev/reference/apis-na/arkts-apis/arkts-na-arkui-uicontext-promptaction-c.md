@@ -10,6 +10,11 @@ class PromptAction
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## closeCustomDialog
 
 ```TypeScript

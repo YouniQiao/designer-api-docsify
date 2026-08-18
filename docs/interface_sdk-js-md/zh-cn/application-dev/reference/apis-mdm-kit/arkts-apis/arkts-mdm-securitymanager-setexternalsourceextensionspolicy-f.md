@@ -1,5 +1,10 @@
 # setExternalSourceExtensionsPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setExternalSourceExtensionsPolicy
 
 ```TypeScript

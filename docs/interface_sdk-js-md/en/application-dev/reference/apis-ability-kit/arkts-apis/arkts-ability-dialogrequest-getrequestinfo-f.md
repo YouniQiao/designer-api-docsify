@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from 'dialogRequest';
+import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## getRequestInfo

@@ -13,7 +13,8 @@ The module provides APIs for obtaining resource information, including [BundleRe
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from 'bundleResourceManager';
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

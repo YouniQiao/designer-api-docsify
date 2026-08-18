@@ -11,7 +11,8 @@ Provides methods for setting information about text-to-speech (TTS) conversion, 
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'settings';
+import { settings } from '@kit.BasicServicesKit';
+import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

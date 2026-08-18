@@ -11,7 +11,7 @@ Helper functions to access photos and albums.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## acquireDebugDatabase

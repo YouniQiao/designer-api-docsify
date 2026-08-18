@@ -10,6 +10,11 @@ Indicates the options of the title.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## mainTitle
 
 ```TypeScript

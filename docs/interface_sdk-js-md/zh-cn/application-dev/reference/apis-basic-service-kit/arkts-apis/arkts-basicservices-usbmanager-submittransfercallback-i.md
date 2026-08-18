@@ -1,6 +1,6 @@
 # SubmitTransferCallback
 
-Usb异步传输回调。
+USB异步传输回调。
 
 **起始版本：** 23
 
@@ -8,13 +8,18 @@ Usb异步传输回调。
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## actualLength
 
 ```TypeScript
 actualLength: int
 ```
 
-读写操作的实际长度值。（单位：字节）。
+读写操作的实际长度值，（单位：字节）。
 
 **类型：** int
 

@@ -11,7 +11,7 @@ The clientCert field of the client certificate, which includes 4 attributes: cli
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'http';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## certPath

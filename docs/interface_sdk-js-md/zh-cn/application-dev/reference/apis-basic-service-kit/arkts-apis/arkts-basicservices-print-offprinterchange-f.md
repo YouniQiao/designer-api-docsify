@@ -1,5 +1,10 @@
 # offPrinterChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offPrinterChange
 
 ```TypeScript

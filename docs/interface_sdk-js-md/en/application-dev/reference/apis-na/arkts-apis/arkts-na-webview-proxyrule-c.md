@@ -10,6 +10,11 @@ The ProxyRule used by insertProxyRule.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getSchemeFilter
 
 ```TypeScript
@@ -30,7 +35,7 @@ Returns the scheme filter used for this rule.
 
 | Type | Description |
 | --- | --- |
-| [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
+| [ProxySchemeFilter](arkts-na-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
 
 ## getUrl
 

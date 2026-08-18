@@ -8,6 +8,11 @@ Provides the media AVScreenCaptureStrategy definition.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableDeviceLevelCapture
 
 ```TypeScript

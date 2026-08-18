@@ -1,5 +1,10 @@
 # createTonePlayer（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createTonePlayer
 
 ```TypeScript
@@ -21,7 +26,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer系统接
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 | Callback used to return the tonePlayer instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 | Callback used to return the tonePlayer instance. |
 
 **示例**
 
@@ -67,7 +72,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#toneplayer系统接
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | 是 | Callback used to return the tonePlayer instance, or null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | 是 | Callback used to return the tonePlayer instance, or null when an error happens. |
 
 **错误码：**
 

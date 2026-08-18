@@ -1,5 +1,10 @@
 # acquireAccess
 
+## 导入模块
+
+```TypeScript
+```
+
 ## acquireAccess
 
 ```TypeScript

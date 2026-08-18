@@ -11,7 +11,7 @@ Provides networkSecurity related APIs.
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from 'networkSecurity';
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## Summary

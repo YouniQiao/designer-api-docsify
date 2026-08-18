@@ -1,5 +1,10 @@
 # isStartupTaskInitialized
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isStartupTaskInitialized
 
 ```TypeScript

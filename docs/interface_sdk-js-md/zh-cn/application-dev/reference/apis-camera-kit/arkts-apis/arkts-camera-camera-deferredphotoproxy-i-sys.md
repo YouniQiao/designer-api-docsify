@@ -10,6 +10,11 @@ A class object that functions as a thumbnail proxy.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getThumbnail
 
 ```TypeScript

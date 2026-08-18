@@ -1,5 +1,10 @@
 # getFontScale
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFontScale
 
 ```TypeScript

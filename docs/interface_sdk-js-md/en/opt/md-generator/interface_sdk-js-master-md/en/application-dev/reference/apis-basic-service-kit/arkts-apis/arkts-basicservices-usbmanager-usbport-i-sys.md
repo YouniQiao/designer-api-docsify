@@ -1,0 +1,70 @@
+# USBPort (System API)
+
+Represents a USB port.
+
+**Since:** 23
+
+<!--Device-usbManager-interface USBPort--><!--Device-usbManager-interface USBPort-End-->
+
+**System capability:** SystemCapability.USB.USBManager
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+```
+
+## id
+
+```TypeScript
+id: number
+```
+
+Unique identifier of a USB port.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-USBPort-id: int--><!--Device-USBPort-id: int-End-->
+
+**System capability:** SystemCapability.USB.USBManager
+
+**System API:** This is a system API.
+
+## status
+
+```TypeScript
+status: USBPortStatus
+```
+
+USB port role.
+
+**Type:** USBPortStatus
+
+**Since:** 23
+
+<!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
+
+**System capability:** SystemCapability.USB.USBManager
+
+**System API:** This is a system API.
+
+## supportedModes
+
+```TypeScript
+supportedModes: PortModeType
+```
+
+Numeric mask combination for the supported mode list.
+
+**Type:** PortModeType
+
+**Since:** 23
+
+<!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
+
+**System capability:** SystemCapability.USB.USBManager
+
+**System API:** This is a system API.

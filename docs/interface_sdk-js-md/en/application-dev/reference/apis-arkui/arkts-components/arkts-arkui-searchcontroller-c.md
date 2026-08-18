@@ -12,6 +12,11 @@ The controller for the **Search** component inherits from TextContentControllerB
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## caretPosition
 
 ```TypeScript

@@ -8,6 +8,11 @@ Describes the API object for text decoration line styles. > **NOTE：**> > When 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

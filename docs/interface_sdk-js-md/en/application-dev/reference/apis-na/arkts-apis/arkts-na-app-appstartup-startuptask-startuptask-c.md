@@ -10,6 +10,11 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **System capability:** SystemCapability.Ability.AppStartup
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## init
 
 ```TypeScript

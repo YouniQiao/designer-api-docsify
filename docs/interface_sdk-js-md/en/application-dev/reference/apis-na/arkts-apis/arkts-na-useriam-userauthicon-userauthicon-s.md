@@ -10,6 +10,11 @@ The **userAuthIcon** module is a UI component module of the OpenHarmony user ide
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript

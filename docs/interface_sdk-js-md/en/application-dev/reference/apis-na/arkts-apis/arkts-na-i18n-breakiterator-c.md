@@ -10,6 +10,11 @@ The BreakIterator class is used for finding the location of break point in text.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## current
 
 ```TypeScript

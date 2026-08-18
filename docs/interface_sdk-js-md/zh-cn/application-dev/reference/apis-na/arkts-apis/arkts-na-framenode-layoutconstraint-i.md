@@ -18,7 +18,7 @@ maxSize: Size
 
 最大尺寸。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
+**类型：** [Size](arkts-na-graphics-size-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ minSize: Size
 
 最小尺寸。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
+**类型：** [Size](arkts-na-graphics-size-i.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ percentReference: Size
 
 子节点计算百分比时的尺寸基准。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
+**类型：** [Size](arkts-na-graphics-size-i.md)
 
 **起始版本：** 23
 

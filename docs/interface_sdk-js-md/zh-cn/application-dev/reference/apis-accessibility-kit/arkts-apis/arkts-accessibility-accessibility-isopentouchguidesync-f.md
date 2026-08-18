@@ -1,5 +1,10 @@
 # isOpenTouchGuideSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isOpenTouchGuideSync
 
 ```TypeScript

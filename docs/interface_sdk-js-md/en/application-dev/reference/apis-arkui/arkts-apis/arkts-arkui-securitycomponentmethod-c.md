@@ -10,6 +10,11 @@ The universal attributes module for security components enables unified configur
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## accessibilityDefaultFocus
 
 ```TypeScript

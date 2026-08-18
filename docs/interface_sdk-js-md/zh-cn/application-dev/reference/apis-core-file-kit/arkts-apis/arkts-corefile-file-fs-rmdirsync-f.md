@@ -1,5 +1,10 @@
 # rmdirSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## rmdirSync
 
 ```TypeScript

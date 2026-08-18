@@ -1,5 +1,10 @@
 # getDLPSuffix
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDLPSuffix
 
 ```TypeScript

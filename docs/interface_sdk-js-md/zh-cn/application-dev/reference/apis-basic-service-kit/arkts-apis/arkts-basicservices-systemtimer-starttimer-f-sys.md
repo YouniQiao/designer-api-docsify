@@ -1,5 +1,10 @@
 # startTimer（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startTimer
 
 ```TypeScript
@@ -22,7 +27,7 @@ function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void
 | --- | --- | --- | --- |
 | timer | long | 是 | 定时器的ID。 |
 | triggerTime | long | 是 | 定时器的触发时间，单位：毫秒。<br/>若定时器类型包含了TIMER_TYPE_REALTIME，该triggerTime应为系统启动时间，建议通过 [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)获取；<br/>若定时器类型不包含 TIMER_TYPE_REALTIME，该triggerTime应为墙上时间，建议通过 [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md#gettime)获取。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 

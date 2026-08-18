@@ -11,7 +11,8 @@ Defines the device configuration.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'resourceManager';
+import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## colorMode

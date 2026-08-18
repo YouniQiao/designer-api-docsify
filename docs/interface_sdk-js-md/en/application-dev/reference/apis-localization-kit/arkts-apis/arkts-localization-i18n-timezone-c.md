@@ -11,7 +11,8 @@ Provides time zone management capabilities, such as time zone name translation, 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppDefaultTimeZone
@@ -36,7 +37,7 @@ Obtains the default time zone object used by an application. If the default time
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone object, first set by application, then system time zone, last GMT time zone. |
+| [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md) | TimeZone object, first set by application, then system time zone, last GMT time zone. |
 
 ## getAvailableIDs
 
@@ -300,7 +301,7 @@ Creates a **TimeZone** object corresponding to the specified time zone city.
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone** object corresponding to the specified time zone city ID. |
+| [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md) | TimeZone** object corresponding to the specified time zone city ID. |
 
 **Examples**
 
@@ -337,7 +338,7 @@ Creates an array of **TimeZone** objects corresponding to the specified location
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | TimeZone** objects corresponding to the specified location. |
+| Array&lt;[TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md)&gt; | TimeZone** objects corresponding to the specified location. |
 
 **Error codes:**
 
@@ -380,7 +381,7 @@ Obtains the time zone transition rules. For details about the time zone transiti
 
 | Type | Description |
 | --- | --- |
-| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Time zone transition rule, including the transition time and the offset before and after the transition. |
+| [ZoneRules](../../apis-na/arkts-apis/arkts-na-i18n-zonerules-c.md) | Time zone transition rule, including the transition time and the offset before and after the transition. |
 
 ## isDaylightSavingTime
 

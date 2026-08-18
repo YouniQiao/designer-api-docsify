@@ -12,6 +12,11 @@ Represents an object that has a length property and can be indexed.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_get
 
 ```TypeScript

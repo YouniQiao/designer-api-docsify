@@ -11,7 +11,8 @@ The module provides APIs for obtaining application information, including bundle
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'bundleManager';
+import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

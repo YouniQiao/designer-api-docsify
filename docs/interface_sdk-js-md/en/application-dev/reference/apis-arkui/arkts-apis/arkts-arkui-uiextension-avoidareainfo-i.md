@@ -11,7 +11,7 @@ Represents the information about the avoidance area of the window.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'uiExtension';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## area

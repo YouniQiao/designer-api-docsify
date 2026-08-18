@@ -8,6 +8,11 @@ Describes the parameters of the time picker. Property modifications made to **Ti
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## end
 
 ```TypeScript

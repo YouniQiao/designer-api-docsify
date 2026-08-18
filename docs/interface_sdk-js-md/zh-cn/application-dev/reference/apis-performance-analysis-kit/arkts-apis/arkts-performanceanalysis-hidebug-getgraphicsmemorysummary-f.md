@@ -1,5 +1,10 @@
 # getGraphicsMemorySummary
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getGraphicsMemorySummary
 
 ```TypeScript

@@ -13,7 +13,7 @@ Defines the attachment of an MMS message.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## charset

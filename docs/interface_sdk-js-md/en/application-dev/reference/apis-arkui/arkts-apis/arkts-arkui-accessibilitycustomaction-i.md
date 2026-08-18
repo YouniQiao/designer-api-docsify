@@ -8,6 +8,11 @@ Defines struct of AccessibilityCustomAction that can be processed in custom acti
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## name
 
 ```TypeScript

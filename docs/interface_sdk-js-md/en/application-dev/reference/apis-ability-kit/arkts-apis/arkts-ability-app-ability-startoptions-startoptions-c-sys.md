@@ -11,7 +11,8 @@ StartOptions can be used as an input parameter for APIs used to launch a UIAbili
 ## Modules to Import
 
 ```TypeScript
-import { StartOptions } from 'StartOptions';
+import { StartOptions } from '@kit.AbilityKit';
+import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## windowFocused

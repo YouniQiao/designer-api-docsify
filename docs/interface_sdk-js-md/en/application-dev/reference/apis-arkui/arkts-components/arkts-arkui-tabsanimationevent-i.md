@@ -8,6 +8,11 @@ Describes the animation information of the **Tabs** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## currentOffset
 
 ```TypeScript

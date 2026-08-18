@@ -11,7 +11,7 @@ Defines options of DNS query.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## family

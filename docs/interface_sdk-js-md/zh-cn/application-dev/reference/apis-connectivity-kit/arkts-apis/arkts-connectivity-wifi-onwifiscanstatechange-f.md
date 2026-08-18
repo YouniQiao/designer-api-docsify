@@ -1,5 +1,10 @@
 # on_wifiScanStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_wifiScanStateChange
 
 ```TypeScript
@@ -25,5 +30,5 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'wifiScanStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 状态改变回调函数。0:扫描失败，1:扫描成功 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。0:扫描失败，1:扫描成功 |
 

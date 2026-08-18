@@ -10,6 +10,11 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 
 **系统能力：** SystemCapability.Ability.Form
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onLiveFormCreate
 
 ```TypeScript

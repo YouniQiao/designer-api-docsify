@@ -10,6 +10,11 @@ Implement this interface to provide prefetcher logic.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setDataSource
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getUidForName
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUidForName
 
 ```TypeScript

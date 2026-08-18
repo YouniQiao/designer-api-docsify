@@ -17,7 +17,7 @@ Defines the AbsAlbum.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## getPhotoAssets

@@ -10,6 +10,11 @@ Provide some functions to find named entity in text.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -69,7 +74,7 @@ Obtains entity information in the text object.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[EntityInfoItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-entityinfoitem-i.md)&gt; | List of entities in the text. |
+| Array&lt;[EntityInfoItem](arkts-na-i18n-entityinfoitem-i.md)&gt; | List of entities in the text. |
 
 **Error codes:**
 

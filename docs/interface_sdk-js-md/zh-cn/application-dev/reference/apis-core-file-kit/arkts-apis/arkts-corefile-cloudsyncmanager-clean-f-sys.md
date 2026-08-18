@@ -1,5 +1,10 @@
 # clean（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clean
 
 ```TypeScript
@@ -99,7 +104,7 @@ function clean(accountId: string, appActions: Record<string, Action>, callback: 
 | --- | --- | --- | --- |
 | accountId | string | 是 | 账号Id。 |
 | appActions | Record&lt;string, Action&gt; | 是 | 清理动作类型，string类型为待清理应用包名， [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#action系统接口)为清理动 作类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步方法清理本地云相关数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步方法清理本地云相关数据。 |
 
 **错误码：**
 

@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
+## 导入模块
+
+```TypeScript
+```
+
 ## state
 
 ```TypeScript

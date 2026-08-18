@@ -8,6 +8,11 @@ barrier参数，用于定义一条支持镜像模式的barrier的id、方向和�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript

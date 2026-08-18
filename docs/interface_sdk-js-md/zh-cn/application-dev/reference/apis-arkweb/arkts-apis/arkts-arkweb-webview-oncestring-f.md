@@ -1,5 +1,10 @@
 # once_string
 
+## 导入模块
+
+```TypeScript
+```
+
 ## once_string
 
 ```TypeScript
@@ -21,7 +26,7 @@ function once(type: string, callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | Web事件的类型，目前仅支持："webInited"（Web引擎初始化完成）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | Web引擎初始化完成时触发的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Web引擎初始化完成时触发的回调函数。 |
 
 **错误码：**
 

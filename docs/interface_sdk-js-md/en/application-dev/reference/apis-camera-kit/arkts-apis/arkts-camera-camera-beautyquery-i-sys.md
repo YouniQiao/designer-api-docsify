@@ -13,7 +13,8 @@ Provides APIs to obtain and set the beauty effect.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getSupportedBeautyRange

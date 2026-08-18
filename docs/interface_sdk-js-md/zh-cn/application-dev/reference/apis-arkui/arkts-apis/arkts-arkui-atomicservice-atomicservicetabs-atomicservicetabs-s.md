@@ -8,6 +8,11 @@ AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## barBackgroundColor
 
 ```TypeScript

@@ -8,6 +8,11 @@ Defines DatePickerDialog which uses show method to show DatePicker dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## show
 
 ```TypeScript

@@ -8,6 +8,11 @@ Parameters of the shared element transition animation. > **NOTE：**> > **motion
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## curve
 
 ```TypeScript

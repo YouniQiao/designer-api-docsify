@@ -1,5 +1,10 @@
 # batchUpdate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## batchUpdate
 
 ```TypeScript

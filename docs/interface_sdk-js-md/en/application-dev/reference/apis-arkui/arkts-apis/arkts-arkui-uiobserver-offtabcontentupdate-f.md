@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'uiObserver';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## off_tabContentUpdate
@@ -30,7 +30,7 @@ Unsubscribes from **TabContent** page switching events for the specified **Tabs*
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
 | options | ObserverOptions | Yes | ID of the target **Tabs** component. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 
 
 ## off_tabContentUpdate
@@ -56,5 +56,5 @@ Unsubscribes from the **TabContent** switching event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 

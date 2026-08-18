@@ -13,7 +13,8 @@ This module defines the result information of monitoring install, update and uni
 ## Modules to Import
 
 ```TypeScript
-import { bundleMonitor } from 'bundleMonitor';
+import { bundleMonitor } from '@kit.AbilityKit';
+import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## appIndex

@@ -1,5 +1,10 @@
 # getCurrentInputMethodSubtype
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCurrentInputMethodSubtype
 
 ```TypeScript

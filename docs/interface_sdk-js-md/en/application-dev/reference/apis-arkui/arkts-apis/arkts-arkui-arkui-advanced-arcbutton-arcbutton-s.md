@@ -11,12 +11,7 @@ The **ArcButton** component offers various button styles, such as emphasized, no
 ## Modules to Import
 
 ```TypeScript
-import { ArcButton } from 'ArcButton';
-import { ArcButtonOptions } from 'ArcButtonOptions';
-import { ArcButtonProgressConfig } from 'ArcButtonProgressConfig';
-import { ArcButtonPosition } from 'ArcButtonPosition';
-import { ArcButtonStyleMode } from 'ArcButtonStyleMode';
-import { ArcButtonStatus } from 'ArcButtonStatus';
+import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
 ```
 
 ## options
@@ -28,7 +23,7 @@ import { ArcButtonStatus } from 'ArcButtonStatus';
 
 Text, background color, shadow, and other parameters of the **ArcButton** component.
 
-**Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**Type:** [ArcButtonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 18
 

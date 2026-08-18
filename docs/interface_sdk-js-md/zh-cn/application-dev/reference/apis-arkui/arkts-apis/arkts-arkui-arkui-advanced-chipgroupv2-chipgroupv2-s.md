@@ -8,6 +8,11 @@ ChipGroupV2组件提供操作块群组容器，支持单选或多选、自定义
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $items
 
 ```TypeScript

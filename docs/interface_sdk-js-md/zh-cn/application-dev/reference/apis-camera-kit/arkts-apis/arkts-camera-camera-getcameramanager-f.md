@@ -1,5 +1,10 @@
 # getCameraManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCameraManager
 
 ```TypeScript

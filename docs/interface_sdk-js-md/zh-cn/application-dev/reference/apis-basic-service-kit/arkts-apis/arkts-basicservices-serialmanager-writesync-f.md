@@ -1,12 +1,17 @@
 # writeSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## writeSync
 
 ```TypeScript
 function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int
 ```
 
-向串口设备同步写数据，每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。
+向串口设备同步写数据，使用前需先调用[open](arkts-basicservices-serialmanager-open-f.md#open)打开串口设备。每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。适用于需要阻塞式等待写入完成、发送重要指令 、或对写入顺序有严格要求的场景。 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md#open)打开串口
 
 **起始版本：** 23
 
@@ -18,21 +23,21 @@ function writeSync(portId: int, buffer: Uint8Array, timeout?: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| portId | int | 是 | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
-| buffer | Uint8Array | 是 | 写入目标缓冲区，最大长度为4KB。 |
-| timeout | int | 否 | 超时时间（单位：毫秒），指定时间内等待API在目标端口的缓冲区是否可写，若可写则正常处理，若不可写等待超过指定时间后返回超时。默认值0表示不可写时不等待直接返回。 |
+| portId | int | 是 | 端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)返回的 [SerialPort](arkts-basicservices-serialmanager-serialport-i.md#serialport)对象，必须使用getPortList返回的有效端口号，传入无效值时抛出错误码31400003异常。 |
+| buffer | Uint8Array | 是 | 写入数据的缓冲区，包含要发送到串口设备的二进制数据。每次写入的数据长度不超过4KB，超过会导致数据丢失，长数据建议分包写入。 |
+| timeout | int | 否 | 超时时间（单位：毫秒）。API在写入数据时等待缓冲区可写，在指定时间后返回。默认值0或不传参时，表示不等待直接返回。传入负数时抛出参数错误异常。 具体值需根据设备响应速度和数据量合理设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 返回写入数据长度。 |
+| int | 返回实际写入的数据长度，即成功写入的字节数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed; 4. Optional parameters passed as undefined. |
 | [31400007](../../apis-basic-services-kit/errorcode-usb.md#31400007-io异常) | I/O exception. Possible causes:  <br>1. The transfer was canceled.  <br>2. The device offered more data than allowed. |
 | [31400006](../../apis-basic-services-kit/errorcode-usb.md#31400006-传输超时) | Data transfer timed out. |
 | [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) | The serial port device is not opened. Call the open API first. |

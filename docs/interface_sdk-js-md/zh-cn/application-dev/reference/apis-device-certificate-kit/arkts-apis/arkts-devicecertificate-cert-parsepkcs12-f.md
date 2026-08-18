@@ -1,5 +1,10 @@
 # parsePkcs12
 
+## 导入模块
+
+```TypeScript
+```
+
 ## parsePkcs12
 
 ```TypeScript

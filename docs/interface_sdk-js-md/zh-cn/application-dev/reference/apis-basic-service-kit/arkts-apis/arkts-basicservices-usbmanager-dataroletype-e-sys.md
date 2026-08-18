@@ -1,6 +1,6 @@
 # DataRoleType（系统接口）
 
-Enumerates data role types.
+数据角色类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates data role types.
 NONE = 0
 ```
 
-没有功能。
+无。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ NONE = 0
 HOST = 1
 ```
 
-Host mode
+主设备角色。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Host mode
 DEVICE = 2
 ```
 
-Device mode
+从设备角色。
 
 **起始版本：** 23
 

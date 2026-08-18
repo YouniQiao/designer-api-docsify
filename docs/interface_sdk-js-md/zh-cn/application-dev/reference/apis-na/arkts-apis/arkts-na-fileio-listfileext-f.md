@@ -1,5 +1,10 @@
 # listFileExt
 
+## 导入模块
+
+```TypeScript
+```
+
 ## listFileExt
 
 ```TypeScript
@@ -26,7 +31,7 @@ function listFileExt(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | [ListFileExtOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileextoptions-i.md) | 否 | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
+| options | [ListFileExtOptions](arkts-na-file-fs-listfileextoptions-i.md) | 否 | 文件列出选项。默认为空，表示不递归、不限制列出数量、不进行过滤。 |
 
 **返回值：**
 

@@ -11,7 +11,7 @@ Defines the memory limit of the application process.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## rssLimit

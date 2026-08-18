@@ -8,6 +8,11 @@ Defines the CustomSpanMetrics interface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

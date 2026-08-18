@@ -13,7 +13,8 @@ Struct for distributed device identification.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceId

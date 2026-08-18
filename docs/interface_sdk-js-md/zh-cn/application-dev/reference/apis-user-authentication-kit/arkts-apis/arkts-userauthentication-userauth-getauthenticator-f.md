@@ -1,5 +1,10 @@
 # getAuthenticator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAuthenticator
 
 ```TypeScript

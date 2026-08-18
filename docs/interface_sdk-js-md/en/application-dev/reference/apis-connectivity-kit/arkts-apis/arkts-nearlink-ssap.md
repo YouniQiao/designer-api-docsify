@@ -13,7 +13,7 @@ Provides methods to operate or manage service of NearLink.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'ssap';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

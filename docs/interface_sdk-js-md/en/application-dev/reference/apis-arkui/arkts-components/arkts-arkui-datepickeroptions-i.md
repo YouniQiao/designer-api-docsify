@@ -8,6 +8,11 @@ Describes the parameters of the date picker. > **NOTE：**> > - For details abou
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## end
 
 ```TypeScript

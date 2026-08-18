@@ -13,7 +13,7 @@ Result of the given downloadable Profile.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'eSIM';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## cardId

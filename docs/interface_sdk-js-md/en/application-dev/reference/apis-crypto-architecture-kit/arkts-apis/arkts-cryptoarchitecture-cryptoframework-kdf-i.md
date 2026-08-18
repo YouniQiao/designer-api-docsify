@@ -13,7 +13,8 @@ Key derivation function (KDF) interface, defining methods for deriving keys base
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret

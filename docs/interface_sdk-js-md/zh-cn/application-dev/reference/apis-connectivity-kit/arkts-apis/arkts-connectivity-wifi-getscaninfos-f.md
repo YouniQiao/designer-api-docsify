@@ -1,5 +1,10 @@
 # getScanInfos
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getScanInfos
 
 ```TypeScript
@@ -51,7 +56,7 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 |  |
 
 **示例**
 

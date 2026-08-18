@@ -12,6 +12,11 @@ AggregateError object represents an error when several errors need to be wrapped
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_invoke
 
 ```TypeScript

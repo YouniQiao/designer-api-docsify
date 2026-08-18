@@ -20,6 +20,11 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

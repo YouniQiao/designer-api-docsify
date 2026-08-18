@@ -10,6 +10,11 @@ PluginComponentTemplate
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## bundleName
 
 ```TypeScript

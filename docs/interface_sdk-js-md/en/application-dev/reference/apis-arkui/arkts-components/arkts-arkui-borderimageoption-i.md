@@ -8,6 +8,11 @@ Border image option
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fill
 
 ```TypeScript

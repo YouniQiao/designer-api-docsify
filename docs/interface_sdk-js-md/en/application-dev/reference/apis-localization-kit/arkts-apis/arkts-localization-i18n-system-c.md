@@ -11,7 +11,8 @@ Provides system attribute configuration functions, including translating languag
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppPreferredLanguage
@@ -167,7 +168,7 @@ Obtains the first day of a week in the system settings.
 
 | Type | Description |
 | --- | --- |
-| [WeekDay](arkts-localization-i18n-weekday-e.md) | Start day of a week. |
+| [WeekDay](../../apis-na/arkts-apis/arkts-na-i18n-weekday-e.md) | Start day of a week. |
 
 **Examples**
 
@@ -414,7 +415,7 @@ Obtains the current system locale.
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSystemLocaleInstance](#getsystemlocaleinstance)
+**Substitutes:** [getSystemLocaleInstance](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getsystemlocaleinstance)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -516,7 +517,7 @@ Obtains the name of a temperature unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
+| type | [TemperatureType](../../apis-na/arkts-apis/arkts-na-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Return value:**
 
@@ -565,7 +566,7 @@ Obtains the temperature unit of the system.
 
 | Type | Description |
 | --- | --- |
-| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Temperature unit. |
+| [TemperatureType](../../apis-na/arkts-apis/arkts-na-i18n-temperaturetype-e.md) | Temperature unit. |
 
 **Examples**
 

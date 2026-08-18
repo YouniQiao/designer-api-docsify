@@ -1,5 +1,10 @@
 # @ohos.arkui.ArcScrollBar
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

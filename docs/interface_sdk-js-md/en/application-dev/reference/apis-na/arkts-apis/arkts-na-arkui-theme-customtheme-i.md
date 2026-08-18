@@ -10,6 +10,11 @@ Defines the struct of CustomTheme.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## colors
 
 ```TypeScript
@@ -18,7 +23,7 @@ colors?: CustomColors
 
 Define tokens associated with color resources..
 
-**Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
+**Type:** [CustomColors](arkts-na-customcolors-t.md)
 
 **Since:** 23
 
@@ -38,7 +43,7 @@ darkColors?: CustomDarkColors
 
 Define tokens associated with dark mode color resources.
 
-**Type:** [CustomDarkColors](../../apis-arkui/arkts-apis/arkts-arkui-customdarkcolors-t.md)
+**Type:** [CustomDarkColors](arkts-na-customdarkcolors-t.md)
 
 **Default:** If not set darkColors, color value will same as colors under light mode and will not change with color mode, unless the color is setted by resource in dark directory.
 

@@ -1,5 +1,10 @@
 # getTotalBytes
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getTotalBytes
 
 ```TypeScript

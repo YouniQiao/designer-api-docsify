@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Lite
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getStatus
 
 ```TypeScript

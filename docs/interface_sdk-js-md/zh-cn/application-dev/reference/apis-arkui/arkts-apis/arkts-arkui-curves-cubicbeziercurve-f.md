@@ -1,5 +1,10 @@
 # cubicBezierCurve
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cubicBezierCurve
 
 ```TypeScript

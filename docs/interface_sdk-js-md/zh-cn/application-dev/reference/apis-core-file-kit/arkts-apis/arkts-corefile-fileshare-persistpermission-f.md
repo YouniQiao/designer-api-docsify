@@ -1,5 +1,10 @@
 # persistPermission
 
+## 导入模块
+
+```TypeScript
+```
+
 ## persistPermission
 
 ```TypeScript

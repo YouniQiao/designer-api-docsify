@@ -1,5 +1,10 @@
 # startCollectLog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startCollectLog
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # concat
 
+## 导入模块
+
+```TypeScript
+```
+
 ## concat
 
 ```TypeScript

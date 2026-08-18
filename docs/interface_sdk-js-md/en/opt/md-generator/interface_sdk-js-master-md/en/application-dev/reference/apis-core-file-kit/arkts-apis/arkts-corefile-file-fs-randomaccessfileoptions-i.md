@@ -1,0 +1,46 @@
+# RandomAccessFileOptions
+
+Defines the options used in **createRandomAccessFile()**.
+
+**Since:** 12
+
+<!--Device-unnamed-export interface RandomAccessFileOptions--><!--Device-unnamed-export interface RandomAccessFileOptions-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## Modules to Import
+
+```TypeScript
+```
+
+## end
+
+```TypeScript
+end?: number
+```
+
+End position to read the data, in bytes. This parameter is optional. The default value is the end of the file.
+
+**Type:** number
+
+**Since:** 12
+
+<!--Device-RandomAccessFileOptions-end?: number--><!--Device-RandomAccessFileOptions-end?: number-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## start
+
+```TypeScript
+start?: number
+```
+
+Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current position.
+
+**Type:** number
+
+**Since:** 12
+
+<!--Device-RandomAccessFileOptions-start?: number--><!--Device-RandomAccessFileOptions-start?: number-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO

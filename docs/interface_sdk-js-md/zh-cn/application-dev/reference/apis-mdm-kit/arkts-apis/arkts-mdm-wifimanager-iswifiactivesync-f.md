@@ -1,5 +1,10 @@
 # isWifiActiveSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isWifiActiveSync
 
 ```TypeScript

@@ -10,6 +10,11 @@ ChipV2ImageIcon定义图标图片的基类。 继承自[ChipV2Icon](arkts-arkui-
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

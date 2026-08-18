@@ -11,7 +11,10 @@ This interface provides APIs for audio rendering. Before calling any API in Audi
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'audio';
+import { audio } from '@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## drain

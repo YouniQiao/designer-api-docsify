@@ -13,7 +13,7 @@ The **batteryStatistics** module provides APIs for querying software and hardwar
 ## Modules to Import
 
 ```TypeScript
-import { batteryStats } from 'batteryStats';
+import { batteryStats } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -12,6 +12,11 @@ Used to do observer layout and draw event for component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

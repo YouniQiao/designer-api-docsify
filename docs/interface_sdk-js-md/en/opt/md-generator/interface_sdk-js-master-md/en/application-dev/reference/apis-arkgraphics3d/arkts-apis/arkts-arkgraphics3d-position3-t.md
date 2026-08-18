@@ -1,0 +1,15 @@
+# Position3
+
+```TypeScript
+export type Position3 = Vec3
+```
+
+Position of an object in 3D space. The type is a three-dimensional vector. The unit is the scene unit in the world coordinate system (such as cm, m, and km). The value can be any value.
+
+**Since:** 23
+
+<!--Device-unnamed-export type Position3 = Vec3--><!--Device-unnamed-export type Position3 = Vec3-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+**Property type:** Vec3

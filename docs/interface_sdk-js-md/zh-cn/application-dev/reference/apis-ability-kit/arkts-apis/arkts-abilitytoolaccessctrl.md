@@ -10,6 +10,11 @@ abilityToolAccessCtrl的命名空间
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

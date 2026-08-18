@@ -11,7 +11,8 @@ A compound geometric path consisting of line segments, arcs, quadratic Bezier cu
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'drawing';
+import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addArc

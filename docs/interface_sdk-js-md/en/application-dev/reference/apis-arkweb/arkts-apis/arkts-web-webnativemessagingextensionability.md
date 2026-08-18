@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from 'ConnectionInfo';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## Summary

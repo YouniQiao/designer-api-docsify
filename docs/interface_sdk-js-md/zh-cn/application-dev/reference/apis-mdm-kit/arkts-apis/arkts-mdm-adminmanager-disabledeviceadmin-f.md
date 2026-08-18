@@ -1,5 +1,10 @@
 # disableDeviceAdmin
 
+## 导入模块
+
+```TypeScript
+```
+
 ## disableDeviceAdmin
 
 ```TypeScript

@@ -13,7 +13,8 @@ Defines the device service ID. It uniquely identifies a device and its user, inc
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## deviceId

@@ -1,5 +1,10 @@
 # setWatermarkImageForAppWindows
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setWatermarkImageForAppWindows
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getAdRequestBody
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAdRequestBody
 
 ```TypeScript

@@ -11,7 +11,9 @@ A picker view to show available streaming device list.
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from 'AVCastPicker';
+import { AVCastPicker } from '@kit.AVSessionKit';
+import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
+import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKit';
 ```
 
 ## activeColor

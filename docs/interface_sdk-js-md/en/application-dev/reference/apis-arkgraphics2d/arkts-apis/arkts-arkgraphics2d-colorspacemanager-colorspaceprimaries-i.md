@@ -11,7 +11,8 @@ The three primary colors (red, green, blue) and white as defined by the color sp
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from 'colorSpaceManager';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## blueX

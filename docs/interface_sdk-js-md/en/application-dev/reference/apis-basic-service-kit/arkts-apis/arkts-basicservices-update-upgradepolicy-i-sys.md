@@ -13,7 +13,7 @@ Sets the upgrade policy to control the upgrade behavior.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## autoUpgradePeriods

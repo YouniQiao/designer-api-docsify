@@ -8,6 +8,11 @@ Gzip相关接口。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+```
+
 ## gzbuffer
 
 ```TypeScript

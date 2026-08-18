@@ -1,5 +1,10 @@
 # getFontDescriptorsFromPath
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFontDescriptorsFromPath
 
 ```TypeScript

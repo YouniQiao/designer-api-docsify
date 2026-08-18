@@ -8,6 +8,11 @@ Define Preview property
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## colorMode
 
 ```TypeScript

@@ -10,6 +10,11 @@ Declare custom parameters used for volume panel.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## position
 
 ```TypeScript

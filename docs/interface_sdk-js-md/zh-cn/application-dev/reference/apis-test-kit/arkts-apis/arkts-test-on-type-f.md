@@ -1,5 +1,10 @@
 # type
 
+## 导入模块
+
+```TypeScript
+```
+
 ## type
 
 ```TypeScript

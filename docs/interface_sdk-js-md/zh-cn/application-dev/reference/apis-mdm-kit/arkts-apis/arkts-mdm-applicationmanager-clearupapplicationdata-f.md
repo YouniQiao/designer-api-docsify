@@ -1,5 +1,10 @@
 # clearUpApplicationData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clearUpApplicationData
 
 ```TypeScript

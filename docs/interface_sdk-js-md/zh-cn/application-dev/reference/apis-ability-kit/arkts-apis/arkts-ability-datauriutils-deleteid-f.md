@@ -1,5 +1,10 @@
 # deleteId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deleteId
 
 ```TypeScript

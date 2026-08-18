@@ -8,6 +8,11 @@ Mouse event historical point information. Historical points are arranged in chro
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## displayX
 
 ```TypeScript

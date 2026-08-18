@@ -1,5 +1,10 @@
 # transcode
 
+## 导入模块
+
+```TypeScript
+```
+
 ## transcode
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getSkillInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSkillInfo
 
 ```TypeScript

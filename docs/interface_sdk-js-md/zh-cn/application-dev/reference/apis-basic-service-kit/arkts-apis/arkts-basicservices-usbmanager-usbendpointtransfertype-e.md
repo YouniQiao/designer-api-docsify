@@ -1,6 +1,6 @@
 # UsbEndpointTransferType
 
-Enumerates USB transfer types.
+USB传输类型。
 
 **起始版本：** 23
 

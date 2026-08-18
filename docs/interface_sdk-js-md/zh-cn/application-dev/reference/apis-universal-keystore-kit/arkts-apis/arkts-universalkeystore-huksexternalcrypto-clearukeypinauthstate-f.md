@@ -1,5 +1,10 @@
 # clearUkeyPinAuthState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clearUkeyPinAuthState
 
 ```TypeScript

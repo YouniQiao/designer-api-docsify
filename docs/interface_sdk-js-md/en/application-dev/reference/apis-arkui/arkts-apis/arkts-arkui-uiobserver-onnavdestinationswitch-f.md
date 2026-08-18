@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'uiObserver';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## on_navDestinationSwitch
@@ -34,7 +34,7 @@ Subscribes to **Navigation** component page switching events.
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | Event type. Set to **'navDestinationSwitch'** for **Navigation** component page switching events. |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchinfo-i.md)&gt; | Yes | Callback used to return the result. It provides page switching event information through **NavDestinationSwitchInfo**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | Yes | Callback used to return the result. It provides page switching event information through **NavDestinationSwitchInfo**. |
 
 **Examples**
 
@@ -174,8 +174,8 @@ Subscribes to **Navigation** component page switching events. Compared with [uiO
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes | Event type. Set to **'navDestinationSwitch'** for **Navigation** component page switching events. |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target scope for page switching events. |
-| observerOptions | [NavDestinationSwitchObserverOptions](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Observer configuration options. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchinfo-i.md)&gt; | Yes | Callback used to return the result. It provides page switching event information through **NavDestinationSwitchInfo**. |
+| observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Observer configuration options. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | Yes | Callback used to return the result. It provides page switching event information through **NavDestinationSwitchInfo**. |
 
 **Examples**
 

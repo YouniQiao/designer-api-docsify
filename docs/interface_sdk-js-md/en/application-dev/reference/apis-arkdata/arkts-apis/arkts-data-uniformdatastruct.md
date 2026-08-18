@@ -13,7 +13,8 @@ As a part of the Unified Data Management Framework (UDMF), the **uniformDataStru
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'uniformDataStruct';
+import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## Summary

@@ -8,6 +8,11 @@ Defines the parameters for a point-like particle.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## radius
 
 ```TypeScript

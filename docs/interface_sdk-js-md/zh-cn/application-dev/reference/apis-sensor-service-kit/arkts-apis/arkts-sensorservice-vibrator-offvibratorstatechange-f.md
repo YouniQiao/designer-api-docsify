@@ -1,5 +1,10 @@
 # offVibratorStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offVibratorStateChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Unregister a callback function for vibrator plugin or unplug events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 否 | The callback function to be removed from the event listener. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 否 | The callback function to be removed from the event listener. |
 
 **错误码：**
 

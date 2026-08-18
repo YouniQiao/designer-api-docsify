@@ -11,7 +11,8 @@ Describes the camera device information.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## hostDeviceName

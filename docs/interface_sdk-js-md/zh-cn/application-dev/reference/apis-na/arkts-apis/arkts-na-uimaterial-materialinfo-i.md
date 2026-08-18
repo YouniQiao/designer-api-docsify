@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## state
 
 ```TypeScript
@@ -18,7 +23,7 @@ state: MaterialState
 
 材质使能状态配置。
 
-**类型：** [MaterialState](arkts-na-uimaterial-materialstate-e.md)
+**类型：** [MaterialState](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialstate-e.md)
 
 **起始版本：** 26.0.0
 

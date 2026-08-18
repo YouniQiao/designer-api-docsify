@@ -11,7 +11,9 @@ Describes the new area where the window cannot be displayed. The new area is ret
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'window';
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## area

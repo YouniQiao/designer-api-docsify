@@ -8,6 +8,11 @@ Describes the options of the ellipse. > **NOTE：**> > To standardize anonymous 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

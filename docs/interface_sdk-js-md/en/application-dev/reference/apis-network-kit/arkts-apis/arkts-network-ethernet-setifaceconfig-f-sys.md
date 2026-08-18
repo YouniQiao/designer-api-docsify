@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from 'ethernet';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## setIfaceConfig

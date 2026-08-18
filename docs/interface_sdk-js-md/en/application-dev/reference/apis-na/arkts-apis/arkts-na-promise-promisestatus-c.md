@@ -10,6 +10,11 @@ Represents the status of a promise.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fulfilled
 
 ```TypeScript

@@ -12,6 +12,11 @@ Represents the matching result returned by string.prototype.matchAll(), or the n
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## releaseDeviceManager

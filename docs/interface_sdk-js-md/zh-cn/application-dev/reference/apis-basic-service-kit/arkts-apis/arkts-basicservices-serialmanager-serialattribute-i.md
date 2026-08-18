@@ -8,13 +8,18 @@
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
+## 导入模块
+
+```TypeScript
+```
+
 ## baudRate
 
 ```TypeScript
 baudRate: BaudRates
 ```
 
-串口波特率。
+串口波特率，表示数据传输速率，单位：比特/秒
 
 **类型：** [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
 
@@ -30,7 +35,7 @@ baudRate: BaudRates
 dataBits?: DataBits
 ```
 
-串口数据位，默认值为8位。
+串口数据位，表示报文中的有效数据位数，默认值为8，单位：比特
 
 **类型：** DataBits
 
@@ -48,11 +53,11 @@ dataBits?: DataBits
 parity?: Parity
 ```
 
-串口奇偶校验，默认值为None，无奇偶校验。
+串口奇偶校验，用于检测数据传输错误，默认值为PARITY_NONE（无奇偶校验）。
 
 **类型：** Parity
 
-**默认值：** NONE
+**默认值：** PARITY_NONE
 
 **起始版本：** 23
 
@@ -66,7 +71,7 @@ parity?: Parity
 stopBits?: StopBits
 ```
 
-串口停止位，默认值为1位。
+串口停止位，表示报文结束标志，默认值为1，单位：比特
 
 **类型：** StopBits
 

@@ -8,6 +8,11 @@ Describes the object returned after the callback is triggered when an image is s
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## componentHeight
 
 ```TypeScript

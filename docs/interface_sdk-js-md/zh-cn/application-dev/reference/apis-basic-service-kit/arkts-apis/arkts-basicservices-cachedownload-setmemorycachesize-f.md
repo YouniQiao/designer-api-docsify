@@ -1,5 +1,10 @@
 # setMemoryCacheSize
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setMemoryCacheSize
 
 ```TypeScript

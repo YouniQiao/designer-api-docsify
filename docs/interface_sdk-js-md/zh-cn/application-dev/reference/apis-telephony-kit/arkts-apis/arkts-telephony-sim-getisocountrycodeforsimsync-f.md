@@ -1,5 +1,10 @@
 # getISOCountryCodeForSimSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getISOCountryCodeForSimSync
 
 ```TypeScript

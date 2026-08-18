@@ -8,6 +8,11 @@ barrier参数，用于定义一条barrier的id、方向和生成时所依赖的�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## direction
 
 ```TypeScript

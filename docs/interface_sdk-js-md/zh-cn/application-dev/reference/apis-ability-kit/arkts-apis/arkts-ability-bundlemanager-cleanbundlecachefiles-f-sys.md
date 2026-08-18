@@ -1,5 +1,10 @@
 # cleanBundleCacheFiles（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cleanBundleCacheFiles
 
 ```TypeScript
@@ -23,7 +28,7 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要清理其缓存数据的应用程序的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当清理应用缓存目录数据成功，err为 undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)，当清理应用缓存目录数据成功，err为 undefined，否则为错误对象。 |
 
 **错误码：**
 

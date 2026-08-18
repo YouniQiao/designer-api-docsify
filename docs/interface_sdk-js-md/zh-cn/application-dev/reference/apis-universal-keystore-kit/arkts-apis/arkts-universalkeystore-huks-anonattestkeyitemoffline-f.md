@@ -1,5 +1,10 @@
 # anonAttestKeyItemOffline
 
+## 导入模块
+
+```TypeScript
+```
+
 ## anonAttestKeyItemOffline
 
 ```TypeScript

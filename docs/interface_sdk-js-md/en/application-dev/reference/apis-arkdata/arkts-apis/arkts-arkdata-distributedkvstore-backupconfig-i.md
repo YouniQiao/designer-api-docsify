@@ -11,7 +11,7 @@ Provides backup config to backup or restore KVStore.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## fileName

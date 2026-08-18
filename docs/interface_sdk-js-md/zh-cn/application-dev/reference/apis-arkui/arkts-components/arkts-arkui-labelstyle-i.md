@@ -8,6 +8,11 @@ label文本和字体的样式对象。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## font
 
 ```TypeScript

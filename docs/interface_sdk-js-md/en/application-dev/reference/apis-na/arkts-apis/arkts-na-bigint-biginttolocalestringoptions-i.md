@@ -10,6 +10,11 @@ Options for BigInt.toLocaleString method.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## compactDisplay
 
 ```TypeScript

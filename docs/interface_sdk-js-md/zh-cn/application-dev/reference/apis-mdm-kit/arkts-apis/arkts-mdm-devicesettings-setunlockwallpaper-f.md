@@ -1,5 +1,10 @@
 # setUnlockWallpaper
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setUnlockWallpaper
 
 ```TypeScript

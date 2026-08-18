@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onConnectNative
 
 ```TypeScript
@@ -30,7 +35,7 @@ Web原生消息连接建立时回调此方法。在此回调中，可以获取�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
 
 **示例**
 
@@ -131,7 +136,7 @@ Web原生消息连接断开时回调此方法。在此回调中，可以释放�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | 是 | 连接信息对象。 |
 
 **示例**
 

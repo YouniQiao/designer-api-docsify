@@ -8,6 +8,11 @@ Style of the placeholder text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## font
 
 ```TypeScript

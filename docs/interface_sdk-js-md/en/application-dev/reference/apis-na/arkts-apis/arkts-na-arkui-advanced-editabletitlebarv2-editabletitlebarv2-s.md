@@ -10,6 +10,11 @@ Declaration of the editable title bar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -38,7 +43,7 @@ The method to build component.
 
 Image item configuration, displayed on the left side of the title.
 
-**Type:** [EditableTitleBarItemV2](arkts-na-editabletitlebaritemv2-t.md)
+**Type:** [EditableTitleBarItemV2](../../apis-arkui/arkts-apis/arkts-arkui-editabletitlebaritemv2-t.md)
 
 **Since:** 26.0.0
 
@@ -59,7 +64,7 @@ Image item configuration, displayed on the left side of the title.
 
 Left icon configuration.
 
-**Type:** [EditableLeftIconV2](arkts-na-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
+**Type:** [EditableLeftIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)
 
 **Since:** 26.0.0
 
@@ -80,7 +85,7 @@ Left icon configuration.
 
 Custom menu items array, maximum 2-3 items.
 
-**Type:** Array&lt;[EditableTitleBarMenuItemV2](arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
+**Type:** Array&lt;[EditableTitleBarMenuItemV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
 
 **Since:** 26.0.0
 
@@ -101,7 +106,7 @@ Custom menu items array, maximum 2-3 items.
 
 Style and layout configuration.
 
-**Type:** [EditableTitleBarStyleV2](arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
+**Type:** [EditableTitleBarStyleV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2-c.md)
 
 **Since:** 26.0.0
 
@@ -122,7 +127,7 @@ Style and layout configuration.
 
 Save button configuration.
 
-**Type:** [EditableSaveButtonV2](arkts-na-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
+**Type:** [EditableSaveButtonV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2-c.md)
 
 **Since:** 26.0.0
 
@@ -144,7 +149,7 @@ Save button configuration.
 
 Title configuration, supports string or object form.
 
-**Type:** ResourceStr \| [EditableTitleV2](arkts-na-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
+**Type:** ResourceStr \| [EditableTitleV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **Since:** 26.0.0
 

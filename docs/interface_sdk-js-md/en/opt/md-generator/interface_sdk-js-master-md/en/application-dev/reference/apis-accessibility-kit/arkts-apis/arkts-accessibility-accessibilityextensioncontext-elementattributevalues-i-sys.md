@@ -1,0 +1,269 @@
+# ElementAttributeValues
+
+Provides attribute names and value types of a node element.
+
+**Since:** 9
+
+<!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+## accessibilityStateDescription
+
+```TypeScript
+accessibilityStateDescription?: string
+```
+
+Custom accessibility status announcement text information of the element.
+
+**Type:** string
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-accessibilityStateDescription?: string--><!--Device-ElementAttributeValues-accessibilityStateDescription?: string-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## accessibilityVisible
+
+```TypeScript
+accessibilityVisible?: boolean
+```
+
+Whether the element is accessibility visible. The value **true** means the element is accessibility visible, and **false** means the opposite. The default value is **true**.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-accessibilityVisible?: boolean--><!--Device-ElementAttributeValues-accessibilityVisible?: boolean-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## belongTreeId
+
+```TypeScript
+belongTreeId?: number
+```
+
+ID of the component tree to which the element belongs. The default value is **-1**.
+
+**Type:** number
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-belongTreeId?: int--><!--Device-ElementAttributeValues-belongTreeId?: int-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## childrenIds
+
+```TypeScript
+childrenIds?: Array<number>
+```
+
+List of child component IDs of the element.
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-childrenIds?: Array<long>--><!--Device-ElementAttributeValues-childrenIds?: Array<long>-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## childrenTreeId
+
+```TypeScript
+childrenTreeId?: number
+```
+
+ID of the child component tree of the element. The default value is **-1**.
+
+**Type:** number
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-childrenTreeId?: int--><!--Device-ElementAttributeValues-childrenTreeId?: int-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## currentItem
+
+```TypeScript
+currentItem?: AccessibilityGrid
+```
+
+Current item in the component grid.
+
+**Type:** [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid--><!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## customActions
+
+```TypeScript
+customActions?: Array<string>
+```
+
+List of custom actions supported by the element.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-customActions?: Array<string>--><!--Device-ElementAttributeValues-customActions?: Array<string>-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## isEssential
+
+```TypeScript
+isEssential?: boolean
+```
+
+Whether the element is essential to the user. The value **true** means the element is essential, and **false** means the opposite. The default value is **false**.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-isEssential?: boolean--><!--Device-ElementAttributeValues-isEssential?: boolean-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## mainWindowId
+
+```TypeScript
+mainWindowId?: number
+```
+
+ID of the main window of the element. The default value is **-1**.
+
+**Type:** number
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-mainWindowId?: int--><!--Device-ElementAttributeValues-mainWindowId?: int-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## navDestinationId
+
+```TypeScript
+navDestinationId?: number
+```
+
+ID of the navigation destination associated with the element. The default value is **-1**.
+
+**Type:** number
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-navDestinationId?: long--><!--Device-ElementAttributeValues-navDestinationId?: long-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## parentId
+
+```TypeScript
+parentId?: number
+```
+
+ID of the parent component of the element. The default value is **-1**.
+
+**Type:** number
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-parentId?: long--><!--Device-ElementAttributeValues-parentId?: long-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## sourceType
+
+```TypeScript
+sourceType?: AccessibilitySourceType
+```
+
+Indicates the source of this element.
+
+**Type:** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-sourceType?: AccessibilitySourceType--><!--Device-ElementAttributeValues-sourceType?: AccessibilitySourceType-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+## span
+
+```TypeScript
+span?: AccessibilitySpan[]
+```
+
+Array of hyperlink text information of the element.
+
+**Type:** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-span?: AccessibilitySpan[]--><!--Device-ElementAttributeValues-span?: AccessibilitySpan[]-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.

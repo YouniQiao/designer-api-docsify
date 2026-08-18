@@ -1,0 +1,73 @@
+# addFirewallRule
+
+## 导入模块
+
+```TypeScript
+```
+
+## addFirewallRule
+
+```TypeScript
+function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
+```
+
+为设备添加防火墙过滤规则。适用于企业网络安全管控场景，例如限制特定IP地址的网络访问、防止恶意网络攻击、控制应用程序的网络通信、实现网络访问的允许名单或禁用名单管理，帮助企业精细化控制 网络访问，防止网络攻击和数据泄露。 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。 从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md#logtype)。 > **说明：** > > - 添加了[Action](arkts-mdm-networkmanager-action-e.md#action)为ALLOW规则后，将会默认添加DENY规则，不在ALLOW规则之内的网络数据包将会被丢弃或拦截。 > > - 设备重启，将会清空防火墙过滤规则。 > > - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md#adddomainfilterrule)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规 > 则中，均按[Action](arkts-mdm-networkmanager-action-e.md#action)为ALLOW、DENY、REJECT的顺序进行匹配。
+
+**起始版本：** 12
+
+**需要权限：** ohos.permission.ENTERPRISE_MANAGE_NETWORK
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-networkManager-function addFirewallRule(admin: Want, firewallRule: FirewallRule): void--><!--Device-networkManager-function addFirewallRule(admin: Want, firewallRule: FirewallRule): void-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| firewallRule | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+
+**示例**
+
+```TypeScript
+import { networkManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let firewallRule: networkManager.FirewallRule = {
+  // 需根据实际情况进行替换
+  "srcAddr": "192.168.1.1-192.168.22.66",
+  "destAddr": "10.1.1.1",
+  "srcPort": "8080",
+  "destPort": "8080",
+  "appUid": "9696",
+  "direction": networkManager.Direction.OUTPUT,
+  "action": networkManager.Action.DENY,
+  "protocol": networkManager.Protocol.UDP,
+  "family": 1,
+  "logType": networkManager.LogType.NFLOG
+};
+
+try {
+  networkManager.addFirewallRule(wantTemp, firewallRule);
+  console.info('Succeeded in adding firewall rule.');
+} catch (err) {
+  console.error(`Failed to add firewall rule. Code: ${err.code}, message: ${err.message}`);
+}
+```

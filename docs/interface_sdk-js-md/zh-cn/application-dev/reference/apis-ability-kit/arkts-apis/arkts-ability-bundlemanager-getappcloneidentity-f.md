@@ -1,5 +1,10 @@
 # getAppCloneIdentity
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppCloneIdentity
 
 ```TypeScript

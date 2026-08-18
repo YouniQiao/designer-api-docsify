@@ -1,5 +1,10 @@
 # shiftAppWindowPointerEvent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## shiftAppWindowPointerEvent
 
 ```TypeScript

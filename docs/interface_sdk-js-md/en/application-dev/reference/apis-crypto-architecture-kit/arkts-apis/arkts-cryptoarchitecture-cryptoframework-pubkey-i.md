@@ -15,7 +15,8 @@ Provides APIs for public key operations. **PubKey** is a child class of [Key](ar
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getAsyKeySpec

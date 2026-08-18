@@ -1,5 +1,10 @@
 # setTouchpadPointerSpeed（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setTouchpadPointerSpeed
 
 ```TypeScript
@@ -21,7 +26,7 @@ function setTouchpadPointerSpeed(speed: int, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | speed | int | 是 | speed代表光标移动速度。speed取值范围[1,11]，默认6。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置触控板光标移动速度成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置触控板光标移动速度成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

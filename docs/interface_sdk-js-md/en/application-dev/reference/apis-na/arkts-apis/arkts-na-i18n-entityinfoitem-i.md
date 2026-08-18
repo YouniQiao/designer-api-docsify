@@ -10,6 +10,11 @@ Defines a list of entities.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## begin
 
 ```TypeScript

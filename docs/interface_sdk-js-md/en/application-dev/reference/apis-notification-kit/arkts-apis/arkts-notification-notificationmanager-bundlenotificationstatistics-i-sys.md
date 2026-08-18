@@ -13,7 +13,8 @@ Describes the notification statistics of a specified application.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundle

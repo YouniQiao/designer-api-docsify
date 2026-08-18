@@ -11,7 +11,7 @@ Manages SSAP client. Before calling a SSAP client method, you must use [createCl
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'ssap';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## callMethod

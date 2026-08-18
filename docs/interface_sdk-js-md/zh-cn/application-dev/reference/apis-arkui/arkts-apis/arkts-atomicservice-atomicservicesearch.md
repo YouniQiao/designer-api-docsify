@@ -1,5 +1,10 @@
 # @ohos.atomicservice.AtomicServiceSearch
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 结构体

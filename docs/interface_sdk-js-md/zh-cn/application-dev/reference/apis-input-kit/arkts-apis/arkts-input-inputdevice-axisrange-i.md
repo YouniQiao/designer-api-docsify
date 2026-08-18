@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## axis
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## offGravityChange

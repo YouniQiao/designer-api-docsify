@@ -10,6 +10,11 @@ The download state is notified through this delegate.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onBeforeDownload
 
 ```TypeScript
@@ -30,7 +35,7 @@ Callback will be triggered before web download start.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download will be start. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-na-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download will be start. |
 
 ## onDownloadFailed
 
@@ -52,7 +57,7 @@ Callback will be triggered when web download is interrupted or canceled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did fail. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-na-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did fail. |
 
 ## onDownloadFinish
 
@@ -74,7 +79,7 @@ Callback will be triggered when web download is completed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did finish. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-na-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did finish. |
 
 ## onDownloadUpdated
 
@@ -96,5 +101,5 @@ Callback will be triggered when web download is processing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did update. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-na-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did update. |
 

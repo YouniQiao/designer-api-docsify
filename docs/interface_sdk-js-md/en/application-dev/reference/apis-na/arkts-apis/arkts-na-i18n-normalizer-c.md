@@ -10,6 +10,11 @@ Provides the API for text encoding normalization.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getInstance
 
 ```TypeScript
@@ -32,13 +37,13 @@ Obtains a Normalizer object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
+| mode | [NormalizerMode](arkts-na-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Normalizer](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizer-c.md) | Normalizer object for text normalization. |
+| [Normalizer](arkts-na-i18n-normalizer-c.md) | Normalizer object for text normalization. |
 
 **Error codes:**
 

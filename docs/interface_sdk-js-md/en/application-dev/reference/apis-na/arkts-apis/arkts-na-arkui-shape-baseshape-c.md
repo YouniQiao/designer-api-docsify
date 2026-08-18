@@ -2,7 +2,7 @@
 
 Base shape class
 
-**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-na-arkui-shape-commonshapemethod-c.md#commonshapemethod)
+**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#commonshapemethod)
 
 **Since:** 23
 
@@ -11,6 +11,11 @@ Base shape class
 <!--Device-unnamed-export declare class BaseShape--><!--Device-unnamed-export declare class BaseShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## height
 

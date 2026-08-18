@@ -10,6 +10,11 @@ Defines the detect encoding result information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## confidence
 
 ```TypeScript

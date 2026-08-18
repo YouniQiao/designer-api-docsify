@@ -1,5 +1,10 @@
 # sendableResourceToResource
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sendableResourceToResource
 
 ```TypeScript

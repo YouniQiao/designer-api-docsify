@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'nfcController';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## isNfcOpen

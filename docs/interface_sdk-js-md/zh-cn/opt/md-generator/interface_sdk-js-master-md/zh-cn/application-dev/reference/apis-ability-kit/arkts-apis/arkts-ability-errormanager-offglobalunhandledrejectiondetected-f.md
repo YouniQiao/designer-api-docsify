@@ -1,0 +1,63 @@
+# off_globalUnhandledRejectionDetected
+
+## 导入模块
+
+```TypeScript
+```
+
+## off_globalUnhandledRejectionDetected
+
+```TypeScript
+function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void
+```
+
+注销被拒绝promise监听器，注销后无法监听进程中的promise异常。 如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+
+**起始版本：** 18
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-errorManager-function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void--><!--Device-errorManager-function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'globalUnhandledRejectionDetected' | 是 |
+| [observer](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer.md) | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) |
+
+**示例**
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+const promiseFunc = (observer: errorManager.GlobalError) => {
+  console.info('result name :' + observer.name);
+  console.info('result message :' + observer.message);
+  console.info('result stack :' + observer.stack);
+  console.info('result instanceName :' + observer.instanceName);
+  console.info('result instanceType :' + observer.instanceType);
+};
+
+errorManager.on('globalUnhandledRejectionDetected', promiseFunc);
+
+const throwError = async () => {
+  throw new Error('uncaught error');
+};
+
+let promise1 = new Promise<void>(() => {}).then(() => {
+  throwError();
+});
+
+errorManager.off('globalUnhandledRejectionDetected', promiseFunc);
+```

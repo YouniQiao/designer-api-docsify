@@ -13,7 +13,7 @@ Defines a SIM message.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## indexOnSim

@@ -1,5 +1,10 @@
 # getAbilityDelegator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAbilityDelegator
 
 ```TypeScript

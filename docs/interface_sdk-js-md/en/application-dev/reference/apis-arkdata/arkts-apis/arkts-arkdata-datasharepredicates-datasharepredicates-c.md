@@ -13,7 +13,7 @@ Provides APIs for setting different **DataSharePredicates** objects. This type i
 ## Modules to Import
 
 ```TypeScript
-import { dataSharePredicates } from 'dataSharePredicates';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## and

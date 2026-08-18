@@ -8,6 +8,11 @@ Provides parameters for setting the initial scrolling offset.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## xOffset
 
 ```TypeScript

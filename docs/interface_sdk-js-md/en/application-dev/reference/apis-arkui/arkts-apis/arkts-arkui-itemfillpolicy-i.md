@@ -8,6 +8,11 @@ Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper co
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fillType
 
 ```TypeScript

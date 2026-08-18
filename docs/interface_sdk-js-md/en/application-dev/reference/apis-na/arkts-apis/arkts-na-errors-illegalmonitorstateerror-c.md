@@ -12,6 +12,11 @@ Represents an error that is thrown when attempting to wait, notify or notifyAll 
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

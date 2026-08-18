@@ -8,6 +8,11 @@ UserAgentMetadata是ArkWeb框架中用于配置User-Agent Client Hints（UA客�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getArchitecture
 
 ```TypeScript

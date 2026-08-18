@@ -1,5 +1,10 @@
 # lib.es2018.promise
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

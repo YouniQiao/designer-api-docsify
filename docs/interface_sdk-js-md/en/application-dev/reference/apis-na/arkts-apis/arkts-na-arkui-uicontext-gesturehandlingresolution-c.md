@@ -10,6 +10,11 @@ Class GestureHandlingResolution. Represents the developer's decision result for 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # queryNotificationEventStats（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryNotificationEventStats
 
 ```TypeScript
@@ -28,7 +33,7 @@ function queryNotificationEventStats(
 | --- | --- | --- | --- |
 | begin | long | 是 | 起始时间，单位：ms。 |
 | end | long | 是 | 结束时间，单位：ms。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为指定起始和结束时间段内，所有应用的通知次数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为指定起始和结束时间段内，所有应用的通知次数；否则为错误对象。 |
 
 **错误码：**
 

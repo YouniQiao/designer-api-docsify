@@ -1,5 +1,10 @@
 # getSandboxAppConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSandboxAppConfig
 
 ```TypeScript

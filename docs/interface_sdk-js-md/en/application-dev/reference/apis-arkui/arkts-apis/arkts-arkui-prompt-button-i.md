@@ -15,7 +15,8 @@ Defines the prompt info of button.
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'prompt';
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## color

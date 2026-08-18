@@ -8,6 +8,11 @@ Defines the properties for controlling the automatic playback behavior.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## stopWhenTouched
 
 ```TypeScript

@@ -8,6 +8,16 @@ Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
+```
+
 ## controller
 
 ```TypeScript
@@ -100,7 +110,7 @@ Token that specifies the shared render process for the current Web component. In
 src: string | Resource
 ```
 
-Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path. src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
+Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path. src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#loadurl).
 
 **Type:** string \| Resource
 

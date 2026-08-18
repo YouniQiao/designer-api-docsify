@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## current
 
 ```TypeScript
@@ -36,7 +41,7 @@ currentPhase: GestureActionPhase
 
 手势动作回调阶段。
 
-**类型：** [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
+**类型：** [GestureActionPhase](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-gestureactionphase-e.md)
 
 **起始版本：** 20
 

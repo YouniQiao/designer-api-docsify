@@ -13,7 +13,8 @@ Defines the parameter used to execute an intent call.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName

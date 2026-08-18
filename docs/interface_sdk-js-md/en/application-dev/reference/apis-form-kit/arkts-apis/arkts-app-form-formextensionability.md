@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from 'FormExtensionAbility';
+import { FormExtensionAbility } from '@kit.FormKit';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## Summary

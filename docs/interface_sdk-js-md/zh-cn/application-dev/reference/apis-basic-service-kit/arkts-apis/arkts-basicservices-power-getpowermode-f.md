@@ -1,5 +1,10 @@
 # getPowerMode
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPowerMode
 
 ```TypeScript

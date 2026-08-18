@@ -1,5 +1,10 @@
 # getTotalSizeSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTotalSizeSync
 
 ```TypeScript

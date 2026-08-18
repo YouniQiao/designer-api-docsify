@@ -22,6 +22,11 @@
  > - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
 
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

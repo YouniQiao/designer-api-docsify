@@ -1,5 +1,10 @@
 # getAppThreadCpuUsage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppThreadCpuUsage
 
 ```TypeScript

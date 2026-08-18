@@ -10,6 +10,11 @@ Provide the ability to decode binary streams into strings. The supported encodin
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

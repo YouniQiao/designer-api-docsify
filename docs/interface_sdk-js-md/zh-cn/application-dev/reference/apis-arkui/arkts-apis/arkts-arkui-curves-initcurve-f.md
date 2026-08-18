@@ -1,5 +1,10 @@
 # initCurve
 
+## 导入模块
+
+```TypeScript
+```
+
 ## initCurve
 
 ```TypeScript

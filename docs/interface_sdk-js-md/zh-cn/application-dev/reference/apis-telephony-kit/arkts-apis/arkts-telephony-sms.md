@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Telephony.SmsMms
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

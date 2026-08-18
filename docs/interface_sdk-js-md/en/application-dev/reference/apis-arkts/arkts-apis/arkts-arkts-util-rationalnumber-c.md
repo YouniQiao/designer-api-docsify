@@ -11,7 +11,42 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'util';
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { util } from '@kit.ArkTS';
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -34,7 +69,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -64,7 +99,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -84,7 +119,7 @@ A constructor used to create a **RationalNumber** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [parseRationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md#parserationalnumber)
+**Substitutes:** [parseRationalNumber](#parserationalnumber)
 
 <!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
@@ -151,7 +186,7 @@ Creates a **RationalNumber** object based on the given string. > **NOTE：**> > 
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
 
 **Examples**
 
@@ -219,7 +254,7 @@ Obtains the greatest common divisor of two specified integers.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCommonFactor](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md#getcommonfactor)
+**Substitutes:** [getCommonFactor](#getcommonfactor)
 
 <!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
@@ -502,7 +537,7 @@ Creates a **RationalNumber** instance with a given numerator and denominator. > 
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | RationalNumber** object obtained. |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | RationalNumber** object obtained. |
 
 **Examples**
 

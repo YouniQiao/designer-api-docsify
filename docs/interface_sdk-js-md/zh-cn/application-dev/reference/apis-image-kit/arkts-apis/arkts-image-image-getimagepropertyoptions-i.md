@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+```
+
 ## defaultValue
 
 ```TypeScript

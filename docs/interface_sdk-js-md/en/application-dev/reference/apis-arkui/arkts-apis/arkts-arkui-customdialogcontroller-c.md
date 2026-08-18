@@ -10,6 +10,11 @@ Defines the controller of the custom dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

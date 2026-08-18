@@ -8,6 +8,11 @@ ChipGroupV2ItemConfig定义每个ChipV2的非通用属性配置。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript

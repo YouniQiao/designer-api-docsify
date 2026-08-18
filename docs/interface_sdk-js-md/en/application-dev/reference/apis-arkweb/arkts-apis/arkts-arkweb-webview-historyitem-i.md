@@ -11,7 +11,7 @@ Describes a historical page record.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## historyRawUrl

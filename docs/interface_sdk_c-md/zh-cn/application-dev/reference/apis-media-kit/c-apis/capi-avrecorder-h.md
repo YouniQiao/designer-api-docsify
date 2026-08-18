@@ -78,7 +78,7 @@ OH_AVErrCode OH_AVRecorder_Prepare(OH_AVRecorder *recorder, OH_AVRecorder_Config
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或者准备失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或者准备失败。 |
 
 ### OH_AVRecorder_GetAVRecorderConfig()
 
@@ -103,7 +103,7 @@ OH_AVErrCode OH_AVRecorder_GetAVRecorderConfig(OH_AVRecorder *recorder, OH_AVRec
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或\config不为nullptr。<br> AV_ERR_NO_MEMORY：内存不足，\config内存分配失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或\config不为nullptr。<br> AV_ERR_NO_MEMORY：内存不足，\config内存分配失败。 |
 
 ### OH_AVRecorder_GetInputSurface()
 
@@ -128,7 +128,7 @@ OH_AVErrCode OH_AVRecorder_GetInputSurface(OH_AVRecorder *recorder, OHNativeWind
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr，或window不为空。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr，或window不为空。 |
 
 ### OH_AVRecorder_UpdateRotation()
 
@@ -153,7 +153,7 @@ OH_AVErrCode OH_AVRecorder_UpdateRotation(OH_AVRecorder *recorder, int32_t rotat
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或输入的rotation不符合要求或更新方向失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或输入的rotation不符合要求或更新方向失败。 |
 
 ### OH_AVRecorder_Start()
 
@@ -177,7 +177,7 @@ OH_AVErrCode OH_AVRecorder_Start(OH_AVRecorder *recorder)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或启动失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或启动失败。 |
 
 ### OH_AVRecorder_Pause()
 
@@ -201,7 +201,7 @@ OH_AVErrCode OH_AVRecorder_Pause(OH_AVRecorder *recorder)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或暂停失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或暂停失败。 |
 
 ### OH_AVRecorder_Resume()
 
@@ -225,7 +225,7 @@ OH_AVErrCode OH_AVRecorder_Resume(OH_AVRecorder *recorder)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或恢复失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或恢复失败。 |
 
 ### OH_AVRecorder_Stop()
 
@@ -249,7 +249,7 @@ OH_AVErrCode OH_AVRecorder_Stop(OH_AVRecorder *recorder)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或停止失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或停止失败。 |
 
 ### OH_AVRecorder_Reset()
 
@@ -273,7 +273,7 @@ OH_AVErrCode OH_AVRecorder_Reset(OH_AVRecorder *recorder)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或重置失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或重置失败。 |
 
 ### OH_AVRecorder_Release()
 
@@ -297,7 +297,7 @@ OH_AVErrCode OH_AVRecorder_Release(OH_AVRecorder *recorder)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或释放失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或释放失败。 |
 
 ### OH_AVRecorder_GetAvailableEncoder()
 
@@ -323,7 +323,7 @@ OH_AVErrCode OH_AVRecorder_GetAvailableEncoder(OH_AVRecorder *recorder, OH_AVRec
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的 recorder 为nullptr。<br> AV_ERR_NO_MEMORY：内存不足，\info内存分配失败。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的 recorder 为nullptr。<br> AV_ERR_NO_MEMORY：内存不足，\info内存分配失败。 |
 
 ### OH_AVRecorder_SetStateCallback()
 
@@ -349,7 +349,7 @@ OH_AVErrCode OH_AVRecorder_SetStateCallback(OH_AVRecorder *recorder, OH_AVRecord
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。 |
 
 ### OH_AVRecorder_SetErrorCallback()
 
@@ -375,7 +375,7 @@ OH_AVErrCode OH_AVRecorder_SetErrorCallback(OH_AVRecorder *recorder, OH_AVRecord
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。 |
 
 ### OH_AVRecorder_SetUriCallback()
 
@@ -401,7 +401,7 @@ OH_AVErrCode OH_AVRecorder_SetUriCallback(OH_AVRecorder *recorder, OH_AVRecorder
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。 |
 
 ### OH_AVRecorder_SetWillMuteWhenInterrupted()
 
@@ -426,7 +426,7 @@ OH_AVErrCode OH_AVRecorder_SetWillMuteWhenInterrupted(OH_AVRecorder *recorder, b
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。<br> AV_ERR_INVALID_STATE：函数在无效状态下调用，应先处于准备状态。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的recorder为nullptr或回调函数为nullptr。<br> AV_ERR_INVALID_STATE：函数在无效状态下调用，应先处于准备状态。 |
 
 ### OH_AVRecorder_GetAudioCapturerMaxAmplitude()
 
@@ -451,7 +451,7 @@ OH_AVErrCode OH_AVRecorder_GetAudioCapturerMaxAmplitude(OH_AVRecorder *recorder,
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的参数recorder或amplitude为nullptr。<br> AV_ERR_INVALID_STATE：不支持在当前状态下调用，应当在OH_AVRecorder_Prepare之后和OH_AVRecorder_Stop之前调用此接口。<br> AV_ERR_NO_MEMORY：内存不足。<br> AV_ERR_UNKNOWN：未知错误。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的参数recorder或amplitude为nullptr。<br> AV_ERR_INVALID_STATE：不支持在当前状态下调用，应当在OH_AVRecorder_Prepare之后和OH_AVRecorder_Stop之前调用此接口。<br> AV_ERR_NO_MEMORY：内存不足。<br> AV_ERR_UNKNOWN：未知错误。 |
 
 ### OH_AVRecorder_SetMetadata()
 
@@ -470,12 +470,12 @@ OH_AVErrCode OH_AVRecorder_SetMetadata(OH_AVRecorder *recorder, const OH_AVForma
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVRecorder](capi-avrecorder-oh-avrecorder.md) *recorder | 指向OH_AVRecorder实例的指针。 |
-| const OH_AVFormat *metadata | 设置的元数据信息。格式为字符串键值对，其中，键需要以"com.openharmony."开头，且值的长度不能超过256个字节。 |
+| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md) *metadata | 设置的元数据信息。格式为字符串键值对，其中，键需要以"com.openharmony."开头，且值的长度不能超过256个字节。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的参数recorder或metadata为nullptr，或者metadata中的值长度超过256字节。<br> AV_ERR_INVALID_STATE：不支持在当前状态下调用，应当在OH_AVRecorder_Prepare之后和OH_AVRecorder_Stop之前调用此接口。<br> AV_ERR_NO_MEMORY：内存不足。<br> AV_ERR_UNKNOWN：未知错误。 |
+| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入的参数recorder或metadata为nullptr，或者metadata中的值长度超过256字节。<br> AV_ERR_INVALID_STATE：不支持在当前状态下调用，应当在OH_AVRecorder_Prepare之后和OH_AVRecorder_Stop之前调用此接口。<br> AV_ERR_NO_MEMORY：内存不足。<br> AV_ERR_UNKNOWN：未知错误。 |
 
 

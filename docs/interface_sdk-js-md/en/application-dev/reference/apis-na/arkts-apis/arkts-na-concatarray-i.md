@@ -12,6 +12,11 @@ this is a concatArray interface
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## at
 
 ```TypeScript

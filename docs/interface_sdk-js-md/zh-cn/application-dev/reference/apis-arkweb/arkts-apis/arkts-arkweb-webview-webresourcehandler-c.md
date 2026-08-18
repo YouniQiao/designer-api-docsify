@@ -8,6 +8,11 @@ WebResourceHandler是自定义scheme拦截场景中用于向Web组件返回拦�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## didFail
 
 ```TypeScript

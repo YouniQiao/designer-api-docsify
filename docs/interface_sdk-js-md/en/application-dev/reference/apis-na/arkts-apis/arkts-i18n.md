@@ -10,6 +10,11 @@ Provides international settings related APIs.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

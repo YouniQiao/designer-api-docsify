@@ -10,6 +10,11 @@ The message for indicating the of result of JavaScript code execution.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getArray
 
 ```TypeScript

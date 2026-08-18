@@ -13,7 +13,7 @@ Defines the description options, which specifies the format and language of the 
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## format

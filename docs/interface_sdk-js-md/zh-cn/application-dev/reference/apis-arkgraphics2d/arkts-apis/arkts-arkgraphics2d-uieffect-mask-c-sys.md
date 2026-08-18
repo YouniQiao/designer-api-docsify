@@ -10,6 +10,11 @@ Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的M
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPixelMapMask
 
 ```TypeScript

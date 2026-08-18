@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offReadMicInData
 
 ```TypeScript
@@ -30,7 +35,7 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 否 | 用于读取缓冲的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 否 | 用于读取缓冲的回调。 |
 
 **错误码：**
 
@@ -62,7 +67,7 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 是 | 读取缓冲的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerMicInData](arkts-audio-audio-audiocapturermicindata-i-sys.md)&gt; | 是 | 读取缓冲的回调。 |
 
 **错误码：**
 

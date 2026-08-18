@@ -8,6 +8,11 @@ WebHttpBodyStream是HTTP请求体数据流对象，用于在自定义scheme拦�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPosition
 
 ```TypeScript

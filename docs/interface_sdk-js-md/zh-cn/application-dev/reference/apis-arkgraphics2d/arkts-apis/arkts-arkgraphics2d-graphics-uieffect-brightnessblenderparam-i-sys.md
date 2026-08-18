@@ -10,6 +10,11 @@ BrightnessBlender的参数列表，用于配置提亮效果的各项属性，包
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cubicRate
 
 ```TypeScript

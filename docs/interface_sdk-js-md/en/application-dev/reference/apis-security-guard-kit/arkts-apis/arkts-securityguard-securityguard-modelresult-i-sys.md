@@ -13,7 +13,7 @@ Provides the ModelResult type.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'securityGuard';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## result

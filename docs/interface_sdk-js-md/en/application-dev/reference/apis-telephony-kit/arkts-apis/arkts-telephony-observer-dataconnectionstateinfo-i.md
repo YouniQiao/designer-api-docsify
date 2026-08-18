@@ -11,7 +11,7 @@ Defines information about the data connection status.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'observer';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## network

@@ -1,5 +1,10 @@
 # setTimeout
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setTimeout
 
 ```TypeScript

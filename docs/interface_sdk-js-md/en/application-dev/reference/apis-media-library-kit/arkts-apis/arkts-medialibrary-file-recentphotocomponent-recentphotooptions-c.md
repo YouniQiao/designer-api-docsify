@@ -11,13 +11,7 @@ Represents the configuration of the recent image or video.
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent } from 'RecentPhotoComponent';
-import { RecentPhotoCheckResultCallback } from 'RecentPhotoCheckResultCallback';
-import { RecentPhotoInfo } from 'RecentPhotoInfo';
-import { RecentPhotoCheckInfoCallback } from 'RecentPhotoCheckInfoCallback';
-import { RecentPhotoClickCallback } from 'RecentPhotoClickCallback';
-import { RecentPhotoOptions } from 'RecentPhotoOptions';
-import { PhotoSource } from 'PhotoSource';
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoInfo, RecentPhotoCheckInfoCallback, RecentPhotoClickCallback, RecentPhotoOptions, PhotoSource } from '@kit.MediaLibraryKit';
 ```
 
 ## MIMEType
@@ -100,7 +94,7 @@ photoSource?: PhotoSource
 
 Source of the recent image or video, for example, image or video taken by the camera or screenshot. By default, the source is not restricted.
 
-**Type:** [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
+**Type:** [PhotoSource](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-photosource-e.md)
 
 **Since:** 12
 

@@ -1,5 +1,10 @@
 # lchownSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lchownSync
 
 ```TypeScript

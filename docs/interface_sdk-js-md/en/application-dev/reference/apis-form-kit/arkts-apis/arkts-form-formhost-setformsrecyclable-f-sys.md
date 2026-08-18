@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from 'formHost';
+import { formHost } from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## setFormsRecyclable

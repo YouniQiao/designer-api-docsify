@@ -1,5 +1,10 @@
 # accessSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessSync
 
 ```TypeScript

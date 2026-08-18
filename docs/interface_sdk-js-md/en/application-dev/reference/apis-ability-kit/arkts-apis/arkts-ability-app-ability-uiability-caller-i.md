@@ -11,11 +11,8 @@ A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilityconte
 ## Modules to Import
 
 ```TypeScript
-import { Callee } from 'Callee';
-import { CalleeCallback } from 'CalleeCallback';
-import { Caller } from 'Caller';
-import { OnReleaseCallback } from 'OnReleaseCallback';
-import { OnRemoteStateChangeCallback } from 'OnRemoteStateChangeCallback';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## call

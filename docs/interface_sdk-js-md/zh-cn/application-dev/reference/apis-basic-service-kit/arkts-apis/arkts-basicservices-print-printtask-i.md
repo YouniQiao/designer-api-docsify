@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offBlock
 
 ```TypeScript
@@ -28,7 +33,7 @@ Unregister event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -77,7 +82,7 @@ Unregister event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -126,7 +131,7 @@ Unregister event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -175,7 +180,7 @@ Unregister event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | The callback function for print task change event |
 
 **错误码：**
 
@@ -225,7 +230,7 @@ off(type: 'block', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'block' | 是 | 取消监听，<br/>监听字段：block，<br/>表示打印任务阻塞。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务阻塞事件订阅。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务阻塞事件订阅。 |
 
 **错误码：**
 
@@ -290,7 +295,7 @@ off(type: 'cancel', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cancel' | 是 | 取消监听，<br/>监听字段：cancel，<br/>表示打印任务被取消。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务被取消事件订阅。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务被取消事件订阅。 |
 
 **错误码：**
 
@@ -355,7 +360,7 @@ off(type: 'fail', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'fail' | 是 | 取消监听，<br/>监听字段：fail，<br/>表示打印任务失败。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务失败事件订阅。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务失败事件订阅。 |
 
 **错误码：**
 
@@ -420,7 +425,7 @@ off(type: 'succeed', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'succeed' | 是 | 取消监听，<br/>监听字段：succeed，<br/>表示打印任务成功。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务成功事件订阅。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定的打印任务成功事件订阅。 |
 
 **错误码：**
 
@@ -484,7 +489,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
 
 **错误码：**
 
@@ -533,7 +538,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
 
 **错误码：**
 
@@ -582,7 +587,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
 
 **错误码：**
 
@@ -631,7 +636,7 @@ Register event callback when the current print task is in process.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | The callback function for print task change event |
 
 **错误码：**
 
@@ -681,7 +686,7 @@ on(type: 'block', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'block' | 是 | 注册监听，<br/>监听字段：block，<br/>表示打印任务阻塞。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务阻塞。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务阻塞。 |
 
 **错误码：**
 
@@ -746,7 +751,7 @@ on(type: 'cancel', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cancel' | 是 | 注册监听，<br/>监听字段：cancel，<br/>表示打印任务被取消。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务被取消。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务被取消。 |
 
 **错误码：**
 
@@ -811,7 +816,7 @@ on(type: 'fail', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'fail' | 是 | 注册监听，<br/>监听字段：fail，<br/>表示打印任务失败。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务失败。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务失败。 |
 
 **错误码：**
 
@@ -876,7 +881,7 @@ on(type: 'succeed', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'succeed' | 是 | 注册监听，<br/>监听字段：succeed，<br/>表示打印任务成功。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务成功。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，通知调用方打印任务成功。 |
 
 **错误码：**
 

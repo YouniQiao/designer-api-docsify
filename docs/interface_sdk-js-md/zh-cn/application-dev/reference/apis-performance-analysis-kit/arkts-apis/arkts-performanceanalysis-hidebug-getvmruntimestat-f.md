@@ -1,5 +1,10 @@
 # getVMRuntimeStat
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getVMRuntimeStat
 
 ```TypeScript

@@ -11,7 +11,7 @@ Represents the configuration for saving a media asset (image or video) to the me
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension

@@ -1,5 +1,10 @@
 # onceProximityChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onceProximityChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Subscribe to proximity sensor data once, {@code SensorId.PROXIMITY}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ProximityResponse&gt; | 是 | callback proximity data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | 是 | callback proximity data. |
 
 **错误码：**
 

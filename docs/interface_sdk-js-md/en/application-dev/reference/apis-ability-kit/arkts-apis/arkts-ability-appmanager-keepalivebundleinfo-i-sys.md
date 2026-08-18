@@ -13,7 +13,8 @@ Describes the keep-alive application information, which can be obtained by calli
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'appManager';
+import { appManager } from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## allowUserToCancel

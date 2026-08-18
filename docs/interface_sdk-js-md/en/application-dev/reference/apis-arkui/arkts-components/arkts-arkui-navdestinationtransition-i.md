@@ -8,6 +8,11 @@ Defines a custom transition animation for the **NavDestination** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## curve
 
 ```TypeScript

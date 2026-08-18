@@ -12,6 +12,13 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## constructor
 
 ```TypeScript

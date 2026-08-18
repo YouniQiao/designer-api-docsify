@@ -11,8 +11,8 @@ Defines a content form card.
 ## Modules to Import
 
 ```TypeScript
-import { ContentFormCard } from 'ContentFormCard';
-import { FormType } from 'FormType';
+import { ContentFormCard, FormType } from '@kit.ArkData';
+import { ContentFormCard, FormType } from '@kit.ArkData';
 ```
 
 ## contentFormData
@@ -61,7 +61,7 @@ Height of the content form card. The unit of measurement is vp.
 
 Type of the form card.
 
-**Type:** [FormType](../../apis-na/arkts-apis/arkts-na-data-udmfcomponents-formtype-e.md)
+**Type:** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **Since:** 20
 

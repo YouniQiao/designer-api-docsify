@@ -1,5 +1,10 @@
 # batteryTemperature
 
+## 导入模块
+
+```TypeScript
+```
+
 ## batteryTemperature
 
 ```TypeScript

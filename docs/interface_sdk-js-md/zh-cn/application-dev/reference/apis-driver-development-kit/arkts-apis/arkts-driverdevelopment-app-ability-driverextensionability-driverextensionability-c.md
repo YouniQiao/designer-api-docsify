@@ -8,6 +8,11 @@ DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建�
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onConnect
 
 ```TypeScript

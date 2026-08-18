@@ -8,6 +8,11 @@ ImageData对象可以存储canvas渲染的像素数据。 > **说明：** > > �
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

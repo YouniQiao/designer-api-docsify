@@ -1,5 +1,10 @@
 # upperBoundSearch
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## upperBoundSearch
 
 ```TypeScript

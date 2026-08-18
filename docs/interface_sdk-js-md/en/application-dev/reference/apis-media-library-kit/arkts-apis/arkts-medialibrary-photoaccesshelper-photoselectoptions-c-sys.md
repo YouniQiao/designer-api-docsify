@@ -13,7 +13,7 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## themeColor
@@ -24,7 +24,7 @@ themeColor?: CustomColors
 
 Theme color
 
-**Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
+**Type:** [CustomColors](../../apis-na/arkts-apis/arkts-na-customcolors-t.md)
 
 **Since:** 26.0.0
 

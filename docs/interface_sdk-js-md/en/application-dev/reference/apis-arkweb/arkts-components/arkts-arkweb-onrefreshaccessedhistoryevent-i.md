@@ -8,6 +8,16 @@ Defines the callback information triggered when navigation is complete, includin
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
+```
+
 ## isMainFrame
 
 ```TypeScript
@@ -30,7 +40,7 @@ Whether the event is triggered by the main frame. The value **true** indicates t
 isRefreshed: boolean
 ```
 
-Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the [refresh&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) API, and **false** means the opposite.
+Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the [refresh&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#refresh) API, and **false** means the opposite.
 
 **Type:** boolean
 

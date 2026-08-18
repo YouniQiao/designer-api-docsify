@@ -15,7 +15,8 @@ LightPaintingPhotoSession extends Session, Flash, Focus, Zoom, ColorEffect Imple
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getLightPaintingType

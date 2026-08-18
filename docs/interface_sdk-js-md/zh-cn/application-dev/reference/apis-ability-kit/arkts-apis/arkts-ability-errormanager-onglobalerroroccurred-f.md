@@ -1,5 +1,10 @@
 # on_globalErrorOccurred
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_globalErrorOccurred
 
 ```TypeScript

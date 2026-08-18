@@ -12,6 +12,11 @@ Represents optional configuration items for the SymbolNumberFormat object. Defin
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## groupingSeparator
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # mkdtempSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## mkdtempSync
 
 ```TypeScript

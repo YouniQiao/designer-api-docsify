@@ -11,11 +11,8 @@ The **SubHeader** component is positioned at the top of list items or content se
 ## Modules to Import
 
 ```TypeScript
-import { OperationOption } from 'OperationOption';
-import { OperationType } from 'OperationType';
-import { SelectOptions } from 'SelectOptions';
-import { SubHeader } from 'SubHeader';
-import { SymbolOptions } from 'SymbolOptions';
+import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
+import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
 ## contentMargin

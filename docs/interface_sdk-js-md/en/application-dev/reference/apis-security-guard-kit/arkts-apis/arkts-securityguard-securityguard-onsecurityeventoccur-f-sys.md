@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'securityGuard';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## on_securityEventOccur

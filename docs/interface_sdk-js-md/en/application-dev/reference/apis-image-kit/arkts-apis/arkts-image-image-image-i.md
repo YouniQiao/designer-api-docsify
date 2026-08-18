@@ -11,7 +11,8 @@ The **Image** class is used to obtain image content. An Image instance is return
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getBufferData

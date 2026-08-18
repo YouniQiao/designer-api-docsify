@@ -1,5 +1,10 @@
 # customCurve
 
+## 导入模块
+
+```TypeScript
+```
+
 ## customCurve
 
 ```TypeScript

@@ -10,6 +10,11 @@ Defines the Animator result interface.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cancel
 
 ```TypeScript

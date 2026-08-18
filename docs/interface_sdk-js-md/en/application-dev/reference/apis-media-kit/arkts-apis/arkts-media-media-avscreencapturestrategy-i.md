@@ -11,7 +11,7 @@ Provides the media AVScreenCaptureStrategy definition.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableBFrame

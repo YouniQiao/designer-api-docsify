@@ -1,5 +1,10 @@
 # getDistributedAccountAbility
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDistributedAccountAbility
 
 ```TypeScript

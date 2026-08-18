@@ -11,11 +11,7 @@ Implements the controller of the **ArcSwiper** component. You can bind this obje
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiper } from 'ArcSwiper';
-import { ArcSwiperAttribute } from 'ArcSwiperAttribute';
-import { ArcDotIndicator } from 'ArcDotIndicator';
-import { ArcDirection } from 'ArcDirection';
-import { ArcSwiperController } from 'ArcSwiperController';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -54,7 +50,7 @@ Stops an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](../../apis-na/arkts-apis/arkts-na-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
+| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
 
 ## showNext
 

@@ -13,7 +13,7 @@ Configuration parameters for the distance measurement interface
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from 'spatialAwareness';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceList

@@ -10,6 +10,11 @@ Provides an atomic reference wrapper for safe concurrent access to a reference v
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## compareAndSwap
 
 ```TypeScript

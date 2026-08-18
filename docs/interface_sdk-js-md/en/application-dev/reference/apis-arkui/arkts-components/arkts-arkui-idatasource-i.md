@@ -8,6 +8,11 @@ Data source of **LazyForEach**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getData
 
 ```TypeScript

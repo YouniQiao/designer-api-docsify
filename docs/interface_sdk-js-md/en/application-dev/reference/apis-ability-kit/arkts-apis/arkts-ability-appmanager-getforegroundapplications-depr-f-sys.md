@@ -1,5 +1,10 @@
 # getForegroundApplications (System API)
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getForegroundApplications
 
 ```TypeScript

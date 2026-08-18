@@ -12,6 +12,13 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## getCount
 
 ```TypeScript

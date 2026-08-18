@@ -1,5 +1,10 @@
 # clearMemoryCache
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clearMemoryCache
 
 ```TypeScript

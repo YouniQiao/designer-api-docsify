@@ -1,5 +1,10 @@
 # getSensorListSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSensorListSync
 
 ```TypeScript

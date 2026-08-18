@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clear
 
 ```TypeScript

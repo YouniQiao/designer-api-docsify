@@ -17,7 +17,7 @@ Provides information about geographic locations
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'geolocation';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## accuracy

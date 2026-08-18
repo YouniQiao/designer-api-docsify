@@ -1,5 +1,10 @@
 # getDisallowedBluetoothProtocols
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDisallowedBluetoothProtocols
 
 ```TypeScript

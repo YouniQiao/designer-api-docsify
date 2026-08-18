@@ -1,5 +1,10 @@
 # setHyperSnapEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setHyperSnapEnabled
 
 ```TypeScript

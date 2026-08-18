@@ -8,6 +8,11 @@ Defines the coordinates of the touch point. If it is not set, the touch point is
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## x
 
 ```TypeScript

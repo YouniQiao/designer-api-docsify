@@ -8,6 +8,11 @@ Preview image processing mode and badge count during dragging.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## mode
 
 ```TypeScript

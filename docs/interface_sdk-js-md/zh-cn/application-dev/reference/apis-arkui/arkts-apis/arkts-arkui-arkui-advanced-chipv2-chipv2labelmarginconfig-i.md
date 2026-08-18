@@ -8,6 +8,11 @@ ChipV2LabelMarginConfig定义文本与左右侧图标之间间距配置。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## left
 
 ```TypeScript

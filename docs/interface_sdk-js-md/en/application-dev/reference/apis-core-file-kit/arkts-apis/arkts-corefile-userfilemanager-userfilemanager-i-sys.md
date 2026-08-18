@@ -17,7 +17,7 @@ Defines the UserFileManager class and provides functions to access the data in u
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## createAlbum

@@ -1,5 +1,10 @@
 # isTraceEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isTraceEnabled
 
 ```TypeScript

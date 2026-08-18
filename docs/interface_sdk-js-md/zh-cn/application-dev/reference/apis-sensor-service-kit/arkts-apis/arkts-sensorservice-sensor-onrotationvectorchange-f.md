@@ -1,5 +1,10 @@
 # onRotationVectorChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onRotationVectorChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Subscribe to rotation vector sensor data, {@code SensorId.ROTATION_VECTOR}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | 是 | callback rotation vector data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | 是 | callback rotation vector data. |
 | options | Options | 否 | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **错误码：**

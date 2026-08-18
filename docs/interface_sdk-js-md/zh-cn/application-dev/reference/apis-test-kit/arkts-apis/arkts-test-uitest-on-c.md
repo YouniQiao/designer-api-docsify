@@ -8,6 +8,11 @@ UiTest框架从API version 9开始，通过On类提供了丰富的控件特征�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## afterComponent
 
 ```TypeScript

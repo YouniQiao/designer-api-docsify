@@ -1,0 +1,52 @@
+# NotifyDialogResultParams (System API)
+
+Describes the result of bluetooth dialog.
+
+**Since:** 23
+
+<!--Device-access-interface NotifyDialogResultParams--><!--Device-access-interface NotifyDialogResultParams-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+```
+
+## dialogResult
+
+```TypeScript
+dialogResult: boolean
+```
+
+The result of bluetooth dialog. The value true indicates that the user approves the request, and the value false indicates that the user rejects the request.
+
+**Type:** boolean
+
+**Since:** 23
+
+<!--Device-NotifyDialogResultParams-dialogResult: boolean--><!--Device-NotifyDialogResultParams-dialogResult: boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+## dialogType
+
+```TypeScript
+dialogType: DialogType
+```
+
+The type of bluetooth dialog.
+
+**Type:** DialogType
+
+**Since:** 23
+
+<!--Device-NotifyDialogResultParams-dialogType: DialogType--><!--Device-NotifyDialogResultParams-dialogType: DialogType-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.

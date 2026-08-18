@@ -13,14 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DownloadRequestOptions } from 'DownloadRequestOptions';
-import { DownloadResponse } from 'DownloadResponse';
-import { OnDownloadCompleteOptions } from 'OnDownloadCompleteOptions';
-import { OnDownloadCompleteResponse } from 'OnDownloadCompleteResponse';
-import { RequestData } from 'RequestData';
-import { RequestFile } from 'RequestFile';
-import { UploadRequestOptions } from 'UploadRequestOptions';
-import { UploadResponse } from 'UploadResponse';
+import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
 ```
 
 ## download

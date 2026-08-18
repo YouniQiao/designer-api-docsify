@@ -8,6 +8,11 @@ BackForwardCacheSupportedFeatures是ArkWeb框架中用于选择性控制允许�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

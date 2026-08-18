@@ -10,6 +10,11 @@ AlbumPickerComponent: can select a certain album and display the images in that 
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -37,7 +42,7 @@ albumPickerController?: AlbumPickerController
 
 AlbumPickerController
 
-**Type:** [AlbumPickerController](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
+**Type:** [AlbumPickerController](arkts-na-file-albumpickercomponent-albumpickercontroller-c.md)
 
 **Since:** 26.1.0
 
@@ -57,7 +62,7 @@ albumPickerOptions?: AlbumPickerOptions
 
 AlbumPickerOptions
 
-**Type:** [AlbumPickerOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
+**Type:** [AlbumPickerOptions](arkts-na-file-albumpickercomponent-albumpickeroptions-c.md)
 
 **Since:** 26.0.0
 
@@ -97,7 +102,7 @@ onEmptyAreaClick?: EmptyAreaClickCallback
 
 Callback when click the empty area of the album component
 
-**Type:** [EmptyAreaClickCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-emptyareaclickcallback-t.md)
+**Type:** [EmptyAreaClickCallback](arkts-na-emptyareaclickcallback-t.md)
 
 **Since:** 26.0.0
 

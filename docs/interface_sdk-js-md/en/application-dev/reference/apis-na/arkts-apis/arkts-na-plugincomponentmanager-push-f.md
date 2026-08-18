@@ -1,5 +1,10 @@
 # push
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## push
 
 ```TypeScript
@@ -22,6 +27,6 @@ Plugin component push method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [PushParameters](arkts-na-plugincomponentmanager-pushparameters-i.md) | Yes |  |
+| param | [PushParameters](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Yes |  |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
 

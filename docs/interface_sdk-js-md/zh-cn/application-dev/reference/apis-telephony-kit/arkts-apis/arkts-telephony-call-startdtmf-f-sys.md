@@ -1,5 +1,10 @@
 # startDTMF（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startDTMF
 
 ```TypeScript
@@ -24,7 +29,7 @@ function startDTMF(callId: int, character: string, callback: AsyncCallback<void>
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。 |
 | character | string | 是 | DTMF码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回启动双音多频的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回启动双音多频的结果。 |
 
 **错误码：**
 

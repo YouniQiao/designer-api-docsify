@@ -1,5 +1,10 @@
 # onUserAgeGroupDetected
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onUserAgeGroupDetected
 
 ```TypeScript
@@ -20,7 +25,7 @@ function onUserAgeGroupDetected(callback: Callback<UserClassification>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)&gt; | 是 | 回调函数，返回检测结果。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)&gt; | 是 | 回调函数，返回检测结果。 |
 
 **错误码：**
 

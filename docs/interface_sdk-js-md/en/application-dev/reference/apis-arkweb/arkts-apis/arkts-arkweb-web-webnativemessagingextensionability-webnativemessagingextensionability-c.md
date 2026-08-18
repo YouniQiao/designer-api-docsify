@@ -13,7 +13,7 @@ Provides the web native messaging capability and is inherited from ExtensionAbil
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from 'ConnectionInfo';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## onConnectNative

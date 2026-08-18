@@ -10,6 +10,11 @@ Defines the TextPickerDialogOptions for Text Picker Dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## acceptButtonStyle
 
 ```TypeScript

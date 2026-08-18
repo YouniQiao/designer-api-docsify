@@ -1,5 +1,11 @@
 # registerVsyncCallback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
+
 ## registerVsyncCallback
 
 ```TypeScript

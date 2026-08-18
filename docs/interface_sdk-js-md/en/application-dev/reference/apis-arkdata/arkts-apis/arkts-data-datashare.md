@@ -15,7 +15,8 @@ The **DataShare** module allows an application to manage its own data and share 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'dataShare';
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## Summary

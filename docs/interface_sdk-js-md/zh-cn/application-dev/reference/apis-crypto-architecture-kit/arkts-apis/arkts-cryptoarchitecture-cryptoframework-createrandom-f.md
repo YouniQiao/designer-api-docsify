@@ -1,5 +1,10 @@
 # createRandom
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createRandom
 
 ```TypeScript

@@ -10,6 +10,11 @@ File类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedre
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## details
 
 ```TypeScript

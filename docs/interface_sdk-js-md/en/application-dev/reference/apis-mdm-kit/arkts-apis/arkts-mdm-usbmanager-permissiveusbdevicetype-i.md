@@ -11,7 +11,7 @@ USB device type information. Partial field matching is supported. - Compared wit
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'usbManager';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## baseClass

@@ -11,11 +11,7 @@ AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (
 ## Modules to Import
 
 ```TypeScript
-import { AlbumPickerComponent } from 'AlbumPickerComponent';
-import { AlbumPickerOptions } from 'AlbumPickerOptions';
-import { AlbumInfo } from 'AlbumInfo';
-import { EmptyAreaClickCallback } from 'EmptyAreaClickCallback';
-import { AlbumPickerController } from 'AlbumPickerController';
+import { AlbumPickerComponent, AlbumPickerOptions, AlbumInfo, EmptyAreaClickCallback, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
 
 ## albumPickerController
@@ -26,7 +22,7 @@ albumPickerController?: AlbumPickerController
 
 AlbumPickerController
 
-**Type:** [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
+**Type:** [AlbumPickerController](../../apis-na/arkts-apis/arkts-na-file-albumpickercomponent-albumpickercontroller-c.md)
 
 **Since:** 20
 
@@ -44,7 +40,7 @@ albumPickerOptions?: AlbumPickerOptions
 
 AlbumPickerOptions
 
-**Type:** [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
+**Type:** [AlbumPickerOptions](../../apis-na/arkts-apis/arkts-na-file-albumpickercomponent-albumpickeroptions-c.md)
 
 **Since:** 12
 
@@ -80,7 +76,7 @@ onEmptyAreaClick?: EmptyAreaClickCallback
 
 Callback when click the empty area of the album component
 
-**Type:** [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md)
+**Type:** [EmptyAreaClickCallback](../../apis-na/arkts-apis/arkts-na-emptyareaclickcallback-t.md)
 
 **Since:** 13
 

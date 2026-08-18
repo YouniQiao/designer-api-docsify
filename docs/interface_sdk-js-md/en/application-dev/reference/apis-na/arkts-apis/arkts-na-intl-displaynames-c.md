@@ -10,6 +10,11 @@ DisplayNames class for locale-sensitive name display.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

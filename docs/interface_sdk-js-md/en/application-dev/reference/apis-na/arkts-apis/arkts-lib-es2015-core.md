@@ -1,5 +1,10 @@
 # lib.es2015.core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

@@ -1,5 +1,10 @@
 # getRawDescriptor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getRawDescriptor
 
 ```TypeScript

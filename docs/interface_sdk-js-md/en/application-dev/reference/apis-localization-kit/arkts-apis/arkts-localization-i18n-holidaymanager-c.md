@@ -11,7 +11,8 @@ Provides holiday data parsing capabilities, such as determining holidays and obt
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -84,7 +85,7 @@ Obtains the holiday information list of the specified year.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
+| Array&lt;[HolidayInfoItem](../../apis-na/arkts-apis/arkts-na-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
 
 **Error codes:**
 

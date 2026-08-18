@@ -11,16 +11,7 @@ Provides the configuration options for animation playback, including the playbac
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor } from 'DrawableDescriptor';
-import { LayeredDrawableDescriptor } from 'LayeredDrawableDescriptor';
-import { PixelMapDrawableDescriptor } from 'PixelMapDrawableDescriptor';
-import { AnimationOptions } from 'AnimationOptions';
-import { AnimatedDrawableDescriptor } from 'AnimatedDrawableDescriptor';
-import { AnimationController } from 'AnimationController';
-import { DrawableDescriptorLoadedResult } from 'DrawableDescriptorLoadedResult';
-import { AnimationStopMode } from 'AnimationStopMode';
-import { PictureDrawableDescriptor } from 'PictureDrawableDescriptor';
-import { HdrCompositionConfig } from 'HdrCompositionConfig';
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## autoPlay

@@ -1,0 +1,89 @@
+# LocationError
+
+Enum for location error code.
+
+**Since:** 23
+
+<!--Device-geoLocationManager-export enum LocationError--><!--Device-geoLocationManager-export enum LocationError-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## LOCATING_FAILED_DEFAULT
+
+```TypeScript
+LOCATING_FAILED_DEFAULT = -1
+```
+
+Default cause for location failure.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LocationError-LOCATING_FAILED_DEFAULT = -1--><!--Device-LocationError-LOCATING_FAILED_DEFAULT = -1-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## LOCATING_FAILED_LOCATION_PERMISSION_DENIED
+
+```TypeScript
+LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2
+```
+
+Locating failed because the location permission fails to be verified.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LocationError-LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2--><!--Device-LocationError-LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED
+
+```TypeScript
+LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3
+```
+
+Locating failed because the app is in the background and the background location permission verification failed.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LocationError-LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3--><!--Device-LocationError-LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## LOCATING_FAILED_LOCATION_SWITCH_OFF
+
+```TypeScript
+LOCATING_FAILED_LOCATION_SWITCH_OFF = -4
+```
+
+Locating failed because the location switch is turned off.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LocationError-LOCATING_FAILED_LOCATION_SWITCH_OFF = -4--><!--Device-LocationError-LOCATING_FAILED_LOCATION_SWITCH_OFF = -4-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## LOCATING_FAILED_INTERNET_ACCESS_FAILURE
+
+```TypeScript
+LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5
+```
+
+Locating failed because internet access failure.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-LocationError-LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5--><!--Device-LocationError-LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5-End-->
+
+**System capability:** SystemCapability.Location.Location.Core

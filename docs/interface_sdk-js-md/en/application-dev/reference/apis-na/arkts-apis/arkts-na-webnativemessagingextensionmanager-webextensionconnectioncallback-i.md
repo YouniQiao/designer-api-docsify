@@ -10,6 +10,11 @@ As an input parameter when connecting a web native messaging extension, it is us
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onConnect
 
 ```TypeScript

@@ -11,7 +11,7 @@ Domain account policy.
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from 'accountManager';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## authenticationValidityPeriod

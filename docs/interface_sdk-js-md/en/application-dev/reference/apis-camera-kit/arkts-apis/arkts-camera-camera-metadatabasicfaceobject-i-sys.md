@@ -15,7 +15,8 @@ Basic face metadata detected by the camera, which is extended from [MetadataObje
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## leftEyeBoundingBox

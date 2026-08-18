@@ -1,5 +1,10 @@
 # enableWifi
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableWifi
 
 ```TypeScript

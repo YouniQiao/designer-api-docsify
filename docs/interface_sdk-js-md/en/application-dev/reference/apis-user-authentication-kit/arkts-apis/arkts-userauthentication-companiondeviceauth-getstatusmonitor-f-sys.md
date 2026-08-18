@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getStatusMonitor

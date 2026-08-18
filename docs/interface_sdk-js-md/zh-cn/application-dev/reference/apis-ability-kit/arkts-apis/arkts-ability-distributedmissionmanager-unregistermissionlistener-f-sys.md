@@ -1,5 +1,10 @@
 # unRegisterMissionListener（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## unRegisterMissionListener
 
 ```TypeScript
@@ -25,7 +30,7 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | parameter | MissionDeviceInfo | 是 | 注册监听时的设备信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，取消监听成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，取消监听成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

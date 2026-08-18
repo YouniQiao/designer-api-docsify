@@ -10,6 +10,11 @@ Define html web message port.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript
@@ -104,7 +109,7 @@ Post a message to other port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessage](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessage-t.md) | Yes | Message to send. |
+| message | [WebMessage](arkts-na-webview-webmessage-t.md) | Yes | Message to send. |
 
 **Error codes:**
 
@@ -133,7 +138,7 @@ Post a message to other port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageext-c.md) | Yes | Message to send. |
+| message | [WebMessageExt](arkts-na-webview-webmessageext-c.md) | Yes | Message to send. |
 
 **Error codes:**
 

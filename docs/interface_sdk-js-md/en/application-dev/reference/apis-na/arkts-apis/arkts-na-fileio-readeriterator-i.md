@@ -10,6 +10,11 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## next
 
 ```TypeScript

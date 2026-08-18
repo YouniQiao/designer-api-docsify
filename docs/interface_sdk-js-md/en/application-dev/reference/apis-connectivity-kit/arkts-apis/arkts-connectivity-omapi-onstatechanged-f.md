@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'omapi';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## on_stateChanged

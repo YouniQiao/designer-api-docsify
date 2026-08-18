@@ -8,6 +8,11 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 
 **系统能力：** SystemCapability.Telephony.CoreService
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

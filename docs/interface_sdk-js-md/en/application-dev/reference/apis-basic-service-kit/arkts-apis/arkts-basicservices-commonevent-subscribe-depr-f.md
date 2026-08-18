@@ -1,5 +1,12 @@
 # subscribe
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## subscribe
 
 ```TypeScript

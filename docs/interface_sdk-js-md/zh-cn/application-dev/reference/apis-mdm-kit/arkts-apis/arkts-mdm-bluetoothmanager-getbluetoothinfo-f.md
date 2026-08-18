@@ -1,5 +1,10 @@
 # getBluetoothInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBluetoothInfo
 
 ```TypeScript

@@ -11,7 +11,7 @@ Image receiver class. You can use it to obtain the surface ID of a component, re
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId

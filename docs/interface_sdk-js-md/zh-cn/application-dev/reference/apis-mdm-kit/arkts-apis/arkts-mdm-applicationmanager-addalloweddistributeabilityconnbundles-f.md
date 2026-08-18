@@ -1,5 +1,10 @@
 # addAllowedDistributeAbilityConnBundles
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addAllowedDistributeAbilityConnBundles
 
 ```TypeScript

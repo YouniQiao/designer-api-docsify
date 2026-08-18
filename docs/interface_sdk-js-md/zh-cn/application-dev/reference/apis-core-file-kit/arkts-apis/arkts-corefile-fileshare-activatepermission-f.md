@@ -1,5 +1,10 @@
 # activatePermission
 
+## 导入模块
+
+```TypeScript
+```
+
 ## activatePermission
 
 ```TypeScript

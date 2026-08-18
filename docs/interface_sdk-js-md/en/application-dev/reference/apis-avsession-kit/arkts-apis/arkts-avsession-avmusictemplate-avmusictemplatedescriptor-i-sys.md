@@ -13,7 +13,8 @@ Description of the AVMusicTemplate.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## bundleName

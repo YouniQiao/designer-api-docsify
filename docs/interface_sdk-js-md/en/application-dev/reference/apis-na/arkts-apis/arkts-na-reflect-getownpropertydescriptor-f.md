@@ -1,5 +1,10 @@
 # getOwnPropertyDescriptor
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getOwnPropertyDescriptor
 
 ```TypeScript

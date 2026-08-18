@@ -1,0 +1,54 @@
+# USBDriverInfo (System API)
+
+Defines detailed information about the USB device driver. It is inherited from [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#driverinfo-system-api).
+
+**Inheritance/Implementation:** USBDriverInfo extends [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#driverinfo-system-api)
+
+**Since:** 23
+
+<!--Device-deviceManager-interface USBDriverInfo--><!--Device-deviceManager-interface USBDriverInfo-End-->
+
+**System capability:** SystemCapability.Driver.ExternalDevice
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+```
+
+## productIdList
+
+```TypeScript
+productIdList: Array<number>
+```
+
+Product ID list of the USB devices supported by the driver.
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 23
+
+<!--Device-USBDriverInfo-productIdList: Array<int>--><!--Device-USBDriverInfo-productIdList: Array<int>-End-->
+
+**System capability:** SystemCapability.Driver.ExternalDevice
+
+**System API:** This is a system API.
+
+## vendorIdList
+
+```TypeScript
+vendorIdList: Array<number>
+```
+
+Vendor ID list of the USB devices supported by the driver.
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 23
+
+<!--Device-USBDriverInfo-vendorIdList: Array<int>--><!--Device-USBDriverInfo-vendorIdList: Array<int>-End-->
+
+**System capability:** SystemCapability.Driver.ExternalDevice
+
+**System API:** This is a system API.

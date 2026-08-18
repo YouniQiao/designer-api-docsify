@@ -11,7 +11,8 @@ Used to indicate the playback state of the current media. If the playback state 
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'avSession';
+import { avSession } from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## activeItemId

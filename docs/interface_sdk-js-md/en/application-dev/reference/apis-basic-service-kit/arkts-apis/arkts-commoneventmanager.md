@@ -11,7 +11,8 @@ This module provides APIs to publish, subscribe to, and unsubscribe from common 
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from 'commonEventManager';
+import { commonEventManager } from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

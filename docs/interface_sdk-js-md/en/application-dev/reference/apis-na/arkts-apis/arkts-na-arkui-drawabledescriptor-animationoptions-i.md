@@ -10,6 +10,11 @@ Animation control options
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## autoPlay
 
 ```TypeScript

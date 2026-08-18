@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## acceptButtonStyle
 
 ```TypeScript
@@ -366,7 +371,7 @@ shadow?: ShadowOptions | ShadowStyle
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 > **说明：** > > - 默认值：[ImmersiveOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-immersiveoptions-i.md#immersiveoptions)的style为ImmersiveStyle.ULTRA_THICK的 > [ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md#immersivematerial)对象。设置undefined时与默认值保持一致。 > - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色 > backgroundColor、背景模糊 > backgroundBlurStyle > 、背景效果backgroundEffect、边框颜色 > borderColor、边框宽度borderWidth、阴影 > shadow，当设置系统材质时，上述接口不生效。
+设置弹窗的系统材质。 > **说明：** > > - 默认值：[ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md#immersiveoptions)的style为ImmersiveStyle.ULTRA_THICK的 > [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#immersivematerial)对象。设置undefined时与默认值保持一致。 > - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色 > backgroundColor、背景模糊 > backgroundBlurStyle > 、背景效果backgroundEffect、边框颜色 > borderColor、边框宽度borderWidth、阴影 > shadow，当设置系统材质时，上述接口不生效。
 
 **类型：** SystemUiMaterial
 

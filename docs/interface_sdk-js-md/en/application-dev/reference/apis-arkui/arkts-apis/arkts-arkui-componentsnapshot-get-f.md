@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'componentSnapshot';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## get

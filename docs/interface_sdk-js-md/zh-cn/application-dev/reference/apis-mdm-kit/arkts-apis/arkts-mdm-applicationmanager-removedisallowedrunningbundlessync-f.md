@@ -1,5 +1,10 @@
 # removeDisallowedRunningBundlesSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeDisallowedRunningBundlesSync
 
 ```TypeScript

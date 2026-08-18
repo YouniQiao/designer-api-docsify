@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from 'StaticSubscriberExtensionContext';
+import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

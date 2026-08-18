@@ -11,7 +11,7 @@ The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'xml';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## addEmptyElement

@@ -10,6 +10,11 @@ CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## label
 
 ```TypeScript

@@ -3,7 +3,14 @@
 ## Modules to Import
 
 ```TypeScript
-import { Ability } from 'Ability';
+import { Ability } from '@kit.AbilityKit';
+import { Ability } from '@kit.AbilityKit';
+import { AbilityConstant } from '@kit.AbilityKit';
+import { AbilityConstant } from '@kit.AbilityKit';
+import { AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## Summary

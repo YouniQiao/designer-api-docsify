@@ -1377,7 +1377,7 @@ Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b>instance of this <
 | Parameter | Description |
 | -- | -- |
 | [OH_NativeXComponent](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent.md)* component | Indicates the pointer to the <b>OH_NativeXComponent</b> instance. |
-| ArkUI_AccessibilityProvider** handle | Indicates the pointer to the <b>ArkUI_AccessibilityProvider</b> instance. |
+| [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)** handle | Indicates the pointer to the <b>ArkUI_AccessibilityProvider</b> instance. |
 
 **Returns**:
 
@@ -1937,7 +1937,7 @@ Create a <b>ArkUI_AccessibilityProvider</b> object from an XComponent node.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_AccessibilityProvider* | Returns the created <b>ArkUI_AccessibilityProvider</b> object's pointer. |
+| [ArkUI_AccessibilityProvider*](capi-arkui-accessibility-arkui-accessibilityprovider.md) | Returns the created <b>ArkUI_AccessibilityProvider</b> object's pointer. |
 
 ### OH_ArkUI_AccessibilityProvider_Dispose()
 
@@ -1955,7 +1955,7 @@ Disposes of an <b>ArkUI_AccessibilityProvider</b> object.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_AccessibilityProvider* provider | Indicates the pointer to <b>ArkUI_AccessibilityProvider</b> object needed to dispose. |
+| [ArkUI_AccessibilityProvider](capi-arkui-accessibility-arkui-accessibilityprovider.md)* provider | Indicates the pointer to <b>ArkUI_AccessibilityProvider</b> object needed to dispose. |
 
 ### OH_ArkUI_SurfaceCallback_SetSurfaceShowEvent()
 

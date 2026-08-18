@@ -8,6 +8,11 @@ Represents a touch gesture recognizer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cancelTouch
 
 ```TypeScript

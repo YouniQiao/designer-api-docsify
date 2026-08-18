@@ -10,6 +10,11 @@ Defines the TextDecoder related options parameters.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fatal
 
 ```TypeScript

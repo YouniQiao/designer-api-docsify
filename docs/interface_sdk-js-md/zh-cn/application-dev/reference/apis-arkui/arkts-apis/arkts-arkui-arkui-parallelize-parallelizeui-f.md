@@ -1,5 +1,10 @@
 # ParallelizeUI
 
+## 导入模块
+
+```TypeScript
+```
+
 ## ParallelizeUI
 
 ```TypeScript

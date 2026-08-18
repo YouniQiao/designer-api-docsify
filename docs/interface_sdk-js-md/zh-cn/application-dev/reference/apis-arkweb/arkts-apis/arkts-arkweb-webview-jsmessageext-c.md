@@ -8,6 +8,11 @@ JsMessageExt是ArkWeb框架中用于封装 [runJavaScriptExt](arkts-arkweb-webvi
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getArray
 
 ```TypeScript

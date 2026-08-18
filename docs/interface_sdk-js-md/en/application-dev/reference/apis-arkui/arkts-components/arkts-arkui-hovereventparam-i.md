@@ -8,6 +8,11 @@ The param of hover event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## appRotation
 
 ```TypeScript

@@ -8,6 +8,11 @@ Represents a board style object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## borderRadius
 
 ```TypeScript

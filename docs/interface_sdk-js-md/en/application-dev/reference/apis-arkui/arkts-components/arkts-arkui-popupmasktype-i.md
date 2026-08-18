@@ -8,6 +8,11 @@ Sets the color of the mask.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

@@ -8,6 +8,11 @@ Sets the color and direction of the linear gradient for the outlines.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## colors
 
 ```TypeScript

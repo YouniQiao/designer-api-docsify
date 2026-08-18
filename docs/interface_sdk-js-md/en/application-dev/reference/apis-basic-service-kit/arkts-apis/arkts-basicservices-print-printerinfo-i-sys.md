@@ -13,7 +13,7 @@ Provides the printer information.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## capability

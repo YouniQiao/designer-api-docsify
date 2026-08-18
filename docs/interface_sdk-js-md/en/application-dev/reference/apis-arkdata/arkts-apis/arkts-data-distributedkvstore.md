@@ -13,7 +13,7 @@ The **distributedKVStore** module implements collaboration between databases for
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## Summary

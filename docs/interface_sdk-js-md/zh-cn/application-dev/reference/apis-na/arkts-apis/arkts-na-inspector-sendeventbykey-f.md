@@ -1,5 +1,10 @@
 # sendEventByKey
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sendEventByKey
 
 ```TypeScript

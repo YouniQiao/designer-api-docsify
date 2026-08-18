@@ -8,6 +8,11 @@ Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseeven
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## area
 
 ```TypeScript

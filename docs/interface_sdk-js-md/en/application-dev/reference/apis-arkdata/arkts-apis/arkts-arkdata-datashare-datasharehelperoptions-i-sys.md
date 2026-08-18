@@ -13,7 +13,8 @@ Represents the optional parameters of [DataShareHelper](#datasharehelperoptions-
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'dataShare';
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## isProxy

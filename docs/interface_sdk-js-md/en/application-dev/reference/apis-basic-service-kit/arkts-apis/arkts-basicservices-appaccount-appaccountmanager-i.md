@@ -11,7 +11,8 @@ Defines the application account manager, which is used to manage account informa
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccount

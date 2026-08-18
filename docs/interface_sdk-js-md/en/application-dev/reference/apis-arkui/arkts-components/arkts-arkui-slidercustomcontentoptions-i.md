@@ -8,6 +8,11 @@ Provides accessibility configuration of the slider prefix and suffix.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript

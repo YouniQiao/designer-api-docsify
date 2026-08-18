@@ -11,7 +11,7 @@ PhotoAsset provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelPhotoRequest

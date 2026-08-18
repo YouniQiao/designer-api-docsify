@@ -13,7 +13,8 @@ Generates common parameters for a DH key based on the prime **p** length and the
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genDHCommonParamsSpec

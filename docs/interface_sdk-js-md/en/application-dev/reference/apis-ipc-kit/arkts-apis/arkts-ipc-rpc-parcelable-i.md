@@ -11,7 +11,7 @@ Writes an object to a **MessageSequence** and reads it from the **MessageSequenc
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## marshalling

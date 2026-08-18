@@ -8,6 +8,11 @@ Defines the particle color property updater configs which can support generics.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## distributionType
 
 ```TypeScript

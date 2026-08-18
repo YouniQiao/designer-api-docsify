@@ -1,0 +1,70 @@
+# InterfaceSharingStateInfo (System API)
+
+The interface is used to notify listeners of changes in shared interface status.
+
+**Since:** 23
+
+<!--Device-sharing-export interface InterfaceSharingStateInfo--><!--Device-sharing-export interface InterfaceSharingStateInfo-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.NetSharing
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+```
+
+## iface
+
+```TypeScript
+iface: string
+```
+
+The specified network interface name.
+
+**Type:** string
+
+**Since:** 23
+
+<!--Device-InterfaceSharingStateInfo-iface: string--><!--Device-InterfaceSharingStateInfo-iface: string-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.NetSharing
+
+**System API:** This is a system API.
+
+## state
+
+```TypeScript
+state: SharingIfaceState
+```
+
+Network card sharing status.
+
+**Type:** [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)
+
+**Since:** 23
+
+<!--Device-InterfaceSharingStateInfo-state: SharingIfaceState--><!--Device-InterfaceSharingStateInfo-state: SharingIfaceState-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.NetSharing
+
+**System API:** This is a system API.
+
+## type
+
+```TypeScript
+type: SharingIfaceType
+```
+
+Enumerates the network sharing types of an NIC.
+
+**Type:** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
+
+**Since:** 23
+
+<!--Device-InterfaceSharingStateInfo-type: SharingIfaceType--><!--Device-InterfaceSharingStateInfo-type: SharingIfaceType-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.NetSharing
+
+**System API:** This is a system API.

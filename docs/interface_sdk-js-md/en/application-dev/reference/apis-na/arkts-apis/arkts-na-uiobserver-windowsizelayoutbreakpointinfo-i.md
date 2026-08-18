@@ -10,6 +10,11 @@ Defines the window size layout breakpoint information. This interface provides t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## heightBreakpoint
 
 ```TypeScript

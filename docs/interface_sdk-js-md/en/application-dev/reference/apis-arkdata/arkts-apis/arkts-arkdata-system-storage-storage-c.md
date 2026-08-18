@@ -8,6 +8,11 @@
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clear
 
 ```TypeScript

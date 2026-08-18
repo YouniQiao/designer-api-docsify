@@ -1,5 +1,10 @@
 # text_common
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 类

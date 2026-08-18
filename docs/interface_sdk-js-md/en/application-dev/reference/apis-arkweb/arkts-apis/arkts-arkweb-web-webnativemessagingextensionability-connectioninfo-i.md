@@ -11,7 +11,7 @@ Represents the information object of the web native messaging connection.
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from 'ConnectionInfo';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## bundleName

@@ -1,5 +1,10 @@
 # offRotationVectorChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offRotationVectorChange
 
 ```TypeScript
@@ -19,7 +24,7 @@ Unsubscribe to rotation vector sensor data, {@code SensorId.ROTATION_VECTOR}.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 否 | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | 否 | callback rotation vector data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)&gt; | 否 | callback rotation vector data. |
 
 **错误码：**
 

@@ -10,6 +10,11 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableHardwareEntropy
 
 ```TypeScript
@@ -117,7 +122,7 @@ generateRandom(len: int, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | len | int | 是 | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为 错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为 错误对象。 |
 
 **错误码：**
 

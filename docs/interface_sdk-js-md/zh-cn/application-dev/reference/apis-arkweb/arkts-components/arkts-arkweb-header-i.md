@@ -8,6 +8,11 @@ Web组件返回的请求/响应头对象。适用于需要读取或修改HTTP头
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## headerKey
 
 ```TypeScript

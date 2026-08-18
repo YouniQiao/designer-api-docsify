@@ -1,5 +1,10 @@
 # getCurrentBundleStats
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCurrentBundleStats
 
 ```TypeScript
@@ -18,7 +23,7 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | 是 | 获取指定卷上的应用存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | 是 | 获取指定卷上的应用存储空间大小之后的回调。 |
 
 **错误码：**
 

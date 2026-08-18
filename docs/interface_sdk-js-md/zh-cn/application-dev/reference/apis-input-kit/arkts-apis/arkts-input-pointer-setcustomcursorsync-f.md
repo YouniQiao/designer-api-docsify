@@ -1,5 +1,10 @@
 # setCustomCursorSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setCustomCursorSync
 
 ```TypeScript

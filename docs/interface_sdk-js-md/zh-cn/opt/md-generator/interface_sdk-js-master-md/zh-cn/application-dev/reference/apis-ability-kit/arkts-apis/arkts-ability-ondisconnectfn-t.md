@@ -1,0 +1,19 @@
+# OnDisconnectFn
+
+```TypeScript
+type OnDisconnectFn = (elementName: ElementName) => void
+```
+
+与指定的后台服务成功断开连接时，会触发该回调。
+
+**起始版本：** 23
+
+<!--Device-unnamed-type OnDisconnectFn = (elementName: ElementName) => void--><!--Device-unnamed-type OnDisconnectFn = (elementName: ElementName) => void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | 是 |

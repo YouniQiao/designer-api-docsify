@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## action
 
 ```TypeScript

@@ -13,7 +13,7 @@ The **@ohos.update** module provides the core capabilities of online update, loc
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -1,5 +1,10 @@
 # getGeomagneticDip
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getGeomagneticDip
 
 ```TypeScript
@@ -23,7 +28,7 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inclinationMatrix | Array&lt;number&gt; | 是 | 表示倾斜矩阵。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步返回地磁倾斜角，单位：rad（弧度）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步返回地磁倾斜角，单位：rad（弧度）。 |
 
 **示例**
 

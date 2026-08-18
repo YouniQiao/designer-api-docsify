@@ -11,7 +11,8 @@ The module providers APIs for launcher applications (applications with icons on 
 ## Modules to Import
 
 ```TypeScript
-import { launcherBundleManager } from 'launcherBundleManager';
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

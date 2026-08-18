@@ -12,6 +12,11 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## assertComponentExist
 
 ```TypeScript

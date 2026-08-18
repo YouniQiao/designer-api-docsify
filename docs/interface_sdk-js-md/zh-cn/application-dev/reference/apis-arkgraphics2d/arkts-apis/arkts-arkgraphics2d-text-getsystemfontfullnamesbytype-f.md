@@ -1,5 +1,10 @@
 # getSystemFontFullNamesByType
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemFontFullNamesByType
 
 ```TypeScript

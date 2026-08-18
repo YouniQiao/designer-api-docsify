@@ -8,6 +8,11 @@ Defines the attribute modifier.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## applyDisabledAttribute
 
 ```TypeScript

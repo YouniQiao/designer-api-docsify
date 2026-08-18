@@ -1,5 +1,10 @@
 # updateBackgroundRunning
 
+## 导入模块
+
+```TypeScript
+```
+
 ## updateBackgroundRunning
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # setxattr
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setxattr
 
 ```TypeScript

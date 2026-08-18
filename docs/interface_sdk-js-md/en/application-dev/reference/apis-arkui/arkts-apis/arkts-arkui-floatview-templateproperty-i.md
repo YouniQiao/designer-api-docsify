@@ -11,7 +11,7 @@ Provides parameter configuration required for switching the float view template 
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## size

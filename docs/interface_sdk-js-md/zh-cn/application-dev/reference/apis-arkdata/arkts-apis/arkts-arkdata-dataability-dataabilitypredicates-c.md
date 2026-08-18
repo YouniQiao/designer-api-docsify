@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## and
 
 ```TypeScript

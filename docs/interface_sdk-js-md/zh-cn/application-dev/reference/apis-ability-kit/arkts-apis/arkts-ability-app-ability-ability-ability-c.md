@@ -8,6 +8,11 @@ Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-abil
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onConfigurationUpdate
 
 ```TypeScript

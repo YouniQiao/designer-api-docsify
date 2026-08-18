@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundleManager } from 'distributedBundleManager';
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getRemoteBundleVersionCode

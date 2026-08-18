@@ -1,5 +1,10 @@
 # getUserRestrictedForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUserRestrictedForAccount
 
 ```TypeScript

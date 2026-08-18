@@ -13,7 +13,8 @@ Defines the device status information. It describes the current status of the co
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'companionDeviceAuth';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## deviceKey

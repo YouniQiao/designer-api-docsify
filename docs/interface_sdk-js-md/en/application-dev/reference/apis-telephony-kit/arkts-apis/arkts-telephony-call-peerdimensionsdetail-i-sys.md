@@ -13,7 +13,7 @@ Defines the peer image resolution in a video call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## callId

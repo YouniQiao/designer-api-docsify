@@ -1,5 +1,10 @@
 # setTouchpadScrollDirection（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setTouchpadScrollDirection
 
 ```TypeScript
@@ -21,7 +26,7 @@ function setTouchpadScrollDirection(state: boolean, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | state | boolean | 是 | state为触控板滚轴的方向。<br>true与手指滑动的方向一致，false与手指滑动的方向相反。<br>默认为true。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置触控板滚轴方向成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置触控板滚轴方向成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

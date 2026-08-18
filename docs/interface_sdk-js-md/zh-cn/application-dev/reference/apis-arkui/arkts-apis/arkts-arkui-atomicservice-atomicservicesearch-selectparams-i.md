@@ -8,6 +8,11 @@ AtomicServiceSearch中“选择区”的可选属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## arrowPosition
 
 ```TypeScript

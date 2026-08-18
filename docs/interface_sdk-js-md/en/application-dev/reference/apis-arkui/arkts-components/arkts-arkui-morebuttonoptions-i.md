@@ -8,6 +8,11 @@ Defines the options for the more button menu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## backgroundBlurStyle
 
 ```TypeScript

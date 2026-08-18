@@ -8,6 +8,11 @@ JsGeolocation是Web组件在收到网页地理位置权限请求时，提供给�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

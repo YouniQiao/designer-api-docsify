@@ -1,5 +1,10 @@
 # getApplicationWindowStates
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getApplicationWindowStates
 
 ```TypeScript

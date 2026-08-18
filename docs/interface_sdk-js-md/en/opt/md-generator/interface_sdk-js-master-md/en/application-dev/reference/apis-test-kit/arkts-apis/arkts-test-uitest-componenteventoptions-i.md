@@ -1,0 +1,50 @@
+# ComponentEventOptions
+
+Describes the extended configuration of component operation event listening, which is used to specify the listening process configuration and event filtering conditions.
+
+**Since:** 23
+
+<!--Device-unnamed-declare interface ComponentEventOptions--><!--Device-unnamed-declare interface ComponentEventOptions-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+## Modules to Import
+
+```TypeScript
+```
+
+## on
+
+```TypeScript
+on?: On
+```
+
+Attribute requirements of the target component to listen for. By default, all components are listened for. **Note：**: Only components with specified attributes can be listened for. Components with relative positions such as **On.isBefore**, **On.isAfter**, and **On.within** cannot be listened for.
+
+**Type:** [On](arkts-test-uitest-on-c.md)
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ComponentEventOptions-on?: On--><!--Device-ComponentEventOptions-on?: On-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+## timeout
+
+```TypeScript
+timeout?: number
+```
+
+Listening timeout interval, in milliseconds. The value is an integer greater than or equal to 500. The default value is **10000**. If the value is out of range, an error code is thrown.
+
+**Type:** number
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ComponentEventOptions-timeout?: int--><!--Device-ComponentEventOptions-timeout?: int-End-->
+
+**System capability:** SystemCapability.Test.UiTest

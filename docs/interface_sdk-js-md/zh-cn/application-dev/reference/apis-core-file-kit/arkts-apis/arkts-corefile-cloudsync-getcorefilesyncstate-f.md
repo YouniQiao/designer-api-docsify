@@ -1,5 +1,10 @@
 # getCoreFileSyncState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCoreFileSyncState
 
 ```TypeScript

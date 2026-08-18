@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'fastbuffer';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## concat

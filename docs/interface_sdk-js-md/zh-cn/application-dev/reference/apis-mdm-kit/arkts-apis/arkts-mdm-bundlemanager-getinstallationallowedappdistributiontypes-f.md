@@ -1,5 +1,10 @@
 # getInstallationAllowedAppDistributionTypes
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInstallationAllowedAppDistributionTypes
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # openUkeyAuthDialog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openUkeyAuthDialog
 
 ```TypeScript

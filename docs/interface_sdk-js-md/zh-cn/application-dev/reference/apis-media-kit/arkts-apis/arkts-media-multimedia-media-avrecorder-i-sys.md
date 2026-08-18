@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInputMetaSurface
 
 ```TypeScript

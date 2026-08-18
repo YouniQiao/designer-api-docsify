@@ -1,5 +1,10 @@
 # cancelScreenWatermarkImage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancelScreenWatermarkImage
 
 ```TypeScript

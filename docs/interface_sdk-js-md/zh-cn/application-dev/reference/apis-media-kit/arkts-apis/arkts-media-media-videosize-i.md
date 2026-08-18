@@ -8,6 +8,11 @@ Describes the video Dimensions.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

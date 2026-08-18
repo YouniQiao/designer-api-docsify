@@ -1,5 +1,10 @@
 # getxattr
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getxattr
 
 ```TypeScript

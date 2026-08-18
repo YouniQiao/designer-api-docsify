@@ -1,0 +1,1625 @@
+# CanvasRenderer
+
+CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 > **说明：** > > * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。 > > * 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时， > 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口， > 以防止指令在队列中堆积，从而避免内存占用过大的问题。 > > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
+
+**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#canvaspath)
+
+**起始版本：** 8
+
+<!--Device-unnamed-declare class CanvasRenderer--><!--Device-unnamed-declare class CanvasRenderer-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
+
+## beginPath
+
+```TypeScript
+beginPath(): void
+```
+
+创建一个绘制路径。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-beginPath(): void--><!--Device-CanvasRenderer-beginPath(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## clearRect
+
+```TypeScript
+clearRect(x: number, y: number, w: number, h: number): void
+```
+
+删除指定区域内的绘制内容。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-clearRect(x: number, y: number, w: number, h: number): void--><!--Device-CanvasRenderer-clearRect(x: number, y: number, w: number, h: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
+| w | number | 是 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
+
+## clip
+
+```TypeScript
+clip(fillRule?: CanvasFillRule): void
+```
+
+设置当前路径为剪切路径。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-clip(fillRule?: CanvasFillRule): void--><!--Device-CanvasRenderer-clip(fillRule?: CanvasFillRule): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+
+## clip
+
+```TypeScript
+clip(path: Path2D, fillRule?: CanvasFillRule): void
+```
+
+设置指定路径为剪切路径。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-clip(path: Path2D, fillRule?: CanvasFillRule): void--><!--Device-CanvasRenderer-clip(path: Path2D, fillRule?: CanvasFillRule): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+
+## createConicGradient
+
+```TypeScript
+createConicGradient(
+    startAngle: number,
+    x: number,
+    y: number
+  ): CanvasGradient
+```
+
+创建一个锥形渐变。
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-createConicGradient(    startAngle: number,    x: number,    y: number  ): CanvasGradient--><!--Device-CanvasRenderer-createConicGradient(    startAngle: number,    x: number,    y: number  ): CanvasGradient-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| startAngle | number | 是 |
+| x | number | 是 |
+| y | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [CanvasGradient](arkts-arkui-canvasgradient-c.md) |
+
+## createImageData
+
+```TypeScript
+createImageData(sw: number, sh: number): ImageData
+```
+
+创建一个指定大小的空白ImageData对象。此接口涉及耗时的内存拷贝，请避免频繁调用。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-createImageData(sw: number, sh: number): ImageData--><!--Device-CanvasRenderer-createImageData(sw: number, sh: number): ImageData-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sw | number | 是 |
+| sh | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [ImageData](arkts-arkui-imagedata-c.md) |
+
+## createImageData
+
+```TypeScript
+createImageData(imageData: ImageData): ImageData
+```
+
+创建一个与已有ImageData对象具有相同宽高的ImageData对象。此接口涉及耗时的内存拷贝，请避免频繁调用。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-createImageData(imageData: ImageData): ImageData--><!--Device-CanvasRenderer-createImageData(imageData: ImageData): ImageData-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [ImageData](arkts-arkui-imagedata-c.md) |
+
+## createLinearGradient
+
+```TypeScript
+createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGradient
+```
+
+创建一个线性渐变。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGradient--><!--Device-CanvasRenderer-createLinearGradient(x0: number, y0: number, x1: number, y1: number): CanvasGradient-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x0 | number | 是 |
+| y0 | number | 是 |
+| x1 | number | 是 |
+| y1 | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [CanvasGradient](arkts-arkui-canvasgradient-c.md) |
+
+## createPattern
+
+```TypeScript
+createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | null
+```
+
+根据指定的源图像和重复模式创建一个用于图像填充的模式。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | null--><!--Device-CanvasRenderer-createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | null-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 |
+| repetition | string \| null | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) |
+
+## createRadialGradient
+
+```TypeScript
+createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient
+```
+
+创建一个径向渐变。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient--><!--Device-CanvasRenderer-createRadialGradient(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x0 | number | 是 |
+| y0 | number | 是 |
+| r0 | number | 是 |
+| x1 | number | 是 |
+| y1 | number | 是 |
+| r1 | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [CanvasGradient](arkts-arkui-canvasgradient-c.md) |
+
+## drawImage
+
+```TypeScript
+drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number): void
+```
+
+在画布上绘制图像。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number): void--><!--Device-CanvasRenderer-drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
+| dx | number | 是 |
+| dy | number | 是 |
+
+## drawImage
+
+```TypeScript
+drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh: number): void
+```
+
+将图像拉伸或压缩到指定尺寸后绘制。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh: number): void--><!--Device-CanvasRenderer-drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
+| dx | number | 是 |
+| dy | number | 是 |
+| dw | number | 是 |
+| dh | number | 是 |
+
+## drawImage
+
+```TypeScript
+drawImage(
+    image: ImageBitmap | PixelMap,
+    sx: number,
+    sy: number,
+    sw: number,
+    sh: number,
+    dx: number,
+    dy: number,
+    dw: number,
+    dh: number,
+  ): void
+```
+
+将图像裁剪后拉伸或压缩到指定尺寸后绘制。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-drawImage(    image: ImageBitmap | PixelMap,    sx: number,    sy: number,    sw: number,    sh: number,    dx: number,    dy: number,    dw: number,    dh: number,  ): void--><!--Device-CanvasRenderer-drawImage(    image: ImageBitmap | PixelMap,    sx: number,    sy: number,    sw: number,    sh: number,    dx: number,    dy: number,    dw: number,    dh: number,  ): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
+| sx | number | 是 |
+| sy | number | 是 |
+| sw | number | 是 |
+| sh | number | 是 |
+| dx | number | 是 |
+| dy | number | 是 |
+| dw | number | 是 |
+| dh | number | 是 |
+
+## fill
+
+```TypeScript
+fill(fillRule?: CanvasFillRule): void
+```
+
+填充当前路径。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-fill(fillRule?: CanvasFillRule): void--><!--Device-CanvasRenderer-fill(fillRule?: CanvasFillRule): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+
+## fill
+
+```TypeScript
+fill(path: Path2D, fillRule?: CanvasFillRule): void
+```
+
+填充指定路径。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-fill(path: Path2D, fillRule?: CanvasFillRule): void--><!--Device-CanvasRenderer-fill(path: Path2D, fillRule?: CanvasFillRule): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 |
+
+## fillRect
+
+```TypeScript
+fillRect(x: number, y: number, w: number, h: number): void
+```
+
+填充一个矩形。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-fillRect(x: number, y: number, w: number, h: number): void--><!--Device-CanvasRenderer-fillRect(x: number, y: number, w: number, h: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
+| w | number | 是 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
+
+## fillText
+
+```TypeScript
+fillText(text: string, x: number, y: number, maxWidth?: number): void
+```
+
+绘制填充类文本。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-fillText(text: string, x: number, y: number, maxWidth?: number): void--><!--Device-CanvasRenderer-fillText(text: string, x: number, y: number, maxWidth?: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| x | number | 是 |
+| y | number | 是 |
+| maxWidth | number | 否 |
+
+## getImageData
+
+```TypeScript
+getImageData(sx: number, sy: number, sw: number, sh: number): ImageData
+```
+
+获取画布上指定区域内的像素数据创建一个ImageData对象。此接口涉及耗时的内存拷贝，请避免频繁调用。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-getImageData(sx: number, sy: number, sw: number, sh: number): ImageData--><!--Device-CanvasRenderer-getImageData(sx: number, sy: number, sw: number, sh: number): ImageData-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sx | number | 是 |
+| sy | number | 是 |
+| sw | number | 是 |
+| sh | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [ImageData](arkts-arkui-imagedata-c.md) |
+
+## getLineDash
+
+```TypeScript
+getLineDash(): number[]
+```
+
+获取虚线样式。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-getLineDash(): number[]--><!--Device-CanvasRenderer-getLineDash(): number[]-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number[] |
+
+## getPixelMap
+
+```TypeScript
+getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap
+```
+
+获取画布上指定区域内的像素数据创建一个PixelMap对象。此接口涉及耗时的内存拷贝，请避免频繁调用。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap--><!--Device-CanvasRenderer-getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| sx | number | 是 |
+| sy | number | 是 |
+| sw | number | 是 |
+| sh | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) |
+
+## getTransform
+
+```TypeScript
+getTransform(): Matrix2D
+```
+
+获取当前应用到上下文的变换矩阵。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-getTransform(): Matrix2D--><!--Device-CanvasRenderer-getTransform(): Matrix2D-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+
+## measureText
+
+```TypeScript
+measureText(text: string): TextMetrics
+```
+
+该方法返回一个文本测算的对象，通过该对象可以获取指定文本的宽度值。不同设备上获取的宽度值可能不同。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-measureText(text: string): TextMetrics--><!--Device-CanvasRenderer-measureText(text: string): TextMetrics-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [TextMetrics](arkts-arkui-textmetrics-i.md) |
+
+## putImageData
+
+```TypeScript
+putImageData(imageData: ImageData, dx: number | string, dy: number | string): void
+```
+
+将一个ImageData对象放到画布上的矩形区域。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-putImageData(imageData: ImageData, dx: number | string, dy: number | string): void--><!--Device-CanvasRenderer-putImageData(imageData: ImageData, dx: number | string, dy: number | string): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 |
+| dx | number \| string | 是 |
+| dy | number \| string | 是 |
+
+## putImageData
+
+```TypeScript
+putImageData(
+    imageData: ImageData,
+    dx: number | string,
+    dy: number | string,
+    dirtyX: number | string,
+    dirtyY: number | string,
+    dirtyWidth: number | string,
+    dirtyHeight: number | string
+  ): void
+```
+
+将裁剪后的ImageData数据填充到新的矩形区域。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-putImageData(    imageData: ImageData,    dx: number | string,    dy: number | string,    dirtyX: number | string,    dirtyY: number | string,    dirtyWidth: number | string,    dirtyHeight: number | string  ): void--><!--Device-CanvasRenderer-putImageData(    imageData: ImageData,    dx: number | string,    dy: number | string,    dirtyX: number | string,    dirtyY: number | string,    dirtyWidth: number | string,    dirtyHeight: number | string  ): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 |
+| dx | number \| string | 是 |
+| dy | number \| string | 是 |
+| dirtyX | number \| string | 是 |
+| dirtyY | number \| string | 是 |
+| dirtyWidth | number \| string | 是 |
+| dirtyHeight | number \| string | 是 |
+
+## reset
+
+```TypeScript
+reset(): void
+```
+
+将CanvasRenderingContext2D对象重置为默认状态，并清除背景缓冲区、绘制状态堆栈、已定义路径和样式。
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-reset(): void--><!--Device-CanvasRenderer-reset(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## resetTransform
+
+```TypeScript
+resetTransform(): void
+```
+
+重置当前变换矩阵为单位矩阵。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-resetTransform(): void--><!--Device-CanvasRenderer-resetTransform(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## restore
+
+```TypeScript
+restore(): void
+```
+
+恢复之前保存的绘制上下文。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-restore(): void--><!--Device-CanvasRenderer-restore(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## restoreLayer
+
+```TypeScript
+restoreLayer(): void
+```
+
+将图像变换和裁剪状态恢复到saveLayer之前的状态，然后将图层绘制到画布上。
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-restoreLayer(): void--><!--Device-CanvasRenderer-restoreLayer(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## rotate
+
+```TypeScript
+rotate(angle: number): void
+```
+
+围绕坐标轴顺时针旋转画布。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-rotate(angle: number): void--><!--Device-CanvasRenderer-rotate(angle: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| angle | number | 是 |
+
+## save
+
+```TypeScript
+save(): void
+```
+
+保存所有画布状态到栈中。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-save(): void--><!--Device-CanvasRenderer-save(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## saveLayer
+
+```TypeScript
+saveLayer(): void
+```
+
+保存当前图层。
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-saveLayer(): void--><!--Device-CanvasRenderer-saveLayer(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## scale
+
+```TypeScript
+scale(x: number, y: number): void
+```
+
+根据给定的缩放因子缩放画布。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-scale(x: number, y: number): void--><!--Device-CanvasRenderer-scale(x: number, y: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
+
+## setLineDash
+
+```TypeScript
+setLineDash(segments: number[]): void
+```
+
+设置虚线样式。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-setLineDash(segments: number[]): void--><!--Device-CanvasRenderer-setLineDash(segments: number[]): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| segments | number[] | 是 |
+
+## setPixelMap
+
+```TypeScript
+setPixelMap(value?: PixelMap): void
+```
+
+在画布上绘制输入的PixelMap对象。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-setPixelMap(value?: PixelMap): void--><!--Device-CanvasRenderer-setPixelMap(value?: PixelMap): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 否 |
+
+## setTransform
+
+```TypeScript
+setTransform(a: number, b: number, c: number, d: number, e: number, f: number): void
+```
+
+setTransform方法使用的参数和transform()方法相同，但setTransform()方法会重置现有的变换矩阵并创建新的变换矩阵。 > **说明：** > > 图形中各个点变换后的坐标可通过下方坐标计算公式计算。 > > 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）： > > - x' = a * x + c * y + e > > - y' = b * x + d * y + f
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-setTransform(a: number, b: number, c: number, d: number, e: number, f: number): void--><!--Device-CanvasRenderer-setTransform(a: number, b: number, c: number, d: number, e: number, f: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| a | number | 是 |
+| b | number | 是 |
+| c | number | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| e | number | 是 |
+| f | number | 是 |
+
+## setTransform
+
+```TypeScript
+setTransform(transform?: Matrix2D): void
+```
+
+以Matrix2D对象为模板重置现有的变换矩阵并创建新的变换矩阵。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-setTransform(transform?: Matrix2D): void--><!--Device-CanvasRenderer-setTransform(transform?: Matrix2D): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [transform](#transform) | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 |
+
+## stroke
+
+```TypeScript
+stroke(): void
+```
+
+描边当前路径。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-stroke(): void--><!--Device-CanvasRenderer-stroke(): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## stroke
+
+```TypeScript
+stroke(path: Path2D): void
+```
+
+描边指定路径。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-stroke(path: Path2D): void--><!--Device-CanvasRenderer-stroke(path: Path2D): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
+
+## strokeRect
+
+```TypeScript
+strokeRect(x: number, y: number, w: number, h: number): void
+```
+
+绘制具有边框的矩形，矩形内部不填充。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-strokeRect(x: number, y: number, w: number, h: number): void--><!--Device-CanvasRenderer-strokeRect(x: number, y: number, w: number, h: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
+| w | number | 是 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
+
+## strokeText
+
+```TypeScript
+strokeText(text: string, x: number, y: number, maxWidth?: number): void
+```
+
+绘制描边类文本。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-strokeText(text: string, x: number, y: number, maxWidth?: number): void--><!--Device-CanvasRenderer-strokeText(text: string, x: number, y: number, maxWidth?: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| text | string | 是 |
+| x | number | 是 |
+| y | number | 是 |
+| maxWidth | number | 否 |
+
+## transferFromImageBitmap
+
+```TypeScript
+transferFromImageBitmap(bitmap: ImageBitmap): void
+```
+
+显示指定的ImageBitmap对象。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-transferFromImageBitmap(bitmap: ImageBitmap): void--><!--Device-CanvasRenderer-transferFromImageBitmap(bitmap: ImageBitmap): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 |
+
+## transform
+
+```TypeScript
+transform(a: number, b: number, c: number, d: number, e: number, f: number): void
+```
+
+transform方法对应一个变换矩阵，想对一个图形进行变化的时候，只要设置此变换矩阵相应的参数， 对图形的各个定点的坐标分别乘以这个矩阵，就能得到新的定点的坐标。矩阵变换效果可叠加。 > **说明：** > > 图形中各个点变换后的坐标可通过下方坐标计算公式计算。 > > 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）： > > - x' = a * x + c * y + e > > - y' = b * x + d * y + f
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-transform(a: number, b: number, c: number, d: number, e: number, f: number): void--><!--Device-CanvasRenderer-transform(a: number, b: number, c: number, d: number, e: number, f: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| a | number | 是 |
+| b | number | 是 |
+| c | number | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| e | number | 是 |
+| f | number | 是 |
+
+## translate
+
+```TypeScript
+translate(x: number, y: number): void
+```
+
+移动当前坐标系的原点。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-translate(x: number, y: number): void--><!--Device-CanvasRenderer-translate(x: number, y: number): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| x | number | 是 |
+| y | number | 是 |
+
+## antialias
+
+```TypeScript
+antialias: boolean | undefined
+```
+
+用于设置绘制图形和文本时是否开启抗锯齿。设置此接口会覆盖RenderingContextSettings中的抗锯齿效果， 未通过该接口设置时，默认值为undefined，与RenderingContextSettings中的抗锯齿效果保持一致。 设置绘制图形和文本时是否开启抗锯齿。 **true**表示开启抗锯齿；**false**表示不开启抗锯齿。 值为**undefined**时，与RenderingContextSettings中的抗锯齿效果保持一致。
+
+**类型：** boolean \| undefined
+
+**默认值：** undefined
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-antialias: boolean | undefined--><!--Device-CanvasRenderer-antialias: boolean | undefined-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## direction
+
+```TypeScript
+direction: CanvasDirection
+```
+
+用于设置绘制文字时使用的文字方向，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**"inherit"**
+
+**类型：** [CanvasDirection](arkts-arkui-canvasdirection-t.md)
+
+**默认值：** inherit
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-direction: CanvasDirection--><!--Device-CanvasRenderer-direction: CanvasDirection-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## fillStyle
+
+```TypeScript
+fillStyle: string | number | CanvasGradient | CanvasPattern
+```
+
+指定绘制的填充色，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 - 类型为string时，表示设置填充区域的颜色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中string类型说明。 - 类型为number时，表示设置填充区域的颜色，不支持设置全透明色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中number类型说明。 - 类型为CanvasGradient时，表示渐变对象，使用createLinearGradient方法创建。 - 类型为CanvasPattern时，使用createPattern方法创建。 默认值：'#000000'（黑色） 异常值设置无效，保持设置前效果。
+
+**类型：** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
+
+**默认值：** #000000 (black)
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-fillStyle: string | number | CanvasGradient | CanvasPattern--><!--Device-CanvasRenderer-fillStyle: string | number | CanvasGradient | CanvasPattern-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## filter
+
+```TypeScript
+filter: string
+```
+
+设置图像的滤镜，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 支持的滤镜效果如下： - **'none'**: 无滤镜效果。 - **'blur(\&lt;length&gt;)'**：给图像设置高斯模糊，取值范围≥0，支持单位px、vp、rem，默认值：blur(0px)。 - **'brightness([\&lt;number&gt;\|\&lt;percentage&gt;])'**：给图片应用一种线性乘法，使其看起来更亮或更暗，支持数字和百分比参数，取值范围≥0，默认值：brightness(1)。 - **'contrast([\&lt;number&gt;\|\&lt;percentage&gt;])'**：调整图像的对比度，支持数字和百分比参数，取值范围≥0，默认值：contrast(1)。 - **'grayscale([\&lt;number&gt;\|\&lt;percentage&gt;])'**：将图像转换为灰度图像，支持数字和百分比参数，取值范围[0, 1]，默认值：grayscale(0)。 - **'hue-rotate(\&lt;angle&gt;)'**：给图像应用色相旋转，取值范围0deg-360deg，默认值：hue-rotate(0deg)。 - **'invert([\&lt;number&gt;\|\&lt;percentage&gt;])'**：反转输入图像，支持数字和百分比参数，取值范围[0, 1]，默认值：invert(0)。 - **'opacity([\&lt;number&gt;\|\&lt;percentage&gt;])'**：调整图像的透明程度，支持数字和百分比参数，取值范围[0, 1]，默认值：opacity(1)。 - **'saturate([\&lt;number&gt;\|\&lt;percentage&gt;])'**：转换图像饱和度，支持数字和百分比参数，取值范围≥0，默认值：saturate(1)。 - **'sepia([\&lt;number&gt;\|\&lt;percentage&gt;])'**：将图像转换为深褐色，支持数字和百分比参数，取值范围[0, 1]，默认值：sepia(0)。
+
+**类型：** string
+
+**默认值：** none
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-filter: string--><!--Device-CanvasRenderer-filter: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## font
+
+```TypeScript
+font: string
+```
+
+设置文本绘制中的字体样式，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 语法：ctx.font&nbsp;=&nbsp;'font-style&nbsp;font-weight&nbsp;font-size&nbsp;font-family' <br>-&nbsp;font-style(可选)，用于指定字体样式，支持如下几种样式：'normal','italic'。 <br>-&nbsp;font-weight(可选)，用于指定字体的粗细，支持如下几种类型：'normal',&nbsp;'bold', &nbsp;'bolder',&nbsp;'lighter',&nbsp;100,&nbsp;200,&nbsp;300,&nbsp;400,&nbsp;500,&nbsp;600, &nbsp;700,&nbsp;800,&nbsp;900。 <br>-&nbsp;font-size(可选)，指定字号和行高，单位支持px、vp。使用时需要添加单位。 <br>-&nbsp;font-family(可选)，指定字体系列，支持如下几种类型：'sans-serif',&nbsp;'serif', &nbsp;'monospace'。 从API version 20开始，支持通过该接口设置注册过的自定义字体（DevEco Studio的预览器不支持显示自定义字体）。 自定义字体注册有以下两种方式。 一种是通过ArkUI的异步接口 this.uiContext.getFont().[registerFont](../../../reference/apis-arkui/arkts-apis-uicontext-font.md#registerfont) 注册，调用后立即绘制可能会导致自定义字体不生效。 另一种是直接调用字体引擎的 fontCollection.[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) 接口来注册自定义字体到字体引擎。在直接调用字体引擎接口注册自定义字体时，fontCollection的实例需要是 text.FontCollection.getGlobalInstance()，因为组件默认会从该实例加载字体。 如果使用其他实例，可能会导致自定义字体不生效。
+
+**类型：** string
+
+**默认值：** normal normal 14px sans-serif
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-font: string--><!--Device-CanvasRenderer-font: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## globalAlpha
+
+```TypeScript
+globalAlpha: number
+```
+
+设置透明度，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 范围为[0.0, 1.0]，0.0为完全透明，1.0为完全不透明。若给定值小于0.0，则取值0.0； 若给定值大于1.0，则取值1.0。 API version 18之前，设置NaN或Infinity时，在该方法后执行的绘制方法无法绘制。 API version 18及以后，设置NaN或Infinity时当前接口不生效，其他传入有效参数的绘制方法正常绘制。 默认值：**1.0**
+
+**类型：** number
+
+**默认值：** 1.0
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-globalAlpha: number--><!--Device-CanvasRenderer-globalAlpha: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## globalCompositeOperation
+
+```TypeScript
+globalCompositeOperation: string
+```
+
+设置合成操作的类型，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 类型字段可选值有'source-over'，'source-atop'，'source-in'，'source-out'， 'destination-over'，'destination-atop'，'destination-in'，'destination-out'， 'lighter'，'copy'，'xor'。 | 名称 | 描述 | | ------ | ------ | | source-over | 在现有绘制内容上显示新绘制内容，属于默认值。 | | source-atop | 在现有绘制内容顶部显示新绘制内容。 | | source-in | 在现有绘制内容中显示新绘制内容。 | | source-out | 在现有绘制内容之外显示新绘制内容。 | | destination-over | 在新绘制内容上方显示现有绘制内容。 | | destination-atop | 在新绘制内容顶部显示现有绘制内容。 | | destination-in | 在新绘制内容中显示现有绘制内容。 | | destination-out | 在新绘制内容外显示现有绘制内容。 | | lighter | 显示新绘制内容和现有绘制内容。 | | copy | 显示新绘制内容而忽略现有绘制内容。 | | xor | 使用异或操作对新绘制内容与现有绘制内容进行融合。 | 默认值：**'source-over'**
+
+**类型：** string
+
+**默认值：** source-over
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-globalCompositeOperation: string--><!--Device-CanvasRenderer-globalCompositeOperation: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## imageSmoothingEnabled
+
+```TypeScript
+imageSmoothingEnabled: boolean
+```
+
+用于设置绘制图片时是否进行图像平滑度调整，true为启用，false为不启用，此属性为只写属性， 可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**true**
+
+**类型：** boolean
+
+**默认值：** true
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-imageSmoothingEnabled: boolean--><!--Device-CanvasRenderer-imageSmoothingEnabled: boolean-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## imageSmoothingQuality
+
+```TypeScript
+imageSmoothingQuality: ImageSmoothingQuality
+```
+
+imageSmoothingEnabled为true时，用于设置图像平滑度，此属性为只写属性， 可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**"low"**
+
+**类型：** [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
+
+**默认值：** low
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-imageSmoothingQuality: ImageSmoothingQuality--><!--Device-CanvasRenderer-imageSmoothingQuality: ImageSmoothingQuality-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## letterSpacing
+
+```TypeScript
+letterSpacing: LengthMetrics | string
+```
+
+用于指定绘制文本时字母之间的间距，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 当使用LengthMetrics时： 字间距按照指定的单位设置； 不支持FP、PERCENT和LPX（按无效值处理）； 支持负数和小数，设为小数时字间距不四舍五入。 当使用string时： 不支持设置百分比（按无效值处理）； 支持负数和小数，设为小数时字间距不四舍五入； 若letterSpacing的赋值未指定单位（例如：**letterSpacing='10'**）， 且未指定LengthMetricsUnit时，默认单位设置为vp； 指定LengthMetricsUnit为px时，默认单位设置为px； 当letterSpacing的赋值指定单位时（例如：**letterSpacing='10vp'**）， 字间距按照指定的单位设置。 默认值：**0**（输入无效值时，字间距设为默认值） > **说明：** > > 推荐使用LengthMetrics，性能更好。
+
+**类型：** LengthMetrics \| string
+
+**默认值：** 0vp
+
+**起始版本：** 18
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CanvasRenderer-letterSpacing: LengthMetrics | string--><!--Device-CanvasRenderer-letterSpacing: LengthMetrics | string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## lineCap
+
+```TypeScript
+lineCap: CanvasLineCap
+```
+
+指定线端点的样式，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。
+
+**类型：** [CanvasLineCap](arkts-arkui-canvaslinecap-t.md)
+
+**默认值：** butt
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-lineCap: CanvasLineCap--><!--Device-CanvasRenderer-lineCap: CanvasLineCap-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## lineDashOffset
+
+```TypeScript
+lineDashOffset: number
+```
+
+设置画布的虚线偏移量，精度为float，仅当设置setLineDash时属性才生效，此属性为只写属性， 可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 API version 18之前，设置NaN或Infinity时，设置了虚线样式的线条绘制出来是实线。 API version 18及以后，设置NaN或Infinity时当前接口不生效，设置了虚线样式的线条绘制出来是虚线。 默认值：**0.0** 默认单位：vp 异常值NaN和Infinity按默认值处理。
+
+**类型：** number
+
+**默认值：** 0.0
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-lineDashOffset: number--><!--Device-CanvasRenderer-lineDashOffset: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## lineJoin
+
+```TypeScript
+lineJoin: CanvasLineJoin
+```
+
+指定线段间相交的交点样式，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 <br>可选值为： <br>- **'round'**：在线段相连处绘制一个扇形，扇形的圆角半径是线段的宽度。 <br>- **'bevel'**：在线段相连处使用三角形为底填充，每个部分矩形拐角独立。 <br>- **'miter'**：在相连部分的外边缘处进行延伸，使其相交于一点，形成一个菱形区域， 该属性可以通过设置miterLimit属性展现效果。 <br>默认值：**'miter'**
+
+**类型：** [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
+
+**默认值：** miter
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-lineJoin: CanvasLineJoin--><!--Device-CanvasRenderer-lineJoin: CanvasLineJoin-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## lineWidth
+
+```TypeScript
+lineWidth: number
+```
+
+设置绘制线条的宽度，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**1**（px） 默认单位：vp lineWidth取值不支持0和负数，0、负数和NaN按默认值处理，Infinity会导致lineWidth属性异常，不进行绘制。
+
+**类型：** number
+
+**默认值：** 1(px)
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-lineWidth: number--><!--Device-CanvasRenderer-lineWidth: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## miterLimit
+
+```TypeScript
+miterLimit: number
+```
+
+设置斜接面限制值，该值指定了线条相交处内角和外角的距离，仅当设置了lineJoin为miter才生效， 此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**10px** 单位：px miterLimit取值不支持0和负数，0、负数和NaN按默认值处理，Infinity会导致miterLimit属性异常。
+
+**类型：** number
+
+**默认值：** 10(px)
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-miterLimit: number--><!--Device-CanvasRenderer-miterLimit: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowBlur
+
+```TypeScript
+shadowBlur: number
+```
+
+设置绘制阴影时的模糊级别，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 值越大越模糊，精度为float，取值范围≥0。 默认值：**0.0** 单位：px shadowBlur取值不支持负数，负数、NaN和Infinity按默认值处理。
+
+**类型：** number
+
+**默认值：** 0
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-shadowBlur: number--><!--Device-CanvasRenderer-shadowBlur: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowColor
+
+```TypeScript
+shadowColor: string
+```
+
+设置绘制阴影时的阴影颜色，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中string类型说明。 默认值：透明黑色
+
+**类型：** string
+
+**默认值：** transparent black
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-shadowColor: string--><!--Device-CanvasRenderer-shadowColor: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowOffsetX
+
+```TypeScript
+shadowOffsetX: number
+```
+
+设置绘制阴影时和原有对象的水平偏移值，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**0.0** 默认单位：vp 异常值NaN和Infinity按默认值处理。
+
+**类型：** number
+
+**默认值：** 0
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-shadowOffsetX: number--><!--Device-CanvasRenderer-shadowOffsetX: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## shadowOffsetY
+
+```TypeScript
+shadowOffsetY: number
+```
+
+设置绘制阴影时和原有对象的垂直偏移值，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**0.0** 默认单位：vp 异常值NaN和Infinity按默认值处理。
+
+**类型：** number
+
+**默认值：** 0
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-shadowOffsetY: number--><!--Device-CanvasRenderer-shadowOffsetY: number-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## strokeStyle
+
+```TypeScript
+strokeStyle: string | number | CanvasGradient | CanvasPattern
+```
+
+设置线条的颜色，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 - 类型为string时，表示设置线条使用的颜色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中string类型说明。 - 类型为number时，表示设置线条使用的颜色，不支持设置全透明色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中number类型说明。 - 类型为CanvasGradient时，表示渐变对象，使用createLinearGradient方法创建。 - 类型为CanvasPattern时，使用createPattern方法创建。 默认值：'#000000'（黑色） 异常值设置无效，保持设置前效果。
+
+**类型：** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
+
+**默认值：** #000000 (black)
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-strokeStyle: string | number | CanvasGradient | CanvasPattern--><!--Device-CanvasRenderer-strokeStyle: string | number | CanvasGradient | CanvasPattern-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## textAlign
+
+```TypeScript
+textAlign: CanvasTextAlign
+```
+
+设置文本绘制中的文本对齐方式，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 ltr布局模式下'start'和'left'一致，rtl布局模式下'start'和'right'一致。 默认值：**'left'**
+
+**类型：** [CanvasTextAlign](arkts-arkui-canvastextalign-t.md)
+
+**默认值：** left
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-textAlign: CanvasTextAlign--><!--Device-CanvasRenderer-textAlign: CanvasTextAlign-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## textBaseline
+
+```TypeScript
+textBaseline: CanvasTextBaseline
+```
+
+设置文本绘制中的水平对齐方式，此属性为只写属性，可通过赋值语句设置其值，但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 默认值：**'alphabetic'**
+
+**类型：** [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md)
+
+**默认值：** alphabetic
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-CanvasRenderer-textBaseline: CanvasTextBaseline--><!--Device-CanvasRenderer-textBaseline: CanvasTextBaseline-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

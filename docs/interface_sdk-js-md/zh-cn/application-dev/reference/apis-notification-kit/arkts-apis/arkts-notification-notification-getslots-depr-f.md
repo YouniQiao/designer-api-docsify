@@ -1,5 +1,15 @@
 # getSlots
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
+```
+
 ## getSlots
 
 ```TypeScript
@@ -22,7 +32,7 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | 是 | 以callback形式返回获取此应用程序的所有通知通道的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | 是 | 以callback形式返回获取此应用程序的所有通知通道的结果。 |
 
 
 ## getSlots

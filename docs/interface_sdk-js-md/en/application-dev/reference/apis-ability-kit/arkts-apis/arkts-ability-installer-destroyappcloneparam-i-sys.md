@@ -13,7 +13,8 @@ Describes the parameters used for destroying an application clone.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from 'installer';
+import { installer } from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## parameters

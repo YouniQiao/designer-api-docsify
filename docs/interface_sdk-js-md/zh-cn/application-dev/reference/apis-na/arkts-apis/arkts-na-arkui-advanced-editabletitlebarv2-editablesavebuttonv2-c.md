@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -32,7 +37,7 @@ EditableSaveButtonV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableSaveButtonV2Options](arkts-na-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | 否 | 保存按钮配置选项。 |
+| options | [EditableSaveButtonV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | 否 | 保存按钮配置选项。 |
 
 ## defaultFocus
 
@@ -89,7 +94,7 @@ EditableSaveButtonV2的构造函数。
 
 点击保存按钮的回调函数。未设置时点击按钮无响应。
 
-**类型：** [OnActionCallback](arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

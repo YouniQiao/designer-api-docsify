@@ -11,7 +11,8 @@ The module provides APIs to query whether the current application is the default
 ## Modules to Import
 
 ```TypeScript
-import { defaultAppManager } from 'defaultAppManager';
+import { defaultAppManager } from '@kit.AbilityKit';
+import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

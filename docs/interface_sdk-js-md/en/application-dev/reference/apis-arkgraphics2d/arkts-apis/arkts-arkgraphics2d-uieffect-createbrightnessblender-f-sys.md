@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'uiEffect';
+import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createBrightnessBlender

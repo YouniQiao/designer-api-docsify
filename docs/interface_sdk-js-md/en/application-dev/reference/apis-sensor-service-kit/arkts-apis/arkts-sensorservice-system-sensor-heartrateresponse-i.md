@@ -17,27 +17,7 @@ Defines a **HeartRateResponse** object.
 ## Modules to Import
 
 ```TypeScript
-import { AccelerometerResponse } from 'AccelerometerResponse';
-import { BarometerResponse } from 'BarometerResponse';
-import { CompassResponse } from 'CompassResponse';
-import { DeviceOrientationResponse } from 'DeviceOrientationResponse';
-import { GetOnBodyStateOptions } from 'GetOnBodyStateOptions';
-import { GyroscopeResponse } from 'GyroscopeResponse';
-import { HeartRateResponse } from 'HeartRateResponse';
-import { LightResponse } from 'LightResponse';
-import { OnBodyStateResponse } from 'OnBodyStateResponse';
-import { ProximityResponse } from 'ProximityResponse';
-import { StepCounterResponse } from 'StepCounterResponse';
-import { SubscribeBarometerOptions } from 'SubscribeBarometerOptions';
-import { SubscribeCompassOptions } from 'SubscribeCompassOptions';
-import { SubscribeDeviceOrientationOptions } from 'SubscribeDeviceOrientationOptions';
-import { SubscribeGyroscopeOptions } from 'SubscribeGyroscopeOptions';
-import { SubscribeHeartRateOptions } from 'SubscribeHeartRateOptions';
-import { SubscribeLightOptions } from 'SubscribeLightOptions';
-import { SubscribeOnBodyStateOptions } from 'SubscribeOnBodyStateOptions';
-import { SubscribeProximityOptions } from 'SubscribeProximityOptions';
-import { SubscribeStepCounterOptions } from 'SubscribeStepCounterOptions';
-import { subscribeAccelerometerOptions } from 'subscribeAccelerometerOptions';
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## heartRate

@@ -12,3 +12,8 @@ Implements a **UserDataSpan** object for storing and obtaining user data. Only t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

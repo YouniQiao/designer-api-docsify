@@ -10,6 +10,11 @@ Defines the parameters for enableAdvancedSecurityMode.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## disableJITCompilation
 
 ```TypeScript

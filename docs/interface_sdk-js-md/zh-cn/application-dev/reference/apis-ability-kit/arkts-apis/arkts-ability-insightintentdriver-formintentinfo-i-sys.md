@@ -10,6 +10,11 @@ FormIntentInfo用于描述 @InsightIntentForm 装饰器支持的参数，例如�
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## abilityName
 
 ```TypeScript

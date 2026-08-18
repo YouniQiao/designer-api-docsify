@@ -1,5 +1,15 @@
 # publish
 
+## 导入模块
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
+```
+
 ## publish
 
 ```TypeScript
@@ -23,7 +33,7 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 发布通知的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发布通知的回调方法。 |
 
 
 ## publish

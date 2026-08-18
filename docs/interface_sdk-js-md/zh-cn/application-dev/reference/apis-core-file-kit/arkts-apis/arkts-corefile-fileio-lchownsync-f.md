@@ -1,5 +1,10 @@
 # lchownSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## lchownSync
 
 ```TypeScript

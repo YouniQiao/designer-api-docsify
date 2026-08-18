@@ -1,5 +1,10 @@
 # isModifyAutoStartAppsDisallowed
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isModifyAutoStartAppsDisallowed
 
 ```TypeScript

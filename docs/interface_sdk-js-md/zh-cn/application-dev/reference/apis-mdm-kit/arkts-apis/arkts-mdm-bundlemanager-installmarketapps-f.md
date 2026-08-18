@@ -1,5 +1,10 @@
 # installMarketApps
 
+## 导入模块
+
+```TypeScript
+```
+
 ## installMarketApps
 
 ```TypeScript

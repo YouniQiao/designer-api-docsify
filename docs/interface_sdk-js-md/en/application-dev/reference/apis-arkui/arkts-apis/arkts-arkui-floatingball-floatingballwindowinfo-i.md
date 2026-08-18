@@ -11,7 +11,7 @@ Describes the floating ball window information.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'floatingBall';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## windowId

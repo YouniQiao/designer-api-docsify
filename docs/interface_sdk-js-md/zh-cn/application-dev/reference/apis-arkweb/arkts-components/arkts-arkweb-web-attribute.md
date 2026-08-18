@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## aiSessionOptions
 
 ```TypeScript
@@ -1003,7 +1008,7 @@ keyboardAppearance(mode: WebKeyboardAppearanceMode)
 keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 ```
 
-Web组件自定义软件键盘避让模式。 当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md#keyboardavoidmode)模式时，该接口功能不生效。
+Web组件自定义软件键盘避让模式。 当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md#keyboardavoidmode)模式时，该接口功能不生效。
 
 **起始版本：** 12
 

@@ -11,7 +11,7 @@ Provides interfaces to manage ethernet.
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'eap';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## Summary

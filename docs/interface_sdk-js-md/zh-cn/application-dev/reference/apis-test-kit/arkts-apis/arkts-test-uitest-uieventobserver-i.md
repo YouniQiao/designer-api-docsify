@@ -8,6 +8,11 @@ UI事件监听器。
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onceComponentEventOccur
 
 ```TypeScript
@@ -28,7 +33,7 @@ Listen on component event once, additional listening options can be set.
 | --- | --- | --- | --- |
 | componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | 是 | Component event type to be listened on. |
 | options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | 是 | Additional listening options of component event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
@@ -84,7 +89,7 @@ Listen for dialog show once
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
@@ -128,7 +133,7 @@ Listen for toast show once
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
@@ -174,7 +179,7 @@ Listen on window change once, additional listening options can be set.
 | --- | --- | --- | --- |
 | windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 是 | Window change type to be listened on. |
 | options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | 是 | Additional listening options of window change. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
@@ -230,7 +235,7 @@ once(type: 'componentEventOccur', componentEventType: ComponentEventType, option
 | type | 'componentEventOccur' | 是 | 订阅的事件类型，支持的事件为'componentEventOccur'。当监听到控件操作时，触发该事件。 |
 | componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | 是 | 控件操作事件类型。 |
 | options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | 是 | 控件操作事件监听的扩展配置，包括监听超时时间和监听控件匹配条件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
 
 **错误码：**
 
@@ -289,7 +294,7 @@ once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dialogShow' | 是 | 订阅的事件类型，取值为'dialogShow'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
 
 **错误码：**
 
@@ -336,7 +341,7 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'toastShow' | 是 | 订阅的事件类型，取值为'toastShow'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
 
 **错误码：**
 
@@ -389,7 +394,7 @@ once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowCh
 | type | 'windowChange' | 是 | 订阅的事件类型，支持的事件为'windowChange'。当监听到窗口变化时，触发该事件。 |
 | windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 是 | 窗口变化事件类型。 |
 | options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | 是 | 窗口变化事件监听的扩展配置，包括监听超时时间和监听窗口对应包名。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数，返回事件的相关信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数，返回事件的相关信息。 |
 
 **错误码：**
 

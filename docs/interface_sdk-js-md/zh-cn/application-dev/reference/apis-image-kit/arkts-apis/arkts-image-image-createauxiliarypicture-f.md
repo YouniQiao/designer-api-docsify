@@ -1,5 +1,10 @@
 # createAuxiliaryPicture
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createAuxiliaryPicture
 
 ```TypeScript

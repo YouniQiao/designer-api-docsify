@@ -15,7 +15,8 @@ Define configuration of the system VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from 'vpn';
+import { vpn } from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## forwardingRoutes

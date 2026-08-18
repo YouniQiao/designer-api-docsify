@@ -1,5 +1,10 @@
 # mkdtempSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## mkdtempSync
 
 ```TypeScript

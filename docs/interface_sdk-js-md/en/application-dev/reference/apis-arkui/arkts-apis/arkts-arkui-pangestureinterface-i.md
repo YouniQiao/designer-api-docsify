@@ -10,6 +10,11 @@ PanGesture is used to trigger a pan gesture when the movement distance of a fing
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

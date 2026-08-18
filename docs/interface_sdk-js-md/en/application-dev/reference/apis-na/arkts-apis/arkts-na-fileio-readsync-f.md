@@ -1,5 +1,10 @@
 # readSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## readSync
 
 ```TypeScript

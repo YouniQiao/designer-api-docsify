@@ -1,0 +1,105 @@
+# createPixelMapFromParcel
+
+## Modules to Import
+
+```TypeScript
+```
+
+## createPixelMapFromParcel
+
+```TypeScript
+function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap
+```
+
+Creates a PixelMap object based on MessageSequence parameter.
+
+**Since:** 23
+
+<!--Device-image-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap--><!--Device-image-function createPixelMapFromParcel(sequence: rpc.MessageSequence): PixelMap-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sequence | rpc.MessageSequence | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PixelMap](arkts-image-image-pixelmap-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980177](../errorcode-image.md#62980177-abnormal-api-environment) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
+| [62980180](../errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) |
+| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) |
+
+**Examples**
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MySequence implements rpc.Parcelable {
+  pixelMap: image.PixelMap;
+  constructor(pixelMap: image.PixelMap) {
+    this.pixelMap = pixelMap;
+  }
+  marshalling(messageSequence: rpc.MessageSequence) {
+    this.pixelMap.marshalling(messageSequence);
+    return true;
+  }
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    try {
+      this.pixelMap = image.createPixelMapFromParcel(messageSequence);
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`Failed to create the PixelMap from parcel. Code: ${err.code}, message: ${err.message}`);
+      return false;
+    }
+    return true;
+  }
+}
+
+async function createPixelMapFromParcel() {
+  const color: ArrayBuffer = new ArrayBuffer(96);
+  let bufferArr: Uint8Array = new Uint8Array(color);
+  for (let i = 0; i < bufferArr.length; i++) {
+    bufferArr[i] = 0x80;
+  }
+  let opts: image.InitializationOptions = {
+    editable: true,
+    pixelFormat: image.PixelMapFormat.BGRA_8888,
+    size: { height: 4, width: 6 },
+    alphaType: image.AlphaType.UNPREMUL
+  };
+  const pixelMap: image.PixelMap | undefined = await image.createPixelMap(color, opts);
+  if (pixelMap != undefined) {
+    // Implement serialization.
+    let parcelable: MySequence = new MySequence(pixelMap);
+    let data: rpc.MessageSequence = rpc.MessageSequence.create();
+    data.writeParcelable(parcelable);
+
+    // Implement deserialization to obtain data through the RPC.
+    let seq: MySequence = new MySequence(pixelMap);
+    data.readParcelable(seq);
+
+    // Obtain the PixelMap.
+    let newPixelMap = seq.pixelMap;
+    if (newPixelMap != undefined) {
+      console.info('Succeeded in getting the PixelMap.');
+    }
+  }
+}
+```

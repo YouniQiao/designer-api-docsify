@@ -8,6 +8,11 @@ Describes the custom span. Only the base class is provided. You need to define t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## invalidate
 
 ```TypeScript

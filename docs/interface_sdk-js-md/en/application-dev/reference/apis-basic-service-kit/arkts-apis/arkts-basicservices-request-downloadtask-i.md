@@ -11,7 +11,9 @@ Implements file downloads. Before using any APIs of this class, you must obtain 
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'request';
+import { request } from '@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## delete

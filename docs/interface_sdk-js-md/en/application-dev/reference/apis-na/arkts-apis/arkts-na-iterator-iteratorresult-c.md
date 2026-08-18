@@ -10,6 +10,11 @@ Represents an iterator result object containing whether iteration is done and th
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

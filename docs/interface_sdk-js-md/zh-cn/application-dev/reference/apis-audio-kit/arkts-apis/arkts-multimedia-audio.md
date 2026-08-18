@@ -9,6 +9,11 @@
 **系统能力：** 
 - API版本12+：SystemCapability.Multimedia.Audio.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

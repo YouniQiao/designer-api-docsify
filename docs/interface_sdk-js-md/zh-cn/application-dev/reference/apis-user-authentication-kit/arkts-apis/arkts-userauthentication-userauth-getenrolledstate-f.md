@@ -1,5 +1,10 @@
 # getEnrolledState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getEnrolledState
 
 ```TypeScript

@@ -13,7 +13,7 @@ Configuration parameters for simulating reverse geocoding.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'geoLocationManager';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## geoAddress

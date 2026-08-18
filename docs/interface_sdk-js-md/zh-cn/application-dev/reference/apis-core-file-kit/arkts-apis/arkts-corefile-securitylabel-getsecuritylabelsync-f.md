@@ -1,5 +1,10 @@
 # getSecurityLabelSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSecurityLabelSync
 
 ```TypeScript

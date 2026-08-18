@@ -1,5 +1,10 @@
 # startAppTraceCapture
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startAppTraceCapture
 
 ```TypeScript

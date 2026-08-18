@@ -292,7 +292,7 @@ prefix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-na-componentcontent-c.md)&lt;T&gt; \| undefined | Yes |  |
+| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| undefined | Yes |  |
 | options | [SliderPrefixOptions](arkts-na-slider-sliderprefixoptions-i.md) \| undefined | No |  |
 
 **Return value:**
@@ -559,7 +559,7 @@ suffix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-na-componentcontent-c.md)&lt;T&gt; \| undefined | Yes |  |
+| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| undefined | Yes |  |
 | options | [SliderSuffixOptions](arkts-na-slider-slidersuffixoptions-i.md) \| undefined | No |  |
 
 **Return value:**

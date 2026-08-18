@@ -1,0 +1,65 @@
+# parseAdResponse
+
+## Modules to Import
+
+```TypeScript
+```
+
+## parseAdResponse
+
+```TypeScript
+function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, 
+    context: common.UIAbilityContext): void
+```
+
+Parses and processes the body of an ad response (this API is only open to some pre-installed system applications).
+
+**Since:** 12
+
+<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void-End-->
+
+**System capability:** SystemCapability.Advertising.Ads
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| adResponse | string | Yes |
+| listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | Yes |
+| context | common.UIAbilityContext | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../errorcode-ads.md#801-ad-request-failure) |
+| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+
+**Examples**
+
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { advertising } from '@kit.AdsKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+function parseAdResponse(adResponse: string, context: common.UIAbilityContext): void {
+  // Listen for the ad parsing callback.
+  const multiSlotsAdLoaderListener: advertising.MultiSlotsAdLoadListener = {
+    onAdLoadFailure: (errorCode: number, errorMsg: string) => {
+      hilog.error(0x0000, 'testTag', `Failed to load multiSlots ad. Code is ${errorCode}, message is ${errorMsg}`);
+    },
+    onAdLoadSuccess: (ads: Map<string, Array<advertising.Advertisement>>) => {
+      hilog.info(0x0000, 'testTag', 'Succeeded in loading multiSlots ad');
+      // Save the parsed ad content for display.
+      const returnAds: advertising.Advertisement[] = [];
+      ads.forEach((adsArray) => returnAds.push(...adsArray));
+    }
+  };
+  // Call the API to parse the response body.
+  advertising.parseAdResponse(adResponse, multiSlotsAdLoaderListener, context);
+}
+```

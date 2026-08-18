@@ -1,6 +1,6 @@
 # PathShape
 
-Represents a path used in the **clipShape** and **maskShape** APIs. This API inherits from [CommonShapeMethod](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#commonshapemethod).
+Represents a path used in the **clipShape** and **maskShape** APIs. This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#commonshapemethod).
 
 **Inheritance/Implementation:** PathShape extends CommonShapeMethod<PathShape>
 
@@ -13,10 +13,7 @@ Represents a path used in the **clipShape** and **maskShape** APIs. This API inh
 ## Modules to Import
 
 ```TypeScript
-import { RectShape } from 'RectShape';
-import { CircleShape } from 'CircleShape';
-import { EllipseShape } from 'EllipseShape';
-import { PathShape } from 'PathShape';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## commands
@@ -49,7 +46,7 @@ Sets the path drawing commands.
 
 | Type | Description |
 | --- | --- |
-| [PathShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-pathshape-c.md) | PathShape** object. |
+| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | PathShape** object. |
 
 ## constructor
 
@@ -75,5 +72,5 @@ A constructor used to create a **PathShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-pathshapeoptions-i.md) | No | Path parameters. |
+| options | [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | No | Path parameters. |
 

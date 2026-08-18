@@ -11,7 +11,7 @@ URI Represents a Uniform Resource Identifier (URI) reference.
 ## Modules to Import
 
 ```TypeScript
-import { uri } from 'uri';
+import { uri } from '@kit.ArkTS';
 ```
 
 ## addEncodedSegment

@@ -1,5 +1,10 @@
 # oncePedometerDetectionChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## oncePedometerDetectionChange
 
 ```TypeScript
@@ -20,7 +25,7 @@ Subscribe to pedometer detection sensor data once, {@code SensorId.PEDOMETER_DET
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 是 | callback pedometer detection data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 是 | callback pedometer detection data. |
 
 **错误码：**
 

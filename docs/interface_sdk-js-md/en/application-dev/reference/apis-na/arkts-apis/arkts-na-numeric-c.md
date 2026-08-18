@@ -12,6 +12,11 @@ Can be implemented by any type that represents a numeric value
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## toByte
 
 ```TypeScript

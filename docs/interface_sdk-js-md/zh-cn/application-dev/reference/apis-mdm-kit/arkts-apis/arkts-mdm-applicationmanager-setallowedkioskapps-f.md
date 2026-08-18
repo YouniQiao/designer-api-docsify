@@ -1,5 +1,10 @@
 # setAllowedKioskApps
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setAllowedKioskApps
 
 ```TypeScript

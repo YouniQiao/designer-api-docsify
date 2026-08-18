@@ -8,6 +8,11 @@ Obtains data through a network.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fetch
 
 ```TypeScript

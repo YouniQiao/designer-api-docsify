@@ -13,7 +13,7 @@ Describes the details of a cloud media asset download task. It is the return val
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## errorCode

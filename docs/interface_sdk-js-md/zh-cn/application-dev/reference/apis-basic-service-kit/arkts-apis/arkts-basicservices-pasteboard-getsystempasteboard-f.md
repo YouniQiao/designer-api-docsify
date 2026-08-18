@@ -1,5 +1,10 @@
 # getSystemPasteboard
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemPasteboard
 
 ```TypeScript

@@ -25,7 +25,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'uniformTypeDescriptor';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## Summary

@@ -12,6 +12,11 @@ The appManager module provides APIs for application management. For example, you
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

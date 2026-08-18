@@ -8,6 +8,11 @@ ImageSource类，用于获取图片相关信息。 在调用ImageSource的方法
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createWideGamutSdrPixelMap
 
 ```TypeScript

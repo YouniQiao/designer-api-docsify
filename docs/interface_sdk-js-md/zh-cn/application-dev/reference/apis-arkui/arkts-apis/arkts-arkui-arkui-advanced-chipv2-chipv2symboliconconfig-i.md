@@ -8,6 +8,11 @@ ChipV2SymbolIconConfig定义Symbol图标的属性配置。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## activated
 
 ```TypeScript

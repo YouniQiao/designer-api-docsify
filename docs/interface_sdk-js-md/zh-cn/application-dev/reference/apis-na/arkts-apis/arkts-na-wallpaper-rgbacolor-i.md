@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alpha
 
 ```TypeScript

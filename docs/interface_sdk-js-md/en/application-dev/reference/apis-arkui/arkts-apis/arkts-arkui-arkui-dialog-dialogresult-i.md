@@ -11,12 +11,7 @@ Response result for dialog.
 ## Modules to Import
 
 ```TypeScript
-import { DialogBaseAlignment } from 'DialogBaseAlignment';
-import { DialogButtonOrientation } from 'DialogButtonOrientation';
-import { DialogState } from 'DialogState';
-import { DialogResult } from 'DialogResult';
-import { DialogDismissal } from 'DialogDismissal';
-import { DialogBaseController } from 'DialogBaseController';
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
 ```
 
 ## dialogId

@@ -8,6 +8,11 @@ How the color property is updated. > **NOTE：**> > To standardize anonymous obj
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## config
 
 ```TypeScript

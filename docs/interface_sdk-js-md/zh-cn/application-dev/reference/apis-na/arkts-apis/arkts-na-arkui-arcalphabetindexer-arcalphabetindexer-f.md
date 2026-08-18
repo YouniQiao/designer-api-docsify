@@ -1,5 +1,10 @@
 # ArcAlphabetIndexer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## ArcAlphabetIndexer
 
 ```TypeScript
@@ -25,7 +30,7 @@ export declare function ArcAlphabetIndexer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数。 |
+| info | [ArcAlphabetIndexerInitInfo](arkts-na-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数。 |
 
 **返回值：**
 

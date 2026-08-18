@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from 'dlpSetDlpFeature';
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## Summary

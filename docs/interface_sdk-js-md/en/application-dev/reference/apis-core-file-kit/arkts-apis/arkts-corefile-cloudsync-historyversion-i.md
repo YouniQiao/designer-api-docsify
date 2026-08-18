@@ -11,7 +11,10 @@ Represents the historical version information of the device-cloud file when the 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## autoResolved

@@ -11,7 +11,7 @@ This interface is used to obtain the progress information of file upload or down
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'http';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## receiveSize

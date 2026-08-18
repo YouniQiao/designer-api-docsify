@@ -15,7 +15,7 @@ Represents the information returned when the move operation fails. If the operat
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## destUri

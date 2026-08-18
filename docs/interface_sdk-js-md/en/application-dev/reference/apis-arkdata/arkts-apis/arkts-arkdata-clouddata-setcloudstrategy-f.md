@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'cloudData';
+import { cloudData } from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## setCloudStrategy

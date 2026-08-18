@@ -1,0 +1,43 @@
+# setCameraTrackingEnabled
+
+## Modules to Import
+
+```TypeScript
+```
+
+## setCameraTrackingEnabled
+
+```TypeScript
+function setCameraTrackingEnabled(isEnabled: boolean): void
+```
+
+Enables or disables camera tracking.
+
+**Since:** 23
+
+<!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void--><!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| isEnabled | boolean | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) |
+
+**Examples**
+
+```TypeScript
+console.info('Enable tracing');
+// Call the setCameraTrackingEnabled method. The value true indicates enabling camera tracking.
+mechanicManager.setCameraTrackingEnabled(true);
+console.info('Succeeded in enabling tracking.');
+```

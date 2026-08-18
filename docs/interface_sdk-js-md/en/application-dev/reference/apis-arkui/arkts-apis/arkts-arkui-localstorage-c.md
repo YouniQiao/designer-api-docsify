@@ -8,6 +8,11 @@ For details about how to use LocalStorage on the UI, see [LocalStorage: UI State
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## GetShared
 
 ```TypeScript

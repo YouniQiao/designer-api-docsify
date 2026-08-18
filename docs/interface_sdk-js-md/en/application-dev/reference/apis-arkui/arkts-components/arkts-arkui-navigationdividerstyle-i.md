@@ -8,6 +8,11 @@ Color of the navigation divider and the upper and lower margins of the **Navigat
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

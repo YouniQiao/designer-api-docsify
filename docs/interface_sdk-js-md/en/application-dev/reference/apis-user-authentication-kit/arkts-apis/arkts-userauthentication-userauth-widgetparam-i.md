@@ -11,7 +11,10 @@ Represents the information presented on the user authentication page. This API i
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## navigationButtonText

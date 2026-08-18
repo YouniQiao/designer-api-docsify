@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DataShareExtensionAbility } from 'DataShareExtensionAbility';
+import { DataShareExtensionAbility } from '@kit.ArkData';
 ```
 
 ## Summary

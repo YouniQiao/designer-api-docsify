@@ -11,12 +11,7 @@ Defines the struct of Theme.
 ## Modules to Import
 
 ```TypeScript
-import { Colors } from 'Colors';
-import { CustomColors } from 'CustomColors';
-import { Theme } from 'Theme';
-import { ThemeControl } from 'ThemeControl';
-import { CustomTheme } from 'CustomTheme';
-import { CustomDarkColors } from 'CustomDarkColors';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## colors
@@ -27,7 +22,7 @@ colors: Colors
 
 Define tokens associated with color resources.
 
-**Type:** [Colors](arkts-arkui-arkui-theme-colors-i.md)
+**Type:** [Colors](../../apis-na/arkts-apis/arkts-na-arkui-theme-colors-i.md)
 
 **Since:** 12
 

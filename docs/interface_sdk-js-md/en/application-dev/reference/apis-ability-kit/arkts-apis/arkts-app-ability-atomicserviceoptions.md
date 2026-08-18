@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceOptions } from 'AtomicServiceOptions';
+import { AtomicServiceOptions } from '@kit.AbilityKit';
+import { AtomicServiceOptions } from '@kit.AbilityKit';
 ```
 
 ## Summary

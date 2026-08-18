@@ -10,6 +10,11 @@ Represents a full drawing result.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getLastParticipationTimestamp
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getLastParticipationTimestamp
 
 ```TypeScript

@@ -12,6 +12,11 @@ Provides a stream for file operations. Before calling any API of the **Stream** 
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

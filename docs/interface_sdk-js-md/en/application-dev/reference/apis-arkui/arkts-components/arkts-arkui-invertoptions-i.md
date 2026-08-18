@@ -8,6 +8,11 @@ Describes the options for inverting the foreground color.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## high
 
 ```TypeScript

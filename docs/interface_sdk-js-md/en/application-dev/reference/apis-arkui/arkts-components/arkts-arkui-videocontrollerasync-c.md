@@ -8,6 +8,11 @@ Video playback controller class for asynchronous operations. Provides methods to
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

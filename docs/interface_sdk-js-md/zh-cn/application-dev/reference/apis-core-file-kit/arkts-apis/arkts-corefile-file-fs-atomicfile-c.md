@@ -8,6 +8,11 @@ AtomicFile是一个用于对文件进行原子读写操作的类。 在写操作
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

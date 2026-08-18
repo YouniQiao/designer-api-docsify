@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Vector } from 'Vector';
+import { Vector } from '@kit.ArkTS';
 ```
 
 ## Summary

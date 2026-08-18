@@ -2,7 +2,7 @@
 
 Defines the lazy custom layout algorithm.
 
-**Inheritance/Implementation:** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md#lazylayoutalgorithm)
+**Inheritance/Implementation:** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-na-lazylayoutalgorithm-i.md#lazylayoutalgorithm)
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [LazyCustomLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | No | set properties of lazy custom layout algorithm. |
+| option | [LazyCustomLayoutAlgorithmOptions](arkts-na-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | No | set properties of lazy custom layout algorithm. |
 
 ## onLayout
 
@@ -85,5 +85,5 @@ Method to measure the DynamicLayout FrameNode and its content to determine the m
 | --- | --- | --- | --- |
 | self | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
 | constraint | [LayoutConstraint](../../apis-arkui/arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) | Yes | The layout constraint of the node, which will be used in measure process. |
-| helper | [LazyLayoutHelper](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | No | The helper object for lazy layout algorithm, which provides layout direction and view position information. If undefined, it indicates that the current component is not used under a scrollable component and does not support lazy layout. |
+| helper | [LazyLayoutHelper](arkts-na-lazylayoutalgorithm-lazylayouthelper-c.md) | No | The helper object for lazy layout algorithm, which provides layout direction and view position information. If undefined, it indicates that the current component is not used under a scrollable component and does not support lazy layout. |
 

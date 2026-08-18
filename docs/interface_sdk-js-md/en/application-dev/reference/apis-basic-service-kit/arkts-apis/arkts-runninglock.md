@@ -11,7 +11,7 @@ The **runningLock** module provides APIs for creating, querying, holding, and re
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from 'runningLock';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

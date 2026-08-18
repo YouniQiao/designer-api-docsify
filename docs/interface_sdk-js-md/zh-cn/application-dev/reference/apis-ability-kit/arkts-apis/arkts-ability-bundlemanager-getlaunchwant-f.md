@@ -1,5 +1,10 @@
 # getLaunchWant
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getLaunchWant
 
 ```TypeScript

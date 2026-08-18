@@ -13,7 +13,8 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from 'missionManager';
+import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

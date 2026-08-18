@@ -1,5 +1,10 @@
 # getInstallLocalEnterpriseAppEnabledForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInstallLocalEnterpriseAppEnabledForAccount
 
 ```TypeScript

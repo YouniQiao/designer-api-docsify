@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offEnableChange
 
 ```TypeScript
@@ -26,7 +31,7 @@ Unregister the observe of the enable state.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |  |
 
 **示例**
 
@@ -76,7 +81,7 @@ Unregister the observer of the style.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 |  |
 
 **示例**
 
@@ -129,7 +134,7 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'enableChange' | 是 | 取消监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与 [on('enableChange')](#onenablechange) 的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与 [on('enableChange')](#onenablechange) 的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -188,7 +193,7 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'styleChange' | 是 | 取消监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与 [on('styleChange')](#onenablechange) 的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与 [on('styleChange')](#onenablechange) 的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -244,7 +249,7 @@ Register the observe of the enable state.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |  |
 
 **示例**
 
@@ -289,7 +294,7 @@ Register the observer of the style.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 是 |  |
 
 **示例**
 
@@ -337,7 +342,7 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'enableChange' | 是 | 监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数。在启用状态变化时将状态通过此函数进行通知。返回true表示字幕配置开启；返回false表示字幕配置关闭。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。在启用状态变化时将状态通过此函数进行通知。返回true表示字幕配置开启；返回false表示字幕配置关闭。 |
 
 **错误码：**
 
@@ -391,7 +396,7 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'styleChange' | 是 | 监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 是 | 回调函数，在字幕风格变化时通过此函数进行通知。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 是 | 回调函数，在字幕风格变化时通过此函数进行通知。 |
 
 **错误码：**
 

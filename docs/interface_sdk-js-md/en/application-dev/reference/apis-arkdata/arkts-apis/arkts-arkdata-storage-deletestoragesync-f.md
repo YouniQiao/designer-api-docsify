@@ -1,5 +1,10 @@
 # deleteStorageSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## deleteStorageSync
 
 ```TypeScript

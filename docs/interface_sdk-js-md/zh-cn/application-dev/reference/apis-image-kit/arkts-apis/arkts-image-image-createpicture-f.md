@@ -1,5 +1,10 @@
 # createPicture
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPicture
 
 ```TypeScript

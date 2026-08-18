@@ -12,6 +12,11 @@ agentManager模块提供Agent管理能力，支持AgentExtensionAbility的连接
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

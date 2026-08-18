@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from 'commonEventManager';
+import { commonEventManager } from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## publishAsUser

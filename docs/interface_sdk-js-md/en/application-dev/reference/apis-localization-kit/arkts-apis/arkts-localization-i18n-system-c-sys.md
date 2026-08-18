@@ -11,7 +11,8 @@ Provides system attribute configuration functions, including translating languag
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addPreferredLanguage
@@ -590,7 +591,7 @@ Sets the first day of a week.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [WeekDay](arkts-localization-i18n-weekday-e.md) | Yes | Start day of a week. |
+| type | [WeekDay](../../apis-na/arkts-apis/arkts-na-i18n-weekday-e.md) | Yes | Start day of a week. |
 
 **Error codes:**
 
@@ -1009,7 +1010,7 @@ Sets the temperature unit of the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
+| type | [TemperatureType](../../apis-na/arkts-apis/arkts-na-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Error codes:**
 

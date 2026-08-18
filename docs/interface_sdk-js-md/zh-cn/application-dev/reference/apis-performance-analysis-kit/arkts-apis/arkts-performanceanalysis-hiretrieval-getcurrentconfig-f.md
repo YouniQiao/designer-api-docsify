@@ -1,5 +1,10 @@
 # getCurrentConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCurrentConfig
 
 ```TypeScript

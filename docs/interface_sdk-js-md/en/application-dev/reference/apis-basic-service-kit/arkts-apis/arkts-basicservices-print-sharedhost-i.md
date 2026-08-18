@@ -11,7 +11,7 @@ Interface defining shared device information
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## ip

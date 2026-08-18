@@ -10,6 +10,11 @@ Defines the base class of storage.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clear
 
 ```TypeScript

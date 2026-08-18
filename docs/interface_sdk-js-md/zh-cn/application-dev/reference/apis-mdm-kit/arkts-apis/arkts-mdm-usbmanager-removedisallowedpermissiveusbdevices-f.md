@@ -1,5 +1,10 @@
 # removeDisallowedPermissiveUsbDevices
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeDisallowedPermissiveUsbDevices
 
 ```TypeScript

@@ -13,7 +13,8 @@ ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone

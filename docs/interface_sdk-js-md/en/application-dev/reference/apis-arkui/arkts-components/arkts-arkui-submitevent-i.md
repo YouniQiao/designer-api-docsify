@@ -8,6 +8,11 @@ Defines the user submission event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## keepEditableState
 
 ```TypeScript

@@ -11,7 +11,7 @@ Implements a plugin component manager.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'PluginComponentTemplate';
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## Summary

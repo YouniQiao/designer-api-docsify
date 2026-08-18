@@ -1,5 +1,10 @@
 # createAVScreenCaptureRecorder
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createAVScreenCaptureRecorder
 
 ```TypeScript

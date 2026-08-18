@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBar } from 'ArcScrollBar';
-import { ArcScrollBarAttribute } from 'ArcScrollBarAttribute';
+import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 ```
 
 ## Summary

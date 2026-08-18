@@ -8,6 +8,11 @@ UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

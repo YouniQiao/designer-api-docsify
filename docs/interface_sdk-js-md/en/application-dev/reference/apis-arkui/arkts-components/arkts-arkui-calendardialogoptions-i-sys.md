@@ -10,6 +10,11 @@ Defines the configuration options of the calendar picker dialog box. Inherits fr
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## distortionMode
 
 ```TypeScript

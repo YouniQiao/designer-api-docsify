@@ -8,6 +8,11 @@ Provides configuration options for the character counter.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## counterTextColor
 
 ```TypeScript

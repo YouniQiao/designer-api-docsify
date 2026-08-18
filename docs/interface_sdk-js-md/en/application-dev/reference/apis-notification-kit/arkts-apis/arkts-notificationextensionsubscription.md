@@ -11,7 +11,7 @@ The **notificationExtensionSubscription** module provides capabilities for manag
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'notificationExtensionSubscription';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## Summary

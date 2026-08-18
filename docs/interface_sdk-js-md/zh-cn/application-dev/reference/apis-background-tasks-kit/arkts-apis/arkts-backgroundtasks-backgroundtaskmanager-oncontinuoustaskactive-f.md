@@ -1,5 +1,10 @@
 # onContinuousTaskActive
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onContinuousTaskActive
 
 ```TypeScript
@@ -20,7 +25,7 @@ function onContinuousTaskActive(callback: Callback<ContinuousTaskActiveInfo>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ContinuousTaskActiveInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskactiveinfo-i.md)&gt; | 是 | the callback of continuous task active. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ContinuousTaskActiveInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskactiveinfo-i.md)&gt; | 是 | the callback of continuous task active. |
 
 **错误码：**
 

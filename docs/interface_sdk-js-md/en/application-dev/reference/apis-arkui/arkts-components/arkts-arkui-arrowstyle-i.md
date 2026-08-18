@@ -8,6 +8,11 @@ Describes the left and right arrow attributes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## arrowColor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # finishSyncTrace
 
+## 导入模块
+
+```TypeScript
+```
+
 ## finishSyncTrace
 
 ```TypeScript

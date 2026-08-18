@@ -13,7 +13,7 @@ The **dateTimeManager** module provides APIs for system time management. > **NOT
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from 'dateTimeManager';
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## Summary

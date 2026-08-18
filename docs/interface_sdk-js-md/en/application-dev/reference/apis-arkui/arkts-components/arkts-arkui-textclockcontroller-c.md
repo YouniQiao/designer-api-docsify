@@ -10,6 +10,11 @@ Implements the controller of the **TextClock** component. You can bind the contr
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -8,6 +8,11 @@ ChipGroupV2ItemStyleConfig定义了ChipV2的共通属性配置。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## backgroundColor
 
 ```TypeScript

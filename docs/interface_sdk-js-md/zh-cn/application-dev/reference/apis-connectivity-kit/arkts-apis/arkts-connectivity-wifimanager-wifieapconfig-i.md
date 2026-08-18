@@ -8,6 +8,11 @@ WLAN EAP配置。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
+## 导入模块
+
+```TypeScript
+```
+
 ## altSubjectMatch
 
 ```TypeScript

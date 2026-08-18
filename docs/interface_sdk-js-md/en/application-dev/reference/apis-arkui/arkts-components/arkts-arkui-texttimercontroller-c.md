@@ -10,6 +10,11 @@ Defines the controller for controlling the **TextTimer** component. A **TextTime
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

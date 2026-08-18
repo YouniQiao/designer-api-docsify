@@ -8,6 +8,11 @@ Media Stream. AVPlayer use this for mediaData access, current version only suppo
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## bitrate
 
 ```TypeScript

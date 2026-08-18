@@ -11,12 +11,7 @@ Class ThemeControl provides the Theme management for whole Ability and pages.
 ## Modules to Import
 
 ```TypeScript
-import { Colors } from 'Colors';
-import { CustomColors } from 'CustomColors';
-import { Theme } from 'Theme';
-import { ThemeControl } from 'ThemeControl';
-import { CustomTheme } from 'CustomTheme';
-import { CustomDarkColors } from 'CustomDarkColors';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## setDefaultTheme
@@ -41,5 +36,5 @@ Sets the default Theme: - for whole Ability when invoked from the Ability level 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | Yes |  |
+| theme | [CustomTheme](../../apis-na/arkts-apis/arkts-na-arkui-theme-customtheme-i.md) | Yes |  |
 

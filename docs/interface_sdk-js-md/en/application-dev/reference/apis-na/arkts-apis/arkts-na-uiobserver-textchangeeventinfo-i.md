@@ -10,6 +10,11 @@ Text change event info
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## content
 
 ```TypeScript

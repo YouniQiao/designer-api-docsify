@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## data
 
 ```TypeScript
@@ -38,7 +43,7 @@ data: Uint8Array
 index: number
 ```
 
-请求参数value对应的索引值。
+请求参数value对应的索引值，用于指定控制请求的目标接口或端点。
 
 **类型：** number
 
@@ -78,7 +83,7 @@ reqType: USBControlRequestType
 request: number
 ```
 
-请求类型。
+请求类型，用于指定具体的USB控制请求命令。
 
 **类型：** number
 
@@ -118,7 +123,7 @@ target: USBRequestTargetType
 value: number
 ```
 
-请求参数。
+请求参数，用于向USB设备传递控制请求所需的参数内容。
 
 **类型：** number
 

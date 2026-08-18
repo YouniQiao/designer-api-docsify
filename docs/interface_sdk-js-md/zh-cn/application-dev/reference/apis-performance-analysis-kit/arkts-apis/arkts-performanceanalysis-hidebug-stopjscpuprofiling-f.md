@@ -1,5 +1,10 @@
 # stopJsCpuProfiling
 
+## 导入模块
+
+```TypeScript
+```
+
 ## stopJsCpuProfiling
 
 ```TypeScript

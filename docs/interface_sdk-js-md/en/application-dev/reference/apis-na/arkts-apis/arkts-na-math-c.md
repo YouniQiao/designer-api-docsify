@@ -10,6 +10,11 @@ The Math class contains static properties and methods for mathematical constants
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## abs
 
 ```TypeScript

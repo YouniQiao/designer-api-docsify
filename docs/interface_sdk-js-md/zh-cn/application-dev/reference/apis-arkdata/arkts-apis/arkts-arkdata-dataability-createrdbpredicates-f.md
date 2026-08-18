@@ -1,5 +1,10 @@
 # createRdbPredicates
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createRdbPredicates
 
 ```TypeScript

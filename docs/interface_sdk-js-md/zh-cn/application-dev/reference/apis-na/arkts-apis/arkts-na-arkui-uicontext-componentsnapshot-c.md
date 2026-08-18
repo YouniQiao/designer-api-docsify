@@ -10,6 +10,11 @@ class ComponentSnapshot
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createFromBuilder
 
 ```TypeScript
@@ -34,7 +39,7 @@ Generate a snapshot from a custom component builder.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | builder | CustomBuilder | 是 | Builder function of a custom component. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
 | delay | int | 否 | Defines the delay time to render the snapshot. |
 | checkImageStatus | boolean | 否 | Defines if check the image decoding status before taking snapshot. |
 | options | componentSnapshot.SnapshotOptions | 否 | Define the snapshot options. |
@@ -160,7 +165,7 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | Target component ID, set by developer through .id attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
 | options | componentSnapshot.SnapshotOptions | 否 | Define the snapshot options. |
 
 **错误码：**

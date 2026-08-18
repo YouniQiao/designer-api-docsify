@@ -1,5 +1,10 @@
 # getSimpleNumberFormatBySkeleton
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getSimpleNumberFormatBySkeleton
 
 ```TypeScript
@@ -29,7 +34,7 @@ Obtains a SimpleNumberFormat object based on the specified skeleton.
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat object. |
+| [SimpleNumberFormat](arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat object. |
 
 **Error codes:**
 

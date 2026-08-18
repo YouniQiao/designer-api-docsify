@@ -8,6 +8,11 @@ Path object, which provides basic methods for drawing paths. For details about t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## arc
 
 ```TypeScript

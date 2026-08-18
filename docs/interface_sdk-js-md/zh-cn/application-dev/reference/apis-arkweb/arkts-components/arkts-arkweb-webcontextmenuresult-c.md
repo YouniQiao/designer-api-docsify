@@ -8,6 +8,11 @@ WebContextMenuResult是ArkWeb组件中用于处理上下文菜单（长按页面
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## closeContextMenu
 
 ```TypeScript

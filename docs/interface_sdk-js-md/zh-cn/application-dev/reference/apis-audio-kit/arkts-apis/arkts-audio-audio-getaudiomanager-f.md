@@ -1,5 +1,10 @@
 # getAudioManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAudioManager
 
 ```TypeScript

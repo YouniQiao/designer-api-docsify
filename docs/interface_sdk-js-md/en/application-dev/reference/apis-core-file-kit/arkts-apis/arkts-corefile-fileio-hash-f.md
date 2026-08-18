@@ -1,5 +1,10 @@
 # hash
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## hash
 
 ```TypeScript

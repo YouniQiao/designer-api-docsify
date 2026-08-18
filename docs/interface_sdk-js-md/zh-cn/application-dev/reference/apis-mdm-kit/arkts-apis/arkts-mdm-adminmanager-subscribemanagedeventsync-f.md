@@ -1,5 +1,10 @@
 # subscribeManagedEventSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## subscribeManagedEventSync
 
 ```TypeScript

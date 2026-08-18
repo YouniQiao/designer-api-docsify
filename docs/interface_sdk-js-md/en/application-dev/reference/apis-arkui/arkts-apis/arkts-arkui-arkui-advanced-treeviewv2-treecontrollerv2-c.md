@@ -11,12 +11,7 @@ Declare TreeControllerV2
 ## Modules to Import
 
 ```TypeScript
-import { CallbackParamV2 } from 'CallbackParamV2';
-import { NodeParamV2 } from 'NodeParamV2';
-import { TreeControllerV2 } from 'TreeControllerV2';
-import { TreeListenerV2 } from 'TreeListenerV2';
-import { TreeListenerManagerV2 } from 'TreeListenerManagerV2';
-import { TreeViewV2 } from 'TreeViewV2';
+import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUI';
 ```
 
 ## addNode
@@ -41,13 +36,13 @@ Initialize the interface of the tree view. This interface is used to generate Li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nodeParam | [NodeParamV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | Configuration information of the newly added node. |
+| nodeParam | [NodeParamV2](arkts-arkui-arkui-advanced-treeviewv2-nodeparamv2-i.md) | No | Configuration information of the newly added node. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TreeControllerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | ListTreeNode Tree view component proxy class. |
+| [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md) | ListTreeNode Tree view component proxy class. |
 
 ## buildDone
 

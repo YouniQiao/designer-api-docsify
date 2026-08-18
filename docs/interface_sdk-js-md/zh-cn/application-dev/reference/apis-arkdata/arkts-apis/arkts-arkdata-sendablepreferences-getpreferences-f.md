@@ -1,5 +1,10 @@
 # getPreferences
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPreferences
 
 ```TypeScript

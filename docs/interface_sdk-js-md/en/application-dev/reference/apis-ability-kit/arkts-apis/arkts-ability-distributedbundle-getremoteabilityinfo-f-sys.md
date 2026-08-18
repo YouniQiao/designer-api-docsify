@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from 'distributedBundle';
+import { distributedBundle } from '@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfo

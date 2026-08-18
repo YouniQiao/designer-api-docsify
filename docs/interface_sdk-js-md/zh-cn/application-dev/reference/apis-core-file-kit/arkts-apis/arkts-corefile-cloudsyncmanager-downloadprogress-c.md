@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## downloadedSize
 
 ```TypeScript

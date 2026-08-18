@@ -12,6 +12,11 @@ Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-na-
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

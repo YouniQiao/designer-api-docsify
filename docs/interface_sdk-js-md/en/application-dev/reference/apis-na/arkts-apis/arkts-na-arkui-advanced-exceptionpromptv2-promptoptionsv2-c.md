@@ -10,6 +10,11 @@ Configuration parameter of ExceptionPromptV2. Use @ObservedV2 and @Trace to supp
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'errorManager';
+import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## onFreeze

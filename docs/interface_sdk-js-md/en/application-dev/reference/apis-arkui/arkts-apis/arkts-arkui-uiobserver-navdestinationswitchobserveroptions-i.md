@@ -11,7 +11,7 @@ Provides the observer options for the page switching event of the **Navigation**
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'uiObserver';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## navigationId

@@ -12,6 +12,11 @@ Represents optional element for the ResolvedSymbolNumberFormatOptions object. De
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## groupingSeparator
 
 ```TypeScript

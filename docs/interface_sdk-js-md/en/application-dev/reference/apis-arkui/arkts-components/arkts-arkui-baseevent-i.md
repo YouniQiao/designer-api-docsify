@@ -8,6 +8,11 @@ Basic event type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getModifierKeyState
 
 ```TypeScript

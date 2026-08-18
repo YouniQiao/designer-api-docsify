@@ -1,5 +1,10 @@
 # shiftAppWindowFocus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## shiftAppWindowFocus
 
 ```TypeScript

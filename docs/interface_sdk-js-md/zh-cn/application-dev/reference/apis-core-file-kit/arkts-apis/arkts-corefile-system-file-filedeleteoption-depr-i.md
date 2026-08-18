@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO.Lite
 
+## 导入模块
+
+```TypeScript
+```
+
 ## complete
 
 ```TypeScript

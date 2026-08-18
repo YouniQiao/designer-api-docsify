@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
+## 导入模块
+
+```TypeScript
+```
+
 ## algName
 
 ```TypeScript

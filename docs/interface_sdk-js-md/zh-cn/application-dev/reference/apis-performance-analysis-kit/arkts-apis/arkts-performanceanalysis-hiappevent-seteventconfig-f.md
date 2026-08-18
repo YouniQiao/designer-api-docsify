@@ -1,5 +1,10 @@
 # setEventConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setEventConfig
 
 ```TypeScript

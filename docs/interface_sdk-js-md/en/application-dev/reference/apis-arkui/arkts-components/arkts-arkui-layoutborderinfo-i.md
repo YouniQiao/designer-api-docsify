@@ -12,6 +12,11 @@ Provides the border information of the child component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## borderWidth
 
 ```TypeScript

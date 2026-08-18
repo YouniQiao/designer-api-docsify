@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { TreeMap } from 'TreeMap';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
 ```
 
 ## Summary

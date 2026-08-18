@@ -8,6 +8,11 @@ HUKS handle结构体。
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## challenge
 
 ```TypeScript

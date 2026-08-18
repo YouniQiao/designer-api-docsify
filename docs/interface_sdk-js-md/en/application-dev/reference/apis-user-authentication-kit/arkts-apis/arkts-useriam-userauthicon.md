@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthIcon } from 'UserAuthIcon';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

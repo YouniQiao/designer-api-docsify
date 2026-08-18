@@ -1,5 +1,10 @@
 # onSystemPrivateCommand（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onSystemPrivateCommand
 
 ```TypeScript
@@ -22,7 +27,7 @@ function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataTyp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 当输入法应用发送私有数据命令时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 是 | 当输入法应用发送私有数据命令时触发的回调。 |
 
 **错误码：**
 

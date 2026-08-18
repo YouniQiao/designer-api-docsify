@@ -8,6 +8,11 @@ Defines the options of Component ClassDecorator.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## freezeWhenInactive
 
 ```TypeScript

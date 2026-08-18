@@ -13,7 +13,7 @@ Describes the progress information about a batch download.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## autoPauseReason

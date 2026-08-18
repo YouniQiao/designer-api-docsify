@@ -10,6 +10,11 @@ Provide the ability to decode binary streams into strings. The supported encodin
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

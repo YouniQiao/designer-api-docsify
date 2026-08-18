@@ -8,6 +8,11 @@ Describes a time in 24-hour format.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## hour
 
 ```TypeScript

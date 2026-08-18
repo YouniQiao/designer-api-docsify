@@ -11,7 +11,7 @@ Defines the DRM plugin information.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## name

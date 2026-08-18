@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { List } from 'List';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
 ```
 
 ## Summary

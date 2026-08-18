@@ -13,7 +13,7 @@ Defines an event query instance.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'hiSysEvent';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onComplete

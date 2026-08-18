@@ -1,12 +1,17 @@
 # getPortSupportModes（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPortSupportModes
 
 ```TypeScript
 function getPortSupportModes(portId: int): PortModeType
 ```
 
-获取指定的端口支持的模式列表的组合掩码。
+获取指定的端口支持的模式列表的组合掩码。适用于系统应用需要查询USB-C端口能力判断是否支持特定模式（如UFP、DFP或DRP模式）的场景。开发者模式关闭时，如果没有设备接入，接口返回undefined，注意需要对接口返回值做判空 处理。详细枚举值参见[PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md#portmodetype系统接口)。
 
 **起始版本：** 23
 
@@ -22,7 +27,7 @@ function getPortSupportModes(portId: int): PortModeType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| portId | int | 是 | 端口号。 |
+| portId | int | 是 | USB端口号，可通过[getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getportlist系统接口)获取端口列表后得到。 |
 
 **返回值：**
 

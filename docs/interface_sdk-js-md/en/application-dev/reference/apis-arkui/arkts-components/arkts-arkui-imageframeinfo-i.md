@@ -8,6 +8,11 @@ Image frame information set.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## duration
 
 ```TypeScript

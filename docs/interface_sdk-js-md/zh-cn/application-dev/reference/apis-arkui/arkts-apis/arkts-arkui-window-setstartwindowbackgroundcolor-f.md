@@ -1,5 +1,10 @@
 # setStartWindowBackgroundColor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setStartWindowBackgroundColor
 
 ```TypeScript

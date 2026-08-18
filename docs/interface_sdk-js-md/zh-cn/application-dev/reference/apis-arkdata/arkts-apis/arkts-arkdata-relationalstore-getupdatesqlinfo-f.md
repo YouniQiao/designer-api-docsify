@@ -1,5 +1,10 @@
 # getUpdateSqlInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUpdateSqlInfo
 
 ```TypeScript

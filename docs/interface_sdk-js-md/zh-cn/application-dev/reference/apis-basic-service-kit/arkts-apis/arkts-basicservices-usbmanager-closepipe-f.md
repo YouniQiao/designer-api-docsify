@@ -1,12 +1,17 @@
 # closePipe
 
+## 导入模块
+
+```TypeScript
+```
+
 ## closePipe
 
 ```TypeScript
 function closePipe(pipe: USBDevicePipe): int
 ```
 
-关闭设备消息控制通道。 1. 需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备列表； 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)获取设备请求权限； 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)得到devicepipe作为参数。
+关闭设备连接通道。 1. 调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备列表； 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)获取设备请求权限； 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)得到devicepipe作为参数。
 
 **起始版本：** 23
 
@@ -18,13 +23,13 @@ function closePipe(pipe: USBDevicePipe): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定USB设备消息控制通道，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
+| pipe | USBDevicePipe | 是 | 用于确定总线地址和设备地址，需要调用[connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 关闭设备消息控制通道成功返回0；关闭设备消息控制通道失败返回其他错误码如下： |
+| int | 关闭设备连接通道成功返回0；关闭设备连接通道失败返回其他错误码如下： <br>- 22：服务异常。可能原因：1.USB服务未正常运行；2.设备连接通道状态异常。 |
 
 **错误码：**
 

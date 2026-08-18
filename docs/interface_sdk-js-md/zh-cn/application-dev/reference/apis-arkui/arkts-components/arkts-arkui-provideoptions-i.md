@@ -8,6 +8,11 @@ ProvideOptions是\@Provide的选项。允许在同一组件树上通过allowOver
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## allowOverride
 
 ```TypeScript

@@ -10,6 +10,11 @@ BackupExtensionAbility的上下文环境，继承自ExtensionContext。 用于�
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
+## 导入模块
+
+```TypeScript
+```
+
 ## backupDir
 
 ```TypeScript

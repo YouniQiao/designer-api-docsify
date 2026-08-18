@@ -10,6 +10,11 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clamp
 
 ```TypeScript
@@ -109,7 +114,7 @@ Checks whether a given range is within the current range.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | 是 | A Scope range |
+| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | 是 | A Scope range |
 
 **返回值：**
 
@@ -144,7 +149,7 @@ Creates the smallest range that includes the current range and the given lower a
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and the given lower and upper bounds. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and the given lower and upper bounds. |
 
 ## expand
 
@@ -166,13 +171,13 @@ Creates the smallest range that includes the current range and a given range.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | 是 | A Scope range object |
+| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | 是 | A Scope range object |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given range. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given range. |
 
 ## expand
 
@@ -200,7 +205,7 @@ Creates the smallest range that includes the current range and a given value.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given value. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given value. |
 
 ## getLower
 
@@ -266,13 +271,13 @@ Returns the intersection of a given range and the current range.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | 是 | A Scope range object |
+| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | 是 | A Scope range object |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of a given range and the current range. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of a given range and the current range. |
 
 ## intersect
 
@@ -301,7 +306,7 @@ Returns the intersection of the current range and the range specified by the giv
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of the current range and the range specified by the given lower and upper bounds. |
+| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of the current range and the range specified by the given lower and upper bounds. |
 
 ## toString
 

@@ -10,6 +10,11 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

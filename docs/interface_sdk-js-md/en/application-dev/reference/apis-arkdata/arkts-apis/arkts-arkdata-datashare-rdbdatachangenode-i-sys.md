@@ -13,7 +13,8 @@ Represents the RDB data change result. The data returned by the callback is not 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'dataShare';
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## data

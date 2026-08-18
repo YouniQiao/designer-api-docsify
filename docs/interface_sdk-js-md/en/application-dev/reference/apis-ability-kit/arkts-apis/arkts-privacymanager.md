@@ -11,7 +11,8 @@ This module primarily provides privacy management APIs such as permission usage 
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'privacyManager';
+import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

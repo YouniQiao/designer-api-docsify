@@ -10,6 +10,11 @@ Options for PhoneNumberFormat object initialization.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## type
 
 ```TypeScript

@@ -13,7 +13,8 @@ Defines the [physical screen](../../../displaymanager/display-terminology.md#phy
 ## Modules to Import
 
 ```TypeScript
-import { screen } from 'screen';
+import { screen } from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## setDensityDpi

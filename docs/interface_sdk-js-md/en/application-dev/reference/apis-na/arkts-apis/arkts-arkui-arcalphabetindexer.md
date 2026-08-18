@@ -1,5 +1,10 @@
 # @ohos.arkui.ArcAlphabetIndexer
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

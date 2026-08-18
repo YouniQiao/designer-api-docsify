@@ -8,6 +8,11 @@ Describes the position and affinity of a glyph.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## affinity
 
 ```TypeScript

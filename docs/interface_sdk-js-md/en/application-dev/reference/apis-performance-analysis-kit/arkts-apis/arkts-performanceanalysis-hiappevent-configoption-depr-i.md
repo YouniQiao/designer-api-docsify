@@ -12,6 +12,11 @@ Provides the configuration items for application event logging.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## disable
 
 ```TypeScript

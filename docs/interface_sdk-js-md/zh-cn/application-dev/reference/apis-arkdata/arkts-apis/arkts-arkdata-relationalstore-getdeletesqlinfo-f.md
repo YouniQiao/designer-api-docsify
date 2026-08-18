@@ -1,5 +1,10 @@
 # getDeleteSqlInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDeleteSqlInfo
 
 ```TypeScript

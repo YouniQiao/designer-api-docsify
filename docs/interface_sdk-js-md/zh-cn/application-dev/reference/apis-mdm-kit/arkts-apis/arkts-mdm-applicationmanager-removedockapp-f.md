@@ -1,5 +1,10 @@
 # removeDockApp
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeDockApp
 
 ```TypeScript

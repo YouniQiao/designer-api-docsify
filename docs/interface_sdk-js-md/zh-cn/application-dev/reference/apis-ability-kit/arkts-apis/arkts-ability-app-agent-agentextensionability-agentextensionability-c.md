@@ -10,6 +10,11 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onAuth
 
 ```TypeScript

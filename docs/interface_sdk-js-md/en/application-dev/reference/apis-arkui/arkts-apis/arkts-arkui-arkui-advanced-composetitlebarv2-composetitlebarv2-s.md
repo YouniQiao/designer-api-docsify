@@ -11,9 +11,7 @@ Declaration of the composable title bar. Composable title bar represents a commo
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2 } from 'ComposeTitleBarV2';
-import { ComposeTitleBarV2MenuItem } from 'ComposeTitleBarV2MenuItem';
-import { ComposeTitleBarV2MenuItemParams } from 'ComposeTitleBarV2MenuItemParams';
+import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUI';
 ```
 
 ## item
@@ -25,7 +23,7 @@ import { ComposeTitleBarV2MenuItemParams } from 'ComposeTitleBarV2MenuItemParams
 
 A single menu item for the profile picture on the left.
 
-**Type:** [ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
+**Type:** [ComposeTitleBarV2MenuItem](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **Since:** 26.0.0
 
@@ -46,7 +44,7 @@ A single menu item for the profile picture on the left.
 
 Menu items on the right side.
 
-**Type:** Array&lt;[ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
+**Type:** Array&lt;[ComposeTitleBarV2MenuItem](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **Since:** 26.0.0
 

@@ -11,7 +11,7 @@ Provides APIs for selecting and saving audio clips. Before using the APIs of **A
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor

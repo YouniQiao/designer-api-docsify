@@ -1,0 +1,231 @@
+# InputMethodEngine
+
+In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
+
+**Since:** 8
+
+**Deprecated since:** 23
+
+**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#inputmethodability)
+
+<!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## Modules to Import
+
+```TypeScript
+```
+
+## off_inputStart
+
+```TypeScript
+off(
+      type: 'inputStart',
+      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void
+    ): void
+```
+
+Disables listening for the input method binding event.
+
+**Since:** 8
+
+**Deprecated since:** 23
+
+**Substitutes:** off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
+
+<!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'inputStart' | Yes |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | No |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine()
+  .off('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
+      console.info('delete inputStart notification.');
+    });
+```
+
+## off_keyboardHide
+
+```TypeScript
+off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
+```
+
+Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 23
+
+**Substitutes:** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
+
+<!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes |
+| callback | () = & gt; void | No |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().off('keyboardShow');
+inputMethodEngine.getInputMethodEngine().off('keyboardHide');
+```
+
+## off_keyboardShow
+
+```TypeScript
+off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
+```
+
+Disables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 23
+
+**Substitutes:** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
+
+<!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes |
+| callback | () = & gt; void | No |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().off('keyboardShow');
+inputMethodEngine.getInputMethodEngine().off('keyboardHide');
+```
+
+## on_inputStart
+
+```TypeScript
+on(
+      type: 'inputStart',
+      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void
+    ): void
+```
+
+Enables listening for the input method binding event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 23
+
+**Substitutes:** on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
+
+<!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'inputStart' | Yes |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | Yes |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine()
+  .on('inputStart',
+    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
+      let keyboardController: inputMethodEngine.KeyboardController = kbController;
+      let textInputClient: inputMethodEngine.TextInputClient = textClient;
+    });
+```
+
+## on_keyboardHide
+
+```TypeScript
+on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
+```
+
+Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 23
+
+**Substitutes:** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
+
+<!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes |
+| callback | () = & gt; void | Yes |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
+  console.info('inputMethodEngine keyboardShow.');
+});
+inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
+  console.info('inputMethodEngine keyboardHide.');
+});
+```
+
+## on_keyboardShow
+
+```TypeScript
+on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
+```
+
+Enables listening for a keyboard visibility event. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 23
+
+**Substitutes:** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
+
+<!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes |
+| callback | () = & gt; void | Yes |
+
+**Examples**
+
+```TypeScript
+inputMethodEngine.getInputMethodEngine().on('keyboardShow', () => {
+  console.info('inputMethodEngine keyboardShow.');
+});
+inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
+  console.info('inputMethodEngine keyboardHide.');
+});
+```

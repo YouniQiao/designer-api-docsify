@@ -13,7 +13,8 @@ Describes the object related to the exception event name, message, error stack i
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'errorManager';
+import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## instanceName

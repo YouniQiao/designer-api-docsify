@@ -1,5 +1,10 @@
 # setAlternateIcon
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setAlternateIcon
 
 ```TypeScript

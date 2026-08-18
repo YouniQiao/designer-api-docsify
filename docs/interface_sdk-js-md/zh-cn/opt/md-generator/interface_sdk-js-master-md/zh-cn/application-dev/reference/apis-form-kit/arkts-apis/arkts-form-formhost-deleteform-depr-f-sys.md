@@ -1,0 +1,70 @@
+# deleteForm（系统接口）
+
+## 导入模块
+
+```TypeScript
+```
+
+## deleteForm
+
+```TypeScript
+function deleteForm(formId: string, callback: AsyncCallback<void>): void
+```
+
+删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务不再保留有关该卡片的信息。使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform系统接口)
+
+**需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function deleteForm(formId: string, callback: AsyncCallback<void>): void--><!--Device-formHost-function deleteForm(formId: string, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+
+## deleteForm
+
+```TypeScript
+function deleteForm(formId: string): Promise<void>
+```
+
+删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务不再保留有关该卡片的信息。使用Promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform系统接口)
+
+**需要权限：** ohos.permission.REQUIRE_FORM
+
+<!--Device-formHost-function deleteForm(formId: string): Promise<void>--><!--Device-formHost-function deleteForm(formId: string): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| formId | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |

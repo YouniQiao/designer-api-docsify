@@ -25,7 +25,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from 'settingsLite';
+import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

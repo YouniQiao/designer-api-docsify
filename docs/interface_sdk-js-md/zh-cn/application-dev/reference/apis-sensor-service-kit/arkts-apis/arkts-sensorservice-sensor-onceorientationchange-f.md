@@ -1,5 +1,10 @@
 # onceOrientationChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onceOrientationChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Subscribe to orientation sensor data once, {@code SensorId.ORIENTATION}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | 是 | callback orientation data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | 是 | callback orientation data. |
 
 **错误码：**
 

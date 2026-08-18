@@ -1,5 +1,10 @@
 # hasSmsCapability
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasSmsCapability
 
 ```TypeScript

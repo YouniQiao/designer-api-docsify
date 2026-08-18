@@ -11,7 +11,8 @@ The appRecovery module provides APIs for recovering faulty applications.
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from 'appRecovery';
+import { appRecovery } from '@kit.AbilityKit';
+import { appRecovery } from '@kit.AbilityKit';
 ```
 
 ## Summary

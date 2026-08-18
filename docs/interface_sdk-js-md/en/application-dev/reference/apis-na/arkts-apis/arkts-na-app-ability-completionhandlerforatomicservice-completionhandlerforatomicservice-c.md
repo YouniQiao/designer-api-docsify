@@ -10,6 +10,11 @@ CompletionHandlerForAtomicService provides two callback functions, [onAtomicServ
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onAtomicServiceRequestFailure
 
 ```TypeScript

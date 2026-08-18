@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## fileFilter
 
 ```TypeScript
@@ -16,7 +21,7 @@ fileFilter?: FileFilter
 
 文件名过滤器接口。可选，设置自定义文件名过滤规则。
 
-**类型：** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
+**类型：** [FileFilter](../../apis-na/arkts-apis/arkts-na-file-fs-filefilter-i.md)
 
 **起始版本：** 26.0.0
 

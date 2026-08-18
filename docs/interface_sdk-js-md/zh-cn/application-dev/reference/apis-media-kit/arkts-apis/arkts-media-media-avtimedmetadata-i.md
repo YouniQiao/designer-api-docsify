@@ -8,6 +8,11 @@ Interface for defining time base metadata
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## classify
 
 ```TypeScript

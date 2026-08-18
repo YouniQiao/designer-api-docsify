@@ -1,5 +1,10 @@
 # removeOsAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeOsAccount
 
 ```TypeScript

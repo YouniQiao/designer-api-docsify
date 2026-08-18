@@ -8,6 +8,11 @@ Defines the style of a grid item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## style
 
 ```TypeScript

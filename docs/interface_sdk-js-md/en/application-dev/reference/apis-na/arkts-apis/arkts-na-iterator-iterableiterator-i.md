@@ -12,6 +12,11 @@ An object that satisfies both Iterator and Iterable interfaces, meaning it is bo
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

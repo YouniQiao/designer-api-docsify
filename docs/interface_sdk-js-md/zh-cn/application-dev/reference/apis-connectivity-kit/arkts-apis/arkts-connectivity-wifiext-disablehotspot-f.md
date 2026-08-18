@@ -1,5 +1,10 @@
 # disableHotspot
 
+## 导入模块
+
+```TypeScript
+```
+
 ## disableHotspot
 
 ```TypeScript

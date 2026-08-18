@@ -8,6 +8,11 @@ Defines the options of the **List** component. > **NOTE：**> > To standardize a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## initialIndex
 
 ```TypeScript

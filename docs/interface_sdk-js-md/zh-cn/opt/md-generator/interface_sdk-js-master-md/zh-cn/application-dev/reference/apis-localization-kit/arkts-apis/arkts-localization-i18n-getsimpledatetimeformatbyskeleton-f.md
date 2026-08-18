@@ -1,0 +1,111 @@
+# getSimpleDateTimeFormatBySkeleton
+
+## 导入模块
+
+```TypeScript
+```
+
+## getSimpleDateTimeFormatBySkeleton
+
+```TypeScript
+export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat
+```
+
+通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat--><!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleDateTimeFormat-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| skeleton | string | 是 |
+| locale | Intl.Locale | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('yMd', locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+
+## getSimpleDateTimeFormatBySkeleton
+
+```TypeScript
+export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat
+```
+
+通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
+
+**起始版本：** 18
+
+**废弃版本：** 20
+
+**替代接口：** [getSimpleDateTimeFormatBySkeleton](#getsimpledatetimeformatbyskeleton)(skeleton: string, locale?: Intl.Locale)
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat--><!--Device-i18n-export function getSimpleDateTimeFormatBySkeleton(skeleton: string, locale?: intl.Locale): SimpleDateTimeFormat-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| skeleton | string | 是 |
+| locale | intl.Locale | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('yMd', locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatBySkeleton failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```

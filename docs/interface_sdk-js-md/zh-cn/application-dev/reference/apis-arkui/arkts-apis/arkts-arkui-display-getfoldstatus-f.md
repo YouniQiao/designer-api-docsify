@@ -1,5 +1,10 @@
 # getFoldStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFoldStatus
 
 ```TypeScript

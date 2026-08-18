@@ -8,6 +8,11 @@ Describes the style of the slider in the block direction.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## image
 
 ```TypeScript

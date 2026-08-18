@@ -11,7 +11,7 @@ Stream from which data can be read. A readable stream is used to read data from 
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'stream';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor

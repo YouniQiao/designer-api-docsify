@@ -1,5 +1,10 @@
 # getDeviceMacAddress
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDeviceMacAddress
 
 ```TypeScript

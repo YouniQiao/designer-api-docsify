@@ -8,6 +8,11 @@ Defines the text range.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## end
 
 ```TypeScript

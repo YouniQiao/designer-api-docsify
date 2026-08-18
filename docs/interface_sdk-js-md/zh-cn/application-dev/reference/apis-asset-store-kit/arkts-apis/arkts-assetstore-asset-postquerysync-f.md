@@ -1,5 +1,10 @@
 # postQuerySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## postQuerySync
 
 ```TypeScript

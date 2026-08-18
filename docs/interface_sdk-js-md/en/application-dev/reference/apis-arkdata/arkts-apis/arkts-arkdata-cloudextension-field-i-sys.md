@@ -13,7 +13,8 @@ Represents a field in the database.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'cloudExtension';
+import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## alias

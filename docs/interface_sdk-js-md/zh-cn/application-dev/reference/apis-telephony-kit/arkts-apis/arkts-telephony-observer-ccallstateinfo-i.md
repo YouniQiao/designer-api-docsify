@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
+## 导入模块
+
+```TypeScript
+```
+
 ## state
 
 ```TypeScript

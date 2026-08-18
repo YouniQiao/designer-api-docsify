@@ -1,5 +1,10 @@
 # createVideoRecorder（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createVideoRecorder
 
 ```TypeScript
@@ -20,7 +25,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md)&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 
@@ -66,7 +71,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-multimedia-media-videorecorder-i-sys.md) \| undefined&gt; | 是 | 回调函数，返回VideoRecorder实例，失败时返回null。 |
 
 **错误码：**
 

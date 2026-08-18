@@ -1,5 +1,10 @@
 # getDisallowedListForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDisallowedListForAccount
 
 ```TypeScript

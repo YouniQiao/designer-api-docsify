@@ -1,0 +1,143 @@
+# lib.es5
+
+## Modules to Import
+
+```TypeScript
+```
+
+## Summary
+
+### Namespaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Intl](arkts-na-intl-n.md) |
+
+### Functions
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [decodeURI](arkts-na-lib-es5-decodeuri-f.md#decodeuri) |
+| [decodeURIComponent](arkts-na-lib-es5-decodeuricomponent-f.md#decodeuricomponent) |
+| [encodeURI](arkts-na-lib-es5-encodeuri-f.md#encodeuri) |
+| [encodeURIComponent](arkts-na-lib-es5-encodeuricomponent-f.md#encodeuricomponent) |
+| [escape](arkts-na-lib-es5-escape-f.md#escape) |
+| [eval](arkts-na-lib-es5-eval-f.md#eval) |
+| [isFinite](arkts-na-lib-es5-isfinite-f.md#isfinite) |
+| [isNaN](arkts-na-lib-es5-isnan-f.md#isnan) |
+| [parseFloat](arkts-na-lib-es5-parsefloat-f.md#parsefloat) |
+| [parseInt](arkts-na-lib-es5-parseint-f.md#parseint) |
+| [unescape](arkts-na-lib-es5-unescape-f.md#unescape) |
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [Array](arkts-na-lib-es5-array-i.md) |
+| [ArrayBuffer](arkts-na-lib-es5-arraybuffer-i.md) |
+| [ArrayBufferConstructor](arkts-na-lib-es5-arraybufferconstructor-i.md) |
+| [ArrayBufferTypes](arkts-na-lib-es5-arraybuffertypes-i.md) |
+| [ArrayBufferView](arkts-na-lib-es5-arraybufferview-i.md) |
+| [ArrayConstructor](arkts-na-lib-es5-arrayconstructor-i.md) |
+| [ArrayLike](arkts-na-lib-es5-arraylike-i.md) |
+| [Boolean](arkts-na-lib-es5-boolean-i.md) |
+| [BooleanConstructor](arkts-na-lib-es5-booleanconstructor-i.md) |
+| [CallableFunction](arkts-na-lib-es5-callablefunction-i.md) |
+| [ConcatArray](arkts-na-lib-es5-concatarray-i.md) |
+| [DataView](arkts-na-lib-es5-dataview-i.md) |
+| [DataViewConstructor](arkts-na-lib-es5-dataviewconstructor-i.md) |
+| [Date](arkts-na-lib-es5-date-i.md) |
+| [DateConstructor](arkts-na-lib-es5-dateconstructor-i.md) |
+| [Error](arkts-na-lib-es5-error-i.md) |
+| [ErrorConstructor](arkts-na-lib-es5-errorconstructor-i.md) |
+| [EvalError](arkts-na-lib-es5-evalerror-i.md) |
+| [EvalErrorConstructor](arkts-na-lib-es5-evalerrorconstructor-i.md) |
+| [Float32Array](arkts-na-lib-es5-float32array-i.md) |
+| [Float32ArrayConstructor](arkts-na-lib-es5-float32arrayconstructor-i.md) |
+| [Float64Array](arkts-na-lib-es5-float64array-i.md) |
+| [Float64ArrayConstructor](arkts-na-lib-es5-float64arrayconstructor-i.md) |
+| [Function](arkts-na-lib-es5-function-i.md) |
+| [FunctionConstructor](arkts-na-lib-es5-functionconstructor-i.md) |
+| [IArguments](arkts-na-lib-es5-iarguments-i.md) |
+| [ImportAssertions](arkts-na-lib-es5-importassertions-i.md) |
+| [ImportCallOptions](arkts-na-lib-es5-importcalloptions-i.md) |
+| [ImportMeta](arkts-na-lib-es5-importmeta-i.md) |
+| [Int16Array](arkts-na-lib-es5-int16array-i.md) |
+| [Int16ArrayConstructor](arkts-na-lib-es5-int16arrayconstructor-i.md) |
+| [Int32Array](arkts-na-lib-es5-int32array-i.md) |
+| [Int32ArrayConstructor](arkts-na-lib-es5-int32arrayconstructor-i.md) |
+| [Int8Array](arkts-na-lib-es5-int8array-i.md) |
+| [Int8ArrayConstructor](arkts-na-lib-es5-int8arrayconstructor-i.md) |
+| [JSON](arkts-na-lib-es5-json-i.md) |
+| [Math](arkts-na-lib-es5-math-i.md) |
+| [NewableFunction](arkts-na-lib-es5-newablefunction-i.md) |
+| [Number](arkts-na-lib-es5-number-i.md) |
+| [NumberConstructor](arkts-na-lib-es5-numberconstructor-i.md) |
+| [Object](arkts-na-lib-es5-object-i.md) |
+| [ObjectConstructor](arkts-na-lib-es5-objectconstructor-i.md) |
+| [Promise](arkts-na-lib-es5-promise-i.md) |
+| [PromiseLike](arkts-na-lib-es5-promiselike-i.md) |
+| [PropertyDescriptor](arkts-na-lib-es5-propertydescriptor-i.md) |
+| [PropertyDescriptorMap](arkts-na-lib-es5-propertydescriptormap-i.md) |
+| [RangeError](arkts-na-lib-es5-rangeerror-i.md) |
+| [RangeErrorConstructor](arkts-na-lib-es5-rangeerrorconstructor-i.md) |
+| [ReadonlyArray](arkts-na-lib-es5-readonlyarray-i.md) |
+| [ReferenceError](arkts-na-lib-es5-referenceerror-i.md) |
+| [ReferenceErrorConstructor](arkts-na-lib-es5-referenceerrorconstructor-i.md) |
+| [RegExp](arkts-na-lib-es5-regexp-i.md) |
+| [RegExpConstructor](arkts-na-lib-es5-regexpconstructor-i.md) |
+| [RegExpExecArray](arkts-na-lib-es5-regexpexecarray-i.md) |
+| [RegExpMatchArray](arkts-na-lib-es5-regexpmatcharray-i.md) |
+| [String](arkts-na-lib-es5-string-i.md) |
+| [StringConstructor](arkts-na-lib-es5-stringconstructor-i.md) |
+| [Symbol](arkts-na-lib-es5-symbol-i.md) |
+| [SyntaxError](arkts-na-lib-es5-syntaxerror-i.md) |
+| [SyntaxErrorConstructor](arkts-na-lib-es5-syntaxerrorconstructor-i.md) |
+| [TemplateStringsArray](arkts-na-lib-es5-templatestringsarray-i.md) |
+| [ThisType](arkts-na-lib-es5-thistype-i.md) |
+| [TypeError](arkts-na-lib-es5-typeerror-i.md) |
+| [TypeErrorConstructor](arkts-na-lib-es5-typeerrorconstructor-i.md) |
+| [TypedPropertyDescriptor](arkts-na-lib-es5-typedpropertydescriptor-i.md) |
+| [URIError](arkts-na-lib-es5-urierror-i.md) |
+| [URIErrorConstructor](arkts-na-lib-es5-urierrorconstructor-i.md) |
+| [Uint16Array](arkts-na-lib-es5-uint16array-i.md) |
+| [Uint16ArrayConstructor](arkts-na-lib-es5-uint16arrayconstructor-i.md) |
+| [Uint32Array](arkts-na-lib-es5-uint32array-i.md) |
+| [Uint32ArrayConstructor](arkts-na-lib-es5-uint32arrayconstructor-i.md) |
+| [Uint8Array](arkts-na-lib-es5-uint8array-i.md) |
+| [Uint8ArrayConstructor](arkts-na-lib-es5-uint8arrayconstructor-i.md) |
+| [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md) |
+| [Uint8ClampedArrayConstructor](arkts-na-lib-es5-uint8clampedarrayconstructor-i.md) |
+
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ArrayBufferLike](arkts-na-arraybufferlike-t.md) |
+| [Awaited](arkts-na-awaited-t.md) |
+| [Capitalize](arkts-na-capitalize-t.md) |
+| [ClassDecorator](arkts-na-classdecorator-t.md) |
+| [ConstructorParameters](arkts-na-constructorparameters-t.md) |
+| [ESObject](arkts-na-esobject-t.md) |
+| [Exclude](arkts-na-exclude-t.md) |
+| [Extract](arkts-na-extract-t.md) |
+| [InstanceType](arkts-na-instancetype-t.md) |
+| [Lowercase](arkts-na-lowercase-t.md) |
+| [MethodDecorator](arkts-na-methoddecorator-t.md) |
+| [NonNullable](arkts-na-nonnullable-t.md) |
+| [Omit](arkts-na-omit-t.md) |
+| [OmitThisParameter](arkts-na-omitthisparameter-t.md) |
+| [ParameterDecorator](arkts-na-parameterdecorator-t.md) |
+| [Parameters](arkts-na-parameters-t.md) |
+| [Partial](arkts-na-partial-t.md) |
+| [Pick](arkts-na-pick-t.md) |
+| [PromiseConstructorLike](arkts-na-promiseconstructorlike-t.md) |
+| [PropertyDecorator](arkts-na-propertydecorator-t.md) |
+| [PropertyKey](arkts-na-propertykey-t.md) |
+| [Readonly](arkts-na-readonly-t.md) |
+| [Record](arkts-na-record-t.md) |
+| [Required](arkts-na-required-t.md) |
+| [ReturnType](arkts-na-returntype-t.md) |
+| [ThisParameterType](arkts-na-thisparametertype-t.md) |
+| [Uncapitalize](arkts-na-uncapitalize-t.md) |
+| [Uppercase](arkts-na-uppercase-t.md) |

@@ -1,12 +1,17 @@
 # PromptAction
 
-创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 > **说明：** > > - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 PromptAction对象，再通过该对象调用对应方法。
+创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 > **说明：** > > - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getPromptAction()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 PromptAction对象，再通过该对象调用对应方法。
 
 **起始版本：** 10
 
 <!--Device-unnamed-export class PromptAction--><!--Device-unnamed-export class PromptAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## closeCustomDialog
 
@@ -207,7 +212,7 @@ getBottomOrder(): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
 
 ## getTopOrder
 
@@ -231,7 +236,7 @@ getTopOrder(): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
 
 ## openCustomDialog
 
@@ -256,7 +261,7 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | 是 | 自定义弹窗中显示的组件内容。 |
-| options | promptAction.BaseDialogOptions | 否 | 弹窗样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions) 与[showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | promptAction.BaseDialogOptions | 否 | 弹窗样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions) 与[showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -294,7 +299,7 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | 是 | 自定义弹窗的内容。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)与 [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | promptAction.CustomDialogOptions | 是 | 自定义弹窗的内容。<br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)与 [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -334,7 +339,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 | --- | --- | --- | --- |
 | dialogContent | ComponentContent&lt;T&gt; | 是 | 自定义弹窗中显示的组件内容。 |
 | controller | promptAction.DialogController | 是 | 自定义弹窗的控制器。 |
-| options | promptAction.BaseDialogOptions | 否 | 自定义弹窗的样式。 <br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)与 [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | promptAction.BaseDialogOptions | 否 | 自定义弹窗的样式。 <br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)与 [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
 
 **返回值：**
 
@@ -356,7 +361,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 > > - 由于[updateMenu](#updatemenu)和[closeMenu](#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、 [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)组件），则 [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。 > > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了 showInSubWindow为true的弹窗。
+创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 > > - 由于[updateMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#updatemenu)和[closeMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、 [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#chip)组件），则 [ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。 > > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了 showInSubWindow为true的弹窗。
 
 **起始版本：** 18
 
@@ -373,7 +378,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
 | options | [MenuOptions](../../apis-na/arkts-apis/arkts-na-common-menuoptions-i.md) | 否 | menu弹窗样式。<br/> **说明：**<br/> title属性不生效。<br/> preview参数仅支持设置MenuPreviewMode类型。 |
 
 **返回值：**
@@ -398,7 +403,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。 > > - 由于[updatePopup](#updatepopup)和[closePopup](#closepopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#chip)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
+创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。 > > - 由于[updatePopup](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#updatepopup)和[closePopup](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#closepopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#chip)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md#componentcontent)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
 
 **起始版本：** 18
 
@@ -415,7 +420,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
 | options | [PopupCommonOptions](../../apis-na/arkts-apis/arkts-na-common-popupcommonoptions-i.md) | 否 | popup弹窗样式。 |
 
 **返回值：**
@@ -494,9 +499,9 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
+| builder | CustomBuilder \| [CustomBuilderWithId](../../apis-na/arkts-apis/arkts-na-custombuilderwithid-t.md) | 是 | 自定义弹窗的内容。 |
 | controller | promptAction.DialogController | 否 | 自定义弹窗的控制器。<br>**起始版本：** 26.0.0 |
-| options | promptAction.DialogOptions | 否 | 自定义弹窗的样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)与 [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。<br>**起始版本：** 26.0.0 |
+| options | promptAction.DialogOptions | 否 | 自定义弹窗的样式。<br> **说明：** 如果BaseDialogOptions中的[isModal](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)与 [showInSubWindow](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#basedialogoptions)同时设置为true，则只生效showInSubWindow = true， 此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。<br>**起始版本：** 26.0.0 |
 
 **返回值：**
 
@@ -523,7 +528,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 
 **废弃版本：** 11
 
-**替代接口：** [showActionMenu](#showactionmenu)
+**替代接口：** [showActionMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#showactionmenu)
 
 <!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.ActionMenuSuccessResponse): void-End-->
 
@@ -566,7 +571,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。用于配置操作菜单的显示内容和样式，包括title、buttons等属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果。 |
 
 **错误码：**
 
@@ -635,7 +640,7 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。弹出对话框成功，err为undefined， data为获取到的对话框响应结果，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。弹出对话框成功，err为undefined， data为获取到的对话框响应结果，否则为错误对象。 |
 
 **错误码：**
 

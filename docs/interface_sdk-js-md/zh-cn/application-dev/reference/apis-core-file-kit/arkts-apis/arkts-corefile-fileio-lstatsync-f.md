@@ -1,5 +1,10 @@
 # lstatSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## lstatSync
 
 ```TypeScript

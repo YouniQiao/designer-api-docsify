@@ -1,5 +1,10 @@
 # getUniformDataTypeByMIMEType
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUniformDataTypeByMIMEType
 
 ```TypeScript

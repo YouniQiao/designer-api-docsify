@@ -8,6 +8,11 @@ Sets parameters of the selected item indicator style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## backgroundColor
 
 ```TypeScript

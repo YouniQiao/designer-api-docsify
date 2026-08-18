@@ -1,5 +1,10 @@
 # is24HourClock
 
+## 导入模块
+
+```TypeScript
+```
+
 ## is24HourClock
 
 ```TypeScript

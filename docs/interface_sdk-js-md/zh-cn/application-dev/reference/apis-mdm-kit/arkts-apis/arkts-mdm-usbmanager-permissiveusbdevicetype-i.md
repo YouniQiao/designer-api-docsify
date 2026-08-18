@@ -8,6 +8,11 @@ USB设备类型信息，支持部分字段匹配。 - 与[UsbDeviceType](arkts-m
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## baseClass
 
 ```TypeScript

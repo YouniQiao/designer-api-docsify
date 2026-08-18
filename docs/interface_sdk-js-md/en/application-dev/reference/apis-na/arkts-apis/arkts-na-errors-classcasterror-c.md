@@ -12,6 +12,11 @@ Represents error that is thrown in case of illegal class casting
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

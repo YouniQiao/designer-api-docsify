@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from 'kioskManager';
+import { kioskManager } from '@kit.AbilityKit';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## exitKioskMode

@@ -8,6 +8,11 @@ Buffer对象用于表示固定长度的字节序列，是专门存放二进制�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

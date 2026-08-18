@@ -1,5 +1,10 @@
 # createPixelMapFromParcel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPixelMapFromParcel
 
 ```TypeScript

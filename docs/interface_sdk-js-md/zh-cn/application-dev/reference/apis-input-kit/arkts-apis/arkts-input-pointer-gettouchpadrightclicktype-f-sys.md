@@ -1,5 +1,10 @@
 # getTouchpadRightClickType（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTouchpadRightClickType
 
 ```TypeScript
@@ -20,7 +25,7 @@ function getTouchpadRightClickType(callback: AsyncCallback<RightClickType>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RightClickType](arkts-input-pointer-rightclicktype-e.md)&gt; | 是 | 回调函数。当获取触控板右键菜单类型成功，err为undefined，对象是触控板右键菜单类型；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RightClickType](arkts-input-pointer-rightclicktype-e.md)&gt; | 是 | 回调函数。当获取触控板右键菜单类型成功，err为undefined，对象是触控板右键菜单类型；否则为错误对象。 |
 
 **错误码：**
 

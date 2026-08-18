@@ -11,7 +11,7 @@ Defines a function for canceling the paste task. This parameter is valid only wh
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## cancel

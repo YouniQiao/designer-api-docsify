@@ -10,6 +10,11 @@ Plugin component request event result value.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## data
 
 ```TypeScript
@@ -18,7 +23,7 @@ data?: KVObject
 
 Defines data.
 
-**Type:** [KVObject](arkts-na-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 
@@ -38,7 +43,7 @@ extraData?: KVObject
 
 Defines extraData.
 
-**Type:** [KVObject](arkts-na-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 23
 

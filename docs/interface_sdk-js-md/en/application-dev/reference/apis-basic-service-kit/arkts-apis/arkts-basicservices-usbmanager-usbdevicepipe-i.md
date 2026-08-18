@@ -11,7 +11,8 @@ Represents a USB device pipe, which is used to determine a USB device.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## busNum

@@ -11,9 +11,7 @@ Options for creating a menu item instance.
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2 } from 'ComposeTitleBarV2';
-import { ComposeTitleBarV2MenuItem } from 'ComposeTitleBarV2MenuItem';
-import { ComposeTitleBarV2MenuItemParams } from 'ComposeTitleBarV2MenuItemParams';
+import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription
@@ -86,7 +84,7 @@ action?: OnActionCallback
 
 Callback function when click on this menu item.
 
-**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

@@ -1,5 +1,10 @@
 # addAllowedPermissionBundle
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addAllowedPermissionBundle
 
 ```TypeScript

@@ -10,6 +10,11 @@ Register callbacks to observe ArkUI behavior.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## addGlobalGestureListener
 
 ```TypeScript
@@ -1609,7 +1614,7 @@ Registers a callback function to be called when the window size layout breakpoin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | Yes | The callback function to be called when the window size layout breakpoint changes. The callback receives a [WindowSizeLayoutBreakpointInfo](arkts-na-uiobserver-windowsizelayoutbreakpointinfo-i.md#windowsizelayoutbreakpointinfo) object containing the current width and height breakpoint classifications. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | Yes | The callback function to be called when the window size layout breakpoint changes. The callback receives a [WindowSizeLayoutBreakpointInfo](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-windowsizelayoutbreakpointinfo-c.md#windowsizelayoutbreakpointinfo) object containing the current width and height breakpoint classifications. |
 
 ## removeGlobalGestureListener
 

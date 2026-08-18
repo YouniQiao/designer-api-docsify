@@ -10,6 +10,11 @@ ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onConfigurationUpdate
 
 ```TypeScript

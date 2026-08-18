@@ -10,6 +10,11 @@ Environment提供设备环境状态的查询能力，可将系统环境变量（
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

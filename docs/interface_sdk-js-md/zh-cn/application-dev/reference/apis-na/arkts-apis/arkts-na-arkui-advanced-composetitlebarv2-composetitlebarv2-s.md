@@ -10,6 +10,11 @@ ComposeTitleBarV2组件是一种标题栏，支持设置标题、头像（可选
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript

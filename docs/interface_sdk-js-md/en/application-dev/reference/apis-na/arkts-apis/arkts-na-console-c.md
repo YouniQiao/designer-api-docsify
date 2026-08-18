@@ -10,6 +10,11 @@ A Console class that provides access to standard output and error streams. Suppo
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## assert
 
 ```TypeScript

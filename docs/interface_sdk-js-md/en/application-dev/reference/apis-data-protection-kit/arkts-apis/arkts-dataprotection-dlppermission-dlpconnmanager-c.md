@@ -11,7 +11,7 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## constructor

@@ -1,0 +1,42 @@
+# ManualFocusQuery
+
+Manual Focus Query object.
+
+**起始版本：** 24
+
+<!--Device-camera-interface ManualFocusQuery--><!--Device-camera-interface ManualFocusQuery-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## 导入模块
+
+```TypeScript
+```
+
+## isFocusDistanceSupported
+
+```TypeScript
+isFocusDistanceSupported(): boolean
+```
+
+Checks whether a focus distance is supported.
+
+**起始版本：** 24
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ManualFocusQuery-isFocusDistanceSupported(): boolean--><!--Device-ManualFocusQuery-isFocusDistanceSupported(): boolean-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |

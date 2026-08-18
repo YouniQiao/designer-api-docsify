@@ -1,5 +1,10 @@
 # isFloatingBallEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFloatingBallEnabled
 
 ```TypeScript

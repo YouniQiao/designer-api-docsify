@@ -13,7 +13,8 @@ The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../
 ## Modules to Import
 
 ```TypeScript
-import { FormEditExtensionAbility } from 'FormEditExtensionAbility';
+import { FormEditExtensionAbility } from '@kit.FormKit';
+import { FormEditExtensionAbility } from '@kit.FormKit';
 ```
 
 ## context

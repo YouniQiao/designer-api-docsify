@@ -23,7 +23,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { wantConstant } from 'wantConstant';
+import { wantConstant } from '@kit.AbilityKit';
+import { wantConstant } from '@kit.AbilityKit';
 ```
 
 ## Summary

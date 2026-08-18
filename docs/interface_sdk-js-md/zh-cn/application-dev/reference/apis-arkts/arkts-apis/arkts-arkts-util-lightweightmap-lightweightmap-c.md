@@ -8,6 +8,11 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

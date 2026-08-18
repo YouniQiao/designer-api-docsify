@@ -11,7 +11,7 @@ systemScreenLock
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from 'screenLock';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

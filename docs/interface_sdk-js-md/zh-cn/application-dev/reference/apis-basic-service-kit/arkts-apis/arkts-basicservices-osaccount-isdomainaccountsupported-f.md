@@ -1,5 +1,10 @@
 # isDomainAccountSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isDomainAccountSupported
 
 ```TypeScript

@@ -11,7 +11,8 @@ Describes the point coordinates, which are used for focus and exposure configura
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## x

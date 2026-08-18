@@ -13,7 +13,8 @@ Execution frequency information.
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from 'workScheduler';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## interval

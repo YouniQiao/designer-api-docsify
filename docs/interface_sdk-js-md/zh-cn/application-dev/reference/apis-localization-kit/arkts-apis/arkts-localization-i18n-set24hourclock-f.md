@@ -1,5 +1,10 @@
 # set24HourClock
 
+## 导入模块
+
+```TypeScript
+```
+
 ## set24HourClock
 
 ```TypeScript

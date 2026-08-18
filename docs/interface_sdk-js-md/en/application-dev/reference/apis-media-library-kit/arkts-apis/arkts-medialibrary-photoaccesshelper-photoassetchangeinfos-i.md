@@ -11,7 +11,7 @@ Describes the notification information about the change of a media asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## assetChangeDatas

@@ -11,7 +11,8 @@ You must first use on('inputStart') to obtain a **InputClient** instance, and th
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward

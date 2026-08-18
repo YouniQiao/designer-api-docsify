@@ -11,7 +11,8 @@ The definition of MediaEntity.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'avMusicTemplate';
+import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## desc

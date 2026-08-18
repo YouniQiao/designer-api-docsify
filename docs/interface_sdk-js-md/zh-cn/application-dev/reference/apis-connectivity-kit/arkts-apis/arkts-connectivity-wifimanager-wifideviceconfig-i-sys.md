@@ -8,6 +8,11 @@ WLAN设备配置信息。
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
+## 导入模块
+
+```TypeScript
+```
+
 ## configStatus
 
 ```TypeScript

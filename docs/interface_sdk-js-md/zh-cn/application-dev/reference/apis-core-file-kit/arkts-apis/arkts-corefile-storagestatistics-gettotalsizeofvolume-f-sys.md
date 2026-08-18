@@ -1,5 +1,10 @@
 # getTotalSizeOfVolume（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTotalSizeOfVolume
 
 ```TypeScript
@@ -23,7 +28,7 @@ function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeUuid | string | 是 | 卷设备uuid。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 获取指定卷设备总空间之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 获取指定卷设备总空间之后的回调。 |
 
 **错误码：**
 

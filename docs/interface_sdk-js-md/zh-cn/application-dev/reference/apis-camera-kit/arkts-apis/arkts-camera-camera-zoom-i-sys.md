@@ -10,6 +10,11 @@ Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#zoomquery)。 变焦
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getZoomCenterPoint
 
 ```TypeScript

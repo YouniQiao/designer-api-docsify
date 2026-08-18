@@ -14,3 +14,8 @@ Defines the **SymbolEffect** class.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

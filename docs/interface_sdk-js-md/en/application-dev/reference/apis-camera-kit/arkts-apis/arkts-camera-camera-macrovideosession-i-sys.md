@@ -15,7 +15,8 @@ Implements a macro video session, which sets the parameters of the macro video m
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## offError

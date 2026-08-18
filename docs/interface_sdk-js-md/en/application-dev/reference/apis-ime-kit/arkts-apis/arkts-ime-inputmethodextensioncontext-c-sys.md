@@ -13,7 +13,8 @@ The **InputMethodExtensionContext** module, inherited from **ExtensionContext**,
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtensionContext } from 'InputMethodExtensionContext';
+import { InputMethodExtensionContext } from '@kit.IMEKit';
+import { InputMethodExtensionContext } from '@kit.IMEKit';
 ```
 
 ## connectAbility

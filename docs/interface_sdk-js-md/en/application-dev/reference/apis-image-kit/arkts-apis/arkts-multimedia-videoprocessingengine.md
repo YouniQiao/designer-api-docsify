@@ -11,7 +11,7 @@ This module provides the capability of content processing for images, including 
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'videoProcessingEngine';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## Summary

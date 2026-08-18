@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from 'ArrayList';
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
 ```
 
 ## Summary

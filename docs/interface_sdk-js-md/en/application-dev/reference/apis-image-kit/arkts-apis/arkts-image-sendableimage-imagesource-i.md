@@ -11,7 +11,7 @@ Provides APIs to obtain image information. Before calling any API in ImageSource
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMap

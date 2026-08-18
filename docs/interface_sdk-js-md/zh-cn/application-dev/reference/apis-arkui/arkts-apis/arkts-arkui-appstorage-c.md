@@ -8,6 +8,11 @@ AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## Clear
 
 ```TypeScript

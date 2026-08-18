@@ -11,7 +11,8 @@ Internationalization utility class, which provides the capabilities of unit conv
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## convertCanonicalLocaleIdentifier
@@ -345,7 +346,7 @@ Localizes a file path for the specified locale. For example, "/data/out/tmp" is 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getUnicodeWrappedFilePath](#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
+**Substitutes:** [getUnicodeWrappedFilePath](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -442,8 +443,8 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | double | Yes | Value of the measurement unit to be converted. |
 | locale | string | Yes | [Locale ID](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region, for example, **zh-Hans-CN**. |
 | style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. For details about the meaning or display effect of different values, see [Number and Unit of Measurement Formatting](../../../internationalization/i18n-numbers-weights-measures.md). |

@@ -10,6 +10,11 @@ You can trigger download manually through this interface, or resume failed or ca
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## resumeDownload
 
 ```TypeScript

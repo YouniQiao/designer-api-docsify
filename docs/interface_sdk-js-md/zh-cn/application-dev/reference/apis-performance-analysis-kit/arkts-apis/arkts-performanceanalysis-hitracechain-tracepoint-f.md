@@ -1,5 +1,10 @@
 # tracepoint
 
+## 导入模块
+
+```TypeScript
+```
+
 ## tracepoint
 
 ```TypeScript

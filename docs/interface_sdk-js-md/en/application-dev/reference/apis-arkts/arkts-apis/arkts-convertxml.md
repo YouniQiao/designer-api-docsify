@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from 'convertxml';
+import { convertxml } from '@kit.ArkTS';
 ```
 
 ## Summary

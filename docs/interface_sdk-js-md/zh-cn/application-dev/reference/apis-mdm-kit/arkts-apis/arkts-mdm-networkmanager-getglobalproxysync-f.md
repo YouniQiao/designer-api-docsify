@@ -1,5 +1,10 @@
 # getGlobalProxySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getGlobalProxySync
 
 ```TypeScript

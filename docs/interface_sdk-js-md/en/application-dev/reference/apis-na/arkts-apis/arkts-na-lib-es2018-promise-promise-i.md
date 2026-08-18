@@ -6,6 +6,11 @@ Represents the completion of an asynchronous operation
 
 <!--Device-unnamed-interface Promise--><!--Device-unnamed-interface Promise-End-->
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## finally
 
 ```TypeScript

@@ -8,6 +8,11 @@ Describes the style options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## length
 
 ```TypeScript

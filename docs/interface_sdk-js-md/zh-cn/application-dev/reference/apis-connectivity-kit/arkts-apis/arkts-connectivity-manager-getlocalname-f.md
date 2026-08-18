@@ -1,5 +1,10 @@
 # getLocalName
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getLocalName
 
 ```TypeScript

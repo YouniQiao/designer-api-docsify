@@ -1,5 +1,10 @@
 # symlinkSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## symlinkSync
 
 ```TypeScript

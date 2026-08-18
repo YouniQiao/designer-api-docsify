@@ -1,0 +1,24 @@
+# Symbol
+
+**Since:** -1
+
+<!--Device-unnamed-interface Symbol--><!--Device-unnamed-interface Symbol-End-->
+
+## Modules to Import
+
+```TypeScript
+```
+
+## description
+
+```TypeScript
+readonly description: string | undefined
+```
+
+Expose the [[Description]] internal slot of a symbol directly.
+
+**Type:** string \| undefined
+
+**Since:** -1
+
+<!--Device-Symbol-readonly description: string | undefined--><!--Device-Symbol-readonly description: string | undefined-End-->

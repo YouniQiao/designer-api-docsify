@@ -1,5 +1,10 @@
 # createPixelMapFromSurfaceWithTransformation
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPixelMapFromSurfaceWithTransformation
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # preQuery
 
+## 导入模块
+
+```TypeScript
+```
+
 ## preQuery
 
 ```TypeScript

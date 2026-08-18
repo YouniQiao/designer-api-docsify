@@ -15,7 +15,8 @@ Defines user blow data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'userStatus';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## blowDirection

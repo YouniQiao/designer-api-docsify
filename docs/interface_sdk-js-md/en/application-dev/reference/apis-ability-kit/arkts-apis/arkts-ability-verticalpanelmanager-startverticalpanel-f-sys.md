@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from 'verticalPanelManager';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## startVerticalPanel

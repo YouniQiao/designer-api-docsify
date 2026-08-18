@@ -1,5 +1,10 @@
 # getUkeyPinAuthState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUkeyPinAuthState
 
 ```TypeScript

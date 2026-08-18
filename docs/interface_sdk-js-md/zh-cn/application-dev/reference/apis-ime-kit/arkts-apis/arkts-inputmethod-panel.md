@@ -29,6 +29,11 @@
  `InputMethodAbility.createPanel()`创建面板时传入`PanelInfo`指定面板类型和状态。
 
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 接口

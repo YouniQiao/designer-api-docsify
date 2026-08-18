@@ -1,5 +1,10 @@
 # getProfileByAbilitySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getProfileByAbilitySync
 
 ```TypeScript

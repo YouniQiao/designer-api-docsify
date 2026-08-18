@@ -8,6 +8,11 @@ Describes the hyperlink style. The default color, font size, and font weight are
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

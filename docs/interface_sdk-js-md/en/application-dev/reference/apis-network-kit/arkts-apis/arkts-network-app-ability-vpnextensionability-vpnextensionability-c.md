@@ -11,7 +11,7 @@ class of vpn extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { VpnExtensionContext } from 'VpnExtensionContext';
+import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 ```
 
 ## onCreate

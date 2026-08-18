@@ -1,5 +1,10 @@
 # hasRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasRight
 
 ```TypeScript

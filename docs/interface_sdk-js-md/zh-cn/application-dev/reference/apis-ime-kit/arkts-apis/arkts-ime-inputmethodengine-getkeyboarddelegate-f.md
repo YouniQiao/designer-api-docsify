@@ -1,5 +1,10 @@
 # getKeyboardDelegate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getKeyboardDelegate
 
 ```TypeScript

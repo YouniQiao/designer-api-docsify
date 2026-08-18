@@ -13,7 +13,7 @@ Defines a UDP MulticastSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## addMembership

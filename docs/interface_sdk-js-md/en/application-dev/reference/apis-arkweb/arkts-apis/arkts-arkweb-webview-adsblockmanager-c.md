@@ -11,7 +11,7 @@ AdsBlockManager is a class in the ArkWeb framework used to manage the ad filteri
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## addAdsBlockAllowedList

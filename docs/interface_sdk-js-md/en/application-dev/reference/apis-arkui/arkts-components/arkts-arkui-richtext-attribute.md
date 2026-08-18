@@ -10,6 +10,11 @@ Defines the RichText attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onComplete
 
 ```TypeScript

@@ -13,7 +13,7 @@ Defines the print preview attributes.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## previewRange

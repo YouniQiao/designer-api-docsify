@@ -11,7 +11,7 @@ Provides information about a component.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'uiExtension';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## uiExtensionHostWindowProxyRect

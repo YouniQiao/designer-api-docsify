@@ -10,6 +10,11 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addResource
 
 ```TypeScript

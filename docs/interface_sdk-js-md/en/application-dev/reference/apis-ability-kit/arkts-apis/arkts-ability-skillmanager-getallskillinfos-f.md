@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'skillManager';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getAllSkillInfos

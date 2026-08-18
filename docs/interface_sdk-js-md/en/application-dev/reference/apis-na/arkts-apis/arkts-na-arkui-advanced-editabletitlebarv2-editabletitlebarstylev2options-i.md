@@ -10,6 +10,11 @@ Indicates the style options of the title bar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## backgroundBlurStyle
 
 ```TypeScript

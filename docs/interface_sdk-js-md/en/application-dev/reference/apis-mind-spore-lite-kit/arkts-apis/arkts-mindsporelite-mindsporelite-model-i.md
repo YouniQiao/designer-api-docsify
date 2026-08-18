@@ -11,7 +11,7 @@ Provides manages model function. Including get inputs, predict ,resize.
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'mindSporeLite';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## exportModel

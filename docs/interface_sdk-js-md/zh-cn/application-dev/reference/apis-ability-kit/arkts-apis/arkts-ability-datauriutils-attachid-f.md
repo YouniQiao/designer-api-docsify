@@ -1,5 +1,10 @@
 # attachId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## attachId
 
 ```TypeScript

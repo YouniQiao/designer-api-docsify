@@ -10,6 +10,11 @@ The class used to control common dialog.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

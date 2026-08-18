@@ -11,17 +11,7 @@ Represents the callback invoked when an HTTP error occurs during web page resour
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceWeb } from 'AtomicServiceWeb';
-import { OnMessageEvent } from 'OnMessageEvent';
-import { OnErrorReceiveEvent } from 'OnErrorReceiveEvent';
-import { OnHttpErrorReceiveEvent } from 'OnHttpErrorReceiveEvent';
-import { OnPageBeginEvent } from 'OnPageBeginEvent';
-import { OnPageEndEvent } from 'OnPageEndEvent';
-import { AtomicServiceWebController } from 'AtomicServiceWebController';
-import { OnLoadInterceptEvent } from 'OnLoadInterceptEvent';
-import { OnProgressChangeEvent } from 'OnProgressChangeEvent';
-import { OnLoadInterceptCallback } from 'OnLoadInterceptCallback';
-import { WebHeader } from 'WebHeader';
+import { AtomicServiceWeb, OnMessageEvent, OnErrorReceiveEvent, OnHttpErrorReceiveEvent, OnPageBeginEvent, OnPageEndEvent, AtomicServiceWebController, OnLoadInterceptEvent, OnProgressChangeEvent, OnLoadInterceptCallback, WebHeader } from '@kit.ArkUI';
 ```
 
 ## request

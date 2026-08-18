@@ -1,5 +1,10 @@
 # setScreenWatermarkImage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setScreenWatermarkImage
 
 ```TypeScript

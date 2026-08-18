@@ -1,0 +1,57 @@
+# queryDevices
+
+## Modules to Import
+
+```TypeScript
+```
+
+## queryDevices
+
+```TypeScript
+function queryDevices(busType?: number): Array<Readonly<Device>>
+```
+
+Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is returned.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
+
+<!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>--><!--Device-deviceManager-function queryDevices(busType?: int): Array<Readonly<Device>>-End-->
+
+**System capability:** SystemCapability.Driver.ExternalDevice
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| busType | number | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;Device&gt;&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
+
+**Examples**
+
+```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
+
+try {
+  let devices : Array<deviceManager.Device> = deviceManager.queryDevices(deviceManager.BusType.USB);
+  for (let item of devices) {
+    let device : deviceManager.USBDevice = item as deviceManager.USBDevice;
+    console.info(`Device id is ${device.deviceId}`);
+  }
+} catch (error) {
+  console.error(`Failed to query device. Code is ${error.code}, message is ${error.message}`);
+}
+```

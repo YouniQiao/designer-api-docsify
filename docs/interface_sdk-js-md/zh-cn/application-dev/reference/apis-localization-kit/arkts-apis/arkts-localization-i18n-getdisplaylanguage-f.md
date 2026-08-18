@@ -1,5 +1,10 @@
 # getDisplayLanguage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDisplayLanguage
 
 ```TypeScript

@@ -30,7 +30,7 @@ Adds component content. The current node must be modifiable, which means the ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](../../apis-na/arkts-apis/arkts-na-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | Yes | Component content to display on the FrameNode.<br>**Since:** 22 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-arkui-componentcontent-reactivecomponentcontent-c.md)&lt;T&gt; | Yes | Component content to display on the FrameNode.<br>**Since:** 22 |
 
 **Error codes:**
 
@@ -3242,7 +3242,7 @@ See Example of Customizing a Node.
 moveTo(targetParent: FrameNode, index?: number): void
 ```
 
-Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](#typenode), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typenode). > **NOTE：**> > Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#typedframenode) are supported for the movement > operations: [Stack](arkts-arkui-typenode-stack-t.md#stack), [XComponent](arkts-arkui-typenode-xcomponent-t.md#xcomponent). This API does not work for > other node types. > > This API only supports [BuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#buildernode) with root components of these types: > Stack, XComponent, > EmbeddedComponent. This API does not work for other > component types.
+Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](#typenode), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typenode). > **NOTE：**> > Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#typedframenode) are supported for the movement > operations: [Stack](arkts-arkui-typenode-stack-t.md#stack), [XComponent](arkts-arkui-typenode-xcomponent-t.md#xcomponent). This API does not work for > other node types. > > This API only supports [BuilderNode](arkts-arkui-buildernode-c.md#buildernode) with root components of these types: > Stack, XComponent, > EmbeddedComponent. This API does not work for other > component types.
 
 **Since:** 18
 

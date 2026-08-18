@@ -14,3 +14,8 @@ Provides the measurement result of the component. This API inherits from [SizeRe
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

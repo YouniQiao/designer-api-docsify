@@ -1,5 +1,10 @@
 # setDefaultErrorHandler
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setDefaultErrorHandler
 
 ```TypeScript

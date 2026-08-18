@@ -8,6 +8,11 @@ Called when the folding state changes. This API takes effect only in landscape m
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## foldStatus
 
 ```TypeScript

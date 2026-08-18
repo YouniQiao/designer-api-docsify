@@ -1,12 +1,17 @@
 # releaseInterface
 
+## 导入模块
+
+```TypeScript
+```
+
 ## releaseInterface
 
 ```TypeScript
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int
 ```
 
-释放claim过的通信接口。 > **说明：** > > 在调用该接口前需要通过 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) > claim通信接口。
+释放claim过的通信接口。 > **说明：** > > 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface) claim通信接口。
 
 **起始版本：** 23
 
@@ -18,14 +23,14 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定总线号和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
-| iface | USBInterface | 是 | 用于确定需要释放接口的索引，需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息并通过id确定唯一接口。 |
+| pipe | USBDevicePipe | 是 | 用于确定总线地址和设备地址，需要调用[connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
+| iface | USBInterface | 是 | 用于确定需要释放控制的接口对象，需要调用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息并通过id确定唯一接口。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 释放接口成功返回0；释放接口失败返回其他错误码如下： |
+| int | 释放接口成功返回0；释放接口失败返回其他错误码如下： <br>- 88080389：服务未启动，可能原因：1.无设备插入；2.服务异常退出。 <br>- 88080486：服务初始化中，请稍后重试。 <br>- 88080488：无设备访问权限，请先调用[requestRight]{ |
 
 **错误码：**
 

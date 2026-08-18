@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## getFileAccessAbilityInfo

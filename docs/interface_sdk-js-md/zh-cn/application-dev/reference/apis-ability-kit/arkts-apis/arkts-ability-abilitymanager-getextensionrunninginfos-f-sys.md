@@ -1,5 +1,10 @@
 # getExtensionRunningInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getExtensionRunningInfos
 
 ```TypeScript
@@ -62,7 +67,7 @@ function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | upperLimit | int | 是 | 获取消息数量的最大限制，最大为2&lt;sup&gt;31&lt;/sup&gt;-1。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | 是 | 回调函数。当获取运行扩展能力的信息成功，err为undefined，data为获取到的运行扩展能力信息；否则为 错误对象。可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | 是 | 回调函数。当获取运行扩展能力的信息成功，err为undefined，data为获取到的运行扩展能力信息；否则为 错误对象。可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

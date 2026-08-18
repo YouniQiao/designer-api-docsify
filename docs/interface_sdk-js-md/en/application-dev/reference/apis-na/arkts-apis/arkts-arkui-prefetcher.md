@@ -1,5 +1,10 @@
 # @ohos.arkui.Prefetcher
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

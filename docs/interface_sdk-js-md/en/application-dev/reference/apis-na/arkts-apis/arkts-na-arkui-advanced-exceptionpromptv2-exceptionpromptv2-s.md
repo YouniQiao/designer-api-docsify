@@ -10,6 +10,11 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript

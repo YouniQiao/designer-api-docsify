@@ -10,6 +10,11 @@ Set poly to poly point options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## dst
 
 ```TypeScript

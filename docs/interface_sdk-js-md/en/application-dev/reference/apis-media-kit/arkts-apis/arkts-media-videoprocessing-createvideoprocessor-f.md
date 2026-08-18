@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessing } from 'videoProcessing';
+import { videoProcessing } from '@kit.MediaKit';
 ```
 
 ## createVideoProcessor

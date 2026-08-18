@@ -1,5 +1,10 @@
 # getAppVMMemoryInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppVMMemoryInfo
 
 ```TypeScript

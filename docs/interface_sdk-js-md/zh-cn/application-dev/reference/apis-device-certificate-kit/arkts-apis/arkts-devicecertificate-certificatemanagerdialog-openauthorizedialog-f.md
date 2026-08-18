@@ -1,5 +1,10 @@
 # openAuthorizeDialog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openAuthorizeDialog
 
 ```TypeScript

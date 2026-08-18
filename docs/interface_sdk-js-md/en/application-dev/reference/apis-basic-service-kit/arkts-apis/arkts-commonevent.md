@@ -12,6 +12,13 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
+## Modules to Import
+
+```TypeScript
+import { commonEventManager } from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
+```
+
 ## Summary
 
 ### Functions

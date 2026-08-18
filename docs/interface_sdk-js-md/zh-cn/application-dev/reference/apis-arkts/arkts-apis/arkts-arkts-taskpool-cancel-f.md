@@ -1,5 +1,10 @@
 # cancel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancel
 
 ```TypeScript

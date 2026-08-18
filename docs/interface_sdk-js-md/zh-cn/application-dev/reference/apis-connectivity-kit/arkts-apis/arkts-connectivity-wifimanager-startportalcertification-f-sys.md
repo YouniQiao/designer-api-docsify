@@ -1,5 +1,10 @@
 # startPortalCertification（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startPortalCertification
 
 ```TypeScript

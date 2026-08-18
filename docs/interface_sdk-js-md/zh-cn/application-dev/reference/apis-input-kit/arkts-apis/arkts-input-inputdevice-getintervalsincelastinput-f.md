@@ -1,5 +1,10 @@
 # getIntervalSinceLastInput
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getIntervalSinceLastInput
 
 ```TypeScript

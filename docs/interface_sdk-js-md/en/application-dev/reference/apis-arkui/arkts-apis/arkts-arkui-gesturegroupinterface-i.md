@@ -8,6 +8,11 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

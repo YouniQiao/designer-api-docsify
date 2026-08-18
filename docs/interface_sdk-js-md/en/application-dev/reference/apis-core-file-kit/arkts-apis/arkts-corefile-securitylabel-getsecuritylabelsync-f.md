@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from 'securityLabel';
+import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabelSync

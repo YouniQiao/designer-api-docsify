@@ -11,12 +11,7 @@ DatePickerComponentResult defines the selection result of the date time picker.
 ## Modules to Import
 
 ```TypeScript
-import { DatePickerComponent } from 'DatePickerComponent';
-import { DatePickerComponentOptions } from 'DatePickerComponentOptions';
-import { DisplayMode } from 'DisplayMode';
-import { DateMode } from 'DateMode';
-import { TimeFormat } from 'TimeFormat';
-import { DatePickerComponentResult } from 'DatePickerComponentResult';
+import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## day

@@ -1,5 +1,10 @@
 # closeToast
 
+## 导入模块
+
+```TypeScript
+```
+
 ## closeToast
 
 ```TypeScript

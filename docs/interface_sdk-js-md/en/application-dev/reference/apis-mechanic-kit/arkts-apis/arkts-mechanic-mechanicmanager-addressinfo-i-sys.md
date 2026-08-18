@@ -13,7 +13,7 @@ Definition of device adress information.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'mechanicManager';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## address

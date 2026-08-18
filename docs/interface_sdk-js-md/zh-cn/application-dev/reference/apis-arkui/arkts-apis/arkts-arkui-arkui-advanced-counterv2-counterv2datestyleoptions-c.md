@@ -10,6 +10,11 @@ CounterV2DateStyleOptions定义日期内联型CounterV2的属性和事件。 继
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## day
 
 ```TypeScript

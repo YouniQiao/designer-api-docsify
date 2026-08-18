@@ -1,5 +1,10 @@
 # @ohos.multimedia.MovingPhotoView
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

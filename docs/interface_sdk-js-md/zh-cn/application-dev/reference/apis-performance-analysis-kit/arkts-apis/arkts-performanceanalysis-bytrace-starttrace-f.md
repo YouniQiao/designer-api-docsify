@@ -1,5 +1,10 @@
 # startTrace
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startTrace
 
 ```TypeScript

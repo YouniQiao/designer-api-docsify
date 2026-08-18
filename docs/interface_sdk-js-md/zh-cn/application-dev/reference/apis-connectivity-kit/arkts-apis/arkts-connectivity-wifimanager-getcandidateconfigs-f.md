@@ -1,5 +1,10 @@
 # getCandidateConfigs
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCandidateConfigs
 
 ```TypeScript

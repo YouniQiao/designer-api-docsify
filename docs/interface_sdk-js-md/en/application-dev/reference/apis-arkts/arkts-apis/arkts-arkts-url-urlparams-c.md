@@ -11,7 +11,7 @@ The URLParams interface defines some practical methods to process URL query stri
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'url';
+import { url } from '@kit.ArkTS';
 ```
 
 ## $_iterator

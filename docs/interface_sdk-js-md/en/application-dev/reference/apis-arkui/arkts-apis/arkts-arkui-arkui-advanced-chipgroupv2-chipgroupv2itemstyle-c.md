@@ -11,19 +11,7 @@ Defines ChipGroupV2 item style.
 ## Modules to Import
 
 ```TypeScript
-import { ChipGroupV2ItemConfig } from 'ChipGroupV2ItemConfig';
-import { ChipGroupV2Item } from 'ChipGroupV2Item';
-import { ChipGroupV2Items } from 'ChipGroupV2Items';
-import { ChipGroupV2ItemStyleConfig } from 'ChipGroupV2ItemStyleConfig';
-import { ChipGroupV2ItemStyle } from 'ChipGroupV2ItemStyle';
-import { ChipGroupV2SpaceConfig } from 'ChipGroupV2SpaceConfig';
-import { ChipGroupV2Space } from 'ChipGroupV2Space';
-import { ChipGroupV2IconItemConfig } from 'ChipGroupV2IconItemConfig';
-import { ChipGroupV2SymbolItemConfig } from 'ChipGroupV2SymbolItemConfig';
-import { ChipGroupV2PaddingConfig } from 'ChipGroupV2PaddingConfig';
-import { ChipGroupV2Padding } from 'ChipGroupV2Padding';
-import { ChipGroupV2IconGroupSuffix } from 'ChipGroupV2IconGroupSuffix';
-import { ChipGroupV2 } from 'ChipGroupV2';
+import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## constructor

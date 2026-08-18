@@ -1,5 +1,10 @@
 # getInputMethodController
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInputMethodController
 
 ```TypeScript

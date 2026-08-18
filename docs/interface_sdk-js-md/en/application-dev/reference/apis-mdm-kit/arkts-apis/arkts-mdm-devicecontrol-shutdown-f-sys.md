@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceControl } from 'deviceControl';
+import { deviceControl } from '@kit.MDMKit';
 ```
 
 ## shutdown

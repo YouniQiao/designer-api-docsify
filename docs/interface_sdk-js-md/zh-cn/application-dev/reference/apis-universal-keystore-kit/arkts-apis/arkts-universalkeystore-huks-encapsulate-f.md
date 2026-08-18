@@ -1,5 +1,10 @@
 # encapsulate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## encapsulate
 
 ```TypeScript

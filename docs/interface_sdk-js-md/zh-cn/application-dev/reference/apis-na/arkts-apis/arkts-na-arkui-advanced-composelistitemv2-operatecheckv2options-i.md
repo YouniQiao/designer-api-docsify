@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript
@@ -100,7 +105,7 @@ onChange?: OnChangeCallback
 
 操作checkbox/switch/radio时的回调函数。
 
-**类型：** [OnChangeCallback](arkts-na-onchangecallback-t.md)
+**类型：** [OnChangeCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangecallback-t.md)
 
 **起始版本：** 26.0.0
 

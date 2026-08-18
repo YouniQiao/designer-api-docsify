@@ -11,7 +11,7 @@ Represents a **Connection** object, which provides methods for connecting to and
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from 'linkEnhance';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## close

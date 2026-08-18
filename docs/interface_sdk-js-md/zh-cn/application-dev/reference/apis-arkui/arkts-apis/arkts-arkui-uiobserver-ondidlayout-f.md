@@ -1,5 +1,10 @@
 # on_didLayout
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_didLayout
 
 ```TypeScript
@@ -23,8 +28,8 @@ export function on(type: 'didLayout', context: UIContext, callback: Callback<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'didLayout' | 是 | 监听事件，固定为'didLayout'，即是否布局完成。 |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面的范围。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面的范围。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 

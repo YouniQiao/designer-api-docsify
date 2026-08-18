@@ -10,6 +10,11 @@ Defines the callback for listening for the copy progress.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## copySignal
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # isNativeChildProcessSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isNativeChildProcessSupported
 
 ```TypeScript

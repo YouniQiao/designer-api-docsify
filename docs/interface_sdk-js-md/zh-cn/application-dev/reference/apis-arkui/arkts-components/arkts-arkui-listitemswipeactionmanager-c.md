@@ -8,6 +8,11 @@ ListItem划出菜单的管理器。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## collapse
 
 ```TypeScript

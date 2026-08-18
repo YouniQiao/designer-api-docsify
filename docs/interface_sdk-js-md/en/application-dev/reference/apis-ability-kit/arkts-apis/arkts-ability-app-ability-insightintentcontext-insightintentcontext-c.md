@@ -11,7 +11,8 @@ The module provides the context for intent execution. It is used as a property i
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentContext } from 'InsightIntentContext';
+import { InsightIntentContext } from '@kit.AbilityKit';
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground

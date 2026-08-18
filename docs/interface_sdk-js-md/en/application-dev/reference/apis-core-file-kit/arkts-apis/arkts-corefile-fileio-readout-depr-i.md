@@ -10,6 +10,11 @@ Obtains the file read result. This class applies only to the **read()** method.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## buffer
 
 ```TypeScript

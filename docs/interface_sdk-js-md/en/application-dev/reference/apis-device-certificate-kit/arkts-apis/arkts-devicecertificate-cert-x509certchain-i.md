@@ -11,7 +11,9 @@ Provides APIs for managing the X.509 certificate chain.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'cert';
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## getCertList

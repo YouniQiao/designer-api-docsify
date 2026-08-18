@@ -11,7 +11,8 @@ Key encapsulation mechanism (KEM) interface, defining methods for key encapsulat
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## decapsulate

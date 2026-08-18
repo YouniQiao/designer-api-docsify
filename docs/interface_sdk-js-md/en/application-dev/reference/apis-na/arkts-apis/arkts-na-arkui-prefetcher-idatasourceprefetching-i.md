@@ -12,6 +12,11 @@ Implement this interface to provide data prefetching for the LazyForEach compone
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cancel
 
 ```TypeScript

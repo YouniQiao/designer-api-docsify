@@ -10,6 +10,11 @@ ActionMenu options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## distortionMode
 
 ```TypeScript

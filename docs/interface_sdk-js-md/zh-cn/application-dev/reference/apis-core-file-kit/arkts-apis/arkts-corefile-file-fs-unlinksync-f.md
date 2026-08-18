@@ -1,5 +1,10 @@
 # unlinkSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## unlinkSync
 
 ```TypeScript

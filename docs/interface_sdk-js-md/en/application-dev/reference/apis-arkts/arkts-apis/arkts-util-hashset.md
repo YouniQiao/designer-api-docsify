@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { HashSet } from 'HashSet';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
 ```
 
 ## Summary

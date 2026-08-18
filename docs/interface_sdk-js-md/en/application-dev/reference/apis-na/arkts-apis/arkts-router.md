@@ -24,6 +24,11 @@ Copyright (c) 2025 Huawei Device Co., Ltd.
 **System capability:** 
 - API version 23 and later: SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

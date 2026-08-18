@@ -17,7 +17,7 @@ Configuring parameters in location requests
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'geolocation';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## distanceInterval

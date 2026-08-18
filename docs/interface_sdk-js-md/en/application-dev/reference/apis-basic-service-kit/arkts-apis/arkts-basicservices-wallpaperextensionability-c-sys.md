@@ -15,7 +15,7 @@ class of wallpaper extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WallpaperExtensionAbility } from 'WallpaperExtensionAbility';
+import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onCreate

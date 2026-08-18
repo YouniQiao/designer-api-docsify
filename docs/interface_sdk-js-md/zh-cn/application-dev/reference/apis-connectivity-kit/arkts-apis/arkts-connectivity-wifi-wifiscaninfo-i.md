@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
+## 导入模块
+
+```TypeScript
+```
+
 ## band
 
 ```TypeScript

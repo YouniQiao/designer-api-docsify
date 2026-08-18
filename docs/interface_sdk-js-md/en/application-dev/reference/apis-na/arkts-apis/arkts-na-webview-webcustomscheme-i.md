@@ -1,6 +1,6 @@
 # WebCustomScheme
 
-Defines the configuration of web custom scheme, related to [customizeSchemes](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#customizeschemes) method.
+Defines the configuration of web custom scheme, related to [customizeSchemes](arkts-na-webview-webviewcontroller-c.md#customizeschemes) method.
 
 **Since:** 23
 
@@ -9,6 +9,11 @@ Defines the configuration of web custom scheme, related to [customizeSchemes](..
 <!--Device-webview-interface WebCustomScheme--><!--Device-webview-interface WebCustomScheme-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## isCodeCacheSupported
 

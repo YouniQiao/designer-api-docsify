@@ -11,7 +11,7 @@ Defines a **RunningLock** object.
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from 'runningLock';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## hold

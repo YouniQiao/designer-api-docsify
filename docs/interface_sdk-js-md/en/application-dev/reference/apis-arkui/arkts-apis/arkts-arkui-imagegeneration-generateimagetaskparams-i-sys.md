@@ -15,7 +15,7 @@ Configuration parameter options for AI-generated image tasks.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## imageCount

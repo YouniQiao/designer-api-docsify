@@ -8,6 +8,11 @@ The top layer of the @builder function corresponding to start and end must be a 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## edgeEffect
 
 ```TypeScript

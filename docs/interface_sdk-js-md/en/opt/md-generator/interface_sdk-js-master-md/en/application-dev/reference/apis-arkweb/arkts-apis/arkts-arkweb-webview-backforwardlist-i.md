@@ -1,0 +1,84 @@
+# BackForwardList
+
+BackForwardList is an interface in the ArkWeb framework for accessing the browsing history list of a Web component. It is obtained through the [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries) method. This interface provides read-only access to the page navigation history. Developers can obtain basic information about the current history list (the current index and the total number of history entries), as well as detailed information about a specific history item by index.
+
+**Since:** 9
+
+<!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## getItemAtIndex
+
+```TypeScript
+getItemAtIndex(index: number): HistoryItem
+```
+
+Obtains the information of the history item at the specified index in the history list. A BackForwardList instance must be obtained first through the [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries) method.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## currentIndex
+
+```TypeScript
+currentIndex: number
+```
+
+Index of the current page in the backforward list.
+
+**Type:** number
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BackForwardList-currentIndex: number--><!--Device-BackForwardList-currentIndex: number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## size
+
+```TypeScript
+size: number
+```
+
+Number of history records in the history list. A maximum of 50 records are saved. When the limit is exceeded, the earliest record is overwritten.
+
+**Type:** number
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BackForwardList-size: number--><!--Device-BackForwardList-size: number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core

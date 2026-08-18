@@ -1,5 +1,10 @@
 # installUserTrustedCertificateSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## installUserTrustedCertificateSync
 
 ```TypeScript

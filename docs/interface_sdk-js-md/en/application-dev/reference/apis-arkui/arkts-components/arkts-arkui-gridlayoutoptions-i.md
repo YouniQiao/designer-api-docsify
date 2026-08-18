@@ -8,6 +8,11 @@ Defines the grid layout options. In this API, **irregularIndexes** and **onGetIr
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## irregularIndexes
 
 ```TypeScript

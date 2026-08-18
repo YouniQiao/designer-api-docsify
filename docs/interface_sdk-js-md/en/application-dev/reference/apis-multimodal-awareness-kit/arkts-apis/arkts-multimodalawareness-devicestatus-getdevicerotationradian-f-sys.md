@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from 'deviceStatus';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getDeviceRotationRadian

@@ -10,6 +10,11 @@ Defines the camera prelaunch configuration. Currently, the configuration is used
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## activeTime
 
 ```TypeScript

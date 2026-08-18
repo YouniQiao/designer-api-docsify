@@ -1,5 +1,10 @@
 # querySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## querySync
 
 ```TypeScript

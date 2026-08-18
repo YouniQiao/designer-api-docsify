@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+## 导入模块
+
+```TypeScript
+```
+
 ## manufacturer
 
 ```TypeScript

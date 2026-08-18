@@ -12,6 +12,11 @@ A Map subclass with keys restricted to numbers, strings, or enums
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_get
 
 ```TypeScript

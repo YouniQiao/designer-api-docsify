@@ -10,6 +10,11 @@ Class that holds brand name, major version and full version. Brand name and majo
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getBrand
 
 ```TypeScript

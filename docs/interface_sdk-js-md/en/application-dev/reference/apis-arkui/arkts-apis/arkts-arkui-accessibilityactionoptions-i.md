@@ -8,6 +8,11 @@ Defines the struct of AccessibilityActionOptions that can affect operation under
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## scrollStep
 
 ```TypeScript

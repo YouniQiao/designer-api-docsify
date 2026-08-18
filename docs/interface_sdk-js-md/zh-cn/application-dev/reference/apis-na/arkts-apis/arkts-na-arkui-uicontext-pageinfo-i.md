@@ -10,6 +10,11 @@ Router和NavDestination等页面信息，若无对应的Router或NavDestination�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## navDestinationInfo
 
 ```TypeScript

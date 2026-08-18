@@ -13,7 +13,8 @@ Describes the instance returned by the occlusion status callback, which indicate
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isCameraLensDirty

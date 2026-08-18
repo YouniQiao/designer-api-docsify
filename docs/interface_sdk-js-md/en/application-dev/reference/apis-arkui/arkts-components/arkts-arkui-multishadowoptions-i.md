@@ -8,6 +8,11 @@ Defines shadow style properties.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## offsetX
 
 ```TypeScript

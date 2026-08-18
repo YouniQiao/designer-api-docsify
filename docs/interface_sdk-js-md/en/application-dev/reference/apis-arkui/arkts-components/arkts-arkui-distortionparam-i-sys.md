@@ -10,6 +10,11 @@ Defines the spatial distortion parameters. > **NOTE：**> > - The coordinates of
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## barrelDistortion
 
 ```TypeScript

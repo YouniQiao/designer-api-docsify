@@ -1,5 +1,10 @@
 # onScanDeviceAdd（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onScanDeviceAdd
 
 ```TypeScript
@@ -22,7 +27,7 @@ Register event callback for scanner device add (system API).
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 是 | Callback for device add event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 是 | Callback for device add event. |
 
 **错误码：**
 

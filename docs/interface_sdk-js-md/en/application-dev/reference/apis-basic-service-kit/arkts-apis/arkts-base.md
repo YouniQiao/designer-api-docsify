@@ -3,10 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { AsyncCallback } from 'AsyncCallback';
-import { BusinessError } from 'BusinessError';
-import { Callback } from 'Callback';
-import { ErrorCallback } from 'ErrorCallback';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
+import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

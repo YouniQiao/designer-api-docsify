@@ -10,6 +10,11 @@ A panel to set the system audio output volume.
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -55,7 +60,7 @@ Sets the device volume through the volume panel. The value should be between min
 
 Sets the custom parameters of volume panel.
 
-**Type:** [AVVolumePanelParameter](arkts-na-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
+**Type:** [AVVolumePanelParameter](../../apis-audio-kit/arkts-apis/arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
 **Since:** 23
 

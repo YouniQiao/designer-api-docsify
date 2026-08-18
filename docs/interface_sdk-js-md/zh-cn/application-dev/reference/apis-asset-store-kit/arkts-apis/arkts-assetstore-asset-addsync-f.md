@@ -1,5 +1,10 @@
 # addSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addSync
 
 ```TypeScript

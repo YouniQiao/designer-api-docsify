@@ -13,7 +13,8 @@ Defines the device profile information.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bleMac

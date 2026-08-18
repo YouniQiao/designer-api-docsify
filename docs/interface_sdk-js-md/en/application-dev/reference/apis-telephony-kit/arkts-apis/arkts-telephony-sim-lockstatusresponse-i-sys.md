@@ -13,7 +13,7 @@ Defines the personalized lock information.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'sim';
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## remain

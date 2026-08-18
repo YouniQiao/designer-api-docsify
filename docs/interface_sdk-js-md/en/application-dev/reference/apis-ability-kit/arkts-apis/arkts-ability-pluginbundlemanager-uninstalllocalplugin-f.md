@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from 'pluginBundleManager';
+import { pluginBundleManager } from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## uninstallLocalPlugin

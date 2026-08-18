@@ -1,5 +1,10 @@
 # getSingleSensorByDeviceSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSingleSensorByDeviceSync
 
 ```TypeScript

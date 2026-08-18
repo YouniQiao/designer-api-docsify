@@ -10,6 +10,11 @@ metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#camerao
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addMetadataObjectTypes
 
 ```TypeScript

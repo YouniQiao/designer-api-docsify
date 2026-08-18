@@ -11,7 +11,7 @@ On the initial launch, the atomic service only downloads and installs the main p
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from 'NavPushPathHelper';
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## constructor

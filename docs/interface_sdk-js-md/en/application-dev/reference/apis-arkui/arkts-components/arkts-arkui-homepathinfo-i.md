@@ -8,6 +8,11 @@ Defines the home page **NavDestination** information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## name
 
 ```TypeScript

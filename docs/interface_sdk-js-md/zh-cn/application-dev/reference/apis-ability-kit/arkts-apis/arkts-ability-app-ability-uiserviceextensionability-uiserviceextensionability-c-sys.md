@@ -12,6 +12,11 @@ UIServiceExtensionAbility提供浮窗组件相关扩展能力，继承自[Extens
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onConnect
 
 ```TypeScript

@@ -11,7 +11,7 @@ Provides the callback for the SMS message sending result. It consists of three p
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## isLastPart

@@ -11,7 +11,7 @@ GeolocationPermissions is the geolocation permission management object for the W
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## allowGeolocation

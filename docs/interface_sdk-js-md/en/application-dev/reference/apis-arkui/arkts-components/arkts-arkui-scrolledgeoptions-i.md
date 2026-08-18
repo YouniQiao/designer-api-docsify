@@ -8,6 +8,11 @@ Provides parameters for scrolling to the edge of a scrollable container.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## velocity
 
 ```TypeScript

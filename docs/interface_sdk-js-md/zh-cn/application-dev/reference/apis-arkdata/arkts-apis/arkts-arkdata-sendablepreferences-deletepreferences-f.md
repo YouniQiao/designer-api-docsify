@@ -1,5 +1,10 @@
 # deletePreferences
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deletePreferences
 
 ```TypeScript

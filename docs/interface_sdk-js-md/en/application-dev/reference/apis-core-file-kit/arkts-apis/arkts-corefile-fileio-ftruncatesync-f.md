@@ -1,5 +1,10 @@
 # ftruncateSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## ftruncateSync
 
 ```TypeScript

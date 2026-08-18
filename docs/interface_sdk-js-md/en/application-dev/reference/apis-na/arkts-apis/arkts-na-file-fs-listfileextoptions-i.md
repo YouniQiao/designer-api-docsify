@@ -10,6 +10,11 @@ Defines the options used in **listFileExt**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fileFilter
 
 ```TypeScript

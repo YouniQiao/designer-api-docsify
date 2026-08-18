@@ -8,6 +8,11 @@ Defines the particle updater options. > **NOTE：**> > To standardize anonymous 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## config
 
 ```TypeScript

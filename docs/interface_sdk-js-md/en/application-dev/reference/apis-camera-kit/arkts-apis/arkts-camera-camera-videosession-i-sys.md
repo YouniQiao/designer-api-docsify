@@ -13,7 +13,8 @@ VideoSession inherits from [Session](arkts-camera-camera-session-i.md#session), 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getSessionConflictFunctions

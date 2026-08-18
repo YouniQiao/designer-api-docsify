@@ -11,32 +11,7 @@ Defines chip options class.
 ## Modules to Import
 
 ```TypeScript
-import { ChipV2Size } from 'ChipV2Size';
-import { ChipV2AccessibilitySelectedType } from 'ChipV2AccessibilitySelectedType';
-import { ChipV2ImageIconConfig } from 'ChipV2ImageIconConfig';
-import { ChipV2ImageIcon } from 'ChipV2ImageIcon';
-import { ChipV2SuffixImageIconConfig } from 'ChipV2SuffixImageIconConfig';
-import { ChipV2SuffixImageIcon } from 'ChipV2SuffixImageIcon';
-import { ChipV2Icon } from 'ChipV2Icon';
-import { ChipV2PrefixImageIconConfig } from 'ChipV2PrefixImageIconConfig';
-import { ChipV2PrefixImageIcon } from 'ChipV2PrefixImageIcon';
-import { ChipV2AccessibilityConfig } from 'ChipV2AccessibilityConfig';
-import { ChipV2Accessibility } from 'ChipV2Accessibility';
-import { ChipV2CloseConfig } from 'ChipV2CloseConfig';
-import { ChipV2CloseIcon } from 'ChipV2CloseIcon';
-import { ChipV2SymbolIconConfig } from 'ChipV2SymbolIconConfig';
-import { ChipV2SymbolIcon } from 'ChipV2SymbolIcon';
-import { ChipV2PrefixSymbolIconConfig } from 'ChipV2PrefixSymbolIconConfig';
-import { ChipV2PrefixSymbolIcon } from 'ChipV2PrefixSymbolIcon';
-import { ChipV2SuffixSymbolIconConfig } from 'ChipV2SuffixSymbolIconConfig';
-import { ChipV2SuffixSymbolIcon } from 'ChipV2SuffixSymbolIcon';
-import { ChipV2LabelMarginConfig } from 'ChipV2LabelMarginConfig';
-import { ChipV2LocalizedLabelMarginConfig } from 'ChipV2LocalizedLabelMarginConfig';
-import { ChipV2LabelConfig } from 'ChipV2LabelConfig';
-import { ChipV2Label } from 'ChipV2Label';
-import { IChipV2OptionsConfig } from 'IChipV2OptionsConfig';
-import { ChipV2Options } from 'ChipV2Options';
-import { ChipV2 } from 'ChipV2';
+import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -61,7 +36,7 @@ The constructor of ChipV2Options
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [IChipV2OptionsConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
+| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
 
 ## accessibilityDescription
 

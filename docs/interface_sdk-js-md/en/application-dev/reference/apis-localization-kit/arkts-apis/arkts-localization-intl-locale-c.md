@@ -15,7 +15,8 @@ Provides APIs for obtaining locale information.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'intl';
+import { intl } from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor

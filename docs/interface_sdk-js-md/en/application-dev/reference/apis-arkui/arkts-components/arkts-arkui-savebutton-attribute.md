@@ -10,6 +10,11 @@ Universal attributes are not supported. This component supports the attributes l
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## iconBorderRadius
 
 ```TypeScript

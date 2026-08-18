@@ -1,5 +1,10 @@
 # addDomainFilterRule
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addDomainFilterRule
 
 ```TypeScript

@@ -8,6 +8,11 @@ WebContextMenuParam是ArkWeb组件中用于承载长按页面元素或鼠标右�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

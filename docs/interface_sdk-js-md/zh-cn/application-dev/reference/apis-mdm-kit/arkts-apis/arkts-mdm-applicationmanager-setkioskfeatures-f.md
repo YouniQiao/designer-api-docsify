@@ -1,5 +1,10 @@
 # setKioskFeatures
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setKioskFeatures
 
 ```TypeScript

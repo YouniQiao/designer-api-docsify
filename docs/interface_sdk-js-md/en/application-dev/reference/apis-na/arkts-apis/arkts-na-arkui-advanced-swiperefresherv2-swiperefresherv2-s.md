@@ -10,6 +10,11 @@ Declare component SwipeRefresherV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript

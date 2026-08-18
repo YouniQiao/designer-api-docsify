@@ -10,6 +10,11 @@ BadgeConfig
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## badgeType
 
 ```TypeScript

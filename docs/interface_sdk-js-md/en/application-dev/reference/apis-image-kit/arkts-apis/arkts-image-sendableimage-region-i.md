@@ -13,7 +13,7 @@ Describes the region information. It inherits from [lang.ISendable](../../../ark
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## size

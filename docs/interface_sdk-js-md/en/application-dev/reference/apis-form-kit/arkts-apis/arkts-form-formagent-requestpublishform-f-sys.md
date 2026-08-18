@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { formAgent } from 'formAgent';
+import { formAgent } from '@kit.FormKit';
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## requestPublishForm
@@ -36,7 +37,7 @@ Requests to publish a widget to the widget host. This API uses an asynchronous c
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the upper limit.<br>**Applicable version:** 26.1.0 and later |
+| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed.<br>**Applicable version:** 26.1.0 and later |
 | 16501018 | This form does not support publishing.<br>**Applicable version:** 26.1.0 and later |
 | 16501017 | There is no space to publish form.<br>**Applicable version:** 26.1.0 and later |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
@@ -81,7 +82,7 @@ Requests to publish a widget to the widget host. This API uses a promise to retu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the upper limit.<br>**Applicable version:** 26.1.0 and later |
+| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed.<br>**Applicable version:** 26.1.0 and later |
 | 16501018 | This form does not support publishing.<br>**Applicable version:** 26.1.0 and later |
 | 16501017 | There is no space to publish form.<br>**Applicable version:** 26.1.0 and later |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |

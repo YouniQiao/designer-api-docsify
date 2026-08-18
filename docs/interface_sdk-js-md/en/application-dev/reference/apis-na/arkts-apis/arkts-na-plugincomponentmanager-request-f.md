@@ -1,5 +1,10 @@
 # request
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## request
 
 ```TypeScript
@@ -22,6 +27,6 @@ Plugin component request method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RequestParameters](arkts-na-plugincomponentmanager-requestparameters-i.md) | Yes |  |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes |  |
+| param | [RequestParameters](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](../../apis-arkui/arkts-apis/arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes |  |
 

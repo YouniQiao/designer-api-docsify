@@ -1,5 +1,10 @@
 # dumpHeapData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## dumpHeapData
 
 ```TypeScript

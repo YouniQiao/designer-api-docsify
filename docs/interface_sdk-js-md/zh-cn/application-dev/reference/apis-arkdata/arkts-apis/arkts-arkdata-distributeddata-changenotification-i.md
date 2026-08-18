@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deleteEntries
 
 ```TypeScript

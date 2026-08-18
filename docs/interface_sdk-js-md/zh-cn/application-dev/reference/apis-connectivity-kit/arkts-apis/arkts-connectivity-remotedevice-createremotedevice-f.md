@@ -1,5 +1,10 @@
 # createRemoteDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createRemoteDevice
 
 ```TypeScript

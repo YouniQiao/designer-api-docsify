@@ -13,7 +13,8 @@ Defines the parameters of the PGO configuration file.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from 'installer';
+import { installer } from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## moduleName

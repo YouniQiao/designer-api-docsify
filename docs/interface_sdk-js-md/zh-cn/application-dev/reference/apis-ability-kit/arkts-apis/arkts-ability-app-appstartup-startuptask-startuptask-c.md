@@ -8,6 +8,11 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
+## 导入模块
+
+```TypeScript
+```
+
 ## init
 
 ```TypeScript

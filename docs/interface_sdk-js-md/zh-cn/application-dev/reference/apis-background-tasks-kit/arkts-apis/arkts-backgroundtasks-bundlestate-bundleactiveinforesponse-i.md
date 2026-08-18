@@ -8,3 +8,8 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
+## 导入模块
+
+```TypeScript
+```
+

@@ -10,6 +10,11 @@ Enumerates the constants of the **mode** parameter used in **open()**, which spe
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Constants

@@ -23,7 +23,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from 'faceAuth';
+import { faceAuth } from '@kit.UserAuthenticationKit';
+import { faceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

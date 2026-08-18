@@ -1,0 +1,68 @@
+# NativeEmbedTouchInfo
+
+Provides detailed information about finger touch on a same-layer tag, including the tag ID and touch event. It is suitable for scenarios where handling same-layer element touch interaction is required, improving touch experience customization and flexibility.
+
+**Since:** 11
+
+<!--Device-unnamed-declare interface NativeEmbedTouchInfo--><!--Device-unnamed-declare interface NativeEmbedTouchInfo-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## embedId
+
+```TypeScript
+embedId?: string
+```
+
+Unique ID of the same-layer tag.
+
+**Type:** string
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedTouchInfo-embedId?: string--><!--Device-NativeEmbedTouchInfo-embedId?: string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## result
+
+```TypeScript
+result?: EventResult
+```
+
+Gesture event consumption result.
+
+**Type:** [EventResult](arkts-arkweb-eventresult-c.md)
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeEmbedTouchInfo-result?: EventResult--><!--Device-NativeEmbedTouchInfo-result?: EventResult-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## touchEvent
+
+```TypeScript
+touchEvent?: TouchEvent
+```
+
+Touch action information.
+
+**Type:** TouchEvent
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent--><!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core

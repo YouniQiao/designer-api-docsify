@@ -10,6 +10,11 @@ EmbeddableUIAbility组件是为原子化服务提供可嵌入式的UIAbility组�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## context
 
 ```TypeScript

@@ -8,6 +8,11 @@ Defines the underline color width property.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## disable
 
 ```TypeScript

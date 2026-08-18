@@ -8,6 +8,11 @@ Provides parameters for scrolling to a specific position in a scrollable contain
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## animation
 
 ```TypeScript

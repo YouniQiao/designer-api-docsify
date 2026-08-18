@@ -12,6 +12,11 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
+## 导入模块
+
+```TypeScript
+```
+
 ## aad
 
 ```TypeScript

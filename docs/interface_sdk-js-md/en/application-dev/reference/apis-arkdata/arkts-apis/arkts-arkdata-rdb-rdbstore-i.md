@@ -12,6 +12,11 @@ Provides APIs for managing data in an RDB store. Before using the APIs of this c
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## batchInsert
 
 ```TypeScript

@@ -11,7 +11,7 @@ The correspondence information between IP and MAC address.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## iface

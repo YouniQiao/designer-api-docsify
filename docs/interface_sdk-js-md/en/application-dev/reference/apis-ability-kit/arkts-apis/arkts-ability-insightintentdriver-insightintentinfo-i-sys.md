@@ -13,7 +13,8 @@ Defines the intent information, which is the specific parameter configuration of
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName

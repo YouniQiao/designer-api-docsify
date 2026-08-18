@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
+## 导入模块
+
+```TypeScript
+```
+
 ## off_change
 
 ```TypeScript

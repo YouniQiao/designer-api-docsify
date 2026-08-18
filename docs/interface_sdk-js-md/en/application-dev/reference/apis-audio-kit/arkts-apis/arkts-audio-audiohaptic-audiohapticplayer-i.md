@@ -11,7 +11,8 @@ Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, y
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from 'audioHaptic';
+import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## isMuted

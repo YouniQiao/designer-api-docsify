@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from 'screenLockFileManager';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

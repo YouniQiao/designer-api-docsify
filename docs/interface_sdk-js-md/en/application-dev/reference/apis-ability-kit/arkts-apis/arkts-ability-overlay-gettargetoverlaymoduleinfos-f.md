@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from 'overlay';
+import { overlay } from '@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## getTargetOverlayModuleInfos

@@ -11,7 +11,8 @@ The **inputEvent** module provides the basic events reported by the device.
 ## Modules to Import
 
 ```TypeScript
-import { InputEvent } from 'InputEvent';
+import { InputEvent } from '@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## actionTime

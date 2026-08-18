@@ -1,5 +1,10 @@
 # getAllWindowLayoutInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllWindowLayoutInfo
 
 ```TypeScript

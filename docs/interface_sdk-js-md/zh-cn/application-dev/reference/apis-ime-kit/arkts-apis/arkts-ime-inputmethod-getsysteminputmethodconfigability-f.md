@@ -1,5 +1,10 @@
 # getSystemInputMethodConfigAbility
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemInputMethodConfigAbility
 
 ```TypeScript

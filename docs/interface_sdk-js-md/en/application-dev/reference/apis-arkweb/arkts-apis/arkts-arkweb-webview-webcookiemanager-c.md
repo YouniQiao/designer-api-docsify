@@ -11,7 +11,7 @@ WebCookieManager is the cookie manager for Web components, providing global mana
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## clearAllCookies
@@ -20,7 +20,7 @@ import { webview } from 'webview';
 static clearAllCookies(): Promise<void>
 ```
 
-Clears all cookies, including session cookies and persistent cookies. This API uses a promise to return the result. To clear only session cookies, use [clearSessionCookie](#clearsessioncookie).
+Clears all cookies, including session cookies and persistent cookies. This API uses a promise to return the result. To clear only session cookies, use [clearSessionCookie](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearsessioncookie).
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 static clearAllCookies(callback: AsyncCallback<void>): void
 ```
 
-Clears all cookies, including session cookies and persistent cookies. This API uses an asynchronous callback to return the result. To clear only session cookies, use [clearSessionCookie](#clearsessioncookie).
+Clears all cookies, including session cookies and persistent cookies. This API uses an asynchronous callback to return the result. To clear only session cookies, use [clearSessionCookie](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearsessioncookie).
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 static clearAllCookiesSync(incognito?: boolean): void
 ```
 
-Clears all cookies, including session cookies and persistent cookies. To clear only session cookies, use [clearSessionCookieSync](#clearsessioncookiesync).
+Clears all cookies, including session cookies and persistent cookies. To clear only session cookies, use [clearSessionCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearsessioncookiesync).
 
 **Since:** 11
 
@@ -170,7 +170,7 @@ Deletes all session cookies.
 static configCookie(url: string, value: string): Promise<void>
 ```
 
-Sets a single cookie value for a specified URL. This API uses a promise to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
+Sets a single cookie value for a specified URL. This API uses a promise to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
 
 **Since:** 11
 
@@ -207,7 +207,7 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>
 ```
 
-Sets a single cookie value for a specified URL. This API uses a promise to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol.
+Sets a single cookie value for a specified URL. This API uses a promise to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol.
 
 **Since:** 14
 
@@ -244,7 +244,7 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 static configCookie(url: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a single cookie value for a specified URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
+Sets a single cookie value for a specified URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > - In configCookie, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookie is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
 
 **Since:** 11
 
@@ -276,7 +276,7 @@ Sets a single cookie value for a specified URL. This API uses an asynchronous ca
 static configCookieSync(url: string, value: string, incognito?: boolean): void
 ```
 
-Sets a cookie for the specified URL. > **NOTE：**> > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
+Sets a cookie for the specified URL. > **NOTE：**> > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol. > > - To overwrite HttpOnly cookies, specify the HttpOnly attribute in the value.
 
 **Since:** 11
 
@@ -308,7 +308,7 @@ Sets a cookie for the specified URL. > **NOTE：**> > - In configCookieSync, you
 static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void
 ```
 
-Sets a single cookie value for a specified URL. > **NOTE：**> > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol.
+Sets a single cookie value for a specified URL. > **NOTE：**> > - In configCookieSync, you can specify a domain name in the URL so that in-page requests also carry the cookie. > > - Cookies are periodically saved to the disk every 30 seconds. You can also use > [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#savecookieasync) for force > storage. > > - The value parameter must follow the format of the Set-Cookie HTTP response header. It is a key-value pair in > the form of "key=value", optionally followed by a cookie property list separated by "; " (for example, "key= > value; Max-Age=100"). > > - If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie > to set has expired, it will not be stored. To set multiple cookies, call this method multiple times. > > - If configCookieSync is called twice or more to set cookies, each cookie set is separated by "; ". > > - If the specified value contains the "Secure" attribute, the URL must use the "https://" protocol.
 
 **Since:** 14
 
@@ -345,7 +345,7 @@ Deletes all cookies.
 
 **Deprecated since:** 11
 
-**Substitutes:** [clearAllCookiesSync](#clearallcookiessync)
+**Substitutes:** [clearAllCookiesSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearallcookiessync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -363,7 +363,7 @@ Deletes all session cookies.
 
 **Deprecated since:** 11
 
-**Substitutes:** [clearSessionCookieSync](#clearsessioncookiesync)
+**Substitutes:** [clearSessionCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearsessioncookiesync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -421,7 +421,7 @@ Obtains all cookies. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | Promise used to obtain all cookies and their corresponding field values. |
+| Promise&lt;Array&lt;[WebHttpCookie](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookie-i.md)&gt;&gt; | Promise used to obtain all cookies and their corresponding field values. |
 
 ## fetchCookie
 
@@ -642,7 +642,7 @@ Obtains the cookie value of the specified URL.
 
 **Deprecated since:** 11
 
-**Substitutes:** [fetchCookieSync](#fetchcookiesync)
+**Substitutes:** [fetchCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#fetchcookiesync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -849,7 +849,7 @@ Sets a cookie for the specified URL.
 
 **Deprecated since:** 11
 
-**Substitutes:** [configCookieSync](#configcookiesync)
+**Substitutes:** [configCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#configcookiesync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 

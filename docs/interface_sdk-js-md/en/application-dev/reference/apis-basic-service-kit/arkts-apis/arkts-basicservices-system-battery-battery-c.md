@@ -13,8 +13,7 @@ The module allows you to query the charging status and remaining power of a devi
 ## Modules to Import
 
 ```TypeScript
-import { BatteryResponse } from 'BatteryResponse';
-import { GetStatusOptions } from 'GetStatusOptions';
+import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
 ```
 
 ## getStatus

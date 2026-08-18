@@ -11,7 +11,7 @@ FetchResult provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getRangeObjects

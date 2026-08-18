@@ -11,7 +11,8 @@ The description of the media for an item in the playlist of the session
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'avSession';
+import { avSession } from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## albumCoverUri

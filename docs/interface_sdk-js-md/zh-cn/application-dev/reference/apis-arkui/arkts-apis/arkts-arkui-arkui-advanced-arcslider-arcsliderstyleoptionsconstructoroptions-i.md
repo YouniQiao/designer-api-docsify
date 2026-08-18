@@ -8,6 +8,11 @@ ArcSliderStyleOptions的构造信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+```
+
 ## activeTrackThickness
 
 ```TypeScript

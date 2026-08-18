@@ -1,5 +1,10 @@
 # isVectorSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isVectorSupported
 
 ```TypeScript

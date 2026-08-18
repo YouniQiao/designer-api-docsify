@@ -11,29 +11,7 @@ Provides APIs for handling data transformations related to state management.
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2 } from 'AppStorageV2';
-import { PersistenceV2 } from 'PersistenceV2';
-import { Type } from 'Type';
-import { UIUtils } from 'UIUtils';
-import { ConnectOptions } from 'ConnectOptions';
-import { Binding } from 'Binding';
-import { MutableBinding } from 'MutableBinding';
-import { CustomComponentLifecycle } from 'CustomComponentLifecycle';
-import { CustomComponentLifecycleObserver } from 'CustomComponentLifecycleObserver';
-import { CustomComponentLifecycleState } from 'CustomComponentLifecycleState';
-import { ComponentInit } from 'ComponentInit';
-import { ComponentAppear } from 'ComponentAppear';
-import { ComponentBuilt } from 'ComponentBuilt';
-import { ComponentReuse } from 'ComponentReuse';
-import { ComponentActive } from 'ComponentActive';
-import { ComponentInactive } from 'ComponentInactive';
-import { ComponentRecycle } from 'ComponentRecycle';
-import { ComponentDisappear } from 'ComponentDisappear';
-import { CollectionType } from 'CollectionType';
-import { ConnectOptionsCollections } from 'ConnectOptionsCollections';
-import { CustomComponentContext } from 'CustomComponentContext';
-import { IReusePool } from 'IReusePool';
-import { IReusableInfo } from 'IReusableInfo';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## addMonitor
@@ -913,7 +891,7 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>@arkts.collections (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeobserved) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#arktscollections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeobserved) are not supported. |
 
 **Return value:**
 

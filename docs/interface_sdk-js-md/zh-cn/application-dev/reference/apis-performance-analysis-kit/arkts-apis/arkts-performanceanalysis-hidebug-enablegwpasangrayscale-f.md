@@ -1,5 +1,10 @@
 # enableGwpAsanGrayscale
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableGwpAsanGrayscale
 
 ```TypeScript

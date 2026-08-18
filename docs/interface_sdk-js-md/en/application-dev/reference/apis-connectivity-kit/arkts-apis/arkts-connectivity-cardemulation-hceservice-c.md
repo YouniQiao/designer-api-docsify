@@ -11,7 +11,7 @@ A class for NFC host application. &lt;p&gt;The NFC host application use this cla
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from 'cardEmulation';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## offHceCmd

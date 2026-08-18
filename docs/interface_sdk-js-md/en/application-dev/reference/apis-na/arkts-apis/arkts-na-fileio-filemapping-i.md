@@ -10,6 +10,11 @@ Defines a file mapping object. Before calling the **FileMapping** method, constr
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## capacity
 
 ```TypeScript

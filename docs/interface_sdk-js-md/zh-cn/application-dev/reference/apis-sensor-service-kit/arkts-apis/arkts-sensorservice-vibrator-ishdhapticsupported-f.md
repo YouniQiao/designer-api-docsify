@@ -1,5 +1,10 @@
 # isHdHapticSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isHdHapticSupported
 
 ```TypeScript

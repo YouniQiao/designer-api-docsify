@@ -8,6 +8,11 @@ Defines display options for the first frame of the video.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## contentTransitionEffect
 
 ```TypeScript

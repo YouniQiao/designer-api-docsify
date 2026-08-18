@@ -11,7 +11,7 @@ Describes the radio access technology (RAT) of registered network.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'radio';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## csRadioTech

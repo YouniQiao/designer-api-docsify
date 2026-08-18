@@ -13,7 +13,7 @@ Provides entity information perceived, including content, links, images, and oth
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## entityInfo

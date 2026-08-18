@@ -11,7 +11,7 @@ Displays the identification result of sensitive content.
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from 'identifySensitiveContent';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## matchContent

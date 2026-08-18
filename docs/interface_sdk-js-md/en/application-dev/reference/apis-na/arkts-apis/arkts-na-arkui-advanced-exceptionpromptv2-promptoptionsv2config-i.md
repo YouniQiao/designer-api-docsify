@@ -10,6 +10,11 @@ Configuration information interface for PromptOptionsV2. Used to construct Promp
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## actionText
 
 ```TypeScript

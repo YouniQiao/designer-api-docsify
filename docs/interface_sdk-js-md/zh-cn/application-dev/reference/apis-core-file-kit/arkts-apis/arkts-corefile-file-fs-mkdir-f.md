@@ -1,5 +1,10 @@
 # mkdir
 
+## 导入模块
+
+```TypeScript
+```
+
 ## mkdir
 
 ```TypeScript
@@ -120,7 +125,7 @@ declare function mkdir(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步创建目录操作完成之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步创建目录操作完成之后的回调。 |
 
 **错误码：**
 
@@ -165,7 +170,7 @@ declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
 | recursion | boolean | 是 | 是否递归创建目录。recursion指定为true时，可递归创建目录。recursion指定为false时，仅可创建单层目录。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步创建目录操作完成之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步创建目录操作完成之后的回调。 |
 
 **错误码：**
 

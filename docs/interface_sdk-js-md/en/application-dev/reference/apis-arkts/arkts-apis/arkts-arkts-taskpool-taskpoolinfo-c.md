@@ -11,7 +11,7 @@ Describes the internal information about a task pool.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## taskInfos

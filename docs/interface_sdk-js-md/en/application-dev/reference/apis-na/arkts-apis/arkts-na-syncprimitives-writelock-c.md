@@ -12,6 +12,11 @@ A write lock that provides exclusive write access to a shared resource
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

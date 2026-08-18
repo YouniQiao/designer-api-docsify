@@ -12,6 +12,11 @@ ItemInfo
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## itemType
 
 ```TypeScript

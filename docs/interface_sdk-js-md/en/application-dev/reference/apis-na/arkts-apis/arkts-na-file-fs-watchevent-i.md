@@ -10,6 +10,11 @@ Defines the event to observe.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cookie
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'selectionManager';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## on_selectionCompleted

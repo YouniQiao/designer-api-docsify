@@ -205,7 +205,7 @@ FrameNode的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。<br>**起始版本：** 23 |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。<br>**起始版本：** 23 |
 | options | [FrameNodeOptions](arkts-na-framenode-framenodeoptions-i.md) | 否 | FrameNode创建时的可选参数。默认值：undefined，表示不支持多线程操作。<br>**起始版本：** 24 |
 
 ## convertPosition
@@ -371,7 +371,7 @@ static createFrameNodes(uiContext: UIContext, count: int): FrameNode[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | count | int | 是 | 指定创建节点的数量，取值范围为大于零的整型。若给定值小于等于0或不是整数，则返回空数组。 <br>取值限定为整数。 |
 
 **返回值：**
@@ -823,7 +823,7 @@ getMeasuredSize(): Size
 
 | 类型 | 说明 |
 | --- | --- |
-| [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md) | 节点测量后的大小，单位为PX。 |
+| [Size](arkts-na-graphics-size-i.md) | 节点测量后的大小，单位为PX。 |
 
 ## getNextSibling
 
@@ -1175,7 +1175,7 @@ getUserConfigBorderWidth(): NodeEdges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的边框宽度。 |
+| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的边框宽度。 |
 
 ## getUserConfigMargin
 
@@ -1197,7 +1197,7 @@ getUserConfigMargin(): NodeEdges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的外边距。 |
+| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的外边距。 |
 
 ## getUserConfigPadding
 
@@ -1219,7 +1219,7 @@ getUserConfigPadding(): NodeEdges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的内边距。 |
+| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的内边距。 |
 
 ## getUserConfigSize
 
@@ -1243,7 +1243,7 @@ getUserConfigSize(): SizeT<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeT](../../apis-arkui/arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的宽高。 |
+| [SizeT](arkts-na-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的宽高。 |
 
 ## insertChildAfter
 
@@ -1619,7 +1619,7 @@ moveTo(targetParent: FrameNode, index?: int): void
 onDraw(context: DrawContext): void
 ```
 
-该接口的[DrawContext](../../apis-arkui/arkts-apis/arkts-arkui-graphics-drawcontext-c.md#drawcontext)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
+该接口的[DrawContext](arkts-na-graphics-drawcontext-c.md#drawcontext)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
 
 **起始版本：** 23
 
@@ -1635,7 +1635,7 @@ onDraw(context: DrawContext): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](../../apis-arkui/arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。自绘制区域无法超出组件自身大小。 |
+| context | [DrawContext](arkts-na-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。自绘制区域无法超出组件自身大小。 |
 
 ## onLayout
 
@@ -1877,7 +1877,7 @@ setMeasuredSize(size: Size): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md) | 是 | FrameNode的测量后的尺寸。 |
+| size | [Size](arkts-na-graphics-size-i.md) | 是 | FrameNode的测量后的尺寸。 |
 
 ## setNeedsLayout
 

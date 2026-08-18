@@ -1,5 +1,10 @@
 # createImageReceiver
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createImageReceiver
 
 ```TypeScript

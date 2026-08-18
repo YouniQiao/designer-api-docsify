@@ -10,6 +10,11 @@ ChipV2CloseConfig用于定义ChipV2组件关闭图标的功能属性配置，包
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## fontSize
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # isFlashReminderEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFlashReminderEnabled
 
 ```TypeScript

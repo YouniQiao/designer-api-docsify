@@ -10,6 +10,11 @@ Common ancestor amongst all other classes
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_hashCode
 
 ```TypeScript

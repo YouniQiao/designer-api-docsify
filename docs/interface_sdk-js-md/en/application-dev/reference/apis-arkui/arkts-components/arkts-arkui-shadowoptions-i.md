@@ -8,6 +8,11 @@ Provides the shadow attributes, including the blur radius, color, and offset alo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

@@ -13,7 +13,7 @@ Provides APIs for managing the **Highlights** album, which is an automatically g
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor

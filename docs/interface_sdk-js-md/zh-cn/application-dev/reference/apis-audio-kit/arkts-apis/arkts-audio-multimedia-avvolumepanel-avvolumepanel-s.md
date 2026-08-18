@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
+## 导入模块
+
+```TypeScript
+```
+
 ## volumeLevel
 
 ```TypeScript
@@ -36,7 +41,7 @@
 
 设置音量面板的自定义参数。 如果不设置该参数，则为系统音量条。
 
-**类型：** [AVVolumePanelParameter](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
+**类型：** [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
 **起始版本：** 12
 

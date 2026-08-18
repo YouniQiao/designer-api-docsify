@@ -10,6 +10,11 @@ Represents a handle to a task's result, used to await the completion of a task.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Await
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # renameSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## renameSync
 
 ```TypeScript

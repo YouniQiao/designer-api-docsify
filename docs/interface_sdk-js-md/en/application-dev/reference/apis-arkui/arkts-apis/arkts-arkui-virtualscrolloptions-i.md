@@ -8,6 +8,11 @@ Configures the expected total number of data items to be loaded in lazy loading 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onLazyLoading
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getFreeSizeSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFreeSizeSync
 
 ```TypeScript

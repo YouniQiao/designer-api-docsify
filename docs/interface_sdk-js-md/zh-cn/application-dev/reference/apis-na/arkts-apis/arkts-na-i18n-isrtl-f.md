@@ -1,5 +1,10 @@
 # isRTL
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isRTL
 
 ```TypeScript

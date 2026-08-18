@@ -11,7 +11,7 @@ NativeMediaPlayerSurfaceInfo uses enableNativeMediaPlayer to configure the surfa
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## id
@@ -40,7 +40,7 @@ rect: RectEvent
 
 Position information of the surface, used to specify the display position and size of the surface during same- layer rendering.
 
-**Type:** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
+**Type:** [RectEvent](../../apis-na/arkts-apis/arkts-na-webview-rectevent-i.md)
 
 **Since:** 12
 

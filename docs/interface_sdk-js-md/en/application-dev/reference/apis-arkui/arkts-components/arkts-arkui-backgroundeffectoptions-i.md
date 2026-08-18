@@ -8,6 +8,11 @@ Defines the options of BackgroundEffect
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## adaptiveColor
 
 ```TypeScript

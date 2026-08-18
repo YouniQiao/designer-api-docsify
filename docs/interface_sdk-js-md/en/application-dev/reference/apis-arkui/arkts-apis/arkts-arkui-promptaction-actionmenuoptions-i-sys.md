@@ -11,9 +11,7 @@ Describes the options for showing the action menu.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode } from 'LevelMode';
-import { ImmersiveMode } from 'ImmersiveMode';
-import { LevelOrder } from 'LevelOrder';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## distortionMode

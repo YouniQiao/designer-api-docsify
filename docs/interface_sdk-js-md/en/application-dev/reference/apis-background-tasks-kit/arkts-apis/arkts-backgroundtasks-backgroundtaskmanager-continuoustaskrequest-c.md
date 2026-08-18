@@ -11,7 +11,8 @@ Specifies details of the continuous task being requested or updated. It is typic
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## checkSpecialScenarioAuth

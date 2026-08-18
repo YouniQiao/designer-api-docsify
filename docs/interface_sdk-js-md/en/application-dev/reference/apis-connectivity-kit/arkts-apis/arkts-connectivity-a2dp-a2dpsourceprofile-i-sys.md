@@ -13,7 +13,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from 'a2dp';
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## connect

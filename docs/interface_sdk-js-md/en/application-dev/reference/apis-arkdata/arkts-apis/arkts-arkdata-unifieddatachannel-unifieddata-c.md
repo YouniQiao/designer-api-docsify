@@ -11,7 +11,8 @@ Provides APIs for encapsulating a set of data records.
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## addRecord

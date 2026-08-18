@@ -8,6 +8,11 @@ GzError返回信息。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
+## 导入模块
+
+```TypeScript
+```
+
 ## status
 
 ```TypeScript

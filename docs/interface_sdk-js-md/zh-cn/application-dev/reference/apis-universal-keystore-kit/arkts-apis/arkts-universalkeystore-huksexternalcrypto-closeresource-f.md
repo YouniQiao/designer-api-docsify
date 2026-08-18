@@ -1,5 +1,10 @@
 # closeResource
 
+## 导入模块
+
+```TypeScript
+```
+
 ## closeResource
 
 ```TypeScript

@@ -8,6 +8,11 @@ Options used to build the **TextClock** component. > **NOTE：**> > To standardi
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## controller
 
 ```TypeScript

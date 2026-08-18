@@ -11,7 +11,8 @@ Defines a struct for obtaining the batch operation result of shared configuratio
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'dataShare';
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## allowList

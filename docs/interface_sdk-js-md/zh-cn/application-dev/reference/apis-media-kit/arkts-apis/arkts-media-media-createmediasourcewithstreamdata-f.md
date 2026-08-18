@@ -1,5 +1,10 @@
 # createMediaSourceWithStreamData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createMediaSourceWithStreamData
 
 ```TypeScript

@@ -8,6 +8,11 @@ Radio button color.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## checkedBackgroundColor
 
 ```TypeScript

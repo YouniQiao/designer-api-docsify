@@ -1,5 +1,10 @@
 # registerWebAdInterface
 
+## 导入模块
+
+```TypeScript
+```
+
 ## registerWebAdInterface
 
 ```TypeScript

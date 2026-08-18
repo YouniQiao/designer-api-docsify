@@ -8,6 +8,11 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能�
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onAccessibilityEvent
 
 ```TypeScript

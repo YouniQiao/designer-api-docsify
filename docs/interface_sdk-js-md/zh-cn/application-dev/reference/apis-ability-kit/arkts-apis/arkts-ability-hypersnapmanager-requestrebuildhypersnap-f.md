@@ -1,5 +1,10 @@
 # requestRebuildHyperSnap
 
+## 导入模块
+
+```TypeScript
+```
+
 ## requestRebuildHyperSnap
 
 ```TypeScript

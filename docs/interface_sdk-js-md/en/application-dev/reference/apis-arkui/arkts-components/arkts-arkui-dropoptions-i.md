@@ -8,6 +8,11 @@ Sets parameters for the drop process.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## disableDataPrefetch
 
 ```TypeScript

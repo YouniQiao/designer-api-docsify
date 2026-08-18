@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'pointer';
+import { pointer } from '@kit.InputKit';
 ```
 
 ## setTouchpadScrollDirection

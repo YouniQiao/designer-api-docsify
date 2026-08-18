@@ -13,7 +13,9 @@ Describes the start animation configuration. This API works only for full-screen
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'window';
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## animationConfig

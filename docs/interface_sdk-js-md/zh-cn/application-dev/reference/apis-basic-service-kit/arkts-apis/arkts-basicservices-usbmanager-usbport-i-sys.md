@@ -10,6 +10,11 @@ USB设备端口。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript
@@ -34,7 +39,7 @@ USB端口唯一标识。
 status: USBPortStatus
 ```
 
-USB端口角色。
+USB端口角色信息。其currentMode应在supportedModes范围内。
 
 **类型：** USBPortStatus
 
@@ -52,7 +57,7 @@ USB端口角色。
 supportedModes: PortModeType
 ```
 
-USB端口所支持的模式的数字组合掩码。
+USB端口所支持的模式的数字组合掩码。status.currentMode应在此范围内。
 
 **类型：** PortModeType
 

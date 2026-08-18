@@ -10,6 +10,11 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## offDraw
 
 ```TypeScript

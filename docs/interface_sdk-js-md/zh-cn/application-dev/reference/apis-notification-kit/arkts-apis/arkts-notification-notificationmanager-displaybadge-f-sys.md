@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## displayBadge
@@ -30,7 +31,7 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | enable | boolean | 是 | 使能状态（true：使能，false：禁止）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设定角标使能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定角标使能回调函数。 |
 
 **错误码：**
 

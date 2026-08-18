@@ -1,5 +1,10 @@
 # getFontPathsByType
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFontPathsByType
 
 ```TypeScript

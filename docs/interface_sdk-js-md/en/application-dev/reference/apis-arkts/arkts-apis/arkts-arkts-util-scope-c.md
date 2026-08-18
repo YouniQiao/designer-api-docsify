@@ -6,7 +6,7 @@ The Scope interface is used to describe the valid range of a field.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#scopehelper)
+**Substitutes:** [ScopeHelper](arkts-arkts-util-scopehelper-c.md#scopehelper)
 
 <!--Device-util-class Scope--><!--Device-util-class Scope-End-->
 
@@ -15,7 +15,42 @@ The Scope interface is used to describe the valid range of a field.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'util';
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { util } from '@kit.ArkTS';
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## clamp
@@ -30,7 +65,7 @@ Limits a value to this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [clamp](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#clamp)
+**Substitutes:** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
 
 <!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
 
@@ -40,13 +75,13 @@ Limits a value to this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
 
 **Examples**
 
@@ -102,8 +137,8 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
-| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
 
 **Examples**
 
@@ -147,7 +182,7 @@ Checks whether a value is within this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
 
@@ -157,7 +192,7 @@ Checks whether a value is within this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
@@ -209,7 +244,7 @@ Checks whether a range is within this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
 
@@ -283,8 +318,8 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
@@ -411,7 +446,7 @@ Obtains the union set of this **Scope** and the given value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
@@ -463,7 +498,7 @@ Obtains the lower limit of this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLower](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#getlower)
+**Substitutes:** [getLower](arkts-arkts-util-scopehelper-c.md#getlower)
 
 <!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
 
@@ -473,7 +508,7 @@ Obtains the lower limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Lower limit of this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Lower limit of this **Scope**. |
 
 **Examples**
 
@@ -518,7 +553,7 @@ Obtains the upper limit of this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getUpper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#getupper)
+**Substitutes:** [getUpper](arkts-arkts-util-scopehelper-c.md#getupper)
 
 <!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
 
@@ -528,7 +563,7 @@ Obtains the upper limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Upper limit of this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
 
 **Examples**
 
@@ -647,8 +682,8 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
@@ -701,7 +736,7 @@ Obtains a string representation that contains this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [toString](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#tostring)
+**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#tostring)
 
 <!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 

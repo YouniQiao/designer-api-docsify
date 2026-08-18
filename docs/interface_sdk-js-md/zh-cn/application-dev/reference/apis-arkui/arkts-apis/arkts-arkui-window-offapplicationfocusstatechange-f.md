@@ -1,5 +1,10 @@
 # offApplicationFocusStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offApplicationFocusStateChange
 
 ```TypeScript

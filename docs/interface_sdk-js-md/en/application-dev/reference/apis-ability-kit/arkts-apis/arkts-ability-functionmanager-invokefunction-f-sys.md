@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from 'functionManager';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## invokeFunction

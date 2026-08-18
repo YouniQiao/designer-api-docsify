@@ -12,3 +12,8 @@ Defines the base class for text transitions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

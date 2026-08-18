@@ -1,5 +1,10 @@
 # getSignatureInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSignatureInfo
 
 ```TypeScript

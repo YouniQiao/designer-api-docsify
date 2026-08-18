@@ -1,6 +1,6 @@
 # Parity
 
-Enumerates the parity check modes.
+表示校验位的校验方式的枚举。
 
 **起始版本：** 23
 

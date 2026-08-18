@@ -15,7 +15,8 @@ The module provides APIs for executing intent calls. The system executes intent 
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'insightIntentDriver';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## Summary

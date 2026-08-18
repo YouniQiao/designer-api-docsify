@@ -8,6 +8,11 @@ Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alternateHeadroom
 
 ```TypeScript

@@ -1,12 +1,17 @@
 # parseUUID
 
+## 导入模块
+
+```TypeScript
+```
+
 ## parseUUID
 
 ```TypeScript
 function parseUUID(uuid: string): Uint8Array
 ```
 
-将generateRandomUUID生成的string类型UUID转换为[generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid)生成的UUID， 符合RFC 4122版本规范。
+将generateRandomUUID生成的string类型UUID转换为[generateRandomBinaryUUID](../../apis-na/arkts-apis/arkts-na-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid)生成的UUID， 符合RFC 4122版本规范。
 
 **起始版本：** 9
 

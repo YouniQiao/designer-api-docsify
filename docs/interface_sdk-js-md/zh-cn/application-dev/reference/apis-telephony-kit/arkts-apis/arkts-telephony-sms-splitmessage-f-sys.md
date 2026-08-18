@@ -1,5 +1,10 @@
 # splitMessage（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## splitMessage
 
 ```TypeScript
@@ -23,7 +28,7 @@ function splitMessage(content: string, callback: AsyncCallback<Array<string>>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | string | 是 | 指示短消息内容，不能为null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 返回可合并为完整SMS的拆分段列表的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 返回可合并为完整SMS的拆分段列表的回调函数。 |
 
 **错误码：**
 

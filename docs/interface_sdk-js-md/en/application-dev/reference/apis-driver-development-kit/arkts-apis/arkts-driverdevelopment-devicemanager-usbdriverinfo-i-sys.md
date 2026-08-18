@@ -15,7 +15,7 @@ Defines detailed information about the USB device driver. It is inherited from [
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## productIdList

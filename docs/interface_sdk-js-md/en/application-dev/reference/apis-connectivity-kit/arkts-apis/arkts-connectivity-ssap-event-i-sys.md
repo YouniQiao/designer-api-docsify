@@ -13,7 +13,7 @@ Describes the SSAP event.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'ssap';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## eventUuid

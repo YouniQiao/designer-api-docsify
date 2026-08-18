@@ -3,9 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { Available } from 'Available';
-import { SuppressWarnings } from 'SuppressWarnings';
-import { SuppressWarningsType } from 'SuppressWarningsType';
+import { Available, SuppressWarnings, SuppressWarningsType } from '@kit.BasicServicesKit';
+import { Available } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

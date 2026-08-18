@@ -1,5 +1,10 @@
 # parseUUID
 
+## 导入模块
+
+```TypeScript
+```
+
 ## parseUUID
 
 ```TypeScript

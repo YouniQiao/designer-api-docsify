@@ -13,7 +13,8 @@ Represents the locale information, which consists of the language, script, and c
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## displayName
@@ -78,7 +79,7 @@ suggestionType: SuggestionType
 
 Language or country/region suggestion type.
 
-**Type:** [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md)
+**Type:** [SuggestionType](../../apis-na/arkts-apis/arkts-na-i18n-suggestiontype-e-sys.md)
 
 **Since:** 23
 

@@ -1,5 +1,10 @@
 # getAvailableStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAvailableStatus
 
 ```TypeScript

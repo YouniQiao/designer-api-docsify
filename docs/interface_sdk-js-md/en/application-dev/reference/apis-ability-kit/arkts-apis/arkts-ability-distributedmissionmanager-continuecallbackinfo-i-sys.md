@@ -13,7 +13,7 @@ Defines the information about the callback that is triggered for mission continu
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from 'distributedMissionManager';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## info

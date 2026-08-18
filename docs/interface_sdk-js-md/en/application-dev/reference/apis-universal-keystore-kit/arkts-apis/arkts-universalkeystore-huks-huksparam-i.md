@@ -11,7 +11,8 @@ Defines the **param** field in the **properties** array of **options** used in t
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'huks';
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## tag

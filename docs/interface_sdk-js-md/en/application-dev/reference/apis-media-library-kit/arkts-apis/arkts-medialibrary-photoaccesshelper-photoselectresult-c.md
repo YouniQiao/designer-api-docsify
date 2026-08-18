@@ -11,7 +11,7 @@ Defines information about the images or videos selected.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## contextRecoveryInfo

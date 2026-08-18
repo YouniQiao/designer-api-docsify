@@ -13,7 +13,8 @@ Provides APIs to obtain the manual exposure range supported.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getSupportedExposureRange

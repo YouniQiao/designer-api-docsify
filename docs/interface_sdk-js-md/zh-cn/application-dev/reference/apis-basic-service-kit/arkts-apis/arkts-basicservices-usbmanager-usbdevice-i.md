@@ -8,6 +8,11 @@ USB设备信息。
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## busNum
 
 ```TypeScript
@@ -30,7 +35,7 @@ busNum: int
 clazz: int
 ```
 
-设备类。
+设备类型代码。
 
 **类型：** int
 
@@ -78,7 +83,7 @@ devAddress: int
 manufacturerName: string
 ```
 
-产商信息。
+设备厂商名称。
 
 **类型：** string
 
@@ -94,7 +99,7 @@ manufacturerName: string
 name: string
 ```
 
-设备名字。
+设备名称。
 
 **类型：** string
 
@@ -126,7 +131,7 @@ productId: int
 productName: string
 ```
 
-产品信息。
+设备产品名称。
 
 **类型：** string
 
@@ -142,7 +147,7 @@ productName: string
 protocol: int
 ```
 
-设备协议码。
+设备协议代码。
 
 **类型：** int
 
@@ -158,7 +163,7 @@ protocol: int
 serial: string
 ```
 
-序列号。
+序列号。三方应用无法获取此字段的设备序列号信息（该字段对三方应用不可用），如需获取序列号需在申请设备访问权限后自行发起控制传输。
 
 **类型：** string
 
@@ -174,7 +179,7 @@ serial: string
 subClass: int
 ```
 
-设备子类。
+设备子类型代码。
 
 **类型：** int
 
@@ -206,7 +211,7 @@ vendorId: int
 version: string
 ```
 
-版本。
+设备版本号。
 
 **类型：** string
 

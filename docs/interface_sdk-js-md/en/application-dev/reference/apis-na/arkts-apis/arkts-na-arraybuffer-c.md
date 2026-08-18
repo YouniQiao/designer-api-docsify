@@ -10,6 +10,11 @@ JS ArrayBuffer API-compatible class. Used to represent a generic, fixed-length r
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## at
 
 ```TypeScript

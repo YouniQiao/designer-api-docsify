@@ -1,5 +1,10 @@
 # getAppClipboardPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppClipboardPolicy
 
 ```TypeScript

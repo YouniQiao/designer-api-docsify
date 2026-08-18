@@ -17,7 +17,7 @@ Configuring parameters in geo fence requests
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'geolocation';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## geofence

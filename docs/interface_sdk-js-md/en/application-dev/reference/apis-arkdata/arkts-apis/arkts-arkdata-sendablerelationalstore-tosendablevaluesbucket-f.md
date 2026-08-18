@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'sendableRelationalStore';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## toSendableValuesBucket

@@ -6,6 +6,11 @@
 
 <!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D--><!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D-End-->
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

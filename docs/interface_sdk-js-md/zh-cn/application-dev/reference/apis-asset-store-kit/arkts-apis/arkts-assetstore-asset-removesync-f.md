@@ -1,5 +1,10 @@
 # removeSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeSync
 
 ```TypeScript

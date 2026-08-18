@@ -10,6 +10,11 @@ The message received or sent from web message port.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getArray
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
+CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
 
 **起始版本：** 23
 
@@ -9,6 +9,11 @@ CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](../..
 <!--Device-unnamed-declare class CompletionHandlerForAtomicService--><!--Device-unnamed-declare class CompletionHandlerForAtomicService-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+```
 
 ## onAtomicServiceRequestFailure
 

@@ -10,6 +10,11 @@ linkEnhance模块提供高效的蓝牙连接和数据传输功能，增强设备
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

@@ -8,6 +8,11 @@ Configures the style of the preview image during custom drag operations.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## delayCreating
 
 ```TypeScript

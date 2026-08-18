@@ -1,5 +1,10 @@
 # on_streamChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_streamChange
 
 ```TypeScript
@@ -27,5 +32,5 @@ function on(type: 'streamChange', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'streamChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 状态改变回调函数。1:向下，2:向上，3:双向 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。1:向下，2:向上，3:双向 |
 

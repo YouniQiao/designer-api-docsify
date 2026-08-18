@@ -8,6 +8,11 @@ Describes the rectangle of the surface held by the **XComponent**. > **NOTE：**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## offsetX
 
 ```TypeScript

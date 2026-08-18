@@ -15,7 +15,7 @@ Used to do mediaquery operations.
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'mediaquery';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## Summary

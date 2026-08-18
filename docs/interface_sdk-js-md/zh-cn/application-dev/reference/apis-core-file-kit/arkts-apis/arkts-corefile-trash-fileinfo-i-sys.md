@@ -12,6 +12,11 @@ Represents information about a file or directory in the **Recently deleted** lis
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## ctime
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getApplicationLabel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getApplicationLabel
 
 ```TypeScript

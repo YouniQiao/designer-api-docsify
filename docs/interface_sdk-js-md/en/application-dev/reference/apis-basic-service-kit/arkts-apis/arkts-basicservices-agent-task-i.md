@@ -11,7 +11,9 @@ Implements an upload or download task. Before using this API, you must obtain a 
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'request';
+import { request } from '@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## offCompleted

@@ -1,5 +1,10 @@
 # getLinkedInfoSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getLinkedInfoSync
 
 ```TypeScript

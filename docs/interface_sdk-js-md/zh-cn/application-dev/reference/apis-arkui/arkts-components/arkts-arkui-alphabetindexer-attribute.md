@@ -10,6 +10,11 @@ width属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alignStyle
 
 ```TypeScript

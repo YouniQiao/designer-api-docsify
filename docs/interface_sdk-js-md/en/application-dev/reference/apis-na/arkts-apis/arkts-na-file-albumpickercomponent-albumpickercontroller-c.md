@@ -10,6 +10,11 @@ The class for AlbumPickerController
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setFontSize
 
 ```TypeScript

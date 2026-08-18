@@ -1,5 +1,10 @@
 # getAppVMObjectUsedSize
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAppVMObjectUsedSize
 
 ```TypeScript

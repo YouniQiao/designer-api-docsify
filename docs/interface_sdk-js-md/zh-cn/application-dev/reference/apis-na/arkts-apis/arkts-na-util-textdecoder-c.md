@@ -10,6 +10,11 @@ The TextDecoder represents a text decoder that accepts a string as input, decode
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -47,13 +52,13 @@ Replaces the original constructor to process arguments and return a textDecoder 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | encoding | string | 否 | Decoding format |
-| options | [TextDecoderOptions](../../apis-arkts/arkts-apis/arkts-arkts-util-textdecoderoptions-i.md) | 否 | Options |
+| options | [TextDecoderOptions](arkts-na-util-textdecoderoptions-i.md) | 否 | Options |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextDecoder](../../apis-arkts/arkts-apis/arkts-arkts-util-textdecoder-c.md) |  |
+| [TextDecoder](arkts-na-util-textdecoder-c.md) |  |
 
 ## decodeToString
 
@@ -76,7 +81,7 @@ The input is decoded and a string is returned. If options.stream is set to true,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | input | Uint8Array | 是 | Decoded numbers in accordance with the format. |
-| options | [DecodeToStringOptions](../../apis-arkts/arkts-apis/arkts-arkts-util-decodetostringoptions-i.md) | 否 | The default option is set to false. |
+| options | [DecodeToStringOptions](arkts-na-util-decodetostringoptions-i.md) | 否 | The default option is set to false. |
 
 **返回值：**
 

@@ -1,5 +1,10 @@
 # truncateSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## truncateSync
 
 ```TypeScript

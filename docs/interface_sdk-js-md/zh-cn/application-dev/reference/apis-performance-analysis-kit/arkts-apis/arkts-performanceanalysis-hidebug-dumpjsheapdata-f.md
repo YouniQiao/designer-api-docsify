@@ -1,5 +1,10 @@
 # dumpJsHeapData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## dumpJsHeapData
 
 ```TypeScript

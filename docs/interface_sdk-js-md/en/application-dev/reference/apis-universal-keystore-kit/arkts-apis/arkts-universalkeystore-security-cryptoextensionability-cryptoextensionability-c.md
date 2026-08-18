@@ -11,11 +11,7 @@ Class to be override for external crypto extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { HuksCryptoExtensionCertInfo } from 'HuksCryptoExtensionCertInfo';
-import { HuksCryptoExtensionResult } from 'HuksCryptoExtensionResult';
-import { HuksCryptoExtensionResultCode } from 'HuksCryptoExtensionResultCode';
-import { HuksCryptoExtensionParam } from 'HuksCryptoExtensionParam';
-import { HuksCryptoExtensionParams } from 'HuksCryptoExtensionParams';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
 ```
 
 ## onAuthUkeyPin

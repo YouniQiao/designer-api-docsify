@@ -10,6 +10,11 @@ ColorManagement继承自[ColorManagementQuery](arkts-camera-camera-colormanageme
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getActiveColorSpace
 
 ```TypeScript

@@ -40,7 +40,7 @@ velocity?: Vector2T<double>
 
 The velocity values in each direction of the velocity field. Particles only acquire this velocity when within the range of the velocity field; once they leave the range of the velocity field, they are no longer influenced by it and do not gain this additional velocity.
 
-**类型：** [Vector2T](arkts-arkui-graphics-vector2t-i.md)&lt;double&gt;
+**类型：** [Vector2T](../../apis-na/arkts-apis/arkts-na-graphics-vector2t-i.md)&lt;double&gt;
 
 **默认值：** {x:0,y:0}
 

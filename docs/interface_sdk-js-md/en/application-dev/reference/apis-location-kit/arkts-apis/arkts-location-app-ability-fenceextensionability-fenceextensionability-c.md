@@ -11,7 +11,7 @@ Class of fence extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionAbility } from 'FenceExtensionAbility';
+import { FenceExtensionAbility } from '@kit.LocationKit';
 ```
 
 ## onDestroy

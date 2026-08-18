@@ -1,0 +1,53 @@
+# registerTraceListener
+
+## Modules to Import
+
+```TypeScript
+```
+
+## registerTraceListener
+
+```TypeScript
+function registerTraceListener(callback: TraceEventListener): number
+```
+
+Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result. After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes. Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process. > **NOTE：**> > If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting > for the callback execution to complete) when the callback is executed. > > Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the > main thread of the application to avoid application freeze.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int--><!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiTrace
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
+
+**Examples**
+
+```TypeScript
+// Define the registered callback.
+let callback: hiTraceMeter.TraceEventListener = (traceStatus: boolean) => {
+  if (traceStatus) {
+    // Trace capture is enabled for the current application. The service process is as follows:
+  } else {
+    // Trace capture is disabled for the current application. The service process is as follows:
+  }
+};
+
+// Register a callback to notify whether the application trace capture is enabled.
+let index = hiTraceMeter.registerTraceListener(callback);
+if (index < 0) {
+  // Handle exceptions.
+}
+```

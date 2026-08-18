@@ -8,6 +8,11 @@ ConvertXML类提供将XML文本转换为JavaScript对象的能力。 推荐使�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## convert
 
 ```TypeScript

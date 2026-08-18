@@ -12,6 +12,11 @@ Represents boxed short value and related operations
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## add
 
 ```TypeScript

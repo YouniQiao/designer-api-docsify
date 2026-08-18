@@ -17,7 +17,7 @@ Defines the options for fetching file attributes.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## predicates

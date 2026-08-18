@@ -10,6 +10,11 @@ Collator class for locale-sensitive string comparison.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## compare
 
 ```TypeScript

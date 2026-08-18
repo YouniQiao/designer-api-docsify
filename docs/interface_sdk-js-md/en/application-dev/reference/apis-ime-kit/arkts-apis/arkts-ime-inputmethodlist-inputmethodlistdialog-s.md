@@ -11,9 +11,8 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodListDialog } from 'InputMethodListDialog';
-import { PatternOptions } from 'PatternOptions';
-import { Pattern } from 'Pattern';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## build

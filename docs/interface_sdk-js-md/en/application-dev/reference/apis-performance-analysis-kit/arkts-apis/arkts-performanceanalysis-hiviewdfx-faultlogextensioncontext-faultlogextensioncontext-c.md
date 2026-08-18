@@ -15,6 +15,6 @@ FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-perf
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionContext } from 'FaultLogExtensionContext';
+import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```
 

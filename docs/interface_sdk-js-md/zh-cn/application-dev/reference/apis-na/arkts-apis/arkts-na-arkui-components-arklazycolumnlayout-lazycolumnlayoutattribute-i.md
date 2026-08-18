@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alignItems
 
 ```TypeScript
@@ -52,7 +57,7 @@ attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | Attri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -166,7 +171,7 @@ space(space: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
+| space | [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

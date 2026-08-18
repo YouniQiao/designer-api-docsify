@@ -11,7 +11,9 @@ Describes group configuration options for download tasks.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'request';
+import { request } from '@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## gauge

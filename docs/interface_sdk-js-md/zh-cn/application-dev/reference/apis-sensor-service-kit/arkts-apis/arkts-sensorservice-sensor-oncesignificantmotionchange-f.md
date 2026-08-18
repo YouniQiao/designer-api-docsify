@@ -1,5 +1,10 @@
 # onceSignificantMotionChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onceSignificantMotionChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Subscribe to significant motion sensor data once, {@code SensorId.SIGNIFICANT_MO
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | 是 | callback significant motion data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | 是 | callback significant motion data. |
 
 **错误码：**
 

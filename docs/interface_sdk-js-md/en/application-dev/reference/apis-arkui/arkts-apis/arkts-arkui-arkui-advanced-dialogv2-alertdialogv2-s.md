@@ -11,19 +11,7 @@ Declare CustomDialog AlertDialogV2.
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialogV2 } from 'AlertDialogV2';
-import { AdvancedDialogV2Button } from 'AdvancedDialogV2Button';
-import { AdvancedDialogV2ButtonOptions } from 'AdvancedDialogV2ButtonOptions';
-import { AdvancedDialogV2ButtonAction } from 'AdvancedDialogV2ButtonAction';
-import { AdvancedDialogV2OnCheckedChange } from 'AdvancedDialogV2OnCheckedChange';
-import { ConfirmDialogV2 } from 'ConfirmDialogV2';
-import { LoadingDialogV2 } from 'LoadingDialogV2';
-import { SelectDialogV2 } from 'SelectDialogV2';
-import { TipsDialogV2 } from 'TipsDialogV2';
-import { CustomContentDialogV2 } from 'CustomContentDialogV2';
-import { PopoverDialogV2 } from 'PopoverDialogV2';
-import { PopoverDialogV2OnVisibleChange } from 'PopoverDialogV2OnVisibleChange';
-import { PopoverDialogV2Options } from 'PopoverDialogV2Options';
+import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## content

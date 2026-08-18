@@ -11,7 +11,7 @@ Parse's options
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'ArkTSUtils';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## bigIntMode

@@ -1,5 +1,10 @@
 # createImageCreator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createImageCreator
 
 ```TypeScript

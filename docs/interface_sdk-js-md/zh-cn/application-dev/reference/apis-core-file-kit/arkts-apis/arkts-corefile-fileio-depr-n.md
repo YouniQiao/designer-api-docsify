@@ -8,3 +8,8 @@ fileio
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+

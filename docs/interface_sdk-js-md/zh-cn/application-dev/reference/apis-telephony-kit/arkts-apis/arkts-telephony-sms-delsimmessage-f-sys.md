@@ -1,5 +1,10 @@
 # delSimMessage（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## delSimMessage
 
 ```TypeScript
@@ -24,7 +29,7 @@ function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
 | msgIndex | int | 是 | 消息索引。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除SIM卡消息的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除SIM卡消息的回调函数。 |
 
 **错误码：**
 

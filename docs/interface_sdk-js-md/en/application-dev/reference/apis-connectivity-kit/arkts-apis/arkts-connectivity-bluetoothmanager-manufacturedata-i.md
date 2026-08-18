@@ -15,7 +15,7 @@ Describes the manufacturer data.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## manufactureId

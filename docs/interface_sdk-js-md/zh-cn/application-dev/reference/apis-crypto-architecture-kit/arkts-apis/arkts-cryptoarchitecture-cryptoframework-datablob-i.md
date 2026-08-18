@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework
 
+## 导入模块
+
+```TypeScript
+```
+
 ## data
 
 ```TypeScript

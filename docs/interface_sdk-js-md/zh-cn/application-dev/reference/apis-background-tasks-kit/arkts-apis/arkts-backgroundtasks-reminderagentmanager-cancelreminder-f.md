@@ -1,5 +1,10 @@
 # cancelReminder
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancelReminder
 
 ```TypeScript
@@ -19,7 +24,7 @@ function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reminderId | int | 是 | 需要取消的代理提醒的id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) 时作为返回值返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 当取消代理提醒成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 当取消代理提醒成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 

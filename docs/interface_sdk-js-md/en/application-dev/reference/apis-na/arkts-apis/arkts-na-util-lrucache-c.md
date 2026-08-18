@@ -10,6 +10,11 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

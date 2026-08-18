@@ -1,5 +1,10 @@
 # chownSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## chownSync
 
 ```TypeScript

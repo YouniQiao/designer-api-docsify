@@ -1,5 +1,10 @@
 # getSystemLanguage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemLanguage
 
 ```TypeScript

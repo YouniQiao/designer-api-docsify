@@ -8,6 +8,11 @@ PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## create
 
 ```TypeScript

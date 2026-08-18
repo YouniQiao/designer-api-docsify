@@ -10,6 +10,11 @@ This component can only inherit the universal attributes of security components.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onClick
 
 ```TypeScript

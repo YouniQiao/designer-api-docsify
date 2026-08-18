@@ -1,5 +1,10 @@
 # getAlternateIcons
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAlternateIcons
 
 ```TypeScript

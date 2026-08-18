@@ -10,6 +10,11 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Signature
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getVerifySpec
 
 ```TypeScript
@@ -86,7 +91,7 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 是 | 公钥对象，用于Verify的初始化。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当验签初始化成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签初始化成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -534,7 +539,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 传入的消息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -642,7 +647,7 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 待验签的数据。 |
 | signatureData | DataBlob | 是 | 签名数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
 
 **错误码：**
 
@@ -678,7 +683,7 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
 | signatureData | DataBlob | 是 | 签名数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
 
 **错误码：**
 

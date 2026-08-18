@@ -8,6 +8,11 @@ Defines the gesture information type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isSystemGesture
 
 ```TypeScript

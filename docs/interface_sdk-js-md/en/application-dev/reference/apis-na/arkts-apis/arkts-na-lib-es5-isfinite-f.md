@@ -1,5 +1,10 @@
 # isFinite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isFinite
 
 ```TypeScript

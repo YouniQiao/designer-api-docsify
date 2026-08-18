@@ -1,6 +1,6 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray (Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Uint8ClampedArray, and Float32Array). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md#arktscollections), [Uint8Array](arkts-collections.md#arktscollections), [Int16Array](arkts-collections.md#arktscollections), [Uint16Array](arkts-collections.md#arktscollections), [Int32Array](arkts-collections.md#arktscollections), [Uint32Array](arkts-collections.md#arktscollections), [Uint8ClampedArray](arkts-collections.md#arktscollections), and [Float32Array](arkts-collections.md#arktscollections)). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Underlying data structure of the ArkTS TypedArray (Int8Array, Uint8Array, Int16A
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'collections';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## constructor

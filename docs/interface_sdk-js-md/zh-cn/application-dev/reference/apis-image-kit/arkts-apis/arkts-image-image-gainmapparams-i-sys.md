@@ -10,6 +10,11 @@ Gainmap（增益图）参数设置选项。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFullSizeGainmap
 
 ```TypeScript

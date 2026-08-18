@@ -1,5 +1,10 @@
 # getCountryCode
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCountryCode
 
 ```TypeScript

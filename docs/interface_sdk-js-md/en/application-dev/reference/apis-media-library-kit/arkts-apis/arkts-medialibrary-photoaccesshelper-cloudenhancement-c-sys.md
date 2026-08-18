@@ -13,7 +13,7 @@ Provides APIs for cloud enhancement management, including managing the tasks of 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelAllCloudEnhancementTasks

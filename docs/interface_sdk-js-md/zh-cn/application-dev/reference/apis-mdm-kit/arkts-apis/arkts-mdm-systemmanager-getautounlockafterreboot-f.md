@@ -1,5 +1,10 @@
 # getAutoUnlockAfterReboot
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAutoUnlockAfterReboot
 
 ```TypeScript

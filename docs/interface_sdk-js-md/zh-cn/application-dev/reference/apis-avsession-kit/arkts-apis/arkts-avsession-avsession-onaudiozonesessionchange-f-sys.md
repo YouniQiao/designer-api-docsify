@@ -1,5 +1,10 @@
 # onAudioZoneSessionChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onAudioZoneSessionChange
 
 ```TypeScript
@@ -23,7 +28,7 @@ function onAudioZoneSessionChange(userId: int, callback: Callback<AVSessionDescr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | int | 是 | 当前userId最终归属的音区 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt; | 是 | 返回的会话列表 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt; | 是 | 返回的会话列表 |
 
 **错误码：**
 

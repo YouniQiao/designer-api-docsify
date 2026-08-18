@@ -1,5 +1,10 @@
 # supportKeysSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## supportKeysSync
 
 ```TypeScript

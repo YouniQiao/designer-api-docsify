@@ -10,6 +10,11 @@ TextTimer组件的控制器，用于控制文本计时器。一个TextTimer组�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

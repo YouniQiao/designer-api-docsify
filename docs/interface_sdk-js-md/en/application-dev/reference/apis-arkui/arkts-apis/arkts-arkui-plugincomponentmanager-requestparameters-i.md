@@ -11,7 +11,7 @@ Defines the parameters required when using the **PluginManager.Request** API.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'PluginComponentTemplate';
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## data
@@ -22,7 +22,7 @@ data: KVObject
 
 Component data.
 
-**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **Since:** 8
 

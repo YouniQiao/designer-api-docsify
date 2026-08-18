@@ -10,6 +10,11 @@ pluginComponentManager.request方法接收到的回调结果。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## componentTemplate
 
 ```TypeScript

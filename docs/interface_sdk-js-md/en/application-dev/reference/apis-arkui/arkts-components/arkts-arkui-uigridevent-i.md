@@ -10,6 +10,11 @@ Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setOnDidScroll
 
 ```TypeScript

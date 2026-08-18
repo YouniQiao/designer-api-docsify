@@ -8,6 +8,11 @@ Describes the position, width, and height of a component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

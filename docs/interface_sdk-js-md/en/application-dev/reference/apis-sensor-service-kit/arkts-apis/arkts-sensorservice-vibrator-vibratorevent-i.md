@@ -11,7 +11,7 @@ Vibration event.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## duration

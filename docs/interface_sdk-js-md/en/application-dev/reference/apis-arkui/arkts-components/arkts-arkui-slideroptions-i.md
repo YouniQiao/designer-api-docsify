@@ -8,6 +8,11 @@ Provides information about the slider.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## direction
 
 ```TypeScript

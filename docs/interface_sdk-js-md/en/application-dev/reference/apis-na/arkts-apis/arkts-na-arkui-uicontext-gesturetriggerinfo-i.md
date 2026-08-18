@@ -10,6 +10,11 @@ The information when one gesture specific callback is triggered.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## current
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'particleAbility';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## cancelBackgroundRunning

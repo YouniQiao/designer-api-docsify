@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+```
+
 ## validate
 
 ```TypeScript
@@ -29,7 +34,7 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | certChain | [CertChainData](arkts-devicecertificate-cert-certchaindata-i.md) | 是 | 表示X.509证书链序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当校验成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当校验成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

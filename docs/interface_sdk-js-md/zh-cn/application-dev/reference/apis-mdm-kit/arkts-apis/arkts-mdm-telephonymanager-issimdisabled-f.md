@@ -1,5 +1,10 @@
 # isSimDisabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isSimDisabled
 
 ```TypeScript

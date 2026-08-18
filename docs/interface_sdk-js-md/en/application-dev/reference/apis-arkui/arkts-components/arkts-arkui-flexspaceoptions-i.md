@@ -8,6 +8,11 @@ Sets the spacing between child components along the main axis or cross axis of t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cross
 
 ```TypeScript

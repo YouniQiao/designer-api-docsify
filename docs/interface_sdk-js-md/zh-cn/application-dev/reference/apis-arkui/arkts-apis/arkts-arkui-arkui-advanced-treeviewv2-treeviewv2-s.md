@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## treeControllerV2
 
 ```TypeScript
@@ -17,7 +22,7 @@
 
 树视图节点控制器。
 
-**类型：** [TreeControllerV2](arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
+**类型：** [TreeControllerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
 
 **起始版本：** 26.0.0
 

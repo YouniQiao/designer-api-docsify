@@ -1,5 +1,10 @@
 # getInstance
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInstance
 
 ```TypeScript

@@ -8,6 +8,11 @@ InterstitialDialogAction弹框在原子化服务中用于在保持当前的上�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## closeDialog
 
 ```TypeScript

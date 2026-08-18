@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## canLoop
 
 ```TypeScript
@@ -104,7 +109,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | Optional&lt;LengthMetrics&gt; | 是 | 选项高度。 <br>单位：与[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#lengthmetrics)一致。 <br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。 <br>当height的值为undefined时，使用默认值40vp。 <br>不支持“百分比”类型。 |
+| height | Optional&lt;LengthMetrics&gt; | 是 | 选项高度。 <br>单位：与[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#lengthmetrics)一致。 <br>取值范围：[40vp, 64vp] <br>设置小于40vp或大于64vp时，使用默认值40vp。 <br>当height的值为undefined时，使用默认值40vp。 <br>不支持“百分比”类型。 |
 
 ## onChange
 

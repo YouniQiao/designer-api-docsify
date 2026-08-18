@@ -78,7 +78,7 @@ type?: NodeRenderType
 
 Render type of the node.
 
-**Type:** [NodeRenderType](arkts-na-buildernode-noderendertype-e.md)
+**Type:** [NodeRenderType](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-noderendertype-e.md)
 
 **Since:** 23
 

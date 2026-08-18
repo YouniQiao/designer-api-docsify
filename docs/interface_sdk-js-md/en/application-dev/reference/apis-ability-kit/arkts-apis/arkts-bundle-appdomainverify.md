@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appDomainVerify } from 'appDomainVerify';
+import { appDomainVerify } from '@kit.AbilityKit';
 ```
 
 ## Summary

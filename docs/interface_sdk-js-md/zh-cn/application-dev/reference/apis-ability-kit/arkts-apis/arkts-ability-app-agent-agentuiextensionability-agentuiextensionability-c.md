@@ -14,3 +14,8 @@ AgentUIExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-u
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+

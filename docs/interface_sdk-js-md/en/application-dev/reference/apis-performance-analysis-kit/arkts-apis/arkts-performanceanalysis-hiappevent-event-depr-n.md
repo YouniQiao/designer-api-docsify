@@ -12,6 +12,11 @@ Provides constants that define the names of all predefined events. | Name | Type
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Constants

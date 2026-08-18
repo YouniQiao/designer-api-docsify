@@ -42,7 +42,7 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 列与列之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
@@ -86,7 +86,7 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 行与行之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 

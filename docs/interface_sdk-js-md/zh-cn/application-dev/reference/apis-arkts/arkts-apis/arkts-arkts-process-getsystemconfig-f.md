@@ -1,5 +1,10 @@
 # getSystemConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemConfig
 
 ```TypeScript

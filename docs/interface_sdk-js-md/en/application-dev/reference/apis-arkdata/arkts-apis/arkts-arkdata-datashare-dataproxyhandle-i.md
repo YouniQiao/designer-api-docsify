@@ -11,7 +11,8 @@ Defines the data proxy handle, which can be used to access or manage shared conf
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'dataShare';
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## delete

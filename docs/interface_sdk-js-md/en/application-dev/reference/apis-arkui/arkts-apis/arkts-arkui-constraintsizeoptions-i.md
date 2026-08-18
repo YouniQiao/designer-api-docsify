@@ -8,6 +8,11 @@ Defines the constrain size options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## maxHeight
 
 ```TypeScript

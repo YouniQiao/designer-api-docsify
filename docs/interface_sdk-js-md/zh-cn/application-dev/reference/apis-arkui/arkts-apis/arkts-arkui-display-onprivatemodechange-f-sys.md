@@ -1,5 +1,10 @@
 # onPrivateModeChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onPrivateModeChange
 
 ```TypeScript
@@ -20,7 +25,7 @@ Register the callback for private mode changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Callback used to return the result whether display is on private mode or not |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to return the result whether display is on private mode or not |
 
 **错误码：**
 

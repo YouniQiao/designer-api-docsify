@@ -10,6 +10,11 @@ Defines the callback of createPdf, related to createPDF method.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## pdfArrayBuffer
 
 ```TypeScript

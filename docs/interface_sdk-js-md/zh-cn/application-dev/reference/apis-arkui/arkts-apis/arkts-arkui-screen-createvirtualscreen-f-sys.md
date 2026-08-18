@@ -1,5 +1,10 @@
 # createVirtualScreen（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createVirtualScreen
 
 ```TypeScript
@@ -23,7 +28,7 @@ function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | 是 | 用于创建虚拟屏幕的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Screen](arkts-arkui-screen-screen-i-sys.md)&gt; | 是 | 回调函数，返回创建的虚拟屏幕对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Screen](arkts-arkui-screen-screen-i-sys.md)&gt; | 是 | 回调函数，返回创建的虚拟屏幕对象。 |
 
 **错误码：**
 

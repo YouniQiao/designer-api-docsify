@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## next
 
 ```TypeScript
@@ -26,7 +31,7 @@ next(): ReaderIteratorResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
+| [ReaderIteratorResult](../../apis-na/arkts-apis/arkts-na-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
 
 **错误码：**
 

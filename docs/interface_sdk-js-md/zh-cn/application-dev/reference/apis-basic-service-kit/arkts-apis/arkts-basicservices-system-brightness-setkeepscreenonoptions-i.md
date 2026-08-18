@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
+## 导入模块
+
+```TypeScript
+```
+
 ## complete
 
 ```TypeScript

@@ -11,9 +11,7 @@ Describes the dialog box response result.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode } from 'LevelMode';
-import { ImmersiveMode } from 'ImmersiveMode';
-import { LevelOrder } from 'LevelOrder';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## index

@@ -8,6 +8,11 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## album
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # onFoldStatusChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onFoldStatusChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Register the callback for fold status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FoldStatus&gt; | 是 | Callback used to return the current fold status of device |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | 是 | Callback used to return the current fold status of device |
 
 **错误码：**
 

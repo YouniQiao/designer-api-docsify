@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## unsubscribe

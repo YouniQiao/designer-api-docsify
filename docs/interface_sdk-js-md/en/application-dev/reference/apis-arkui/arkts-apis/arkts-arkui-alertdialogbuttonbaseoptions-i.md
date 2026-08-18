@@ -8,6 +8,11 @@ Defines the button style of the alert dialog box. > **NOTE：**> > To standardiz
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## action
 
 ```TypeScript

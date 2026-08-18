@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'buffer';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## Summary

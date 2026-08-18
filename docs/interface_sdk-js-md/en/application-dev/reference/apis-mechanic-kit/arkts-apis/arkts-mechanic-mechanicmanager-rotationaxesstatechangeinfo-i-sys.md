@@ -13,7 +13,7 @@ Rotation axes state change information.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'mechanicManager';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## mechId

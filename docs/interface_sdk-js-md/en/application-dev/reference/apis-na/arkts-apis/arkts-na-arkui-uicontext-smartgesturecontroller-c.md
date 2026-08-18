@@ -10,6 +10,11 @@ Class SmartGestureController.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clearMonitors
 
 ```TypeScript

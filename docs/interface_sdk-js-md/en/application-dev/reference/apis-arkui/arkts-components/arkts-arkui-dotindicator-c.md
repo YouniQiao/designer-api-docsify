@@ -10,6 +10,11 @@ A constructor used to create a **DotIndicator** object. It inherits from [Indica
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

@@ -8,6 +8,11 @@ Represents a label icon style object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## selectedColor
 
 ```TypeScript

@@ -11,7 +11,7 @@ Provide interfaces related to debugger access and obtaining CPU, memory and othe
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'hidebug';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

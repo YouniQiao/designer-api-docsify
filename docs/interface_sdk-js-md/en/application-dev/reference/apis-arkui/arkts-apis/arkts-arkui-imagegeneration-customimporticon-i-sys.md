@@ -15,7 +15,7 @@ Customize the import icon, which is used to add images and text from the applica
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## callback

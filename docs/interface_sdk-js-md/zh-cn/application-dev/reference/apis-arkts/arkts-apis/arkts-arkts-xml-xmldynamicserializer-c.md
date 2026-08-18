@@ -8,6 +8,11 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addEmptyElement
 
 ```TypeScript

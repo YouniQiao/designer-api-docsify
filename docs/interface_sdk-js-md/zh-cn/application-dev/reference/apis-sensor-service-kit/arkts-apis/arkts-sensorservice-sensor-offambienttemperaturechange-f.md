@@ -1,5 +1,10 @@
 # offAmbientTemperatureChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offAmbientTemperatureChange
 
 ```TypeScript
@@ -19,7 +24,7 @@ Unsubscribe to ambient temperature sensor data， {@code SensorId.AMBIENT_TEMPER
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 否 | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | 否 | callback ambient temperature data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)&gt; | 否 | callback ambient temperature data. |
 
 **错误码：**
 

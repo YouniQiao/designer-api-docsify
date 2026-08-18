@@ -1,5 +1,10 @@
 # getGraphicsMemorySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getGraphicsMemorySync
 
 ```TypeScript

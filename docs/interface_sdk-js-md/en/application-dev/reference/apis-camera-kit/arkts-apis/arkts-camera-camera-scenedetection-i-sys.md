@@ -15,7 +15,8 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableSceneFeature

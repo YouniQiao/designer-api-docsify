@@ -15,7 +15,7 @@ Provides APIs for managing file or directory attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'fileAccess';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## listFile

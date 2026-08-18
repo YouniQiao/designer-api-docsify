@@ -1,0 +1,47 @@
+# isHotspotDualBandSupported (System API)
+
+## Modules to Import
+
+```TypeScript
+```
+
+## isHotspotDualBandSupported
+
+```TypeScript
+function isHotspotDualBandSupported(): boolean
+```
+
+Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and 5 GHz Wi-Fi.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md#ishotspotdualbandsupported-system-api)
+
+**Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
+
+<!--Device-wifi-function isHotspotDualBandSupported(): boolean--><!--Device-wifi-function isHotspotDualBandSupported(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.AP.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+**Examples**
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let ret = wifi.isHotspotDualBandSupported();
+    console.info("result:" + ret);        
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

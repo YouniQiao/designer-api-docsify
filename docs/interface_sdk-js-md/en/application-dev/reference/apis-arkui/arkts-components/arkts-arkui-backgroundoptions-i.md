@@ -8,6 +8,11 @@ Defines background options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## align
 
 ```TypeScript

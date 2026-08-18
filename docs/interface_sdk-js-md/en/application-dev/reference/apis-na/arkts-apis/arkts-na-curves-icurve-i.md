@@ -10,6 +10,11 @@ Interface for curve object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## interpolate
 
 ```TypeScript

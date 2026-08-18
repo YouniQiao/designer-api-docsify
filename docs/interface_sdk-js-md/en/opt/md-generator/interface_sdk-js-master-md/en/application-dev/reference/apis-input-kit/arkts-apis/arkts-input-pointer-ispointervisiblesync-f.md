@@ -1,0 +1,50 @@
+# isPointerVisibleSync
+
+## Modules to Import
+
+```TypeScript
+```
+
+## isPointerVisibleSync
+
+```TypeScript
+function isPointerVisibleSync(): boolean
+```
+
+Checks whether the mouse pointer is visible in the current window. This API returns the result synchronously.
+
+**Since:** 23
+
+<!--Device-pointer-function isPointerVisibleSync(): boolean--><!--Device-pointer-function isPointerVisibleSync(): boolean-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+**Examples**
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            let visible: boolean = pointer.isPointerVisibleSync();
+            console.info(`Succeeded in getting pointer visible, visible: ${JSON.stringify(visible)}.`);
+          } catch (error) {
+            console.error(`Failed to get pointer visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```

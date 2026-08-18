@@ -1,5 +1,10 @@
 # getExternalSourceExtensionsPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getExternalSourceExtensionsPolicy
 
 ```TypeScript

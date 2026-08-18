@@ -13,7 +13,8 @@ Provides callbacks for PIN operations.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onSetData

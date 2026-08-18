@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodSubtype } from 'InputMethodSubtype';
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { InputMethodSubtype } from '@kit.IMEKit';
 ```
 
 ## Summary

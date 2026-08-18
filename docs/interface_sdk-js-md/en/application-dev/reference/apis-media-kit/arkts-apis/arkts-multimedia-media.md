@@ -12,7 +12,7 @@ The multimedia subsystem provides a set of simple and easy-to-use APIs for you t
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## Summary

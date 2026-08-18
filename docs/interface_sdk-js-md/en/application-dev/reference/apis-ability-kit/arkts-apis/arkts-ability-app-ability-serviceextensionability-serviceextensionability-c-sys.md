@@ -13,7 +13,8 @@ The ServiceExtensionAbility module provides extended capabilities for background
 ## Modules to Import
 
 ```TypeScript
-import { ServiceExtensionAbility } from 'ServiceExtensionAbility';
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate

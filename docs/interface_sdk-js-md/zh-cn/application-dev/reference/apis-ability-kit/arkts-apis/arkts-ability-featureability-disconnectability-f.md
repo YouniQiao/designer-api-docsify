@@ -1,5 +1,10 @@
 # disconnectAbility
 
+## 导入模块
+
+```TypeScript
+```
+
 ## disconnectAbility
 
 ```TypeScript
@@ -21,7 +26,7 @@ function disconnectAbility(connection: number, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | connection | number | 是 | 表示断开连接的ServiceAbility的ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当断开与指定ServiceAbility的连接成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当断开与指定ServiceAbility的连接成功，err为undefined，否则为错误对象。 |
 
 **示例**
 

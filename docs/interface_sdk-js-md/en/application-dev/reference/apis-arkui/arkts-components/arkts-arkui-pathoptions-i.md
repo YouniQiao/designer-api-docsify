@@ -8,6 +8,11 @@ Describes the options of the path. > **NOTE：**> > To standardize anonymous obj
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## commands
 
 ```TypeScript

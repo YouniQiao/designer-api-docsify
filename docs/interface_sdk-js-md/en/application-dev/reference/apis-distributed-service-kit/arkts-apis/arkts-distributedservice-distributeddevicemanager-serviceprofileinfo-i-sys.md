@@ -13,7 +13,8 @@ Defines the service profile information. It is populated based on the data retur
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'distributedDeviceManager';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## data

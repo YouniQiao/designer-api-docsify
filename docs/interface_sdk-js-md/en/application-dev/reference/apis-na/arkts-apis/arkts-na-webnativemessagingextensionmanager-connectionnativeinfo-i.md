@@ -10,6 +10,11 @@ Represents the information about the web native message connection.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## bundleName
 
 ```TypeScript

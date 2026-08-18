@@ -8,6 +8,11 @@ Buffer对象是处理二进制数据的缓冲区。
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## compare
 
 ```TypeScript

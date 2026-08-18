@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sessionId
 
 ```TypeScript

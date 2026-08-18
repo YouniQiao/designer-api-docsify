@@ -1,5 +1,10 @@
 # getDeviceConfigs
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDeviceConfigs
 
 ```TypeScript

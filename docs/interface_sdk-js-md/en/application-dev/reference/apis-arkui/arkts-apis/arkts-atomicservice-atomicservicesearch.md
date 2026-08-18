@@ -3,13 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceSearch } from 'AtomicServiceSearch';
-import { InputFilterParams } from 'InputFilterParams';
-import { SearchButtonParams } from 'SearchButtonParams';
-import { MenuAlignParams } from 'MenuAlignParams';
-import { SearchParams } from 'SearchParams';
-import { SelectParams } from 'SelectParams';
-import { OperationParams } from 'OperationParams';
+import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -1,5 +1,10 @@
 # @ohos.arkui.components.ArkLazyColumnLayout
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

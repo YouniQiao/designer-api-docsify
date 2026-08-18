@@ -12,3 +12,8 @@ Can be implemented by any type that supports comparison.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+

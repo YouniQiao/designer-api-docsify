@@ -10,6 +10,11 @@ SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-app
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## aboutToBeDeleted
 
 ```TypeScript

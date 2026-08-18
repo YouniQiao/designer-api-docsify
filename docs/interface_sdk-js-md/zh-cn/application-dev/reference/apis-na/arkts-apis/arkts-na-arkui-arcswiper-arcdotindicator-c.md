@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+```
+
 ## arcDirection
 
 ```TypeScript
@@ -30,7 +35,7 @@ arcDirection(direction: ArcDirection | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | [ArcDirection](arkts-na-arkui-arcswiper-arcdirection-e.md) \| undefined | 是 | 设置弧形指示器的方向。<br/>取值为undefined时，弧形指示器的方向为6点钟方向。 |
+| direction | [ArcDirection](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdirection-e.md) \| undefined | 是 | 设置弧形指示器的方向。<br/>取值为undefined时，弧形指示器的方向为6点钟方向。 |
 
 **返回值：**
 

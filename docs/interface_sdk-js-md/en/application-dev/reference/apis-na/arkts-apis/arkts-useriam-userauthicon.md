@@ -1,5 +1,10 @@
 # @ohos.userIAM.userAuthIcon
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Structs

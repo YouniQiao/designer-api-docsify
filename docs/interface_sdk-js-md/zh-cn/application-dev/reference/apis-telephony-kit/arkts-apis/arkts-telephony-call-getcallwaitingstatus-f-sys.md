@@ -1,5 +1,10 @@
 # getCallWaitingStatus（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCallWaitingStatus
 
 ```TypeScript
@@ -23,7 +28,7 @@ function getCallWaitingStatus(slotId: int, callback: AsyncCallback<CallWaitingSt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | 是 | 回调函数。<br/>返回呼叫等待状态。<br/>- 0：禁用呼叫等待。 <br/>- 1：启用呼叫等待。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | 是 | 回调函数。<br/>返回呼叫等待状态。<br/>- 0：禁用呼叫等待。 <br/>- 1：启用呼叫等待。 |
 
 **错误码：**
 

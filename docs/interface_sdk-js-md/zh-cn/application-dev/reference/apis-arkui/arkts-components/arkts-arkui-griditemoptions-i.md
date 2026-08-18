@@ -8,6 +8,11 @@ GridItem样式对象，用于配置GridItem的样式选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## style
 
 ```TypeScript

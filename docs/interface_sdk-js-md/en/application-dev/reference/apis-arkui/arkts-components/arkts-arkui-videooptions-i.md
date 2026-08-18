@@ -8,6 +8,11 @@ Defines the options of the **Video** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## controller
 
 ```TypeScript

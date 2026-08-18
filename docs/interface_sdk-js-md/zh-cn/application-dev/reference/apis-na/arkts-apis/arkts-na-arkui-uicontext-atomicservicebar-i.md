@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBarRect
 
 ```TypeScript
@@ -32,7 +37,7 @@ getBarRect(): Frame
 
 | 类型 | 说明 |
 | --- | --- |
-| [Frame](../../apis-arkui/arkts-apis/arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](arkts-na-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## setBackgroundColor
 

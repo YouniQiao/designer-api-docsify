@@ -12,6 +12,11 @@ Represents an error that occurs when a global URI handling function was used in 
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_invoke
 
 ```TypeScript

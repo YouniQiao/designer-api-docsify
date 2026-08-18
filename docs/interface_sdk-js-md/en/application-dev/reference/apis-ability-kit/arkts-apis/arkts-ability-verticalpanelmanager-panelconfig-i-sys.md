@@ -13,7 +13,7 @@ Indicates the panel config
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from 'verticalPanelManager';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## sourceAppInfo

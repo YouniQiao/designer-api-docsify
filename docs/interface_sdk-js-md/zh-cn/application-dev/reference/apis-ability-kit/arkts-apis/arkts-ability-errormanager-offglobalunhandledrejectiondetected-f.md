@@ -1,5 +1,10 @@
 # off_globalUnhandledRejectionDetected
 
+## 导入模块
+
+```TypeScript
+```
+
 ## off_globalUnhandledRejectionDetected
 
 ```TypeScript

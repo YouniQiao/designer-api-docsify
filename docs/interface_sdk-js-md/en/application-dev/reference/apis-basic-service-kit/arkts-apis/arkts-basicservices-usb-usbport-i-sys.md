@@ -17,7 +17,9 @@ Represents a USB port.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'usb';
+import { usb } from '@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## id

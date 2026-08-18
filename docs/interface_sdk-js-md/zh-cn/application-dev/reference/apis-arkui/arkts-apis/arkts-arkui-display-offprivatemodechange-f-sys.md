@@ -1,5 +1,10 @@
 # offPrivateModeChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offPrivateModeChange
 
 ```TypeScript
@@ -20,7 +25,7 @@ Unregister the callback for private mode changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **错误码：**
 

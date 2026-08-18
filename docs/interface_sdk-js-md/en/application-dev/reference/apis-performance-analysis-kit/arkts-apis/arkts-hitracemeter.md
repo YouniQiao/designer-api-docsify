@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'hiTraceMeter';
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

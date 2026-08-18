@@ -8,6 +8,11 @@ Describes the text changes of the styled string.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## previewText
 
 ```TypeScript

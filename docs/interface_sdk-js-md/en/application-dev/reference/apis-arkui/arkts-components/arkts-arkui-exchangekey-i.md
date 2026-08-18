@@ -8,6 +8,11 @@ Defines new key of exchange data.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## end
 
 ```TypeScript

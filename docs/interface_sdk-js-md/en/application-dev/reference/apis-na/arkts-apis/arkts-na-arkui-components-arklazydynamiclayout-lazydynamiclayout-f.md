@@ -1,5 +1,10 @@
 # LazyDynamicLayout
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## LazyDynamicLayout
 
 ```TypeScript
@@ -26,7 +31,7 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
+| algorithm | [LazyLayoutAlgorithm](arkts-na-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
 | content_ | CustomBuilder | Yes |  |
 
 **Return value:**

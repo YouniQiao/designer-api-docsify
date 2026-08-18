@@ -1,5 +1,10 @@
 # getUniformDataTypesByFilenameExtension
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUniformDataTypesByFilenameExtension
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # setWifiProfileSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setWifiProfileSync
 
 ```TypeScript

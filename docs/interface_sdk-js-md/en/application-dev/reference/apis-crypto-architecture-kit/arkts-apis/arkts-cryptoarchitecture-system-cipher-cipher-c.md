@@ -15,9 +15,7 @@ Defines the cipher functions.
 ## Modules to Import
 
 ```TypeScript
-import { CipherAesOptions } from 'CipherAesOptions';
-import { CipherResponse } from 'CipherResponse';
-import { CipherRsaOptions } from 'CipherRsaOptions';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## aes

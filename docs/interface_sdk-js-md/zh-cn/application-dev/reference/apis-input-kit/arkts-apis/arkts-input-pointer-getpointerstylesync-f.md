@@ -1,5 +1,10 @@
 # getPointerStyleSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPointerStyleSync
 
 ```TypeScript

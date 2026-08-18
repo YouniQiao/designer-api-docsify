@@ -11,7 +11,8 @@ Transfers USB data packets in an asynchronous manner.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'usbManager';
+import { usbManager } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## actualLength

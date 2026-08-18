@@ -1,5 +1,10 @@
 # createPkcs12Sync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPkcs12Sync
 
 ```TypeScript

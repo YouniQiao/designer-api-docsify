@@ -13,7 +13,8 @@ Provide a Number formatting interface that supports custom symbols. This interfa
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -39,7 +40,7 @@ A constructor used to create a SymbolNumberFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. <br>Default value:The default is the current system locale. <br>Default Value: System Locale. <br>Region object. |
-| options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. <br>Symbol Number Formatting Options. |
+| options | [SymbolNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. <br>Symbol Number Formatting Options. |
 
 ## format
 
@@ -222,5 +223,5 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
+| [ResolvedSymbolNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
 

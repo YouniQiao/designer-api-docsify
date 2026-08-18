@@ -1,5 +1,10 @@
 # lseek
 
+## 导入模块
+
+```TypeScript
+```
+
 ## lseek
 
 ```TypeScript

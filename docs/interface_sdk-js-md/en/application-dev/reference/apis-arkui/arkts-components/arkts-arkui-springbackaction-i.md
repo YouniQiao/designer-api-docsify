@@ -8,6 +8,11 @@ Defines sheet spring back action
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## springBack
 
 ```TypeScript

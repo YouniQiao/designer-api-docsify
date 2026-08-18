@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## brightness
 
 ```TypeScript

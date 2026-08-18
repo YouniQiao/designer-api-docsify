@@ -1,5 +1,10 @@
 # createZipSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createZipSync
 
 ```TypeScript

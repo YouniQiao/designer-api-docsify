@@ -1,5 +1,10 @@
 # killProcessesByBundleName
 
+## 导入模块
+
+```TypeScript
+```
+
 ## killProcessesByBundleName
 
 ```TypeScript

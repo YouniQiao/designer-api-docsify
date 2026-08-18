@@ -13,7 +13,7 @@ Namespace for managing and organizing script information.
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from 'scriptManager';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

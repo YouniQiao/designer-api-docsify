@@ -1,5 +1,10 @@
 # once_SensorId.SIGNIFICANT_MOTION
 
+## 导入模块
+
+```TypeScript
+```
+
 ## once_SensorId.SIGNIFICANT_MOTION
 
 ```TypeScript
@@ -19,7 +24,7 @@ function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantM
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.SIGNIFICANT_MOTION | 是 | 传感器类型，该值固定为SensorId.SIGNIFICANT_MOTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为SignificantMotionResponse。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为SignificantMotionResponse。 |
 
 **错误码：**
 

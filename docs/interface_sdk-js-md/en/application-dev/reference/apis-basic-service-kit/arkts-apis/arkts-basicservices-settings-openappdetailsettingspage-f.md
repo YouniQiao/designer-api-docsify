@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'settings';
+import { settings } from '@kit.BasicServicesKit';
+import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## openAppDetailSettingsPage

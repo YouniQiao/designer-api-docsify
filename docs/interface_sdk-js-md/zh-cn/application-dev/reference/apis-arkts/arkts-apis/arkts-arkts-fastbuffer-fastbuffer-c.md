@@ -8,6 +8,11 @@ FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## compare
 
 ```TypeScript

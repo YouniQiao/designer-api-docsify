@@ -11,7 +11,7 @@ PhotoViewPicker provides APIs for the user to select images and videos. Before u
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## select

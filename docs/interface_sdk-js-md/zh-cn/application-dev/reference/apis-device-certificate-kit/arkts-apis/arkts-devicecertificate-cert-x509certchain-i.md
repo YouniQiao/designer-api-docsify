@@ -8,6 +8,11 @@ X.509证书链对象。
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCertList
 
 ```TypeScript
@@ -1001,7 +1006,7 @@ validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChain
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | 是 | 表示校验X.509证书链的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; | 是 | 回调函数。当校验证书链成功时，err为undefined， data为获取到的证书链校验结果；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)&gt; | 是 | 回调函数。当校验证书链成功时，err为undefined， data为获取到的证书链校验结果；否则为错误对象。 |
 
 **错误码：**
 

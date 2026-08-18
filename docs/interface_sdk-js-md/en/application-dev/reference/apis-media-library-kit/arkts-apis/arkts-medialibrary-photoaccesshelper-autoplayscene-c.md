@@ -11,7 +11,7 @@ Defines the playback mode of the moving photo in different scenarios.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## playMode

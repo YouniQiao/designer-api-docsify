@@ -1,5 +1,10 @@
 # clearInterval
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clearInterval
 
 ```TypeScript

@@ -10,6 +10,11 @@ Describe the options for the ParallelizeUI.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enable
 
 ```TypeScript

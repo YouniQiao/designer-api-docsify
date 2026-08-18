@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## completionHandlerForAtomicService
 
 ```TypeScript
@@ -18,7 +23,7 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 
 打开原子化服务结果的操作类，用于接收打开原子化服务的结果。
 
-**类型：** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+**类型：** [CompletionHandlerForAtomicService](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 
 **起始版本：** 23
 

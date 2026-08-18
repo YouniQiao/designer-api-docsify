@@ -1,5 +1,10 @@
 # removeAllowedBluetoothDevices
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeAllowedBluetoothDevices
 
 ```TypeScript

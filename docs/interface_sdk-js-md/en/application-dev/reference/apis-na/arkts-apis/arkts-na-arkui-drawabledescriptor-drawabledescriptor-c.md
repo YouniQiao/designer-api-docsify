@@ -10,6 +10,11 @@ Use the DrawableDescriptor class to get drawable image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getPixelMap
 
 ```TypeScript

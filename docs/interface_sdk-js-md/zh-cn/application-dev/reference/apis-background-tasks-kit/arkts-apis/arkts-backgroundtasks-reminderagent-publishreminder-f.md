@@ -1,5 +1,10 @@
 # publishReminder
 
+## 导入模块
+
+```TypeScript
+```
+
 ## publishReminder
 
 ```TypeScript
@@ -25,7 +30,7 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | 是 | 需要发布的提醒实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步回调，返回当前发布的提醒的id。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步回调，返回当前发布的提醒的id。 |
 
 **示例**
 

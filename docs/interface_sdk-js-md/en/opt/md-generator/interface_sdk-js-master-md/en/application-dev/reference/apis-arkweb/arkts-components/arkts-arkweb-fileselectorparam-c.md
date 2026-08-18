@@ -1,0 +1,238 @@
+# FileSelectorParam
+
+FileSelectorParam is a file selector parameter class in the ArkWeb component, used to obtain parameter information when a file selection request is triggered by `&lt;input type="file"&gt;` in a web page, including the file selection mode, file filtering type, MIME type, suggested file name, and default starting path. It helps developers efficiently build custom file selectors that comply with HTML specifications. When a web page initiates a file selection request, developers use FileSelectorParam to obtain the complete parameter information passed from the frontend, and build a custom file selector that matches the frontend requirements based on this information, ensuring that the file selection mode, type filtering, naming, and other behaviors comply with HTML specifications. Used in scenarios where the Web component needs to custom-handle file upload requests. Register the `onShowFileSelector` callback to intercept file selection requests; obtain the FileSelectorParam instance from the `fileSelector` property of the callback event; read the parameters and build a corresponding system file selector ( such as DocumentViewPicker, PhotoViewPicker, etc.); return the selection result to the Web component through FileSelectorResult. For sample code, see [onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector).
+
+**Since:** 9
+
+<!--Device-unnamed-declare class FileSelectorParam--><!--Device-unnamed-declare class FileSelectorParam-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+Constructs a **FileSelectorParam**.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSelectorParam-constructor()--><!--Device-FileSelectorParam-constructor()-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## getAcceptType
+
+```TypeScript
+getAcceptType(): Array<string>
+```
+
+Obtains the file filtering type.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSelectorParam-getAcceptType(): Array<string>--><!--Device-FileSelectorParam-getAcceptType(): Array<string>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+## getAcceptableFileTypes
+
+```TypeScript
+getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
+```
+
+Obtains the file type information. Corresponds to `types` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface). The return value is a two-dimensional array, where each sub-array represents a group of allowed file types. Developers should use this return value to set file type filtering rules when building a file selector, ensuring that users can only select files that meet the frontend requirements. The difference between this parameter and getAcceptType and getMimeTypes is that types supports more fine-grained file type control, allowing grouping by MIME type or file extension.
+
+**Since:** 23
+
+<!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; |
+
+## getDefaultPath
+
+```TypeScript
+getDefaultPath(): string
+```
+
+Obtains the default path of the file selector, which corresponds to **startIn** in HTML's [option](../../../web/web-file-upload.md#customizing-the-file-request-initiated-by-the-javascript-api).
+
+**Since:** 23
+
+<!--Device-FileSelectorParam-getDefaultPath(): string--><!--Device-FileSelectorParam-getDefaultPath(): string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## getDescriptions
+
+```TypeScript
+getDescriptions(): Array<string>
+```
+
+Obtains the optional description of each group of allowed file types. Corresponds to `description` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface). The returned description array corresponds one-to-one with the file type groups returned by getAcceptableFileTypes. Developers can use these descriptions as the display text for each file type group when building a file selector, helping users understand the selectable file types. If the frontend does not set description, an empty string is returned.
+
+**Since:** 23
+
+<!--Device-FileSelectorParam-getDescriptions(): Array<string>--><!--Device-FileSelectorParam-getDescriptions(): Array<string>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+## getMimeTypes
+
+```TypeScript
+getMimeTypes(): Array<string>
+```
+
+Obtains the MIME type of a file.
+
+**Since:** 18
+
+<!--Device-FileSelectorParam-getMimeTypes(): Array<string>--><!--Device-FileSelectorParam-getMimeTypes(): Array<string>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+## getMode
+
+```TypeScript
+getMode(): FileSelectorMode
+```
+
+Obtains the mode of the file selector.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSelectorParam-getMode(): FileSelectorMode--><!--Device-FileSelectorParam-getMode(): FileSelectorMode-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) |
+
+## getSuggestedName
+
+```TypeScript
+getSuggestedName(): string
+```
+
+Obtains the suggested file name. Corresponds to `suggestedName` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface). If the frontend does not set suggestedName, an empty string is returned. Developers can use this return value as the default file name when building a file selector, and use it together with [getDefaultPath](#getdefaultpath) to preset the complete file path and name.
+
+**Since:** 23
+
+<!--Device-FileSelectorParam-getSuggestedName(): string--><!--Device-FileSelectorParam-getSuggestedName(): string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## getTitle
+
+```TypeScript
+getTitle(): string
+```
+
+Obtains the title of this file selector.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSelectorParam-getTitle(): string--><!--Device-FileSelectorParam-getTitle(): string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## isAcceptAllOptionExcluded
+
+```TypeScript
+isAcceptAllOptionExcluded(): boolean
+```
+
+Obtains whether the file selector excludes the option (*\/*), that is, all files. Corresponds to `excludeAcceptAllOption` in the HTML [option](../../../web/web-file-upload.md#custom-handling-of-file-requests-initiated-by-js-interface).
+
+**Since:** 23
+
+<!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean--><!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## isCapture
+
+```TypeScript
+isCapture(): boolean
+```
+
+Checks whether multimedia capabilities are invoked.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-FileSelectorParam-isCapture(): boolean--><!--Device-FileSelectorParam-isCapture(): boolean-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

@@ -1,5 +1,10 @@
 # getSecurityLabel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSecurityLabel
 
 ```TypeScript
@@ -71,7 +76,7 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 异步获取数据安全等级之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 异步获取数据安全等级之后的回调。 |
 
 **错误码：**
 

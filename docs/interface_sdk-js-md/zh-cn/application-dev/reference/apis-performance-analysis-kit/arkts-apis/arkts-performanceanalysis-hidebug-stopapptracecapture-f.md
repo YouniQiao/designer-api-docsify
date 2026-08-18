@@ -1,5 +1,10 @@
 # stopAppTraceCapture
 
+## 导入模块
+
+```TypeScript
+```
+
 ## stopAppTraceCapture
 
 ```TypeScript

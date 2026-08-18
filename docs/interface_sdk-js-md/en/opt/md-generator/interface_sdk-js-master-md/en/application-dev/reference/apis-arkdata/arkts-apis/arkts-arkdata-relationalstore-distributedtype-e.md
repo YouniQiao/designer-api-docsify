@@ -1,0 +1,40 @@
+# DistributedType
+
+Enumerates the distributed database table types. Use the enum name rather than the enum value.
+
+**Since:** 23
+
+<!--Device-relationalStore-enum DistributedType--><!--Device-relationalStore-enum DistributedType-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+## DISTRIBUTED_DEVICE
+
+```TypeScript
+DISTRIBUTED_DEVICE = 0
+```
+
+Distributed database table synced between devices. SystemCapability.DistributedDataManager.RelationalStore.Core
+
+**Since:** 23
+
+<!--Device-DistributedType-DISTRIBUTED_DEVICE = 0--><!--Device-DistributedType-DISTRIBUTED_DEVICE = 0-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+## DISTRIBUTED_CLOUD
+
+```TypeScript
+DISTRIBUTED_CLOUD = 1
+```
+
+Distributed database table synced between a device and the cloud. SystemCapability.DistributedDataManager.CloudSync.Client
+
+**Since:** 23
+
+**Required permissions:** 
+- API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DistributedType-DISTRIBUTED_CLOUD = 1--><!--Device-DistributedType-DISTRIBUTED_CLOUD = 1-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Client

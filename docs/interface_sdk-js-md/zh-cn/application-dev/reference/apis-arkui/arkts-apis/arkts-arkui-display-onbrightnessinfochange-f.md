@@ -1,5 +1,10 @@
 # onBrightnessInfoChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onBrightnessInfoChange
 
 ```TypeScript

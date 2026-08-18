@@ -8,6 +8,11 @@ Describes the object to be intercepted during navigation redirection.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## didShow
 
 ```TypeScript

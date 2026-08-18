@@ -10,6 +10,12 @@ Profiler tools for inspectors.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
+
 ## Summary
 
 <!--Del-->

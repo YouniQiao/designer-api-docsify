@@ -1,5 +1,10 @@
 # once_SensorId.PROXIMITY
 
+## 导入模块
+
+```TypeScript
+```
+
 ## once_SensorId.PROXIMITY
 
 ```TypeScript
@@ -19,7 +24,7 @@ function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.PROXIMITY | 是 | 传感器类型，该值固定为SensorId.PROXIMITY。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ProximityResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为ProximityResponse。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为ProximityResponse。 |
 
 **错误码：**
 

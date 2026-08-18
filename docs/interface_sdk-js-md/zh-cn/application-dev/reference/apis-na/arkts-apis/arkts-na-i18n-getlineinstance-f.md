@@ -1,5 +1,10 @@
 # getLineInstance
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getLineInstance
 
 ```TypeScript

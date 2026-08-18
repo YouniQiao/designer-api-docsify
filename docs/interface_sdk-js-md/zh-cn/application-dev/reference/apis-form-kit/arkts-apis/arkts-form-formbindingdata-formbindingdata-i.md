@@ -8,6 +8,11 @@ FormBindingData对象的属性定义。
 
 **系统能力：** SystemCapability.Ability.Form
 
+## 导入模块
+
+```TypeScript
+```
+
 ## data
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'systemParameter';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## set

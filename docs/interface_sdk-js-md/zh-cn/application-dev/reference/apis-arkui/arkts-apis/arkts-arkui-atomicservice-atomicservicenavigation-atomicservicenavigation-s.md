@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## gradientBackground
 
 ```TypeScript
@@ -111,7 +116,7 @@ modeChangeCallback?: Callback<NavigationMode>
 
 当Navigation首次显示或者单双栏状态发生变化时触发该回调。默认值为空。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavigationMode&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavigationMode&gt;
 
 **起始版本：** 12
 
@@ -209,7 +214,7 @@ modeChangeCallback?: Callback<NavigationMode>
 
 Navigation容器内容。默认值为空，无内容展示。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -228,7 +233,7 @@ Navigation容器内容。默认值为空，无内容展示。
 
 侧边栏的内容。默认值为空。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 18
 
@@ -265,7 +270,7 @@ stateChangeCallback?: Callback<boolean>
 
 导航栏显示状态切换时触发该回调。true表示导航栏显示，false表示导航栏隐藏。默认值为空。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **起始版本：** 12
 

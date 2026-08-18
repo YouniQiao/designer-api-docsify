@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.PlaybackCapture
 
+## 导入模块
+
+```TypeScript
+```
+
 ## usages
 
 ```TypeScript

@@ -11,7 +11,7 @@ Parse options for XmlPullParser.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'xml';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction

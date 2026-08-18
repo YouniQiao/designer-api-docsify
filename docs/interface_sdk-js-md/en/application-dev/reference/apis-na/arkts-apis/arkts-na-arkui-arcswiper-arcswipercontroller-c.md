@@ -10,6 +10,11 @@ Provide methods for controlling ArcSwiper component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -50,7 +55,7 @@ Finish the swiper animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-na-finishanimationhandler-t.md) | No | The handler is used to listen for the end of the animation. |
+| handler | [FinishAnimationHandler](../../apis-arkui/arkts-apis/arkts-arkui-finishanimationhandler-t.md) | No | The handler is used to listen for the end of the animation. |
 
 ## showNext
 

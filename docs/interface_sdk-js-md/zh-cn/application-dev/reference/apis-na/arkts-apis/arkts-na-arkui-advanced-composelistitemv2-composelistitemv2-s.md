@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -38,7 +43,7 @@
 
 定义左侧以及中间元素。
 
-**类型：** [ContentItemV2](arkts-na-arkui-advanced-composelistitemv2-contentitemv2-c.md)
+**类型：** [ContentItemV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -59,7 +64,7 @@
 
 定义右侧元素。
 
-**类型：** [OperateItemV2](arkts-na-arkui-advanced-composelistitemv2-operateitemv2-c.md)
+**类型：** [OperateItemV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 
 **起始版本：** 26.0.0
 

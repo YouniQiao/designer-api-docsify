@@ -10,6 +10,11 @@ Provides the API to obtain the color effects supported.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSupportedColorEffects
 
 ```TypeScript

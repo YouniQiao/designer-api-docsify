@@ -11,7 +11,8 @@ Represents the options for verifying the user credential.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## credential

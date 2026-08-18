@@ -3,12 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { KeyAction } from 'Action';
-import { SourceType } from 'SourceType';
-import { ToolType } from 'ToolType';
-import { Touch } from 'Touch';
-import { TouchEvent } from 'TouchEvent';
-import { FixedMode } from 'FixedMode';
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
 ```
 
 ## Summary

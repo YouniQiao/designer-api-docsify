@@ -1,5 +1,10 @@
 # exitKioskMode
 
+## 导入模块
+
+```TypeScript
+```
+
 ## exitKioskMode
 
 ```TypeScript

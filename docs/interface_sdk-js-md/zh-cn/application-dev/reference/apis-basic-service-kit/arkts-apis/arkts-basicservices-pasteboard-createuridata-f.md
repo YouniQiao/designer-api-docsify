@@ -1,5 +1,10 @@
 # createUriData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createUriData
 
 ```TypeScript

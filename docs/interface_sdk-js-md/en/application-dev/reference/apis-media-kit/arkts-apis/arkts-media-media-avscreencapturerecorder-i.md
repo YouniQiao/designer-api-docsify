@@ -11,7 +11,7 @@ AVScreenCaptureRecorder is a class for screen capture management. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark

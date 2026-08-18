@@ -10,6 +10,11 @@ Options for creating a menu item instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript
@@ -80,7 +85,7 @@ action?: OnActionCallback
 
 Callback function when click on this menu item.
 
-**Type:** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

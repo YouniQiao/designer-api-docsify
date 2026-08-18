@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getFirstPreferredLanguage
@@ -18,7 +19,7 @@ Obtains the first language in the preferred language list.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getfirstpreferredlanguage)
+**Substitutes:** [getFirstPreferredLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getfirstpreferredlanguage)
 
 <!--Device-i18n-export function getFirstPreferredLanguage(): string--><!--Device-i18n-export function getFirstPreferredLanguage(): string-End-->
 

@@ -1,5 +1,10 @@
 # promisify
 
+## 导入模块
+
+```TypeScript
+```
+
 ## promisify
 
 ```TypeScript

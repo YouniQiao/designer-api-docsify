@@ -8,6 +8,11 @@ Defines a tab controller, which is used to control switching of tabs. One **Tabs
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## changeIndex
 
 ```TypeScript

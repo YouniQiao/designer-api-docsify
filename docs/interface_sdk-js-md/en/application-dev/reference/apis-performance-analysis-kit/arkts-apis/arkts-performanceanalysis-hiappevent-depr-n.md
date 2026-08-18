@@ -12,6 +12,11 @@ The **hiAppEvent** module provides the application event logging functions, such
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Namespaces

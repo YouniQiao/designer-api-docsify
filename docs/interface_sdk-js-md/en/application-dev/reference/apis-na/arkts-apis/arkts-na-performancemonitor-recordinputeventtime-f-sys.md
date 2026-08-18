@@ -1,5 +1,10 @@
 # recordInputEventTime (System API)
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## recordInputEventTime
 
 ```TypeScript

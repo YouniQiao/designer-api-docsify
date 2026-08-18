@@ -8,6 +8,11 @@ WebDownloadManager是ArkWeb框架下Web组件下载任务的静态管理类，�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## resumeDownload
 
 ```TypeScript

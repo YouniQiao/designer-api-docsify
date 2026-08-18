@@ -8,6 +8,11 @@ Defines the style for displaying a long-press preview.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## hoverScale
 
 ```TypeScript

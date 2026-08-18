@@ -1,5 +1,10 @@
 # getDefaultVoiceSimId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDefaultVoiceSimId
 
 ```TypeScript
@@ -18,7 +23,7 @@ Obtains the default SIM ID for the voice service.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Returns the SIM ID of the default voice sim and SIM ID will increase from 1. |
 
 **错误码：**
 

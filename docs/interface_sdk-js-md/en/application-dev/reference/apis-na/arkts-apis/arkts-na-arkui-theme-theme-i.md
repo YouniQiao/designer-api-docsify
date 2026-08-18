@@ -10,6 +10,11 @@ Defines the struct of Theme.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## colors
 
 ```TypeScript
@@ -18,7 +23,7 @@ colors: Colors
 
 Define tokens associated with color resources.
 
-**Type:** [Colors](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md)
+**Type:** [Colors](arkts-na-arkui-theme-colors-i.md)
 
 **Since:** 23
 

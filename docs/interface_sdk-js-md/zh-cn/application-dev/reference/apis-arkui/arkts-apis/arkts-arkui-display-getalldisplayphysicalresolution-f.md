@@ -1,5 +1,10 @@
 # getAllDisplayPhysicalResolution
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllDisplayPhysicalResolution
 
 ```TypeScript

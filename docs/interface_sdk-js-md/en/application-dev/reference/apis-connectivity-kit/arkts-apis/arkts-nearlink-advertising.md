@@ -13,7 +13,7 @@ Provides methods related to advertising. Nearby devices can scan and discover th
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'advertising';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

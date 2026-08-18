@@ -10,6 +10,11 @@ The result of loading image.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## imageHeight
 
 ```TypeScript

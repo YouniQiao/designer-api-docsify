@@ -11,7 +11,7 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'collections';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -190,7 +190,7 @@ Obtains bit values within a given range of this bit vector.
 
 | Type | Description |
 | --- | --- |
-| [BitVector](../../apis-na/arkts-apis/arkts-na-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [BitVector](arkts-arkts-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 

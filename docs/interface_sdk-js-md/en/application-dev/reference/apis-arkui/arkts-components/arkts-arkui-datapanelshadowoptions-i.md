@@ -10,6 +10,11 @@ Inherits from MultiShadowOptions and has all properties of **MultiShadowOptions*
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## colors
 
 ```TypeScript

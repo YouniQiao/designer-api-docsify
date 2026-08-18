@@ -13,7 +13,8 @@ The **HashStream** class is a utility for creating a message digest of data. You
 ## Modules to Import
 
 ```TypeScript
-import { hash } from 'hash';
+import { hash } from '@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## digest

@@ -8,6 +8,11 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

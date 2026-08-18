@@ -11,7 +11,10 @@ Represents the intermediate authentication status. This API is used to describe 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## tipCode

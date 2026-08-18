@@ -11,7 +11,7 @@ Defines shortcut key options.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from 'inputConsumer';
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## finalKey

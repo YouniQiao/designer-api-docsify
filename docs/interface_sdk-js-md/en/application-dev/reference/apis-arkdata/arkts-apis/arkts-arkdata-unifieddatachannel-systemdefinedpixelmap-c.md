@@ -17,6 +17,7 @@ Represents the image data type corresponding to [PixelMap](../../apis-image-kit/
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

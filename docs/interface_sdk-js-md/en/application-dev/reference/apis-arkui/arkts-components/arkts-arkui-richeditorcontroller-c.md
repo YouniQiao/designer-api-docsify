@@ -10,6 +10,11 @@ Implements the **RichEditor** component controller. Inherits from [RichEditorBas
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## addBuilderSpan
 
 ```TypeScript

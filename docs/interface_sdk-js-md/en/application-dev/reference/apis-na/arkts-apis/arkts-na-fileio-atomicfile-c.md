@@ -10,6 +10,11 @@ AtomicFile is a class used to perform atomic read and write operations on files.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

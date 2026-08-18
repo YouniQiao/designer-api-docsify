@@ -11,7 +11,9 @@ Defines the timeout configuration of a task. The task waiting duration is not co
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'request';
+import { request } from '@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## connectionTimeout

@@ -10,6 +10,11 @@ EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## abilityName
 
 ```TypeScript

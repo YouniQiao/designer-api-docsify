@@ -10,6 +10,11 @@ CLI工具执行的结果。包含CLI工具的退出码、标准输出、标准�
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## errorText
 
 ```TypeScript

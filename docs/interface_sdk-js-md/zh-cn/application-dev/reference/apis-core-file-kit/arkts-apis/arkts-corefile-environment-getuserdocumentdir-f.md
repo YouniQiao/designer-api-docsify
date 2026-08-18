@@ -1,5 +1,10 @@
 # getUserDocumentDir
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUserDocumentDir
 
 ```TypeScript

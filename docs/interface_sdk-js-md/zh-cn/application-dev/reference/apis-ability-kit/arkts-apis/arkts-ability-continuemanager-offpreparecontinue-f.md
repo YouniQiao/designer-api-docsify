@@ -1,5 +1,10 @@
 # offPrepareContinue
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offPrepareContinue
 
 ```TypeScript
@@ -21,7 +26,7 @@ Unregister prepareContinue event.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | 是 | the ability context. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 否 | Used to handle ('prepareContinue') command. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 否 | Used to handle ('prepareContinue') command. |
 
 **错误码：**
 

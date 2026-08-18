@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { policy } from 'policy';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getDeviceIdleTrustlist

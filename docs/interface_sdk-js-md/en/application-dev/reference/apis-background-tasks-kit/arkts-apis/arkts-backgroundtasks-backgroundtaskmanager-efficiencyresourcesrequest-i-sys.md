@@ -13,7 +13,8 @@ Describes the parameters for requesting efficiency resources.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## cpuLevel

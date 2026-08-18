@@ -10,6 +10,11 @@ Provides usage information of the Web SQL Database.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## origin
 
 ```TypeScript

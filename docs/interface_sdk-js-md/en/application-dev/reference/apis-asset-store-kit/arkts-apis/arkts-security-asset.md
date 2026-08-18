@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from 'asset';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## Summary

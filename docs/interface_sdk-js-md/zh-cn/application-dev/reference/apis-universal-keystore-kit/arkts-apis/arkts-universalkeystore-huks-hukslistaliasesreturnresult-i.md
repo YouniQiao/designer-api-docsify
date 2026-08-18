@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
+## 导入模块
+
+```TypeScript
+```
+
 ## keyAliases
 
 ```TypeScript

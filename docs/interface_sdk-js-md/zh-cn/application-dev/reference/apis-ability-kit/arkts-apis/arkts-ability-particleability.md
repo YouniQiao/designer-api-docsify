@@ -10,6 +10,11 @@ particleAbility模块提供了操作Data和Service类型的Ability的能力，�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

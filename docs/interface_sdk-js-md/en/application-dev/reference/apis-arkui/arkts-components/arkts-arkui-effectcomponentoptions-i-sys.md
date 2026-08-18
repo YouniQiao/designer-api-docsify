@@ -10,6 +10,11 @@ Sets the construction parameters of the current EffectComponent, including the r
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## effectLayer
 
 ```TypeScript

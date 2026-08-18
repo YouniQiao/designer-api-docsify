@@ -1,0 +1,108 @@
+# updateForm
+
+## Modules to Import
+
+```TypeScript
+```
+
+## updateForm
+
+```TypeScript
+function updateForm(
+    formId: string,
+    formBindingData: formBindingData.FormBindingData,
+    callback: AsyncCallback<void>
+  ): void
+```
+
+Updates a widget. This API uses an asynchronous callback to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateform)
+
+<!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void--><!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| [formBindingData](arkts-application-formbindingdata.md) | formBindingData.FormBindingData | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider, formBindingData } from '@kit.FormKit';
+
+// Use an existing widget ID (formId).
+let formId: string = '12400633174999288';
+let param: Record<string, string> = {
+  'temperature': '22c',
+  'time': '22:00'
+}
+let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+formProvider.updateForm(formId, obj, (error: BusinessError) => {
+  if (error.code) {
+    console.error(`formProvider updateForm, errorCode: ${error.code}, errorMessage: ${error.message}`);
+  }
+});
+```
+
+
+## updateForm
+
+```TypeScript
+function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>
+```
+
+Updates a widget. This API uses a promise to return the result.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateform)
+
+<!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>--><!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| formId | string | Yes |
+| [formBindingData](arkts-application-formbindingdata.md) | formBindingData.FormBindingData | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { formProvider, formBindingData } from '@kit.FormKit';
+
+// Use an existing widget ID (formId).
+let formId: string = '12400633174999288';
+let param: Record<string, string> = {
+  'temperature': '22c',
+  'time': '22:00'
+}
+let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+formProvider.updateForm(formId, obj).then(() => {
+  console.info('formProvider updateForm success');
+}).catch((error: BusinessError) => {
+  console.error(`formProvider updateForm, errorCode: ${error.code}, errorMessage: ${error.message}`);
+});
+```

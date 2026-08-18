@@ -10,6 +10,11 @@ Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface info
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript
@@ -36,7 +41,7 @@ rect: RectEvent
 
 Position of the surface.
 
-**Type:** [RectEvent](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-rectevent-i.md)
+**Type:** [RectEvent](arkts-na-webview-rectevent-i.md)
 
 **Since:** 23
 

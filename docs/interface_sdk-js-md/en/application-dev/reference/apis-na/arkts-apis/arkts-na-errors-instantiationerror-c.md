@@ -12,6 +12,11 @@ Represents an error that occurs when attempting to instantiate abstract class or
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

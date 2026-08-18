@@ -1,5 +1,10 @@
 # onMagneticFieldUncalibratedChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onMagneticFieldUncalibratedChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Subscribe to uncalibrated magnetic field sensor data, {@code SensorId.MAGNETIC_F
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | 是 | callback uncalibrated magnetic field data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | 是 | callback uncalibrated magnetic field data. |
 | options | Options | 否 | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **错误码：**

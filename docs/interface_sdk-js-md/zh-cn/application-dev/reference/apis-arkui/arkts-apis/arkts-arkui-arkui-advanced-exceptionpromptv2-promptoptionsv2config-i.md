@@ -8,6 +8,11 @@ PromptOptionsV2Config定义用于构造PromptOptionsV2对象的配置信息接�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## actionText
 
 ```TypeScript

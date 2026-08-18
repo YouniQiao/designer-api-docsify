@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## extraDataJson
 
 ```TypeScript

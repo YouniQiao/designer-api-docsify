@@ -13,7 +13,8 @@ Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## authenticatedData

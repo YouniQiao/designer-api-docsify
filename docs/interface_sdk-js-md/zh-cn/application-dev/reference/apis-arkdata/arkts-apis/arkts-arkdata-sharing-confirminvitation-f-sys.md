@@ -1,5 +1,10 @@
 # confirmInvitation（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## confirmInvitation
 
 ```TypeScript
@@ -22,7 +27,7 @@ function confirmInvitation(invitationCode: string, state: State, callback: Async
 | --- | --- | --- | --- |
 | invitationCode | string | 是 | 端云共享的邀请码。 |
 | state | State | 是 | 确认邀请的状态。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;string&gt;&gt; | 是 | 回调函数。返回确认邀请的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;string&gt;&gt; | 是 | 回调函数。返回确认邀请的结果。 |
 
 **错误码：**
 

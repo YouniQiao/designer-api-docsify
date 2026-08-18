@@ -11,7 +11,8 @@ The **Preferences** module provides APIs for processing data in the form of key-
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from 'preferences';
+import { preferences } from '@kit.ArkData';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## Summary

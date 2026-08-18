@@ -13,7 +13,8 @@ Describes the progress information of data migration, including the progress per
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'fontManager';
+import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## progressPercentage

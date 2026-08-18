@@ -10,6 +10,11 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

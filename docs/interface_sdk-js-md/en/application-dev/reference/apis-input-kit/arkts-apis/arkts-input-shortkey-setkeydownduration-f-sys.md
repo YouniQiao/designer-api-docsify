@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from 'shortKey';
+import { shortKey } from '@kit.InputKit';
+import { FingerprintEvent } from '@kit.InputKit';
 ```
 
 ## setKeyDownDuration

@@ -8,6 +8,11 @@ Configures menu item information. **Table 1: Menu offset when both offset and pl
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## aboutToAppear
 
 ```TypeScript

@@ -10,6 +10,11 @@ Represents the controller of the **RichEditor** component constructed using the 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getSelection
 
 ```TypeScript

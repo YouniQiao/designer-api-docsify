@@ -1,5 +1,10 @@
 # onCallDisconnectedCause（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onCallDisconnectedCause
 
 ```TypeScript
@@ -22,7 +27,7 @@ Subscribe to the callDisconnectedCause event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | 是 | Indicates the callback for getting the call disconnection reason. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | 是 | Indicates the callback for getting the call disconnection reason. |
 
 **错误码：**
 

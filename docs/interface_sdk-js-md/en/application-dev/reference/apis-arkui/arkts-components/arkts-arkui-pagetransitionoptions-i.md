@@ -8,6 +8,11 @@ Parameters of the exit or entrance animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## curve
 
 ```TypeScript

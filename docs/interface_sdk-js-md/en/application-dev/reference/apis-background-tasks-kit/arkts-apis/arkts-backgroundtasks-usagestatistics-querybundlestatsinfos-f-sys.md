@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from 'usageStatistics';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStatsInfos

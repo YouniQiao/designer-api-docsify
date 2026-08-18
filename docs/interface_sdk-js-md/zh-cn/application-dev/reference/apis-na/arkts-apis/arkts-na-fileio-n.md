@@ -10,6 +10,11 @@ FileIO
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 命名空间

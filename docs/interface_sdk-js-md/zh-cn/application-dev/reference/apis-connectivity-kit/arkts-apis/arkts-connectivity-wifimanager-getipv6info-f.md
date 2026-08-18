@@ -1,5 +1,10 @@
 # getIpv6Info
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getIpv6Info
 
 ```TypeScript

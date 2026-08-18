@@ -1,12 +1,17 @@
 # removeRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeRight
 
 ```TypeScript
 function removeRight(deviceName: string): boolean
 ```
 
-移除软件包访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。
+移除应用访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。
 
 **起始版本：** 23
 
@@ -18,7 +23,7 @@ function removeRight(deviceName: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceName | string | 是 | 设备名称，来自[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的设备列表USBDevice的name。 |
+| deviceName | string | 是 | 设备名称，来自[getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的设备列表USBDevice的name。 |
 
 **返回值：**
 

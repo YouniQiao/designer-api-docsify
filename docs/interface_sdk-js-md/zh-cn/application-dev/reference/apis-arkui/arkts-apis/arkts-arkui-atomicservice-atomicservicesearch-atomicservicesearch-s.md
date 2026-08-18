@@ -8,6 +8,11 @@ AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## controller
 
 ```TypeScript

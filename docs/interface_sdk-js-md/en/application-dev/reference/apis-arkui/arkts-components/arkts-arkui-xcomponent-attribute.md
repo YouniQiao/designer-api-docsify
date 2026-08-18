@@ -10,6 +10,11 @@ In addition to universal attributes, the following attributes are supported. Sin
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enableAnalyzer
 
 ```TypeScript

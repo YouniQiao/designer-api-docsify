@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## INVALID_CONTACT_ID
 
 ```TypeScript

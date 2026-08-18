@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'access';
+import { access } from '@kit.ConnectivityKit';
 ```
 
 ## restrictBluetooth

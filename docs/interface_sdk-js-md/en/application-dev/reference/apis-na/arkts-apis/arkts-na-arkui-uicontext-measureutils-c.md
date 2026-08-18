@@ -10,6 +10,11 @@ class MeasureUtils
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getParagraphs
 
 ```TypeScript

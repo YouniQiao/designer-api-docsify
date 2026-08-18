@@ -10,6 +10,11 @@ Defines the configuration options for ContainerReader component. Used to specify
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## heightBreakpoint
 
 ```TypeScript

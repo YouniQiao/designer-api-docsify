@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'wifi';
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## disableHotspot

@@ -15,9 +15,7 @@ Defines the input parameters of **cipher.aes()**.
 ## Modules to Import
 
 ```TypeScript
-import { CipherAesOptions } from 'CipherAesOptions';
-import { CipherResponse } from 'CipherResponse';
-import { CipherRsaOptions } from 'CipherRsaOptions';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## action

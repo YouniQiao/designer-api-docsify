@@ -11,7 +11,8 @@ The **userAccessCtrl** module is a core component of the OpenHarmony user identi
 ## Modules to Import
 
 ```TypeScript
-import { userAccessCtrl } from 'userAccessCtrl';
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

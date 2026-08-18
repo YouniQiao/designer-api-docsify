@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddableUIAbility } from 'EmbeddableUIAbility';
+import { EmbeddableUIAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

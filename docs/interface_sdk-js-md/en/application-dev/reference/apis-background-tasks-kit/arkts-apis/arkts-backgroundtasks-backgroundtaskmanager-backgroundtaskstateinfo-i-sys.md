@@ -13,7 +13,8 @@ Defines the authorization information of a continuous task.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## appIndex

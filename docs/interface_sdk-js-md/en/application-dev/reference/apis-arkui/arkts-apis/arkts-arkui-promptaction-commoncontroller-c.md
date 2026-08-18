@@ -11,9 +11,7 @@ Implements a common controller for managing components related to **promptAction
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode } from 'LevelMode';
-import { ImmersiveMode } from 'ImmersiveMode';
-import { LevelOrder } from 'LevelOrder';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## close

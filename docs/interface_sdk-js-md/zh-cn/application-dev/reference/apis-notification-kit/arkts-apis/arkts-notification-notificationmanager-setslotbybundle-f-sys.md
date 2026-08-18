@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setSlotByBundle
@@ -30,7 +31,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | slot | NotificationSlot | 是 | 通知渠道。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设定通知渠道回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定通知渠道回调函数。 |
 
 **错误码：**
 

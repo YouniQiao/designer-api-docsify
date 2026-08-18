@@ -1,5 +1,10 @@
 # connectToCandidateConfigWithUserAction
 
+## 导入模块
+
+```TypeScript
+```
+
 ## connectToCandidateConfigWithUserAction
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # ScrollOffset
 
-Defines the scroll offset of the webpage in view port, the unit is virtual pixel. Related to [getScrollOffset](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getscrolloffset) method.
+Defines the scroll offset of the webpage in view port, the unit is virtual pixel. Related to [getScrollOffset](arkts-na-webview-webviewcontroller-c.md#getscrolloffset) method.
 
 **Since:** 23
 
@@ -9,6 +9,11 @@ Defines the scroll offset of the webpage in view port, the unit is virtual pixel
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## x
 

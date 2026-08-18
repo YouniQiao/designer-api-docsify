@@ -11,7 +11,8 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 ## Modules to Import
 
 ```TypeScript
-import { HashMap } from 'HashMap';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
 ```
 
 ## $_iterator

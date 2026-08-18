@@ -11,7 +11,7 @@ Defines the APN info.
 ## Modules to Import
 
 ```TypeScript
-import { data } from 'data';
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## apn

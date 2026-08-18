@@ -8,6 +8,11 @@ class UIInspector 提供注册组件布局和组件绘制送显完成回调通�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createComponentObserver
 
 ```TypeScript

@@ -10,6 +10,11 @@ Define the change data information object.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## key
 
 ```TypeScript

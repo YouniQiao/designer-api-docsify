@@ -1,5 +1,10 @@
 # createAuxiliaryPictureUsingAllocator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createAuxiliaryPictureUsingAllocator
 
 ```TypeScript

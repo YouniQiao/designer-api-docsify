@@ -8,6 +8,11 @@ ARGB格式的颜色描述，颜色分量值为0.0~1.0的浮点数。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alpha
 
 ```TypeScript

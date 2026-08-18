@@ -1,5 +1,10 @@
 # getPermissionDef（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPermissionDef
 
 ```TypeScript
@@ -23,7 +28,7 @@ function getPermissionDef(permissionName: string, callback: AsyncCallback<Permis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionName | string | 是 | 表示权限名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PermissionDef&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;PermissionDef&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionDef&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)，当获取成功时，err为 undefined，data为获取到的Array&lt;PermissionDef&gt;；否则为错误对象。 |
 
 **错误码：**
 

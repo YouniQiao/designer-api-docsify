@@ -12,6 +12,11 @@ Defines the RDB store configuration.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## name
 
 ```TypeScript

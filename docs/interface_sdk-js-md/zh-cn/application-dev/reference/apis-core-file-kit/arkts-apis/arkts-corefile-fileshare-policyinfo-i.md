@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
+## 导入模块
+
+```TypeScript
+```
+
 ## operationMode
 
 ```TypeScript

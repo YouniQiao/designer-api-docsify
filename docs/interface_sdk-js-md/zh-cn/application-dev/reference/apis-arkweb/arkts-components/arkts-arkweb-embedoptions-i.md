@@ -8,6 +8,11 @@ Web同层渲染的配置。用于配置Web同层渲染选项，包括支持固�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## supportCssDisplayChange
 
 ```TypeScript

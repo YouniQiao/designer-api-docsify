@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from 'preferences';
+import { preferences } from '@kit.ArkData';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## removePreferencesFromCacheSync

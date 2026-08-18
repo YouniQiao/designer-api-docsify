@@ -8,6 +8,11 @@ P12（PKCS #12）数据，包含私钥、证书和其他证书。
 
 **系统能力：** SystemCapability.Security.Cert
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cert
 
 ```TypeScript

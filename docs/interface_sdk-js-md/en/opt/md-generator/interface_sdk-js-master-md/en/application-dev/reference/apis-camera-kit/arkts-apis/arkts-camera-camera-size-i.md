@@ -1,0 +1,50 @@
+# Size
+
+Describes the image dimensions.
+
+**Since:** 23
+
+<!--Device-camera-interface Size--><!--Device-camera-interface Size-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## height
+
+```TypeScript
+height: number
+```
+
+Image height, in pixels.
+
+**Type:** number
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Size-height: int--><!--Device-Size-height: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## width
+
+```TypeScript
+width: number
+```
+
+Image width, in pixels.
+
+**Type:** number
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Size-width: int--><!--Device-Size-width: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core

@@ -10,6 +10,11 @@ TextClock容器组件的控制器，可以将该控制器绑定到TextClock组�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

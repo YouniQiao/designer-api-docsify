@@ -10,6 +10,11 @@ Defines the swiper content animated transition options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## timeout
 
 ```TypeScript

@@ -10,6 +10,11 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

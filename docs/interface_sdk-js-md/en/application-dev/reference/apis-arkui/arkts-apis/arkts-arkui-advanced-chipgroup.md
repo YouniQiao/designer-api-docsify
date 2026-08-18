@@ -3,16 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { IconOptions } from 'IconOptions';
-import { ChipItemLabelOptions } from 'LabelOptions';
-import { ChipGroupItemOptions } from 'ChipGroupItemOptions';
-import { ChipItemStyle } from 'ChipItemStyle';
-import { ChipGroupSpaceOptions } from 'ChipGroupSpaceOptions';
-import { IconItemOptions } from 'IconItemOptions';
-import { IconGroupSuffix } from 'IconGroupSuffix';
-import { ChipGroup } from 'ChipGroup';
-import { SuffixImageIconOptions } from 'SuffixImageIconOptions';
-import { SymbolItemOptions } from 'SymbolItemOptions';
+import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
+import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -1,6 +1,6 @@
 # FunctionType（系统接口）
 
-Enumerates USB device function types.
+USB设备侧功能。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ NONE = 0
 ACM = 1
 ```
 
-acm功能。
+acm（Abstract Control Model，抽象控制模型），串口通信功能，用于模拟串口设备。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ acm功能。
 ECM = 2
 ```
 
-ecm功能。
+ecm（Ethernet Control Model，以太网控制模型），以太网控制功能，用于网络共享。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ ecm功能。
 HDC = 4
 ```
 
-hdc功能。
+hdc（HarmonyOS Device Connector，HarmonyOS设备连接器）。
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ hdc功能。
 MTP = 8
 ```
 
-媒体传输。
+mtp（Media Transfer Protocol，媒体传输协议）。
 
 **起始版本：** 23
 
@@ -96,7 +96,7 @@ MTP = 8
 PTP = 16
 ```
 
-图片传输。
+ptp（Picture Transfer Protocol，图片传输协议）。
 
 **起始版本：** 23
 
@@ -112,7 +112,7 @@ PTP = 16
 RNDIS = 32
 ```
 
-网络共享。
+rndis（Remote Network Driver Interface Specification，远程网络驱动接口规范），用于网络共享（暂不支持）。
 
 **起始版本：** 23
 
@@ -128,7 +128,7 @@ RNDIS = 32
 MIDI = 64
 ```
 
-midi功能。
+midi（Musical Instrument Digital Interface，乐器数字接口），用于MIDI设备通信（暂不支持）。
 
 **起始版本：** 23
 
@@ -144,7 +144,7 @@ midi功能。
 AUDIO_SOURCE = 128
 ```
 
-音频功能。
+音频源功能，用于音频数据传输（暂不支持）。
 
 **起始版本：** 23
 
@@ -160,7 +160,7 @@ AUDIO_SOURCE = 128
 NCM = 256
 ```
 
-ncm传输。
+ncm（Network Control Model，网络控制模型），用于高速网络共享（暂不支持）。
 
 **起始版本：** 23
 

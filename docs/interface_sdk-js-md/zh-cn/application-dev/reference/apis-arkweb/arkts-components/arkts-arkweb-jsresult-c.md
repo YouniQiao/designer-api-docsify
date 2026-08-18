@@ -8,6 +8,11 @@ JsResult是Web组件在处理JavaScript弹窗事件时返回的结果处理对�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # @ohos.file.RecentPhotoComponent
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

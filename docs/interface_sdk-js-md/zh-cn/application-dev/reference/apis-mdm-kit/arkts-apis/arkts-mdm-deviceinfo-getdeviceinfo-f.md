@@ -1,5 +1,10 @@
 # getDeviceInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDeviceInfo
 
 ```TypeScript

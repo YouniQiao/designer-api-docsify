@@ -8,6 +8,11 @@ formProvider模块提供了获取卡片信息、更新卡片、设置卡片刷�
 
 **系统能力：** SystemCapability.Ability.Form
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

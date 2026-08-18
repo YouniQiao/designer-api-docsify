@@ -11,7 +11,7 @@ Describes an **Event** object, including the event title, start time, and end ti
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## attendee

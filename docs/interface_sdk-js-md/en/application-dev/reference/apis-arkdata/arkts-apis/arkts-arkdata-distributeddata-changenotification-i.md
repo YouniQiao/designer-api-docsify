@@ -12,6 +12,13 @@ Defines the content of data change notifications, including inserted data, updat
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## deleteEntries
 
 ```TypeScript

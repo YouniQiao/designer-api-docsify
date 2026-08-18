@@ -10,6 +10,11 @@ class FocusController
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## activate
 
 ```TypeScript

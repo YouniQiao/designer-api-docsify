@@ -8,6 +8,11 @@ Defines the area information of the particle field.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## position
 
 ```TypeScript

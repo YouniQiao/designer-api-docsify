@@ -10,6 +10,11 @@ Class that holds brand name, major version and full version. Brand name and majo
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBrand
 
 ```TypeScript

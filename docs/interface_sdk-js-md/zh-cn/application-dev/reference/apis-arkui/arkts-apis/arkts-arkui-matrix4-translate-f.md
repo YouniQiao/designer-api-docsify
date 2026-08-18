@@ -1,5 +1,10 @@
 # translate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## translate
 
 ```TypeScript

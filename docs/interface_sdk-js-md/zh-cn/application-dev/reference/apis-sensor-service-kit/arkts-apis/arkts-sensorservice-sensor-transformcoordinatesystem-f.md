@@ -1,5 +1,10 @@
 # transformCoordinateSystem
 
+## 导入模块
+
+```TypeScript
+```
+
 ## transformCoordinateSystem
 
 ```TypeScript
@@ -25,7 +30,7 @@ function transformCoordinateSystem(inRotationVector: Array<number>, coordinates:
 | --- | --- | --- | --- |
 | inRotationVector | Array&lt;number&gt; | 是 | 表示旋转矩阵。 |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 | 表示坐标系方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回转换后的旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回转换后的旋转矩阵。 |
 
 **示例**
 

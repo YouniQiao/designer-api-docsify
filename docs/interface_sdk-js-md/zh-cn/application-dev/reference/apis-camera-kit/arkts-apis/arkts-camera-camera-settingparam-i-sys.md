@@ -10,6 +10,11 @@ Defines the effect parameters used to preheat an image.
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## faceSlender
 
 ```TypeScript

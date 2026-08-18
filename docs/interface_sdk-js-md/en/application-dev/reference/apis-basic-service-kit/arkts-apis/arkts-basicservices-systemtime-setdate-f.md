@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'systemTime';
+import { systemTime } from '@kit.BasicServicesKit';
+import { systemTimer } from '@kit.BasicServicesKit';
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## setDate

@@ -10,6 +10,11 @@ systemConfiguration模块提供系统环境变化监听回调能力，包括系�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 接口

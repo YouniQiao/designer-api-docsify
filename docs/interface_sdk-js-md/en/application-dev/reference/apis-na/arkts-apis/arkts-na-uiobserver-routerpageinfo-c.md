@@ -10,6 +10,11 @@ Router page info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## context
 
 ```TypeScript
@@ -138,7 +143,7 @@ state: RouterPageState
 
 The state of the changed router page.
 
-**Type:** [RouterPageState](arkts-na-uiobserver-routerpagestate-e.md)
+**Type:** [RouterPageState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-routerpagestate-e.md)
 
 **Since:** 23
 

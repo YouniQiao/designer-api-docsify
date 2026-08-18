@@ -12,6 +12,11 @@ Listens for file change. You can call the **Watcher.stop()** method synchronousl
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## stop
 
 ```TypeScript

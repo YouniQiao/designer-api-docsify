@@ -8,6 +8,11 @@ Sets the style for the component of the **Switch** type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## pointColor
 
 ```TypeScript

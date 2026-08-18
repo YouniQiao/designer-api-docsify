@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from 'EnterpriseAdminExtensionAbility';
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 ```
 
 ## Summary

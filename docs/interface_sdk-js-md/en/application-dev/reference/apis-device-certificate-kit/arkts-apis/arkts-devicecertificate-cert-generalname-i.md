@@ -11,7 +11,9 @@ Represents an X.509 GeneralName as defined in RFC 5280, which can appear in Subj
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'cert';
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## name

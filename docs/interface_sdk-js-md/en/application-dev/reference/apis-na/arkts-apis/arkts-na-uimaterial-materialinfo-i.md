@@ -10,6 +10,11 @@ Provides material configuration information, including the material enabling sta
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## state
 
 ```TypeScript

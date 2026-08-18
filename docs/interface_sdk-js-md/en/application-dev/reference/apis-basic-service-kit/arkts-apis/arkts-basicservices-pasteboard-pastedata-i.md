@@ -11,7 +11,7 @@ Implements a **PasteData** object. PasteData contains one or more data records (
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## addHtmlRecord

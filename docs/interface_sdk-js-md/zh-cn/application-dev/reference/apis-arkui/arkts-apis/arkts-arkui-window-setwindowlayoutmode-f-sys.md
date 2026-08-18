@@ -1,5 +1,10 @@
 # setWindowLayoutMode（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setWindowLayoutMode
 
 ```TypeScript
@@ -23,7 +28,7 @@ function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [WindowLayoutMode](arkts-arkui-window-windowlayoutmode-e-sys.md) | 是 | 设置的窗口布局模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调信息。 |
 
 **错误码：**
 

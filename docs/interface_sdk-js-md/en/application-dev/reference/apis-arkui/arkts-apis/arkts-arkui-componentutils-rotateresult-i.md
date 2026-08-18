@@ -13,7 +13,7 @@ Rotation Result.
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'componentUtils';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## angle

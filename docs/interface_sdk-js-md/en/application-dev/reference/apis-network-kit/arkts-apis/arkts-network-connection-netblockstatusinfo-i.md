@@ -11,7 +11,7 @@ Get network status information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## blocked

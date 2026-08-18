@@ -1,5 +1,10 @@
 # sendData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sendData
 
 ```TypeScript

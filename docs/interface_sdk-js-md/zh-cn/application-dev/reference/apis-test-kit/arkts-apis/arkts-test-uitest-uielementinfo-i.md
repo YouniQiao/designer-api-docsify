@@ -8,6 +8,11 @@ UI事件的相关信息。
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## bundleName
 
 ```TypeScript

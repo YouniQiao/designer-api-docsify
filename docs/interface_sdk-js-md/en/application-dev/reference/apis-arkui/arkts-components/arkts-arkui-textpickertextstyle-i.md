@@ -10,6 +10,11 @@ Defines the text style options for the text picker. Inherits from PickerTextStyl
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## maxFontSize
 
 ```TypeScript

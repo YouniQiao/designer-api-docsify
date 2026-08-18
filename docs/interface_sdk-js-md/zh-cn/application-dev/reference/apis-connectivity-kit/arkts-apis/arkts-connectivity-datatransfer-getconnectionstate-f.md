@@ -1,5 +1,10 @@
 # getConnectionState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getConnectionState
 
 ```TypeScript

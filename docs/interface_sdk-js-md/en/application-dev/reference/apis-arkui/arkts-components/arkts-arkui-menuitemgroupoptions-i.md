@@ -8,6 +8,11 @@ Describes the header and footer of the menu item group.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## footer
 
 ```TypeScript

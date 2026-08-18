@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from 'identifier';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## resetOAID

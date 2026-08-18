@@ -8,6 +8,11 @@ PermissionRequest 是 Web 组件用于授权或拒绝权限请求的对象。当
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

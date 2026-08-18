@@ -10,6 +10,11 @@ The class for PickerController
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## addData
 
 ```TypeScript

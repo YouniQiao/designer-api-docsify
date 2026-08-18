@@ -1,5 +1,10 @@
 # killProcessesByBundleName (System API)
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## killProcessesByBundleName
 
 ```TypeScript

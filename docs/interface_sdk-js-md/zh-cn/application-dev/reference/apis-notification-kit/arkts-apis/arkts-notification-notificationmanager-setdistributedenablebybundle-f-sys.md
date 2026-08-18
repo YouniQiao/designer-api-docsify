@@ -3,7 +3,8 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setDistributedEnableByBundle
@@ -34,7 +35,7 @@ function setDistributedEnableByBundle(bundle: BundleOption, enable: boolean, cal
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | enable | boolean | 是 | 指定应用是否支持分布式通知（true：支持，false：不支持）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置指定应用是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置指定应用是否支持分布式通知的回调函数。 |
 
 **错误码：**
 

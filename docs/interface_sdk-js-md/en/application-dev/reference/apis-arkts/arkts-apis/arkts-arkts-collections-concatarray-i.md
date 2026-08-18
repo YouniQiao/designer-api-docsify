@@ -13,7 +13,7 @@ An array-like object that can be concatenated. This API extends **ISendable**. >
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'collections';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## join

@@ -8,6 +8,11 @@ Implements the callbacks and events for the ListItem in the expanded state.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onFinish
 
 ```TypeScript

@@ -11,7 +11,8 @@ Describes gzip-related APIs.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'zlib';
+import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## gzbuffer

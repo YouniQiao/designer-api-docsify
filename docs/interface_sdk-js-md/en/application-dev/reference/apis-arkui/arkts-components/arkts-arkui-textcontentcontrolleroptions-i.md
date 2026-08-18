@@ -8,6 +8,11 @@ Provides configuration options for text insertion operations in text input compo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## offset
 
 ```TypeScript

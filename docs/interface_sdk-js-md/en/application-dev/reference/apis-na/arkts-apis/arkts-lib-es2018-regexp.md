@@ -1,5 +1,10 @@
 # lib.es2018.regexp
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

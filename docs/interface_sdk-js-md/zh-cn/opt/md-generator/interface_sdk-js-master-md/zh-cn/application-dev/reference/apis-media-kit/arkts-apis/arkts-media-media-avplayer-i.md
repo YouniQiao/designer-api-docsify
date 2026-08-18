@@ -1,0 +1,923 @@
+# AVPlayer
+
+播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer)构建一个 AVPlayer实例。 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 on('stateChange')：监听播放状态机 AVPlayerState切换。on('error')：监听错误事件。 应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。 Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、 [视频播放开发指导](../../../media/media/video-playback.md)。 > **说明：** > > - 本Interface首批API从API version 9开始支持。
+
+**起始版本：** 23
+
+<!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+## 导入模块
+
+```TypeScript
+```
+
+## addSubtitleFromFd
+
+```TypeScript
+addSubtitleFromFd(fd: number, offset?: number, length?: number): Promise<void>
+```
+
+依据fd为视频添加外挂字幕，当前仅支持与视频资源同时设置（在avplayer设置fdSrc视频资源后设置外挂字幕）。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>--><!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| fd | number | 是 |
+| offset | number | 否 |
+| length | number | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## addSubtitleFromUrl
+
+```TypeScript
+addSubtitleFromUrl(url: string): Promise<void>
+```
+
+依据url为视频添加外挂字幕，当前仅支持与视频资源同时设置（在avplayer设置fdSrc视频资源后设置外挂字幕）。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>--><!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| url | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## deselectTrack
+
+```TypeScript
+deselectTrack(index: number): Promise<void>
+```
+
+使用AVPlayer播放多音轨视频时取消指定音视频轨道播放，使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-deselectTrack(index: int): Promise<void>--><!--Device-AVPlayer-deselectTrack(index: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## getLoadedTimeRanges
+
+```TypeScript
+getLoadedTimeRanges(): Promise<Array<Range>>
+```
+
+获取已加载的时间区间段的列表。使用Promise异步回调。 > **说明：** > > - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。 > > - 对于网络媒体资源，返回本地已缓存的时间区间段的列表。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-getLoadedTimeRanges(): Promise<Array<Range>>--><!--Device-AVPlayer-getLoadedTimeRanges(): Promise<Array<Range>>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; |
+
+## getPlaybackInfo
+
+```TypeScript
+getPlaybackInfo(): Promise<PlaybackInfo>
+```
+
+获取播放过程信息，可以在prepared/playing/paused状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-AVPlayer-getPlaybackInfo(): Promise<PlaybackInfo>--><!--Device-AVPlayer-getPlaybackInfo(): Promise<PlaybackInfo>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[PlaybackInfo](arkts-media-multimedia-media-playbackinfo-i.md)&gt; |
+
+## getPlaybackRate
+
+```TypeScript
+getPlaybackRate(): Promise<number>
+```
+
+获取当前播放器的播放速率。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-AVPlayer-getPlaybackRate(): Promise<double>--><!--Device-AVPlayer-getPlaybackRate(): Promise<double>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;number & gt; |
+
+## getPlaybackStatisticMetrics
+
+```TypeScript
+getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>
+```
+
+获取当前播放器的统计指标信息，可以在准备（prepared）/播放（playing）/暂停（paused）/完成（completed）/停止（stopped）状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-AVPlayer-getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>--><!--Device-AVPlayer-getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[PlaybackMetrics](arkts-media-playbackmetrics-t.md)&gt; |
+
+## getSeekableTimeRanges
+
+```TypeScript
+getSeekableTimeRanges(): Promise<Array<Range>>
+```
+
+获取可跳转的时间区间段的列表。使用Promise异步回调。 > **说明：** > > - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。 > > - 对于仅支持分块传输的媒体资源，没有可跳转的时间范围。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-getSeekableTimeRanges(): Promise<Array<Range>>--><!--Device-AVPlayer-getSeekableTimeRanges(): Promise<Array<Range>>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; |
+
+## getSelectedTracks
+
+```TypeScript
+getSelectedTracks(): Promise<Array<number>>
+```
+
+获取已选择的音视频轨道索引，可以在prepared/playing/paused状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>--><!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;Array & lt;number & gt; & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## getTrackDescription
+
+```TypeScript
+getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
+```
+
+获取音视频轨道信息，可以在prepared/playing/paused状态调用。获取所有音视轨道信息，应在数据加载回调后调用。使用callback方式异步获取返回值。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## getTrackDescription
+
+```TypeScript
+getTrackDescription(): Promise<Array<MediaDescription>>
+```
+
+获取音视频轨道信息，可以在prepared/playing/paused状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AVPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## getTrackSelectionFilter
+
+```TypeScript
+getTrackSelectionFilter(): Promise<TrackSelectionFilter>
+```
+
+获取播放器当前配置的轨道选择过滤器。使用Promise异步回调。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-getTrackSelectionFilter(): Promise<TrackSelectionFilter>--><!--Device-AVPlayer-getTrackSelectionFilter(): Promise<TrackSelectionFilter>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md)&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## pause
+
+```TypeScript
+pause(callback: AsyncCallback<void>): void
+```
+
+暂停播放音视频资源，只能在playing状态调用。使用callback方式异步获取返回值。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-pause(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## pause
+
+```TypeScript
+pause(): Promise<void>
+```
+
+暂停播放音视频资源，只能在playing状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-pause(): Promise<void>--><!--Device-AVPlayer-pause(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## play
+
+```TypeScript
+play(callback: AsyncCallback<void>): void
+```
+
+开始播放音视频资源，只能在prepared/paused/completed状态调用。使用callback方式异步获取返回值。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-play(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-play(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## play
+
+```TypeScript
+play(): Promise<void>
+```
+
+开始播放音视频资源，只能在prepared/paused/completed状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-play(): Promise<void>--><!--Device-AVPlayer-play(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## prepare
+
+```TypeScript
+prepare(callback: AsyncCallback<void>): void
+```
+
+准备播放音频/视频，需在stateChange事件成 功触发至initialized状态后，才能调用。使用callback方式异步获取返回值。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-prepare(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## prepare
+
+```TypeScript
+prepare(): Promise<void>
+```
+
+准备播放音频/视频，需在stateChange事件成 功触发至initialized状态后，才能调用。使用Promise异步回调。 如果应用使用到多个短视频频繁切换的场景，为了提升切换性能，可以考虑创建多个AVPlayer对象，提前准备下一个视频，详情参见 [在线短视频流畅切换](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-smooth-switching)。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-prepare(): Promise<void>--><!--Device-AVPlayer-prepare(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## release
+
+```TypeScript
+release(callback: AsyncCallback<void>): void
+```
+
+销毁播放资源，除released状态外，均可以调用。使用callback方式异步获取返回值。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-release(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-release(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## release
+
+```TypeScript
+release(): Promise<void>
+```
+
+销毁播放资源，除released状态，都可以调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-release(): Promise<void>--><!--Device-AVPlayer-release(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## reset
+
+```TypeScript
+reset(callback: AsyncCallback<void>): void
+```
+
+重置播放，只能在initialized/prepared/playing/paused/completed/stopped/error状态调用。使用callback方式异步获取返回值。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## reset
+
+```TypeScript
+reset(): Promise<void>
+```
+
+重置播放，只能在initialized/prepared/playing/paused/completed/stopped/error状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-reset(): Promise<void>--><!--Device-AVPlayer-reset(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## seek
+
+```TypeScript
+seek(timeMs: number, mode?: SeekMode): void
+```
+
+跳转到指定播放位置，只能在prepared/playing/paused/completed状态调用，可以通过 on('seekDone')事件确认是否生效。 > **注意：** > > 从API版本26.0.0开始，直播场景支持seek。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-seek(timeMs: int, mode?: SeekMode): void--><!--Device-AVPlayer-seek(timeMs: int, mode?: SeekMode): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeMs | number | 是 |
+| mode | [SeekMode](arkts-media-multimedia-media-seekmode-e.md) | 否 |
+
+## seekToDefaultPosition
+
+```TypeScript
+seekToDefaultPosition(): void
+```
+
+跳转到播放源的默认接入点。直播流为当前推荐的最新接入点；点播视频通常为视频起始位置（等同于seek(0)）。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-seekToDefaultPosition(): void--><!--Device-AVPlayer-seekToDefaultPosition(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## selectTrack
+
+```TypeScript
+selectTrack(index: number, mode?: SwitchMode): Promise<void>
+```
+
+使用AVPlayer播放多音视频轨资源时，允许用户以指定模式切换到指定轨道以继续播放。使用Promise异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>--><!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+| mode | [SwitchMode](arkts-media-multimedia-media-switchmode-e.md) | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## setMediaMuted
+
+```TypeScript
+setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
+```
+
+设置音频静音/取消音频静音，从API version 20开始，增加支持设置画面显示/不显示。使用Promise异步回调。 只能在prepared/playing/paused/completed状态下调用。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>--><!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mediaType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 |
+| muted | boolean | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## setMediaSource
+
+```TypeScript
+setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
+```
+
+流媒体预下载资源设置，下载url对应的流媒体数据，并暂存在内存中。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| src | [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 是 |
+| strategy | [PlaybackStrategy](arkts-media-multimedia-media-playbackstrategy-i.md) | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## setPlaybackStrategy
+
+```TypeScript
+setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
+```
+
+设置播放策略，只能在initialized状态下调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| strategy | [PlaybackStrategy](arkts-media-multimedia-media-playbackstrategy-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## setTrackSelectionFilter
+
+```TypeScript
+setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>
+```
+
+为播放器设置轨道选择过滤器，播放器将使用该过滤器来选择可用的轨道用于播放。使用Promise异步回调。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVPlayer-setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>--><!--Device-AVPlayer-setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## setVolume
+
+```TypeScript
+setVolume(volume: number): void
+```
+
+设置媒体播放音量，只能在prepared/playing/paused/completed状态调用，可以通过 on('volumeChange')事件确认是否生效。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-setVolume(volume: double): void--><!--Device-AVPlayer-setVolume(volume: double): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| volume | number | 是 |
+
+## stop
+
+```TypeScript
+stop(callback: AsyncCallback<void>): void
+```
+
+停止播放音视频资源，只能在prepared/playing/paused/completed状态调用。使用callback方式异步获取返回值。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-stop(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## stop
+
+```TypeScript
+stop(): Promise<void>
+```
+
+停止播放音视频资源，只能在prepared/playing/paused/completed状态调用。使用Promise异步回调。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVPlayer-stop(): Promise<void>--><!--Device-AVPlayer-stop(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |

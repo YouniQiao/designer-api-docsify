@@ -1,0 +1,9 @@
+# GridItemModifier
+
+## Summary
+
+### Classes
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [GridItemModifier](arkts-arkui-griditemmodifier-c.md) |

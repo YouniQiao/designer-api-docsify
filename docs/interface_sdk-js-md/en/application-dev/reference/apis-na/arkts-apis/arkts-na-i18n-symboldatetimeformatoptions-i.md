@@ -12,6 +12,11 @@ Represents optional configuration items for the SymbolDateTimeFormat object. Def
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## amPMSymbol
 
 ```TypeScript

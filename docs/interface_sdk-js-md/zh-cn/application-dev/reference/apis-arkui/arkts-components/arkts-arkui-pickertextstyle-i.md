@@ -8,6 +8,11 @@ Provide an interface for the text style of picker
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

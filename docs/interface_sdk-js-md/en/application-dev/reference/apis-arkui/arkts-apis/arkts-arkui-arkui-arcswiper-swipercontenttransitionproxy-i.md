@@ -11,11 +11,7 @@ Implements the proxy object returned during the execution of the custom page tra
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiper } from 'ArcSwiper';
-import { ArcSwiperAttribute } from 'ArcSwiperAttribute';
-import { ArcDotIndicator } from 'ArcDotIndicator';
-import { ArcDirection } from 'ArcDirection';
-import { ArcSwiperController } from 'ArcSwiperController';
+import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
 ```
 
 ## finishTransition

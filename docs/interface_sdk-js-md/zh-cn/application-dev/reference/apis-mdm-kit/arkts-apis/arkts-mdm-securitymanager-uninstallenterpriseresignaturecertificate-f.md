@@ -1,5 +1,10 @@
 # uninstallEnterpriseReSignatureCertificate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## uninstallEnterpriseReSignatureCertificate
 
 ```TypeScript

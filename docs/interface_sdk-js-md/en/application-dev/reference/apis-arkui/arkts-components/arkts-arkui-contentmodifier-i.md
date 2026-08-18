@@ -8,6 +8,11 @@ Defines the content modifier.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## applyContent
 
 ```TypeScript

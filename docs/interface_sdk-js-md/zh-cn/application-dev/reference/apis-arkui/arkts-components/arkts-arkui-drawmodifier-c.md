@@ -8,6 +8,11 @@ Defined the draw modifier of node. Provides draw callbacks for the associated No
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## drawBehind
 
 ```TypeScript

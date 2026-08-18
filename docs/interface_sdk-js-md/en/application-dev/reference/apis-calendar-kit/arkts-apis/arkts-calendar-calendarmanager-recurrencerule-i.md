@@ -11,7 +11,7 @@ Describes the recurrence rule of a recurring event.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## count

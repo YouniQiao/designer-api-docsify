@@ -11,7 +11,7 @@ Provides event name constants, including system event name constants and applica
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

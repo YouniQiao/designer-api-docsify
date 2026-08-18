@@ -10,6 +10,11 @@ Defines the arc scroll bar options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## scroller
 
 ```TypeScript

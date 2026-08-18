@@ -8,6 +8,11 @@ P2P连接信息。
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
+## 导入模块
+
+```TypeScript
+```
+
 ## connectState
 
 ```TypeScript

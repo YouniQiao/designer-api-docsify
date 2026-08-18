@@ -1,5 +1,10 @@
 # removePreferencesFromCacheSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removePreferencesFromCacheSync
 
 ```TypeScript

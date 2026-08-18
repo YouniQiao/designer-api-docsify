@@ -11,7 +11,7 @@ Describes the unusable area of a display, including punch hole, notch, and curve
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## boundingRects

@@ -12,6 +12,11 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## [Symbol.iterator]
 
 ```TypeScript

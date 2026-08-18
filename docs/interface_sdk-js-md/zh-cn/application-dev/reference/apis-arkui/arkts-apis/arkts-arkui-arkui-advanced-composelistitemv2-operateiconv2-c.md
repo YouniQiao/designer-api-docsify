@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -30,7 +35,7 @@ OperateIconV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OperateIconV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | 否 | 列表项右侧图标属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
+| options | [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | 否 | 列表项右侧图标属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建对象。 |
 
 ## accessibilityDescription
 
@@ -106,7 +111,7 @@ OperateIconV2的构造函数。
 
 列表项右侧图标/箭头点击回调。 默认不设置或设置为undefined时，点击图标/箭头不触发回调。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

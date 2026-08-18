@@ -10,6 +10,11 @@ Format to parts result.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## type
 
 ```TypeScript

@@ -11,7 +11,7 @@ Defines the application window state information.
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'applicationManager';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## isOnDock

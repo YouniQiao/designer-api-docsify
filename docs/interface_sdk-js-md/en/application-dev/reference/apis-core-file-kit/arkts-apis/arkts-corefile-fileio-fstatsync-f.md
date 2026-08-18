@@ -1,5 +1,10 @@
 # fstatSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fstatSync
 
 ```TypeScript

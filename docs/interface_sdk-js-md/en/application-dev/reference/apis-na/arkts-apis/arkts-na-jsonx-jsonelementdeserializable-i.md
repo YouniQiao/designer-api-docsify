@@ -10,6 +10,11 @@ Interface for types that can be serialized to JSON. Classes implementing this in
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fromJSON
 
 ```TypeScript

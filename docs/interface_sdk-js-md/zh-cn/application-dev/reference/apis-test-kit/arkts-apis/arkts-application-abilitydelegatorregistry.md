@@ -12,6 +12,11 @@ AbilityDelegatorRegistry模块提供用于存储已注册的[AbilityDelegator](.
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

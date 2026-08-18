@@ -13,7 +13,7 @@ Represents the upgrade file, including the file type and file path, which are us
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## filePath

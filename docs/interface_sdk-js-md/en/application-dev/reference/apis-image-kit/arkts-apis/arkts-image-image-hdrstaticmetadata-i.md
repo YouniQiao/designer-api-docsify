@@ -11,7 +11,8 @@ Describes the static metadata keys, that is, the values available for **HDR_STAT
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## displayPrimariesX

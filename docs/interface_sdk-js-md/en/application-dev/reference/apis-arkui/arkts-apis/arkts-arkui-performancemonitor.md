@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from 'performanceMonitor';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## Summary

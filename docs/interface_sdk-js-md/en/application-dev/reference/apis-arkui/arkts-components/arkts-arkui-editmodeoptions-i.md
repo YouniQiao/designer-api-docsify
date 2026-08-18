@@ -8,6 +8,11 @@ Define edit mode options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enableGatherSelectedItemsAnimation
 
 ```TypeScript

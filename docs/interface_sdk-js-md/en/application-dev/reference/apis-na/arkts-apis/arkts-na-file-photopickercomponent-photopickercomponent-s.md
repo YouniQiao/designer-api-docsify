@@ -10,6 +10,11 @@ Declare struct PhotoPickerComponent
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript

@@ -8,6 +8,11 @@ USB设备ID信息。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## productId
 
 ```TypeScript

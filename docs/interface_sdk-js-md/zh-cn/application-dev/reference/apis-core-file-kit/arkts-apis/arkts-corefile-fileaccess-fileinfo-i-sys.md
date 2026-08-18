@@ -12,6 +12,11 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## listFile
 
 ```TypeScript
@@ -40,7 +45,7 @@ listFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
+| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 
@@ -145,7 +150,7 @@ scanFile(filter?: Filter): FileIterator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
+| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | 否 | Indicates the filter of file. |
 
 **返回值：**
 

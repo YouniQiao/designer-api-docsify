@@ -10,6 +10,11 @@ Defines the configuration options of the time picker dialog box. Inherited from 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## distortionMode
 
 ```TypeScript

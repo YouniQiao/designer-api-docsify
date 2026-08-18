@@ -17,6 +17,7 @@ ExtensionAbility is the base class for scenario-specific ExtensionAbilities. It 
 ## Modules to Import
 
 ```TypeScript
-import { ExtensionAbility } from 'ExtensionAbility';
+import { ExtensionAbility } from '@kit.AbilityKit';
+import { ExtensionAbility } from '@kit.AbilityKit';
 ```
 

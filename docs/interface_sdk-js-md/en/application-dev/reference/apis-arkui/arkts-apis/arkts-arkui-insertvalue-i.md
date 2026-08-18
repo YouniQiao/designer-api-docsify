@@ -8,6 +8,11 @@ Defines the inserted text value info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## insertOffset
 
 ```TypeScript

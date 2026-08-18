@@ -1,5 +1,10 @@
 # zipFile
 
+## 导入模块
+
+```TypeScript
+```
+
 ## zipFile
 
 ```TypeScript

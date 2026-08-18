@@ -11,7 +11,7 @@ Represents the USB device identity information.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'usbManager';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## productId

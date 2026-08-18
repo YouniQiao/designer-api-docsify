@@ -13,7 +13,8 @@ Random interface, defining methods for generating random numbers. Before use, yo
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## enableHardwareEntropy

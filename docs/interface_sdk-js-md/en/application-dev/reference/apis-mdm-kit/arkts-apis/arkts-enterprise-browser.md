@@ -13,7 +13,7 @@ The **browser** module provides browser management, including setting, canceling
 ## Modules to Import
 
 ```TypeScript
-import { browser } from 'browser';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## Summary

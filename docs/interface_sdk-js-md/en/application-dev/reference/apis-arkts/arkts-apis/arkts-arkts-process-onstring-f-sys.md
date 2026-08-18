@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'process';
+import { process } from '@kit.ArkTS';
 ```
 
 ## on_string

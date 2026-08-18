@@ -15,7 +15,8 @@ Defines the options for the domain plug-in to obtain the domain account informat
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## callerUid

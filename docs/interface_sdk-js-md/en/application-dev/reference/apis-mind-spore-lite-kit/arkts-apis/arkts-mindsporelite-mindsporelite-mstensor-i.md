@@ -11,7 +11,7 @@ Provides MSTensor definition
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'mindSporeLite';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## getData

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from 'agentManager';
+import { agentManager } from '@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## disconnectServiceExtensionAbility

@@ -11,7 +11,7 @@ Defines the print range.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## endPage

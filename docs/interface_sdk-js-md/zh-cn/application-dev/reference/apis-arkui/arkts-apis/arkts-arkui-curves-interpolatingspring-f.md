@@ -1,5 +1,10 @@
 # interpolatingSpring
 
+## 导入模块
+
+```TypeScript
+```
+
 ## interpolatingSpring
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getDeviceInfoSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDeviceInfoSync
 
 ```TypeScript

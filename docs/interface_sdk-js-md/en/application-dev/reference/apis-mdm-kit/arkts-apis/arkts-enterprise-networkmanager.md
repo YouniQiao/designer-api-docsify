@@ -15,7 +15,7 @@ This module provides device network management capabilities, including querying 
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from 'networkManager';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## Summary

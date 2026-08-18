@@ -1,5 +1,10 @@
 # isBuffer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isBuffer
 
 ```TypeScript

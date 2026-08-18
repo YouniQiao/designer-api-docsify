@@ -10,6 +10,11 @@ TabContent info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript
@@ -78,7 +83,7 @@ state: TabContentState
 
 The state of TabContent.
 
-**Type:** [TabContentState](arkts-na-uiobserver-tabcontentstate-e.md)
+**Type:** [TabContentState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-tabcontentstate-e.md)
 
 **Since:** 23
 

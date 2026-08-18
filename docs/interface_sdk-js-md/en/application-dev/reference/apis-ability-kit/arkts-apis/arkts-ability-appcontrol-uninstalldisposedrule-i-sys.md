@@ -13,7 +13,8 @@ Describes an uninstallation disposed rule.
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from 'appControl';
+import { appControl } from '@kit.AbilityKit';
+import { appControl } from '@kit.AbilityKit';
 ```
 
 ## priority

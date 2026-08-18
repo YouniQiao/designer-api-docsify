@@ -13,7 +13,7 @@ Class inherited for the distributed extension function.
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionContext } from 'DistributedExtensionContext';
+import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 ```
 
 ## connectServiceExtensionAbility

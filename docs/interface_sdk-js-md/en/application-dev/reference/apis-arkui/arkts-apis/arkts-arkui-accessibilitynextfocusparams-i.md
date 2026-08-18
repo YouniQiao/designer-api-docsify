@@ -8,6 +8,11 @@ Defines struct of the parameters used to configure the next accessibility focus 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isConsiderDescendants
 
 ```TypeScript

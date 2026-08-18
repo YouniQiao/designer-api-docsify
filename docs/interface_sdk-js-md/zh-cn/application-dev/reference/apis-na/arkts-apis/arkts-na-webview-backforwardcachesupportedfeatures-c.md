@@ -10,6 +10,11 @@ This class is used to enable back forward cache supported features.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from 'dataUriUtils';
+import { dataUriUtils } from '@kit.AbilityKit';
+import { dataUriUtils } from '@kit.AbilityKit';
 ```
 
 ## attachId

@@ -8,6 +8,11 @@ Defines a styled string controller.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getStyledString
 
 ```TypeScript

@@ -8,6 +8,11 @@ Provides the information about the component corresponding to the gesture recogn
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getId
 
 ```TypeScript

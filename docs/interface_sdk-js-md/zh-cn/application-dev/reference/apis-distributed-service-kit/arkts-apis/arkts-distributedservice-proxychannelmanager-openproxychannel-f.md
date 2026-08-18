@@ -1,5 +1,10 @@
 # openProxyChannel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openProxyChannel
 
 ```TypeScript

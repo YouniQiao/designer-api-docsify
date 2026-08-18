@@ -1,5 +1,10 @@
 # onTouchGuideStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onTouchGuideStateChange
 
 ```TypeScript
@@ -22,7 +27,7 @@ Register the observe of the touchGuide state changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Asynchronous callback interface. |
 
 **示例**
 

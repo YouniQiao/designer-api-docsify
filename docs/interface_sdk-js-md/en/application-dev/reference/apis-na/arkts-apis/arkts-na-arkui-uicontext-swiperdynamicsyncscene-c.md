@@ -12,6 +12,11 @@ Represents a dynamic synchronization scene of Swiper.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## type
 
 ```TypeScript

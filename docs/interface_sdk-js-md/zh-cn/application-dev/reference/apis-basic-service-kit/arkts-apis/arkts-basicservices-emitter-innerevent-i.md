@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Notification.Emitter
 
+## 导入模块
+
+```TypeScript
+```
+
 ## eventId
 
 ```TypeScript

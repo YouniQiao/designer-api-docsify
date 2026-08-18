@@ -11,7 +11,7 @@ Defines the **value** object in a KV store.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## type

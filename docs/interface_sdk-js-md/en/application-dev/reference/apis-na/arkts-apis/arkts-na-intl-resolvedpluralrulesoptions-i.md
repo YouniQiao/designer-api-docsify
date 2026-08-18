@@ -10,6 +10,11 @@ Resolved PluralRules options.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## locale
 
 ```TypeScript

@@ -10,6 +10,11 @@ ReminderRequestCalendar extends ReminderRequest 日历实例对象，用于设�
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## dateTime
 
 ```TypeScript

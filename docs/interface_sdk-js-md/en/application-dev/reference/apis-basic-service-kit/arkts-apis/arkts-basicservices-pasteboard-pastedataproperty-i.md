@@ -11,7 +11,7 @@ Defines the properties of PasteData in the pasteboard, including the timestamp, 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## additions

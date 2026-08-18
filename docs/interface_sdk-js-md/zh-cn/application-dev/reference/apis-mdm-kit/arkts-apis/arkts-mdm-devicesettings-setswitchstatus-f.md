@@ -1,5 +1,10 @@
 # setSwitchStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setSwitchStatus
 
 ```TypeScript

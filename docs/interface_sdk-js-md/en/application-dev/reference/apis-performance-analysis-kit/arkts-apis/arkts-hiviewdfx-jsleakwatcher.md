@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'jsLeakWatcher';
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

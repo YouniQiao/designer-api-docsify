@@ -1,5 +1,10 @@
 # isNetworkInterfaceDisabledSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isNetworkInterfaceDisabledSync
 
 ```TypeScript

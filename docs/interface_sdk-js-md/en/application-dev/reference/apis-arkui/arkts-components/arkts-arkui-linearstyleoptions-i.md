@@ -10,6 +10,11 @@ Linear style options. Inherits from [ScanEffectOptions](arkts-arkui-scaneffectop
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## strokeRadius
 
 ```TypeScript

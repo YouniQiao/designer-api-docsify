@@ -1,0 +1,225 @@
+# ProxyConfig
+
+ProxyConfig is a class in the ArkWeb framework used to configure network proxy rules. It works with [ProxyController](arkts-arkweb-webview-proxycontroller-c.md#proxycontroller) to implement proxy control over network requests of all Web components in an app. Through ProxyConfig, developers can flexibly define various proxy rules: specifying a particular proxy server for specific URLs, specifying direct server connections for certain URLs, defining rules to bypass the proxy, and more.
+
+**Since:** 15
+
+<!--Device-webview-class ProxyConfig--><!--Device-webview-class ProxyConfig-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## bypassHostnamesWithoutPeriod
+
+```TypeScript
+bypassHostnamesWithoutPeriod(): void
+```
+
+Hostnames without a period character will bypass the proxy and directly connect to the server.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void--><!--Device-ProxyConfig-bypassHostnamesWithoutPeriod(): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## clearImplicitRules
+
+```TypeScript
+clearImplicitRules(): void
+```
+
+Overrides the default behavior and forcibly sends the local host address or local IP address through the proxy. ( By default, if host names are local IP addresses or local host addresses, they bypass the proxy.)
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-clearImplicitRules(): void--><!--Device-ProxyConfig-clearImplicitRules(): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## enableReverseBypass
+
+```TypeScript
+enableReverseBypass(reverse: boolean): void
+```
+
+Reverses the bypass rule.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void--><!--Device-ProxyConfig-enableReverseBypass(reverse: boolean): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| reverse | boolean | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## getBypassRules
+
+```TypeScript
+getBypassRules(): Array<string>
+```
+
+Obtains the list of URLs that do not use the proxy.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-getBypassRules(): Array<string>--><!--Device-ProxyConfig-getBypassRules(): Array<string>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+## getProxyRules
+
+```TypeScript
+getProxyRules(): Array<ProxyRule>
+```
+
+Obtains proxy rules.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>--><!--Device-ProxyConfig-getProxyRules(): Array<ProxyRule>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; |
+
+## insertBypassRule
+
+```TypeScript
+insertBypassRule(bypassRule: string): void
+```
+
+Inserts a bypass rule, specifying which URLs should bypass the proxy and directly connect to the server. When [enableReverseBypass](#enablereversebypass) is set to true, URLs matching bypassRule will use the proxy instead of bypassing it.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void--><!--Device-ProxyConfig-insertBypassRule(bypassRule: string): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| bypassRule | string | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## insertDirectRule
+
+```TypeScript
+insertDirectRule(schemeFilter?: ProxySchemeFilter): void
+```
+
+Inserts a direct rule, specifying that URLs matching the schemeFilter condition will directly connect to the server. > **NOTE：**> > - Both [insertBypassRule](#insertbypassrule) and > [bypassHostnamesWithoutPeriod](#bypasshostnameswithoutperiod) can also implement > direct URL connection. The difference lies in the matching dimension: this method matches by protocol type > through schemeFilter; insertBypassRule matches by URL pattern through a bypassRule string; > bypassHostnamesWithoutPeriod requires no parameters and automatically enables direct connection for hostnames > without a period. You can choose the appropriate method based on the URL range that needs direct connection.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertDirectRule(schemeFilter?: ProxySchemeFilter): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## insertProxyRule
+
+```TypeScript
+insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
+```
+
+Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy. The proxy format is [scheme://]host[:port]. The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP. The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots. The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS. For example: - example.com host: example.com - https://example.com scheme: https host: example.com - example.com:8888 host: example.com port: 8888 - https://example.com:8888 scheme: https host: example.com port: 8888 - 192.168.1.1 host: 192.168.1.1 - 192.168.1.1:8888 host: 192.168.1.1 port: 8888 - [10:20:30:40:50:60:70:80]
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void--><!--Device-ProxyConfig-insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| proxyRule | string | Yes |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## isReverseBypassEnabled
+
+```TypeScript
+isReverseBypassEnabled(): boolean
+```
+
+Obtains the value of [enableReverseBypass](#enablereversebypass). For details, see [enableReverseBypass](#enablereversebypass).
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ProxyConfig-isReverseBypassEnabled(): boolean--><!--Device-ProxyConfig-isReverseBypassEnabled(): boolean-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

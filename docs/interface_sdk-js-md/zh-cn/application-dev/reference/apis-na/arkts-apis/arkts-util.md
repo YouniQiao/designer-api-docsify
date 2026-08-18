@@ -10,6 +10,11 @@ util模块提供常用工具函数， 如用于字符串编码和解码的TextEn
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Mechanic.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## mechInfo
 
 ```TypeScript

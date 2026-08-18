@@ -12,3 +12,8 @@ Input event monitor identity object. This object is created and returned by the 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

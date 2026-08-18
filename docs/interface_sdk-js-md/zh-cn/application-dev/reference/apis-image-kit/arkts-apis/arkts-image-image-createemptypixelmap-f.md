@@ -1,5 +1,10 @@
 # createEmptyPixelMap
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createEmptyPixelMap
 
 ```TypeScript

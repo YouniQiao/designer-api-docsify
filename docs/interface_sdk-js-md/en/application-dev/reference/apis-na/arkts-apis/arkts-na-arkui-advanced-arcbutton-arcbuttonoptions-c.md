@@ -10,6 +10,11 @@ The class for ArcButtonOptions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -30,7 +35,7 @@ Constructor of the CommonArcButtonOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CommonArcButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Yes |  |
+| options | [CommonArcButtonOptions](arkts-na-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Yes |  |
 
 ## backgroundBlurStyle
 
@@ -231,7 +236,7 @@ Describes the arc button touch event.
 
 Describes the position of button on screen.
 
-**Type:** [ArcButtonPosition](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md)
+**Type:** [ArcButtonPosition](arkts-na-arkui-advanced-arcbutton-arcbuttonposition-e.md)
 
 **Since:** 23
 
@@ -269,7 +274,7 @@ Describes the arc button pressed text color.
 
 Sets the ArcButton progress bar parameters. When not set, the button style is used. When set, the progress style is used.
 
-**Type:** [ArcButtonProgressConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
+**Type:** [ArcButtonProgressConfig](arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **Since:** 23
 
@@ -328,7 +333,7 @@ Describes the arc button shadow switch.
 
 Describes the arc button status.
 
-**Type:** [ArcButtonStatus](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
+**Type:** [ArcButtonStatus](arkts-na-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
 
 **Since:** 23
 
@@ -347,7 +352,7 @@ Describes the arc button status.
 
 Describes the arc button style mode.
 
-**Type:** [ArcButtonStyleMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
+**Type:** [ArcButtonStyleMode](arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 
 **Since:** 23
 

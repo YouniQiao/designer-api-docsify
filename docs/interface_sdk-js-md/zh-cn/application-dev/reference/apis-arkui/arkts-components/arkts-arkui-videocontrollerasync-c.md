@@ -10,6 +10,11 @@ VideoControllerAsync是VideoController的异步版本，可以通过Promise获�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

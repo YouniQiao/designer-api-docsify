@@ -1,5 +1,10 @@
 # exitMasterProcessRole
 
+## 导入模块
+
+```TypeScript
+```
+
 ## exitMasterProcessRole
 
 ```TypeScript

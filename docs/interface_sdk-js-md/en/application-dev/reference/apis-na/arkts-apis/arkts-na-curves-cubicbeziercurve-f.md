@@ -1,5 +1,10 @@
 # cubicBezierCurve
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cubicBezierCurve
 
 ```TypeScript

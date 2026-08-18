@@ -11,7 +11,8 @@ Provides text transliteration capabilities, such as obtaining the supported lang
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAvailableIDs
@@ -72,7 +73,7 @@ Creates a **Transliterator** object based on the specified ID.
 
 | Type | Description |
 | --- | --- |
-| [Transliterator](arkts-localization-i18n-transliterator-c.md) | Transliterator** object. |
+| [Transliterator](../../apis-na/arkts-apis/arkts-na-i18n-transliterator-c.md) | Transliterator** object. |
 
 **Examples**
 

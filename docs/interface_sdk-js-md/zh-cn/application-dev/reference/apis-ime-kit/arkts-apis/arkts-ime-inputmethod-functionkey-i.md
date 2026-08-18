@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enterKeyType
 
 ```TypeScript

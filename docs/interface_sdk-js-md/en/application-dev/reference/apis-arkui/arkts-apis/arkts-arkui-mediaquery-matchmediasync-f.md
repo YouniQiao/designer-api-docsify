@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'mediaquery';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## matchMediaSync

@@ -10,6 +10,11 @@ Provides APIs for registering the component layout and drawing display completio
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## createComponentObserver
 
 ```TypeScript

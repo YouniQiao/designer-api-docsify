@@ -10,6 +10,11 @@ Image style options. Inherits [RichEditorSpanStyleOptions](arkts-arkui-richedito
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## imageStyle
 
 ```TypeScript

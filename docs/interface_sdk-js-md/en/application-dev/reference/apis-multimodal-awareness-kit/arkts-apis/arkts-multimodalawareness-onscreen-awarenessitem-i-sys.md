@@ -13,7 +13,7 @@ Provides page information, which includes: * Basic page information, such as pag
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'onScreen';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## itemInfo

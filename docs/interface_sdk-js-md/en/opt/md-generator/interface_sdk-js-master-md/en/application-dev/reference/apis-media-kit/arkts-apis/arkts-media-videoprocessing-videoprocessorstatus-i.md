@@ -1,0 +1,32 @@
+# VideoProcessorStatus(Provides the capability of video quality processing.)
+
+Provides the unified video processor status.
+
+**Since:** 26.0.0
+
+<!--Device-videoProcessing-interface VideoProcessorStatus--><!--Device-videoProcessing-interface VideoProcessorStatus-End-->
+
+**System capability:** SystemCapability.Multimedia.VideoProcessingEngine
+
+## Modules to Import
+
+```TypeScript
+```
+
+## aiHdr
+
+```TypeScript
+aiHdr?: VideoProcessorAiHdrStatus
+```
+
+AIHDR status.
+
+**Type:** [VideoProcessorAiHdrStatus](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VideoProcessorStatus-aiHdr?: VideoProcessorAiHdrStatus--><!--Device-VideoProcessorStatus-aiHdr?: VideoProcessorAiHdrStatus-End-->
+
+**System capability:** SystemCapability.Multimedia.VideoProcessingEngine

@@ -1,5 +1,10 @@
 # setAudioDevice（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setAudioDevice
 
 ```TypeScript
@@ -23,7 +28,7 @@ function setAudioDevice(device: AudioDevice, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | device | [AudioDevice](arkts-telephony-call-audiodevice-i-sys.md) | 是 | 音频设备。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置通话音频设备的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置通话音频设备的结果。 |
 
 **错误码：**
 

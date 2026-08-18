@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

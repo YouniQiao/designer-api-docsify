@@ -1,5 +1,10 @@
 # deactiveSim
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deactiveSim
 
 ```TypeScript

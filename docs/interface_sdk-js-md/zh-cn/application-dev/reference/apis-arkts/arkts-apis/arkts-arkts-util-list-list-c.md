@@ -8,6 +8,11 @@ List底层通过单向链表实现，每个节点有一个指向后一个元素�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

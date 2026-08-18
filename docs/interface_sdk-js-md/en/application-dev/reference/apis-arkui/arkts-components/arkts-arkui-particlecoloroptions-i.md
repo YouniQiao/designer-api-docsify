@@ -8,6 +8,11 @@ The color changes randomly, with the per-second change difference being a value 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## a
 
 ```TypeScript

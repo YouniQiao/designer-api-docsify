@@ -13,7 +13,7 @@ Defines the call disconnection cause.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## message

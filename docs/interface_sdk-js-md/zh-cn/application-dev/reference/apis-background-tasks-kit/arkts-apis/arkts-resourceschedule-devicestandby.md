@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.DeviceStandby
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

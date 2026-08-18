@@ -1,5 +1,10 @@
 # offFusionPressureChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offFusionPressureChange
 
 ```TypeScript
@@ -19,7 +24,7 @@ Unsubscribe to fusion pressure sensor data, {@code SensorId.FUSION_PRESSURE}.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 否 | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FusionPressureResponse](arkts-sensorservice-sensor-fusionpressureresponse-i.md)&gt; | 否 | callback fusion pressure percent data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FusionPressureResponse](arkts-sensorservice-sensor-fusionpressureresponse-i.md)&gt; | 否 | callback fusion pressure percent data. |
 
 **错误码：**
 

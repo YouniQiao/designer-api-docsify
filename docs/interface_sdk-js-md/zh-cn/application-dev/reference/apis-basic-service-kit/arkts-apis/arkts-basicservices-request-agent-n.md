@@ -8,6 +8,11 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

@@ -8,6 +8,11 @@ WebSchemeHandlerRequest类模块定义了通过WebSchemeHandler拦截到的资�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFrameUrl
 
 ```TypeScript

@@ -11,7 +11,7 @@ Provides methods to query of obtain interface descriptors, add or delete death n
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## addDeathRecipient

@@ -13,7 +13,10 @@ This interface is used to notify the listener of personalized spatialization ena
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'audio';
+import { audio } from '@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## deviceDescriptor

@@ -13,7 +13,7 @@ Set configures of a watermark to AVRecorder. The position starts at top left cor
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## left

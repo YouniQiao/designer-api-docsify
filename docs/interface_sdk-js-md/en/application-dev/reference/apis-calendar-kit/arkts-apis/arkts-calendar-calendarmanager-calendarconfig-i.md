@@ -11,7 +11,7 @@ Describes the calendar configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## color

@@ -11,7 +11,7 @@ Describes the virtual screen parameters.
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## density

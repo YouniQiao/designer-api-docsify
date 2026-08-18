@@ -11,7 +11,7 @@ Provides the information contained in **RouterPageInfo**, returned by the system
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'uiObserver';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -142,7 +142,7 @@ state: RouterPageState
 
 State of the router page that invokes the lifecycle callback.
 
-**Type:** [RouterPageState](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpagestate-e.md)
+**Type:** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 
 **Since:** 11
 

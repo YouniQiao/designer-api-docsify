@@ -10,6 +10,11 @@ HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md#text)的
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## plainContent
 
 ```TypeScript

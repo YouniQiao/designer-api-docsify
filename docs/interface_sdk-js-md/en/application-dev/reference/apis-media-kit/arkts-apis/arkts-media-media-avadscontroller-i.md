@@ -11,7 +11,7 @@ Definition of the Ad Content Control Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAdsMediaSource

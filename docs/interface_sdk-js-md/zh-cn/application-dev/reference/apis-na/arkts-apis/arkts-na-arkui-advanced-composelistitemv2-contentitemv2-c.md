@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -32,7 +37,7 @@ ContentItemV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ContentItemV2Options](arkts-na-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | 否 | ContentItemV2的可选项 |
+| options | [ContentItemV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | 否 | ContentItemV2的可选项 |
 
 ## description
 
@@ -85,7 +90,7 @@ ContentItemV2的构造函数。
 
 图标样式。
 
-**类型：** [IconTypeV2](arkts-na-arkui-advanced-composelistitemv2-icontypev2-e.md)
+**类型：** [IconTypeV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
 

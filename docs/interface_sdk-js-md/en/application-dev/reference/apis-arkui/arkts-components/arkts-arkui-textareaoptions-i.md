@@ -8,6 +8,11 @@ Describes the initialization options of the **TextArea** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## controller
 
 ```TypeScript

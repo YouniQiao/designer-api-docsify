@@ -19,5 +19,5 @@ Called to return whether the recent image or video exists and the information ab
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | recentPhotoExists | boolean | Yes | Whether the recent image or video exists. **true** if it exists, **false** otherwise. The default value is **true**. |
-| info | [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md) | Yes | Information about the recent image or video. |
+| info | [RecentPhotoInfo](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-recentphotoinfo-c.md) | Yes | Information about the recent image or video. |
 

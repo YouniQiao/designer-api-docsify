@@ -11,7 +11,7 @@ Describes the event service.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## description

@@ -8,6 +8,11 @@ AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## get
 
 ```TypeScript

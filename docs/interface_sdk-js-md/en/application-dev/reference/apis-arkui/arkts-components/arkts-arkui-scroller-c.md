@@ -8,6 +8,11 @@ Defines a controller for scrollable container components. &lt;p&gt;&lt;strong&gt
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

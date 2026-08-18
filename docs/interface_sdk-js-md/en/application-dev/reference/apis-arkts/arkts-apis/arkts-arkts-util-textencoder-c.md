@@ -11,7 +11,42 @@ Provides APIs to encode strings into byte arrays. Multiple encoding formats are 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'util';
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { util } from '@kit.ArkTS';
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -90,7 +125,7 @@ Creates a **TextEncoder** object.
 
 | Type | Description |
 | --- | --- |
-| [TextEncoder](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md) | TextEncoder** object. |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** object. |
 
 **Examples**
 
@@ -110,7 +145,7 @@ Encodes the input content in to a Uint8Array object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeInto](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeinto)
+**Substitutes:** [encodeInto](#encodeinto)
 
 <!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
@@ -186,7 +221,7 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeIntoUint8Array](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeintouint8array)
+**Substitutes:** [encodeIntoUint8Array](#encodeintouint8array)
 
 <!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 
@@ -244,7 +279,7 @@ Encodes the input content and stores the result into a Uint8Array object.
 | Type | Description |
 | --- | --- |
 | object | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
-| [EncodeIntoUint8ArrayInfo](../../apis-na/arkts-apis/arkts-na-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
 
 **Examples**
 

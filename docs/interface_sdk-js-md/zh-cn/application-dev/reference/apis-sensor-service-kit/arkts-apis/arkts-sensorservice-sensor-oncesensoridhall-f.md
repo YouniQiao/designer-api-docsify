@@ -1,5 +1,10 @@
 # once_SensorId.HALL
 
+## 导入模块
+
+```TypeScript
+```
+
 ## once_SensorId.HALL
 
 ```TypeScript
@@ -19,7 +24,7 @@ function once(type: SensorId.HALL, callback: Callback<HallResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.HALL | 是 | 传感器类型，该值固定为SensorId.HALL。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为HallResponse。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HallResponse](arkts-sensorservice-sensor-hallresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为HallResponse。 |
 
 **错误码：**
 

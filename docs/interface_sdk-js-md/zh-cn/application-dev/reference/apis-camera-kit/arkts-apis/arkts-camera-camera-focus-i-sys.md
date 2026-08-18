@@ -10,6 +10,11 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md#focusquery)。 �
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFocusAssist
 
 ```TypeScript

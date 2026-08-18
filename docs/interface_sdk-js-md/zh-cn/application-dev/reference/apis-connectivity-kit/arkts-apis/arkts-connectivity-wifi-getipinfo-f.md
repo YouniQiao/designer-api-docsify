@@ -1,5 +1,10 @@
 # getIpInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getIpInfo
 
 ```TypeScript

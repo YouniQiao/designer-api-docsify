@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { locationManager } from 'locationManager';
+import { locationManager } from '@kit.MDMKit';
 ```
 
 ## getLocationPolicy

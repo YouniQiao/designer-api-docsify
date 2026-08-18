@@ -10,6 +10,11 @@ File
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## access
 
 ```TypeScript

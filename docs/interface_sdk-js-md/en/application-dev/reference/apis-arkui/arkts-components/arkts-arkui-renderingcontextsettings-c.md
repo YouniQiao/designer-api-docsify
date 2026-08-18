@@ -8,6 +8,11 @@ Configures the settings of a **CanvasRenderingContext2D** object, including whet
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

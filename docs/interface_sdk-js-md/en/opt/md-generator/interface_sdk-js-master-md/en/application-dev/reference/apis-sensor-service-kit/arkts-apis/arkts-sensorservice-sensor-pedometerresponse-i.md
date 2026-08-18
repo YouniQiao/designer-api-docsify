@@ -1,0 +1,32 @@
+# PedometerResponse
+
+Describes the pedometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#response).
+
+**Inheritance/Implementation:** PedometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#response)
+
+**Since:** 23
+
+<!--Device-sensor-interface PedometerResponse--><!--Device-sensor-interface PedometerResponse-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## Modules to Import
+
+```TypeScript
+```
+
+## steps
+
+```TypeScript
+steps: number
+```
+
+Number of steps a user has walked.
+
+**Type:** number
+
+**Since:** 23
+
+<!--Device-PedometerResponse-steps: double--><!--Device-PedometerResponse-steps: double-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor

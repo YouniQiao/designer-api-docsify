@@ -8,6 +8,11 @@ Defines the options of the **Refresh** component. > **Supplementary Notes** > > 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## builder
 
 ```TypeScript

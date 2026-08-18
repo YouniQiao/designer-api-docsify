@@ -10,6 +10,11 @@ The proxy object returned to the developer during the execution of the Swiper cu
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## finishTransition
 
 ```TypeScript

@@ -1,0 +1,540 @@
+# Deque
+
+Deque（double-ended queue）基于循环队列的数据结构实现，支持两端元素的插入和删除。Deque同时具备先进先出以及先进后出的特点，可根据操作端的不同同时作为队列和栈使用。当现有容量不足以容纳新插入的元素时，Deque会动态调整容量，每次扩容两倍，无需手动预设容量。
+
+**起始版本：** 23
+
+<!--Device-unnamed-declare class Deque--><!--Device-unnamed-declare class Deque-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+返回一个迭代器，每一项都是一个ArkTS对象。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-$_iterator(): IterableIterator<T>--><!--Device-Deque-$_iterator(): IterableIterator<T>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;T & gt; |
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): IterableIterator<T>
+```
+
+返回一个迭代器，按插入顺序遍历Deque中的元素，迭代器每项为T类型的元素。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-[Symbol.iterator](): IterableIterator<T>--><!--Device-Deque-[Symbol.iterator](): IterableIterator<T>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;T & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+**示例**
+
+```TypeScript
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertFront(4);
+deque.insertFront(5);
+deque.insertFront(4);
+
+// 使用方法一：
+for (let item of deque) {
+  console.info("value:" + item);
+}
+/*
+输出结果：
+value:4
+value:5
+value:4
+value:2
+ */
+
+// 使用方法二：
+let iter = deque[Symbol.iterator]();
+let iterResult: IteratorResult<number> = iter.next();
+while (!iterResult.done) {
+  console.info("value:" + iterResult.value);
+  iterResult = iter.next();
+}
+/*
+输出结果：
+value:4
+value:5
+value:4
+value:2
+ */
+```
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+Deque的构造函数，用于创建一个基于循环队列数据结构的空Deque实例。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-constructor()--><!--Device-Deque-constructor()-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例
+let deque = new Deque<string | number | boolean | Object>();
+```
+
+## forEach
+
+```TypeScript
+forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void
+```
+
+通过回调函数遍历Deque实例中的每个元素。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void--><!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | (value: T, index?: number, deque?: Deque & lt;T & gt;) = & gt; void | 是 |
+| thisArg | Object | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertEnd(3);
+deque.insertFront(1);
+deque.insertEnd(4);
+// 使用forEach遍历Deque中每个元素并执行回调函数
+deque.forEach((value: number, index: number): void => {
+  console.info("value:" + value, "index:" + index);
+});
+/*
+输出结果：value:1 index:0
+         value:2 index:1
+         value:3 index:2
+         value:4 index:3
+ */
+```
+
+## forEach
+
+```TypeScript
+forEach(callbackFn: DequeForEachCb<T>): void
+```
+
+通过回调函数遍历Deque实例中的每个元素。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-forEach(callbackFn: DequeForEachCb<T>): void--><!--Device-Deque-forEach(callbackFn: DequeForEachCb<T>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md)&lt;T&gt; | 是 |
+
+## getFirst
+
+```TypeScript
+getFirst(): T
+```
+
+获取Deque实例的头元素，不删除该元素。调用后，Deque的内容和长度不变。如需删除并返回首元素，请使用popFirst。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-getFirst(): T--><!--Device-Deque-getFirst(): T-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertEnd(2);
+deque.insertEnd(4);
+deque.insertFront(5);
+deque.insertFront(4);
+// 获取Deque的头元素
+let result = deque.getFirst();
+console.info("result:", result);  // result: 4
+```
+
+## getLast
+
+```TypeScript
+getLast(): T
+```
+
+获取Deque实例的尾元素，不删除该元素。调用后，Deque的内容和长度不变。如需删除并返回尾元素，请使用popLast。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-getLast(): T--><!--Device-Deque-getLast(): T-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertFront(4);
+deque.insertFront(5);
+deque.insertFront(4);
+// 获取Deque的尾元素
+let result = deque.getLast();
+console.info("result:", result);  // result: 2
+```
+
+## has
+
+```TypeScript
+has(element: T): boolean
+```
+
+判断此Deque中是否包含指定元素。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-has(element: T): boolean--><!--Device-Deque-has(element: T): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例
+let deque = new Deque<string>();
+// 在头部插入元素
+deque.insertFront("squirrel");
+// 判断Deque中是否包含指定元素
+let result = deque.has("squirrel");
+console.info("result:", result);  // result: true
+```
+
+## insertEnd
+
+```TypeScript
+insertEnd(element: T): void
+```
+
+在Deque尾部插入元素。插入成功后Deque的元素个数增加1。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-insertEnd(element: T): void--><!--Device-Deque-insertEnd(element: T): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+**示例**
+
+```TypeScript
+class PersonInfo {
+  name: string = "";
+  age: string = "";
+}
+
+// 创建支持多种类型的Deque实例
+let deque = new Deque<string | number | boolean | Array<number> | PersonInfo>();
+// 在尾部插入字符串元素
+deque.insertEnd("a");
+// 在尾部插入数字元素
+deque.insertEnd(1);
+let numArray = [1, 2, 3];
+deque.insertEnd(numArray);
+let person: PersonInfo = {name : "Dylan", age : "13"};
+deque.insertEnd(person);
+deque.insertEnd(false);
+console.info("result:", deque[0]);  // result: a
+```
+
+## insertFront
+
+```TypeScript
+insertFront(element: T): void
+```
+
+在Deque头部插入元素。插入成功后Deque的元素个数增加1。Deque在头部插入元素的效率高于ArrayList。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-insertFront(element: T): void--><!--Device-Deque-insertFront(element: T): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| element | T | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+**示例**
+
+```TypeScript
+class PersonInfo {
+  name: string = "";
+  age: string = "";
+}
+
+// 创建支持多种类型的Deque实例
+let deque = new Deque<string | number | boolean | Array<number> | PersonInfo>();
+// 在头部插入字符串元素
+deque.insertFront("a");
+// 在头部插入数字元素
+deque.insertFront(1);
+let numArray = [1, 2, 3];
+deque.insertFront(numArray);
+let person: PersonInfo = {name : "Dylan", age : "13"};
+deque.insertFront(person);
+deque.insertFront(false);
+console.info("result:", deque[0]);  // result: false
+```
+
+## popFirst
+
+```TypeScript
+popFirst(): T
+```
+
+删除并返回Deque的首元素。删除成功后Deque的元素个数减少1。Deque在头部删除元素的效率高于ArrayList。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-popFirst(): T--><!--Device-Deque-popFirst(): T-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertFront(4);
+deque.insertEnd(5);
+deque.insertFront(2);
+deque.insertFront(4);
+// 删除并返回双端队列的首元素
+let result = deque.popFirst();
+console.info("result:", result);  // result: 4
+```
+
+## popLast
+
+```TypeScript
+popLast(): T
+```
+
+删除并返回Deque的尾元素。删除成功后Deque的元素个数减少1。
+
+**起始版本：** 23
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-popLast(): T--><!--Device-Deque-popLast(): T-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
+**示例**
+
+```TypeScript
+// 创建Deque实例并插入元素
+let deque = new Deque<number>();
+deque.insertFront(2);
+deque.insertEnd(6);
+deque.insertFront(5);
+deque.insertFront(2);
+deque.insertFront(4);
+// 删除并返回双端队列的尾元素
+let result = deque.popLast();
+console.info("result:", result);  // result: 6
+```
+
+## length
+
+```TypeScript
+length: number
+```
+
+Deque的元素个数。
+
+**类型：** number
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-length: number--><!--Device-Deque-length: number-End-->
+
+**系统能力：** SystemCapability.Utils.Lang

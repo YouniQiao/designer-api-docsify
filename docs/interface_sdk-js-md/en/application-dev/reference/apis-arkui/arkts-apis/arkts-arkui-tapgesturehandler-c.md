@@ -10,6 +10,11 @@ Defines a type of gesture handler object for tap gestures.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

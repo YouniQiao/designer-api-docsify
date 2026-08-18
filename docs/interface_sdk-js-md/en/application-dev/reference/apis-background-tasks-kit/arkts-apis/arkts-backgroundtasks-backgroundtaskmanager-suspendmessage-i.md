@@ -11,7 +11,8 @@ Describes the reason why a continuous task is suspended.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## message

@@ -1,5 +1,10 @@
 # getSharedDirty
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSharedDirty
 
 ```TypeScript

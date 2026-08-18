@@ -1,5 +1,10 @@
 # onHotkeyChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onHotkeyChange
 
 ```TypeScript
@@ -19,7 +24,7 @@ function onHotkeyChange(hotkeyOptions: HotkeyOptions, callback: Callback<HotkeyO
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hotkeyOptions | [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | 是 | 快捷键选项。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md)&gt; | 是 | 回调函数，获取满足条件的组合按键输入事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md)&gt; | 是 | 回调函数，获取满足条件的组合按键输入事件。 |
 
 **错误码：**
 

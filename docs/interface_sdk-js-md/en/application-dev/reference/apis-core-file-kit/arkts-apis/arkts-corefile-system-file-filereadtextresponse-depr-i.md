@@ -10,6 +10,11 @@ Returns the text read, including the text content.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## text
 
 ```TypeScript

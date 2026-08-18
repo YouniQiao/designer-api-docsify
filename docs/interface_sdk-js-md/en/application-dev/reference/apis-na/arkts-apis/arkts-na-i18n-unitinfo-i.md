@@ -10,6 +10,11 @@ Defines the measurement unit information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## measureSystem
 
 ```TypeScript

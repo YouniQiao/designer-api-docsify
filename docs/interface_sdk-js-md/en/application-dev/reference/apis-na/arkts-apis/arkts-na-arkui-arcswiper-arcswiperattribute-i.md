@@ -12,6 +12,11 @@ Defines the Arc swiper attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## customContentTransition
 
 ```TypeScript
@@ -220,7 +225,7 @@ onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [AnimationEndHandler](arkts-na-animationendhandler-t.md) \| undefined | Yes |  |
+| handler | [AnimationEndHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationendhandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -244,7 +249,7 @@ onAnimationStart(handler: AnimationStartHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [AnimationStartHandler](arkts-na-animationstarthandler-t.md) \| undefined | Yes |  |
+| handler | [AnimationStartHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationstarthandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -268,7 +273,7 @@ onChange(handler: IndexChangedHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [IndexChangedHandler](arkts-na-indexchangedhandler-t.md) \| undefined | Yes |  |
+| handler | [IndexChangedHandler](../../apis-arkui/arkts-apis/arkts-arkui-indexchangedhandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -292,7 +297,7 @@ onGestureSwipe(handler: GestureSwipeHandler | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [GestureSwipeHandler](arkts-na-gestureswipehandler-t.md) \| undefined | Yes |  |
+| handler | [GestureSwipeHandler](../../apis-arkui/arkts-apis/arkts-arkui-gestureswipehandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -316,7 +321,7 @@ setArcSwiperOptions(controller?: ArcSwiperController): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](arkts-na-arkui-arcswiper-arcswipercontroller-c.md) | No |  |
+| controller | [ArcSwiperController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No |  |
 
 **Return value:**
 

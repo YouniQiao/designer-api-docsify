@@ -11,13 +11,7 @@ RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoChe
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent } from 'RecentPhotoComponent';
-import { RecentPhotoCheckResultCallback } from 'RecentPhotoCheckResultCallback';
-import { RecentPhotoInfo } from 'RecentPhotoInfo';
-import { RecentPhotoCheckInfoCallback } from 'RecentPhotoCheckInfoCallback';
-import { RecentPhotoClickCallback } from 'RecentPhotoClickCallback';
-import { RecentPhotoOptions } from 'RecentPhotoOptions';
-import { PhotoSource } from 'PhotoSource';
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoInfo, RecentPhotoCheckInfoCallback, RecentPhotoClickCallback, RecentPhotoOptions, PhotoSource } from '@kit.MediaLibraryKit';
 ```
 
 ## onRecentPhotoCheckInfo
@@ -28,7 +22,7 @@ onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback
 
 Callback when check whether photos or videos exists and return the recent photo info
 
-**Type:** [RecentPhotoCheckInfoCallback](arkts-medialibrary-recentphotocheckinfocallback-t.md)
+**Type:** [RecentPhotoCheckInfoCallback](../../apis-na/arkts-apis/arkts-na-recentphotocheckinfocallback-t.md)
 
 **Since:** 13
 
@@ -46,7 +40,7 @@ onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback
 
 Callback when check whether photos or videos exists
 
-**Type:** [RecentPhotoCheckResultCallback](arkts-medialibrary-recentphotocheckresultcallback-t.md)
+**Type:** [RecentPhotoCheckResultCallback](../../apis-na/arkts-apis/arkts-na-recentphotocheckresultcallback-t.md)
 
 **Since:** 12
 
@@ -64,7 +58,7 @@ onRecentPhotoClick: RecentPhotoClickCallback
 
 Callback when select photos or videos
 
-**Type:** [RecentPhotoClickCallback](arkts-medialibrary-recentphotoclickcallback-t.md)
+**Type:** [RecentPhotoClickCallback](../../apis-na/arkts-apis/arkts-na-recentphotoclickcallback-t.md)
 
 **Since:** 12
 
@@ -82,7 +76,7 @@ recentPhotoOptions?: RecentPhotoOptions
 
 recentPhotoOptions
 
-**Type:** [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
+**Type:** [RecentPhotoOptions](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-recentphotooptions-c.md)
 
 **Since:** 12
 

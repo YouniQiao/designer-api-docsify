@@ -1,5 +1,10 @@
 # removeCandidateConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeCandidateConfig
 
 ```TypeScript
@@ -81,7 +86,7 @@ function removeCandidateConfig(networkId: int, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | int | 是 | 将要移除的网络ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示removeCandidateConfig的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示removeCandidateConfig的回调函数。 |
 
 **错误码：**
 

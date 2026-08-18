@@ -10,6 +10,11 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

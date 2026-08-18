@@ -15,7 +15,7 @@ Provides APIs for selecting and saving images or videos. You are advised to use 
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor

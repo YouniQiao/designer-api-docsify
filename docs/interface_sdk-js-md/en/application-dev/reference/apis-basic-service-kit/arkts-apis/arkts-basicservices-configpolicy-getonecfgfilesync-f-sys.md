@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from 'configPolicy';
+import { configPolicy } from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getOneCfgFileSync

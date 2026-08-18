@@ -12,6 +12,11 @@ Defines the moving photo view attribute functions.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## autoPlay
 
 ```TypeScript

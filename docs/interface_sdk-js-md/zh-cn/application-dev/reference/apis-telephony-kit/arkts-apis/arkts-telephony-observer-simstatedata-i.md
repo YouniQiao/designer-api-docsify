@@ -8,6 +8,11 @@ SIM卡类型和状态。
 
 **系统能力：** SystemCapability.Telephony.StateRegistry
 
+## 导入模块
+
+```TypeScript
+```
+
 ## reason
 
 ```TypeScript

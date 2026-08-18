@@ -13,7 +13,8 @@ This module is used to manage plugins for applications.
 ## Modules to Import
 
 ```TypeScript
-import { pluginBundleManager } from 'pluginBundleManager';
+import { pluginBundleManager } from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -8,6 +8,11 @@ DataResubmissionHandler是Web组件中处理网页表单数据重新提交的处
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancel
 
 ```TypeScript

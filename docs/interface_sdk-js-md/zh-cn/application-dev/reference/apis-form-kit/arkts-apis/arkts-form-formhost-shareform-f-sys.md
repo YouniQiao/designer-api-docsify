@@ -1,5 +1,10 @@
 # shareForm（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## shareForm
 
 ```TypeScript
@@ -24,7 +29,7 @@ function shareForm(formId: string, deviceId: string, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
 | deviceId | string | 是 | 远程设备标识。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当指定formId和远程设备Id进行卡片分享成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当指定formId和远程设备Id进行卡片分享成功，error为undefined，否则为错误对象。 |
 
 **错误码：**
 

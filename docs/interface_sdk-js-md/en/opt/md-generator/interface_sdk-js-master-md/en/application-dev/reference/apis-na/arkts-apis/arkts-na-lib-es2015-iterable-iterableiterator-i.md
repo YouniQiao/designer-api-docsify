@@ -1,0 +1,28 @@
+# IterableIterator
+
+**Inheritance/Implementation:** IterableIterator extends Iterator<T>
+
+**Since:** -1
+
+<!--Device-unnamed-interface IterableIterator--><!--Device-unnamed-interface IterableIterator-End-->
+
+## Modules to Import
+
+```TypeScript
+```
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): IterableIterator<T>
+```
+
+**Since:** -1
+
+<!--Device-IterableIterator-[Symbol.iterator](): IterableIterator<T>--><!--Device-IterableIterator-[Symbol.iterator](): IterableIterator<T>-End-->
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionContext } from 'SelectionExtensionContext';
+import { SelectionExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

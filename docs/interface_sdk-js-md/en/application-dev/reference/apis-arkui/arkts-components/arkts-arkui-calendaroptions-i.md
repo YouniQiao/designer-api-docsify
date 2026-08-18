@@ -8,6 +8,11 @@ Describes the parameters of the calendar picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## disabledDateRange
 
 ```TypeScript

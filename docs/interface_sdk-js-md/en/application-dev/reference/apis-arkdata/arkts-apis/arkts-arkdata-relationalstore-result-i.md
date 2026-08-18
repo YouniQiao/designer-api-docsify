@@ -11,7 +11,8 @@ Records the number of affected data rows and the result set.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'relationalStore';
+import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## changed

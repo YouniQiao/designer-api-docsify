@@ -11,12 +11,7 @@ Defines the struct of CustomTheme.
 ## Modules to Import
 
 ```TypeScript
-import { Colors } from 'Colors';
-import { CustomColors } from 'CustomColors';
-import { Theme } from 'Theme';
-import { ThemeControl } from 'ThemeControl';
-import { CustomTheme } from 'CustomTheme';
-import { CustomDarkColors } from 'CustomDarkColors';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## colors
@@ -27,7 +22,7 @@ colors?: CustomColors
 
 Define tokens associated with color resources..
 
-**Type:** [CustomColors](arkts-arkui-customcolors-t.md)
+**Type:** [CustomColors](../../apis-na/arkts-apis/arkts-na-customcolors-t.md)
 
 **Since:** 12
 
@@ -47,7 +42,7 @@ darkColors?: CustomDarkColors
 
 Define tokens associated with dark mode color resources.
 
-**Type:** [CustomDarkColors](arkts-arkui-customdarkcolors-t.md)
+**Type:** [CustomDarkColors](../../apis-na/arkts-apis/arkts-na-customdarkcolors-t.md)
 
 **Default:** If not set darkColors, color value will same as colors under light mode and will not change with color mode, unless the color is setted by resource in dark directory.
 

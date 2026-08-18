@@ -13,7 +13,7 @@ Control class for backup procedure.
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'backup';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## appendBundles

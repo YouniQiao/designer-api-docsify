@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from 'missionManager';
+import { missionManager } from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## moveMissionToFront

@@ -8,6 +8,11 @@ ChipGroupV2SymbolItemConfig定义了尾部Symbol图标的配置类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript

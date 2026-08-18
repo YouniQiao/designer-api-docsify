@@ -11,7 +11,7 @@ Provides the properties of the float view.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## avoidArea

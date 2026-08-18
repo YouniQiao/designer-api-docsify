@@ -11,7 +11,8 @@ Represents a font collection, which manages the font resources required for text
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'text';
+import { text } from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## clearCaches

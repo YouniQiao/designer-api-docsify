@@ -11,7 +11,7 @@ WebSchemeHandlerResponse is a class used to construct HTTP response data in cust
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor
@@ -144,7 +144,7 @@ Obtains the network error code of the response.
 
 | Type | Description |
 | --- | --- |
-| [WebNetErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md) | Network error code returned for the Response. |
+| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Network error code returned for the Response. |
 
 ## getStatus
 
@@ -196,7 +196,7 @@ Obtains the status text of this response.
 getUrl(): string
 ```
 
-Obtains the redirection URL or the URL changed due to HSTS. Risk warning: To obtain a URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkweb-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
+Obtains the redirection URL or the URL changed due to HSTS. Risk warning: To obtain a URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getlastjavascriptproxycallingframeurl).
 
 **Since:** 12
 
@@ -340,7 +340,7 @@ Sets the network error code for this response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md) | Yes | Network error code. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Network error code. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ This module implements the delayed fault notification feature. When the crash an
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionAbility } from 'FaultLogExtensionAbility';
+import { FaultLogExtensionAbility } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onConnect

@@ -11,9 +11,7 @@ Defines static functions of App class
 ## Modules to Import
 
 ```TypeScript
-import { AppResponse } from 'AppResponse';
-import { RequestFullWindowOptions } from 'RequestFullWindowOptions';
-import { ScreenOnVisibleOptions } from 'ScreenOnVisibleOptions';
+import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
 ```
 
 ## getInfo

@@ -10,6 +10,11 @@ ScrollEvent info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## axis
 
 ```TypeScript
@@ -78,7 +83,7 @@ scrollEvent: ScrollEventType
 
 Changed ScrollEvent type.
 
-**Type:** [ScrollEventType](arkts-na-uiobserver-scrolleventtype-e.md)
+**Type:** [ScrollEventType](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-scrolleventtype-e.md)
 
 **Since:** 23
 

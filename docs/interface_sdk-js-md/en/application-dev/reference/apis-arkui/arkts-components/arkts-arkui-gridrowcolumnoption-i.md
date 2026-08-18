@@ -8,6 +8,11 @@ Describes the numbers of grid columns for devices with different grid sizes. In 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lg
 
 ```TypeScript

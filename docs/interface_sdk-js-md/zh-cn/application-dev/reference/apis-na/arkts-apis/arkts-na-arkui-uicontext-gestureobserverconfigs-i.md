@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## actionPhases
 
 ```TypeScript
@@ -18,7 +23,7 @@ actionPhases: Array<GestureActionPhase>
 
 手势事件对象。
 
-**类型：** Array&lt;[GestureActionPhase](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
+**类型：** Array&lt;[GestureActionPhase](arkts-na-arkui-uicontext-gestureactionphase-e.md)&gt;
 
 **起始版本：** 26.0.0
 

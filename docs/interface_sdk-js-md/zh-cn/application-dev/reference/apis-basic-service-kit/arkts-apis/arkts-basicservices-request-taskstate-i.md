@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
+## 导入模块
+
+```TypeScript
+```
+
 ## message
 
 ```TypeScript

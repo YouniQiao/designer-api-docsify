@@ -1,5 +1,10 @@
 # startAdvertising
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startAdvertising
 
 ```TypeScript

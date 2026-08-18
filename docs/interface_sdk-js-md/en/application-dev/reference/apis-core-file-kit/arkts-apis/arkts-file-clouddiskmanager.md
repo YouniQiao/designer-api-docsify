@@ -25,7 +25,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from 'cloudDiskManager';
+import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

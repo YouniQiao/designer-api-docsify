@@ -2,6 +2,11 @@
 
 用于便捷构造[On](arkts-test-uitest-on-c.md#on)对象的静态构造器，使用示例：ON.text('txt').enabled(true)。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 命名空间

@@ -13,7 +13,8 @@ Provides APIs for facial authentication management. It provides management featu
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from 'faceAuth';
+import { faceAuth } from '@kit.UserAuthenticationKit';
+import { faceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## constructor

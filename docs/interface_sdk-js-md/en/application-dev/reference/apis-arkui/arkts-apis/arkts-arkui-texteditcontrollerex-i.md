@@ -10,6 +10,11 @@ Implements an extended text editing controller. Inherits [TextBaseController](ar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getCaretOffset
 
 ```TypeScript

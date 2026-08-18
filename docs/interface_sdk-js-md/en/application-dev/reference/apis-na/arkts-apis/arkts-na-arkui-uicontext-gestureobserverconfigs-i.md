@@ -10,6 +10,11 @@ The observer options for global gesture listener.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## actionPhases
 
 ```TypeScript

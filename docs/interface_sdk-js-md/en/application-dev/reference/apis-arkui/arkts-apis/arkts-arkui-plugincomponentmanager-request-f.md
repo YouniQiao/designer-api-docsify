@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'PluginComponentTemplate';
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## request
@@ -26,8 +26,8 @@ Requests the component from the component provider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RequestParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requestparameters-i.md) | Yes | Information about the component request. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Asynchronous callback used to return the requested data. |
+| param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Yes | Information about the component request. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Asynchronous callback used to return the requested data. |
 
 **Examples**
 

@@ -1,5 +1,10 @@
 # getSecurityStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSecurityStatus
 
 ```TypeScript

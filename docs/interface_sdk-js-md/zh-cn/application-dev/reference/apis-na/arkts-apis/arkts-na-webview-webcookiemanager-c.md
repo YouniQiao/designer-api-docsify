@@ -10,6 +10,11 @@ Provides methods for managing the web cookies.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clearAllCookies
 
 ```TypeScript
@@ -58,7 +63,7 @@ Remove all cookies Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been deleted. |
 
 **错误码：**
 
@@ -136,7 +141,7 @@ Delete the session cookies Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been deleted. |
 
 **错误码：**
 
@@ -258,7 +263,7 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 | --- | --- | --- | --- |
 | url | string | 是 | The URL for which the cookie is to be set. |
 | value | string | 是 | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Called after the cookies have been set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been set. |
 
 **错误码：**
 
@@ -481,7 +486,7 @@ Gets all cookies for the given URL Asynchronously.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | The URL for which the cookies are requested. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Called after the cookies of given URL have been gotten. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Called after the cookies of given URL have been gotten. |
 
 **错误码：**
 
@@ -674,7 +679,7 @@ Save the cookies Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Called after the cookies have been saved. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been saved. |
 
 **错误码：**
 

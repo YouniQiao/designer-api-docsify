@@ -10,6 +10,11 @@ Capsule style options. Inherits from [ScanEffectOptions](arkts-arkui-scaneffecto
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## borderColor
 
 ```TypeScript

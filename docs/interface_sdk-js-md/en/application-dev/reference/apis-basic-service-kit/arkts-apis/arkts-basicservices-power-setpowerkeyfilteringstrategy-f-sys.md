@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'power';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## setPowerKeyFilteringStrategy

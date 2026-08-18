@@ -11,7 +11,10 @@ This interface implements audio stream management. Before calling any API in Aud
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'audio';
+import { audio } from '@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioEffectInfoArray

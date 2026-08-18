@@ -11,7 +11,7 @@ Defines the task configs interface
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## priority

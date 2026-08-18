@@ -1,5 +1,10 @@
 # setPointerVisibleSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setPointerVisibleSync
 
 ```TypeScript

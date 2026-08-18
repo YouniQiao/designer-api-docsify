@@ -11,7 +11,7 @@ Defines the property of the certificate management dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from 'certificateManagerDialog';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## showInstallButton

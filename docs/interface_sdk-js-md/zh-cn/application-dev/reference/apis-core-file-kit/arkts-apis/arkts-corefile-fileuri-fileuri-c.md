@@ -10,6 +10,11 @@ FileUri表示文件的URI，继承自uri.URI。
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

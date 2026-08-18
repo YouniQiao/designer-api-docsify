@@ -13,7 +13,10 @@ Defines the identity authentication widget manager. It is used to register custo
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## offCommand

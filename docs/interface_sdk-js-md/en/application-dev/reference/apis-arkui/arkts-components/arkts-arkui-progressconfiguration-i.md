@@ -10,6 +10,11 @@ Provides progress indicator configuration. Inherits from CommonConfiguration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## total
 
 ```TypeScript

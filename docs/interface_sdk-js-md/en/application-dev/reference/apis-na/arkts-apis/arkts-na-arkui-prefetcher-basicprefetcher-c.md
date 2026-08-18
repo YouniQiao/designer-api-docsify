@@ -12,6 +12,11 @@ Basic implementation of [IPrefetcher](arkts-na-arkui-prefetcher-iprefetcher-i.md
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # pluggedType
 
+## 导入模块
+
+```TypeScript
+```
+
 ## pluggedType
 
 ```TypeScript

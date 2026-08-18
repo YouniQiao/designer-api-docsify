@@ -1,5 +1,10 @@
 # setDefaultResourceUsageObserver
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setDefaultResourceUsageObserver
 
 ```TypeScript

@@ -13,7 +13,7 @@ Describes the HDR screenshot options.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from 'screenshot';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## displayId

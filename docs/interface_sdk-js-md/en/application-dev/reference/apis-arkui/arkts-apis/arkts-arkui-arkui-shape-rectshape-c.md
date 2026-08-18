@@ -1,6 +1,6 @@
 # RectShape
 
-Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md#baseshape).
+Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#baseshape).
 
 **Inheritance/Implementation:** RectShape extends BaseShape<RectShape>
 
@@ -13,10 +13,7 @@ Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. T
 ## Modules to Import
 
 ```TypeScript
-import { RectShape } from 'RectShape';
-import { CircleShape } from 'CircleShape';
-import { EllipseShape } from 'EllipseShape';
-import { PathShape } from 'PathShape';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -43,7 +40,7 @@ A constructor used to create a **RectShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
+| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
 
 ## radius
 
@@ -75,7 +72,7 @@ Sets the radius of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
 
 ## radiusHeight
 
@@ -107,7 +104,7 @@ Sets the radius height of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
 
 ## radiusWidth
 
@@ -139,5 +136,5 @@ Sets the radius width of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
 

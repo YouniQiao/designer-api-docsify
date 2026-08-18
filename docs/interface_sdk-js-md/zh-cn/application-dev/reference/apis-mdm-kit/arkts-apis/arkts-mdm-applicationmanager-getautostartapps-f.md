@@ -1,5 +1,10 @@
 # getAutoStartApps
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAutoStartApps
 
 ```TypeScript

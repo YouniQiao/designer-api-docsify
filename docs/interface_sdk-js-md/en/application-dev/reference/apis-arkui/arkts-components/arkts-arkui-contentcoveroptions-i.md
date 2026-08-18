@@ -10,6 +10,11 @@ Inherited from [BindOptions](arkts-arkui-bindoptions-i.md#bindoptions). Provides
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enableSafeArea
 
 ```TypeScript

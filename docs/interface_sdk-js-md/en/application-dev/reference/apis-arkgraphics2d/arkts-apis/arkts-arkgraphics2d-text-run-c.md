@@ -11,7 +11,8 @@ Represents a text typesetting unit, which is a continuous text segment with the 
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'text';
+import { text } from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getAdvances

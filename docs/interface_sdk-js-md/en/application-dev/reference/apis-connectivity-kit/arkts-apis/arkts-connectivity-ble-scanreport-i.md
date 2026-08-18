@@ -11,7 +11,7 @@ Describes the contents of the scan report.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## reportType

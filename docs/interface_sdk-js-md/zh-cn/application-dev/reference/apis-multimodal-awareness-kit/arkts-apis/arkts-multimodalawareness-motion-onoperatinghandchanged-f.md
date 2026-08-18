@@ -1,5 +1,10 @@
 # onOperatingHandChanged
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onOperatingHandChanged
 
 ```TypeScript
@@ -20,7 +25,7 @@ function onOperatingHandChanged(callback: Callback<OperatingHandStatus>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md)&gt; | 是 | 回调函数，返回操作手状态信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md)&gt; | 是 | 回调函数，返回操作手状态信息。 |
 
 **错误码：**
 

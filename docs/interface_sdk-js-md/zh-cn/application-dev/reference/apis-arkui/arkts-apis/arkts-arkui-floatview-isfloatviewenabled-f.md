@@ -1,5 +1,10 @@
 # isFloatViewEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFloatViewEnabled
 
 ```TypeScript

@@ -11,7 +11,7 @@ Profile state change parameters.
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from 'baseProfile';
+import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
 ## cause

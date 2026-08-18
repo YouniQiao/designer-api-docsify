@@ -1,5 +1,10 @@
 # getImageSourceSupportedFormats
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getImageSourceSupportedFormats
 
 ```TypeScript

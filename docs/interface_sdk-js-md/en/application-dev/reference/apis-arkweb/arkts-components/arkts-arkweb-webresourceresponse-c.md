@@ -8,6 +8,16 @@ WebResourceResponse is a class in the Web component that represents HTTP respons
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
+```
+
 ## constructor
 
 ```TypeScript
@@ -238,7 +248,7 @@ Sets the status code of the resource response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Status code of the resource response to set. If the resource request fails or the response status is an error status, refer to [@ohos.web.netErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md#webneterrorlist) to set the corresponding error code. Common error code scenarios: 404 indicates that the resource does not exist. Check the resource path. 500 indicates an internal server error. Check the server status. 403 indicates no access permission. Apply for the corresponding access permission. 401 indicates unauthorized access. Check the authentication information. Check the network configuration, server status, or resource access permission based on the error code. Avoid setting the error code to ERR_IO_PENDING, which may cause XMLHttpRequest synchronous requests to be blocked. |
+| code | number | Yes | Status code of the resource response to set. If the resource request fails or the response status is an error status, refer to [@ohos.web.netErrorList](../arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md#webneterrorlist) to set the corresponding error code. Common error code scenarios: 404 indicates that the resource does not exist. Check the resource path. 500 indicates an internal server error. Check the server status. 403 indicates no access permission. Apply for the corresponding access permission. 401 indicates unauthorized access. Check the authentication information. Check the network configuration, server status, or resource access permission based on the error code. Avoid setting the error code to ERR_IO_PENDING, which may cause XMLHttpRequest synchronous requests to be blocked. |
 
 ## setResponseData
 

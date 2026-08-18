@@ -8,6 +8,11 @@ Particle acceleration. > **NOTE：**> > To standardize anonymous object definiti
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## angle
 
 ```TypeScript

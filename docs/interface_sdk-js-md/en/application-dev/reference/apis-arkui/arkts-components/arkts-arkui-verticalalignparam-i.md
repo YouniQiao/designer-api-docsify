@@ -8,6 +8,11 @@ Defines the vertical align rule of relative container.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## align
 
 ```TypeScript

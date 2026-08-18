@@ -1,5 +1,10 @@
 # disconnectNative
 
+## 导入模块
+
+```TypeScript
+```
+
 ## disconnectNative
 
 ```TypeScript

@@ -3,22 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { AccessibilityElement } from 'AccessibilityElement';
-import { AccessibilityExtensionContext } from 'AccessibilityExtensionContext';
-import { ElementAttributeKeys } from 'ElementAttributeKeys';
-import { ElementAttributeValues } from 'ElementAttributeValues';
-import { FocusDirection } from 'FocusDirection';
-import { FocusType } from 'FocusType';
-import { Rect } from 'Rect';
-import { WindowType } from 'WindowType';
-import { AccessibilityEvent } from 'AccessibilityEvent';
-import { AccessibilityEventInfo } from 'AccessibilityEventInfo';
-import { Parameter } from 'Parameter';
-import { FocusRule } from 'FocusRule';
-import { FocusCondition } from 'FocusCondition';
-import { FocusMoveResult } from 'FocusMoveResult';
-import { AccessibilityVirtualNode } from 'AccessibilityVirtualNode';
-import { TouchPosition } from 'TouchPosition';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, FocusDirection, Rect, WindowType, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
 ```
 
 ## Summary

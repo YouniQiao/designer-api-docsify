@@ -10,6 +10,11 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getExposureMeteringMode
 
 ```TypeScript

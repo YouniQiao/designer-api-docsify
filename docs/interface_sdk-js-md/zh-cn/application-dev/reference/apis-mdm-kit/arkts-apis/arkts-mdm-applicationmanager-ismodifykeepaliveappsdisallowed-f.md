@@ -1,5 +1,10 @@
 # isModifyKeepAliveAppsDisallowed
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isModifyKeepAliveAppsDisallowed
 
 ```TypeScript

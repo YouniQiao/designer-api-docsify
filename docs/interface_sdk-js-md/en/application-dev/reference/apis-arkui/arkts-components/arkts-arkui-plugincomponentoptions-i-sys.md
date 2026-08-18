@@ -10,6 +10,11 @@ Defines options for constructing a **PluginComponent**. > **NOTE：**> > To stan
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## data
 
 ```TypeScript

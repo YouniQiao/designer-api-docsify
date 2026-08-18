@@ -1,5 +1,10 @@
 # onceMagneticFieldChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onceMagneticFieldChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ Subscribe to magnetic field sensor data once, {@code SensorId.MAGNETIC_FIELD}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | 是 | callback magnetic field data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md)&gt; | 是 | callback magnetic field data. |
 
 **错误码：**
 

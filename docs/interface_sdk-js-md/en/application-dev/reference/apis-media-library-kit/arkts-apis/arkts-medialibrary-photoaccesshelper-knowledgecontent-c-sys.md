@@ -13,7 +13,7 @@ Knowledge Content class, used for geting related entity.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getRelatedEntity

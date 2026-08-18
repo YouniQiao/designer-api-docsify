@@ -1,5 +1,10 @@
 # on_deviceUnselected
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_deviceUnselected
 
 ```TypeScript
@@ -30,7 +35,7 @@ function on(type: 'deviceUnselected', token: number, callback: Callback<Array<Co
 | --- | --- | --- | --- |
 | type | 'deviceUnselected' | 是 | 监听的事件类型，固定值"deviceUnselected"。 |
 | token | number | 是 | 注册后的token。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ContinuationResult&gt;&gt; | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ContinuationResult&gt;&gt; | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
 
 **错误码：**
 

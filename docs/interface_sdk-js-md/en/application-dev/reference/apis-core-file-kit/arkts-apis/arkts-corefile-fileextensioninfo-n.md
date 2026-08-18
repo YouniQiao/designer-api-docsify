@@ -15,7 +15,7 @@ The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileIn
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from 'fileExtensionInfo';
+import { fileExtensionInfo } from '@kit.CoreFileKit';
 ```
 
 ## Summary

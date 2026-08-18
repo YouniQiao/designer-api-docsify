@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from 'inputMethodSystemPanelManager';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## offSystemPanelStatusChange

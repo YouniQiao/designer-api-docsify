@@ -11,7 +11,8 @@ Describes a font variation.
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'text';
+import { text } from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## axis

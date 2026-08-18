@@ -10,6 +10,11 @@ PluralRules class for locale-sensitive plural formatting.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

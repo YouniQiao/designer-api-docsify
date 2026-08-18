@@ -12,6 +12,11 @@ class of web native messaging extension ability.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onConnectNative
 
 ```TypeScript

@@ -8,6 +8,11 @@ Describes the icons of the sidebar control button. > **NOTE：**> To standardize
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## hidden
 
 ```TypeScript

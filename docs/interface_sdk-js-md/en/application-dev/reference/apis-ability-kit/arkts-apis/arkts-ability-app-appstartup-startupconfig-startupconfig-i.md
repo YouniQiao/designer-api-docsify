@@ -11,7 +11,10 @@ The module defines the configuration of [AppStartup](../../../application-models
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfig } from 'StartupConfig';
+import { StartupConfig } from '@kit.AbilityKit';
+import { StartupConfig } from '@kit.AbilityKit';
+import { StartupConfigEntry } from '@kit.AbilityKit';
+import { StartupConfigEntry } from '@kit.AbilityKit';
 ```
 
 ## startupListener

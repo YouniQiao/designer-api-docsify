@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButtonV2 } from 'ProgressButtonV2';
-import { ProgressButtonV2Color } from 'ProgressButtonV2Color';
-import { ProgressButtonV2ColorOptions } from 'ProgressButtonV2ColorOptions';
+import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -10,6 +10,11 @@ Defines the frame interpolation information. Device behavior differences: Only t
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## key
 
 ```TypeScript

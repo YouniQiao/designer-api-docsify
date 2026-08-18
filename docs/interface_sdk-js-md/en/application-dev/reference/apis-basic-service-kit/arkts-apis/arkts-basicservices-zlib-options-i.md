@@ -11,7 +11,8 @@ Defines options used to compress or decompress a ZIP file.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'zlib';
+import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## keepTopLevelFolder

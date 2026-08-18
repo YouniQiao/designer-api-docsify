@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## error
 
 ```TypeScript

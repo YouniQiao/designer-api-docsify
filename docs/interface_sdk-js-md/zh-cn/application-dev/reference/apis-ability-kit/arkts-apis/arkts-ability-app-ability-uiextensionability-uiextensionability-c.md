@@ -10,6 +10,11 @@ UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自 [Exten
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onBackground
 
 ```TypeScript

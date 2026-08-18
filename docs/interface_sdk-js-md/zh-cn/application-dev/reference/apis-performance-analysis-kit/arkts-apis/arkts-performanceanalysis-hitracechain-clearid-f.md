@@ -1,5 +1,10 @@
 # clearId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clearId
 
 ```TypeScript

@@ -1,12 +1,17 @@
 # getFileDescriptor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFileDescriptor
 
 ```TypeScript
 function getFileDescriptor(pipe: USBDevicePipe): int
 ```
 
-获取文件描述符。
+获取文件描述符。如果USB服务异常，可能返回错误码，注意需要对接口返回值做判空或错误码检查处理。
 
 **起始版本：** 23
 
@@ -18,13 +23,13 @@ function getFileDescriptor(pipe: USBDevicePipe): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | USBDevicePipe | 是 | 用于确定总线号和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
+| pipe | USBDevicePipe | 是 | 用于确定总线地址和设备地址，需要调用[connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 返回设备对应的文件描述符，失败返回其它错误码如下： |
+| int | 返回设备对应的文件描述符，失败返回其他错误码如下： <br>- 88080486：服务初始化中，请稍后重试。 <br>- 88080488：无设备访问权限，请先调用[requestRight]{ |
 
 **错误码：**
 

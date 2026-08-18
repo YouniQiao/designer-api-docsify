@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## pssh
 
 ```TypeScript

@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clamp
 
 ```TypeScript
@@ -38,7 +43,7 @@ static clamp(order: double): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) | 返回当前对象实例。 |
+| [LevelOrder](arkts-na-promptaction-levelorder-c.md) | 返回当前对象实例。 |
 
 ## getOrder
 

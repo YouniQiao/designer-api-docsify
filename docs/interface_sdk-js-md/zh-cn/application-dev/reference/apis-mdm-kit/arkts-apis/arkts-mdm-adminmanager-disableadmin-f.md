@@ -1,5 +1,10 @@
 # disableAdmin
 
+## 导入模块
+
+```TypeScript
+```
+
 ## disableAdmin
 
 ```TypeScript

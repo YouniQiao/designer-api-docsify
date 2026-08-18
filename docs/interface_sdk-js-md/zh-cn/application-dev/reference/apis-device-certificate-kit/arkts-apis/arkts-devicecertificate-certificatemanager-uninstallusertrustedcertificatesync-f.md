@@ -1,5 +1,10 @@
 # uninstallUserTrustedCertificateSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## uninstallUserTrustedCertificateSync
 
 ```TypeScript

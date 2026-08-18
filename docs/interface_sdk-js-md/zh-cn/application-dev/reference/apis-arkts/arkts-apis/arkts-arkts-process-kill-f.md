@@ -1,5 +1,10 @@
 # kill
 
+## 导入模块
+
+```TypeScript
+```
+
 ## kill
 
 ```TypeScript

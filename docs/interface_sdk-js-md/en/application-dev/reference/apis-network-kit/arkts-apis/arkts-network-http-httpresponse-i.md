@@ -11,7 +11,7 @@ Defines the response to an HTTP request.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'http';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## connectionExtraInfo

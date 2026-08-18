@@ -1,6 +1,6 @@
 # BackForwardList
 
-BackForwardList is an interface in the ArkWeb framework for accessing the browsing history list of a Web component. It is obtained through the [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries) method. This interface provides read-only access to the page navigation history. Developers can obtain basic information about the current history list (the current index and the total number of history entries), as well as detailed information about a specific history item by index.
+BackForwardList is an interface in the ArkWeb framework for accessing the browsing history list of a Web component. It is obtained through the [getBackForwardEntries](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getbackforwardentries) method. This interface provides read-only access to the page navigation history. Developers can obtain basic information about the current history list (the current index and the total number of history entries), as well as detailed information about a specific history item by index.
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ BackForwardList is an interface in the ArkWeb framework for accessing the browsi
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getItemAtIndex
@@ -20,7 +20,7 @@ import { webview } from 'webview';
 getItemAtIndex(index: number): HistoryItem
 ```
 
-Obtains the information of the history item at the specified index in the history list. A BackForwardList instance must be obtained first through the [getBackForwardEntries](arkts-arkweb-webview-webviewcontroller-c.md#getbackforwardentries) method.
+Obtains the information of the history item at the specified index in the history list. A BackForwardList instance must be obtained first through the [getBackForwardEntries](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getbackforwardentries) method.
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ Obtains the information of the history item at the specified index in the histor
 
 | Type | Description |
 | --- | --- |
-| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | History item. |
+| [HistoryItem](../../apis-na/arkts-apis/arkts-na-webview-historyitem-i.md) | History item. |
 
 **Error codes:**
 

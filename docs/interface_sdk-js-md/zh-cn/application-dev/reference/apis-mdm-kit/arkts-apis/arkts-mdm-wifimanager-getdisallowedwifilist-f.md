@@ -1,5 +1,10 @@
 # getDisallowedWifiList
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDisallowedWifiList
 
 ```TypeScript

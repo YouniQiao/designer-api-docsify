@@ -12,6 +12,13 @@ Provides APIs to create a **Query** object, which defines different data query c
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## and
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # addDisallowedNearLinkProtocols
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addDisallowedNearLinkProtocols
 
 ```TypeScript

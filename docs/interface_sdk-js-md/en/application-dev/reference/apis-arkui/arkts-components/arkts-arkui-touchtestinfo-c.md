@@ -8,6 +8,11 @@ Provides information about the coordinate system, ID, and size of the component 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript

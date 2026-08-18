@@ -8,6 +8,11 @@ PdfData是Web组件用于封装网页生成的PDF数据流的类。当应用需�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## pdfArrayBuffer
 
 ```TypeScript

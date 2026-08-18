@@ -11,7 +11,7 @@ Describes the configuration for file type filtering.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## mimeTypeArray

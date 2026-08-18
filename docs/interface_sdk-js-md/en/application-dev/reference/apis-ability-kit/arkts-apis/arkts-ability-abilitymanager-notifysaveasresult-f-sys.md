@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from 'abilityManager';
+import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## notifySaveAsResult

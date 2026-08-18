@@ -10,6 +10,11 @@ DatePickerComponentOptions defines options for the date time picker component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## dateOptions
 
 ```TypeScript

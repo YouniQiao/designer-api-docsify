@@ -11,7 +11,7 @@ An object that holds the application installation result. This object is used as
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'common';
+import { common } from '@kit.MDMKit';
 ```
 
 ## message

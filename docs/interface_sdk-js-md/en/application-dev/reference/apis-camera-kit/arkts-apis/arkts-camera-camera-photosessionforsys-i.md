@@ -15,6 +15,7 @@ Implements a photo session for system applications, which sets the parameters of
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 

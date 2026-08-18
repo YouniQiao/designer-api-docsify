@@ -11,7 +11,7 @@ Provides methods to operate or manage bluetooth socket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'socket';
+import { socket } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

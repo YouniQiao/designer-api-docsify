@@ -23,7 +23,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from 'keyManager';
+import { keyManager } from '@kit.CoreFileKit';
+import { keyManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

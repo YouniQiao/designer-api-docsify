@@ -10,6 +10,11 @@ Defines the symbol span style options. Inherits [RichEditorSpanStyleOptions](ark
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## symbolStyle
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hardwareManager } from 'hardwareManager';
+import { hardwareManager } from '@kit.DistributedServiceKit';
 ```
 
 ## stopDistributedHardware

@@ -11,7 +11,8 @@ The module defines the task listener used in [App Startup](../../../application-
 ## Modules to Import
 
 ```TypeScript
-import { StartupListener } from 'StartupListener';
+import { StartupListener } from '@kit.AbilityKit';
+import { StartupListener } from '@kit.AbilityKit';
 ```
 
 ## onCompleted

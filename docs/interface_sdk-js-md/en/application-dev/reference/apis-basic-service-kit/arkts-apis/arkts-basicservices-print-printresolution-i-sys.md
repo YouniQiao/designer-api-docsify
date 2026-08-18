@@ -13,7 +13,7 @@ Defines the resolution for printing.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'print';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## horizontalDpi

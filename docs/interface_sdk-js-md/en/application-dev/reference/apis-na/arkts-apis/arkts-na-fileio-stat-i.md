@@ -10,6 +10,11 @@ Obtains detailed information of a file, including attributes such as the file si
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isBlockDevice
 
 ```TypeScript

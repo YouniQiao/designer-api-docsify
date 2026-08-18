@@ -1,5 +1,10 @@
 # isPointerVisibleSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isPointerVisibleSync
 
 ```TypeScript

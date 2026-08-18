@@ -11,7 +11,7 @@ AVTranscoder is a transcoding management class. It provides APIs to transcode vi
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark

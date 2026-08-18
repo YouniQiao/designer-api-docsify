@@ -15,7 +15,7 @@ Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-se
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## absorptionRatio

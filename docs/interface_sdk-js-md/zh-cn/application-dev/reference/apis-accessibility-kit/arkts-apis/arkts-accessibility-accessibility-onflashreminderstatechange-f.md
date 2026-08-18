@@ -1,5 +1,10 @@
 # onFlashReminderStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onFlashReminderStateChange
 
 ```TypeScript
@@ -20,7 +25,7 @@ function onFlashReminderStateChange(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数。在闪烁提醒模式启用状态变化时将状态通过此函数进行通知。返回true表示闪烁提醒模式已开启；返回false表示闪烁提醒模式已关闭。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。在闪烁提醒模式启用状态变化时将状态通过此函数进行通知。返回true表示闪烁提醒模式已开启；返回false表示闪烁提醒模式已关闭。 |
 
 **示例**
 

@@ -1,5 +1,10 @@
 # callbackWrapper
 
+## 导入模块
+
+```TypeScript
+```
+
 ## callbackWrapper
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # cubicBezier
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cubicBezier
 
 ```TypeScript

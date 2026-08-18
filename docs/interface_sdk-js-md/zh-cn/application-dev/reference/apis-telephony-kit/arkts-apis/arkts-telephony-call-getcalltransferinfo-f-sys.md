@@ -1,5 +1,10 @@
 # getCallTransferInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCallTransferInfo
 
 ```TypeScript
@@ -24,7 +29,7 @@ function getCallTransferInfo(slotId: int, type: CallTransferType, callback: Asyn
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | type | [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | 是 | 呼叫转移类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i-sys.md)&gt; | 是 | 回调函数。返回呼叫转移信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i-sys.md)&gt; | 是 | 回调函数。返回呼叫转移信息。 |
 
 **错误码：**
 

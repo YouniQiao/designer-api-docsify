@@ -11,7 +11,7 @@ WebMessagePort is a message port interface in the Web component used for bidirec
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## close
@@ -20,7 +20,7 @@ import { webview } from 'webview';
 close(): void
 ```
 
-Closes this message port when messages do not need to be sent. Before calling this method, call [createWebMessagePorts](arkts-arkweb-webview-webviewcontroller-c.md#createwebmessageports) to create a message port.
+Closes this message port when messages do not need to be sent. Before calling this method, call [createWebMessagePorts](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#createwebmessageports) to create a message port.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Closes this message port when messages do not need to be sent. Before calling th
 onMessageEvent(callback: (result: WebMessage) => void): void
 ```
 
-Registers a callback on the application message port to receive messages of the [WebMessage](arkts-arkweb-webview-webmessage-t.md#webmessage) type from the HTML5 side. For details about the sample code, see [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage).
+Registers a callback on the application message port to receive messages of the [WebMessage](../../apis-na/arkts-apis/arkts-na-webview-webmessage-t.md#webmessage) type from the HTML5 side. For details about the sample code, see [postMessage](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#postmessage).
 
 **Since:** 9
 
@@ -65,7 +65,7 @@ Registers a callback on the application message port to receive messages of the 
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-Registers a callback on the application message port to receive messages of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md#webmessagetype) type from the HTML5 side.
+Registers a callback on the application message port to receive messages of the [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md#webmessagetype) type from the HTML5 side.
 
 **Since:** 10
 
@@ -94,7 +94,7 @@ Registers a callback on the application message port to receive messages of the 
 postMessageEvent(message: WebMessage): void
 ```
 
-Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md#webmessage) type to the HTML5 side. The onMessageEvent API must be invoked first. Otherwise, the message fails to be sent. For details about the sample code, see [postMessage](arkts-arkweb-webview-webviewcontroller-c.md#postmessage).
+Sends a message of the [WebMessage](../../apis-na/arkts-apis/arkts-na-webview-webmessage-t.md#webmessage) type to the HTML5 side. The onMessageEvent API must be invoked first. Otherwise, the message fails to be sent. For details about the sample code, see [postMessage](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#postmessage).
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md#webmess
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | Yes | Message to send. |
+| message | [WebMessage](../../apis-na/arkts-apis/arkts-na-webview-webmessage-t.md) | Yes | Message to send. |
 
 **Error codes:**
 
@@ -123,7 +123,7 @@ Sends a message of the [WebMessage](arkts-arkweb-webview-webmessage-t.md#webmess
 postMessageEventExt(message: WebMessageExt): void
 ```
 
-Sends a message of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md#webmessagetype) type to the HTML5 side. You must call onMessageEventExt first. Otherwise, the message fails to be sent. For the complete sample code, see onMessageEventExt.
+Sends a message of the [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md#webmessagetype) type to the HTML5 side. You must call onMessageEventExt first. Otherwise, the message fails to be sent. For the complete sample code, see onMessageEventExt.
 
 **Since:** 10
 
@@ -137,7 +137,7 @@ Sends a message of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) | Yes | Message to send. |
+| message | [WebMessageExt](../../apis-na/arkts-apis/arkts-na-webview-webmessageext-c.md) | Yes | Message to send. |
 
 **Error codes:**
 

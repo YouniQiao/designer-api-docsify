@@ -17,7 +17,7 @@ Defines the return value of the listener callback.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## subUris

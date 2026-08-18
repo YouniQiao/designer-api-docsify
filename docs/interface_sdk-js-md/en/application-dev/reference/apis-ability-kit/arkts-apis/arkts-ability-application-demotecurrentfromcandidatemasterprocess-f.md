@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'application';
+import { application } from '@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## demoteCurrentFromCandidateMasterProcess

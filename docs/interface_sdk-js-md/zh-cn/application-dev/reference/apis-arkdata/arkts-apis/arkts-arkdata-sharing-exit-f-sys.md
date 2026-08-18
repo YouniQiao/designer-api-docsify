@@ -1,5 +1,10 @@
 # exit（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## exit
 
 ```TypeScript
@@ -21,7 +26,7 @@ function exit(sharingResource: string, callback: AsyncCallback<Result<void>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回退出共享的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;void&gt;&gt; | 是 | 回调函数。返回退出共享的结果。 |
 
 **错误码：**
 

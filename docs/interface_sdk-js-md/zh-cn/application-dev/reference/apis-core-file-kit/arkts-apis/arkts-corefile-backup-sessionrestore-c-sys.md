@@ -10,6 +10,11 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## appendBundles
 
 ```TypeScript
@@ -171,7 +176,7 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: As
 | --- | --- | --- | --- |
 | remoteCapabilitiesFd | int | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
 | bundlesToBackup | string[] | 是 | 需要恢复的应用名称数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 添加恢复应用完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 添加恢复应用完成后的异步回调。 |
 
 **错误码：**
 
@@ -878,7 +883,7 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 获取文件句柄完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 获取文件句柄完成后的异步回调。 |
 
 **错误码：**
 
@@ -1483,7 +1488,7 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 发布文件句柄完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发布文件句柄完成后的异步回调。 |
 
 **错误码：**
 

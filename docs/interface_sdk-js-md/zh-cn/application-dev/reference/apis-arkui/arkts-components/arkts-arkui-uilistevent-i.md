@@ -10,6 +10,11 @@ frameNode中[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setOnDidScroll
 
 ```TypeScript

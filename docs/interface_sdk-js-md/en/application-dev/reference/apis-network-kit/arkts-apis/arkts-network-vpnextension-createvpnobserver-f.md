@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'vpnExtension';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## createVpnObserver

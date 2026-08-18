@@ -8,6 +8,11 @@ Parameters of the **ScrollBar** component. > **NOTE：**> > - The **ScrollBar** 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## direction
 
 ```TypeScript

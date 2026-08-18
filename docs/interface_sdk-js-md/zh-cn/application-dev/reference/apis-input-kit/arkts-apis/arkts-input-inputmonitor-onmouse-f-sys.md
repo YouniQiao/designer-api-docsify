@@ -1,5 +1,10 @@
 # onMouse（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onMouse
 
 ```TypeScript
@@ -22,7 +27,7 @@ function onMouse(receiver: Callback<MouseEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
 
 **错误码：**
 
@@ -85,7 +90,7 @@ function onMouse(rect: display.Rect[], receiver: Callback<MouseEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rect | display.Rect[] | 是 | 可以触发回调任务的矩形区域，可传入1至2个。 |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)&gt; | 是 | 回调函数，异步上报鼠标输入事件。 |
 
 **错误码：**
 

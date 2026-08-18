@@ -11,7 +11,8 @@ Stack is implemented based on the array data structure. It follows the principle
 ## Modules to Import
 
 ```TypeScript
-import { Stack } from 'Stack';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator

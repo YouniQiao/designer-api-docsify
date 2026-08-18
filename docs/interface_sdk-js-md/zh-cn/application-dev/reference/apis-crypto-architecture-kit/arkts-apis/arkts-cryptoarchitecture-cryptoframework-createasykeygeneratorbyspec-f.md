@@ -1,5 +1,10 @@
 # createAsyKeyGeneratorBySpec
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createAsyKeyGeneratorBySpec
 
 ```TypeScript

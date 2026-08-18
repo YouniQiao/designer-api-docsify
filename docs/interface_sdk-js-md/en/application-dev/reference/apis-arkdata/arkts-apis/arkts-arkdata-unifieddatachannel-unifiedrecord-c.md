@@ -11,7 +11,8 @@ An abstract definition of the data content supported by the UDMF. A **UnifiedRec
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## addEntry

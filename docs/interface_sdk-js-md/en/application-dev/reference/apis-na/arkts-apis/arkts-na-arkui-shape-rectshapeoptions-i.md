@@ -2,7 +2,7 @@
 
 Interface for RectShape constructor parameters.
 
-**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](arkts-na-arkui-shape-shapesize-i.md#shapesize)
+**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-shapesize-i.md#shapesize)
 
 **Since:** 23
 
@@ -11,6 +11,11 @@ Interface for RectShape constructor parameters.
 <!--Device-unnamed-export interface RectShapeOptions--><!--Device-unnamed-export interface RectShapeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## radius
 

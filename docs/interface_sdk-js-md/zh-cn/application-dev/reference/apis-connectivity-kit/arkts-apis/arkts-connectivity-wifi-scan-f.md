@@ -1,5 +1,10 @@
 # scan
 
+## 导入模块
+
+```TypeScript
+```
+
 ## scan
 
 ```TypeScript

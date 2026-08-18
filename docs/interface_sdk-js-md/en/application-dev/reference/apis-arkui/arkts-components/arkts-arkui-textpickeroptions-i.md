@@ -8,6 +8,11 @@ Defines the configuration options of the text picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## columnWidths
 
 ```TypeScript

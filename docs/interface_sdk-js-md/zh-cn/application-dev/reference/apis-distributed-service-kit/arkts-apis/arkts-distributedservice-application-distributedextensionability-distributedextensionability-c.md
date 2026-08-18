@@ -8,6 +8,11 @@ DistributedExtensionAbility模块提供分布式相关扩展能力，提供分�
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onCollaborate
 
 ```TypeScript

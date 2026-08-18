@@ -1,5 +1,10 @@
 # addInstallationAllowedAppDistributionTypes
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addInstallationAllowedAppDistributionTypes
 
 ```TypeScript

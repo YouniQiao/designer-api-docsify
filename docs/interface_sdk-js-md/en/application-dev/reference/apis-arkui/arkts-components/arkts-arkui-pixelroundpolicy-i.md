@@ -8,6 +8,11 @@ Enumerates the directions of pixel rounding at the component level.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## bottom
 
 ```TypeScript

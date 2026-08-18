@@ -1,0 +1,156 @@
+# Function
+
+Creates a new function.
+
+**Since:** -1
+
+<!--Device-unnamed-interface Function--><!--Device-unnamed-interface Function-End-->
+
+## Modules to Import
+
+```TypeScript
+```
+
+## apply
+
+```TypeScript
+apply(this: Function, thisArg: any, argArray?: any): any
+```
+
+Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.
+
+**Since:** -1
+
+<!--Device-Function-apply(this: Function, thisArg: any, argArray?: any): any--><!--Device-Function-apply(this: Function, thisArg: any, argArray?: any): any-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | Function | Yes |
+| thisArg | any | Yes |
+| argArray | any | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
+
+## bind
+
+```TypeScript
+bind(this: Function, thisArg: any, ...argArray: any[]): any
+```
+
+For a given function, creates a bound function that has the same body as the original function. The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+
+**Since:** -1
+
+<!--Device-Function-bind(this: Function, thisArg: any, ...argArray: any[]): any--><!--Device-Function-bind(this: Function, thisArg: any, ...argArray: any[]): any-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | Function | Yes |
+| thisArg | any | Yes |
+| argArray | any[] | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
+
+## call
+
+```TypeScript
+call(this: Function, thisArg: any, ...argArray: any[]): any
+```
+
+Calls a method of an object, substituting another object for the current object.
+
+**Since:** -1
+
+<!--Device-Function-call(this: Function, thisArg: any, ...argArray: any[]): any--><!--Device-Function-call(this: Function, thisArg: any, ...argArray: any[]): any-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| this | Function | Yes |
+| thisArg | any | Yes |
+| argArray | any[] | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| any |
+
+## toString
+
+```TypeScript
+toString(): string
+```
+
+Returns a string representation of a function.
+
+**Since:** -1
+
+<!--Device-Function-toString(): string--><!--Device-Function-toString(): string-End-->
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## arguments
+
+```TypeScript
+arguments: any
+```
+
+**Type:** any
+
+**Since:** -1
+
+<!--Device-Function-arguments: any--><!--Device-Function-arguments: any-End-->
+
+## caller
+
+```TypeScript
+caller: Function
+```
+
+**Type:** Function
+
+**Since:** -1
+
+<!--Device-Function-caller: Function--><!--Device-Function-caller: Function-End-->
+
+## length
+
+```TypeScript
+readonly length: number
+```
+
+**Type:** number
+
+**Since:** -1
+
+<!--Device-Function-readonly length: number--><!--Device-Function-readonly length: number-End-->
+
+## prototype
+
+```TypeScript
+prototype: any
+```
+
+**Type:** any
+
+**Since:** -1
+
+<!--Device-Function-prototype: any--><!--Device-Function-prototype: any-End-->

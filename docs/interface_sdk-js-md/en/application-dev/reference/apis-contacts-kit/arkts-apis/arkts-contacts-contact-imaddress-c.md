@@ -11,7 +11,7 @@ Enumerates IM addresses.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'contact';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL

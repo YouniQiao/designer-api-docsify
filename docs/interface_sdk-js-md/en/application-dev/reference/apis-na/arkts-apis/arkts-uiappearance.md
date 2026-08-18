@@ -10,6 +10,11 @@ Provide APIs to set system uiAppearance.
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

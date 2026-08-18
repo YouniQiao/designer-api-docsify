@@ -1,5 +1,10 @@
 # offKeyPressed（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offKeyPressed
 
 ```TypeScript
@@ -22,7 +27,7 @@ function offKeyPressed(receiver?: Callback<KeyEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 否 | 需要取消监听的回调函数。若不填，取消应用所有按键监听的回调函数。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 否 | 需要取消监听的回调函数。若不填，取消应用所有按键监听的回调函数。 |
 
 **错误码：**
 

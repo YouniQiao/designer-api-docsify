@@ -10,6 +10,11 @@ Implements a **CreateNativeMediaPlayerCallback** object to control the player cr
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enterFullscreen
 
 ```TypeScript

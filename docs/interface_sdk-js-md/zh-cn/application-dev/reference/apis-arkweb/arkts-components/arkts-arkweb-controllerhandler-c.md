@@ -8,6 +8,11 @@ ControllerHandler是ArkWeb提供的处理新建Web组件控制器分配的帮助
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

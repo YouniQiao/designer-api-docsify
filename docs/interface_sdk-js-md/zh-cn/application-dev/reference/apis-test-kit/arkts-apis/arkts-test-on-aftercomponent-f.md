@@ -1,5 +1,10 @@
 # afterComponent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## afterComponent
 
 ```TypeScript

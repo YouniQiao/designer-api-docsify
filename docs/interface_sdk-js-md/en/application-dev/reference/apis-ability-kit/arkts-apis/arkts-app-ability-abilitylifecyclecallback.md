@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { AbilityLifecycleCallback } from 'AbilityLifecycleCallback';
+import { AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { AbilityLifecycleCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

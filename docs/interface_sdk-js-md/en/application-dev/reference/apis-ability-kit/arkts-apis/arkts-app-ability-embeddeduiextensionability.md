@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddedUIExtensionAbility } from 'EmbeddedUIExtensionAbility';
+import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
+import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

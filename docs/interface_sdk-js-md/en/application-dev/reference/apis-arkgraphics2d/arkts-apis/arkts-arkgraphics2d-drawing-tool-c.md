@@ -11,7 +11,8 @@ A utility class that provides only static methods to convert data structs define
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'drawing';
+import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## makeColorFromResourceColor

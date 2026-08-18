@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## inData
 
 ```TypeScript

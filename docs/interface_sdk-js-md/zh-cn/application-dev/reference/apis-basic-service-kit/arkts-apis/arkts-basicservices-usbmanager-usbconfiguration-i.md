@@ -8,13 +8,18 @@ USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#usbd
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## attributes
 
 ```TypeScript
 attributes: int
 ```
 
-配置的属性。
+配置的属性，取值遵循USB配置描述符规范，用于表示配置的供电方式、远程唤醒能力等特性。
 
 **类型：** int
 
@@ -46,7 +51,7 @@ id: int
 interfaces: Array<USBInterface>
 ```
 
-配置支持的接口属性。
+配置支持的接口列表。
 
 **类型：** Array&lt;USBInterface&gt;
 
@@ -94,7 +99,7 @@ isSelfPowered: boolean
 maxPower: int
 ```
 
-最大功耗。（单位：毫安）。
+最大功耗，（单位：毫安）。
 
 **类型：** int
 
@@ -110,7 +115,7 @@ maxPower: int
 name: string
 ```
 
-配置的名称，可以为空。
+配置的名称，可以为空字符串。
 
 **类型：** string
 

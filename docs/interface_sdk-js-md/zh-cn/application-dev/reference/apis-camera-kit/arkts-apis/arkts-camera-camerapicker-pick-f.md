@@ -1,5 +1,10 @@
 # pick
 
+## 导入模块
+
+```TypeScript
+```
+
 ## pick
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # isSeniorModeEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isSeniorModeEnabled
 
 ```TypeScript

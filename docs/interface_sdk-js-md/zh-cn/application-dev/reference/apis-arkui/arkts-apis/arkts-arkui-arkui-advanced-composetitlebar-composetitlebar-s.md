@@ -8,6 +8,11 @@ ComposeTitleBar是一种普通标题栏组件，支持设置标题、头像（�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## item
 
 ```TypeScript

@@ -6,6 +6,11 @@
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getType
 
 ```TypeScript

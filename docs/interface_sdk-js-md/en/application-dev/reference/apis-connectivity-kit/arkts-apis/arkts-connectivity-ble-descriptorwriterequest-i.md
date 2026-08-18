@@ -11,7 +11,7 @@ Describes the parameters of the Gatt client's characteristic write request.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

@@ -1,5 +1,10 @@
 # setInterval
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setInterval
 
 ```TypeScript

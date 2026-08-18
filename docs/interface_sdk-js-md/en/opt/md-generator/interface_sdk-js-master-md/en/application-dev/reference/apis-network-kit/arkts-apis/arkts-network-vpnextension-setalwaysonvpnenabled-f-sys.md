@@ -1,0 +1,47 @@
+# setAlwaysOnVpnEnabled (System API)
+
+## Modules to Import
+
+```TypeScript
+```
+
+## setAlwaysOnVpnEnabled
+
+```TypeScript
+function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>
+```
+
+Set the Enable/Disable Always on VPN mode for a device.
+
+**Since:** 11
+
+**Required permissions:** ohos.permission.MANAGE_VPN
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-vpnExtension-function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>--><!--Device-vpnExtension-function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<void>-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Vpn
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
+| bundleName | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

@@ -10,6 +10,11 @@ Defines the options to be passed when constructing **SecurityUIExtensionComponen
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## dpiFollowStrategy
 
 ```TypeScript

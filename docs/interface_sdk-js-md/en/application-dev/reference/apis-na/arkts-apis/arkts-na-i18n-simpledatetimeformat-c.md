@@ -10,6 +10,11 @@ Provide a simple date time formatting interface.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## format
 
 ```TypeScript

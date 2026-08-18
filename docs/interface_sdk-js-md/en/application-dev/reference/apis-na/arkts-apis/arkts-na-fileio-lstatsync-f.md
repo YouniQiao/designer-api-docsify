@@ -1,5 +1,10 @@
 # lstatSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lstatSync
 
 ```TypeScript

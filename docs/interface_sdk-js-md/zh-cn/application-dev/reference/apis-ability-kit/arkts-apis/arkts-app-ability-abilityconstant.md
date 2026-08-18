@@ -10,6 +10,11 @@ AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchRea
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 接口

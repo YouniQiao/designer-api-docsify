@@ -12,6 +12,13 @@ Creates a **KVManager** object to obtain KV store information. Before calling an
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## closeKVStore
 
 ```TypeScript

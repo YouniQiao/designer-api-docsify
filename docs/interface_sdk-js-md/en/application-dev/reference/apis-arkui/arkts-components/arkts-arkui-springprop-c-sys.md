@@ -12,6 +12,12 @@ Customize spring properties.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+```
+
 ## constructor
 
 ```TypeScript

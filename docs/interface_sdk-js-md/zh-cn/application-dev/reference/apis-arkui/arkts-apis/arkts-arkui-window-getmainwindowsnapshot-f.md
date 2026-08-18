@@ -1,5 +1,10 @@
 # getMainWindowSnapshot
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getMainWindowSnapshot
 
 ```TypeScript

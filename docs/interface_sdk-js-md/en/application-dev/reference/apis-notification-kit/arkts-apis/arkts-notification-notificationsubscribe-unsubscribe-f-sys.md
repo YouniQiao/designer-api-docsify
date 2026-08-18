@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from 'notificationSubscribe';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## unsubscribe

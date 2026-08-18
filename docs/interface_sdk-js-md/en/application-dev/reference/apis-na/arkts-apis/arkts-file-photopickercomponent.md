@@ -1,5 +1,10 @@
 # @ohos.file.PhotoPickerComponent
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

@@ -13,7 +13,7 @@ Defines a tool class for restoring factory settings, such as clearing data in th
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## deepFactoryReset

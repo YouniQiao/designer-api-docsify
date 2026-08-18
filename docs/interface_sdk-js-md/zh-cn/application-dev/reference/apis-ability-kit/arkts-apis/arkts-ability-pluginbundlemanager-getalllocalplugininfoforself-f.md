@@ -1,5 +1,10 @@
 # getAllLocalPluginInfoForSelf
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllLocalPluginInfoForSelf
 
 ```TypeScript

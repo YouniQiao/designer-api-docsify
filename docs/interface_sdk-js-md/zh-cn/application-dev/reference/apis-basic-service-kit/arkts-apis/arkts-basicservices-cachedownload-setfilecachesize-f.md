@@ -1,5 +1,10 @@
 # setFileCacheSize
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setFileCacheSize
 
 ```TypeScript

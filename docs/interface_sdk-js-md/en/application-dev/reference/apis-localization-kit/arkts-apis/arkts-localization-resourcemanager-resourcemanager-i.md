@@ -11,7 +11,8 @@ Provides the capability of accessing application resources and system resources.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'resourceManager';
+import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## addResource

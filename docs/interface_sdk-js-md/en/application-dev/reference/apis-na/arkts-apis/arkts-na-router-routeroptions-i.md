@@ -8,6 +8,11 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## params
 
 ```TypeScript

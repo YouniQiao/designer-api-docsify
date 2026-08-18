@@ -10,6 +10,11 @@ Date time format class for locale-sensitive date formatting.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -10,6 +10,11 @@ Defines conflicting file information used in **copyDir()** or **moveDir()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## destFile
 
 ```TypeScript

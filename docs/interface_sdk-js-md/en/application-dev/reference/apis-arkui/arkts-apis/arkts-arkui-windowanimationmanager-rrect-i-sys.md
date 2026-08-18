@@ -13,7 +13,7 @@ Round rect.
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from 'windowAnimationManager';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## height

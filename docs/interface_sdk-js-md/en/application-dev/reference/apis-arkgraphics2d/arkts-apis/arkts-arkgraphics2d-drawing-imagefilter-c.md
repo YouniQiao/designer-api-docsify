@@ -11,7 +11,8 @@ Implements an image filter. > **NOTE：**> > - The initial APIs of this class ar
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'drawing';
+import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendImageFilter

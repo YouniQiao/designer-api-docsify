@@ -1,5 +1,10 @@
 # hasMatchedCallLog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasMatchedCallLog
 
 ```TypeScript

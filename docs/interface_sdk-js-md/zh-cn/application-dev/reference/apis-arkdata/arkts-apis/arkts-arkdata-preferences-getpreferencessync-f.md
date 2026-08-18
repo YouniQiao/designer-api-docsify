@@ -1,5 +1,10 @@
 # getPreferencesSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPreferencesSync
 
 ```TypeScript

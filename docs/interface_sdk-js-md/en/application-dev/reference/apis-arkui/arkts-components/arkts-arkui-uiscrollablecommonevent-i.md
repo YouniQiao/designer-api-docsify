@@ -10,6 +10,11 @@ Defines a UIScrollableCommonEvent which is used to set event to target component
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setOnReachEnd
 
 ```TypeScript

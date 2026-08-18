@@ -11,7 +11,7 @@ Implements a floating ball controller instance, which is used to start, update, 
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'floatingBall';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## getFloatingBallWindowInfo

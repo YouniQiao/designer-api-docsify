@@ -17,7 +17,7 @@ Provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## close

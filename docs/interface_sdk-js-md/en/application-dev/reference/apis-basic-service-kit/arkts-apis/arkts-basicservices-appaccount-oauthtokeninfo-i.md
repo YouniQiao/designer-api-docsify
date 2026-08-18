@@ -15,7 +15,8 @@ Defines authorization token information. > **NOTE：**> > This API is supported 
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## authType

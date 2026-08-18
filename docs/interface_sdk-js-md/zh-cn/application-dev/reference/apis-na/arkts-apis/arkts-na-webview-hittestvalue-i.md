@@ -10,6 +10,11 @@ Provides element information of the click area. related to [getLastHitTest](../.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## extra
 
 ```TypeScript

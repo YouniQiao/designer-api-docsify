@@ -12,6 +12,11 @@ USB设备信息。
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## busNum
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getAllNetworkInterfacesSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllNetworkInterfacesSync
 
 ```TypeScript

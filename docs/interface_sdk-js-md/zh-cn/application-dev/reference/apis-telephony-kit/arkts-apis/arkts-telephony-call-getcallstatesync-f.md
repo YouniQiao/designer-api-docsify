@@ -1,5 +1,10 @@
 # getCallStateSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCallStateSync
 
 ```TypeScript

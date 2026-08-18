@@ -1,5 +1,10 @@
 # isEncoding
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isEncoding
 
 ```TypeScript

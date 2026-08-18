@@ -1,5 +1,10 @@
 # addKeyEventPolicies
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addKeyEventPolicies
 
 ```TypeScript

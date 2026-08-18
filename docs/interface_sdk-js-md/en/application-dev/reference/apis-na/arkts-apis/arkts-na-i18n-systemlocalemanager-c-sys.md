@@ -12,6 +12,11 @@ Provide some functions for settings and startup guide to select language or regi
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -59,13 +64,13 @@ Obtains the list of languages after sorting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | languages | Array&lt;string&gt; | Yes | Valid IDs of the languages to be sorted. |
-| options | [SortOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-sortoptions-i-sys.md) | No | Language sorting option. |
+| options | [SortOptions](arkts-na-i18n-sortoptions-i-sys.md) | No | Language sorting option. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[LocaleItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-localeitem-i-sys.md)&gt; | Language list after sorting. |
+| Array&lt;[LocaleItem](arkts-na-i18n-localeitem-i-sys.md)&gt; | Language list after sorting. |
 
 **Error codes:**
 
@@ -98,13 +103,13 @@ Obtains the IDs of the countries or regions after sorting.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | regions | Array&lt;string&gt; | Yes | Valid IDs of the countries or regions to be sorted. |
-| options | [SortOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
+| options | [SortOptions](arkts-na-i18n-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[LocaleItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-localeitem-i-sys.md)&gt; | IDs of the countries or regions after sorting. |
+| Array&lt;[LocaleItem](arkts-na-i18n-localeitem-i-sys.md)&gt; | IDs of the countries or regions after sorting. |
 
 **Error codes:**
 
@@ -136,7 +141,7 @@ Obtains list of time zone city items after sorting.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TimeZoneCityItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezonecityitem-i-sys.md)&gt; | List of time zone city items after sorting. |
+| Array&lt;[TimeZoneCityItem](arkts-na-i18n-timezonecityitem-i-sys.md)&gt; | List of time zone city items after sorting. |
 
 **Error codes:**
 

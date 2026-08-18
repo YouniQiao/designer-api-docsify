@@ -1,5 +1,10 @@
 # getTotalInodes
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTotalInodes
 
 ```TypeScript

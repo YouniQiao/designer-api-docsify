@@ -1,5 +1,10 @@
 # getAllowedWifiList
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllowedWifiList
 
 ```TypeScript

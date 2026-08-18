@@ -6,11 +6,16 @@ Scope 接口用于描述字段的有效范围。
 
 **废弃版本：** 9
 
-**替代接口：** [ScopeHelper](arkts-arkts-util-scopehelper-c.md#scopehelper)
+**替代接口：** [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#scopehelper)
 
 <!--Device-util-class Scope--><!--Device-util-class Scope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+```
 
 ## clamp
 
@@ -24,7 +29,7 @@ clamp(value: ScopeType): ScopeType
 
 **废弃版本：** 9
 
-**替代接口：** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
+**替代接口：** [clamp](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#clamp)
 
 <!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
 
@@ -34,13 +39,13 @@ clamp(value: ScopeType): ScopeType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
 
 **示例**
 
@@ -96,8 +101,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | Scope** 对象的上限。 |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | Scope** 对象的下限。 |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | Scope** 对象的上限。 |
 
 **示例**
 
@@ -141,7 +146,7 @@ contains(value: ScopeType): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
+**替代接口：** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
 
@@ -151,7 +156,7 @@ contains(value: ScopeType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
@@ -203,7 +208,7 @@ contains(range: Scope): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
+**替代接口：** [contains](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
 
@@ -277,8 +282,8 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 上限。 |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 下限。 |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 上限。 |
 
 **返回值：**
 
@@ -405,7 +410,7 @@ expand(value: ScopeType): Scope
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 指定的值。 |
+| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 指定的值。 |
 
 **返回值：**
 
@@ -457,7 +462,7 @@ getLower(): ScopeType
 
 **废弃版本：** 9
 
-**替代接口：** [getLower](arkts-arkts-util-scopehelper-c.md#getlower)
+**替代接口：** [getLower](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#getlower)
 
 <!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
 
@@ -467,7 +472,7 @@ getLower(): ScopeType
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的下限。 |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 此 **Scope** 的下限。 |
 
 **示例**
 
@@ -512,7 +517,7 @@ getUpper(): ScopeType
 
 **废弃版本：** 9
 
-**替代接口：** [getUpper](arkts-arkts-util-scopehelper-c.md#getupper)
+**替代接口：** [getUpper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md#getupper)
 
 <!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
 
@@ -522,7 +527,7 @@ getUpper(): ScopeType
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的上限。 |
+| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 此 **Scope** 的上限。 |
 
 **示例**
 
@@ -641,8 +646,8 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | 是 | 上限。 |
+| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 下限。 |
+| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | 是 | 上限。 |
 
 **返回值：**
 
@@ -695,7 +700,7 @@ toString(): string
 
 **废弃版本：** 9
 
-**替代接口：** [toString](arkts-arkts-util-lrucache-c.md#tostring)
+**替代接口：** [toString](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#tostring)
 
 <!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 

@@ -12,6 +12,11 @@ USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md#usbdevice)�
 
 **系统能力：** SystemCapability.USB.USBManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## attributes
 
 ```TypeScript

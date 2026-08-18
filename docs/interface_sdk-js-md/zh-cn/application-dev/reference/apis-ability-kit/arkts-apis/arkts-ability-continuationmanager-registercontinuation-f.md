@@ -1,5 +1,10 @@
 # registerContinuation
 
+## 导入模块
+
+```TypeScript
+```
+
 ## registerContinuation
 
 ```TypeScript
@@ -26,7 +31,7 @@ function registerContinuation(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **错误码：**
 
@@ -85,7 +90,7 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ContinuationExtraParams | 是 | 过滤可选择设备列表的额外参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **错误码：**
 

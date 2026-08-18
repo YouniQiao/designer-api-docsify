@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from 'restrictions';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## addDisallowedListForAccount

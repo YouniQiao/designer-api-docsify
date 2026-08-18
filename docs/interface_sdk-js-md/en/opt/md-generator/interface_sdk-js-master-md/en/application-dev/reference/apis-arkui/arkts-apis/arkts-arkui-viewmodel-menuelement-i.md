@@ -1,0 +1,33 @@
+# MenuElement
+
+The &lt;menu&gt; component provides menus as temporary pop-up windows to display operations that can be performed by users.
+
+**Inheritance/Implementation:** MenuElement extends [Element](arkts-arkui-viewmodel-element-i.md#element)
+
+**Since:** 4
+
+<!--Device-unnamed-export interface MenuElement--><!--Device-unnamed-export interface MenuElement-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## show
+
+```TypeScript
+show(position: { x: number; y: number }): void
+```
+
+Displays the menu. x and y specify the position of the displayed menu. x indicates the X-axis coordinate from the left edge of the visible area, and does not include any scrolling offset. y indicates the Y-axis coordinate from the upper edge of the visible area, and does not include any scrolling offset or a status bar. The menu is preferentially displayed in the lower right corner. When the visible space on the right is insufficient, the menu is moved leftward. When the visible space in the lower part is insufficient, the menu is moved upward.
+
+**Since:** 4
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-MenuElement-show(position: { x: number; y: number }): void--><!--Device-MenuElement-show(position: { x: number; y: number }): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| position | { x: number; y: number } | Yes |

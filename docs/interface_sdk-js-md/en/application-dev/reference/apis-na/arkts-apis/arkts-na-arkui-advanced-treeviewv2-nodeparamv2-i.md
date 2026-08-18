@@ -10,6 +10,11 @@ Declare NodeParamV2
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## container
 
 ```TypeScript
@@ -18,7 +23,7 @@ container?: OnContainerCallback
 
 set subcomponent binded on tree item.
 
-**Type:** [OnContainerCallback](arkts-na-oncontainercallback-t.md)
+**Type:** [OnContainerCallback](../../apis-arkui/arkts-apis/arkts-arkui-oncontainercallback-t.md)
 
 **Since:** 26.0.0
 

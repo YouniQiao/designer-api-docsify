@@ -15,7 +15,7 @@ The URLSearchParams interface defines some practical methods to process URL quer
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'url';
+import { url } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

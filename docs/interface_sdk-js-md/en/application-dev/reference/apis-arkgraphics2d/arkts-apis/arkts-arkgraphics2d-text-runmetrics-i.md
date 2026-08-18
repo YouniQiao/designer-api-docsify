@@ -11,7 +11,8 @@ Describes the layout information and measurement information of a run of text in
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'text';
+import { text } from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## fontMetrics

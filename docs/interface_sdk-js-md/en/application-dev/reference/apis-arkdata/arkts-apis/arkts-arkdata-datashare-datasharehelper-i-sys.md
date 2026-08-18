@@ -13,7 +13,8 @@ Provides a **DataShareHelper** instance to access or manage data on the server. 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'dataShare';
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## addTemplate

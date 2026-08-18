@@ -15,7 +15,7 @@ Custom icon object in the generation result page of ImageGeneratorDialog.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'imageGeneration';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## callback

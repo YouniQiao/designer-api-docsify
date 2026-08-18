@@ -11,7 +11,8 @@ Represents the extension information of an input method.
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtraConfig } from 'InputMethodExtraConfig';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from '@kit.IMEKit';
 ```
 
 ## customSettings

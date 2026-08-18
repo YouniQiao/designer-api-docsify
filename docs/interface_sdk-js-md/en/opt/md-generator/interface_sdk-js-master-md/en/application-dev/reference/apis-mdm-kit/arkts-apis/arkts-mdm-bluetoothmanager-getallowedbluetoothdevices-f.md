@@ -1,0 +1,106 @@
+# getAllowedBluetoothDevices
+
+## Modules to Import
+
+```TypeScript
+```
+
+## getAllowedBluetoothDevices
+
+```TypeScript
+function getAllowedBluetoothDevices(admin: Want): Array<string>
+```
+
+Obtains allowed Bluetooth devices.
+
+**Since:** 12
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want): Array<string>--><!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want): Array<string>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+
+
+## getAllowedBluetoothDevices
+
+```TypeScript
+function getAllowedBluetoothDevices(admin: Want | null): Array<string>
+```
+
+Obtains allowed Bluetooth devices.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want | null): Array<string>--><!--Device-bluetoothManager-function getAllowedBluetoothDevices(admin: Want | null): Array<string>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+
+**Examples**
+
+```TypeScript
+import { bluetoothManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+// Create an EnterpriseAdminExtensionAbility component.
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // Obtain the Bluetooth device trustlist.
+  let result: Array<string> = bluetoothManager.getAllowedBluetoothDevices(wantTemp);
+  console.info(`Succeeded in getting allowed bluetooth devices. Result: ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
+}
+```

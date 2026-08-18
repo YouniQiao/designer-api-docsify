@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'router';
+import { router } from '@kit.ArkUI';
 ```
 
 ## enableAlertBeforeBackPage

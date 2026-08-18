@@ -10,6 +10,11 @@ Resolved options returned by the resolvedOptions method.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fallback
 
 ```TypeScript

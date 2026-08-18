@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## systemUsage
 
 ```TypeScript

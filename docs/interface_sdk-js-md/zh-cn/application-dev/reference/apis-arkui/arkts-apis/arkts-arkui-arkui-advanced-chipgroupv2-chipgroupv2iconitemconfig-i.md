@@ -8,6 +8,11 @@ ChipGroupV2IconItemConfig定义了尾部图标项的配置，用于设置尾部�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript

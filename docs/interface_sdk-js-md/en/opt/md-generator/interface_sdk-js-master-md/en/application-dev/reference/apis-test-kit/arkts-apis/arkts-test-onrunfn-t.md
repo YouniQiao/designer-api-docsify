@@ -1,0 +1,13 @@
+# OnRunFn
+
+```TypeScript
+type OnRunFn = () => void
+```
+
+Run all test cases.
+
+**Since:** 23
+
+<!--Device-unnamed-type OnRunFn = () => void--><!--Device-unnamed-type OnRunFn = () => void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core

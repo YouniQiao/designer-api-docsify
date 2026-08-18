@@ -1,5 +1,10 @@
 # getAbilityRunningInfos（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAbilityRunningInfos
 
 ```TypeScript
@@ -22,7 +27,7 @@ function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;AbilityRunningInfo&gt;&gt; | 是 | 回调函数。当获取UIAbility运行相关信息成功，err为undefined，data为获取到的 UIAbility运行相关信息；否则为错误对象。可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityRunningInfo&gt;&gt; | 是 | 回调函数。当获取UIAbility运行相关信息成功，err为undefined，data为获取到的 UIAbility运行相关信息；否则为错误对象。可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

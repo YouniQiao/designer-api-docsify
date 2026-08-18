@@ -1,5 +1,10 @@
 # isByodAdmin
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isByodAdmin
 
 ```TypeScript

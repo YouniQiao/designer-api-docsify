@@ -8,6 +8,11 @@ A navigation controller that manages all child pages in the **Navigation** compo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clear
 
 ```TypeScript
@@ -838,7 +843,7 @@ Removes the navigation destination page specified by **name** from the routing s
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the onReady callback of **NavDestination** or from [NavDestinationInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationinfo-i.md#navdestinationinfo).
+Removes the navigation destination page specified by **navDestinationId** from the routing stack. **navDestinationId** can be obtained from the onReady callback of **NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md#navdestinationinfo).
 
 **Since:** 12
 

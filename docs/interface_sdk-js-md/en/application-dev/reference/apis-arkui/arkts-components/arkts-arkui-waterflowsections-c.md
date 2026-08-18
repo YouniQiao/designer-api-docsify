@@ -8,6 +8,11 @@ Describes the water flow item sections. > **NOTE：**> > After the section infor
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

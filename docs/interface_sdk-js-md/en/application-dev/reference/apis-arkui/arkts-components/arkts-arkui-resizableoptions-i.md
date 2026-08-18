@@ -8,6 +8,12 @@ Defines the resizable image options. **Figure 1** Effect of Setting EdgeWidths
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+import { imageGeneration } from '@kit.ArkUI';
+```
+
 ## lattice
 
 ```TypeScript

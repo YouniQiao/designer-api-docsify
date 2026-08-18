@@ -10,6 +10,11 @@ Segment data interface.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## index
 
 ```TypeScript

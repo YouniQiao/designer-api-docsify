@@ -11,7 +11,8 @@ Provides APIs for managing data in an RDB store. Before using the following APIs
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'relationalStore';
+import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## attach

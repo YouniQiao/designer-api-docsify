@@ -1,5 +1,10 @@
 # setManagedBrowserPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setManagedBrowserPolicy
 
 ```TypeScript

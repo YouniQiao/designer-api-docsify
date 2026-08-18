@@ -13,7 +13,7 @@ Defines the Result of mediaquery.
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'mediaquery';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## matches

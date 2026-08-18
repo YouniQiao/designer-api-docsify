@@ -11,7 +11,7 @@ Implements an event filter. You can use [filterById()](#filterbyid), [filterByTi
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## filterById

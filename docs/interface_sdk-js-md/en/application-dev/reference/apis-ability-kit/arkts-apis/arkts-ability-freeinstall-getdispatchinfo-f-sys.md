@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { freeInstall } from 'freeInstall';
+import { freeInstall } from '@kit.AbilityKit';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## getDispatchInfo

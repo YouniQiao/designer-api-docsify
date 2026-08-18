@@ -15,7 +15,7 @@ Provides APIs for managing the media album change request. It inherits from [Med
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor

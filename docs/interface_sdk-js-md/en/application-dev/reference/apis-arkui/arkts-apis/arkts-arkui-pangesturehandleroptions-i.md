@@ -10,6 +10,11 @@ Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOp
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## direction
 
 ```TypeScript

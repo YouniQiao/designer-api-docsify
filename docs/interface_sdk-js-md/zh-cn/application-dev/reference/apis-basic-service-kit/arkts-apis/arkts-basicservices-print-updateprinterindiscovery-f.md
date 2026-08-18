@@ -1,5 +1,10 @@
 # updatePrinterInDiscovery
 
+## 导入模块
+
+```TypeScript
+```
+
 ## updatePrinterInDiscovery
 
 ```TypeScript

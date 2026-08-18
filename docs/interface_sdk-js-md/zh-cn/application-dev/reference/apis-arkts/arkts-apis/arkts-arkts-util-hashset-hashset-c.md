@@ -8,6 +8,11 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

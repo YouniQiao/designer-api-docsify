@@ -1,5 +1,10 @@
 # onHotspotStaLeave（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onHotspotStaLeave
 
 ```TypeScript
@@ -22,7 +27,7 @@ function onHotspotStaLeave(callback: Callback<StationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | 是 | 状态改变回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 状态改变回调函数。 |
 
 **错误码：**
 

@@ -10,6 +10,11 @@ ListFormat class for locale-sensitive list formatting.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

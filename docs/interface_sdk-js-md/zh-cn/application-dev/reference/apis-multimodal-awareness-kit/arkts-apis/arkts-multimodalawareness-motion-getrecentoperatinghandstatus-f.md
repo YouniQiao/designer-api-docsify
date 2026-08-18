@@ -1,5 +1,10 @@
 # getRecentOperatingHandStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getRecentOperatingHandStatus
 
 ```TypeScript

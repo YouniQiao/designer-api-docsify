@@ -8,6 +8,11 @@ Provides subtitle information. When a subtitle update event is subscribed to, th
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## duration
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # stopDiscoverDevices
 
+## 导入模块
+
+```TypeScript
+```
+
 ## stopDiscoverDevices
 
 ```TypeScript

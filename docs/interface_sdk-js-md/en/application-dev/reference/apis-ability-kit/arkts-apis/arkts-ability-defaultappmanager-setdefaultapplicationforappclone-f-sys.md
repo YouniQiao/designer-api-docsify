@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { defaultAppManager } from 'defaultAppManager';
+import { defaultAppManager } from '@kit.AbilityKit';
+import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
 ## setDefaultApplicationForAppClone

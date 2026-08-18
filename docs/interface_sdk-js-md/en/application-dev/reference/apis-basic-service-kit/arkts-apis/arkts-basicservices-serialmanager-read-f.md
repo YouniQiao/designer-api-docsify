@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from 'serialManager';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## read

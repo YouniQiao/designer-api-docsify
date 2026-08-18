@@ -13,7 +13,7 @@ Used to do observer layout and draw event for component.
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from 'inspector';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## Summary

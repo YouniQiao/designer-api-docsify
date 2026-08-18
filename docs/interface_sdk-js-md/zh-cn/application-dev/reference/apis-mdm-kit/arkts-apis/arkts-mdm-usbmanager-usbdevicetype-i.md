@@ -8,6 +8,11 @@ USB设备类型信息。 可通过[getDevices](../../apis-basic-service-kit/arkt
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## baseClass
 
 ```TypeScript

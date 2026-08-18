@@ -10,6 +10,11 @@ Defines the options used in **read()**.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## length
 
 ```TypeScript

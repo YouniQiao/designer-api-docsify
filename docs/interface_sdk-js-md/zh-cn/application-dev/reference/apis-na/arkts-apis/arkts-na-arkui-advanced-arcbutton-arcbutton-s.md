@@ -10,6 +10,11 @@ ArcButton({ options: ArcButtonOptions }) 创建ArcButton实例，入参是弧形
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript

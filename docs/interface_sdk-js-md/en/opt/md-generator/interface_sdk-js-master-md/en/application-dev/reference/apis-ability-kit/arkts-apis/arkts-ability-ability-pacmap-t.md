@@ -1,0 +1,18 @@
+# PacMap
+
+```TypeScript
+export type PacMap = _PacMap
+```
+
+Defines the level-2 module PacMap.
+
+**Since:** 23
+
+**Model restriction:** 
+- API version 11 and later: This API can be used in both the stage model and FA model.
+
+<!--Device-ability-export type PacMap = _PacMap--><!--Device-ability-export type PacMap = _PacMap-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
+
+**Property type:** _PacMap

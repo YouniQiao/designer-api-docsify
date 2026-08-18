@@ -10,6 +10,11 @@ ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGro
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getLauncherAbilityInfoSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getLauncherAbilityInfoSync
 
 ```TypeScript

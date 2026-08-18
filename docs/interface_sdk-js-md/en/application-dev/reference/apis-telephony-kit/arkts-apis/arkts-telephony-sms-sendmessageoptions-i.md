@@ -11,7 +11,7 @@ Provides the options (including callbacks) for sending SMS messages. For example
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'sms';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## content

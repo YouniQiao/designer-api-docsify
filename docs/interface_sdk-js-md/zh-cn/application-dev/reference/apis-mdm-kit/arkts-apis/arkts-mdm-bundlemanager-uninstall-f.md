@@ -1,5 +1,10 @@
 # uninstall
 
+## 导入模块
+
+```TypeScript
+```
+
 ## uninstall
 
 ```TypeScript

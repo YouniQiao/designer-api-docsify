@@ -12,6 +12,11 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isBlockDevice
 
 ```TypeScript

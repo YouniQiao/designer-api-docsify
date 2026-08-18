@@ -1,5 +1,10 @@
 # destroyVirtualScreen
 
+## 导入模块
+
+```TypeScript
+```
+
 ## destroyVirtualScreen
 
 ```TypeScript

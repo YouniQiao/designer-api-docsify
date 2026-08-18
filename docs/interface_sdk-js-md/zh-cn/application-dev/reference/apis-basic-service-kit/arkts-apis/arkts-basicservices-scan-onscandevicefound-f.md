@@ -1,5 +1,10 @@
 # onScanDeviceFound
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onScanDeviceFound
 
 ```TypeScript
@@ -20,7 +25,7 @@ Register event callback for scanner device found.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 是 | Callback for device found event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 是 | Callback for device found event. |
 
 **错误码：**
 

@@ -11,7 +11,8 @@ Represents the SM2 ciphertext parameters. You can use this object to generate SM
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## cipherTextData

@@ -1,5 +1,10 @@
 # startPrint
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startPrint
 
 ```TypeScript

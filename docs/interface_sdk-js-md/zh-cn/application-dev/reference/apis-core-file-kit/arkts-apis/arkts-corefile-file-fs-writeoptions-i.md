@@ -1,14 +1,19 @@
 # WriteOptions
 
-可选项类型，支持write接口使用，WriteOptions继承至[Options](arkts-corefile-file-fs-options-i.md#options)。
+可选项类型，支持write接口使用，WriteOptions继承至[Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#options)。
 
-**继承/实现关系：** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md#options)
+**继承/实现关系：** WriteOptions extends [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#options)
 
 **起始版本：** 11
 
 <!--Device-unnamed-export interface WriteOptions--><!--Device-unnamed-export interface WriteOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+```
 
 ## length
 

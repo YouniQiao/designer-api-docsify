@@ -12,6 +12,11 @@ Provides APIs for obtaining and modifying storage data. Before calling the follo
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clear
 
 ```TypeScript

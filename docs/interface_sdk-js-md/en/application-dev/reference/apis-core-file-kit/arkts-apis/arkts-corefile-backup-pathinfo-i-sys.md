@@ -13,7 +13,7 @@ Path information for file migration.
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'backup';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## destPath

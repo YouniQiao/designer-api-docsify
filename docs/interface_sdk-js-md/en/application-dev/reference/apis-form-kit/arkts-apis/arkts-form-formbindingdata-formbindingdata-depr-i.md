@@ -12,6 +12,11 @@ Describes a **FormBindingData** object.
 
 **System capability:** SystemCapability.Ability.Form
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## data
 
 ```TypeScript

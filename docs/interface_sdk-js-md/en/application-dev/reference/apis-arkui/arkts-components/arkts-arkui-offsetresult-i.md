@@ -8,6 +8,11 @@ Represents the offset values resulting from a scroll operation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## xOffset
 
 ```TypeScript

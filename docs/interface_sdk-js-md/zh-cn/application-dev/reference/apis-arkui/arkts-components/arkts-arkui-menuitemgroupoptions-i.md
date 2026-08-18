@@ -8,6 +8,11 @@ MenuItem分组的标题和尾部信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## footer
 
 ```TypeScript

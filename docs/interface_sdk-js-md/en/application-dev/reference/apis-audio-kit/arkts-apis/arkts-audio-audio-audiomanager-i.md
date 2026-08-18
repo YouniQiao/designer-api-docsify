@@ -11,7 +11,10 @@ This interface implements audio volume and device management. Before calling any
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'audio';
+import { audio } from '@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioParameter
@@ -792,7 +795,7 @@ Mutes a volume type. This method uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -818,7 +821,7 @@ Mutes a volume type. This method uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
@@ -1257,7 +1260,7 @@ Sets the volume for a volume type. This method uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -1285,7 +1288,7 @@ Sets the volume for a volume type. This method uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
+**Substitutes:** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#avvolumepanel)
 
 **Required permissions:** ohos.permission.ACCESS_NOTIFICATION_POLICY
 

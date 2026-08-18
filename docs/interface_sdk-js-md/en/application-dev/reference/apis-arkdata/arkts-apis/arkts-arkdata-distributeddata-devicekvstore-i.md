@@ -14,6 +14,13 @@ Provides APIs to query and synchronize data in a device KV store. This class inh
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## closeResultSet
 
 ```TypeScript

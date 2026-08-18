@@ -8,6 +8,11 @@ The **OffscreenCanvas** component is used to draw custom graphics. When the Canv
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

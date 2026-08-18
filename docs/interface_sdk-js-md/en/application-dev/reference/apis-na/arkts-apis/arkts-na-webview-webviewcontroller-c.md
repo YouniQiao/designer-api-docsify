@@ -10,6 +10,11 @@ WebviewController can control various behaviors of Web components (including pag
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## accessBackward
 
 ```TypeScript
@@ -360,7 +365,7 @@ Clears the highlighting surrounding text matches created by searchAllAsync.
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by API[prefetchResource](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#prefetchresource).
+Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by API[prefetchResource](#prefetchresource).
 
 **Since:** 23
 
@@ -522,8 +527,8 @@ Rendering current Web page into Pdf data, return the result in async mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfconfiguration-i.md) | Yes | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | Yes | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
+| configuration | [PdfConfiguration](arkts-na-webview-pdfconfiguration-i.md) | Yes | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-na-webview-pdfdata-c.md)&gt; | Yes | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
 
 **Error codes:**
 
@@ -552,13 +557,13 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [PdfConfiguration](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfconfiguration-i.md) | Yes | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
+| configuration | [PdfConfiguration](arkts-na-webview-pdfconfiguration-i.md) | Yes | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | The promise returned by the function. PdfData is pdf data stream of current web page in Uint8Array { |
+| Promise&lt;[PdfData](arkts-na-webview-pdfdata-c.md)&gt; | The promise returned by the function. PdfData is pdf data stream of current web page in Uint8Array { |
 
 **Error codes:**
 
@@ -593,7 +598,7 @@ Create web message ports
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[WebMessagePort](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md)&gt; | An array represent 2 WebMessagePort, then can use those ports to communication with html pages. |
+| Array&lt;[WebMessagePort](arkts-na-webview-webmessageport-i.md)&gt; | An array represent 2 WebMessagePort, then can use those ports to communication with html pages. |
 
 **Error codes:**
 
@@ -657,7 +662,7 @@ Register Web custom schemes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webcustomscheme-i.md)&gt; | Yes | Configuration of web custom scheme. |
+| schemes | Array&lt;[WebCustomScheme](arkts-na-webview-webcustomscheme-i.md)&gt; | Yes | Configuration of web custom scheme. |
 
 **Error codes:**
 
@@ -686,7 +691,7 @@ Register Web custom schemes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| schemes | Array&lt;[WebCustomScheme](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webcustomscheme-i.md)&gt; | Yes | Configuration of web custom scheme. |
+| schemes | Array&lt;[WebCustomScheme](arkts-na-webview-webcustomscheme-i.md)&gt; | Yes | Configuration of web custom scheme. |
 | lazyInitWebEngine | boolean | Yes | When true: The interface internally skips initializing WebEngine and temporarily stores the registered schemes, which will be passed to WebEngine when it actually initializes. When false: The interface automatically performs WebEngine initialization internally. |
 
 **Error codes:**
@@ -778,7 +783,7 @@ Enable the application disable some features such as PDFViewer to enhance the se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| securityParams | [SecurityParams](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-securityparams-i.md) | Yes | The options means which supported option or item will be disabled. |
+| securityParams | [SecurityParams](arkts-na-webview-securityparams-i.md) | Yes | The options means which supported option or item will be disabled. |
 
 ## enableBackForwardCache
 
@@ -800,7 +805,7 @@ Enable the BackForwardCache and indicate features that are allowed to enter Back
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| features | [BackForwardCacheSupportedFeatures](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardcachesupportedfeatures-c.md) | No | The features that supports BackForwardCache. @static |
+| features | [BackForwardCacheSupportedFeatures](arkts-na-webview-backforwardcachesupportedfeatures-c.md) | No | The features that supports BackForwardCache. @static |
 
 ## enableIntelligentTrackingPrevention
 
@@ -977,7 +982,7 @@ Obtains the current ArkWeb kernel version.
 
 | Type | Description |
 | --- | --- |
-| [ArkWebEngineVersion](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-arkwebengineversion-e.md) | The ArkWeb kernel version defined by [ArkWebEngineVersion]{ |
+| [ArkWebEngineVersion](arkts-na-webview-arkwebengineversion-e.md) | The ArkWeb kernel version defined by [ArkWebEngineVersion]{ |
 
 ## getAttachState
 
@@ -999,7 +1004,7 @@ Get whether webviewController is attached to a web component.
 
 | Type | Description |
 | --- | --- |
-| [ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md) | the attach state of controller |
+| [ControllerAttachState](arkts-na-webview-controllerattachstate-e.md) | the attach state of controller |
 
 ## getBackForwardEntries
 
@@ -1021,7 +1026,7 @@ Get back forward stack list from current webview.
 
 | Type | Description |
 | --- | --- |
-| [BackForwardList](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardlist-i.md) | Back forward list for current webview. |
+| [BackForwardList](arkts-na-webview-backforwardlist-i.md) | Back forward list for current webview. |
 
 **Error codes:**
 
@@ -1055,7 +1060,7 @@ Obtains the prediction information about the blankless loading solution and enab
 
 | Type | Description |
 | --- | --- |
-| [BlanklessInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessinfo-i.md) | The prediction information about the blankless loading solution. |
+| [BlanklessInfo](arkts-na-webview-blanklessinfo-i.md) | The prediction information about the blankless loading solution. |
 
 **Error codes:**
 
@@ -1246,7 +1251,7 @@ Gets the last hit test value of HitTest.
 
 | Type | Description |
 | --- | --- |
-| [HitTestValue](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-hittestvalue-i.md) | Return the element information of the clicked area. |
+| [HitTestValue](arkts-na-webview-hittestvalue-i.md) | Return the element information of the clicked area. |
 
 **Error codes:**
 
@@ -1332,7 +1337,7 @@ Queries the audio and video playback status of the current web page.
 
 | Type | Description |
 | --- | --- |
-| [MediaPlaybackState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaplaybackstate-e.md) | Playback control status of the current web page. The options are **NONE**, **PLAYING**, **PAUSED**, and **STOPPED**. |
+| [MediaPlaybackState](arkts-na-webview-mediaplaybackstate-e.md) | Playback control status of the current web page. The options are **NONE**, **PLAYING**, **PAUSED**, and **STOPPED**. |
 
 **Error codes:**
 
@@ -1500,7 +1505,7 @@ Get render process mode of the ArkWeb.
 
 | Type | Description |
 | --- | --- |
-| [RenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
+| [RenderProcessMode](arkts-na-webview-renderprocessmode-e.md) | mode - The render process mode of the ArkWeb. Call { |
 
 ## getScrollOffset
 
@@ -1600,7 +1605,7 @@ Get the site isolation mode.
 
 | Type | Description |
 | --- | --- |
-| [SiteIsolationMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
+| [SiteIsolationMode](arkts-na-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
 
 ## getSubframeErrorPageEnabled
 
@@ -1790,7 +1795,7 @@ Get the User-Agent metadata corresponding to the User-Agent.
 
 | Type | Description |
 | --- | --- |
-| [UserAgentMetadata](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
+| [UserAgentMetadata](arkts-na-webview-useragentmetadata-c.md) | The UserAgentMetadata for the userAgent. |
 
 ## getWebId
 
@@ -1914,7 +1919,7 @@ Inject offline resources into cache.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceMaps | Array&lt;[OfflineResourceMap](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | Yes | Array of offline resource info maps. The count of array must between 1 and 30. |
+| resourceMaps | Array&lt;[OfflineResourceMap](arkts-na-webview-offlineresourcemap-i.md)&gt; | Yes | Array of offline resource info maps. The count of array must between 1 and 30. |
 
 **Error codes:**
 
@@ -2209,7 +2214,7 @@ Unregister the callback for controller attach state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-na-webview-controllerattachstate-e.md)&gt; | No | Callback used to return the controller attach state. |
 
 ## onActive
 
@@ -2253,7 +2258,7 @@ Register the callback for controller attach state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-na-webview-controllerattachstate-e.md)&gt; | Yes | Callback used to return the controller attach state. |
 
 ## onCreateNativeMediaPlayer
 
@@ -2275,7 +2280,7 @@ Called when the [application takes over media playback of the web page](../../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Yes | Callback when the application takes over media playback on the web page. |
+| callback | [CreateNativeMediaPlayerCallback](arkts-na-webview-createnativemediaplayercallback-t.md) | Yes | Callback when the application takes over media playback on the web page. |
 
 ## onInactive
 
@@ -2283,7 +2288,7 @@ Called when the [application takes over media playback of the web page](../../..
 onInactive(): void
 ```
 
-Call this interface to notify the Web component to enter the inactive state. In this callback, the developer can realize the appropriate behavior when the application loses focus. In this state, any content that can be safely paused will be paused as much as possible, such as animation and geographical location. However, JavaScript will not be paused. To pause JavaScript globally, please use [pauseAllTimers](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#pausealltimers).To reactivate the Web component, call onActive.
+Call this interface to notify the Web component to enter the inactive state. In this callback, the developer can realize the appropriate behavior when the application loses focus. In this state, any content that can be safely paused will be paused as much as possible, such as animation and geographical location. However, JavaScript will not be paused. To pause JavaScript globally, please use [pauseAllTimers](#pausealltimers).To reactivate the Web component, call onActive.
 
 **Since:** 23
 
@@ -2444,7 +2449,7 @@ Post web message port to html
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Data name information to send. |
-| ports | Array&lt;[WebMessagePort](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageport-i.md)&gt; | Yes | Port number array information to send. |
+| ports | Array&lt;[WebMessagePort](arkts-na-webview-webmessageport-i.md)&gt; | Yes | Port number array information to send. |
 | uri | string | Yes | URI to receive this information. |
 
 **Error codes:**
@@ -2507,7 +2512,7 @@ Compile javascript and generate code cache.
 | --- | --- | --- | --- |
 | url | string | Yes | Url of the javascript. Only support HTTP/HTTPS protocol and length no longer than 2048. |
 | script | string \| Uint8Array | Yes | Javascript source code. script must not be empty. |
-| cacheOptions | [CacheOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-cacheoptions-i.md) | Yes | Generate code cache option. |
+| cacheOptions | [CacheOptions](arkts-na-webview-cacheoptions-i.md) | Yes | Generate code cache option. |
 
 **Return value:**
 
@@ -2574,7 +2579,7 @@ Prefetch the resources required by the page, but will not execute js or render t
 | --- | --- | --- | --- |
 | url | string | Yes | Which url to preresolve/preconnect. |
 | additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request header of the URL. |
-| prefetchOptions | [PrefetchOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-prefetchoptions-c.md) | No | Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control: no-store and adjusting the throttling interval. |
+| prefetchOptions | [PrefetchOptions](arkts-na-webview-prefetchoptions-c.md) | No | Prefetch behavior can be customized via ‌prefetchOptions‌, including ignoring Cache-Control: no-store and adjusting the throttling interval. |
 
 **Error codes:**
 
@@ -2590,7 +2595,7 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
         cacheValidTime?: int): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call API[clearPrefetchedResource](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#clearprefetchedresource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value ArkWebPostCacheKey to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
+Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call API[clearPrefetchedResource](#clearprefetchedresource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value ArkWebPostCacheKey to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
 
 **Since:** 23
 
@@ -3028,7 +3033,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, a none type value will be returned. |
+| Promise&lt;[JsMessageExt](arkts-na-webview-jsmessageext-c.md)&gt; | A promise is solved after the JavaScript script is executed. This parameter will be the result of JavaScript script execution. If the JavaScript script fails to execute or has no return value, a none type value will be returned. |
 
 **Error codes:**
 
@@ -3058,7 +3063,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | Yes | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | Yes | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-na-webview-jsmessageext-c.md)&gt; | Yes | Callbacks execute JavaScript script results. |
 
 **Error codes:**
 
@@ -3271,7 +3276,7 @@ Sets the ArkWeb kernel version. If the system does not support the specified ver
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-arkwebengineversion-e.md) | Yes | ArkWeb kernel version. |
+| engineVersion | [ArkWebEngineVersion](arkts-na-webview-arkwebengineversion-e.md) | Yes | ArkWeb kernel version. |
 
 ## setAppCustomUserAgent
 
@@ -3366,7 +3371,7 @@ Configure the BackForwardCache.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [BackForwardCacheOptions](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-backforwardcacheoptions-c.md) | No | The configuration of BackForwardCache. |
+| options | [BackForwardCacheOptions](arkts-na-webview-backforwardcacheoptions-c.md) | No | The configuration of BackForwardCache. |
 
 **Error codes:**
 
@@ -3435,7 +3440,7 @@ Sets whether to enable blankless page loading. This API must be used in pair wit
 
 | Type | Description |
 | --- | --- |
-| [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](arkts-na-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
 
 **Error codes:**
 
@@ -3467,13 +3472,13 @@ Triggers frame interpolation and sets frame interpolation parameters. This API m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key value that uniquely identifies the current page. The key value must be the same as that of getBlanklessInfoWithKey. <br>Value range: (0, 2048] <br>Value range: (0, 2048] <br>which must be the same as the key value in getBlanklessInfoWithKey |
-| param | [BlanklessLoadingParam](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessloadingparam-i.md) | Yes | The parameter of blankless. For details see {@Link BlanklessLoadingParam}. <br>na |
+| param | [BlanklessLoadingParam](arkts-na-webview-blanklessloadingparam-i.md) | Yes | The parameter of blankless. For details see {@Link BlanklessLoadingParam}. <br>na |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
+| [WebBlanklessErrorCode](arkts-na-webview-webblanklesserrorcode-e.md) | WebBlanklessErrorCode. |
 
 **Error codes:**
 
@@ -3558,7 +3563,7 @@ Set delegate for download. Used to notify the progress of the download triggered
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from web. |
+| delegate | [WebDownloadDelegate](arkts-na-webview-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from web. |
 
 **Error codes:**
 
@@ -3675,7 +3680,7 @@ Set web engine to use HttpDns server to resolve dns.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| secureDnsMode | [SecureDnsMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-securednsmode-e.md) | Yes | using HttpDns. |
+| secureDnsMode | [SecureDnsMode](arkts-na-webview-securednsmode-e.md) | Yes | using HttpDns. |
 | secureDnsConfig | string | Yes | The configuration of the HttpDns server. Must be https protocol and only allow one server to be configured. |
 
 **Error codes:**
@@ -3791,7 +3796,7 @@ Set render process mode of the ArkWeb.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [RenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-renderprocessmode-e.md) | Yes | The render process mode for the ArkWeb. Call [getRenderProcessMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getrenderprocessmode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value *0 indicates the single render subprocess mode, and *1 indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of *RenderProcessMode is passed, the multi-render subprocess mode is used by default. |
+| mode | [RenderProcessMode](arkts-na-webview-renderprocessmode-e.md) | Yes | The render process mode for the ArkWeb. Call [getRenderProcessMode](#getrenderprocessmode) to get the ArkWeb rendering subprocess mode of the current device. The enumerated value *0 indicates the single render subprocess mode, and *1 indicates the multi-render subprocess mode. If an invalid number other than the enumerated value of *RenderProcessMode is passed, the multi-render subprocess mode is used by default. |
 
 **Error codes:**
 
@@ -3820,7 +3825,7 @@ Set whether scroll is allowed; default is true.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Set whether scrolling is allowed {@code true} means scrolling is allowed. {@code false} means scrolling is disabled. |
-| type | [ScrollType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrolltype-e.md) | No | Enable scrolling type When the input parameter enable is false, it indicates that scrolling of the ScrollType type is prohibited. When ScrollType is not specified,it indicates that all types of webpage scrolling are prohibited. When the input parameter enable is true, regardless of whether ScrollType is specified, it indicates that all types of webpage scrolling are allowed. |
+| type | [ScrollType](arkts-na-webview-scrolltype-e.md) | No | Enable scrolling type When the input parameter enable is false, it indicates that scrolling of the ScrollType type is prohibited. When ScrollType is not specified,it indicates that all types of webpage scrolling are prohibited. When the input parameter enable is true, regardless of whether ScrollType is specified, it indicates that all types of webpage scrolling are allowed. |
 
 **Error codes:**
 
@@ -3849,7 +3854,7 @@ Sets whether to switch web scrollbar mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollbarMode | [ScrollbarMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-scrollbarmode-e.md) | Yes | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
+| scrollbarMode | [ScrollbarMode](arkts-na-webview-scrollbarmode-e.md) | Yes | web scrollbar mode, default OVERLAY_LAYOUT_SCROLLBAR. |
 
 ## setServiceWorkerWebSchemeHandler
 
@@ -3872,7 +3877,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scheme | string | Yes | String value for url scheme. |
-| handler | [WebSchemeHandler](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandler-c.md) | Yes | Web scheme handler. |
+| handler | [WebSchemeHandler](arkts-na-webview-webschemehandler-c.md) | Yes | Web scheme handler. |
 
 **Error codes:**
 
@@ -3900,7 +3905,7 @@ Set the site isolation mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SiteIsolationMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-siteisolationmode-e.md) | Yes | The site isolation mode of the application, default value depends on different devices type. |
+| mode | [SiteIsolationMode](arkts-na-webview-siteisolationmode-e.md) | Yes | The site isolation mode of the application, default value depends on different devices type. |
 
 **Error codes:**
 
@@ -3950,7 +3955,7 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebSoftKeyboardBehaviorMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | Yes | The WebSoftKeyboardBehaviorMode of this web. |
+| mode | [WebSoftKeyboardBehaviorMode](arkts-na-webview-websoftkeyboardbehaviormode-e.md) | Yes | The WebSoftKeyboardBehaviorMode of this web. |
 
 **Error codes:**
 
@@ -4088,7 +4093,7 @@ Sets the User-Agent metadata corresponding to the User-Agent. &lt;p&gt;&lt;stron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userAgent | string | Yes | The User-Agent string. |
-| metaData | [UserAgentMetadata](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-useragentmetadata-c.md) | Yes | The UserAgentMetadata for the userAgent. |
+| metaData | [UserAgentMetadata](arkts-na-webview-useragentmetadata-c.md) | Yes | The UserAgentMetadata for the userAgent. |
 
 ## setWebDebuggingAccess
 
@@ -4167,7 +4172,7 @@ Set web destroy mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebDestroyMode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdestroymode-e.md) | Yes | web destroy mode, default NORMAL_MODE. |
+| mode | [WebDestroyMode](arkts-na-webview-webdestroymode-e.md) | Yes | web destroy mode, default NORMAL_MODE. |
 
 ## setWebSchemeHandler
 
@@ -4190,7 +4195,7 @@ Set web scheme handler for specific scheme. This is only used for related web co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scheme | string | Yes | String value for url scheme. |
-| handler | [WebSchemeHandler](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandler-c.md) | Yes | Web scheme handler. |
+| handler | [WebSchemeHandler](arkts-na-webview-webschemehandler-c.md) | Yes | Web scheme handler. |
 
 **Error codes:**
 
@@ -4485,7 +4490,7 @@ Clears the cache occupied by **Web** component based on the specified memory pre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [PressureLevel](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pressurelevel-e.md) | Yes | Pressure level of the memory to be cleared. |
+| level | [PressureLevel](arkts-na-webview-pressurelevel-e.md) | Yes | Pressure level of the memory to be cleared. |
 
 **Error codes:**
 
@@ -4519,7 +4524,7 @@ Wait for the controller to attach a web component until timeout.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
+| Promise&lt;[ControllerAttachState](arkts-na-webview-controllerattachstate-e.md)&gt; | Promise used to return the state of attach. |
 
 ## warmupServiceWorker
 
@@ -4569,8 +4574,8 @@ Web page snapshot. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only scre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [SnapshotInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotinfo-i.md) | Yes | The snapshot info. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotresult-i.md)&gt; | Yes | the callback of snapshot. |
+| info | [SnapshotInfo](arkts-na-webview-snapshotinfo-i.md) | Yes | The snapshot info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-na-webview-snapshotresult-i.md)&gt; | Yes | the callback of snapshot. |
 
 ## zoom
 

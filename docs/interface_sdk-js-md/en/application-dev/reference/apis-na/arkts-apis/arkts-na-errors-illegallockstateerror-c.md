@@ -12,6 +12,11 @@ Represents error that is thrown when lock is in an illegal state
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

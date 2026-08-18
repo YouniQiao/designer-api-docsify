@@ -1,5 +1,10 @@
 # finishLogCollected
 
+## 导入模块
+
+```TypeScript
+```
+
 ## finishLogCollected
 
 ```TypeScript

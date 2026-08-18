@@ -1,5 +1,10 @@
 # deleteInvalidForms（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deleteInvalidForms
 
 ```TypeScript
@@ -23,7 +28,7 @@ function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<int>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 有效卡片列表。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。当根据列表删除应用程序的无效卡片成功，error为undefined，data为删除的卡片个数；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。当根据列表删除应用程序的无效卡片成功，error为undefined，data为删除的卡片个数；否则为错误对象。 |
 
 **错误码：**
 

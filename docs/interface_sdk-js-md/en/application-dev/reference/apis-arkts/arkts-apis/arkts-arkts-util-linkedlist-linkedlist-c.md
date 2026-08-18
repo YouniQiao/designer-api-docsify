@@ -11,7 +11,8 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 ## Modules to Import
 
 ```TypeScript
-import { LinkedList } from 'LinkedList';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator

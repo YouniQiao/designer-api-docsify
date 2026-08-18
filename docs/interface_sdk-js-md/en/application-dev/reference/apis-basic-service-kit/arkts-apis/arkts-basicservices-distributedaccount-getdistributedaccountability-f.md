@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from 'distributedAccount';
+import { distributedAccount } from '@kit.BasicServicesKit';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## getDistributedAccountAbility

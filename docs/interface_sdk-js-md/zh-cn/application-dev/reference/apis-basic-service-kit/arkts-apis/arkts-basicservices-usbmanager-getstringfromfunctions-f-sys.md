@@ -1,12 +1,17 @@
 # getStringFromFunctions（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getStringFromFunctions
 
 ```TypeScript
 function getStringFromFunctions(funcs: FunctionType): string
 ```
 
-在设备模式下，将数字掩码形式的USB功能列表转化为字符串。
+在设备模式下，将数字掩码形式的USB功能列表转换为字符串。适用于需要将当前USB功能状态以字符串形式显示或保存的场景，如在日志中记录当前功能配置、在UI界面展示当前功能等。
 
 **起始版本：** 12
 
@@ -22,13 +27,13 @@ function getStringFromFunctions(funcs: FunctionType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | FunctionType | 是 | 功能列表对应的数字掩码。 |
+| funcs | FunctionType | 是 | 功能列表对应的数字掩码，可通过位运算组合多个功能。部分功能值当前暂不支持，具体参见 [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#functiontype系统接口)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 转化后的字符串形式的功能列表。 |
+| string | 转换后的字符串形式的功能列表。 |
 
 **错误码：**
 

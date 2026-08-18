@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TabTitleBar } from 'TabTitleBar';
-import { TabTitleBarMenuItem } from 'TabTitleBarMenuItem';
-import { TabTitleBarTabItem } from 'TabTitleBarTabItem';
+import { TabTitleBar, TabTitleBarMenuItem, TabTitleBarTabItem } from '@kit.ArkUI';
 ```
 
 ## Summary

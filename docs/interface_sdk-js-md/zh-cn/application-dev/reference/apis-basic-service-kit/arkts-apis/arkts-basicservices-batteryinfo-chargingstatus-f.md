@@ -1,5 +1,10 @@
 # chargingStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## chargingStatus
 
 ```TypeScript

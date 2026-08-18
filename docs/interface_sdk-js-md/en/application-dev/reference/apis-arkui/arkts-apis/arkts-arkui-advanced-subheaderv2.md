@@ -3,13 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SubHeaderV2IconType } from 'SubHeaderV2IconType';
-import { SubHeaderV2Title } from 'SubHeaderV2Title';
-import { SubHeaderV2Select } from 'SubHeaderV2Select';
-import { SubHeaderV2 } from 'SubHeaderV2';
-import { SubHeaderV2OperationType } from 'SubHeaderV2OperationType';
-import { SubHeaderV2OperationItem } from 'SubHeaderV2OperationItem';
-import { SubHeaderV2OperationItemType } from 'SubHeaderV2OperationItemType';
+import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
 ## Summary

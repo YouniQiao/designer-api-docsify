@@ -8,6 +8,11 @@ appRecovery模块提供了应用在故障状态下的恢复能力。 > **说明�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

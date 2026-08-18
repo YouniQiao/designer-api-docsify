@@ -11,7 +11,7 @@ The MediaAssetManager class is used for manipulating the read and write operatio
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelRequest

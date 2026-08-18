@@ -10,6 +10,11 @@ The information returned when the Swiper content changes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript

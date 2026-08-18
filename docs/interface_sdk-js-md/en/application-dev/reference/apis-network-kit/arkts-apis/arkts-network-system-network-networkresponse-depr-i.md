@@ -8,6 +8,11 @@ This module provides the Network Response.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## metered
 
 ```TypeScript

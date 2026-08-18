@@ -13,7 +13,7 @@ Represents the authorization information.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## allowedOpenCount

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'eap';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## startEthEap

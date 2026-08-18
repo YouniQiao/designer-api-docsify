@@ -1,5 +1,10 @@
 # isBandTypeSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isBandTypeSupported
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getPhotoAccessHelper
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPhotoAccessHelper
 
 ```TypeScript

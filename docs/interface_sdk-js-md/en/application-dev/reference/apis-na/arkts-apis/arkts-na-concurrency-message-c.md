@@ -10,6 +10,11 @@ Represents a message that can be sent to a MessageHandler for processing
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

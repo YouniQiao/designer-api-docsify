@@ -11,7 +11,7 @@ Before calling any of the following APIs to manage the calendar, you must use [g
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## createCalendar

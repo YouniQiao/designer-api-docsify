@@ -8,6 +8,11 @@ Defines the Gesture Events.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onClick
 
 ```TypeScript

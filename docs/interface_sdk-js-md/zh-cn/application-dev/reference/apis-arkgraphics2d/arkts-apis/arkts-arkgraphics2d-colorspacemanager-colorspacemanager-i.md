@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getColorSpaceName
 
 ```TypeScript

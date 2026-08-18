@@ -1,5 +1,10 @@
 # getPss
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPss
 
 ```TypeScript

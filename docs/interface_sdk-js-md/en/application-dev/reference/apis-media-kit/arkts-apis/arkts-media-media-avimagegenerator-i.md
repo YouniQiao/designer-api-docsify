@@ -11,7 +11,7 @@ AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to o
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## fetchFrameByTime

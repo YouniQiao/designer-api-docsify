@@ -13,7 +13,7 @@ Invoke options for function execution.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from 'functionManager';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## context

@@ -8,6 +8,11 @@ hilog日志系统，使应用/服务可以按照指定级别、标识和格式�
 
 **系统能力：** SystemCapability.HiviewDFX.HiLog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

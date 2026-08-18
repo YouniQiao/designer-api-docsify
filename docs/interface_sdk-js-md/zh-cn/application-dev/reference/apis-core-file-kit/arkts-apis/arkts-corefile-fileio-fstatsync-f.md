@@ -1,5 +1,10 @@
 # fstatSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## fstatSync
 
 ```TypeScript

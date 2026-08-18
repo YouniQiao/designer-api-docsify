@@ -1,5 +1,10 @@
 # createAudioPlayer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createAudioPlayer
 
 ```TypeScript

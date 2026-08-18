@@ -13,7 +13,8 @@ Provides APIs for device-cloud data sharing, including sharing or unsharing data
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'cloudData';
+import { cloudData } from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## Summary

@@ -11,7 +11,7 @@ Represents the connection state information of the proxy channel.
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from 'proxyChannelManager';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## channelId

@@ -10,6 +10,11 @@ Defines the target info.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## componentId
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # @ohos.app.ability.PrintExtensionAbility
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 类

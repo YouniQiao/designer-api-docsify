@@ -1,5 +1,10 @@
 # getAllowedUsbDevices
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllowedUsbDevices
 
 ```TypeScript

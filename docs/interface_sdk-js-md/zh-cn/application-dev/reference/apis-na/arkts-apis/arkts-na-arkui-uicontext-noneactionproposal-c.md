@@ -2,7 +2,7 @@
 
 类NoneActionProposal。
 
-**继承/实现关系：** NoneActionProposal extends [BaseGestureHandlingProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
+**继承/实现关系：** NoneActionProposal extends [BaseGestureHandlingProposal](arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md#basegesturehandlingproposal)
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,11 @@
 <!--Device-unnamed-export declare class NoneActionProposal--><!--Device-unnamed-export declare class NoneActionProposal-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## constructor
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionAbility } from 'SelectionExtensionAbility';
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

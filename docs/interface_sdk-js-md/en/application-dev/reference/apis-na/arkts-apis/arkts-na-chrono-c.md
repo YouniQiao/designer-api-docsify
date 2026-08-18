@@ -10,6 +10,11 @@ Utility class for time measurement and clock access.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getCpuTime
 
 ```TypeScript

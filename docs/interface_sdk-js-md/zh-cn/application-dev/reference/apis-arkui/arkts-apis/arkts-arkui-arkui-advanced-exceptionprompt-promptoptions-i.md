@@ -8,6 +8,11 @@ PromptOptions定义options的类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## actionText
 
 ```TypeScript

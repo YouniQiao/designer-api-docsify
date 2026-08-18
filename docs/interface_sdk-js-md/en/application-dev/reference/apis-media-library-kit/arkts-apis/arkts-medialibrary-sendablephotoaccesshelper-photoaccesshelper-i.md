@@ -13,7 +13,7 @@ Helper functions to access photos and albums.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'sendablePhotoAccessHelper';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAsset

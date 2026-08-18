@@ -1,0 +1,50 @@
+# AVCallState
+
+Used to indicate the call state of the current call.
+
+**Since:** 23
+
+<!--Device-avSession-interface AVCallState--><!--Device-avSession-interface AVCallState-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## muted
+
+```TypeScript
+muted: boolean
+```
+
+Current muted status.
+
+**Type:** boolean
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCallState-muted: boolean--><!--Device-AVCallState-muted: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+## state
+
+```TypeScript
+state: CallState
+```
+
+Current call state. See [CallState](arkts-avsession-avsession-callstate-e.md#callstate)
+
+**Type:** CallState
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVCallState-state: CallState--><!--Device-AVCallState-state: CallState-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core

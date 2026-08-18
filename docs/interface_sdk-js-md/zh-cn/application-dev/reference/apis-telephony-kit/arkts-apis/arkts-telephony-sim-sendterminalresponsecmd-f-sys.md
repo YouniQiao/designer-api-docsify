@@ -1,5 +1,10 @@
 # sendTerminalResponseCmd（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sendTerminalResponseCmd
 
 ```TypeScript
@@ -24,7 +29,7 @@ Send terminal response command to SIM card.
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | cmd | string | 是 | Indicates sending command. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The callback of sendTerminalResponseCmd. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback of sendTerminalResponseCmd. |
 
 **错误码：**
 

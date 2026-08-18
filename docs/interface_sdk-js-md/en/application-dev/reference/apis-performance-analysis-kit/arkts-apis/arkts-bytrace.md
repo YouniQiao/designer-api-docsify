@@ -24,6 +24,11 @@
 
 **System capability:** SystemCapability.HiviewDFX.HiTrace
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

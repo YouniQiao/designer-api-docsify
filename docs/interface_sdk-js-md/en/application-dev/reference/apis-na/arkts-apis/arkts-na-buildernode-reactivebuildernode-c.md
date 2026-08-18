@@ -33,7 +33,7 @@ Build the ReactiveBuilderNode with the builder.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | builder | CustomBuilder | Yes | Defines the builder that will be called to build the node. |
-| options | [BuildOptions](arkts-na-buildernode-buildoptions-i.md) | No | Defines the options that will be used when building. |
+| options | [BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md) | No | Defines the options that will be used when building. |
 
 ## constructor
 
@@ -58,7 +58,7 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveBuilderNode |
-| options | [RenderOptions](arkts-na-buildernode-renderoptions-i.md) | No | Render options of the ReactiveBuilderNode |
+| options | [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md) | No | Render options of the ReactiveBuilderNode |
 
 ## dispose
 
@@ -166,7 +166,7 @@ Dispatch the input event to the FrameNode in the current ReactiveBuilderNode. po
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InputEventType](arkts-na-inputeventtype-t.md) | Yes | The event which will be sent. |
+| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | Yes | The event which will be sent. |
 
 **Return value:**
 
@@ -196,7 +196,7 @@ Dispatch event to targetNode with competition strategy. postInputEventWithStrate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InputEventType](arkts-na-inputeventtype-t.md) | Yes | The event which will be sent to the targetNode. |
+| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | Yes | The event which will be sent to the targetNode. |
 | competitionStrategy | CompetitionStrategy | No | The competition strategy. |
 
 **Return value:**

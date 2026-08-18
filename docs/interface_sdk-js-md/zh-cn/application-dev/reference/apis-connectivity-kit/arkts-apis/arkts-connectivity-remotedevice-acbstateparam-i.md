@@ -8,6 +8,11 @@ ACB连接状态参数。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+```
+
 ## address
 
 ```TypeScript

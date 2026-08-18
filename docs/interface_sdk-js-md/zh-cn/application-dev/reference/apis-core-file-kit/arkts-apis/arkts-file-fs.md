@@ -2,6 +2,11 @@
 
 FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 命名空间
@@ -28,7 +33,7 @@ FileIO
 | [copy](arkts-corefile-file-fs-copy-f.md#copy) | 拷贝文件或者目录，使用callback异步回调。 支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。 跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copydir) | 复制源目录至目标路径下，使用promise异步回调。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copydir) | 复制源目录至目标路径下，使用callback异步回调。 |
-| [copyDir](arkts-corefile-file-fs-copydir-f.md#copydir) | 复制源目录至目标路径下，使用callback异步回调。 如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array\&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md#conflictfiles)&gt;形式提供。 |
+| [copyDir](arkts-corefile-file-fs-copydir-f.md#copydir) | 复制源目录至目标路径下，使用callback异步回调。 如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array\&lt; [ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md#conflictfiles)&gt;形式提供。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copydir) | 复制源目录至目标路径下，可设置复制模式。使用callback异步回调。 |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copydir) | 复制源目录至目标路径下，可设置复制模式。使用callback异步回调。 |
 | [copyDirSync](arkts-corefile-file-fs-copydirsync-f.md#copydirsync) | 以同步方法复制源目录至目标路径下。 |
@@ -161,7 +166,7 @@ FileIO
 | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | 可选项类型，支持 createRandomAccessFile 接口使用。 |
 | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | 可选项类型，支持read接口使用。 |
 | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | 可选项类型，支持 createReadStream 接口使用。 |
-| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 可选项类型，支持readText接口使用，ReadTextOptions继承至[ReadOptions](arkts-corefile-file-fs-readoptions-i.md#readoptions)。 |
+| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | 可选项类型，支持readText接口使用，ReadTextOptions继承至[ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md#readoptions)。 |
 | [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | 文件读取迭代器。在调用ReaderIterator的方法前，需要先通过readLines方法（同步或异步）来构建一个ReaderIterator实例。 |
 | [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果，支持ReaderIterator接口使用。 |
 | [Stat](arkts-corefile-file-fs-stat-i.md) | 文件具体信息，在调用Stat的方法前，需要先通过stat()方法（同步或异步）构建一个 Stat实例。 |
@@ -169,7 +174,7 @@ FileIO
 | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 事件类 |
 | [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | 事件监听类。 |
 | [Watcher](arkts-corefile-file-fs-watcher-i.md) | 文件目录变化监听对象。由createWatcher接口获得。 |
-| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 可选项类型，支持write接口使用，WriteOptions继承至[Options](arkts-corefile-file-fs-options-i.md#options)。 |
+| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | 可选项类型，支持write接口使用，WriteOptions继承至[Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#options)。 |
 | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | 可选项类型，支持 createWriteStream 接口使用。 |
 
 ### 枚举

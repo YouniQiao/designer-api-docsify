@@ -11,7 +11,7 @@ Options for creating an image or video asset. The title must meet the following 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## subtype

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { launcherBundleManager } from 'launcherBundleManager';
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfoSync

@@ -1,5 +1,10 @@
 # queryModuleUsageRecords（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryModuleUsageRecords
 
 ```TypeScript
@@ -23,7 +28,7 @@ function queryModuleUsageRecords(maxNum: int, callback: AsyncCallback<Array<HapM
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | maxNum | int | 是 | 使用记录的条数，取值范围为[1，1000]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | 是 | 回调方法。 当查询成功，err为undefined，data为FA模型下各应用不用Hap包的使用记录（不超过maxNum条）；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | 是 | 回调方法。 当查询成功，err为undefined，data为FA模型下各应用不用Hap包的使用记录（不超过maxNum条）；否则为错误对象。 |
 
 **错误码：**
 
@@ -145,7 +150,7 @@ function queryModuleUsageRecords(callback: AsyncCallback<Array<HapModuleInfo>>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为FA模型下各应用不用Hap包的使用记录（不超过1000条）；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;HapModuleInfo&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为FA模型下各应用不用Hap包的使用记录（不超过1000条）；否则为错误对象。 |
 
 **错误码：**
 

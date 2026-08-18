@@ -11,7 +11,7 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'PiPWindow';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## Summary

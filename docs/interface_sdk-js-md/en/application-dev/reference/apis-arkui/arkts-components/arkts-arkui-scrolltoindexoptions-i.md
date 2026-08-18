@@ -8,6 +8,11 @@ Provides parameters for scrolling to a specific index.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## extraOffset
 
 ```TypeScript

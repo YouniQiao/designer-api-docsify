@@ -12,6 +12,11 @@ Want是对象间信息传递的载体，可以用于应用组件间的信息传�
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
+## 导入模块
+
+```TypeScript
+```
+
 ## abilityName
 
 ```TypeScript

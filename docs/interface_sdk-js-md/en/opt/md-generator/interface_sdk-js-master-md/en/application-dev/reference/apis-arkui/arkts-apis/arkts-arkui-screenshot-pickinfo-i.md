@@ -1,0 +1,50 @@
+# PickInfo
+
+Describes the screenshot options.
+
+**Since:** 23
+
+<!--Device-screenshot-interface PickInfo--><!--Device-screenshot-interface PickInfo-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## pickRect
+
+```TypeScript
+pickRect: Rect
+```
+
+Region of the screen to capture.
+
+**Type:** Rect
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PickInfo-pickRect: Rect--><!--Device-PickInfo-pickRect: Rect-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## pixelMap
+
+```TypeScript
+pixelMap: image.PixelMap
+```
+
+PixelMap object of the captured image.
+
+**Type:** image.PixelMap
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PickInfo-pixelMap: image.PixelMap--><!--Device-PickInfo-pixelMap: image.PixelMap-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core

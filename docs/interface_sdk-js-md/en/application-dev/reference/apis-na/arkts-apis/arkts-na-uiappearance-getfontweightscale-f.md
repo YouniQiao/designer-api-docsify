@@ -1,5 +1,10 @@
 # getFontWeightScale
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getFontWeightScale
 
 ```TypeScript

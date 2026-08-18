@@ -8,6 +8,11 @@ Provides button style configuration for the dialog box. > **NOTE：**> > To stan
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## action
 
 ```TypeScript

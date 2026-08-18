@@ -10,6 +10,11 @@ USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-queryd
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## productId
 
 ```TypeScript

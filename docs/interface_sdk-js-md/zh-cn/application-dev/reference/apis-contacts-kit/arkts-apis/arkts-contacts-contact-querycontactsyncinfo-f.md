@@ -1,5 +1,10 @@
 # queryContactSyncInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryContactSyncInfo
 
 ```TypeScript

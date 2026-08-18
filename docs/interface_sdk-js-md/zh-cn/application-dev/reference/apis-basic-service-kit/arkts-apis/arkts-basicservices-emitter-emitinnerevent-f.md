@@ -1,5 +1,10 @@
 # emit_InnerEvent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## emit_InnerEvent
 
 ```TypeScript

@@ -8,6 +8,11 @@ ChipGroupV2Item定义了ChipGroupV2组件中的单个操作块项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

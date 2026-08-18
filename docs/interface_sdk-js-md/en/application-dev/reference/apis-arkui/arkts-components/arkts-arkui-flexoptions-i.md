@@ -8,6 +8,11 @@ Describes the layout and alignment of child components within the **Flex** compo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## alignContent
 
 ```TypeScript

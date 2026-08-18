@@ -15,7 +15,8 @@ Defines the options for a **DateTimeOptions** object. Since API version 9, the *
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'intl';
+import { intl } from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## dateStyle

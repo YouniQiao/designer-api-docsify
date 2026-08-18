@@ -1,5 +1,10 @@
 # off_willDraw
 
+## 导入模块
+
+```TypeScript
+```
+
 ## off_willDraw
 
 ```TypeScript
@@ -23,6 +28,6 @@ export function off(type: 'willDraw', context: UIContext, callback?: Callback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'willDraw' | 是 | 监听事件，固定为'willDraw'，即是否将要绘制。 |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面的范围。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要被注销的回调函数。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面的范围。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要被注销的回调函数。 |
 

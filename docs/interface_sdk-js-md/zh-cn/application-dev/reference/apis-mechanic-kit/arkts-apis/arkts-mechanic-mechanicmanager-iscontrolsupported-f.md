@@ -1,5 +1,10 @@
 # isControlSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isControlSupported
 
 ```TypeScript

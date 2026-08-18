@@ -8,6 +8,11 @@ Sets the options used to build the **TextTimer** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## controller
 
 ```TypeScript

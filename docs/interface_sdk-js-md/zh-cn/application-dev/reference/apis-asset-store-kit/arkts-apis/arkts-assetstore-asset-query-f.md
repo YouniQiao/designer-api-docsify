@@ -1,5 +1,10 @@
 # query
 
+## 导入模块
+
+```TypeScript
+```
+
 ## query
 
 ```TypeScript

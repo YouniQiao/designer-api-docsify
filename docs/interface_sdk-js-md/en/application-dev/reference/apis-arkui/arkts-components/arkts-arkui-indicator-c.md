@@ -8,6 +8,11 @@ Sets the distance between the navigation indicator and the **Swiper** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## bottom
 
 ```TypeScript

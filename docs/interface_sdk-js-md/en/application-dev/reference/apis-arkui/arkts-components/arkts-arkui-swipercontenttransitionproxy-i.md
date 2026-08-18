@@ -8,6 +8,11 @@ Implements the proxy object returned during the execution of the custom page tra
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## finishTransition
 
 ```TypeScript

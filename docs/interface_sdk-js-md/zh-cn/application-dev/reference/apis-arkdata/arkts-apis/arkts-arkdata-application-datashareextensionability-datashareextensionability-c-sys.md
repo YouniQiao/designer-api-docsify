@@ -10,6 +10,11 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## batchInsert
 
 ```TypeScript
@@ -34,7 +39,7 @@ batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCall
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要批量插入的数据的路径。 |
 | valueBuckets | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | 是 | 指示要批量插入的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。返回插入的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回插入的数据记录数。 |
 
 **示例**
 
@@ -85,7 +90,7 @@ batchUpdate?(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | operations | Record&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | 是 | 要更新数据的路径、筛选条件和数据集合。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | 是 | 回调函数。返回更新的数据记录数集合，更新失败的UpdateOperation的数据记录数为-1。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | 是 | 回调函数。返回更新的数据记录数集合，更新失败的UpdateOperation的数据记录数为-1。 |
 
 **示例**
 
@@ -145,7 +150,7 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要删除的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。返回已删除的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回已删除的数据记录数。 |
 
 **示例**
 
@@ -192,7 +197,7 @@ denormalizeUri?(uri: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示服务端使用的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。如果反规范化成功，则返回反规范化的URI；如果无需进行反规范化，则返回原始URI；若不支持则返回空。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果反规范化成功，则返回反规范化的URI；如果无需进行反规范化，则返回原始URI；若不支持则返回空。 |
 
 **示例**
 
@@ -239,7 +244,7 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要插入的数据的路径。 |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 指示要插入的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。返回插入数据记录的索引。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回插入数据记录的索引。 |
 
 **示例**
 
@@ -288,7 +293,7 @@ normalizeUri?(uri: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示用户传入的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md#uri)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。如果支持URI规范化，则返回规范化URI，否则返回空。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果支持URI规范化，则返回规范化URI，否则返回空。 |
 
 **示例**
 
@@ -334,7 +339,7 @@ DataShare客户端连接DataShareExtensionAbility服务端时，服务端回调�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型信息，包括Ability名称、Bundle名称等。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。无返回值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。无返回值。 |
 
 **示例**
 
@@ -398,7 +403,7 @@ query?(
 | uri | string | 是 | 指示要查询的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件。 |
 | columns | Array&lt;string&gt; | 是 | 指示要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | 是 | 回调函数。返回查询到的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。返回查询到的结果集。 |
 
 **示例**
 
@@ -455,7 +460,7 @@ update?(
 | uri | string | 是 | 指示要更新的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件。 |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 指示要更新的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。返回更新的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回更新的数据记录数。 |
 
 **示例**
 

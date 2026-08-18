@@ -8,6 +8,11 @@ Provides configuration options for the **Rating** component. > **NOTE：**> > To
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## indicator
 
 ```TypeScript

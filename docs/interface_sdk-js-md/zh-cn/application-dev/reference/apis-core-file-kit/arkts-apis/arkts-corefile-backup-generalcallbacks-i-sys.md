@@ -10,6 +10,11 @@
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onProcess
 
 ```TypeScript
@@ -106,7 +111,7 @@ onAllBundlesEnd: AsyncCallback<undefined>
 
 所有应用的备份或恢复完成或异常中止时触发的回调。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;undefined&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
 **起始版本：** 23
 
@@ -124,7 +129,7 @@ onBackupServiceDied: Callback<undefined>
 
 备份服务异常死亡时触发的回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;undefined&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
 
 **起始版本：** 23
 
@@ -160,7 +165,7 @@ onBundleBegin: AsyncCallback<string, BundlePara>
 
 应用备份或恢复开始时触发的回调。 第一个字符串参数表示应用名称。 发生BusinessError时，第二个字符串参数 返回对应的应用名称。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
 
 **起始版本：** 23
 
@@ -180,7 +185,7 @@ onBundleEnd: AsyncCallback<string, BundlePara>
 
 应用备份或恢复成功结束或异常中止时触发的回调。 第一个字符串参数表示应用名称。 发生BusinessError时，第二个字符串参数 返回对应的应用名称。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
 
 **起始版本：** 23
 
@@ -200,7 +205,7 @@ onFileReady: AsyncCallback<File>
 
 备份服务向客户端发送文件时触发的回调。 File参数表示发送给客户端的文件。 返回的文件归备份服务所有，客户端关闭文件句柄后由备份服务清理。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;File&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
 
 **起始版本：** 23
 
@@ -238,7 +243,7 @@ onMigrateResult?: AsyncCallback<string, void | string>
 
 文件迁移流程结束时触发的回调。 第一个字符串参数表示应用名称。 发生BusinessError时，第二个字符串参数 返回对应的应用名称。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, void \| string&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **起始版本：** 26.0.0
 

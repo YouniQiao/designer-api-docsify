@@ -1,5 +1,10 @@
 # openSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## openSync
 
 ```TypeScript

@@ -13,7 +13,7 @@ The module provides pure type definitions for common capabilities within MDM Kit
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'common';
+import { common } from '@kit.MDMKit';
 ```
 
 ## Summary

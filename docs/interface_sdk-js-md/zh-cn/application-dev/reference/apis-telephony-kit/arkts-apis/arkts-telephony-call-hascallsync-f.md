@@ -1,5 +1,10 @@
 # hasCallSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasCallSync
 
 ```TypeScript

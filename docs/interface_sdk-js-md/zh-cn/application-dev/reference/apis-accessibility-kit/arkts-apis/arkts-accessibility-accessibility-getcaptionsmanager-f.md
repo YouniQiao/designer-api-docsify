@@ -1,5 +1,10 @@
 # getCaptionsManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCaptionsManager
 
 ```TypeScript

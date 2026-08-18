@@ -11,7 +11,8 @@ Compression and decompression return value information.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'zlib';
+import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## destLen

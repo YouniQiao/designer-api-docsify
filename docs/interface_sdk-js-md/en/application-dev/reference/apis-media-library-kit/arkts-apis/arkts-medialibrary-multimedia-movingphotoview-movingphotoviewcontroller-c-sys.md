@@ -11,11 +11,7 @@ Defines the MovingPhotoView controller.
 ## Modules to Import
 
 ```TypeScript
-import { MovingPhotoView } from 'MovingPhotoView';
-import { MovingPhotoViewController } from 'MovingPhotoViewController';
-import { MovingPhotoViewAttribute } from 'MovingPhotoViewAttribute';
-import { PixelMapFormat } from 'PixelMapFormat';
-import { DynamicRangeMode } from 'DynamicRangeMode';
+import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, PixelMapFormat, DynamicRangeMode } from '@kit.MediaLibraryKit';
 ```
 
 ## enableAutoPlay

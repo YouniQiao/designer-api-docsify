@@ -10,6 +10,11 @@ An ordered collections of bit values, which are either 0 or 1. If multiple threa
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript
@@ -180,7 +185,7 @@ Returns the bit values in a range of indices in a bit vector.
 
 | Type | Description |
 | --- | --- |
-| [BitVector](arkts-na-collections-bitvector-c.md) | The BitVector type, returns the bit values in a range of indices in a bit vector. |
+| [BitVector](../../apis-arkts/arkts-apis/arkts-arkts-collections-bitvector-c.md) | The BitVector type, returns the bit values in a range of indices in a bit vector. |
 
 **Error codes:**
 

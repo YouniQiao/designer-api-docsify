@@ -1,5 +1,10 @@
 # isFunctionKeyEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFunctionKeyEnabled
 
 ```TypeScript

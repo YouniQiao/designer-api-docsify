@@ -11,7 +11,9 @@ Provides the configuration information of an upload or download task.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'request';
+import { request } from '@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## action

@@ -8,6 +8,11 @@ NativeMediaPlayerBridge 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webvie
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enterFullscreen
 
 ```TypeScript

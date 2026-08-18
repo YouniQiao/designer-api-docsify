@@ -1,5 +1,10 @@
 # setDomainAccountPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setDomainAccountPolicy
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # addHiddenSettingsMenu
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addHiddenSettingsMenu
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getScanInfoList
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getScanInfoList
 
 ```TypeScript

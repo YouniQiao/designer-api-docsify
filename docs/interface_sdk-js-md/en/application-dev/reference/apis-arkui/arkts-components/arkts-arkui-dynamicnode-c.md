@@ -8,6 +8,11 @@ Define DynamicNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onMove
 
 ```TypeScript

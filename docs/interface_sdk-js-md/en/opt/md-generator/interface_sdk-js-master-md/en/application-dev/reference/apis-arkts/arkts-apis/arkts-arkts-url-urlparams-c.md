@@ -1,0 +1,572 @@
+# URLParams
+
+The URLParams interface defines some practical methods to process URL query strings.
+
+**Since:** 23
+
+<!--Device-url-class URLParams--><!--Device-url-class URLParams-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## Modules to Import
+
+```TypeScript
+```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<[string, string]>
+```
+
+Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-$_iterator(): IterableIterator<[string, string]>--><!--Device-URLParams-$_iterator(): IterableIterator<[string, string]>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): IterableIterator<[string, string]>
+```
+
+Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields ofeach array are the key and value respectively.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>--><!--Device-URLParams-[Symbol.iterator](): IterableIterator<[string, string]>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
+
+**Examples**
+
+```TypeScript
+const paramsObject = new url.URLParams('fod=bay&edg=bap');
+let iter = paramsObject[Symbol.iterator]();
+for (let pair of iter) {
+  console.info(pair[0] + ', ' + pair[1]);
+}
+// fod, bay
+// edg, bap
+```
+
+## append
+
+```TypeScript
+append(name: string, value: string): void
+```
+
+Appends a key-value pair into the query string.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-append(name: string, value: string): void--><!--Device-URLParams-append(name: string, value: string): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| value | string | Yes |
+
+**Examples**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+paramsObject.append('fod', '3');
+```
+
+## constructor
+
+```TypeScript
+constructor(init?: string[][] | Record<string, string> | string | URLParams)
+```
+
+A constructor used to create a URLParams instance.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: string[][] | Record<string, string> | string | URLParams)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| init | string[][] \| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No |
+
+**Examples**
+
+```TypeScript
+// Construct a URLParams object in string[][] mode.
+let objectParams = new url.URLParams([ ['user1', 'abc1'], ['query2', 'first2'], ['query3', 'second3'] ]);
+// Construct a URLParams object in Record<string, string> mode.
+let objectParams1 = new url.URLParams({"fod" : '1' , "bard" : '2'});
+// Construct a URLParams object in string mode.
+let objectParams2 = new url.URLParams('?fod=1&bard=2');
+// Construct a URLParams object using the search property of the url object.
+let urlObject = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams3 = new url.URLParams(urlObject.search);
+// Construct a URLParams object using the params property of the url object.
+let urlObject1 = url.URL.parseURL('https://developer.mozilla.org/?fod=1&bard=2');
+let objectParams4 = urlObject1.params;
+```
+
+## constructor
+
+```TypeScript
+constructor(init?: [string, string][] | Record<string, string> | string | URLParams)
+```
+
+A parameterized constructor used to create an URLParams instance. As the input parameter of the constructor function, init supports four types. The input parameter is a character string two-dimensional array. The input parameter is the object list. The input parameter is a character string. The input parameter is the URLParams object.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-constructor(init?: [string, string][] | Record<string, string> | string | URLParams)--><!--Device-URLParams-constructor(init?: [string, string][] | Record<string, string> | string | URLParams)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| init | [string, string][] \| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No |
+
+## delete
+
+```TypeScript
+delete(name: string): void
+```
+
+Deletes key-value pairs of the specified key.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-delete(name: string): void--><!--Device-URLParams-delete(name: string): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+
+**Examples**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+paramsObject.delete('fod');
+```
+
+## entries
+
+```TypeScript
+entries(): IterableIterator<[string, string]>
+```
+
+Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and the first and second fields of each array are the key and value respectively.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-entries(): IterableIterator<[string, string]>--><!--Device-URLParams-entries(): IterableIterator<[string, string]>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
+
+**Examples**
+
+```TypeScript
+let paramsObject = new url.URLParams("keyName1=valueName1&keyName2=valueName2");
+let pair = paramsObject.entries();
+for (let item of pair) {
+    console.info(item[0] + '=' + item[1]);
+}
+// keyName1=valueName1
+// keyName2=valueName2
+```
+
+## forEach
+
+```TypeScript
+forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void
+```
+
+Callback functions are used to traverse key-value pairs on the URLParams instance object.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void--><!--Device-URLParams-forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => void, thisArg?: Object): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | (value: string, key: string, searchParams: URLParams) = & gt; void | Yes |
+| thisArg | Object | No |
+
+**Examples**
+
+```TypeScript
+const myURLObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+myURLObject.params.forEach((value, name, searchParams) => {
+    console.info(name, value, myURLObject.params === searchParams);
+});
+```
+
+## forEach
+
+```TypeScript
+forEach(callbackFn: UrlCbFn): void
+```
+
+Iterates over a collection (e.g., URLs) and executes a callback function for each element.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-forEach(callbackFn: UrlCbFn): void--><!--Device-URLParams-forEach(callbackFn: UrlCbFn): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [UrlCbFn](arkts-arkts-url-urlcbfn-t.md) | Yes |
+
+## get
+
+```TypeScript
+get(name: string): string | null
+```
+
+Obtains the value of the first key-value pair based on the specified key.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-get(name: string): string | null--><!--Device-URLParams-get(name: string): string | null-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+**Examples**
+
+```TypeScript
+let paramsObject = new url.URLParams('name=Jonathan&age=18');
+let name = paramsObject.get("name"); // is the string "Jonathan"
+let age = paramsObject.get("age"); // is the string "18"
+let getObj = paramsObject.get("abc"); // undefined
+```
+
+## get
+
+```TypeScript
+get(name: string): string | undefined
+```
+
+Obtains the value of the first key-value pair based on the specified key.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-URLParams-get(name: string): string | undefined--><!--Device-URLParams-get(name: string): string | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## getAll
+
+```TypeScript
+getAll(name: string): string[]
+```
+
+Obtains all the values based on the specified key.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-getAll(name: string): string[]--><!--Device-URLParams-getAll(name: string): string[]-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string[] |
+
+**Examples**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLParams(urlObject.search.slice(1));
+params.append('fod', '3'); // Add a second value for the fod parameter.
+console.info(params.getAll('fod').toString()) // Output ["1","3"].
+```
+
+## has
+
+```TypeScript
+has(name: string): boolean
+```
+
+Checks whether a key has a value.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-has(name: string): boolean--><!--Device-URLParams-has(name: string): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+**Examples**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+let result = paramsObject.has('bard');
+```
+
+## keys
+
+```TypeScript
+keys(): IterableIterator<string>
+```
+
+Obtains an ES6 iterator that contains the keys of all the key-value pairs.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-keys(): IterableIterator<string>--><!--Device-URLParams-keys(): IterableIterator<string>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
+
+**Examples**
+
+```TypeScript
+let paramsObject = new url.URLParams("key1=value1&key2=value2");
+let keys = paramsObject.keys();
+for (let key of keys) {
+  console.info(key);
+}
+// key1
+// key2
+```
+
+## set
+
+```TypeScript
+set(name: string, value: string): void
+```
+
+Sets the value for a key. If key-value pairs matching the specified key exist, the value of the first key- value pair will be set to the specified value and other key-value pairs will be deleted. Otherwise, the key-value pair will be appended to the query string.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-set(name: string, value: string): void--><!--Device-URLParams-set(name: string, value: string): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| name | string | Yes |
+| value | string | Yes |
+
+**Examples**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let paramsObject = new url.URLParams(urlObject.search.slice(1));
+paramsObject.set('baz', '3'); // Add a third parameter.
+```
+
+## sort
+
+```TypeScript
+sort(): void
+```
+
+Sorts all key-value pairs contained in this object based on the Unicode code points of the keys and returns undefined. This method uses a stable sorting algorithm, that is, the relative order between key-value pairs with equal keys is retained.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-sort(): void--><!--Device-URLParams-sort(): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Examples**
+
+```TypeScript
+let paramsObject = new url.URLParams("c=3&a=9&b=4&d=2"); // Create a test URLParams object
+paramsObject.sort(); // Sort the key/value pairs
+console.info(paramsObject.toString()); // Display the sorted query string // Output a=9&b=4&c=3&d=2
+```
+
+## toString
+
+```TypeScript
+toString(): string
+```
+
+Obtains search parameters that are serialized as a string and, if necessary, percent-encodes the characters in the string.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-toString(): string--><!--Device-URLParams-toString(): string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+**Examples**
+
+```TypeScript
+let urlObject = url.URL.parseURL('https://developer.exampleUrl/?fod=1&bard=2');
+let params = new url.URLParams(urlObject.search.slice(1));
+params.append('fod', '3');
+console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
+```
+
+## values
+
+```TypeScript
+values(): IterableIterator<string>
+```
+
+Obtains an ES6 iterator that contains the values of all the key-value pairs.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-URLParams-values(): IterableIterator<string>--><!--Device-URLParams-values(): IterableIterator<string>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
+
+**Examples**
+
+```TypeScript
+let paramsObject = new url.URLParams("key1=value1&key2=value2");
+let values = paramsObject.values();
+for (let value of values) {
+  console.info(value);
+}
+// value1
+// value2
+```

@@ -1,5 +1,10 @@
 # setCallTransfer（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setCallTransfer
 
 ```TypeScript
@@ -24,7 +29,7 @@ function setCallTransfer(slotId: int, info: CallTransferInfo, callback: AsyncCal
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | info | [CallTransferInfo](arkts-telephony-call-calltransferinfo-i-sys.md) | 是 | 呼叫转移信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫转移信息的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫转移信息的结果。 |
 
 **错误码：**
 

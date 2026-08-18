@@ -10,6 +10,11 @@ Define ArcDotIndicator, the indicator type is arc dot.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## arcDirection
 
 ```TypeScript
@@ -32,7 +37,7 @@ Set the direction of arc indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [ArcDirection](arkts-na-arkui-arcswiper-arcdirection-e.md) \| undefined | Yes | the direction of arc indicator, default value is { ArcDirection.SIX_CLOCK_DIRECTION }, undefined means setting to default value. |
+| direction | [ArcDirection](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdirection-e.md) \| undefined | Yes | the direction of arc indicator, default value is { ArcDirection.SIX_CLOCK_DIRECTION }, undefined means setting to default value. |
 
 **Return value:**
 

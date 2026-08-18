@@ -16,7 +16,7 @@ selfIdealSize?: Size
 
 节点的理想大小。当将BuilderNode生成的内容嵌入到其它RenderNode中显示时，需要显式指定selfIdealSize，否则Builder内的节点默认父组件布局约束为[0, 0]。 默认值：{ width: 0, height: 0 }
 
-**类型：** [Size](arkts-arkui-graphics-size-i.md)
+**类型：** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
 **起始版本：** 11
 

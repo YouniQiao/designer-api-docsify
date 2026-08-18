@@ -1,5 +1,10 @@
 # getPluginBundlePathForSelf
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPluginBundlePathForSelf
 
 ```TypeScript

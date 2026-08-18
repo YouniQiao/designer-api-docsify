@@ -11,7 +11,7 @@ MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## clearOfflineMediaKeys

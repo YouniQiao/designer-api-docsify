@@ -1,5 +1,10 @@
 # offDeviceLogEvent（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offDeviceLogEvent
 
 ```TypeScript
@@ -20,7 +25,7 @@ UnRegister log event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceLogEventCode](arkts-avsession-avsession-devicelogeventcode-e-sys.md)&gt; | 否 | Used to handle ('deviceLogEvent') command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceLogEventCode](arkts-avsession-avsession-devicelogeventcode-e-sys.md)&gt; | 否 | Used to handle ('deviceLogEvent') command |
 
 **错误码：**
 

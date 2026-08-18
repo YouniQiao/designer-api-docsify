@@ -13,7 +13,8 @@ PublishFormCrossBundleInfo
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'formInfo';
+import { formInfo } from '@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## callerBundleName

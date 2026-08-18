@@ -10,6 +10,11 @@ Represents a **File** object opened by **open()**. It contains the FD and provid
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getParent
 
 ```TypeScript

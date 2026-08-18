@@ -15,11 +15,7 @@ The **Router** module provides APIs to access pages through URIs.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions } from 'BackRouterOptions';
-import { DisableAlertBeforeBackPageOptions } from 'DisableAlertBeforeBackPageOptions';
-import { EnableAlertBeforeBackPageOptions } from 'EnableAlertBeforeBackPageOptions';
-import { RouterOptions } from 'RouterOptions';
-import { RouterState } from 'RouterState';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## back

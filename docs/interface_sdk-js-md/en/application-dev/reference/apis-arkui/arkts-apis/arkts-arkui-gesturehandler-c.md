@@ -10,6 +10,11 @@ Represents the base type for gesture handlers.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## allowedTypes
 
 ```TypeScript

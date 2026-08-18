@@ -1,0 +1,16 @@
+# DocumentSaveOptions
+
+Defines the options for saving documents.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-picker-interface DocumentSaveOptions--><!--Device-picker-interface DocumentSaveOptions-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+## Modules to Import
+
+```TypeScript
+```

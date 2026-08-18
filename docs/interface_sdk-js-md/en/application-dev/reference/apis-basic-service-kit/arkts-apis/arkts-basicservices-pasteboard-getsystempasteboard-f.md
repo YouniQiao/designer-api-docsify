@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## getSystemPasteboard

@@ -8,6 +8,11 @@ guideLine参数，用于定义一条guideLine的id、方向和位置，辅助子
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## direction
 
 ```TypeScript

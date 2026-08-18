@@ -1,5 +1,10 @@
 # batchAdd
 
+## 导入模块
+
+```TypeScript
+```
+
 ## batchAdd
 
 ```TypeScript

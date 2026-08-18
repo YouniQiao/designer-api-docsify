@@ -12,6 +12,11 @@ Defines the container reader attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## attributeModifier
 
 ```TypeScript

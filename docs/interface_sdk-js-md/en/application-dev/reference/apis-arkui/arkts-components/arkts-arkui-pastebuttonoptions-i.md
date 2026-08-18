@@ -8,6 +8,11 @@ Defines options for the paste button, including icon, text and button type. > **
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## buttonType
 
 ```TypeScript

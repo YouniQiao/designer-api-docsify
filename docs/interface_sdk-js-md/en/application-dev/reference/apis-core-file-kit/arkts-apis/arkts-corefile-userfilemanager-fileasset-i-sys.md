@@ -17,7 +17,7 @@ Provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## close

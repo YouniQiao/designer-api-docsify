@@ -15,7 +15,8 @@ The AutoFillExtensionAbility module provides APIs for automatically filling in a
 ## Modules to Import
 
 ```TypeScript
-import { AutoFillExtensionAbility } from 'AutoFillExtensionAbility';
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground

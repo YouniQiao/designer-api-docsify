@@ -1,5 +1,10 @@
 # getP2pGroups（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getP2pGroups
 
 ```TypeScript
@@ -75,7 +80,7 @@ function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | 是 | 表示回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | 是 | 表示回调函数。 |
 
 **错误码：**
 

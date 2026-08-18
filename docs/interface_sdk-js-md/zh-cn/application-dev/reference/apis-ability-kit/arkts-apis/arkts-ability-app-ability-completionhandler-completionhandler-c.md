@@ -8,6 +8,11 @@ CompletionHandler提供了 [onRequestSuccess](#onrequestsuccess)和 [onRequestFa
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onRequestFailure
 
 ```TypeScript

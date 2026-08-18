@@ -11,7 +11,7 @@ MovingPhoto provides APIs for managing a moving photo instance.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## isVideoReady

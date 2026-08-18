@@ -8,6 +8,11 @@ WebResourceResponse是Web组件中表示HTTP响应并允许自定义网页资源
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

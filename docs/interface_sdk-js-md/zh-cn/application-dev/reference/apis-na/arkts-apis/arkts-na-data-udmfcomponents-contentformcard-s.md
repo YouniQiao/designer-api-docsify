@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -79,7 +84,7 @@ contentFormData: uniformDataStruct.ContentForm
 
 内容卡片类型，影响内容卡片的大小。
 
-**类型：** [FormType](arkts-na-data-udmfcomponents-formtype-e.md)
+**类型：** [FormType](../../apis-arkdata/arkts-apis/arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **起始版本：** 23
 

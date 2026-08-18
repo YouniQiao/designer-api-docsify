@@ -8,6 +8,11 @@ GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alwaysEnabled
 
 ```TypeScript

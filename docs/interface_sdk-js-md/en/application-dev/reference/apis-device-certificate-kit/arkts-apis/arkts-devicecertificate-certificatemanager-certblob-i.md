@@ -11,7 +11,8 @@ Indicates the certificate file data.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'certificateManager';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certData

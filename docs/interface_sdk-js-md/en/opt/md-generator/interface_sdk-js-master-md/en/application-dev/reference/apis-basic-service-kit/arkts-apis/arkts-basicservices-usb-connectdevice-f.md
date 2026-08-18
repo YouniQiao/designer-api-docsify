@@ -1,0 +1,43 @@
+# connectDevice
+
+## Modules to Import
+
+```TypeScript
+```
+
+## connectDevice
+
+```TypeScript
+function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
+```
+
+Connects to a USB device. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)
+
+<!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
+
+**System capability:** SystemCapability.USB.USBManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;USBDevicePipe&gt; |
+
+**Examples**
+
+```TypeScript
+let devicepipe= usb.connectDevice(device);
+console.info(`devicepipe = ${devicepipe}`);
+```

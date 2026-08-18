@@ -18,6 +18,11 @@
  > - 从API version 8 开始，该接口不再维护，推荐使用新接口@ohos.router。
 
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 类

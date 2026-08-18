@@ -13,7 +13,7 @@ Represents an upgrade service type.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## subType

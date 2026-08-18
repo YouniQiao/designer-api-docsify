@@ -11,29 +11,7 @@ Observes lifecycle status changes of a custom component, and triggers the lifecy
 ## Modules to Import
 
 ```TypeScript
-import { AppStorageV2 } from 'AppStorageV2';
-import { PersistenceV2 } from 'PersistenceV2';
-import { Type } from 'Type';
-import { UIUtils } from 'UIUtils';
-import { ConnectOptions } from 'ConnectOptions';
-import { Binding } from 'Binding';
-import { MutableBinding } from 'MutableBinding';
-import { CustomComponentLifecycle } from 'CustomComponentLifecycle';
-import { CustomComponentLifecycleObserver } from 'CustomComponentLifecycleObserver';
-import { CustomComponentLifecycleState } from 'CustomComponentLifecycleState';
-import { ComponentInit } from 'ComponentInit';
-import { ComponentAppear } from 'ComponentAppear';
-import { ComponentBuilt } from 'ComponentBuilt';
-import { ComponentReuse } from 'ComponentReuse';
-import { ComponentActive } from 'ComponentActive';
-import { ComponentInactive } from 'ComponentInactive';
-import { ComponentRecycle } from 'ComponentRecycle';
-import { ComponentDisappear } from 'ComponentDisappear';
-import { CollectionType } from 'CollectionType';
-import { ConnectOptionsCollections } from 'ConnectOptionsCollections';
-import { CustomComponentContext } from 'CustomComponentContext';
-import { IReusePool } from 'IReusePool';
-import { IReusableInfo } from 'IReusableInfo';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## aboutToAppear

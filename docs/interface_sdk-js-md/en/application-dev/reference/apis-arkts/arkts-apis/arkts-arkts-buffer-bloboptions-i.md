@@ -11,7 +11,7 @@ Defines the Blob related options parameters.
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'buffer';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## endings

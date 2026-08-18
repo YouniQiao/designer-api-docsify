@@ -11,6 +11,11 @@ Ability模块将二级模块API组织在一起方便开发者进行导出。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 类型

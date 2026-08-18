@@ -1,0 +1,51 @@
+# PrintFileCreationState
+
+Enumerates the print file creation status.
+
+**Since:** 23
+
+<!--Device-print-enum PrintFileCreationState--><!--Device-print-enum PrintFileCreationState-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## PRINT_FILE_CREATED
+
+```TypeScript
+PRINT_FILE_CREATED = 0
+```
+
+The print file is created successfully.
+
+**Since:** 23
+
+<!--Device-PrintFileCreationState-PRINT_FILE_CREATED = 0--><!--Device-PrintFileCreationState-PRINT_FILE_CREATED = 0-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## PRINT_FILE_CREATION_FAILED
+
+```TypeScript
+PRINT_FILE_CREATION_FAILED = 1
+```
+
+The print file fails to be created.
+
+**Since:** 23
+
+<!--Device-PrintFileCreationState-PRINT_FILE_CREATION_FAILED = 1--><!--Device-PrintFileCreationState-PRINT_FILE_CREATION_FAILED = 1-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## PRINT_FILE_CREATED_UNRENDERED
+
+```TypeScript
+PRINT_FILE_CREATED_UNRENDERED = 2
+```
+
+The print file is successfully created but not rendered.
+
+**Since:** 23
+
+<!--Device-PrintFileCreationState-PRINT_FILE_CREATED_UNRENDERED = 2--><!--Device-PrintFileCreationState-PRINT_FILE_CREATED_UNRENDERED = 2-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework

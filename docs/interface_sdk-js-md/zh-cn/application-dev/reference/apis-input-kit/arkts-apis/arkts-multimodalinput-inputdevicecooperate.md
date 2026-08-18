@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

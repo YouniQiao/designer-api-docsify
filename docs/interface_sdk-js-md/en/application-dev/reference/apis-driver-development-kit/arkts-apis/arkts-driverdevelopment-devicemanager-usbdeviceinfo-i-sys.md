@@ -15,7 +15,7 @@ Defines detailed information about the USB device. It is inherited from [DeviceI
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'deviceManager';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## interfaceDescList

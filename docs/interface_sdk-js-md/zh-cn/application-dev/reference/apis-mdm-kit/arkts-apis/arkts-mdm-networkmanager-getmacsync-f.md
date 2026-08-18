@@ -1,5 +1,10 @@
 # getMacSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getMacSync
 
 ```TypeScript

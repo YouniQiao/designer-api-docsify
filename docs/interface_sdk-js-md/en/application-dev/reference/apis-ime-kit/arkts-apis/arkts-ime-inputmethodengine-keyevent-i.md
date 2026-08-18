@@ -11,7 +11,8 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## keyAction

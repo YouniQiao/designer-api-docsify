@@ -15,7 +15,7 @@ Defines authentication information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'deviceManager';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authType

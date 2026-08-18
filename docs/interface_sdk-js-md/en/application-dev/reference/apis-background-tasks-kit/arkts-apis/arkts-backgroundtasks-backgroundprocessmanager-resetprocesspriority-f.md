@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from 'backgroundProcessManager';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## resetProcessPriority

@@ -340,7 +340,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。 **说明：** - 默认值：ImmersiveMode.DEFAULT - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。 **ArkTS-Dyn起始版本：** 15 **ArkTS-Sta起始版本：** 23
 
-**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](arkts-na-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT - This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
@@ -384,7 +384,7 @@ levelMode?: LevelMode
 
 设置弹窗显示层级。 **说明：** - 默认值：LevelMode.OVERLAY - 仅当showInSubWindow属性设置为false时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。 **ArkTS-Dyn起始版本：** 15 **ArkTS-Sta起始版本：** 23
 
-**类型：** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**类型：** [LevelMode](arkts-na-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY - This parameter takes effect only when showInSubWindow is set to false.
 
@@ -406,7 +406,7 @@ levelOrder?: LevelOrder
 
 设置弹窗显示的顺序。 **说明：** - 默认值：LevelOrder.clamp(0) - 不支持动态刷新顺序。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 18开始，该接口支持在原子化服务中使用。 **ArkTS-Dyn起始版本：** 18 **ArkTS-Sta起始版本：** 23
 
-**类型：** [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](arkts-na-promptaction-levelorder-c.md)
 
 **默认值：** The value returns by LevelOrder.clamp(0)
 

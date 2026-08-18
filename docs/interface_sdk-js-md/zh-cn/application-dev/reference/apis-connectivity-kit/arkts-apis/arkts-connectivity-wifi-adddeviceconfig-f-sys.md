@@ -1,5 +1,10 @@
 # addDeviceConfig（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addDeviceConfig
 
 ```TypeScript
@@ -95,7 +100,7 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
 
 **示例**
 

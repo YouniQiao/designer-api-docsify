@@ -1,5 +1,10 @@
 # getOpKeySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getOpKeySync
 
 ```TypeScript

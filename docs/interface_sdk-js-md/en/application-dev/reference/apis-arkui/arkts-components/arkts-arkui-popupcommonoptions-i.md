@@ -8,6 +8,11 @@ Configures the parameters of a popup. You can use the [getPromptAction()](../../
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## arrowHeight
 
 ```TypeScript

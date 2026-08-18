@@ -1,5 +1,10 @@
 # transferDynamic
 
+## 导入模块
+
+```TypeScript
+```
+
 ## transferDynamic
 
 ```TypeScript

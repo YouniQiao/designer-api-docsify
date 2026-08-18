@@ -8,6 +8,11 @@ Interaction behavior for the floating preview image
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## defaultAnimationBeforeLifting
 
 ```TypeScript

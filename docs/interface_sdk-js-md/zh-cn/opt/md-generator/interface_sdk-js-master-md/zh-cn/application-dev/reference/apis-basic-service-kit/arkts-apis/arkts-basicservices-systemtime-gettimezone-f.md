@@ -1,0 +1,103 @@
+# getTimezone
+
+## 导入模块
+
+```TypeScript
+```
+
+## getTimezone
+
+```TypeScript
+function getTimezone(callback: AsyncCallback<string>): void
+```
+
+获取系统时区，使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)(callback: AsyncCallback&lt;string&gt;)
+
+<!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
+
+**系统能力：** SystemCapability.MiscServices.Time
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| -1 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getTimezone((error: BusinessError, data: string) => {
+    if (error) {
+      console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.info(`Succeeded in getting timezone : ${data}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+
+## getTimezone
+
+```TypeScript
+function getTimezone(): Promise<string>
+```
+
+获取系统时区，使用Promise异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)()
+
+<!--Device-systemTime-function getTimezone(): Promise<string>--><!--Device-systemTime-function getTimezone(): Promise<string>-End-->
+
+**系统能力：** SystemCapability.MiscServices.Time
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;string & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| -1 |
+
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  systemTime.getTimezone().then((data: string) => {
+    console.info(`Succeeded in getting timezone: ${data}`);
+  }).catch((error: BusinessError) => {
+    console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.info(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+}
+```

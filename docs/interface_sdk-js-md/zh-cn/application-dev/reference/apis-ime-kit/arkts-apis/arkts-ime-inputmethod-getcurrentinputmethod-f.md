@@ -1,5 +1,10 @@
 # getCurrentInputMethod
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCurrentInputMethod
 
 ```TypeScript

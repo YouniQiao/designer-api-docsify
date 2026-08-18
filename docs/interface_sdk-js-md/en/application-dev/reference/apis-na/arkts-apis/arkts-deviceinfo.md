@@ -24,6 +24,11 @@
 
 **System capability:** SystemCapability.Startup.SystemInfo
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

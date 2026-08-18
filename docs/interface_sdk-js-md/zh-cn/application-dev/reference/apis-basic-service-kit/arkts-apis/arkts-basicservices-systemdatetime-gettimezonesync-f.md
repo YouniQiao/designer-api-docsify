@@ -1,5 +1,10 @@
 # getTimezoneSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTimezoneSync
 
 ```TypeScript

@@ -25,7 +25,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'fontManager';
+import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## Summary

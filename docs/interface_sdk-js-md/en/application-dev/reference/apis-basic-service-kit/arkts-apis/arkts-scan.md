@@ -11,7 +11,7 @@ This module provides JavaScript APIs of the scan framework for discovering and c
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'scan';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

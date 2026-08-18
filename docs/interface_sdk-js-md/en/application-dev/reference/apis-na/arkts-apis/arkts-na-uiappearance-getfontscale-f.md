@@ -1,5 +1,10 @@
 # getFontScale
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getFontScale
 
 ```TypeScript

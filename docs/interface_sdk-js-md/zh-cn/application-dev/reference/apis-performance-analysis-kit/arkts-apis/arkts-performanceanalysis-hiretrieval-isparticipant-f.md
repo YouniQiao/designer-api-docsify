@@ -1,5 +1,10 @@
 # isParticipant
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isParticipant
 
 ```TypeScript

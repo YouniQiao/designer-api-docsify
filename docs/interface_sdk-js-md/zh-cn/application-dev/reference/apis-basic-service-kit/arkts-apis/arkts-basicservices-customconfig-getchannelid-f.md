@@ -1,5 +1,10 @@
 # getChannelId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getChannelId
 
 ```TypeScript

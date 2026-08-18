@@ -8,6 +8,11 @@ PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStor
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

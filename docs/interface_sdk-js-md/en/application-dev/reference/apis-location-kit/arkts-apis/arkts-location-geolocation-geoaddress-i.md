@@ -17,7 +17,7 @@ Data struct describes geographic locations.
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'geolocation';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## addressUrl

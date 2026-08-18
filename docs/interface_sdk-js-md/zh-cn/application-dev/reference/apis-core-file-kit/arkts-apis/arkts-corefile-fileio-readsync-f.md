@@ -1,5 +1,10 @@
 # readSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## readSync
 
 ```TypeScript

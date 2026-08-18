@@ -11,7 +11,7 @@ Application bundle statistics.
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'applicationManager';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## abilityInFgTotalTime

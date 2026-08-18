@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## average
 
 ```TypeScript

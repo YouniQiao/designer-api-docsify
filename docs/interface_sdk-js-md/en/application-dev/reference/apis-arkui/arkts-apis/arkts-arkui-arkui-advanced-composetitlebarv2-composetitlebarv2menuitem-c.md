@@ -11,9 +11,7 @@ Declaration of the menu item on the right side.
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2 } from 'ComposeTitleBarV2';
-import { ComposeTitleBarV2MenuItem } from 'ComposeTitleBarV2MenuItem';
-import { ComposeTitleBarV2MenuItemParams } from 'ComposeTitleBarV2MenuItemParams';
+import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -38,7 +36,7 @@ Constructor of ComposeTitleBarV2MenuItem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ComposeTitleBarV2MenuItemParams](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitemparams-i.md) | No | Parameters for creating a menu item instance |
+| params | [ComposeTitleBarV2MenuItemParams](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composetitlebarv2-composetitlebarv2menuitemparams-i.md) | No | Parameters for creating a menu item instance |
 
 ## accessibilityDescription
 
@@ -114,7 +112,7 @@ The accessibilityText of this menu item.
 
 Callback function when click on this menu item.
 
-**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

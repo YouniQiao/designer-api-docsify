@@ -1,6 +1,6 @@
 # OverlayManagerOptions
 
-初始化[OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext)时所用参数。
+初始化[OverlayManager](arkts-na-arkui-uicontext-uicontext-c.md#uicontext)时所用参数。
 
 **起始版本：** 23
 
@@ -9,6 +9,11 @@
 <!--Device-unnamed-export interface OverlayManagerOptions--><!--Device-unnamed-export interface OverlayManagerOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## enableBackPressedEvent
 

@@ -10,6 +10,11 @@ Provides APIs for stream operations, such as reading and writing data streams of
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

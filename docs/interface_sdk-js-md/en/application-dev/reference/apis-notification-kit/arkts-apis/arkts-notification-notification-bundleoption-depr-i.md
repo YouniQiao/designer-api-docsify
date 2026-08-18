@@ -12,6 +12,16 @@ Describes the **BundleOption** information, that is, the bundle information of a
 
 **System capability:** SystemCapability.Notification.Notification
 
+## Modules to Import
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
+```
+
 ## bundle
 
 ```TypeScript

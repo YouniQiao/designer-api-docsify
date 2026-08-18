@@ -1,5 +1,10 @@
 # removeAllStartupTaskResults
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeAllStartupTaskResults
 
 ```TypeScript

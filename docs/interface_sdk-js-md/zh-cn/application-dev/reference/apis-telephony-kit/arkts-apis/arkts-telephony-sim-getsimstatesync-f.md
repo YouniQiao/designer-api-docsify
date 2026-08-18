@@ -1,5 +1,10 @@
 # getSimStateSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSimStateSync
 
 ```TypeScript

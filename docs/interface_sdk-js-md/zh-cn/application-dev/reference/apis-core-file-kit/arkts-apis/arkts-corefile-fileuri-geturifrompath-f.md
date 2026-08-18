@@ -1,5 +1,10 @@
 # getUriFromPath
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUriFromPath
 
 ```TypeScript

@@ -8,6 +8,11 @@ Defines options for menu items in the upper right corner of the page.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## moreButtonOptions
 
 ```TypeScript

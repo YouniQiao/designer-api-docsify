@@ -10,6 +10,11 @@ Declare interface of LinkIntentParamMapping.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## paramCategory
 
 ```TypeScript
@@ -18,7 +23,7 @@ paramCategory?: LinkParamCategory
 
 The parameter category.
 
-**Type:** [LinkParamCategory](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
+**Type:** [LinkParamCategory](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md)
 
 **Since:** 26.0.0
 

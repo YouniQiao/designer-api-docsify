@@ -17,8 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVVolumePanel } from 'AVVolumePanel';
-import { AVVolumePanelParameter } from 'AVVolumePanelParameter';
+import { AVVolumePanel, AVVolumePanelParameter } from '@kit.AudioKit';
 ```
 
 ## Summary

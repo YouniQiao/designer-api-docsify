@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Hearing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## backgroundColor
 
 ```TypeScript

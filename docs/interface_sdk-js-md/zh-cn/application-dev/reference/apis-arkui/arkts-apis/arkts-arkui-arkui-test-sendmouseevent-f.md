@@ -1,5 +1,10 @@
 # sendMouseEvent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sendMouseEvent
 
 ```TypeScript

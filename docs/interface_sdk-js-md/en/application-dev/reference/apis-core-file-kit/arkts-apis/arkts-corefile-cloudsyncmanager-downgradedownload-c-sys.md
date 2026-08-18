@@ -13,7 +13,8 @@ Full download: provides the capability of downloading cloud data for application
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from 'cloudSyncManager';
+import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor

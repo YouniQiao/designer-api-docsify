@@ -8,6 +8,11 @@ Provides the information about the custom page transition animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## timeout
 
 ```TypeScript

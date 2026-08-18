@@ -17,7 +17,7 @@ Manager hid host profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## off_connectionStateChange

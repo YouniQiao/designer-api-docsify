@@ -1,0 +1,99 @@
+# TreeListenType
+
+Enumerates the listening types of tree view nodes.
+
+**Since:** 10
+
+<!--Device-unnamed-export declare enum TreeListenType--><!--Device-unnamed-export declare enum TreeListenType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## NODE_CLICK
+
+```TypeScript
+NODE_CLICK = "NodeClick"
+```
+
+Listens for click events of nodes.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TreeListenType-NODE_CLICK = "NodeClick"--><!--Device-TreeListenType-NODE_CLICK = "NodeClick"-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## NODE_ADD
+
+```TypeScript
+NODE_ADD = "NodeAdd"
+```
+
+Listens for add events of nodes.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TreeListenType-NODE_ADD = "NodeAdd"--><!--Device-TreeListenType-NODE_ADD = "NodeAdd"-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## NODE_DELETE
+
+```TypeScript
+NODE_DELETE = "NodeDelete"
+```
+
+Listens for delete events of nodes.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TreeListenType-NODE_DELETE = "NodeDelete"--><!--Device-TreeListenType-NODE_DELETE = "NodeDelete"-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## NODE_MODIFY
+
+```TypeScript
+NODE_MODIFY = "NodeModify"
+```
+
+Listens for modify events of nodes.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TreeListenType-NODE_MODIFY = "NodeModify"--><!--Device-TreeListenType-NODE_MODIFY = "NodeModify"-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## NODE_MOVE
+
+```TypeScript
+NODE_MOVE = "NodeMove"
+```
+
+Listens for move events of nodes.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TreeListenType-NODE_MOVE = "NodeMove"--><!--Device-TreeListenType-NODE_MOVE = "NodeMove"-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

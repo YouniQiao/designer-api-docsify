@@ -12,6 +12,11 @@ Represents the return result of exec(), containing detailed information of a sin
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

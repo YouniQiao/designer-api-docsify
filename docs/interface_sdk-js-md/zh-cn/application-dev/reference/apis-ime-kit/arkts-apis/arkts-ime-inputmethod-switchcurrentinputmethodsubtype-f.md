@@ -1,5 +1,10 @@
 # switchCurrentInputMethodSubtype
 
+## 导入模块
+
+```TypeScript
+```
+
 ## switchCurrentInputMethodSubtype
 
 ```TypeScript
@@ -22,7 +27,7 @@ function switchCurrentInputMethodSubtype(target: InputMethodSubtype, callback: A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | 是 | 目标输入法子类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当输入法子类型切换成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当输入法子类型切换成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
 

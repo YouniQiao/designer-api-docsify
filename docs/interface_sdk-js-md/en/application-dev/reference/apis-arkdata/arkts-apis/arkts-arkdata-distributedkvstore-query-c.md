@@ -11,7 +11,7 @@ Provides methods to create a **Query** object, which defines different data quer
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## and

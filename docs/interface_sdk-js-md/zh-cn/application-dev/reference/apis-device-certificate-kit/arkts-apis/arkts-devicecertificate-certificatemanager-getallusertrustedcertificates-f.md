@@ -1,5 +1,10 @@
 # getAllUserTrustedCertificates
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllUserTrustedCertificates
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from 'sendablePreferences';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## getPreferencesSync

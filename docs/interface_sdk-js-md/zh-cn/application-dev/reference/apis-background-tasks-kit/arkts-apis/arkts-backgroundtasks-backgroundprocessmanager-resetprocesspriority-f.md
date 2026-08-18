@@ -1,5 +1,10 @@
 # resetProcessPriority
 
+## 导入模块
+
+```TypeScript
+```
+
 ## resetProcessPriority
 
 ```TypeScript

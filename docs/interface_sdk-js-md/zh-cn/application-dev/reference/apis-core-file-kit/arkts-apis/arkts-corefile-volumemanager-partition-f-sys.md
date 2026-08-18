@@ -1,5 +1,10 @@
 # partition（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## partition
 
 ```TypeScript
@@ -24,7 +29,7 @@ function partition(diskId: string, type: int, callback: AsyncCallback<void>): vo
 | --- | --- | --- | --- |
 | diskId | string | 是 | 卷设备所属的磁盘id。 |
 | type | int | 是 | 分区类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 对磁盘设备进行分区。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 对磁盘设备进行分区。 |
 
 **错误码：**
 

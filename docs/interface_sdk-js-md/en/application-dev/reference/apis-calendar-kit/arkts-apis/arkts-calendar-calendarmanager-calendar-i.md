@@ -11,7 +11,7 @@ In the following API examples, you need to use [createCalendar()](arkts-calendar
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'calendarManager';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## addEvent

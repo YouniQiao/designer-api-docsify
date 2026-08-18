@@ -1,12 +1,17 @@
 # cancelSerialRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancelSerialRight
 
 ```TypeScript
 function cancelSerialRight(portId: int): void
 ```
 
-移除应用程序运行时访问串口设备的权限。此接口会调用close关闭已打开的串口。
+移除应用运行时访问串口设备的权限。此接口会调用close关闭已打开的串口。通常在需要主动释放权限、切换访问不同设备、或出于安全考虑时调用此接口。 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright)申请访问权限 **相关方法：** - [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright)：申请访问权限 - [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md#hasserialright)：检查是否有访问权限
 
 **起始版本：** 23
 
@@ -18,7 +23,7 @@ function cancelSerialRight(portId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| portId | int | 是 | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
+| portId | int | 是 | 端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)返回的 [SerialPort](arkts-basicservices-serialmanager-serialport-i.md#serialport)对象，必须使用getPortList返回的有效端口号，传入无效值时抛出错误码31400003异常。 |
 
 **错误码：**
 

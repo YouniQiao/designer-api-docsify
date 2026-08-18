@@ -8,6 +8,11 @@ Stack基于数组的数据结构实现，特点是先进后出，只能在一端
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

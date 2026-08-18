@@ -11,7 +11,8 @@ An image effect class used to add a specified effect to the effect chain through
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'effectKit';
+import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## ellipticalGradientBlur

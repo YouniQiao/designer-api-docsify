@@ -15,7 +15,7 @@ This module provides functionality for component coordinates and sizes.
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'componentUtils';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## Summary

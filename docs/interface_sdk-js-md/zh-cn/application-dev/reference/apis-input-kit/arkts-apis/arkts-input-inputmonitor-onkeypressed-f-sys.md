@@ -1,5 +1,10 @@
 # onKeyPressed（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onKeyPressed
 
 ```TypeScript
@@ -23,7 +28,7 @@ function onKeyPressed(keys: Array<KeyCode>, receiver: Callback<KeyEvent>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | keys | Array&lt;[KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)&gt; | 是 | 按键码列表，支持如下取值：KEYCODE_META_LEFT、KEYCODE_META_RIGHT、KEYCODE_POWER、 KEYCODE_VOLUME_DOWN、KEYCODE_VOLUME_UP。 |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | 用于接收上报数据的回调函数。 |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | 是 | 用于接收上报数据的回调函数。 |
 
 **错误码：**
 

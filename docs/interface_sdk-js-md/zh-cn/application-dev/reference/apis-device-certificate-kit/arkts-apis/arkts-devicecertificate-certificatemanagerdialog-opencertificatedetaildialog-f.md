@@ -1,5 +1,10 @@
 # openCertificateDetailDialog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openCertificateDetailDialog
 
 ```TypeScript

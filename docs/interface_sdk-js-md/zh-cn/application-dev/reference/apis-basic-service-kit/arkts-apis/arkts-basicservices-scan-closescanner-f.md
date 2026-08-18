@@ -1,5 +1,10 @@
 # closeScanner
 
+## 导入模块
+
+```TypeScript
+```
+
 ## closeScanner
 
 ```TypeScript

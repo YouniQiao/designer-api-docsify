@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
+## 导入模块
+
+```TypeScript
+```
+
 ## appendChild
 
 ```TypeScript

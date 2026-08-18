@@ -11,7 +11,7 @@ Information details of the HTTP request
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'http';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## cipherSuite

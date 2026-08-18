@@ -32,7 +32,7 @@ Mount ComponentContent to FrameNode. On API 26.0.0 and above, It can also mount 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-na-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-na-componentcontent-reactivecomponentcontent-c.md) | Yes | Newly added ComponentContent.<br>**Since:** 23 - 24 |
+| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-reactivecomponentcontent-c.md) | Yes | Newly added ComponentContent.<br>**Since:** 23 - 24 |
 
 **Error codes:**
 

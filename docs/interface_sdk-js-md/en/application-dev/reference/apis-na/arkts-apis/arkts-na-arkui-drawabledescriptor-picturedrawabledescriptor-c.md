@@ -12,6 +12,11 @@ Use the PictureDrawableDescriptor class to get the resource of picture or resour
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # @ohos.data.DataShareResultSet
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

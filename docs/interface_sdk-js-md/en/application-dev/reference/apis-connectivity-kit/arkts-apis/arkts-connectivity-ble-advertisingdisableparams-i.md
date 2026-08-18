@@ -11,7 +11,7 @@ Parameter for dynamically disable advertising.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## advertisingId

@@ -8,6 +8,11 @@ CommonMethod.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## advancedBlendMode
 
 ```TypeScript

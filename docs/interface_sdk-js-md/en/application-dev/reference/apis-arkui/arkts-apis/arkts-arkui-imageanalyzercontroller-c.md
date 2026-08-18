@@ -8,6 +8,11 @@ Implements an AI image analysis controller, which provides control for image ana
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

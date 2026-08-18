@@ -13,7 +13,8 @@ The module implements basic screen management. You can use the APIs of this modu
 ## Modules to Import
 
 ```TypeScript
-import { screen } from 'screen';
+import { screen } from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## Summary

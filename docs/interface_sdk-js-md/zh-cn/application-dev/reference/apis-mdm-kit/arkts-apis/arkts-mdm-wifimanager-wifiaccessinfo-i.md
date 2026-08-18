@@ -8,6 +8,11 @@ Wi-Fi的SSID和BSSID信息。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## bssid
 
 ```TypeScript

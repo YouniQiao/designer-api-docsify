@@ -1,5 +1,10 @@
 # isAuthorizedApp
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAuthorizedApp
 
 ```TypeScript

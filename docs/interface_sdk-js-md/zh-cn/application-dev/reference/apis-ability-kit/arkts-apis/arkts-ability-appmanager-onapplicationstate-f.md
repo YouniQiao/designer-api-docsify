@@ -1,5 +1,10 @@
 # on_applicationState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_applicationState
 
 ```TypeScript

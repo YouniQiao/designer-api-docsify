@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfigEntry } from 'StartupConfigEntry';
+import { StartupConfigEntry } from '@kit.AbilityKit';
+import { StartupConfigEntry } from '@kit.AbilityKit';
 ```
 
 ## Summary

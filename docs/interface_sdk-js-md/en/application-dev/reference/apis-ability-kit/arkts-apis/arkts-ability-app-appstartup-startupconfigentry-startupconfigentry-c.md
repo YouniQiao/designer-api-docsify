@@ -11,7 +11,8 @@ The module provides the capability to configure [AppStartup](../../../applicatio
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfigEntry } from 'StartupConfigEntry';
+import { StartupConfigEntry } from '@kit.AbilityKit';
+import { StartupConfigEntry } from '@kit.AbilityKit';
 ```
 
 ## onConfig

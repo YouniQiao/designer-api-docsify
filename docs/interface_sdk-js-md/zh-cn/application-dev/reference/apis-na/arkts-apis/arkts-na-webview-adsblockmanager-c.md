@@ -10,6 +10,11 @@ This class is used to set adblock config.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addAdsBlockAllowedList
 
 ```TypeScript

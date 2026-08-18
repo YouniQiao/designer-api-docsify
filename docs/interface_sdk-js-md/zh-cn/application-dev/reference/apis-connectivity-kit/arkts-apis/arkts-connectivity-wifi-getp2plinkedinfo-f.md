@@ -1,5 +1,10 @@
 # getP2pLinkedInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getP2pLinkedInfo
 
 ```TypeScript
@@ -51,7 +56,7 @@ function getP2pLinkedInfo(callback: AsyncCallback<WifiP2pLinkedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pLinkedInfo&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 |  |
 
 **示例**
 

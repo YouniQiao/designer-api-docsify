@@ -1,0 +1,52 @@
+# PersoLockInfo (System API)
+
+Defines the personalized lock information.
+
+**Since:** 23
+
+<!--Device-sim-export interface PersoLockInfo--><!--Device-sim-export interface PersoLockInfo-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+```
+
+## lockType
+
+```TypeScript
+lockType: PersoLockType
+```
+
+Indicates the personalized lock type.
+
+**Type:** [PersoLockType](arkts-telephony-sim-persolocktype-e-sys.md)
+
+**Since:** 23
+
+<!--Device-PersoLockInfo-lockType: PersoLockType--><!--Device-PersoLockInfo-lockType: PersoLockType-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.
+
+## password
+
+```TypeScript
+password: string
+```
+
+Indicates the password.
+
+**Type:** string
+
+**Since:** 23
+
+<!--Device-PersoLockInfo-password: string--><!--Device-PersoLockInfo-password: string-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.

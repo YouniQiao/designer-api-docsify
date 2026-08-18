@@ -8,6 +8,11 @@ Implements the subtab style. A transition animation is played when the user swit
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## board
 
 ```TypeScript

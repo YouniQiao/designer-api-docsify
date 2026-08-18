@@ -13,7 +13,7 @@ Context information for the current spring loading trigger. This object is passe
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## abort

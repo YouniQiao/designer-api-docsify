@@ -8,6 +8,11 @@ Construct a new type for each item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## index
 
 ```TypeScript

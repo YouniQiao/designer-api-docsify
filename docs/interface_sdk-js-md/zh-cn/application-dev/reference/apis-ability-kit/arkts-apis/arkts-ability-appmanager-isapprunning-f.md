@@ -1,5 +1,10 @@
 # isAppRunning
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAppRunning
 
 ```TypeScript

@@ -15,7 +15,8 @@ Provides APIs for private key operations. **PriKey** is a child class of [Key](a
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## clearMem

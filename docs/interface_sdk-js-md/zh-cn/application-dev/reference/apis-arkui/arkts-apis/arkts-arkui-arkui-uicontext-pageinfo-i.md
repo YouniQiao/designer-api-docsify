@@ -8,6 +8,11 @@ Defines the PageInfo type. The value of routerPageInfo indicates the information
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## navDestinationInfo
 
 ```TypeScript

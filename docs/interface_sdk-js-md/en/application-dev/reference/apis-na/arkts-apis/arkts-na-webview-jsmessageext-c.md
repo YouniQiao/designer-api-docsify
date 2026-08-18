@@ -10,6 +10,11 @@ The message for indicating the of result of JavaScript code execution.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getArray
 
 ```TypeScript
@@ -192,5 +197,5 @@ Get the type of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| [JsMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
+| [JsMessageType](arkts-na-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
 

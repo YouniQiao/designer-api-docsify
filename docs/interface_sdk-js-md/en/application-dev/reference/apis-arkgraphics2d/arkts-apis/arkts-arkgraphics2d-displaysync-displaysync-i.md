@@ -11,7 +11,8 @@ An object that implements the setting of the frame rate and callback. It provide
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from 'displaySync';
+import { displaySync } from '@kit.ArkGraphics2D';
+import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
 ## offFrame

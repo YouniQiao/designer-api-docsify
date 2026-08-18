@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBackupCompatibilityInfo
 
 ```TypeScript

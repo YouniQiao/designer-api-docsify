@@ -11,7 +11,7 @@ Provides configuration options for download and cache, including HTTP options, t
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'cacheDownload';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## caPath

@@ -8,6 +8,11 @@ LazyForEach的数据源，开发者需要实现该接口以提供数据访问和
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getData
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # offUnhandledRejection
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offUnhandledRejection
 
 ```TypeScript

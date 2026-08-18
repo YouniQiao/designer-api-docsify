@@ -17,7 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GesturePoint } from 'GesturePoint';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## Summary

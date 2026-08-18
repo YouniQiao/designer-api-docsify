@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from 'config';
+import { config } from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## startBlinking

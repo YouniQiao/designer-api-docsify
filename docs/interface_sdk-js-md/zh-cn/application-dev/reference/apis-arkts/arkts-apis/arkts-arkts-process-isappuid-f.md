@@ -1,5 +1,10 @@
 # isAppUid
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAppUid
 
 ```TypeScript

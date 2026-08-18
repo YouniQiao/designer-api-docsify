@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
+## 导入模块
+
+```TypeScript
+```
+
 ## errno
 
 ```TypeScript

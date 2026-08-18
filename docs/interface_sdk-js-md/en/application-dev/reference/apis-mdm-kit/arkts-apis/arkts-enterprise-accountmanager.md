@@ -13,7 +13,7 @@ This module provides device account management capabilities, including forbiddin
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from 'accountManager';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## Summary

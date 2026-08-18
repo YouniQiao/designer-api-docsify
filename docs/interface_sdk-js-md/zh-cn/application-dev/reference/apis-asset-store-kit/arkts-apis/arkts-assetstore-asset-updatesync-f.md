@@ -1,5 +1,10 @@
 # updateSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## updateSync
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # createPixelMap
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPixelMap
 
 ```TypeScript
@@ -20,7 +25,7 @@ Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to u
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | 是 | The image color buffer. |
 | options | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | 是 | Initialization options for pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | 是 | Callback used to return the PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 | Callback used to return the PixelMap object. |
 
 **示例**
 

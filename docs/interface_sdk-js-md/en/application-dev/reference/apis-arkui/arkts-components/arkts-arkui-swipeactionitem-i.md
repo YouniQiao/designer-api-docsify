@@ -8,6 +8,11 @@ Describes the swipe action item. For a list in vertical layout, it refers to the
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## actionAreaDistance
 
 ```TypeScript

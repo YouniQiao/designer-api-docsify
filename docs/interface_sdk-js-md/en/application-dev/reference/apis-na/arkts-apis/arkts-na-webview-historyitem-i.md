@@ -10,6 +10,11 @@ Provides information for history item in BackForwardList.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## historyRawUrl
 
 ```TypeScript

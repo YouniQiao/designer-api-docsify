@@ -10,6 +10,11 @@ Represents the information obtained by the **ReaderIterator** object.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## done
 
 ```TypeScript

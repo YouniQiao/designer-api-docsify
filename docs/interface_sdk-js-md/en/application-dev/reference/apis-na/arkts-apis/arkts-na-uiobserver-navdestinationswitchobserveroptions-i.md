@@ -10,6 +10,11 @@ Indicates the options of NavDestination switch.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## navigationId
 
 ```TypeScript

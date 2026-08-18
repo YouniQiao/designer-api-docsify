@@ -10,6 +10,11 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getIsoRange
 
 ```TypeScript

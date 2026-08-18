@@ -11,7 +11,8 @@ The **ImagePacker** class provides APIs to compress and encode images. Before ca
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## packBinaryImageToTiffData

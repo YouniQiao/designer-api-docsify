@@ -8,6 +8,11 @@ Provides size information of the **DrawingRenderingContext** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

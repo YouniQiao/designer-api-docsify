@@ -1,5 +1,10 @@
 # cancelSuspendDelay
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancelSuspendDelay
 
 ```TypeScript

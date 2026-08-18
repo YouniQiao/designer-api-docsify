@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from 'metadataBinding';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## offOperationSubmitMetadata

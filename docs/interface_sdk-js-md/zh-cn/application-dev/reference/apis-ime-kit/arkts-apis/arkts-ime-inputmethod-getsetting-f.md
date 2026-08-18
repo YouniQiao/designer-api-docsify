@@ -1,5 +1,10 @@
 # getSetting
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSetting
 
 ```TypeScript

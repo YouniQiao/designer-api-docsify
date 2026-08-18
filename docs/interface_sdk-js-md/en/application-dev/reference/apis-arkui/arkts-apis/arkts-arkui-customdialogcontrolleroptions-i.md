@@ -8,6 +8,11 @@ Defines the style of the custom dialog box. > **NOTE：**> > - Pressing the Back
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## alignment
 
 ```TypeScript

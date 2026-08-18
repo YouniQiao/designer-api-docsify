@@ -1,6 +1,6 @@
 # DataBits
 
-Enumerates the number of data bits.
+表示数据位宽的枚举，单位：比特。
 
 **起始版本：** 23
 

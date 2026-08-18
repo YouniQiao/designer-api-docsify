@@ -1,5 +1,10 @@
 # abortSession
 
+## 导入模块
+
+```TypeScript
+```
+
 ## abortSession
 
 ```TypeScript
@@ -22,7 +27,7 @@ abortSession终止密钥操作。使用callback异步回调。
 | --- | --- | --- | --- |
 | handle | number | 是 | abortSession操作的uint64类型的handle值。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | abortSession操作的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当密钥操作abort成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当密钥操作abort成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

@@ -10,6 +10,11 @@ Defines the text span style options. Inherits [RichEditorSpanStyleOptions](arkts
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## textStyle
 
 ```TypeScript

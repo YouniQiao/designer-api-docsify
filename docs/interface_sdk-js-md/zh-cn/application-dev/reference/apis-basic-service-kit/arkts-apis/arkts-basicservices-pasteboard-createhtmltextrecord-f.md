@@ -1,5 +1,10 @@
 # createHtmlTextRecord
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createHtmlTextRecord
 
 ```TypeScript

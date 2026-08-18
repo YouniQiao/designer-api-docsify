@@ -8,6 +8,11 @@ User copy event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## preventDefault
 
 ```TypeScript

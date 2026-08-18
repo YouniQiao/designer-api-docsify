@@ -12,6 +12,11 @@ The relational database (RDB) manages data based on relational models. With the 
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

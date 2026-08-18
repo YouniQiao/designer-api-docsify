@@ -1,5 +1,10 @@
 # createPixelMapSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPixelMapSync
 
 ```TypeScript

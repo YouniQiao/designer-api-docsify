@@ -1,5 +1,10 @@
 # offPedometerDetectionChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offPedometerDetectionChange
 
 ```TypeScript
@@ -21,7 +26,7 @@ Unsubscribe to pedometer detection sensor data, {@code SensorId.PEDOMETER_DETECT
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 否 | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 否 | callback pedometer detection data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 否 | callback pedometer detection data. |
 
 **错误码：**
 

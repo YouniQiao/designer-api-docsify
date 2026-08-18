@@ -1,6 +1,6 @@
 # UsbTransferStatus
 
-Enumerates the status code returned after data processing is complete.
+数据处理完成后通过回调返回的状态码。
 
 **起始版本：** 23
 

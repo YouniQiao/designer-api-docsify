@@ -1,5 +1,10 @@
 # getBundleInfoSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBundleInfoSync
 
 ```TypeScript

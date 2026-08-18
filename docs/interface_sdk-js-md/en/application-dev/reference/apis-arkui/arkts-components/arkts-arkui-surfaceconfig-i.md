@@ -8,6 +8,11 @@ Describes whether the surface held by the **XComponent** is treated as opaque du
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isOpaque
 
 ```TypeScript

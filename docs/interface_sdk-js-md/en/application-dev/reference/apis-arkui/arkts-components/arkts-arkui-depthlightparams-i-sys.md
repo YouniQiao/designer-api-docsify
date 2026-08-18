@@ -10,6 +10,11 @@ Lighting parameters struct.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

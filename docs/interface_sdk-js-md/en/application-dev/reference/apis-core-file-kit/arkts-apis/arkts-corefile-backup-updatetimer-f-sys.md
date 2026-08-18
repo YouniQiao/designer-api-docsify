@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'backup';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## updateTimer

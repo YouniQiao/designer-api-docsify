@@ -11,7 +11,7 @@ Defines the schema of a KV store. You can create a **Schema** object and pass it
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## constructor

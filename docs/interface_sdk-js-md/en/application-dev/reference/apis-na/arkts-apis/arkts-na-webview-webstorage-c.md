@@ -10,6 +10,11 @@ Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## deleteAllData
 
 ```TypeScript
@@ -211,7 +216,7 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
+| Promise&lt;Array&lt;[WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
 
 **Error codes:**
 
@@ -240,7 +245,7 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
 
 **Error codes:**
 

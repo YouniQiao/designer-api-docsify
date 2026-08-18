@@ -10,6 +10,11 @@ Defines the configuration of creating pdf, related to {@Link createPdf} method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

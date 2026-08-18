@@ -1,5 +1,10 @@
 # traceByValue
 
+## 导入模块
+
+```TypeScript
+```
+
 ## traceByValue
 
 ```TypeScript

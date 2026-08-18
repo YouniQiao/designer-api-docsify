@@ -11,7 +11,8 @@ Define the information for extended display screen.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'avSession';
+import { avSession } from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## height

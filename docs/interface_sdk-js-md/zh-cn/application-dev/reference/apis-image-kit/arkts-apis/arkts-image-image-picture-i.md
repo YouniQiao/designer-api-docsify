@@ -8,6 +8,11 @@ Picture类，一些包含特殊信息的图片可以解码为Picture（也可以
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAuxiliaryPicture
 
 ```TypeScript

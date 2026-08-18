@@ -13,8 +13,7 @@ Defines the lazy column layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayout } from 'LazyColumnLayout';
-import { LazyColumnLayoutAttribute } from 'LazyColumnLayoutAttribute';
+import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## alignItems
@@ -45,7 +44,7 @@ Sets the horizontal alignment of the row content.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## footer
 
@@ -75,7 +74,7 @@ Sets the footer of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## header
 
@@ -105,7 +104,7 @@ Sets the header of the lazy column layout.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## onVisibleIndexesChange
 
@@ -135,7 +134,7 @@ Triggered when the index of child components in the visible area changes.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## space
 
@@ -165,7 +164,7 @@ The spacing between rows.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 
 ## sticky
 
@@ -195,5 +194,5 @@ Sets sticky style for header and footer.
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) |  |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) |  |
 

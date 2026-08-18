@@ -1,5 +1,10 @@
 # isAudioMonoEnabledSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAudioMonoEnabledSync
 
 ```TypeScript

@@ -15,7 +15,7 @@ AudioRecorder is a class for audio recording management. It provides APIs to rec
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## on_error

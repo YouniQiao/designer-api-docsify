@@ -1,5 +1,10 @@
 # ftruncateSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## ftruncateSync
 
 ```TypeScript

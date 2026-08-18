@@ -1,5 +1,10 @@
 # notifyPrintService（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## notifyPrintService
 
 ```TypeScript
@@ -25,7 +30,7 @@ function notifyPrintService(jobId: string, type: 'spooler_closed_for_cancelled' 
 | --- | --- | --- | --- |
 | jobId | string | 是 | 表示打印任务ID。 |
 | type | 'spooler_closed_for_cancelled' \| 'spooler_closed_for_started' | 是 | 表示spooler关闭信息。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步将spooler关闭信息通知打印服务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步将spooler关闭信息通知打印服务之后的回调。 |
 
 **错误码：**
 

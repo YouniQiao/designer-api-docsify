@@ -1,5 +1,10 @@
 # setSmscAddr（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setSmscAddr
 
 ```TypeScript
@@ -24,7 +29,7 @@ function setSmscAddr(slotId: int, smscAddr: string, callback: AsyncCallback<void
 | --- | --- | --- | --- |
 | slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
 | smscAddr | string | 是 | 短信服务中心地址。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置短信服务中心（SMSC）地址的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置短信服务中心（SMSC）地址的回调函数。 |
 
 **错误码：**
 

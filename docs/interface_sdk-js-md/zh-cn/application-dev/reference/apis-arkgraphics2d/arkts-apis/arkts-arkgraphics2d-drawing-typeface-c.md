@@ -8,6 +8,11 @@ Typeface类用于表示和管理字体对象。支持的字体操作包括：获
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFamilyName
 
 ```TypeScript

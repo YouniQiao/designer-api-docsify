@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { formAgent } from 'formAgent';
+import { formAgent } from '@kit.FormKit';
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## updateFormCrossBundle

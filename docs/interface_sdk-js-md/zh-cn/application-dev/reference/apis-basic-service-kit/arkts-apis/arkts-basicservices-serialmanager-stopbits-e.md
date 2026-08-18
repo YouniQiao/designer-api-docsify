@@ -1,6 +1,6 @@
 # StopBits
 
-Enumerates of the number of stop bits.
+表示停止位宽的枚举，单位：比特。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@ Enumerates of the number of stop bits.
 STOPBIT_1 = 0
 ```
 
-报文的有效停止位宽为1比特。
+表示停止位宽为1比特。
 
 **起始版本：** 23
 
@@ -28,7 +28,7 @@ STOPBIT_1 = 0
 STOPBIT_2 = 1
 ```
 
-报文的有效停止位宽为2比特。
+表示停止位宽为2比特。
 
 **起始版本：** 23
 

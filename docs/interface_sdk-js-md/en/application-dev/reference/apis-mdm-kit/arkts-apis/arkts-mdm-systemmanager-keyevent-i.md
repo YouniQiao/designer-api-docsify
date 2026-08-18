@@ -11,7 +11,7 @@ Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](ark
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## actionTime

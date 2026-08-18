@@ -10,6 +10,11 @@ Defines the moving photo view options.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## dynamicRangeMode
 
 ```TypeScript

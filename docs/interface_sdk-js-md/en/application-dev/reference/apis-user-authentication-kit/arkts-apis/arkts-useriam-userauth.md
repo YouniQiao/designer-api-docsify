@@ -11,7 +11,10 @@ The **userAuth** module is the core module for user authentication in OpenHarmon
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

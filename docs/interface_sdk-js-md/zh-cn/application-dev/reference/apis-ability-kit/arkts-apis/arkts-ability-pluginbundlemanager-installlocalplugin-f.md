@@ -1,5 +1,10 @@
 # installLocalPlugin
 
+## 导入模块
+
+```TypeScript
+```
+
 ## installLocalPlugin
 
 ```TypeScript

@@ -11,7 +11,8 @@ Provides APIs to access the result set obtained by querying the RDB store. This 
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'relationalStore';
+import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## close

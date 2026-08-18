@@ -10,6 +10,11 @@ Implements a GeolocationPermissions object. &lt;p&gt;&lt;strong&gt;API Note&lt;/
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## allowGeolocation
 
 ```TypeScript

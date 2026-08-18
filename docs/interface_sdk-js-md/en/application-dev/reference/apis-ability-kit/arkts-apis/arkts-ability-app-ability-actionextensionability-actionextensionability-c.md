@@ -17,6 +17,7 @@ The ActionExtensionAbility module provides a template for you to implement custo
 ## Modules to Import
 
 ```TypeScript
-import { ActionExtensionAbility } from 'ActionExtensionAbility';
+import { ActionExtensionAbility } from '@kit.AbilityKit';
+import { ActionExtensionAbility } from '@kit.AbilityKit';
 ```
 

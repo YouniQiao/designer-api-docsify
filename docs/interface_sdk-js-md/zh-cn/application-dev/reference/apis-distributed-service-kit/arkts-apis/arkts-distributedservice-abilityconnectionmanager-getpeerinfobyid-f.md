@@ -1,5 +1,10 @@
 # getPeerInfoById
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPeerInfoById
 
 ```TypeScript

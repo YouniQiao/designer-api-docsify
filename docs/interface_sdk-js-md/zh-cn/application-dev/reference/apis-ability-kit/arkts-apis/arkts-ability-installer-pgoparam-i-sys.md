@@ -10,6 +10,11 @@ PGO（Profile-guided Optimization）配置文件参数信息。
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## moduleName
 
 ```TypeScript

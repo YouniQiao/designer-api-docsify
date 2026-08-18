@@ -11,7 +11,7 @@ Provides the VideoProcessor type, including AIHDR related functions.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessing } from 'videoProcessing';
+import { videoProcessing } from '@kit.MediaKit';
 ```
 
 ## getStatus

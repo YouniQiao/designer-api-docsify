@@ -1,5 +1,10 @@
 # getStartupTaskResult
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getStartupTaskResult
 
 ```TypeScript

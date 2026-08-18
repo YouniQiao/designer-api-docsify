@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
 
+## 导入模块
+
+```TypeScript
+```
+
 ## customPicker
 
 ```TypeScript

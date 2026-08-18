@@ -8,6 +8,11 @@ Define the ratio of characters entered by the the percentage of InputCounterOpti
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## counterTextColor
 
 ```TypeScript

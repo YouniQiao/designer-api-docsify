@@ -8,6 +8,11 @@ ImageReceiver的初始化选项。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
+## 导入模块
+
+```TypeScript
+```
+
 ## capacity
 
 ```TypeScript

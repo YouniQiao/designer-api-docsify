@@ -10,6 +10,11 @@ HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createH
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## digest
 
 ```TypeScript

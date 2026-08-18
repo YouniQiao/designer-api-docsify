@@ -8,6 +8,11 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clear
 
 ```TypeScript
@@ -799,7 +804,7 @@ removeByName(name: string): number
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的 onReady回调中获取，也可以在 [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md#navdestinationinfo)中获取。
+将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的 onReady回调中获取，也可以在 [NavDestinationInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationinfo-i.md#navdestinationinfo)中获取。
 
 **起始版本：** 12
 

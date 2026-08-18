@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAcbState
 
 ```TypeScript

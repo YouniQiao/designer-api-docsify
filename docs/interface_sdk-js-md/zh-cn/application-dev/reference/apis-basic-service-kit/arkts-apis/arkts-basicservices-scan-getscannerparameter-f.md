@@ -1,5 +1,10 @@
 # getScannerParameter
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getScannerParameter
 
 ```TypeScript

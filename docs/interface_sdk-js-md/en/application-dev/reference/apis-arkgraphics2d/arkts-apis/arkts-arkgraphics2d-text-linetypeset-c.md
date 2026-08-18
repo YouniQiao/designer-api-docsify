@@ -11,7 +11,8 @@ Implements a carrier that stores the text content and style. It can be used to c
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'text';
+import { text } from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## createLine

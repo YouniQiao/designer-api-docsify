@@ -10,6 +10,11 @@ Options of the ring style without scales. Inherits from [ScanEffectOptions](arkt
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## shadow
 
 ```TypeScript

@@ -11,7 +11,7 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'media';
+import { media } from '@kit.MediaKit';
 ```
 
 ## gltf_offset

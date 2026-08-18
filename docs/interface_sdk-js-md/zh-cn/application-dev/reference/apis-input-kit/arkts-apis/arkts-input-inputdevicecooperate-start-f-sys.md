@@ -1,5 +1,10 @@
 # start（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## start
 
 ```TypeScript
@@ -26,7 +31,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 | --- | --- | --- | --- |
 | sinkDeviceDescriptor | string | 是 | 键鼠穿越目标设备描述符。 |
 | srcInputDeviceId | number | 是 | 键鼠穿越待穿越外设标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当启动键鼠穿越成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动键鼠穿越成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

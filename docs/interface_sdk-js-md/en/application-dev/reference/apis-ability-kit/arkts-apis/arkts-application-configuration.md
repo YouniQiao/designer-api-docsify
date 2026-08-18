@@ -1,5 +1,10 @@
 # @ohos.application.Configuration
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

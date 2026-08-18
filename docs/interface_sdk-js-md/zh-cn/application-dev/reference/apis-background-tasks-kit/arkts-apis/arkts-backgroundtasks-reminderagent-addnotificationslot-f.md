@@ -1,5 +1,10 @@
 # addNotificationSlot
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addNotificationSlot
 
 ```TypeScript
@@ -23,7 +28,7 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | 是 | notification.slot实例，仅支持设置其type属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步回调。 |
 
 **示例**
 

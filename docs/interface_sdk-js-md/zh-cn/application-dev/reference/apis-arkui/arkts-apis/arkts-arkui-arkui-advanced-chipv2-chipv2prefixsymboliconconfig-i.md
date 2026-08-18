@@ -14,3 +14,8 @@ ChipV2PrefixSymbolIconConfig定义前缀Symbol图标的属性配置。 继承自
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+

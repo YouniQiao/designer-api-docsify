@@ -8,6 +8,11 @@ Describes the information of an SEI message.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## payload
 
 ```TypeScript

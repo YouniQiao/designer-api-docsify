@@ -1,5 +1,10 @@
 # getFontWeightScale
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFontWeightScale
 
 ```TypeScript

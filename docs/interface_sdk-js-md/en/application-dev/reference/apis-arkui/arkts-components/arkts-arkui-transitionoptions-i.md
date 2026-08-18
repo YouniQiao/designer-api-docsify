@@ -12,6 +12,11 @@ Defines the transition effect by setting parameters in the struct. > **NOTE：**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## opacity
 
 ```TypeScript

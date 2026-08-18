@@ -1,5 +1,10 @@
 # removeFreezeExemptedApps
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeFreezeExemptedApps
 
 ```TypeScript

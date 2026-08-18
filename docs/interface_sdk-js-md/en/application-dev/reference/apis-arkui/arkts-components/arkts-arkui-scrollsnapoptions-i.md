@@ -8,6 +8,11 @@ Defines a scroll snapping mode object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enableSnapToEnd
 
 ```TypeScript

@@ -1,0 +1,67 @@
+# getDefaultData
+
+## 导入模块
+
+```TypeScript
+```
+
+## getDefaultData
+
+```TypeScript
+function getDefaultData(admin: Want): number
+```
+
+获取设备当前默认使用的数据流量卡卡槽ID。例如，企业设备管理员可在设备管理过程中查询当前配置的默认数据流量卡，以便进行流量管理或切换数据卡配置。未插卡或者飞行模式下会获取上一次使用的数据流量卡卡槽ID、设备从未设置过默认数据流量卡 场景下，该接口返回默认卡槽1，值为0。
+
+**起始版本：** 26.0.0
+
+**需要权限：** ohos.permission.ENTERPRISE_MANAGE_TELEPHONY
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-telephonyManager-function getDefaultData(admin: Want): number--><!--Device-telephonyManager-function getDefaultData(admin: Want): number-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+
+**示例**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { telephonyManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // 获取当前默认数据流量卡的卡槽ID
+  let slotId: number = telephonyManager.getDefaultData(wantTemp);
+  console.info(`success in getting default data SIM ID on slot ${slotId}`);
+} catch (err) {
+  console.error(`Failed to get default data on slot ${slotId}. Code: ${err.code}, message: ${err.message}`);
+}
+```

@@ -8,6 +8,11 @@ Alignment mode of the dialog box.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## dx
 
 ```TypeScript

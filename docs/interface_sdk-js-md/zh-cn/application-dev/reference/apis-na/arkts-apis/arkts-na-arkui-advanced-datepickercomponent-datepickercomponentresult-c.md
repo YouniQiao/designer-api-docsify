@@ -10,6 +10,11 @@ DatePickerComponentResult定义日期时间选择器的选择结果。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## day
 
 ```TypeScript

@@ -12,6 +12,11 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md#beautyquer
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBeauty
 
 ```TypeScript

@@ -11,7 +11,8 @@ Manages the audio-haptic feature. Before calling any API in AudioHapticManager, 
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from 'audioHaptic';
+import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createPlayer

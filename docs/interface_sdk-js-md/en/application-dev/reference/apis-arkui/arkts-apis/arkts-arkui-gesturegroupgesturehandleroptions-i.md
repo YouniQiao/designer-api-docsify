@@ -8,6 +8,11 @@ Provides the parameters of the gesture group handler.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## gestures
 
 ```TypeScript

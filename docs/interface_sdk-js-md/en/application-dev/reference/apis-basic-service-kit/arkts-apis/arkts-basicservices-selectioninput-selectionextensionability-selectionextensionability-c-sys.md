@@ -13,7 +13,7 @@ This module provides APIs for word selection extension, which can implement exte
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionAbility } from 'SelectionExtensionAbility';
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onConnect

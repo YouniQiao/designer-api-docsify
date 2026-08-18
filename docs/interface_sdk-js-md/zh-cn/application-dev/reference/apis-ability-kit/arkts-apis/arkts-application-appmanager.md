@@ -12,6 +12,11 @@ appManager模块提供应用管理的能力，包括查询当前系统是否处�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

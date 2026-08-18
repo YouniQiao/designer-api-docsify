@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getSimpleNumberFormatBySkeleton
@@ -33,7 +34,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
+| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
 
 **Error codes:**
 
@@ -69,7 +70,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSimpleNumberFormatBySkeleton](#getsimplenumberformatbyskeleton)(skeleton: string, locale?: Intl.Locale)
+**Substitutes:** [getSimpleNumberFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton)(skeleton: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -88,7 +89,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
+| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat** object. |
 
 **Error codes:**
 

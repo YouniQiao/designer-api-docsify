@@ -10,6 +10,11 @@ ReminderRequestAlarm extends ReminderRequest 闹钟实例对象，用于设置�
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## daysOfWeek
 
 ```TypeScript

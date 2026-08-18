@@ -1,5 +1,10 @@
 # getUserAuthInstance
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUserAuthInstance
 
 ```TypeScript

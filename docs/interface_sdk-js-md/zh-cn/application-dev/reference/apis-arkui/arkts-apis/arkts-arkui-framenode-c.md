@@ -1,6 +1,6 @@
 # FrameNode
 
-FrameNode表示组件树的实体节点，支持节点树操作、自定义绘制与布局、位置查询、动画等能力。[NodeController](arkts-arkui-nodecontroller-c.md#nodecontroller)可通过 BuilderNode持有的FrameNode将其挂载到NodeContainer上， 也可通过FrameNode获取[RenderNode](arkts-arkui-rendernode-c.md#rendernode)，挂载到其他FrameNode上。适用于需要通过代码动态创建和管理组件节点树的场景，可实现声明式组件无法直接满足的灵活 UI组合与自定义渲染需求。&lt;!--RP2--&gt;&lt;!--RP2End--&gt; > **说明：** > > - 当前不支持在预览器中使用FrameNode节点。 > > - FrameNode节点暂不支持拖拽。 > > - FrameNode对象不支持使用JSON序列化。 > > - 在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的场景中调用[FrameNode](#framenode)对象的接口时，建议使用 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext)的[runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask)接口明确UI > 上下文，参考[执行绑定UI实例的闭包](../../../ui/arkts-global-interface.md#执行绑定ui实例的闭包)示例。 > > - FrameNode的接口中，仅Optional类型的必选参数支持传入null或undefined。
+FrameNode表示组件树的实体节点，支持节点树操作、自定义绘制与布局、位置查询、动画等能力。[NodeController](arkts-arkui-nodecontroller-c.md#nodecontroller)可通过 BuilderNode持有的FrameNode将其挂载到NodeContainer上， 也可通过FrameNode获取[RenderNode](arkts-arkui-rendernode-c.md#rendernode)，挂载到其他FrameNode上。适用于需要通过代码动态创建和管理组件节点树的场景，可实现声明式组件无法直接满足的灵活 UI组合与自定义渲染需求。&lt;!--RP2--&gt;&lt;!--RP2End--&gt; > **说明：** > > - 当前不支持在预览器中使用FrameNode节点。 > > - FrameNode节点暂不支持拖拽。 > > - FrameNode对象不支持使用JSON序列化。 > > - 在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的场景中调用[FrameNode](#framenode)对象的接口时，建议使用 > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#uicontext)的[runScopedTask](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#runscopedtask)接口明确UI > 上下文，参考[执行绑定UI实例的闭包](../../../ui/arkts-global-interface.md#执行绑定ui实例的闭包)示例。 > > - FrameNode的接口中，仅Optional类型的必选参数支持传入null或undefined。
 
 **起始版本：** 11
 
@@ -340,7 +340,7 @@ FrameNode的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 
 ## convertPosition
 
@@ -591,7 +591,7 @@ static createFrameNodes(uiContext: UIContext, count: number): FrameNode[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | count | number | 是 | 指定创建节点的数量，取值范围为大于零的整型。若给定值小于等于0或不是整数，则返回空数组。 |
 
 **返回值：**
@@ -1778,7 +1778,7 @@ getMeasuredSize(): Size
 
 | 类型 | 说明 |
 | --- | --- |
-| [Size](arkts-arkui-graphics-size-i.md) | 节点测量后的大小，单位为PX。 |
+| [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | 节点测量后的大小，单位为PX。 |
 
 **示例**
 
@@ -2594,7 +2594,7 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的边框宽度。 |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的边框宽度。 |
 
 **示例**
 
@@ -2622,7 +2622,7 @@ getUserConfigMargin(): Edges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的外边距。 |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的外边距。 |
 
 **示例**
 
@@ -2650,7 +2650,7 @@ getUserConfigPadding(): Edges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的内边距。 |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的内边距。 |
 
 **示例**
 
@@ -2678,7 +2678,7 @@ getUserConfigSize(): SizeT<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | 用户设置的宽高。 |
+| [SizeT](../../apis-na/arkts-apis/arkts-na-graphics-sizet-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 用户设置的宽高。 |
 
 **示例**
 
@@ -3764,7 +3764,7 @@ moveTo(targetParent: FrameNode, index?: number): void
 onDraw?(context: DrawContext): void
 ```
 
-FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNode进行内容绘制时被调用。 该接口的[DrawContext](arkts-arkui-graphics-drawcontext-c.md#drawcontext)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
+FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNode进行内容绘制时被调用。 该接口的[DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md#drawcontext)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
 
 **起始版本：** 12
 
@@ -3780,7 +3780,7 @@ FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNod
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。自绘制区域无法超出组件自身大小。 |
+| context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。自绘制区域无法超出组件自身大小。 |
 
 **示例**
 
@@ -4066,7 +4066,7 @@ setMeasuredSize(size: Size): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Size](arkts-arkui-graphics-size-i.md) | 是 | FrameNode的测量后的尺寸，单位为PX。 |
+| size | [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | 是 | FrameNode的测量后的尺寸，单位为PX。 |
 
 **示例**
 

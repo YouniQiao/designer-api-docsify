@@ -1,5 +1,10 @@
 # getAllowedPermissionBundles
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllowedPermissionBundles
 
 ```TypeScript

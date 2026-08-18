@@ -11,7 +11,9 @@ Provides APIs for locating certificates or CRLs in a **CertCRLCollection** objec
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'cert';
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## selectCRLs

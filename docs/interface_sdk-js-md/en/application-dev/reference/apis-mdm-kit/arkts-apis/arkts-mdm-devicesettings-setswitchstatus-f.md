@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from 'deviceSettings';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## setSwitchStatus

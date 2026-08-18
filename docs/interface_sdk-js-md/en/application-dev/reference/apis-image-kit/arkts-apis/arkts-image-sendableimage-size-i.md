@@ -13,7 +13,7 @@ Describes the size of an image. It inherits from [lang.ISendable](../../../arkts
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## height

@@ -11,15 +11,8 @@ Declare struct PopoverDialog
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog } from 'AlertDialog';
-import { ButtonOptions } from 'ButtonOptions';
-import { ConfirmDialog } from 'ConfirmDialog';
-import { LoadingDialog } from 'LoadingDialog';
-import { SelectDialog } from 'SelectDialog';
-import { TipsDialog } from 'TipsDialog';
-import { CustomContentDialog } from 'CustomContentDialog';
-import { PopoverDialog } from 'PopoverDialog';
-import { PopoverOptions } from 'PopoverOptions';
+import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
+import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUI';
 ```
 
 ## popover

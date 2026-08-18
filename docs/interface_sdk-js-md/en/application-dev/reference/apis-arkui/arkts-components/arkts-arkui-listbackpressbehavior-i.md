@@ -8,6 +8,11 @@ Defines the system back button behavior of the **List** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## closeSwipeAction
 
 ```TypeScript

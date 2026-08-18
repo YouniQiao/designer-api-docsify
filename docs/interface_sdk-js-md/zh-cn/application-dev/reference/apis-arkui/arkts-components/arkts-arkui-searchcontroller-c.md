@@ -12,6 +12,11 @@ Search组件的控制器继承自TextContentControllerBase，涉及的接口有 
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## caretPosition
 
 ```TypeScript

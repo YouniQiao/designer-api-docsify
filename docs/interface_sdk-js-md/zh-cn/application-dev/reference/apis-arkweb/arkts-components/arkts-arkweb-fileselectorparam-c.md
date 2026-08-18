@@ -8,6 +8,11 @@ FileSelectorParam是ArkWeb组件中的文件选择器参数类，用于获取Web
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

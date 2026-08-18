@@ -1,0 +1,286 @@
+# AVImageGenerator
+
+视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过 [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator) 构建一个AVImageGenerator实例。 获取视频缩略图的demo可参考：[获取视频缩略图开发指导](../../../media/media/avimagegenerator.md)。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
+
+**起始版本：** 23
+
+<!--Device-media-interface AVImageGenerator--><!--Device-media-interface AVImageGenerator-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+## 导入模块
+
+```TypeScript
+```
+
+## fetchFrameByTime
+
+```TypeScript
+fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,
+      callback: AsyncCallback<image.PixelMap>): void
+```
+
+获取视频缩略图。使用callback异步回调。
+
+**起始版本：** 12
+
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeUs | number | 是 |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## fetchFrameByTime
+
+```TypeScript
+fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,
+      callback: AsyncCallback<image.PixelMap | undefined>): void
+```
+
+Obtains a video thumbnail. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap | undefined>): void--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap | undefined>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeUs | number | 是 |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap \| undefined & gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## fetchFrameByTime
+
+```TypeScript
+fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>
+```
+
+获取视频缩略图。使用Promise异步回调。
+
+**起始版本：** 12
+
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeUs | number | 是 |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## fetchFrameByTime
+
+```TypeScript
+fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap | undefined>
+```
+
+Obtains a video thumbnail. This API uses a promise to return the result.
+
+**起始版本：** 23
+
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap | undefined>--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap | undefined>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeUs | number | 是 |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap \ | undefined & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## fetchScaledFrameByTime
+
+```TypeScript
+fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):
+      Promise<image.PixelMap>
+```
+
+支持按比例缩放提取视频缩略图。使用Promise异步回调。
+
+**起始版本：** 20
+
+<!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeUs | number | 是 |
+| queryMode | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
+| outputSize | [OutputSize](arkts-media-media-outputsize-i.md) | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## fetchScaledFrameByTime
+
+```TypeScript
+fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):
+      Promise<image.PixelMap | undefined>
+```
+
+Supports extracting video thumbnails by proportional scaling
+
+**起始版本：** 23
+
+<!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: long, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap | undefined>--><!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: long, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap | undefined>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| timeUs | number | 是 |
+| queryMode | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
+| outputSize | [OutputSize](arkts-media-media-outputsize-i.md) | 否 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;image.PixelMap \ | undefined & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+
+## release
+
+```TypeScript
+release(callback: AsyncCallback<void>): void
+```
+
+释放资源。使用callback异步回调。
+
+**起始版本：** 23
+
+<!--Device-AVImageGenerator-release(callback: AsyncCallback<void>): void--><!--Device-AVImageGenerator-release(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## release
+
+```TypeScript
+release(): Promise<void>
+```
+
+释放资源。使用Promise异步回调。
+
+**起始版本：** 23
+
+<!--Device-AVImageGenerator-release(): Promise<void>--><!--Device-AVImageGenerator-release(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+
+## fdSrc
+
+```TypeScript
+fdSrc ?: AVFileDescriptor
+```
+
+媒体文件描述，通过该属性设置数据源。 **使用示例**： 假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }。 **说明：** 将资源句柄（fd）传递给AVImageGenerator实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/ AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频缩略图数据获取异常。
+
+**类型：** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
+
+**起始版本：** 23
+
+<!--Device-AVImageGenerator-fdSrc ?: AVFileDescriptor--><!--Device-AVImageGenerator-fdSrc ?: AVFileDescriptor-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator

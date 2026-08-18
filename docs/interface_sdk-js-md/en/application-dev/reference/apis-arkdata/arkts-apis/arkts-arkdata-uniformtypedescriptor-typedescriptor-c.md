@@ -11,7 +11,8 @@ Represents a class for defining a uniform data type. It provides properties and 
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'uniformTypeDescriptor';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## belongsTo

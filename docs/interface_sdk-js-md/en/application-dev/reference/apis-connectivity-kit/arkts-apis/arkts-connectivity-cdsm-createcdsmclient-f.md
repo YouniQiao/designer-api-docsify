@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from 'cdsm';
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## createCdsmClient

@@ -8,6 +8,11 @@ Provides APIs for configuring gestures bound to a component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## addGesture
 
 ```TypeScript

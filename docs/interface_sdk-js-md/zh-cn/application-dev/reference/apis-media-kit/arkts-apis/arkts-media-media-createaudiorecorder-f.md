@@ -1,5 +1,10 @@
 # createAudioRecorder
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createAudioRecorder
 
 ```TypeScript

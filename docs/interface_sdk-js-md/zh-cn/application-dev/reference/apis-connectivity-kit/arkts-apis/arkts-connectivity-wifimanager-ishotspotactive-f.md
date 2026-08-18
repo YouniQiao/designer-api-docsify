@@ -1,5 +1,10 @@
 # isHotspotActive
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isHotspotActive
 
 ```TypeScript

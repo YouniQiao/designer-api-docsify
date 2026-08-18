@@ -1,5 +1,10 @@
 # deleteGroup
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deleteGroup
 
 ```TypeScript

@@ -10,6 +10,11 @@ PatternLock组件的控制器，用于重置组件状态和设置图案密码状
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

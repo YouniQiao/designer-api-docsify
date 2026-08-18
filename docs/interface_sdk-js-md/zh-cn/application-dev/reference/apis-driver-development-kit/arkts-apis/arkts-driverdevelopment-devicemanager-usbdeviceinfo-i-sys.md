@@ -12,6 +12,11 @@ USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemana
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## interfaceDescList
 
 ```TypeScript

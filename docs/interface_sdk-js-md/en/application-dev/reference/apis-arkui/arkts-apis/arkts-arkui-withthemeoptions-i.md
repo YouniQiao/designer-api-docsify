@@ -8,6 +8,11 @@ Defines the default theme and color mode for components within the **WithTheme**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## colorMode
 
 ```TypeScript

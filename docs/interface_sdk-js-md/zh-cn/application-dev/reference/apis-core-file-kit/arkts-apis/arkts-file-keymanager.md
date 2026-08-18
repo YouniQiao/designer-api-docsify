@@ -20,6 +20,11 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Encryption
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

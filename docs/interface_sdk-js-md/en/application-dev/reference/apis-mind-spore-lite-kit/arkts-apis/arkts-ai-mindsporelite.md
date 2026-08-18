@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'mindSporeLite';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## Summary

@@ -1,5 +1,10 @@
 # getDockApps
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDockApps
 
 ```TypeScript

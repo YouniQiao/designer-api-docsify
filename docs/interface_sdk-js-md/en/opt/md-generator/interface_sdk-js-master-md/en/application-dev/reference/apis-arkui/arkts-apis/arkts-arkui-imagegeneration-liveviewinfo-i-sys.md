@@ -1,0 +1,88 @@
+# LiveViewInfo (System API)
+
+Information for LiveView in AI image generation.
+
+**Since:** 26.0.0
+
+<!--Device-imageGeneration-interface LiveViewInfo--><!--Device-imageGeneration-interface LiveViewInfo-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+```
+
+## getLongTermTaskId
+
+```TypeScript
+getLongTermTaskId(): number
+```
+
+Get the long-term task ID for LiveView.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LiveViewInfo-getLongTermTaskId(): int--><!--Device-LiveViewInfo-getLongTermTaskId(): int-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
+
+## getWant
+
+```TypeScript
+getWant(): Want
+```
+
+Get the Want object for LiveView.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LiveViewInfo-getWant(): Want--><!--Device-LiveViewInfo-getWant(): Want-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) |
+
+## isLiveViewNeeded
+
+```TypeScript
+isLiveViewNeeded(): boolean
+```
+
+Check whether LiveView is needed.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LiveViewInfo-isLiveViewNeeded(): boolean--><!--Device-LiveViewInfo-isLiveViewNeeded(): boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |

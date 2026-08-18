@@ -1,5 +1,10 @@
 # isAnimationReduceEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isAnimationReduceEnabled
 
 ```TypeScript

@@ -11,7 +11,7 @@ Defines the options for selecting audio clips.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## maxSelectNumber

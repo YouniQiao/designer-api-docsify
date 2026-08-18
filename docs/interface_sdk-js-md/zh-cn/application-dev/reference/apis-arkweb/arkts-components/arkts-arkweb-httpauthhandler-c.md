@@ -8,6 +8,11 @@ HttpAuthHandler是Web组件用于处理HTTP认证请求的处理类。当服务�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancel
 
 ```TypeScript

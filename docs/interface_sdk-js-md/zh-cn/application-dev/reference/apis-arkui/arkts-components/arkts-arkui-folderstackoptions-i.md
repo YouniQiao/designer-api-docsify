@@ -8,6 +8,11 @@ FolderStack悬停态配置项对象，用于描述悬停态状态下需要移到
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## upperItems
 
 ```TypeScript

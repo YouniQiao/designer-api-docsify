@@ -8,6 +8,11 @@ VM内存信息。
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
+## 导入模块
+
+```TypeScript
+```
+
 ## allArraySize
 
 ```TypeScript

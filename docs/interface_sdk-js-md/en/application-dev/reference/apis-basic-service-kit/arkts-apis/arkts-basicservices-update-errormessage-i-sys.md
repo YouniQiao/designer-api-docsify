@@ -13,7 +13,7 @@ Represents an error message.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## errorCode

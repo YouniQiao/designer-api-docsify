@@ -8,6 +8,11 @@ Provides information about the delete operation and the deleted content.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## direction
 
 ```TypeScript

@@ -10,6 +10,11 @@ AlbumInfo: include album uri
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## albumName
 
 ```TypeScript

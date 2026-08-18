@@ -1,5 +1,10 @@
 # evictFilePages
 
+## 导入模块
+
+```TypeScript
+```
+
 ## evictFilePages
 
 ```TypeScript

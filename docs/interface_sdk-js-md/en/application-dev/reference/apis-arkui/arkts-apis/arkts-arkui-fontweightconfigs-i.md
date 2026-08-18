@@ -8,6 +8,11 @@ Defines font weight configurations. When the configuration object (including an 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## enableDeviceFontWeightCategory
 
 ```TypeScript

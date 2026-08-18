@@ -1,5 +1,10 @@
 # getUserRestricted
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUserRestricted
 
 ```TypeScript

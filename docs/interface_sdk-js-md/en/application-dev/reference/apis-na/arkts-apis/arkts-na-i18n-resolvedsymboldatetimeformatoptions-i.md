@@ -12,6 +12,11 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## amPMSymbol
 
 ```TypeScript

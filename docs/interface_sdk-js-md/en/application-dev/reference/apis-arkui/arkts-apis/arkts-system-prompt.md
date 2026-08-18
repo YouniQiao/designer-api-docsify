@@ -3,11 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Button } from 'Button';
-import { ShowActionMenuOptions } from 'ShowActionMenuOptions';
-import { ShowDialogOptions } from 'ShowDialogOptions';
-import { ShowDialogSuccessResponse } from 'ShowDialogSuccessResponse';
-import { ShowToastOptions } from 'ShowToastOptions';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## Summary

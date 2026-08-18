@@ -1,5 +1,10 @@
 # getThreadPriority
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getThreadPriority
 
 ```TypeScript

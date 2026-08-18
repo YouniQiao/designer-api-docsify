@@ -2,13 +2,18 @@
 
 BasicPrefetcher是IPrefetcher的基础实现。它提供了一种智能数据预取算法，以根据屏幕上可见区域的实时变化和预取持续时间的变化来决定应预取哪些数据项。它还可以根据用户的滚动操作来确定哪些预取请求应该被取消。 BasicPrefetcher对象不支持使用JSON序列化。
 
-**继承/实现关系：** BasicPrefetcher implements [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md#iprefetcher)
+**继承/实现关系：** BasicPrefetcher implements [IPrefetcher](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-iprefetcher-i.md#iprefetcher)
 
 **起始版本：** 12
 
 <!--Device-unnamed-export class BasicPrefetcher--><!--Device-unnamed-export class BasicPrefetcher-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## constructor
 
@@ -32,7 +37,7 @@ constructor(dataSource?: IDataSourcePrefetching)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | 否 | 支持预取能力的数据源。不传入时默认为空，后续可通过setDataSource方法设置数据源。 |
+| dataSource | [IDataSourcePrefetching](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-idatasourceprefetching-i.md) | 否 | 支持预取能力的数据源。不传入时默认为空，后续可通过setDataSource方法设置数据源。 |
 
 ## setDataSource
 
@@ -56,7 +61,7 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | 是 | 支持预取能力的数据源。 |
+| dataSource | [IDataSourcePrefetching](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-idatasourceprefetching-i.md) | 是 | 支持预取能力的数据源。 |
 
 ## visibleAreaChanged
 

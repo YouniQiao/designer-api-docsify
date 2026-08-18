@@ -1,5 +1,10 @@
 # isWifiActive
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isWifiActive
 
 ```TypeScript

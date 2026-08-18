@@ -1,5 +1,10 @@
 # getApplicationContext
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getApplicationContext
 
 ```TypeScript

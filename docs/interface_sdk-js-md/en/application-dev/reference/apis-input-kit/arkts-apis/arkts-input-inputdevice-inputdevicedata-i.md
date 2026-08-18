@@ -11,7 +11,8 @@ Provides information about an input device.
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'inputDevice';
+import { inputDevice } from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## axisRanges

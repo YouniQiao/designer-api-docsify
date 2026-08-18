@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from 'conversation';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## getTrustedDevices

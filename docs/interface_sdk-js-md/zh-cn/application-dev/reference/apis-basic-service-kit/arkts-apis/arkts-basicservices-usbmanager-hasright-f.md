@@ -1,12 +1,17 @@
 # hasRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasRight
 
 ```TypeScript
 function hasRight(deviceName: string): boolean
 ```
 
-判断是否有权访问该设备。 如果“使用者”（如各种App或系统）有权访问设备则返回true；无权访问设备则返回false。
+判断是否有权访问该设备。 如果应用有权访问设备则返回true；无权访问设备则返回false。
 
 **起始版本：** 23
 
@@ -18,7 +23,7 @@ function hasRight(deviceName: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceName | string | 是 | 设备名称，来自[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的设备列表USBDevice的name。 |
+| deviceName | string | 是 | 设备名称，来自[getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的设备列表USBDevice的name。 |
 
 **返回值：**
 

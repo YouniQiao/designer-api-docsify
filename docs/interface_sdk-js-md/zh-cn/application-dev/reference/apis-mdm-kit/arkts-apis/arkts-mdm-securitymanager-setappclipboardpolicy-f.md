@@ -1,5 +1,10 @@
 # setAppClipboardPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setAppClipboardPolicy
 
 ```TypeScript

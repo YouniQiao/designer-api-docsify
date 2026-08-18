@@ -13,7 +13,7 @@ Describes evaluation result.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from 'intelligentVoice';
+import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
 ## resultCode

@@ -11,7 +11,8 @@ AVSession object.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'avSession';
+import { avSession } from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## activate

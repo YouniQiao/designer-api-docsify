@@ -1,5 +1,10 @@
 # getUserId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUserId
 
 ```TypeScript

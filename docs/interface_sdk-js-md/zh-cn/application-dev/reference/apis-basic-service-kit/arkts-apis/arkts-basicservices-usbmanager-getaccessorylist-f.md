@@ -1,5 +1,10 @@
 # getAccessoryList
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAccessoryList
 
 ```TypeScript
@@ -18,7 +23,7 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Readonly&lt;[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)&gt;&gt; | 只读的USB配件列表。当前仅支持列表中包含1个USB配件。 |
+| Array&lt;Readonly&lt;[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)&gt;&gt; | 只读的USB配件列表。包含所有可用的USB配件信息。 |
 
 **错误码：**
 

@@ -8,6 +8,11 @@ Font类用于描述字型绘制时所使用的属性（如大小、字体、粗�
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## countText
 
 ```TypeScript

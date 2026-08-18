@@ -11,7 +11,7 @@ Represents the configuration parameters of a serial port.
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from 'serialManager';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## baudRate

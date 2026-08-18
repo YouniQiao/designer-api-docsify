@@ -1,5 +1,10 @@
 # convertFromPixelMap
 
+## 导入模块
+
+```TypeScript
+```
+
 ## convertFromPixelMap
 
 ```TypeScript

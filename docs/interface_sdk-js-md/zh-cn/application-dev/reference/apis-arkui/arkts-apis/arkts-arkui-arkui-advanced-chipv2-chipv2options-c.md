@@ -8,6 +8,11 @@ ChipV2Options定义ChipV2的样式及具体样式参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -30,7 +35,7 @@ ChipV2Options的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [IChipV2OptionsConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | 是 | ChipV2样式配置，用于自定义ChipV2组件的外观和行为，包含label、prefixIcon、suffixIcon、allowClose、 activated、backgroundColor等配置项。 |
+| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | 是 | ChipV2样式配置，用于自定义ChipV2组件的外观和行为，包含label、prefixIcon、suffixIcon、allowClose、 activated、backgroundColor等配置项。 |
 
 ## accessibilityDescription
 

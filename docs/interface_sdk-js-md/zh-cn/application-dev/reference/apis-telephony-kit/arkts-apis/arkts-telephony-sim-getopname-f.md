@@ -1,5 +1,10 @@
 # getOpName
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getOpName
 
 ```TypeScript
@@ -19,7 +24,7 @@ Obtains the operator name of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Indicates the callback for getting the operator name; Returns an empty string if no SIM card is inserted or no operator name matched. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the operator name; Returns an empty string if no SIM card is inserted or no operator name matched. |
 
 **错误码：**
 

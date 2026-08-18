@@ -10,6 +10,11 @@ Declaration of the composable title bar. Composable title bar represents a commo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -38,7 +43,7 @@ The method to build component.
 
 A single menu item for the profile picture on the left.
 
-**Type:** [ComposeTitleBarV2MenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
+**Type:** [ComposeTitleBarV2MenuItem](arkts-na-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
 **Since:** 26.0.0
 
@@ -59,7 +64,7 @@ A single menu item for the profile picture on the left.
 
 Menu items on the right side.
 
-**Type:** Array&lt;[ComposeTitleBarV2MenuItem](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
+**Type:** Array&lt;[ComposeTitleBarV2MenuItem](arkts-na-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **Since:** 26.0.0
 

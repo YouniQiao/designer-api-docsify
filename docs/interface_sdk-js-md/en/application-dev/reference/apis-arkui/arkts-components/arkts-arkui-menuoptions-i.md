@@ -10,6 +10,11 @@ Configues menu item information, which is inherited from [ContextMenuOptions](ar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## showInSubWindow
 
 ```TypeScript

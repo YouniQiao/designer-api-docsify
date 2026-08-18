@@ -11,7 +11,8 @@ The **userAuthIcon** module is a UI component module of the OpenHarmony user ide
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthIcon } from 'UserAuthIcon';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## authParam

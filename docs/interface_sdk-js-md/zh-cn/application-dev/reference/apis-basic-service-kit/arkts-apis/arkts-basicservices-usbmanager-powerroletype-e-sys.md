@@ -1,6 +1,6 @@
 # PowerRoleType（系统接口）
 
-Enumerates power role types.
+电源角色类型。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ Enumerates power role types.
 NONE = 0
 ```
 
-没有功能。
+无。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ NONE = 0
 SOURCE = 1
 ```
 
-External power supply
+对外提供电源。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ External power supply
 SINK = 2
 ```
 
-Internal power supply
+需要外部供电。
 
 **起始版本：** 23
 

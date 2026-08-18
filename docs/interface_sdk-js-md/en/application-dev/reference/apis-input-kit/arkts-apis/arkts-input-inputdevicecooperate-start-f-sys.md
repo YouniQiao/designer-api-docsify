@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from 'inputDeviceCooperate';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## start

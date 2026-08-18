@@ -1,5 +1,10 @@
 # isFuncObjAsync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isFuncObjAsync
 
 ```TypeScript

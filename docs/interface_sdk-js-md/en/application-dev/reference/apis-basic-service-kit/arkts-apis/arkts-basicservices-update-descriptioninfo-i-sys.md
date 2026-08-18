@@ -13,7 +13,7 @@ Represents information about the version description file.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## content

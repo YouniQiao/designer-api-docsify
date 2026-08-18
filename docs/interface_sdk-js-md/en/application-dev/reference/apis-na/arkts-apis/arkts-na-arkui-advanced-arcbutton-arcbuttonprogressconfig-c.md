@@ -10,6 +10,11 @@ The class used for configuring ArcButton to support progress bar display.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

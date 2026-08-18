@@ -21,5 +21,5 @@ type NormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the uri to normalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Returns the normalized uri if the data share supports URI normalization. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Returns the normalized uri if the data share supports URI normalization. |
 

@@ -1,5 +1,10 @@
 # createImagePacker
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createImagePacker
 
 ```TypeScript

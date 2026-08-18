@@ -14,3 +14,8 @@ Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#blurstyleopti
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

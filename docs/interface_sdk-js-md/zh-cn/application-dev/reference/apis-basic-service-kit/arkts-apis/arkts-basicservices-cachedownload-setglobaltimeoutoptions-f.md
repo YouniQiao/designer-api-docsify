@@ -1,5 +1,10 @@
 # setGlobalTimeoutOptions
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setGlobalTimeoutOptions
 
 ```TypeScript

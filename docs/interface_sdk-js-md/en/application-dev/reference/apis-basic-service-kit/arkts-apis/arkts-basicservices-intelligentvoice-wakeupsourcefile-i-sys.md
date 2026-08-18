@@ -13,7 +13,7 @@ Describes wakeup source file information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from 'intelligentVoice';
+import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
 ## fileContent

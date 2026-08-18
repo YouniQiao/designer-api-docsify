@@ -1,5 +1,10 @@
 # getSignalLevel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSignalLevel
 
 ```TypeScript

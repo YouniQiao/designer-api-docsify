@@ -8,6 +8,11 @@ Implements the controller for the **Swiper** component. Bind this object to a **
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## changeIndex
 
 ```TypeScript

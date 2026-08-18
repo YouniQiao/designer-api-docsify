@@ -15,7 +15,7 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'deviceManager';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authenticateDevice

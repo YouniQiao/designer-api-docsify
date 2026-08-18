@@ -8,6 +8,11 @@ WebMessagePort是Web组件中用于应用侧（ArkTS）与HTML5侧（JavaScript�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

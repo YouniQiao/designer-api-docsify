@@ -10,6 +10,11 @@ ChipV2SymbolIcon定义Symbol图标类。 继承自[ChipV2Icon](arkts-arkui-arkui
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

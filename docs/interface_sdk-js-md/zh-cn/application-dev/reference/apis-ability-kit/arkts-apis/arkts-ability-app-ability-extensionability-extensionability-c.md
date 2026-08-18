@@ -14,3 +14,8 @@ ExtensionAbility是特定场景扩展能力的基类，继承自[Ability](arkts-
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+

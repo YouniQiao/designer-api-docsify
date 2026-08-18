@@ -1,5 +1,10 @@
 # createGZip
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createGZip
 
 ```TypeScript

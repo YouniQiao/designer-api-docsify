@@ -10,6 +10,11 @@ Options of generating code cache
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## responseHeaders
 
 ```TypeScript

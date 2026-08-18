@@ -8,6 +8,11 @@ Defines the background style configuration for selected picker items.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## borderRadius
 
 ```TypeScript

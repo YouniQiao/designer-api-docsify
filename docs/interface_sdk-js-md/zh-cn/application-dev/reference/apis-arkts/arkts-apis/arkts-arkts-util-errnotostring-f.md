@@ -1,5 +1,10 @@
 # errnoToString
 
+## 导入模块
+
+```TypeScript
+```
+
 ## errnoToString
 
 ```TypeScript

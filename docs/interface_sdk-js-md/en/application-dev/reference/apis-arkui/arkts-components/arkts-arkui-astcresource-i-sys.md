@@ -10,6 +10,11 @@ Defines the resource which can use ASTC.
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## column
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getSimOperatorNumericSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSimOperatorNumericSync
 
 ```TypeScript

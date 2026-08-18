@@ -10,6 +10,11 @@ A read-write lock that allows concurrent read access but exclusive write access
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## details
 
 ```TypeScript

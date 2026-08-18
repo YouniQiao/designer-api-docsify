@@ -1,5 +1,10 @@
 # onConnect
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onConnect
 
 ```TypeScript
@@ -22,7 +27,7 @@ Registers connect event.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | int | 是 | Ability connection Session id. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | 是 | Used to handle ('connect') command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | 是 | Used to handle ('connect') command. |
 
 **错误码：**
 

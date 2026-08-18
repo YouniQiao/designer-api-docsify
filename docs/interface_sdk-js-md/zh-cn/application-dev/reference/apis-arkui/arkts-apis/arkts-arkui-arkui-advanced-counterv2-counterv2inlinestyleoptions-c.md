@@ -10,6 +10,11 @@ CounterV2InlineStyleOptions定义了数值内联型CounterV2的属性和事件�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## max
 
 ```TypeScript

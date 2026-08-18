@@ -1,5 +1,10 @@
 # getInsertSqlInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInsertSqlInfo
 
 ```TypeScript

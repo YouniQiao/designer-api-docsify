@@ -1,5 +1,10 @@
 # getAutoStartupStatusForSelf
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAutoStartupStatusForSelf
 
 ```TypeScript

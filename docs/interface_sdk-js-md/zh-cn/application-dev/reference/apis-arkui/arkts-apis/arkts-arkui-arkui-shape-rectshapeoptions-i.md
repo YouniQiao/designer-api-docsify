@@ -12,6 +12,11 @@ RectShape 的构造函数参数。 继承自[ShapeSize](arkts-arkui-arkui-shape-
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## radius
 
 ```TypeScript

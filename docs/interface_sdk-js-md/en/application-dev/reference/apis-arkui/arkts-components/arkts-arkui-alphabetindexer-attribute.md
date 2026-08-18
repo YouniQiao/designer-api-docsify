@@ -10,6 +10,11 @@ When the width attribute is set to **"auto"**, the width is adaptive. This means
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## alignStyle
 
 ```TypeScript

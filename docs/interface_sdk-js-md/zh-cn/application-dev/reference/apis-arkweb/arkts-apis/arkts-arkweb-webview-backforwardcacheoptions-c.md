@@ -8,6 +8,11 @@ BackForwardCacheOptions是ArkWeb框架中用于配置Web组件前进后退缓存
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

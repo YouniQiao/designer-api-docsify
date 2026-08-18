@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { constant } from 'constant';
+import { constant } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

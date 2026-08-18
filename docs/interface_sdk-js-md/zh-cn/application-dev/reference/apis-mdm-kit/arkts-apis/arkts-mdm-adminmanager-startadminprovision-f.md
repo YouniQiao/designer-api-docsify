@@ -1,5 +1,10 @@
 # startAdminProvision
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startAdminProvision
 
 ```TypeScript

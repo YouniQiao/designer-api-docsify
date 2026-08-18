@@ -11,7 +11,9 @@ The request agent api. Supports "background" and "frontend" tasks as while. Thou
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'request';
+import { request } from '@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

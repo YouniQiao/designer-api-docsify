@@ -1,12 +1,17 @@
 # getSerialPortList
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSerialPortList
 
 ```TypeScript
 function getSerialPortList(): Promise<SerialPort[]>
 ```
 
-获取串口列表。使用Promise异步回调。
+查询串口设备列表，返回[SerialPort](arkts-basicservices-serial-serialport-i.md#serialport)对象数组。使用Promise异步回调。用于需要识别可用串口设备的场景，如工业设备连接、物联网设备管理、嵌入式系统调试等场景。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +25,7 @@ function getSerialPortList(): Promise<SerialPort[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SerialPort[]&gt; | Promise used to return the list of serial port devices. |
+| Promise&lt;SerialPort[]&gt; | Promise对象，返回串口设备列表。 |
 
 **错误码：**
 

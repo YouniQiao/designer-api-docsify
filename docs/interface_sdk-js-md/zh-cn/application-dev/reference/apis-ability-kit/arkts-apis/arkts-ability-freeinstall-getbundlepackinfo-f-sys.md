@@ -1,5 +1,10 @@
 # getBundlePackInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getBundlePackInfo
 
 ```TypeScript
@@ -25,7 +30,7 @@ function getBundlePackInfo(bundleName: string,
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | bundlePackFlag | [BundlePackFlag](arkts-ability-freeinstall-bundlepackflag-e-sys.md) | 是 | 指示要查询的应用包标志。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BundlePackInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)。当函数调用成功，err为undefined， data为获取到的BundlePackInfo信息。否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundlePackInfo&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)。当函数调用成功，err为undefined， data为获取到的BundlePackInfo信息。否则为错误对象。 |
 
 **错误码：**
 

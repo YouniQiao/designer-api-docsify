@@ -11,7 +11,7 @@ Describes the capability of a partner device.
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from 'partnerAgent';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## supportBR

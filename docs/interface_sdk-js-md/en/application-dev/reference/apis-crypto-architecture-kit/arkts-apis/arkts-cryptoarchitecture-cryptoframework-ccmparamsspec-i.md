@@ -15,7 +15,8 @@ Encapsulates the parameters for encryption or decryption using the CCM AEAD mode
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## aad

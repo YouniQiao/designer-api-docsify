@@ -11,7 +11,7 @@ Describes the parameters for scan.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'ble';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## dutyMode

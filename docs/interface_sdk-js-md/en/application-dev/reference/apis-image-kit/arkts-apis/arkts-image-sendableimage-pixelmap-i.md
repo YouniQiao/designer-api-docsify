@@ -13,7 +13,7 @@ Sendable PixelMap instance.
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'sendableImage';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace

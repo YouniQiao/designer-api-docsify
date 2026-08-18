@@ -13,7 +13,7 @@ The interface is used to monitor network interface status changes.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from 'ethernet';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## active

@@ -11,7 +11,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { OpenLinkOptions } from 'OpenLinkOptions';
+import { OpenLinkOptions } from '@kit.AbilityKit';
+import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## appLinkingOnly

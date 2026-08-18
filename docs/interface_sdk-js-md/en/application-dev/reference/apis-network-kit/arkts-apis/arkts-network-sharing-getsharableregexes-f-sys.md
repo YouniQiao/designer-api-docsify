@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from 'sharing';
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## getSharableRegexes

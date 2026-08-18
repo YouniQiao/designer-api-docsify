@@ -13,7 +13,7 @@ Provides policy file information.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'securityGuard';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## fd

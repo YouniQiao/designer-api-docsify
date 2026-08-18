@@ -10,6 +10,11 @@ Defines the callback of createPdf, related to createPDF method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## pdfArrayBuffer
 
 ```TypeScript

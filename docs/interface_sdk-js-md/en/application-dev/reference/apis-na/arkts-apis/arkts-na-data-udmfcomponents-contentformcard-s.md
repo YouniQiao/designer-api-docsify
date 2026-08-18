@@ -10,6 +10,11 @@ Defines a content form card.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -79,7 +84,7 @@ Height of the content form card. The unit of measurement is vp.
 
 Type of the form card.
 
-**Type:** [FormType](arkts-na-data-udmfcomponents-formtype-e.md)
+**Type:** [FormType](../../apis-arkdata/arkts-apis/arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **Since:** 23
 

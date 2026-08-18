@@ -1,5 +1,10 @@
 # isFlagEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFlagEnabled
 
 ```TypeScript

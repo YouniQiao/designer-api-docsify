@@ -8,6 +8,11 @@ UDMF提供的数据操作接口包含三个可选参数：intention、key和visi
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## intention
 
 ```TypeScript

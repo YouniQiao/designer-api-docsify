@@ -1,5 +1,10 @@
 # getUpdateResult
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getUpdateResult
 
 ```TypeScript

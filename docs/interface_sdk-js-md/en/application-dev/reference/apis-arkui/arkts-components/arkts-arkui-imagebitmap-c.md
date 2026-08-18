@@ -8,6 +8,11 @@ An **ImageBitmap** object stores pixel data rendered on a canvas. Since API vers
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

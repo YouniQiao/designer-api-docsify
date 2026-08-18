@@ -1,5 +1,10 @@
 # has
 
+## 导入模块
+
+```TypeScript
+```
+
 ## has
 
 ```TypeScript

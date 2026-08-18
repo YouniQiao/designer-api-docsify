@@ -1,5 +1,10 @@
 # createPixelMapUsingAllocator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createPixelMapUsingAllocator
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # onRemove（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onRemove
 
 ```TypeScript
@@ -22,7 +27,7 @@ function onRemove(callback: Callback<BundleChangedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 是 | 注册监听的AsyncCallback |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | 是 | 注册监听的AsyncCallback |
 
 **错误码：**
 

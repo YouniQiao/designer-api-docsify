@@ -8,6 +8,11 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

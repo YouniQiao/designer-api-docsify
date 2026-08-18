@@ -1,5 +1,10 @@
 # copyFileSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## copyFileSync
 
 ```TypeScript

@@ -8,6 +8,11 @@ Swiper组件动画相关信息集合。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## currentOffset
 
 ```TypeScript

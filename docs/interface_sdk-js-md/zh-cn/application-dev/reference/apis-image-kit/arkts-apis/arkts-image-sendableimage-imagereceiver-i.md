@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getReceivingSurfaceId
 
 ```TypeScript
@@ -68,7 +73,7 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | 是 | 注册事件的类型，固定为'imageArrival'，接收图片时触发。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 注册的事件回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 注册的事件回调。 |
 
 **示例**
 

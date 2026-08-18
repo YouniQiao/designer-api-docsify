@@ -3,21 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { ConflictFiles } from 'ConflictFiles';
-import { FileFilter } from 'FileFilter';
-import { Filter } from 'Filter';
-import { Options } from 'Options';
-import { ReaderIteratorResult } from 'ReaderIteratorResult';
-import { WatchEvent } from 'WatchEvent';
-import { WatchEventListener } from 'WatchEventListener';
-import { Watcher } from 'Watcher';
-import { ReadOptions } from 'ReadOptions';
-import { ReadTextOptions } from 'ReadTextOptions';
-import { WriteOptions } from 'WriteOptions';
-import { ListFileExtOptions } from 'ListFileExtOptions';
-import { ListFileOptions } from 'ListFileOptions';
-import { DfsListeners } from 'DfsListeners';
-import { TaskSignal } from 'TaskSignal';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## close

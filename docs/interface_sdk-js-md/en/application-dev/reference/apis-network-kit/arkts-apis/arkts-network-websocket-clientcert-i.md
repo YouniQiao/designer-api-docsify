@@ -11,7 +11,7 @@ The clientCert field of the client certificate, which includes three attributes:
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## certPath

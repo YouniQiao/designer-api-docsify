@@ -8,6 +8,11 @@ VerifyPinHandler是Web组件中处理PIN码验证请求的类，用于在Web页�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## confirm
 
 ```TypeScript

@@ -13,7 +13,7 @@ Transition Controller
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from 'uiExtensionHost';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## createSubWindowWithOptions

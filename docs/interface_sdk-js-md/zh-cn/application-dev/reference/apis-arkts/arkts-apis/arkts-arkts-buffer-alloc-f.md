@@ -1,5 +1,10 @@
 # alloc
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alloc
 
 ```TypeScript

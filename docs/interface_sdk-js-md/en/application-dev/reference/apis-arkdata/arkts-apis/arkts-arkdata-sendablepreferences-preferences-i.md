@@ -13,7 +13,7 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from 'sendablePreferences';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## clear

@@ -1,5 +1,10 @@
 # getSimSpn
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSimSpn
 
 ```TypeScript
@@ -19,7 +24,7 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot. &lt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Indicates the callback for getting the SPN; returns an empty string if no SIM card is inserted or no EFSPN file in the SIM card. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the SPN; returns an empty string if no SIM card is inserted or no EFSPN file in the SIM card. |
 
 **错误码：**
 

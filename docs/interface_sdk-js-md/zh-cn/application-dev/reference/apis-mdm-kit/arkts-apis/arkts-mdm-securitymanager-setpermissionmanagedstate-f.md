@@ -1,5 +1,10 @@
 # setPermissionManagedState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setPermissionManagedState
 
 ```TypeScript

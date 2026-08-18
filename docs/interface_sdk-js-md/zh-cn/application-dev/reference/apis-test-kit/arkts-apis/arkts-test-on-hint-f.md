@@ -1,5 +1,10 @@
 # hint
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hint
 
 ```TypeScript

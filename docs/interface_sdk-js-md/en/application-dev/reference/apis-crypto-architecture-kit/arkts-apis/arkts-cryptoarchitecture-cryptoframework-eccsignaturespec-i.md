@@ -11,7 +11,8 @@ Represents the ECC/SM2 signature data that contains (r, s). > **NOTE：**> > **r
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'cryptoFramework';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## r

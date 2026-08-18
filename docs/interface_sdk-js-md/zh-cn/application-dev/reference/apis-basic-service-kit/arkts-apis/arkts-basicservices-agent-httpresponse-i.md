@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## headers
 
 ```TypeScript

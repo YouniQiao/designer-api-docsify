@@ -11,7 +11,7 @@ Defines the SIM card label.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'sim';
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## index

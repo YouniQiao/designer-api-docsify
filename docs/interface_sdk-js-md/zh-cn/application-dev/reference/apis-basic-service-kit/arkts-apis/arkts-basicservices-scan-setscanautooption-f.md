@@ -1,5 +1,10 @@
 # setScanAutoOption
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setScanAutoOption
 
 ```TypeScript

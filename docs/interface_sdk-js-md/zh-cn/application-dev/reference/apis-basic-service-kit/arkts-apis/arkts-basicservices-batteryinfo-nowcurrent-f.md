@@ -1,5 +1,10 @@
 # nowCurrent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## nowCurrent
 
 ```TypeScript

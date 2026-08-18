@@ -1,5 +1,10 @@
 # sendTouchEvent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## sendTouchEvent
 
 ```TypeScript

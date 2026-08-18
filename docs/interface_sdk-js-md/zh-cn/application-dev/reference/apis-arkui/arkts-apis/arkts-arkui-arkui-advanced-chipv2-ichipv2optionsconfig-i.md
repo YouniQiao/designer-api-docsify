@@ -8,6 +8,11 @@ IChipV2OptionsConfig定义ChipV2选项的配置接口。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accessibilityDescription
 
 ```TypeScript

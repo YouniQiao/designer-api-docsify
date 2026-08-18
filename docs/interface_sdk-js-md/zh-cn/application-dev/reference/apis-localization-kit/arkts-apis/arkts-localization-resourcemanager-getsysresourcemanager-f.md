@@ -1,5 +1,10 @@
 # getSysResourceManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSysResourceManager
 
 ```TypeScript

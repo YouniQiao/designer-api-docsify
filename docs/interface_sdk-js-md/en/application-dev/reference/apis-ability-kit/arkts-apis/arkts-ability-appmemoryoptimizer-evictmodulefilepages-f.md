@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from 'appMemoryOptimizer';
+import { appMemoryOptimizer } from '@kit.AbilityKit';
+import { appMemoryOptimizer } from '@kit.AbilityKit';
 ```
 
 ## evictModuleFilePages

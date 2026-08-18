@@ -1,0 +1,45 @@
+# DataItem
+
+Describes the user-defined data in the routing table configuration of the module.
+
+**Since:** 23
+
+<!--Device-unnamed-export interface DataItem--><!--Device-unnamed-export interface DataItem-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## key
+
+```TypeScript
+readonly key: string
+```
+
+Key of the user-defined data.
+
+**Type:** string
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-DataItem-readonly key: string--><!--Device-DataItem-readonly key: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## value
+
+```TypeScript
+readonly value: string
+```
+
+Value of the user-defined data.
+
+**Type:** string
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-DataItem-readonly value: string--><!--Device-DataItem-readonly value: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core

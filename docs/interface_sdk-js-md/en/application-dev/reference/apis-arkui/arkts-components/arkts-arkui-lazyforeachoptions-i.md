@@ -8,6 +8,11 @@ Defines the options for LazyForEach.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## customComponentFreezeMode
 
 ```TypeScript

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from 'backgroundLoader';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo

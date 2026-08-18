@@ -1,5 +1,10 @@
 # addOsAccountAsync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addOsAccountAsync
 
 ```TypeScript

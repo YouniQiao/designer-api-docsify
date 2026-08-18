@@ -1,5 +1,10 @@
 # getResourceId
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getResourceId
 
 ```TypeScript

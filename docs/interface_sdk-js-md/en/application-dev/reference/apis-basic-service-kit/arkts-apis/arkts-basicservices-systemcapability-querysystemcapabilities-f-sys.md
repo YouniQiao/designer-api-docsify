@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemCapability } from 'systemCapability';
+import { systemCapability } from '@kit.BasicServicesKit';
 ```
 
 ## querySystemCapabilities

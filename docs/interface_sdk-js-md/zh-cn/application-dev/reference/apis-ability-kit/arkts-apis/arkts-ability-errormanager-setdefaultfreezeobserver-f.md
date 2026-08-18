@@ -1,5 +1,10 @@
 # setDefaultFreezeObserver
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setDefaultFreezeObserver
 
 ```TypeScript

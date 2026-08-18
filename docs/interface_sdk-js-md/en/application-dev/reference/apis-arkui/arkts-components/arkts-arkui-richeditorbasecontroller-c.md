@@ -10,6 +10,11 @@ Represents the base class of the **RichEditor** component controller.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## closeSelectionMenu
 
 ```TypeScript

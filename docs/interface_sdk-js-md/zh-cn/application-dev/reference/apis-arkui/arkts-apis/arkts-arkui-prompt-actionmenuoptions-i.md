@@ -6,11 +6,16 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md#actionmenuoptions)
+**替代接口：** [ActionMenuOptions](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#actionmenuoptions)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## buttons
 
@@ -26,7 +31,7 @@ buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 
 **废弃版本：** 9
 
-**替代接口：** [buttons](arkts-arkui-promptaction-actionmenuoptions-i.md#buttons)
+**替代接口：** [buttons](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#buttons)
 
 <!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
 
@@ -46,7 +51,7 @@ title?: string
 
 **废弃版本：** 9
 
-**替代接口：** [title](arkts-arkui-promptaction-actionmenuoptions-i.md#title)
+**替代接口：** [title](../../apis-na/arkts-apis/arkts-na-promptaction-actionmenuoptions-i.md#title)
 
 <!--Device-ActionMenuOptions-title?: string--><!--Device-ActionMenuOptions-title?: string-End-->
 

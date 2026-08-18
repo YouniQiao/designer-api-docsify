@@ -1,5 +1,10 @@
 # createDistributedObject
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createDistributedObject
 
 ```TypeScript

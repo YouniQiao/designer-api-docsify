@@ -1,12 +1,17 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
+CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
 
 **起始版本：** 20
 
 <!--Device-unnamed-declare class CompletionHandlerForAtomicService--><!--Device-unnamed-declare class CompletionHandlerForAtomicService-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## 导入模块
+
+```TypeScript
+```
 
 ## onAtomicServiceRequestFailure
 
@@ -31,7 +36,7 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 被拉起原子化服务的appId。 |
-| failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 | 失败原因的错误码。 |
+| failureCode | [FailureCode](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 | 失败原因的错误码。 |
 | failureMessage | string | 是 | 失败原因的描述。 |
 
 **示例**

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'sensor';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## on_SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED

@@ -1,5 +1,10 @@
 # getErrorString
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getErrorString
 
 ```TypeScript
@@ -12,7 +17,7 @@ function getErrorString(errno: number): string
 
 **废弃版本：** 9
 
-**替代接口：** [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring)
+**替代接口：** [errnoToString](../../apis-na/arkts-apis/arkts-na-util-errnotostring-f.md#errnotostring)
 
 <!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
 

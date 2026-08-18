@@ -10,6 +10,11 @@ Defines the IndicatorComponent attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## count
 
 ```TypeScript

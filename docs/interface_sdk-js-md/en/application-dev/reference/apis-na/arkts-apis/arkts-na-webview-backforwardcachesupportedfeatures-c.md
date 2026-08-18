@@ -10,6 +10,11 @@ This class is used to enable back forward cache supported features.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

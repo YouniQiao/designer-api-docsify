@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from 'cliManager';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## getToolInfoByName

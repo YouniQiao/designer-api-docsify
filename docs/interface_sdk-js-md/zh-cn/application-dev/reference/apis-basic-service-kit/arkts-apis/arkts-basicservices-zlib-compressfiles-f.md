@@ -1,5 +1,10 @@
 # compressFiles
 
+## 导入模块
+
+```TypeScript
+```
+
 ## compressFiles
 
 ```TypeScript

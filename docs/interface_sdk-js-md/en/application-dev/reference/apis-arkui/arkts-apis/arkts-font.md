@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'font';
+import { font } from '@kit.ArkUI';
 ```
 
 ## Summary

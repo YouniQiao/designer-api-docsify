@@ -10,6 +10,11 @@ A base class for creating proxy objects that delegate method calls and property 
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## create
 
 ```TypeScript

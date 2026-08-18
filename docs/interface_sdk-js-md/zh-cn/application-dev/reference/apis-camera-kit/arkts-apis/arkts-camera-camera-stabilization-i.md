@@ -10,6 +10,11 @@ Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquer
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getActiveVideoStabilizationMode
 
 ```TypeScript

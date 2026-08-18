@@ -11,7 +11,7 @@ Parameters for obtaining detailed information on specified network traffic usage
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'statistics';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## endTime

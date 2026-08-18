@@ -1,5 +1,10 @@
 # off_applicationState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## off_applicationState
 
 ```TypeScript
@@ -22,7 +27,7 @@ function off(type: 'applicationState', observerId: int, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | type | 'applicationState' | 是 | 调用接口类型，固定填'applicationState'字符串。 |
 | observerId | int | 是 | 注册的应用状态监听器ID，即 [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate)返回的监听器ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当取消注册应用程序状态观测器成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当取消注册应用程序状态观测器成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

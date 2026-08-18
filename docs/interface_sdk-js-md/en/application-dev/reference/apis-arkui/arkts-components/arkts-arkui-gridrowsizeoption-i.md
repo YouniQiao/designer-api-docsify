@@ -8,6 +8,11 @@ Describes the gutter sizes for different device width types.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lg
 
 ```TypeScript

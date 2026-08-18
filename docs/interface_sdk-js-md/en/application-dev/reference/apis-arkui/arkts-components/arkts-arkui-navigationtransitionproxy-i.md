@@ -8,6 +8,11 @@ Implements a custom transition animation proxy.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cancelTransition
 
 ```TypeScript

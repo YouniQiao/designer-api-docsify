@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## actionCode
 
 ```TypeScript
@@ -16,7 +21,7 @@ actionCode: Callback<Callback<boolean>>
 
 测试代码段。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 23
 
@@ -88,7 +93,7 @@ resetCode?: Callback<Callback<boolean>>
 
 测试结束环境重置代码段。默认为空，框架运行时不执行此代码段。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 23
 

@@ -10,6 +10,11 @@ Provides the API for obtaining a timezone transition information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getMilliseconds
 
 ```TypeScript

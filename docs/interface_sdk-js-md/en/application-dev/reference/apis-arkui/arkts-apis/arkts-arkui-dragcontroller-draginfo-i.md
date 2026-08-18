@@ -13,7 +13,7 @@ DragInfo object description
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'dragController';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## autoHideComponentUniqueIds

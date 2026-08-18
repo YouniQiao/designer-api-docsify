@@ -1,5 +1,10 @@
 # on_sessionDestroy（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_sessionDestroy
 
 ```TypeScript

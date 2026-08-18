@@ -1,5 +1,10 @@
 # getSystemMemInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemMemInfo
 
 ```TypeScript

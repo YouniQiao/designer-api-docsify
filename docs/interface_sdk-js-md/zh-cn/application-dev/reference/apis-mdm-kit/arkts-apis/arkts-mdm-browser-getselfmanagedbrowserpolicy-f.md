@@ -1,5 +1,10 @@
 # getSelfManagedBrowserPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSelfManagedBrowserPolicy
 
 ```TypeScript

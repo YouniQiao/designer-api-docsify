@@ -1,5 +1,10 @@
 # finish
 
+## 导入模块
+
+```TypeScript
+```
+
 ## finish
 
 ```TypeScript
@@ -24,7 +29,7 @@ finish操作密钥接口。使用callback异步回调。 huks.init、huks.update
 | --- | --- | --- | --- |
 | handle | number | 是 | Finish操作的uint64类型的handle值。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Finish的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当密钥操作finish成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当密钥操作finish成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
 
 ## finish

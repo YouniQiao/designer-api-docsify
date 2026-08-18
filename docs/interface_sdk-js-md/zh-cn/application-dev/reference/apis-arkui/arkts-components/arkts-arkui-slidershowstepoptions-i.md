@@ -8,6 +8,11 @@ Slider刻度点的无障碍文本信息映射集。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## stepsAccessibility
 
 ```TypeScript

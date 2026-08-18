@@ -12,6 +12,11 @@ WebNativeMessagingExtensionContext is the context of web native message extensio
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## startAbility
 
 ```TypeScript

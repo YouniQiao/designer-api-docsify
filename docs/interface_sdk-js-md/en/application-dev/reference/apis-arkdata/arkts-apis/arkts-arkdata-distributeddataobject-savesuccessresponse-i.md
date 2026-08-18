@@ -11,7 +11,8 @@ Represents the information returned by the callback of save. .
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from 'distributedDataObject';
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## deviceId

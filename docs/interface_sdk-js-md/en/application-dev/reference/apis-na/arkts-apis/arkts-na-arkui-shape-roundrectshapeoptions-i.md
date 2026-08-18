@@ -2,7 +2,7 @@
 
 Interface for RectShape constructor parameters with separate radius values.
 
-**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-na-arkui-shape-shapesize-i.md#shapesize)
+**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-shapesize-i.md#shapesize)
 
 **Since:** 23
 
@@ -11,6 +11,11 @@ Interface for RectShape constructor parameters with separate radius values.
 <!--Device-unnamed-export interface RoundRectShapeOptions--><!--Device-unnamed-export interface RoundRectShapeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
 
 ## radiusHeight
 

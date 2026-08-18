@@ -1,5 +1,10 @@
 # promiseWrapper
 
+## 导入模块
+
+```TypeScript
+```
+
 ## promiseWrapper
 
 ```TypeScript
@@ -12,7 +17,7 @@ function promiseWrapper(original: (err: Object, value: Object) => void): Object
 
 **废弃版本：** 9
 
-**替代接口：** [promisify](arkts-arkts-util-promisify-f.md#promisify)
+**替代接口：** [promisify](../../apis-na/arkts-apis/arkts-na-util-promisify-f.md#promisify)
 
 <!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object--><!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object-End-->
 

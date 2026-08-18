@@ -12,6 +12,11 @@ Defines predicates for an RDB store. This class determines whether the condition
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## and
 
 ```TypeScript

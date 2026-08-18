@@ -8,6 +8,11 @@ Defines the readonly system environment key.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## WINDOW_AVOID_AREA
 
 ```TypeScript

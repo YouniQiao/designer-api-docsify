@@ -1,5 +1,10 @@
 # getIpAddressSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getIpAddressSync
 
 ```TypeScript

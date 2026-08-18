@@ -13,7 +13,8 @@ Describes the result of check notifications.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'notificationManager';
+import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## code

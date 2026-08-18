@@ -1,5 +1,10 @@
 # off_p2pConnectionChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## off_p2pConnectionChange
 
 ```TypeScript
@@ -25,7 +30,7 @@ function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'p2pConnectionChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pLinkedInfo&gt; | 否 | 状态改变回调函数 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | 否 | 状态改变回调函数 |
 
 **示例**
 

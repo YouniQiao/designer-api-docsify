@@ -1,5 +1,10 @@
 # getAccessibilityExtensionListSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAccessibilityExtensionListSync
 
 ```TypeScript

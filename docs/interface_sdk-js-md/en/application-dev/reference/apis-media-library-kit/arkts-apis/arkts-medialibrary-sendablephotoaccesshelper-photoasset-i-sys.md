@@ -13,7 +13,7 @@ Provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'sendablePhotoAccessHelper';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getAnalysisData

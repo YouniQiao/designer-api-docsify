@@ -6,11 +6,16 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 
 **废弃版本：** 23
 
-**替代接口：** [fileIo](arkts-corefile-fileio-n.md#fileio)
+**替代接口：** [fileIo](../../apis-na/arkts-apis/arkts-na-fileio-n.md#fileio)
 
 <!--Device-unnamed-declare namespace fileAccess--><!--Device-unnamed-declare namespace fileAccess-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
+
+## 导入模块
+
+```TypeScript
+```
 
 ## 汇总
 

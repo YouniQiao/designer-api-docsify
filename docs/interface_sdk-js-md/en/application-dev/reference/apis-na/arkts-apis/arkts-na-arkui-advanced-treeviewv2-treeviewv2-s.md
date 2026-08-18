@@ -10,6 +10,11 @@ Declare TreeViewV2 Component
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -38,7 +43,7 @@ The method to build component.
 
 Node data source of TreeViewV2.
 
-**Type:** [TreeControllerV2](arkts-na-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
+**Type:** [TreeControllerV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-treeviewv2-treecontrollerv2-c.md)
 
 **Since:** 26.0.0
 

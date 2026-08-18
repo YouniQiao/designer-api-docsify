@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
+## 导入模块
+
+```TypeScript
+```
+
 ## policyString
 
 ```TypeScript

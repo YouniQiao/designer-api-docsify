@@ -1,5 +1,10 @@
 # installForResult
 
+## 导入模块
+
+```TypeScript
+```
+
 ## installForResult
 
 ```TypeScript

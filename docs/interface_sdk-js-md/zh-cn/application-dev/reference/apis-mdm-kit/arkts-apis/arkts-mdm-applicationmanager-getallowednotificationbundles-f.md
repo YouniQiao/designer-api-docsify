@@ -1,5 +1,10 @@
 # getAllowedNotificationBundles
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAllowedNotificationBundles
 
 ```TypeScript

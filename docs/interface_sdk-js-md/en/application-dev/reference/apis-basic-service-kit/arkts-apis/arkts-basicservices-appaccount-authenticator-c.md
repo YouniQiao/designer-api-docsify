@@ -11,7 +11,8 @@ Provides APIs to operate the authenticator.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'appAccount';
+import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccountImplicitly

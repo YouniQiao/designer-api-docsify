@@ -1,5 +1,10 @@
 # isEmbeddedUIExtensionSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isEmbeddedUIExtensionSupported
 
 ```TypeScript

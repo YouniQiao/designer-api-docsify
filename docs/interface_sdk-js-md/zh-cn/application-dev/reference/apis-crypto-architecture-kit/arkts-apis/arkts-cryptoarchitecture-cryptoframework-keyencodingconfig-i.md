@@ -8,6 +8,11 @@ RSA私钥编码参数，使用获取私钥字符串时，可以添加此参数�
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Key.AsymKey
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cipherName
 
 ```TypeScript

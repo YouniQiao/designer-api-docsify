@@ -11,10 +11,7 @@ Represents the performance test strategy. > **NOTE：**> > The input parameter t
 ## Modules to Import
 
 ```TypeScript
-import { PerfMetric } from 'PerfMetric';
-import { PerfTestStrategy } from 'PerfTestStrategy';
-import { PerfMeasureResult } from 'PerfMeasureResult';
-import { PerfTest } from 'PerfTest';
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## actionCode

@@ -12,6 +12,11 @@ Use the PixelMapDrawableDescriptor class to get the resource of pixelmap or reso
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

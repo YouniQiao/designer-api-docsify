@@ -10,6 +10,11 @@ Options of the ring style with scales. Inherits from [CommonProgressStyleOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## scaleCount
 
 ```TypeScript

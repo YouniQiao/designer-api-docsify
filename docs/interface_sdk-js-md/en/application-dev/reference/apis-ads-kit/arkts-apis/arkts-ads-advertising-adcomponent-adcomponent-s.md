@@ -11,7 +11,7 @@ This module provides the capability of displaying ads, covering native, roll, sp
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from 'AdComponent';
+import { AdComponent } from '@kit.AdsKit';
 ```
 
 ## build

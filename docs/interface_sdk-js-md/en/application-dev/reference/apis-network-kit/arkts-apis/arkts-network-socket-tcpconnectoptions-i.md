@@ -11,7 +11,7 @@ Defines TCPSocket connection parameters.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'socket';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

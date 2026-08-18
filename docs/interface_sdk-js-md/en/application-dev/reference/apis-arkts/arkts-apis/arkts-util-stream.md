@@ -11,7 +11,7 @@ The stream module provides APIs to process basic types of streams. With streams,
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'stream';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## Summary

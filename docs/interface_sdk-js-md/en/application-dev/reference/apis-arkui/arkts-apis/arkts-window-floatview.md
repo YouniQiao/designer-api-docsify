@@ -13,7 +13,7 @@ A float view is a small window that floats on a desktop or an application screen
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## Summary

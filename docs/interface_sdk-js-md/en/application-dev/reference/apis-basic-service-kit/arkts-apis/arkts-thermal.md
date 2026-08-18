@@ -11,7 +11,7 @@ The **thermal** module provides thermal level-related callback and query APIs to
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from 'thermal';
+import { thermal } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

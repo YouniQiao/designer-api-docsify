@@ -8,6 +8,11 @@ Slider组件滑块形状参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## image
 
 ```TypeScript

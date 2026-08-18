@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightSet } from 'LightWeightSet';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
 ```
 
 ## Summary

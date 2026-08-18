@@ -11,7 +11,7 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from 'inspector';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## offDrawChildren

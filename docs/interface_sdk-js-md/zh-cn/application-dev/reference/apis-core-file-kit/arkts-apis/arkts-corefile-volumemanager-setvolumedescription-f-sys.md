@@ -1,5 +1,10 @@
 # setVolumeDescription（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setVolumeDescription
 
 ```TypeScript
@@ -24,7 +29,7 @@ function setVolumeDescription(uuid: string, description: string, callback: Async
 | --- | --- | --- | --- |
 | uuid | string | 是 | 卷设备uuid。 |
 | description | string | 是 | 卷设备描述。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置卷描述之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置卷描述之后的回调。 |
 
 **错误码：**
 

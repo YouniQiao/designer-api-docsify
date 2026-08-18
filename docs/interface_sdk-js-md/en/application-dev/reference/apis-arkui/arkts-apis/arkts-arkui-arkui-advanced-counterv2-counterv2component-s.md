@@ -11,10 +11,7 @@ Defines Counter Component.
 ## Modules to Import
 
 ```TypeScript
-import { CounterV2Component } from 'CounterV2Component';
-import { CounterV2Options } from 'CounterV2Options';
-import { CounterV2DateData } from 'CounterV2DateData';
-import { CounterV2Type } from 'CounterV2Type';
+import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## options

@@ -9,6 +9,11 @@
 **系统能力：** 
 - API版本11+：SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

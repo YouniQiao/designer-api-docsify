@@ -11,7 +11,7 @@ Describes the SSAP property.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'ssap';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## descriptors

@@ -11,7 +11,7 @@ Describes the quick start result returned by the callback.
 ## Modules to Import
 
 ```TypeScript
-import { continueManager } from 'continueManager';
+import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## resultInfo

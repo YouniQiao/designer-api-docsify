@@ -1,5 +1,10 @@
 # hasVoiceCapability
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasVoiceCapability
 
 ```TypeScript

@@ -8,6 +8,11 @@ Describes the numbers of grid columns occupied by the **GridCol** component on d
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lg
 
 ```TypeScript

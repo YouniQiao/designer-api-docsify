@@ -8,6 +8,11 @@ Defines a data structure for the crown event received by a component. It include
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## action
 
 ```TypeScript

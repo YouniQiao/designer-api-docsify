@@ -1,5 +1,10 @@
 # createStreamSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createStreamSync
 
 ```TypeScript

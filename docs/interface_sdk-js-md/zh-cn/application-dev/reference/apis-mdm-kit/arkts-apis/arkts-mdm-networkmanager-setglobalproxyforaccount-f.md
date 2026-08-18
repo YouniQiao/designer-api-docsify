@@ -1,5 +1,10 @@
 # setGlobalProxyForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setGlobalProxyForAccount
 
 ```TypeScript

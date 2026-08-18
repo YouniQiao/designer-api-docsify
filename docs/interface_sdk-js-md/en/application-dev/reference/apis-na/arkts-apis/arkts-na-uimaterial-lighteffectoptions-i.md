@@ -10,6 +10,11 @@ Provides the light sensing interaction feedback configuration for immersive mate
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

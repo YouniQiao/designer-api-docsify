@@ -13,7 +13,8 @@ Represents the plain text data. It is a child class of [Text](arkts-arkdata-unif
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## abstract

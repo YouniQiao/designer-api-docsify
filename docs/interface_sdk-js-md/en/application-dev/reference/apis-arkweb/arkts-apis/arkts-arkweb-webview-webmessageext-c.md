@@ -1,6 +1,6 @@
 # WebMessageExt
 
-Implements a **WebMessageExt** object that received and sent by the [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md#webmessageport) API.
+Implements a **WebMessageExt** object that received and sent by the [WebMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md#webmessageport) API.
 
 **Since:** 10
 
@@ -11,7 +11,7 @@ Implements a **WebMessageExt** object that received and sent by the [WebMessageP
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray
@@ -202,7 +202,7 @@ Obtains the type of the data object. For details about the sample code, see onMe
 
 | Type | Description |
 | --- | --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Data types supported by the [webMessagePort]{ |
+| [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | Data types supported by the [webMessagePort]{ |
 
 ## setArray
 
@@ -398,7 +398,7 @@ Sets the type for the data object. For details about the sample code, see onMess
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Yes | Data types supported by the [webMessagePort](arkts-arkweb-webview-webmessageport-i.md#webmessageport) API. |
+| type | [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | Yes | Data types supported by the [webMessagePort](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md#webmessageport) API. |
 
 **Error codes:**
 

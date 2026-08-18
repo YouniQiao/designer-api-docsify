@@ -11,7 +11,10 @@ Provides the APIs for loading ads.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'advertising';
+import { AdComponent } from '@kit.AdsKit';
+import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
+import { AutoAdComponent } from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## constructor

@@ -1,5 +1,10 @@
 # ArcAlphabetIndexer
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## ArcAlphabetIndexer
 
 ```TypeScript
@@ -25,7 +30,7 @@ Defines ArcAlphabetIndexer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Yes | The initialization parameters of the arc alphabet index bar |
+| info | [ArcAlphabetIndexerInitInfo](arkts-na-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Yes | The initialization parameters of the arc alphabet index bar |
 
 **Return value:**
 

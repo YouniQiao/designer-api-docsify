@@ -1,5 +1,10 @@
 # isStandby
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isStandby
 
 ```TypeScript

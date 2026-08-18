@@ -10,6 +10,11 @@ Iterator interface that defines a method to get the next value in a sequence
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## next
 
 ```TypeScript

@@ -25,7 +25,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentScene } from 'intelligentScene';
+import { intelligentScene } from '@kit.BasicServicesKit';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

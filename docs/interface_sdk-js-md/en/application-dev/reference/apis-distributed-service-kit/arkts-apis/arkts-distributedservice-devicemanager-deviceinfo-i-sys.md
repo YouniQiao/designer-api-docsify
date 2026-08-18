@@ -17,7 +17,7 @@ Defines device information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'deviceManager';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authForm

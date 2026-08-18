@@ -13,7 +13,7 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## attachLocalInterface

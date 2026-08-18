@@ -1,5 +1,10 @@
 # parseInt
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## parseInt
 
 ```TypeScript

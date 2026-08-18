@@ -1,5 +1,10 @@
 # animateToImmediately
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## animateToImmediately
 
 ```TypeScript

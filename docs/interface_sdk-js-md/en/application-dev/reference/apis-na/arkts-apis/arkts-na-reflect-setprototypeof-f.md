@@ -1,5 +1,10 @@
 # setPrototypeOf
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setPrototypeOf
 
 ```TypeScript

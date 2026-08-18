@@ -8,6 +8,11 @@ Describes the configuration of the water flow item section.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## columnsGap
 
 ```TypeScript

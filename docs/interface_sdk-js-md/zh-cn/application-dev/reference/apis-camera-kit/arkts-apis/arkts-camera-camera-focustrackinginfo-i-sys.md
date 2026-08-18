@@ -10,6 +10,11 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## trackingMode
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # @ohos.util.LightWeightMap
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 类

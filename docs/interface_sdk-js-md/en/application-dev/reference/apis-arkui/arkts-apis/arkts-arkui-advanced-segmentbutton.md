@@ -3,24 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { SegmentButton } from 'SegmentButton';
-import { SegmentButtonOptions } from 'SegmentButtonOptions';
-import { SegmentButtonItemOptionsArray } from 'SegmentButtonItemOptionsArray';
-import { TabSegmentButtonOptions } from 'TabSegmentButtonOptions';
-import { TabSegmentButtonConstructionOptions } from 'TabSegmentButtonConstructionOptions';
-import { CapsuleSegmentButtonOptions } from 'CapsuleSegmentButtonOptions';
-import { CapsuleSegmentButtonConstructionOptions } from 'CapsuleSegmentButtonConstructionOptions';
-import { SegmentButtonTextItem } from 'SegmentButtonTextItem';
-import { SegmentButtonIconItem } from 'SegmentButtonIconItem';
-import { SegmentButtonIconTextItem } from 'SegmentButtonIconTextItem';
-import { DimensionNoPercentage } from 'DimensionNoPercentage';
-import { CommonSegmentButtonOptions } from 'CommonSegmentButtonOptions';
-import { ItemRestriction } from 'ItemRestriction';
-import { SegmentButtonItemTuple } from 'SegmentButtonItemTuple';
-import { SegmentButtonItemArray } from 'SegmentButtonItemArray';
-import { SegmentButtonItemOptionsConstructorOptions } from 'SegmentButtonItemOptionsConstructorOptions';
-import { SegmentButtonItemOptions } from 'SegmentButtonItemOptions';
-import { BorderRadiusMode } from 'BorderRadiusMode';
+import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray, TabSegmentButtonOptions, TabSegmentButtonConstructionOptions, CapsuleSegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonTextItem, SegmentButtonIconItem, SegmentButtonIconTextItem, DimensionNoPercentage, CommonSegmentButtonOptions, ItemRestriction, SegmentButtonItemTuple, SegmentButtonItemArray, SegmentButtonItemOptionsConstructorOptions, SegmentButtonItemOptions, BorderRadiusMode } from '@kit.ArkUI';
+import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesChange, SegmentButtonV2Item, SegmentButtonV2Items, TabSegmentButtonV2, CapsuleSegmentButtonV2, MultiCapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
 ## Summary

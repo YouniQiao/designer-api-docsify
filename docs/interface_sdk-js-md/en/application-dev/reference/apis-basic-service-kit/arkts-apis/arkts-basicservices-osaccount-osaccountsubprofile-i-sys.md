@@ -13,7 +13,8 @@ Definition of an OS account sub-profile.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'osAccount';
+import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## createTime

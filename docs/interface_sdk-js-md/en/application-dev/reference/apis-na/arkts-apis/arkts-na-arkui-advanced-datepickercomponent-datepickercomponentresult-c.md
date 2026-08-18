@@ -10,6 +10,11 @@ DatePickerComponentResult defines the selection result of the date time picker.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## day
 
 ```TypeScript

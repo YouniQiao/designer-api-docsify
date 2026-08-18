@@ -1,6 +1,6 @@
 # UsbTransferFlags
 
-Enumerates USB transfer flags.
+USB传输标志。
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ USB_TRANSFER_FREE_BUFFER = 1
 USB_TRANSFER_FREE_TRANSFER = 2
 ```
 
-完成回调后自动传输。
+完成回调后自动释放传输资源。
 
 **起始版本：** 23
 

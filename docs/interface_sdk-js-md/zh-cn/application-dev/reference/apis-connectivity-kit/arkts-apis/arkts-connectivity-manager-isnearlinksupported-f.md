@@ -1,5 +1,10 @@
 # isNearLinkSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isNearLinkSupported
 
 ```TypeScript

@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Security.Asset
 
+## 导入模块
+
+```TypeScript
+```
+
 ## failedCount
 
 ```TypeScript

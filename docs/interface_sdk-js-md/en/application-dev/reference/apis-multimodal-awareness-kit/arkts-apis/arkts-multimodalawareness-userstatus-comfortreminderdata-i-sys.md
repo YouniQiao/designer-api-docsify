@@ -15,7 +15,8 @@ Defines comfort reminder data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'userStatus';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## eventType

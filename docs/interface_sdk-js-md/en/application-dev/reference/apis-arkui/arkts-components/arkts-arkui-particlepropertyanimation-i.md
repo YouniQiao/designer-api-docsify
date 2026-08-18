@@ -8,6 +8,11 @@ Defines the particle property lifecycle.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## curve
 
 ```TypeScript

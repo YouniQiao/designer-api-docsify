@@ -10,6 +10,11 @@ Provide a number formatting interface which could format number to StyleString.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -32,8 +37,8 @@ A constructor used to create a StyledNumberFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simplenumberformat-c.md) | Yes | Indicates the number format object that used to format number. |
-| options | [StyledNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-stylednumberformatoptions-i.md) | No | Indicates the options used to format the number. |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-na-i18n-simplenumberformat-c.md) | Yes | Indicates the number format object that used to format number. |
+| options | [StyledNumberFormatOptions](arkts-na-i18n-stylednumberformatoptions-i.md) | No | Indicates the options used to format the number. |
 
 ## format
 

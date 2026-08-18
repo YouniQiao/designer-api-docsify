@@ -10,6 +10,11 @@ Represents the name of a holiday in different languages.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## language
 
 ```TypeScript

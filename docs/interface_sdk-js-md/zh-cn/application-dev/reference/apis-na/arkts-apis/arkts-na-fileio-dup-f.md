@@ -1,5 +1,10 @@
 # dup
 
+## 导入模块
+
+```TypeScript
+```
+
 ## dup
 
 ```TypeScript

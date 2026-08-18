@@ -1,5 +1,10 @@
 # @ohos.file.AlbumPickerComponent
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

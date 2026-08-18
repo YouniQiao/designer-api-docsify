@@ -8,6 +8,11 @@ This interface is used to define the output image size.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

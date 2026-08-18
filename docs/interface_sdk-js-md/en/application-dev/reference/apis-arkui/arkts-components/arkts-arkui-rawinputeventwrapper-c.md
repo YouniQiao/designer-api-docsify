@@ -8,6 +8,11 @@ Raw input event wrapper class. Provides a unified interface to access different 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## asKeyEvent
 
 ```TypeScript

@@ -11,7 +11,7 @@ Provides an option for determining whether a number is an emergency number for t
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## slotId

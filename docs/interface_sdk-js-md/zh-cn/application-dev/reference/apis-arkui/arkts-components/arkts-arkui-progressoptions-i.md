@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## style
 
 ```TypeScript
@@ -56,7 +61,7 @@ type?: Type
 
 指定进度条类型。 默认值：ProgressType.Linear **说明：** 不同的type需分别对应相应的style属性设置，详细映射关系参考 [ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。
 
-**类型：** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
+**类型：** [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md)
 
 **起始版本：** 8
 

@@ -10,6 +10,11 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## clamp
 
 ```TypeScript
@@ -109,7 +114,7 @@ Checks whether a given range is within the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range |
+| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range |
 
 **Return value:**
 
@@ -144,7 +149,7 @@ Creates the smallest range that includes the current range and the given lower a
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and the given lower and upper bounds. |
+| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and the given lower and upper bounds. |
 
 ## expand
 
@@ -166,13 +171,13 @@ Creates the smallest range that includes the current range and a given range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
+| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given range. |
+| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given range. |
 
 ## expand
 
@@ -200,7 +205,7 @@ Creates the smallest range that includes the current range and a given value.
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given value. |
+| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the smallest range that includes the current range and a given value. |
 
 ## getLower
 
@@ -266,13 +271,13 @@ Returns the intersection of a given range and the current range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
+| range | [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Yes | A Scope range object |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of a given range and the current range. |
+| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of a given range and the current range. |
 
 ## intersect
 
@@ -301,7 +306,7 @@ Returns the intersection of the current range and the range specified by the giv
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](arkts-na-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of the current range and the range specified by the given lower and upper bounds. |
+| [ScopeHelper](../../apis-arkts/arkts-apis/arkts-arkts-util-scopehelper-c.md)&lt;T&gt; | Returns the intersection of the current range and the range specified by the given lower and upper bounds. |
 
 ## toString
 

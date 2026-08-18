@@ -10,6 +10,11 @@ Class FrameCallback
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onFrame
 
 ```TypeScript

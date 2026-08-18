@@ -11,7 +11,7 @@ Result object containing batch operation,including [batchAdd](arkts-assetstore-a
 ## Modules to Import
 
 ```TypeScript
-import { asset } from 'asset';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## failedCount

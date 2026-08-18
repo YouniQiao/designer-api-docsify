@@ -1,5 +1,10 @@
 # createChecksumSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createChecksumSync
 
 ```TypeScript

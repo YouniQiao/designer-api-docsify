@@ -10,6 +10,11 @@ Provides the parameters of the pinch gesture handler. Inherits from [BaseHandler
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## distance
 
 ```TypeScript

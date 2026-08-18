@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## accuracy
 
 ```TypeScript

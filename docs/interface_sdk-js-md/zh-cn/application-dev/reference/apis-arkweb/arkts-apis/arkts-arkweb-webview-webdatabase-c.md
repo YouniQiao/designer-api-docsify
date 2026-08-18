@@ -8,6 +8,11 @@ Web组件数据库管理对象。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## deleteHttpAuthCredentials
 
 ```TypeScript

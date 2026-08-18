@@ -11,7 +11,7 @@ Defines the abstract interface of albums.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getSharedPhotoAssets

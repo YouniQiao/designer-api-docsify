@@ -8,6 +8,11 @@ This configuration is only available for the Text and RichEditor components.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## color
 
 ```TypeScript

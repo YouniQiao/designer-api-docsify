@@ -1,5 +1,10 @@
 # getPasswordPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPasswordPolicy
 
 ```TypeScript

@@ -11,7 +11,8 @@ Defines the information about the transient task.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'backgroundTaskManager';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## actualDelayTime

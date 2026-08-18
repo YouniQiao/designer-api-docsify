@@ -12,6 +12,11 @@ Lightweight storage provides applications with data processing capability and al
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Functions

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from 'sendableColorSpaceManager';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## create

@@ -8,6 +8,11 @@ Provides information about the position and length of the scrollbar.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## totalLength
 
 ```TypeScript

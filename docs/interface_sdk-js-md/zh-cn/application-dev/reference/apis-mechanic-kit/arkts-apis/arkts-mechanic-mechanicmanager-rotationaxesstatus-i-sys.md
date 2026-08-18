@@ -10,6 +10,11 @@ Rotation axes status
 
 **系统接口：** 此接口为系统接口。
 
+## 导入模块
+
+```TypeScript
+```
+
 ## pitchEnabled
 
 ```TypeScript

@@ -8,6 +8,11 @@ UiTest框架在API9中，Component类代表了UI界面上的一个控件，提�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clearText
 
 ```TypeScript

@@ -8,6 +8,11 @@ Defines a key-value pair object used to specify persistent properties and their 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## defaultValue
 
 ```TypeScript

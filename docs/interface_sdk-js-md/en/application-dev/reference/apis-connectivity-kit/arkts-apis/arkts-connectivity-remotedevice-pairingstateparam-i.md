@@ -11,7 +11,7 @@ Describes the pairing state parameters.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'remoteDevice';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## address

@@ -8,6 +8,11 @@ Enumerates the layout policies for component width and height. > **NOTE：**> > 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fixAtIdealSize
 
 ```TypeScript

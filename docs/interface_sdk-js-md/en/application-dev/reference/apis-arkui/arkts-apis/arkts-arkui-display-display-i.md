@@ -11,7 +11,7 @@ Implements a Display instance, with attributes and APIs defined. Before calling 
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'display';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getAvailableArea

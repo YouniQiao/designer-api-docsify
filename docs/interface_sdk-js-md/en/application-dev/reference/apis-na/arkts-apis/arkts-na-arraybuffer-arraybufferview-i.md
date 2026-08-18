@@ -10,6 +10,11 @@ Interface representing a view of an ArrayBuffer.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## buffer
 
 ```TypeScript

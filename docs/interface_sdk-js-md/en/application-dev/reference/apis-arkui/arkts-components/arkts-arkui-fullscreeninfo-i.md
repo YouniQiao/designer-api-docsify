@@ -8,6 +8,11 @@ Describes whether the video is in full-screen playback mode. > **NOTE：**> > To
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fullscreen
 
 ```TypeScript

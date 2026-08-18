@@ -8,6 +8,11 @@ CounterV2CommonOptions定义了CounterV2的共通属性和事件。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## focusable
 
 ```TypeScript

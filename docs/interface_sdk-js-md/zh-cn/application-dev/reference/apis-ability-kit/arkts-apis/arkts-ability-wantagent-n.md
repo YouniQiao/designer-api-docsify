@@ -8,6 +8,11 @@ WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md#want)对
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

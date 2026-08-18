@@ -1,0 +1,46 @@
+# disconnectAgentExtensionAbility（系统接口）
+
+## 导入模块
+
+```TypeScript
+```
+
+## disconnectAgentExtensionAbility
+
+```TypeScript
+function disconnectAgentExtensionAbility(proxy: AgentProxy): Promise<void>
+```
+
+断开与指定proxy的[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md#agentextensionability) 的连接。
+
+**起始版本：** 24
+
+**需要权限：** ohos.permission.CONNECT_AGENT
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-agentManager-function disconnectAgentExtensionAbility(proxy: AgentProxy): Promise<void>--><!--Device-agentManager-function disconnectAgentExtensionAbility(proxy: AgentProxy): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AgentRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [proxy](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-config-i.md) | [AgentProxy](arkts-ability-agentproxy-i-sys.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

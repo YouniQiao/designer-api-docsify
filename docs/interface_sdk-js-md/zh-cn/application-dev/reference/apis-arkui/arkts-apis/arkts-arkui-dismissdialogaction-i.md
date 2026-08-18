@@ -8,6 +8,11 @@ Dialog关闭的信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## dismiss
 
 ```TypeScript

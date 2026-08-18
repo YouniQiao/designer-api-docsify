@@ -11,7 +11,8 @@ The **cloudData** module provides APIs for implementing device-cloud synergy and
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'cloudData';
+import { cloudData } from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## Summary

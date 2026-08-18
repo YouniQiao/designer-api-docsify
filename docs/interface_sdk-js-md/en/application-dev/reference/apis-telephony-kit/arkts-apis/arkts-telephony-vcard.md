@@ -11,7 +11,7 @@ Provides applications with APIs for obtaining vcard.
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from 'vcard';
+import { vcard } from '@kit.TelephonyKit';
 ```
 
 ## Summary

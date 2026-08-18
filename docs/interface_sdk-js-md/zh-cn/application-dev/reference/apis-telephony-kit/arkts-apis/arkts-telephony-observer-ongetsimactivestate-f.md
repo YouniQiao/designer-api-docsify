@@ -1,5 +1,10 @@
 # onGetSimActiveState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onGetSimActiveState
 
 ```TypeScript
@@ -21,7 +26,7 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回SIM卡是否激活。<br/>- true：激活。<br/>- false：未激活。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回SIM卡是否激活。<br/>- true：激活。<br/>- false：未激活。 |
 
 **错误码：**
 

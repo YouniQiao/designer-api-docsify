@@ -10,6 +10,11 @@ Options for creating the NumberFormat object. Since API version 9, the NumberOpt
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## compactDisplay
 
 ```TypeScript

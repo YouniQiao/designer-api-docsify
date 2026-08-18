@@ -8,6 +8,11 @@ FileSelectorResult是ArkWeb组件中用于通知Web组件文件选择结果的�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

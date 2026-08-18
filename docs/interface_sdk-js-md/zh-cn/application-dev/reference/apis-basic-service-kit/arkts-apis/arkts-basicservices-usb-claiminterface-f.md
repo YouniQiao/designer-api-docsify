@@ -1,5 +1,10 @@
 # claimInterface
 
+## 导入模块
+
+```TypeScript
+```
+
 ## claimInterface
 
 ```TypeScript

@@ -8,6 +8,11 @@ Implements a common event callback. Passing **undefined** as the input parameter
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setOnAppear
 
 ```TypeScript

@@ -11,7 +11,7 @@ Provides configuration options for application event logging.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'hiAppEvent';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## disable

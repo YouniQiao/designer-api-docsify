@@ -10,6 +10,11 @@ Sequence text can be grouped under the specified area, and grouping index with d
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## addLocale
 
 ```TypeScript

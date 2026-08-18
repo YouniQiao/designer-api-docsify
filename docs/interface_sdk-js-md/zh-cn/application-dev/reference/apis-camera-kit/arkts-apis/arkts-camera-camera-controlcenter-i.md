@@ -10,6 +10,11 @@ ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquer
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableControlCenter
 
 ```TypeScript

@@ -8,6 +8,11 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## changeIndex
 
 ```TypeScript

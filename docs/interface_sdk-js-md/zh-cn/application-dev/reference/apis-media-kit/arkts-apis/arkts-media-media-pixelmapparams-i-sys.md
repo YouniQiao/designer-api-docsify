@@ -8,6 +8,11 @@ Defines the format parameters of the video thumbnail to be obtained.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
 
+## 导入模块
+
+```TypeScript
+```
+
 ## autoFlip
 
 ```TypeScript

@@ -11,7 +11,7 @@ Provides WebSocket APIs.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## Summary

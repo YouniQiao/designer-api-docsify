@@ -1,5 +1,10 @@
 # getCardType
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCardType
 
 ```TypeScript
@@ -19,7 +24,7 @@ Obtains the type of the SIM card installed in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;CardType&gt; | 是 | Indicates the callback for getting the SIM card type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CardType&gt; | 是 | Indicates the callback for getting the SIM card type. |
 
 **错误码：**
 

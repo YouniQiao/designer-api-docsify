@@ -8,6 +8,11 @@ CustomComponentLifecycle用于监控自定义组件生命周期的变化， 开�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addObserver
 
 ```TypeScript

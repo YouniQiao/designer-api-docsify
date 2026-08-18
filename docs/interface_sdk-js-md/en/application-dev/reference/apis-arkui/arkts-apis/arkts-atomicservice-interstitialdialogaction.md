@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InterstitialDialogAction } from 'InterstitialDialogAction';
-import { IconStyle } from 'IconStyle';
-import { TitlePosition } from 'TitlePosition';
-import { BottomOffset } from 'BottomOffset';
+import { InterstitialDialogAction, IconStyle, TitlePosition, BottomOffset } from '@kit.ArkUI';
 ```
 
 ## Summary

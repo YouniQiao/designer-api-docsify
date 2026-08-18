@@ -8,6 +8,11 @@ Defines the particle property Options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## range
 
 ```TypeScript

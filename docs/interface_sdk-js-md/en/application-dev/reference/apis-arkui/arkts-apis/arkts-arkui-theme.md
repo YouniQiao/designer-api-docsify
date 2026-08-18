@@ -3,12 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Colors } from 'Colors';
-import { CustomColors } from 'CustomColors';
-import { Theme } from 'Theme';
-import { ThemeControl } from 'ThemeControl';
-import { CustomTheme } from 'CustomTheme';
-import { CustomDarkColors } from 'CustomDarkColors';
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## Summary

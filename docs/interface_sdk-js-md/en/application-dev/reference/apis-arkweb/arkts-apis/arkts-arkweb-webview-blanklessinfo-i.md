@@ -11,7 +11,7 @@ Prediction information about the first screen loading of the page, mainly includ
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## errCode
@@ -20,9 +20,9 @@ import { webview } from 'webview';
 errCode: WebBlanklessErrorCode
 ```
 
-Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#webblanklesserrorcode).
+Error code of blankless loading. For details, see [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md#webblanklesserrorcode).
 
-**Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
+**Type:** [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md)
 
 **Since:** 20
 

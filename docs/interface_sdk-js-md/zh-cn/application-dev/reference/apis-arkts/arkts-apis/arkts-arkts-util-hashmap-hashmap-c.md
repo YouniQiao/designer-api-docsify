@@ -8,6 +8,11 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

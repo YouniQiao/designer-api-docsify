@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getSystemRegion
@@ -18,7 +19,7 @@ Obtains the system region.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemRegion](arkts-localization-i18n-system-c.md#getsystemregion)
+**Substitutes:** [getSystemRegion](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getsystemregion)
 
 <!--Device-i18n-export function getSystemRegion(): string--><!--Device-i18n-export function getSystemRegion(): string-End-->
 

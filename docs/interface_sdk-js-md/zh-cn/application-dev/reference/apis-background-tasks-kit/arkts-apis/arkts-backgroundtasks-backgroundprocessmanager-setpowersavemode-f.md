@@ -1,5 +1,10 @@
 # setPowerSaveMode
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setPowerSaveMode
 
 ```TypeScript

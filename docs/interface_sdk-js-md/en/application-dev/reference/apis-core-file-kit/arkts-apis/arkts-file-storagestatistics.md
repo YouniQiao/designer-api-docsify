@@ -11,7 +11,8 @@ The **storageStatistics** module provides APIs for obtaining storage space infor
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'storageStatistics';
+import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -1,5 +1,10 @@
 # addUntrustedConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addUntrustedConfig
 
 ```TypeScript
@@ -91,7 +96,7 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
 
 **示例**
 

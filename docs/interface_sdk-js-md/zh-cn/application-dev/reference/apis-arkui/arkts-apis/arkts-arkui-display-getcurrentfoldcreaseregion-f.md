@@ -1,5 +1,10 @@
 # getCurrentFoldCreaseRegion
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCurrentFoldCreaseRegion
 
 ```TypeScript

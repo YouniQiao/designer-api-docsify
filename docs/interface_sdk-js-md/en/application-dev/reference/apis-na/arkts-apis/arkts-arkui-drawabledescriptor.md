@@ -1,5 +1,10 @@
 # @ohos.arkui.drawableDescriptor
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

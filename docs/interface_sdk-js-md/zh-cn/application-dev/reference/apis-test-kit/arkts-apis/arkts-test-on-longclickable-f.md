@@ -1,5 +1,10 @@
 # longClickable
 
+## 导入模块
+
+```TypeScript
+```
+
 ## longClickable
 
 ```TypeScript

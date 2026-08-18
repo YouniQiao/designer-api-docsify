@@ -13,7 +13,7 @@ Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'uiMaterial';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## constructor

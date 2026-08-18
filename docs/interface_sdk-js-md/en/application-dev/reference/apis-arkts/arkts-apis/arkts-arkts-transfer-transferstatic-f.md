@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { transfer } from 'transfer';
+import { transfer } from '@kit.ArkTS';
 ```
 
 ## transferStatic

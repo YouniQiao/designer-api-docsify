@@ -1,5 +1,10 @@
 # on_appForegroundState（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_appForegroundState
 
 ```TypeScript

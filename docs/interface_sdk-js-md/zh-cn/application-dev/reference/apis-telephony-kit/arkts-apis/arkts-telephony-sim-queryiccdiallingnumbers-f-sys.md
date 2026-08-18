@@ -1,5 +1,10 @@
 # queryIccDiallingNumbers（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryIccDiallingNumbers
 
 ```TypeScript
@@ -24,7 +29,7 @@ Query dialing number information on SIM card.
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | type | [ContactType](arkts-telephony-sim-contacttype-e-sys.md) | 是 | Indicates contact type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md)&gt;&gt; | 是 | Indicates the callback for getting the dialing number information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md)&gt;&gt; | 是 | Indicates the callback for getting the dialing number information. |
 
 **错误码：**
 

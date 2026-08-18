@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wearDetection } from 'wearDetection';
+import { wearDetection } from '@kit.ConnectivityKit';
 ```
 
 ## isWearDetectionEnabled

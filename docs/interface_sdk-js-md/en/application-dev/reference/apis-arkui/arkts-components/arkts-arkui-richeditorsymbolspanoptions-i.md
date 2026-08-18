@@ -8,6 +8,11 @@ Sets the offset and style of the **SymbolSpan** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## offset
 
 ```TypeScript

@@ -10,6 +10,11 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#flashquery)。 �
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableLcdFlash
 
 ```TypeScript

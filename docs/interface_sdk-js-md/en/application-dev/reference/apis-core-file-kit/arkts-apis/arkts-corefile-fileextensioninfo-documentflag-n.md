@@ -17,7 +17,7 @@ Defines the values of **mode** used in **FileInfo**.
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from 'fileExtensionInfo';
+import { fileExtensionInfo } from '@kit.CoreFileKit';
 ```
 
 ## Summary

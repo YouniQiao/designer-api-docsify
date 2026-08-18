@@ -1,5 +1,10 @@
 # restartApp
 
+## 导入模块
+
+```TypeScript
+```
+
 ## restartApp
 
 ```TypeScript

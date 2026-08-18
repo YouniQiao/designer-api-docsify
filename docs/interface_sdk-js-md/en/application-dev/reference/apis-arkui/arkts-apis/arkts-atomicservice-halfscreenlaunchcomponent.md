@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { HalfScreenLaunchComponent } from 'HalfScreenLaunchComponent';
+import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## Summary

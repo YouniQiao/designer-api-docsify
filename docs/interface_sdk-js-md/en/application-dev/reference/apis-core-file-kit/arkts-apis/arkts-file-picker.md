@@ -11,7 +11,7 @@ The **Picker** module encapsulates APIs such as **DocumentViewPicker**, **AudioV
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'picker';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## Summary

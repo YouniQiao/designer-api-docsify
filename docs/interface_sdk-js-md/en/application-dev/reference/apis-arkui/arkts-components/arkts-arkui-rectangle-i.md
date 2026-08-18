@@ -8,6 +8,11 @@ The data type used to describe a rectangular area. > **NOTE：**> > - **x** and 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## height
 
 ```TypeScript

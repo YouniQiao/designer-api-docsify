@@ -12,6 +12,11 @@ Defines the options used in **write()**. It inherits from [Options](../../apis-c
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## length
 
 ```TypeScript

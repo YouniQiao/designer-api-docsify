@@ -10,6 +10,11 @@ Provides basic information of web storage.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## origin
 
 ```TypeScript

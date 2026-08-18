@@ -11,7 +11,8 @@ Describes an event to subscribe to or emit. The **EventPriority** settings do no
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'emitter';
+import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## eventId

@@ -8,6 +8,11 @@ Defines the parameters of the **Canvas** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## imageAIOptions
 
 ```TypeScript

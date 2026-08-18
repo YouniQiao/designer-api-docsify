@@ -15,7 +15,7 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'bluetoothManager';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## close

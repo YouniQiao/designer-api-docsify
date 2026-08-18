@@ -1,5 +1,10 @@
 # fdatasyncSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## fdatasyncSync
 
 ```TypeScript

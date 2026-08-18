@@ -13,7 +13,8 @@ This module provides the application's management capabilities for shortcuts, in
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'shortcutManager';
+import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

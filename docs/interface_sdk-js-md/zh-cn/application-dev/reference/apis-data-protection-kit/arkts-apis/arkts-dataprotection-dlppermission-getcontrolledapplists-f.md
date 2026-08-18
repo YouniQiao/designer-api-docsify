@@ -1,5 +1,10 @@
 # getControlledAppLists
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getControlledAppLists
 
 ```TypeScript

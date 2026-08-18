@@ -2593,7 +2593,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Extended parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback used to return the detailed error information if the startup fails. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2661,7 +2661,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules) . |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Extended parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback used to return the detailed error information if the startup fails. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2695,7 +2695,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Extended parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback used to return the detailed error information if the startup fails. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
 
 **Return value:**
 
@@ -2767,7 +2767,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules) . |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Extended parameter. |
-| abilityStartCallback | [AbilityStartCallback](../../apis-na/arkts-apis/arkts-na-abilitystartcallback-i.md) | Yes | Callback used to return the detailed error information if the startup fails. |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
 
 **Return value:**
 

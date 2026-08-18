@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'wifiManager';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## isWifiActiveSync

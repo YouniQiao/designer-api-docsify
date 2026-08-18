@@ -1,5 +1,10 @@
 # getHash
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getHash
 
 ```TypeScript

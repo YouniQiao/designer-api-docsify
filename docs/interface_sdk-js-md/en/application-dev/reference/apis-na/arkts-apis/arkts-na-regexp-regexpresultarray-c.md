@@ -12,6 +12,11 @@ Regular expression result descriptor
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_get
 
 ```TypeScript

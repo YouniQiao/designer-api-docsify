@@ -11,8 +11,7 @@ The **SelectTitleBar** component represents a drop-down menu title bar used for 
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBar } from 'SelectTitleBar';
-import { SelectTitleBarMenuItem } from 'SelectTitleBarMenuItem';
+import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## badgeValue

@@ -1,0 +1,101 @@
+# ToolBarV2ItemText
+
+Declare type ToolBarV2ItemText
+
+**Since:** 18
+
+<!--Device-unnamed-export declare class ToolBarV2ItemText--><!--Device-unnamed-export declare class ToolBarV2ItemText-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## constructor
+
+```TypeScript
+constructor(options: ToolBarV2ItemTextOptions)
+```
+
+The constructor used to create a ToolBarV2ItemText object.
+
+**Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2ItemText-constructor(options: ToolBarV2ItemTextOptions)--><!--Device-ToolBarV2ItemText-constructor(options: ToolBarV2ItemTextOptions)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [ToolBarV2ItemTextOptions](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemtextoptions-i.md) | Yes |
+
+## activatedColor
+
+```TypeScript
+@Trace
+  activatedColor?: ColorMetrics
+```
+
+Text fontColor when the item is activated.
+
+**Type:** ColorMetrics
+
+**Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2ItemText-@Trace  activatedColor?: ColorMetrics--><!--Device-ToolBarV2ItemText-@Trace  activatedColor?: ColorMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## color
+
+```TypeScript
+@Trace
+  color?: ColorMetrics
+```
+
+Define text fontColor.
+
+**Type:** ColorMetrics
+
+**Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2ItemText-@Trace  color?: ColorMetrics--><!--Device-ToolBarV2ItemText-@Trace  color?: ColorMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## text
+
+```TypeScript
+@Trace
+  text: ResourceStr
+```
+
+Define text content.
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+
+**Since:** 18
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ToolBarV2ItemText-@Trace  text: ResourceStr--><!--Device-ToolBarV2ItemText-@Trace  text: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

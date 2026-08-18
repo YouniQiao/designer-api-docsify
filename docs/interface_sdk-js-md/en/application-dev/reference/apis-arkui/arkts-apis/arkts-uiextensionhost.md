@@ -15,7 +15,7 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from 'uiExtensionHost';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## Summary

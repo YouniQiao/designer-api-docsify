@@ -1,5 +1,10 @@
 # setSecurityLabel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setSecurityLabel
 
 ```TypeScript
@@ -73,7 +78,7 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
 | type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | 是 | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置数据安全等级之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置数据安全等级之后的回调。 |
 
 **错误码：**
 

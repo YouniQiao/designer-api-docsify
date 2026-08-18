@@ -8,6 +8,11 @@
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## customRender
 
 ```TypeScript

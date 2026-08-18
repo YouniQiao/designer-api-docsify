@@ -8,6 +8,11 @@ CounterV2Options定义CounterV2类型及样式。 选择不同的CounterV2类型
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## dateOptions
 
 ```TypeScript

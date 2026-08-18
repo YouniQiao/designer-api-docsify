@@ -11,7 +11,7 @@ Defines optional parameters for a device certificate request.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## name

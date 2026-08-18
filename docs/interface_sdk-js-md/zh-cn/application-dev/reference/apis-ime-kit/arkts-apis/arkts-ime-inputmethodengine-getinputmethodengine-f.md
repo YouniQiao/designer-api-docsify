@@ -1,5 +1,10 @@
 # getInputMethodEngine
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInputMethodEngine
 
 ```TypeScript

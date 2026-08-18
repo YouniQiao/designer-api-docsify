@@ -11,7 +11,7 @@ Define the certificate content.
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from 'networkSecurity';
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## data

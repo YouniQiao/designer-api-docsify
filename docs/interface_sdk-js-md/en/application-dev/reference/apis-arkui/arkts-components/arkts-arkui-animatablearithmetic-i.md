@@ -8,6 +8,11 @@ The **AnimatableArithmetic** API defines animation calculation rules for non-num
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## equals
 
 ```TypeScript

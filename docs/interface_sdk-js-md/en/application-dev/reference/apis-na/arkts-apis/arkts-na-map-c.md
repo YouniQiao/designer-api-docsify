@@ -12,6 +12,11 @@ A collection that stores key-value pairs where each key is unique
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_iterator
 
 ```TypeScript

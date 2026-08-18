@@ -8,6 +8,11 @@ Provides a reference to properties stored in [AppStorage](../../../ui/state-mana
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## get
 
 ```TypeScript

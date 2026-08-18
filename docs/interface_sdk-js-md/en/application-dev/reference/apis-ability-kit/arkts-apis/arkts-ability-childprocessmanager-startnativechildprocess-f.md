@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'childProcessManager';
+import { childProcessManager } from '@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startNativeChildProcess

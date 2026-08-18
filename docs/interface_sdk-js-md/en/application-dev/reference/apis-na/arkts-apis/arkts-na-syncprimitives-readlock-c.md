@@ -12,6 +12,11 @@ A read lock that allows concurrent read access to a shared resource
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

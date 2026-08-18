@@ -1,5 +1,10 @@
 # offAccessibilityStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offAccessibilityStateChange
 
 ```TypeScript
@@ -22,7 +27,7 @@ Unregister the observe of the accessibility state changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Asynchronous callback interface. |
 
 **示例**
 

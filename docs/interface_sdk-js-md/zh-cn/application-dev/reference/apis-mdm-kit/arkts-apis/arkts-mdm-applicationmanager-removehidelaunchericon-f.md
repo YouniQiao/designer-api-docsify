@@ -1,5 +1,10 @@
 # removeHideLauncherIcon
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeHideLauncherIcon
 
 ```TypeScript

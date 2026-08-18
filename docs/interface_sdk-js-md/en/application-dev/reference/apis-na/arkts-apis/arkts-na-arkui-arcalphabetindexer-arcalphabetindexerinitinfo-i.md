@@ -10,6 +10,11 @@ Define the initialization parameters of the arc alphabet index bar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## arrayValue
 
 ```TypeScript

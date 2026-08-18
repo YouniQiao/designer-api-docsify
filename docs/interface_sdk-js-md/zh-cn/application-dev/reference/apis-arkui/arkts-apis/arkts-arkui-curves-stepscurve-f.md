@@ -1,5 +1,10 @@
 # stepsCurve
 
+## 导入模块
+
+```TypeScript
+```
+
 ## stepsCurve
 
 ```TypeScript

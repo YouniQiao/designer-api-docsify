@@ -12,6 +12,11 @@ Defines the result of UIContext.resolveUIContext. This class is a subclass of UI
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## strategy
 
 ```TypeScript

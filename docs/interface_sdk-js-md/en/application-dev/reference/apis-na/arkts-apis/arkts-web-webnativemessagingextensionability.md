@@ -1,5 +1,10 @@
 # @ohos.web.WebNativeMessagingExtensionAbility
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

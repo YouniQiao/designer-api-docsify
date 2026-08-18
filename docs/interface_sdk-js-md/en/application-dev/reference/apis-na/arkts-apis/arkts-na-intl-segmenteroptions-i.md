@@ -10,6 +10,11 @@ Segmenter options.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## granularity
 
 ```TypeScript

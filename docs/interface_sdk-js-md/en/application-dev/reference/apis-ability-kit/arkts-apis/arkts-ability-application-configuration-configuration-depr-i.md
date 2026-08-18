@@ -12,6 +12,11 @@ The module defines environment change information. Configuration is an interface
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## colorMode
 
 ```TypeScript

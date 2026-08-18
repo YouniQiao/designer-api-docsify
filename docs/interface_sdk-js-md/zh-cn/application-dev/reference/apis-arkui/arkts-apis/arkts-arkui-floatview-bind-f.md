@@ -1,5 +1,10 @@
 # bind
 
+## 导入模块
+
+```TypeScript
+```
+
 ## bind
 
 ```TypeScript

@@ -11,7 +11,7 @@ Defines a key-value pair for DRM metrics.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## name

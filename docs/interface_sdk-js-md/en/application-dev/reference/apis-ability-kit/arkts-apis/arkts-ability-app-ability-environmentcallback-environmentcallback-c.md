@@ -11,7 +11,8 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 ## Modules to Import
 
 ```TypeScript
-import { EnvironmentCallback } from 'EnvironmentCallback';
+import { EnvironmentCallback } from '@kit.AbilityKit';
+import { EnvironmentCallback } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdated

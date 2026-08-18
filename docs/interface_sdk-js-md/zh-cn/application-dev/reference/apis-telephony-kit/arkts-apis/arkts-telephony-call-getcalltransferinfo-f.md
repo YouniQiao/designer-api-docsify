@@ -1,5 +1,10 @@
 # getCallTransferInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCallTransferInfo
 
 ```TypeScript

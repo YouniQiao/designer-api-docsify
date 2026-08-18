@@ -8,6 +8,11 @@ Sets the expected frame rate range for an animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## expected
 
 ```TypeScript

@@ -10,6 +10,11 @@ Returns a file list, including the file list information.
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fileList
 
 ```TypeScript

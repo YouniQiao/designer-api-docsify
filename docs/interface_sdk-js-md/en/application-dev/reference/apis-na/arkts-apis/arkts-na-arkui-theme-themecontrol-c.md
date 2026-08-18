@@ -10,6 +10,11 @@ Class ThemeControl provides the Theme management for whole Ability and pages.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## setDefaultTheme
 
 ```TypeScript
@@ -32,5 +37,5 @@ Sets the default Theme: - for whole Ability when invoked from the Ability level 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [CustomTheme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-customtheme-i.md) \| undefined | Yes |  |
+| theme | [CustomTheme](arkts-na-arkui-theme-customtheme-i.md) \| undefined | Yes |  |
 

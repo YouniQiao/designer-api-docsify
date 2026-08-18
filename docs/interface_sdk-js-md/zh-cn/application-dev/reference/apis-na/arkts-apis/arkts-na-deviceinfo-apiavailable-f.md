@@ -1,5 +1,10 @@
 # apiAvailable
 
+## 导入模块
+
+```TypeScript
+```
+
 ## apiAvailable
 
 ```TypeScript

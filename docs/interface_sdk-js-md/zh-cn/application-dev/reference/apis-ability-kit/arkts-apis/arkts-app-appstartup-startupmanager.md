@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

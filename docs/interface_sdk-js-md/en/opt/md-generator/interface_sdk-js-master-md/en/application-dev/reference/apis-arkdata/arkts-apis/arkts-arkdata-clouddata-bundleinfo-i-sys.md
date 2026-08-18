@@ -1,0 +1,56 @@
+# BundleInfo (System API)
+
+Bundle information configuration.
+
+**Since:** 26.0.0
+
+<!--Device-cloudData-interface BundleInfo--><!--Device-cloudData-interface BundleInfo-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+```
+
+## bundleName
+
+```TypeScript
+bundleName: string
+```
+
+Indicates the name of the application.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BundleInfo-bundleName: string--><!--Device-BundleInfo-bundleName: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
+
+**System API:** This is a system API.
+
+## storeId
+
+```TypeScript
+storeId?: string
+```
+
+Indicates the store ID.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BundleInfo-storeId?: string--><!--Device-BundleInfo-storeId?: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
+
+**System API:** This is a system API.

@@ -15,7 +15,8 @@ Defines the struct for a HUKS handle. > **NOTE：**> > This API is deprecated si
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'huks';
+import { huks } from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## errorCode

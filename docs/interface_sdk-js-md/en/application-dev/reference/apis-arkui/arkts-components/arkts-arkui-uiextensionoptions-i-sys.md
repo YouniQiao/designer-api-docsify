@@ -10,6 +10,11 @@ Describes the optional construction parameters during **UIExtensionComponent** c
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## areaChangePlaceholder
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # removeDisallowedUninstallBundlesSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeDisallowedUninstallBundlesSync
 
 ```TypeScript

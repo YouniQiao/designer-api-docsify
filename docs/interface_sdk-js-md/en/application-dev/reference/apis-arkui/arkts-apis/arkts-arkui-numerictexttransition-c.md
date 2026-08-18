@@ -10,6 +10,11 @@ Implements a flip animation for numeric text. It applies only to positive intege
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

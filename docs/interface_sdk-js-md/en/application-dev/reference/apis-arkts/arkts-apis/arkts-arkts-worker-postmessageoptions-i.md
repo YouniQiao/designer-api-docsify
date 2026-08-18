@@ -11,20 +11,7 @@ Defines the object for which the ownership is to be transferred during data tran
 ## Modules to Import
 
 ```TypeScript
-import { DedicatedWorkerGlobalScope } from 'DedicatedWorkerGlobalScope';
-import { ErrorEvent } from 'ErrorEvent';
-import { Event } from 'Event';
-import { EventListener } from 'EventListener';
-import { EventTarget } from 'EventTarget';
-import { MessageEvent } from 'MessageEvent';
-import { MessageEvents } from 'MessageEvents';
-import { PostMessageOptions } from 'PostMessageOptions';
-import { ThreadWorkerGlobalScope } from 'ThreadWorkerGlobalScope';
-import { WorkerEventListener } from 'WorkerEventListener';
-import { WorkerEventTarget } from 'WorkerEventTarget';
-import { WorkerOptions } from 'WorkerOptions';
-import { ThreadWorkerPriority } from 'ThreadWorkerPriority';
-import { Priority } from 'Priority';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## transfer

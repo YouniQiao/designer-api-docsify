@@ -8,6 +8,11 @@ Defines the particle color property updater configs.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## [ParticleUpdater.CURVE]
 
 ```TypeScript

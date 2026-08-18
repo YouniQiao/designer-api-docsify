@@ -1,5 +1,10 @@
 # clearData
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clearData
 
 ```TypeScript

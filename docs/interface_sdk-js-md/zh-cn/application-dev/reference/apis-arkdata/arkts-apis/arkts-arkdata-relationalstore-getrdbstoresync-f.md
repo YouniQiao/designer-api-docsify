@@ -1,5 +1,10 @@
 # getRdbStoreSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getRdbStoreSync
 
 ```TypeScript

@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
+## 导入模块
+
+```TypeScript
+```
+
 ## newFileNames
 
 ```TypeScript

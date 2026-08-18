@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pan } from 'pan';
+import { pan } from '@kit.ConnectivityKit';
 ```
 
 ## createPanProfile

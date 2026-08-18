@@ -13,7 +13,8 @@ Describes the extended parameter information.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from 'installer';
+import { installer } from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## key

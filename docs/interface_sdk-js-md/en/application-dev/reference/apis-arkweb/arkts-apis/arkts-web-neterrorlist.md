@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from 'WebNetErrorList';
+import { WebNetErrorList } from '@kit.ArkWeb';
 ```
 
 ## Summary

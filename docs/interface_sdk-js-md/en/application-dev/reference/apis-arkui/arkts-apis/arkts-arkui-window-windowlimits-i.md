@@ -11,7 +11,9 @@ Describes the parameters for window size limits. Applications can obtain the cur
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'window';
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## maxHeight

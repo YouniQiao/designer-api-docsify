@@ -1,5 +1,10 @@
 # isFoldable
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFoldable
 
 ```TypeScript

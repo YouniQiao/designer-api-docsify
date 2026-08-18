@@ -1,5 +1,10 @@
 # removeStorageFromCacheSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeStorageFromCacheSync
 
 ```TypeScript

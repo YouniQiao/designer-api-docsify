@@ -1,5 +1,10 @@
 # queryDevices
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryDevices
 
 ```TypeScript

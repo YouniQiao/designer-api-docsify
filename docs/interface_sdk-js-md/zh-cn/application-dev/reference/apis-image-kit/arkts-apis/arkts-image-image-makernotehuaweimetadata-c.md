@@ -10,6 +10,11 @@ MakerNoteHuaweiMetadata implements Metadata 来自Huawei相机的照片元数据
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clone
 
 ```TypeScript

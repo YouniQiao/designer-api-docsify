@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'bundleState';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryCurrentBundleActiveStates

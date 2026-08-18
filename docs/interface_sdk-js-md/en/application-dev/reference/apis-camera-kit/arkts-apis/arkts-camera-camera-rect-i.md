@@ -11,7 +11,8 @@ Describes a rectangle. The coordinate system for the returned detection points i
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## height

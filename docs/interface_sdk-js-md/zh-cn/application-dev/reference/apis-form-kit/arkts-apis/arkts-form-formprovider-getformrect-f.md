@@ -1,5 +1,10 @@
 # getFormRect
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFormRect
 
 ```TypeScript

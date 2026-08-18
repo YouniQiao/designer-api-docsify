@@ -15,7 +15,9 @@ The **reminderAgent** module provides APIs for publishing scheduled reminders th
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'reminderAgent';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

@@ -1,5 +1,10 @@
 # preQuerySync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## preQuerySync
 
 ```TypeScript

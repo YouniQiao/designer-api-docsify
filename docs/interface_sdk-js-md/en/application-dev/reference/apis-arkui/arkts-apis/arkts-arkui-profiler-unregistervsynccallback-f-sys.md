@@ -1,5 +1,11 @@
 # unregisterVsyncCallback (System API)
 
+## Modules to Import
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
+
 ## unregisterVsyncCallback
 
 ```TypeScript

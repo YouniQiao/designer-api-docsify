@@ -1,5 +1,10 @@
 # getTouchModeSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTouchModeSync
 
 ```TypeScript

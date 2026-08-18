@@ -25,7 +25,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nearlinkConstant } from 'nearlinkConstant';
+import { nearlinkConstant } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

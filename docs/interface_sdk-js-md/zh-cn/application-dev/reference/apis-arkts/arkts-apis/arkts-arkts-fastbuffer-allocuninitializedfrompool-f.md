@@ -1,5 +1,10 @@
 # allocUninitializedFromPool
 
+## 导入模块
+
+```TypeScript
+```
+
 ## allocUninitializedFromPool
 
 ```TypeScript

@@ -11,7 +11,8 @@ Provides APIs for managing databases in transaction mode. A transaction object i
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'relationalStore';
+import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## batchInsert

@@ -11,7 +11,7 @@ Defines the parameters for transient vibration.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'vibrator';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## frequency

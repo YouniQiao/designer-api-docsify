@@ -8,6 +8,11 @@ Defines parameters of particles used by emitters. > **NOTE：**> > To standardiz
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## config
 
 ```TypeScript

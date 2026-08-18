@@ -1,5 +1,10 @@
 # getSimpleDateTimeFormatBySkeleton
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getSimpleDateTimeFormatBySkeleton
 
 ```TypeScript
@@ -29,7 +34,7 @@ Obtains a SimpleDateTimeFormat object based on the specified skeleton. For detai
 
 | Type | Description |
 | --- | --- |
-| [SimpleDateTimeFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat object. |
+| [SimpleDateTimeFormat](arkts-na-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat object. |
 
 **Error codes:**
 

@@ -8,6 +8,11 @@ Defines the unique identifier for a custom menu item. It is used to identify men
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## equals
 
 ```TypeScript

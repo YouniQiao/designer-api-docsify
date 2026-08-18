@@ -1,5 +1,10 @@
 # closeSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## closeSync
 
 ```TypeScript

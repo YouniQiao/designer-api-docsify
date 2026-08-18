@@ -11,7 +11,42 @@ Provides APIs to decode byte arrays into strings. It supports multiple formats, 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'util';
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
+import { ArrayListForEachCb } from '@kit.ArkTS';
+import { ArrayListReplaceCb } from '@kit.ArkTS';
+import { util } from '@kit.ArkTS';
+import { Deque } from '@kit.ArkTS';
+import { DequeForEachCb } from '@kit.ArkTS';
+import { HashMap } from '@kit.ArkTS';
+import { HashMapCbFn } from '@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
+import { HashSetCbFn } from '@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
+import { ListForEachCb } from '@kit.ArkTS';
+import { ListReplaceCb } from '@kit.ArkTS';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
+import { StackForEachCb } from '@kit.ArkTS';
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -51,7 +86,7 @@ A constructor used to create a **TextDecoder** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#create)
+**Substitutes:** [create](#create)
 
 <!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
 
@@ -91,13 +126,13 @@ Creates a **TextDecoder** object. It provides the same function as the deprecate
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | encoding | string | No | Encoding format. The default format is **'utf-8'**.<br>**Since:** 11 |
-| options | [TextDecoderOptions](../../apis-na/arkts-apis/arkts-na-util-textdecoderoptions-i.md) | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
+| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | No | Decoding-related options, which include **fatal** and **ignoreBOM**.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextDecoder](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md) | TextDecoder** object created. |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | TextDecoder** object created. |
 
 **Examples**
 
@@ -124,7 +159,7 @@ Decodes the input content into a string.
 
 **Deprecated since:** 9
 
-**Substitutes:** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodetostring)
+**Substitutes:** [decodeToString](#decodetostring)
 
 <!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
 
@@ -181,7 +216,7 @@ Decodes the input content into a string.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | input | Uint8Array | Yes | Uint8Array object to decode. |
-| options | [DecodeToStringOptions](../../apis-na/arkts-apis/arkts-na-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
+| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | No | Decoding-related options. The default value is **undefined**. |
 
 **Return value:**
 
@@ -218,7 +253,7 @@ Decodes the input content into a string. If **input** is an empty array, **undef
 
 **Deprecated since:** 12
 
-**Substitutes:** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodetostring)
+**Substitutes:** [decodeToString](#decodetostring)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

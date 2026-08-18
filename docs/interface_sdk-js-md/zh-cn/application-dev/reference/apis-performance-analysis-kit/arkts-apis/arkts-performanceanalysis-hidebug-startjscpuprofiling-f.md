@@ -1,5 +1,10 @@
 # startJsCpuProfiling
 
+## 导入模块
+
+```TypeScript
+```
+
 ## startJsCpuProfiling
 
 ```TypeScript

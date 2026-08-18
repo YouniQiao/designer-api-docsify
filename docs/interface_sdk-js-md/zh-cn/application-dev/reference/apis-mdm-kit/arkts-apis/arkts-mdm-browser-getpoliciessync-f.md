@@ -1,5 +1,10 @@
 # getPoliciesSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPoliciesSync
 
 ```TypeScript

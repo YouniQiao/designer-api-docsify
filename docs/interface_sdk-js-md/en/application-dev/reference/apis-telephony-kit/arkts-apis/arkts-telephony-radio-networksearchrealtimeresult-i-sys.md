@@ -13,7 +13,7 @@ Indicates the results of manual network scan
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'radio';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## isFinish

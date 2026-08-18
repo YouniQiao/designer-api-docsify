@@ -1,0 +1,126 @@
+# setLockState (System API)
+
+## Modules to Import
+
+```TypeScript
+```
+
+## setLockState
+
+```TypeScript
+function setLockState(slotId: number, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void
+```
+
+Set the lock status of the SIM card in the specified slot.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function setLockState(slotId: int, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void--><!--Device-sim-function setLockState(slotId: int, options: LockInfo, callback: AsyncCallback<LockStatusResponse>): void-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| slotId | number | Yes |
+| options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-lockinfo-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let lockInfo: sim.LockInfo = {
+    lockType: sim.LockType.PIN_LOCK,
+    password: "1234",
+    state: sim.LockState.LOCK_OFF
+};
+sim.setLockState(0, lockInfo, (err: BusinessError, data: sim.LockStatusResponse) => {
+    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+});
+```
+
+
+## setLockState
+
+```TypeScript
+function setLockState(slotId: number, options: LockInfo): Promise<LockStatusResponse>
+```
+
+Set the lock status of the SIM card in the specified slot.
+
+**Since:** 23
+
+**Required permissions:** ohos.permission.SET_TELEPHONY_STATE
+
+<!--Device-sim-function setLockState(slotId: int, options: LockInfo): Promise<LockStatusResponse>--><!--Device-sim-function setLockState(slotId: int, options: LockInfo): Promise<LockStatusResponse>-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| slotId | number | Yes |
+| options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-lockinfo-i-sys.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [8301002](../errorcode-telephony.md#8301002-failed-to-read-or-update-sim-card-data) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sim } from '@kit.TelephonyKit';
+
+let lockInfo: sim.LockInfo = {
+    lockType: sim.LockType.PIN_LOCK,
+    password: "1234",
+    state: sim.LockState.LOCK_OFF
+};
+sim.setLockState(0, lockInfo).then((data: sim.LockStatusResponse) => {
+    console.info(`setLockState success, promise: data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+    console.error(`setLockState failed, promise: err->${JSON.stringify(err)}`);
+});
+```

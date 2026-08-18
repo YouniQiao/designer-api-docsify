@@ -5,7 +5,8 @@ The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from 'WantAgent';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## Summary

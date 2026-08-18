@@ -1,0 +1,76 @@
+# GaugeConfiguration
+
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md#commonconfiguration).
+
+**Inheritance/Implementation:** GaugeConfiguration extends CommonConfiguration<GaugeConfiguration>
+
+**Since:** 12
+
+<!--Device-unnamed-declare interface GaugeConfiguration--><!--Device-unnamed-declare interface GaugeConfiguration-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## max
+
+```TypeScript
+max: number
+```
+
+Maximum value of the current data segment.
+
+**Type:** number
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GaugeConfiguration-max: number--><!--Device-GaugeConfiguration-max: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## min
+
+```TypeScript
+min: number
+```
+
+Minimum value of the current data segment.
+
+**Type:** number
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GaugeConfiguration-min: number--><!--Device-GaugeConfiguration-min: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## value
+
+```TypeScript
+value: number
+```
+
+Current value.
+
+**Type:** number
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GaugeConfiguration-value: number--><!--Device-GaugeConfiguration-value: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

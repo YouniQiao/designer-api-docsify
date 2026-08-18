@@ -11,9 +11,7 @@ Defines the animator result.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions } from 'AnimatorOptions';
-import { AnimatorResult } from 'AnimatorResult';
-import { SimpleAnimatorOptions } from 'SimpleAnimatorOptions';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## cancel

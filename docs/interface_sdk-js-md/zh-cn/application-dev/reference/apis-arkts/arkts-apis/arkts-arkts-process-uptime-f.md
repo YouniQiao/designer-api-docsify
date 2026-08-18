@@ -1,5 +1,10 @@
 # uptime
 
+## 导入模块
+
+```TypeScript
+```
+
 ## uptime
 
 ```TypeScript

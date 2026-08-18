@@ -11,7 +11,8 @@ Notification request proxy.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'reminderAgentManager';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## appMessageId

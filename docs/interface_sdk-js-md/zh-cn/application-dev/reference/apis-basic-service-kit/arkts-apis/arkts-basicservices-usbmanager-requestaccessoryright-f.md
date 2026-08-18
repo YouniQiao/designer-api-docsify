@@ -1,12 +1,17 @@
 # requestAccessoryRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## requestAccessoryRight
 
 ```TypeScript
 function requestAccessoryRight(accessory: USBAccessory): Promise<boolean>
 ```
 
-为指定应用程序申请访问USB配件的访问权限。使用Promise异步回调。 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到 [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md#usbaccessory)作为参数。
+为指定应用申请访问USB配件的访问权限。使用Promise异步回调。 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到 [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md#usbaccessory)作为参数。
 
 **起始版本：** 23
 
@@ -24,7 +29,7 @@ function requestAccessoryRight(accessory: USBAccessory): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回应用程序访问配件权限的申请结果。返回true表示权限申请成功；返回false表示权限申请失败。 |
+| Promise&lt;boolean&gt; | Promise对象，返回应用访问配件权限的申请结果。返回true表示权限申请成功；返回false表示权限申请失败。 |
 
 **错误码：**
 

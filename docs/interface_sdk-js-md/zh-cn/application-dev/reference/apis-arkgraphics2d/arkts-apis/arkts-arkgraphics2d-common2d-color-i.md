@@ -8,6 +8,11 @@ ARGB格式的颜色描述。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## alpha
 
 ```TypeScript

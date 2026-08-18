@@ -1,0 +1,79 @@
+# P2pDeviceStatus
+
+P2P device status.
+
+**Since:** 23
+
+<!--Device-wifiManager-enum P2pDeviceStatus--><!--Device-wifiManager-enum P2pDeviceStatus-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## CONNECTED
+
+```TypeScript
+CONNECTED = 0
+```
+
+Indicate p2p device is connected.
+
+**Since:** 23
+
+<!--Device-P2pDeviceStatus-CONNECTED = 0--><!--Device-P2pDeviceStatus-CONNECTED = 0-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## INVITED
+
+```TypeScript
+INVITED = 1
+```
+
+Indicate p2p device is invited.
+
+**Since:** 23
+
+<!--Device-P2pDeviceStatus-INVITED = 1--><!--Device-P2pDeviceStatus-INVITED = 1-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## FAILED
+
+```TypeScript
+FAILED = 2
+```
+
+Indicate p2p device is failed.
+
+**Since:** 23
+
+<!--Device-P2pDeviceStatus-FAILED = 2--><!--Device-P2pDeviceStatus-FAILED = 2-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## AVAILABLE
+
+```TypeScript
+AVAILABLE = 3
+```
+
+Indicate p2p device is available.
+
+**Since:** 23
+
+<!--Device-P2pDeviceStatus-AVAILABLE = 3--><!--Device-P2pDeviceStatus-AVAILABLE = 3-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## UNAVAILABLE
+
+```TypeScript
+UNAVAILABLE = 4
+```
+
+Indicate p2p device is unavailable.
+
+**Since:** 23
+
+<!--Device-P2pDeviceStatus-UNAVAILABLE = 4--><!--Device-P2pDeviceStatus-UNAVAILABLE = 4-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P

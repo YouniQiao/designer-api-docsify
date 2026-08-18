@@ -11,7 +11,7 @@ Describes the request/response header returned by the **Web** component.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'webview';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## headerKey

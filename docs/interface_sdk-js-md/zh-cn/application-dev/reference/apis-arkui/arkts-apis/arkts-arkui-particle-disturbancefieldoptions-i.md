@@ -106,7 +106,7 @@ position?: PositionT<double>
 
 场的位置。 默认值{x:0，y:0}。 x、y的取值范围：(-∞, +∞)。
 
-**类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;double&gt;
+**类型：** [PositionT](../../apis-na/arkts-apis/arkts-na-positiont-t.md)&lt;double&gt;
 
 **默认值：** {x:0,y:0}
 
@@ -150,7 +150,7 @@ size?: SizeT<double>
 
 场的大小。 默认值 {width:0，height:0}。 width和height的取值范围：[0, +∞)。
 
-**类型：** [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
+**类型：** [SizeT](../../apis-na/arkts-apis/arkts-na-graphics-sizet-i.md)&lt;double&gt;
 
 **默认值：** {width:0,height:0}
 

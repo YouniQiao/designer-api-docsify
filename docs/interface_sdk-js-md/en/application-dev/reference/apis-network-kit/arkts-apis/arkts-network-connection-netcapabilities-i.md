@@ -11,7 +11,7 @@ Defines the network capability set.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'connection';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## bearerTypes

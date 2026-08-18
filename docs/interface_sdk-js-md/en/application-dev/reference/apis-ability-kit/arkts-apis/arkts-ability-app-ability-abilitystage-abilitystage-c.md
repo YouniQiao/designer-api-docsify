@@ -11,7 +11,8 @@ AbilityStage is a [module](../../../quick-start/application-package-overview.md#
 ## Modules to Import
 
 ```TypeScript
-import { AbilityStage } from 'AbilityStage';
+import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility

@@ -1,5 +1,10 @@
 # addPrinterToDiscovery
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addPrinterToDiscovery
 
 ```TypeScript

@@ -12,6 +12,11 @@ huks Handle结构体。 > **说明：** > > 从API version 9开始废弃，建�
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
+## 导入模块
+
+```TypeScript
+```
+
 ## errorCode
 
 ```TypeScript

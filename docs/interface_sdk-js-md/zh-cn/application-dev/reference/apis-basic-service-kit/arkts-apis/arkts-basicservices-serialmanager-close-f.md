@@ -1,12 +1,17 @@
 # close
 
+## 导入模块
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript
 function close(portId: int): void
 ```
 
-关闭串口。
+关闭串口。需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright)申请权限，再调用[open](arkts-basicservices-serialmanager-open-f.md#open)打开串口。 通常在应用退出时、设备断开连接时、需要释放串口资源时调用此接口。关闭串口不会移除访问权限，如需移除权限请调用cancelSerialRight。 **配对调用：** - 与[open](arkts-basicservices-serialmanager-open-f.md#open)方法成对使用 - 打开串口后，使用完毕必须调用本方法关闭串口释放资源 **前置条件：** - 需要先调用[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取端口号 - 需要先调用[requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md#requestserialright)申请访问权限 - 需要先调用[open](arkts-basicservices-serialmanager-open-f.md#open)打开串口
 
 **起始版本：** 23
 
@@ -18,7 +23,7 @@ function close(portId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| portId | int | 是 | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
+| portId | int | 是 | 端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)返回的 [SerialPort](arkts-basicservices-serialmanager-serialport-i.md#serialport)对象，必须使用getPortList返回的有效端口号，传入无效值时抛出错误码31400003异常。 |
 
 **错误码：**
 

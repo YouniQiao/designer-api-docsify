@@ -1,12 +1,17 @@
 # cancelAccessoryRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## cancelAccessoryRight
 
 ```TypeScript
 function cancelAccessoryRight(accessory: USBAccessory): void
 ```
 
-取消当前应用程序访问USB配件的权限。 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到 [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md#usbaccessory)作为参数。
+取消当前应用访问USB配件的权限。与requestAccessoryRight()方法配合使用，用于取消此前通过requestAccessoryRight()申请的配件访问权限。 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist)获取配件列表，得到 [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md#usbaccessory)作为参数。
 
 **起始版本：** 23
 

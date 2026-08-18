@@ -8,6 +8,11 @@ Provides parameters for page scrolling behavior.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## animation
 
 ```TypeScript

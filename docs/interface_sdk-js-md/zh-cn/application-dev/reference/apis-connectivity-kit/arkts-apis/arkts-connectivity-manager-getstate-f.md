@@ -1,5 +1,10 @@
 # getState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getState
 
 ```TypeScript

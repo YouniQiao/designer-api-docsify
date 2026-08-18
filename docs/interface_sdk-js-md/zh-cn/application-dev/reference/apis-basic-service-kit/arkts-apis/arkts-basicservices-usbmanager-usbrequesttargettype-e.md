@@ -1,6 +1,6 @@
 # USBRequestTargetType
 
-Enumerates request target types.
+请求目标类型。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@ Enumerates request target types.
 USB_REQUEST_TARGET_DEVICE = 0
 ```
 
-设备。
+将控制请求的目标设置为USB设备本身，用于对整个设备进行控制操作（如设置设备地址、获取设备描述符等）。
 
 **起始版本：** 23
 
@@ -28,7 +28,7 @@ USB_REQUEST_TARGET_DEVICE = 0
 USB_REQUEST_TARGET_INTERFACE = 1
 ```
 
-接口。
+将控制请求的目标设置为USB设备的某个接口，用于对接口进行控制操作（如设置接口特性、获取接口描述符等）。
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ USB_REQUEST_TARGET_INTERFACE = 1
 USB_REQUEST_TARGET_ENDPOINT = 2
 ```
 
-端点。
+将控制请求的目标设置为USB设备的某个端点，用于对端点进行控制操作（如清除端点停止状态、获取端点状态等）。
 
 **起始版本：** 23
 
@@ -56,7 +56,7 @@ USB_REQUEST_TARGET_ENDPOINT = 2
 USB_REQUEST_TARGET_OTHER = 3
 ```
 
-其他。
+将控制请求的目标设置为其他单元，用于对非标设备、接口或端点的单元进行控制操作。
 
 **起始版本：** 23
 

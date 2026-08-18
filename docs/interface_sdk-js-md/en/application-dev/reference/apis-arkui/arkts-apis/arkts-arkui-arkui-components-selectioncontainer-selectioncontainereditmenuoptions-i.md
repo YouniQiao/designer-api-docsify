@@ -11,15 +11,7 @@ Defines custom edit menu options for SelectionContainer.
 ## Modules to Import
 
 ```TypeScript
-import { OnMenuItemClickWithTextCallback } from 'OnMenuItemClickWithTextCallback';
-import { SelectionContainer } from 'SelectionContainer';
-import { SelectionContainerAttribute } from 'SelectionContainerAttribute';
-import { SelectionContainerEditMenuOptions } from 'SelectionContainerEditMenuOptions';
-import { SelectionContainerInstance } from 'SelectionContainerInstance';
-import { SelectionContainerMenuOptions } from 'SelectionContainerMenuOptions';
-import { SelectionContainerTextJoinStyle } from 'SelectionContainerTextJoinStyle';
-import { SelectionContainerOptions } from 'SelectionContainerOptions';
-import { SelectionContainerController } from 'SelectionContainerController';
+import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
 ```
 
 ## onCreateMenu

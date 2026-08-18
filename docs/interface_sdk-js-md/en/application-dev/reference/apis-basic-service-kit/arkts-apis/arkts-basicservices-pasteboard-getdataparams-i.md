@@ -11,7 +11,7 @@ Defines parameters when an application obtains the Data from the pasteboard, inc
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'pasteboard';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## destUri

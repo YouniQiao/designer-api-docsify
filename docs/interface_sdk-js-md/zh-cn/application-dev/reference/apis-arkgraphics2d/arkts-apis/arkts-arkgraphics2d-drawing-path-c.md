@@ -8,6 +8,11 @@ Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addArc
 
 ```TypeScript

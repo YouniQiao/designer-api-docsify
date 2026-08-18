@@ -10,6 +10,11 @@ Defines the PageInfo type. The value of routerPageInfo indicates the information
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## navDestinationInfo
 
 ```TypeScript

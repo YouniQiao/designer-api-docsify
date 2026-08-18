@@ -1,5 +1,10 @@
 # getErrorInfo
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getErrorInfo
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getOperatorConfigs（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getOperatorConfigs
 
 ```TypeScript
@@ -23,7 +28,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OperatorConfig](arkts-telephony-sim-operatorconfig-i-sys.md)&gt;&gt; | 是 | Indicates the callback for getting the operatorconfigs in a specified slot; returns empty OperatorConfig if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperatorConfig](arkts-telephony-sim-operatorconfig-i-sys.md)&gt;&gt; | 是 | Indicates the callback for getting the operatorconfigs in a specified slot; returns empty OperatorConfig if no SIM card is inserted. |
 
 **错误码：**
 

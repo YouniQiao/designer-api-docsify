@@ -1,5 +1,10 @@
 # show
 
+## 导入模块
+
+```TypeScript
+```
+
 ## show
 
 ```TypeScript
@@ -52,5 +57,5 @@ declare function show(uri: string, type: string, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | uri | string | 是 | 待打开的文件URI |
 | type | string | 是 | 待打开文件的类型 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步打开uri对应文件（注：当前返回错误码） |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步打开uri对应文件（注：当前返回错误码） |
 

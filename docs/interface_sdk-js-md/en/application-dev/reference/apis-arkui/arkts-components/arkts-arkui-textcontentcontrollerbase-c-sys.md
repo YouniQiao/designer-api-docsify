@@ -8,6 +8,11 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getText
 
 ```TypeScript

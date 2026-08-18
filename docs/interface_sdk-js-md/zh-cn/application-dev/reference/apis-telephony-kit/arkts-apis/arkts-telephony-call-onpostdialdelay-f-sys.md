@@ -1,5 +1,10 @@
 # onPostDialDelay（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onPostDialDelay
 
 ```TypeScript
@@ -22,7 +27,7 @@ Subscribe to the postDialDelay event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | Indicates the callback for getting the result of post-dial string. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Indicates the callback for getting the result of post-dial string. |
 
 **错误码：**
 

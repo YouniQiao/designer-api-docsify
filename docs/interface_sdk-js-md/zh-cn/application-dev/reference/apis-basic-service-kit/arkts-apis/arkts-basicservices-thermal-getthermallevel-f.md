@@ -1,5 +1,10 @@
 # getThermalLevel
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getThermalLevel
 
 ```TypeScript

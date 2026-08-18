@@ -11,7 +11,8 @@ The module provides capabilities for image decoding, encoding, editing, metadata
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'image';
+import { image } from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## Summary

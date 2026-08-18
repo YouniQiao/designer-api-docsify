@@ -12,6 +12,11 @@ Inherits from SubscribedAbstractProperty&lt;T&gt;. Represents a property with tw
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## aboutToBeDeleted
 
 ```TypeScript

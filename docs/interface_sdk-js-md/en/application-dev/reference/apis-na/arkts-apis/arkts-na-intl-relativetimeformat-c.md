@@ -10,6 +10,11 @@ RelativeTimeFormat class for locale-sensitive relative time formatting.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

@@ -1,12 +1,17 @@
 # requestRight
 
+## 导入模块
+
+```TypeScript
+```
+
 ## requestRight
 
 ```TypeScript
 function requestRight(deviceName: string): Promise<boolean>
 ```
 
-请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设备权限，无需调用此接口申请。
+请求应用访问设备的临时权限。使用Promise异步回调返回结果。系统应用默认拥有访问设备权限，无需调用此接口。
 
 **起始版本：** 23
 
@@ -18,7 +23,7 @@ function requestRight(deviceName: string): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceName | string | 是 | 设备名称，来自[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的设备列表USBDevice的name。 |
+| deviceName | string | 是 | 设备名称，来自[getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的设备列表USBDevice的name。 |
 
 **返回值：**
 

@@ -1,5 +1,10 @@
 # setInterface
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setInterface
 
 ```TypeScript

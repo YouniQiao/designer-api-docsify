@@ -8,6 +8,11 @@ DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

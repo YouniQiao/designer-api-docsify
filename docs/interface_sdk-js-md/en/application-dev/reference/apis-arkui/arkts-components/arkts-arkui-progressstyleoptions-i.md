@@ -10,6 +10,11 @@ Defines the progress bar style options. Inherits from [CommonProgressStyleOption
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## scaleCount
 
 ```TypeScript

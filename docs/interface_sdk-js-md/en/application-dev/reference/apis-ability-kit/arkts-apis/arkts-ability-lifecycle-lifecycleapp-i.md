@@ -8,6 +8,11 @@ interface of app lifecycle.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## onActive
 
 ```TypeScript

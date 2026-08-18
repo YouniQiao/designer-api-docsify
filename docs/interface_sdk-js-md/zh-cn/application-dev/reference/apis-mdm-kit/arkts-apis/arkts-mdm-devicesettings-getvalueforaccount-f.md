@@ -1,5 +1,10 @@
 # getValueForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getValueForAccount
 
 ```TypeScript

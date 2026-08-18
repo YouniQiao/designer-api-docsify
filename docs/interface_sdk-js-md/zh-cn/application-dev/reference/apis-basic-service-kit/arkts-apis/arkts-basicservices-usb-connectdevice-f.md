@@ -1,5 +1,10 @@
 # connectDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## connectDevice
 
 ```TypeScript

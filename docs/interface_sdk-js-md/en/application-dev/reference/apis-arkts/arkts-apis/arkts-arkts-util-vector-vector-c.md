@@ -15,7 +15,7 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 ## Modules to Import
 
 ```TypeScript
-import { Vector } from 'Vector';
+import { Vector } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

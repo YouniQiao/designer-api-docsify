@@ -1,5 +1,10 @@
 # getDisallowedPolicyForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDisallowedPolicyForAccount
 
 ```TypeScript

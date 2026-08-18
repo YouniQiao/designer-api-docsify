@@ -8,6 +8,11 @@ AbilityStage是一个[Module](../../../quick-start/application-package-overview.
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onAboutToCreateAbility
 
 ```TypeScript

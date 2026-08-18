@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'webSocket';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## close

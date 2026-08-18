@@ -11,7 +11,7 @@ Defines a float view controller instance, which is used to start and stop the fl
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'floatView';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## getWindowProperties

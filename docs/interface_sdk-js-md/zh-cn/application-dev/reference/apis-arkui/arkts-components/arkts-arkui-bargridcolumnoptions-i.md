@@ -8,6 +8,11 @@ TabBar栅格化方式设置的对象，包括栅格模式下的column边距和�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## gutter
 
 ```TypeScript

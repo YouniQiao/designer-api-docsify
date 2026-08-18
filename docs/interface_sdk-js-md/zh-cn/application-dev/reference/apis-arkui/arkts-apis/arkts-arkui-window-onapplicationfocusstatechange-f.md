@@ -1,5 +1,10 @@
 # onApplicationFocusStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onApplicationFocusStateChange
 
 ```TypeScript

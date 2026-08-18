@@ -13,7 +13,7 @@ Defines APIs to access the result set obtained by querying the RDB store. Before
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'photoAccessHelper';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close

@@ -8,6 +8,11 @@ vibrator模块是设备马达振动的控制模块，属于SensorServiceKit。�
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

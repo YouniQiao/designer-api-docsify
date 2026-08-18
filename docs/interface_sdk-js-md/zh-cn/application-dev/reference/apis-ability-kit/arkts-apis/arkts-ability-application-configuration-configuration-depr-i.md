@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
+## 导入模块
+
+```TypeScript
+```
+
 ## colorMode
 
 ```TypeScript

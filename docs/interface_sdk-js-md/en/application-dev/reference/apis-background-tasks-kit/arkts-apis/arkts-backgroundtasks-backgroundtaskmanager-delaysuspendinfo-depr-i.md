@@ -12,6 +12,11 @@ Provides the information about the suspension delay.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## actualDelayTime
 
 ```TypeScript

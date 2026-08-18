@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
+## 导入模块
+
+```TypeScript
+```
+
 ## modelType
 
 ```TypeScript

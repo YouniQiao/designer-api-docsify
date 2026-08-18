@@ -10,6 +10,11 @@ Provides the information about the scrollable container component corresponding 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## isBegin
 
 ```TypeScript

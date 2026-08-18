@@ -1,5 +1,10 @@
 # checkable
 
+## 导入模块
+
+```TypeScript
+```
+
 ## checkable
 
 ```TypeScript

@@ -10,6 +10,11 @@ Provides the API for accessing Calendar name, time and date related information.
 
 **System capability:** SystemCapability.Global.I18n
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## add
 
 ```TypeScript

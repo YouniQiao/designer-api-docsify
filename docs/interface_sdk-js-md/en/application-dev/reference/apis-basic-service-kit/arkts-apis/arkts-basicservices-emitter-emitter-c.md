@@ -11,7 +11,8 @@ This module provides the capabilities of sending and processing inter- or intra-
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'emitter';
+import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## constructor

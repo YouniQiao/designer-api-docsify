@@ -17,6 +17,7 @@ Represents the folder data. It is a child class of [File](arkts-arkdata-unifiedd
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 

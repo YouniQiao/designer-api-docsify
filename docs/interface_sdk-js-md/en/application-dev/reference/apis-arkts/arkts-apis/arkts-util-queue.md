@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { Queue } from 'Queue';
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
 ```
 
 ## Summary

@@ -24,6 +24,11 @@ Copyright (c) 2026 Huawei Device Co., Ltd.
 **系统能力：** 
 - API版本23+：SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 枚举

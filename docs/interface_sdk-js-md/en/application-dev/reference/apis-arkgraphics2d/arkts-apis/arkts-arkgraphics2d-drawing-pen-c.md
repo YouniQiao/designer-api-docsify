@@ -11,7 +11,8 @@ Defines a pen, which is used to describe the style and color to outline a shape.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'drawing';
+import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor

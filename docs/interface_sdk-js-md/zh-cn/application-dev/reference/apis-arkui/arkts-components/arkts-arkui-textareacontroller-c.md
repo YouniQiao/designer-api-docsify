@@ -13,6 +13,11 @@ TextArea组件的控制器继承自TextContentControllerBase，涉及的接口�
 **系统能力：** 
 - API版本10+：SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## caretPosition
 
 ```TypeScript

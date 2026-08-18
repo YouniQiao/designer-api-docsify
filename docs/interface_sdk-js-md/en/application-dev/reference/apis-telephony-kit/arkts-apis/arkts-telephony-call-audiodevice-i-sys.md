@@ -13,7 +13,7 @@ Enumerates audio devices.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'call';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## address

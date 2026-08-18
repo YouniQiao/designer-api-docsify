@@ -8,6 +8,11 @@ Defines the options for configuring images and text content on the tabs. > **NOT
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## icon
 
 ```TypeScript

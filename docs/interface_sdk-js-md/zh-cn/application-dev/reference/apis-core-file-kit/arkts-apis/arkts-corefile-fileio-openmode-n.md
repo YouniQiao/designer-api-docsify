@@ -8,6 +8,11 @@ open接口flags参数常量。文件打开标签。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 常量

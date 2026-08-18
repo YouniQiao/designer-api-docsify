@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## enableSystemRecordController
 
 ```TypeScript

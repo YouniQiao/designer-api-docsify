@@ -1,5 +1,10 @@
 # isWlanSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isWlanSupported
 
 ```TypeScript

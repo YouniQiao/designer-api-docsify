@@ -8,6 +8,11 @@ ChipGroupV2Padding定义了ChipGroupV2的上下内边距，用于控制其整体
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

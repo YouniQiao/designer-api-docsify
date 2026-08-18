@@ -1,5 +1,10 @@
 # setHomeWallpaper
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setHomeWallpaper
 
 ```TypeScript

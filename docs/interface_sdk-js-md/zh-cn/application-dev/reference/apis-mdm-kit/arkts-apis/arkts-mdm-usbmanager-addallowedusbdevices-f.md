@@ -1,5 +1,10 @@
 # addAllowedUsbDevices
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addAllowedUsbDevices
 
 ```TypeScript

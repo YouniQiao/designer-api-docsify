@@ -1,5 +1,10 @@
 # getSystemCpuUsage
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSystemCpuUsage
 
 ```TypeScript

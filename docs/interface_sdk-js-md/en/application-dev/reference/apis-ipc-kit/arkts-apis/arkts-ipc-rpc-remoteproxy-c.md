@@ -13,7 +13,7 @@ Provides APIs to implement **IRemoteObject**.
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## addDeathRecipient

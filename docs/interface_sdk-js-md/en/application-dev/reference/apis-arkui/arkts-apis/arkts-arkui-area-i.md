@@ -8,6 +8,11 @@ Defines the area information of a component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## globalPosition
 
 ```TypeScript

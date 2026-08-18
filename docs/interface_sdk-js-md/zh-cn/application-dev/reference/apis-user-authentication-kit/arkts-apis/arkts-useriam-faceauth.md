@@ -20,6 +20,11 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 <!--Del-->

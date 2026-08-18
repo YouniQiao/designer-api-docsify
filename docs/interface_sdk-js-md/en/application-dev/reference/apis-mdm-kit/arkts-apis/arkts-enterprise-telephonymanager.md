@@ -13,7 +13,7 @@ The **telephonyManager** module provides the telephony management capability. > 
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from 'telephonyManager';
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## Summary

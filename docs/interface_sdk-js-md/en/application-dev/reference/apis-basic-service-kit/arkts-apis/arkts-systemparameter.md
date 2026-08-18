@@ -17,7 +17,7 @@ The **SystemParameter** module provides system services with easy access to key-
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'systemParameter';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

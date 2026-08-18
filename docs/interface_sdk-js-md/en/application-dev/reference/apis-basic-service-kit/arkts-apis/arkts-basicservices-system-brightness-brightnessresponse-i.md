@@ -13,13 +13,7 @@ Defines a response that returns the screen brightness.
 ## Modules to Import
 
 ```TypeScript
-import { BrightnessModeResponse } from 'BrightnessModeResponse';
-import { BrightnessResponse } from 'BrightnessResponse';
-import { GetBrightnessModeOptions } from 'GetBrightnessModeOptions';
-import { GetBrightnessOptions } from 'GetBrightnessOptions';
-import { SetBrightnessModeOptions } from 'SetBrightnessModeOptions';
-import { SetBrightnessOptions } from 'SetBrightnessOptions';
-import { SetKeepScreenOnOptions } from 'SetKeepScreenOnOptions';
+import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## value

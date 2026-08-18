@@ -1,5 +1,10 @@
 # getAutoTimeStatus
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAutoTimeStatus
 
 ```TypeScript

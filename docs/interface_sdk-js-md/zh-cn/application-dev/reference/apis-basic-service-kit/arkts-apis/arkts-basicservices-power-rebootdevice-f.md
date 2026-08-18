@@ -1,5 +1,10 @@
 # rebootDevice
 
+## 导入模块
+
+```TypeScript
+```
+
 ## rebootDevice
 
 ```TypeScript

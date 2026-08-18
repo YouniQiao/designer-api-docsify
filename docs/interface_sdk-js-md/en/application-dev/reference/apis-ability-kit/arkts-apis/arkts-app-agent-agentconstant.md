@@ -25,7 +25,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { agentConstant } from 'agentConstant';
+import { agentConstant } from '@kit.AbilityKit';
+import { agentConstant } from '@kit.AbilityKit';
 ```
 
 ## Summary

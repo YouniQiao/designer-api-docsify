@@ -1,5 +1,10 @@
 # isSimActiveSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isSimActiveSync
 
 ```TypeScript

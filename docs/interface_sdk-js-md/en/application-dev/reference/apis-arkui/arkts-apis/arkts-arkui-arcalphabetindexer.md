@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexer } from 'ArcAlphabetIndexer';
-import { ArcAlphabetIndexerAttribute } from 'ArcAlphabetIndexerAttribute';
+import { ArcAlphabetIndexer, ArcAlphabetIndexerAttribute } from '@kit.ArkUI';
 ```
 
 ## Summary

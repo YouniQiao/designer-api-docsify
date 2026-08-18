@@ -13,7 +13,8 @@ As a part of the Unified Data Management Framework (UDMF), the **unifiedDataChan
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'unifiedDataChannel';
+import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## Summary

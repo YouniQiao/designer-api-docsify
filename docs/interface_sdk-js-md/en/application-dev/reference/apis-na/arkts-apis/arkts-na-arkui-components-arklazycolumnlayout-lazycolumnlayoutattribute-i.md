@@ -12,6 +12,11 @@ Defines the lazy column layout attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## alignItems
 
 ```TypeScript
@@ -52,7 +57,7 @@ attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | Attri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 

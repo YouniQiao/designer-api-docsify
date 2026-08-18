@@ -1,5 +1,10 @@
 # lib.es2016.array.include
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Interfaces

@@ -1,5 +1,10 @@
 # setLocationPolicy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setLocationPolicy
 
 ```TypeScript

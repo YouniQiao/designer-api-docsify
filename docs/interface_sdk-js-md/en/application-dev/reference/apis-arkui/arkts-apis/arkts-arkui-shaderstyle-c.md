@@ -12,3 +12,8 @@ Defines the base class for text shader effects.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+

@@ -11,7 +11,7 @@ The proxy of the UIExtension window.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'uiExtension';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows

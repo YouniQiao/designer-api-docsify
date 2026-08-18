@@ -11,7 +11,10 @@ Represents the state of a credential enrolled. This API is used to describe the 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'userAuth';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## credentialCount

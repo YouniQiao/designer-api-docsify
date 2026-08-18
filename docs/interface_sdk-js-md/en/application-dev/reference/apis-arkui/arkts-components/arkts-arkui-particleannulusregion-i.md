@@ -8,6 +8,11 @@ Configures the annular emitter area. > **NOTE：**> > - If the value of outerRad
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## center
 
 ```TypeScript

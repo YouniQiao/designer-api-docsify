@@ -11,7 +11,10 @@ Provides APIs for the file manager application to download files from the Drive 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'cloudSync';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## cleanAllFileCache

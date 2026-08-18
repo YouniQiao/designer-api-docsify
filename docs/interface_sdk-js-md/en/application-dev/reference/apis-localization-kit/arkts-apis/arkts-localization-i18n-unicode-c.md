@@ -11,7 +11,8 @@ Provides character attribute management capabilities, such as checking whether a
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## detectEncoding
@@ -42,7 +43,7 @@ Detects the encoding information of the input byte stream.
 
 | Type | Description |
 | --- | --- |
-| [EncodingInfo](arkts-localization-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
+| [EncodingInfo](../../apis-na/arkts-apis/arkts-na-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
 
 ## getType
 

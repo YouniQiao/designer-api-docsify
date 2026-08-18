@@ -8,6 +8,11 @@ ChipV2是提供丰富样式和交互能力的操作块组件，支持前缀图�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## build
 
 ```TypeScript
@@ -36,7 +41,7 @@ build函数用于构造ChipV2高级组件的UI结构。
 
 定义ChipV2组件的参数，用于自定义ChipV2组件的外观和行为，包含label、prefixIcon、suffixIcon、allowClose、activated、backgroundColor、size等配置项。
 
-**类型：** [ChipV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chipv2-chipv2options-c.md)
+**类型：** [ChipV2Options](arkts-arkui-arkui-advanced-chipv2-chipv2options-c.md)
 
 **起始版本：** 26.0.0
 

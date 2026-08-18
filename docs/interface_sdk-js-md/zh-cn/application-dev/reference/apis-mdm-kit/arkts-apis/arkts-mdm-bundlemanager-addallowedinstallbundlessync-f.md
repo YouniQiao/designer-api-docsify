@@ -1,5 +1,10 @@
 # addAllowedInstallBundlesSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addAllowedInstallBundlesSync
 
 ```TypeScript

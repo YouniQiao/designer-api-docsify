@@ -11,7 +11,8 @@ A color picker class used to obtain the main color from image data. It is suitab
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'effectKit';
+import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## getAverageColor

@@ -11,7 +11,7 @@ Defines the parameters for creating a PiP controller.
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'PiPWindow';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## componentController

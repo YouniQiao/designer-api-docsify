@@ -13,7 +13,7 @@ Defines the mouse event data.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'inputEventClient';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## mouseEvent

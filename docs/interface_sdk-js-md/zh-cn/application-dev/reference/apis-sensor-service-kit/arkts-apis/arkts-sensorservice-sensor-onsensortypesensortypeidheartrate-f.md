@@ -1,5 +1,10 @@
 # on_SensorType.SENSOR_TYPE_ID_HEART_RATE
 
+## 导入模块
+
+```TypeScript
+```
+
 ## on_SensorType.SENSOR_TYPE_ID_HEART_RATE
 
 ```TypeScript
@@ -26,6 +31,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Heart
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_HEART_RATE | 是 | 要订阅的心率传感器类型为SENSOR_TYPE_ID_HEART_RATE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HeartRateResponse&gt; | 是 | 注册心率传感器的回调函数，上报的数据类型为HeartRateResponse。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | 是 | 注册心率传感器的回调函数，上报的数据类型为HeartRateResponse。 |
 | options | Options | 否 | 用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 

@@ -1,12 +1,17 @@
 # USBDevicePipe
 
-USB设备消息传输通道，用于确定设备。
+USB设备连接通道，用于确定总线地址和设备地址。
 
 **起始版本：** 23
 
 <!--Device-usbManager-interface USBDevicePipe--><!--Device-usbManager-interface USBDevicePipe-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
+
+## 导入模块
+
+```TypeScript
+```
 
 ## busNum
 

@@ -10,6 +10,11 @@ Provides the parameters of the tap gesture handler. Inherits from [BaseHandlerOp
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## count
 
 ```TypeScript

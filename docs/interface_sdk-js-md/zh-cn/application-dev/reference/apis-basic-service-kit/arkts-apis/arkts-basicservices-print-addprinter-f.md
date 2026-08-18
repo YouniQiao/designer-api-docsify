@@ -1,5 +1,10 @@
 # addPrinter
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addPrinter
 
 ```TypeScript

@@ -1,0 +1,15 @@
+# Rotation3
+
+```TypeScript
+export type Rotation3 = Vec3
+```
+
+Rotation of an object in 3D space. The type is a three-dimensional vector in the unit of radian (rad). The value can be any value.
+
+**Since:** 23
+
+<!--Device-unnamed-export type Rotation3 = Vec3--><!--Device-unnamed-export type Rotation3 = Vec3-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+**Property type:** Vec3

@@ -1,5 +1,10 @@
 # demoteCurrentFromCandidateMasterProcess
 
+## 导入模块
+
+```TypeScript
+```
+
 ## demoteCurrentFromCandidateMasterProcess
 
 ```TypeScript

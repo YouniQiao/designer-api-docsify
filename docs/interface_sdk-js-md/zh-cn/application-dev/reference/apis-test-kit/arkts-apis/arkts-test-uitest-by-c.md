@@ -12,6 +12,11 @@ UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控
 
 **系统能力：** SystemCapability.Test.UiTest
 
+## 导入模块
+
+```TypeScript
+```
+
 ## clickable
 
 ```TypeScript

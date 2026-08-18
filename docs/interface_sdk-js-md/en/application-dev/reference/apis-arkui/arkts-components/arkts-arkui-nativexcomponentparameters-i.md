@@ -8,6 +8,11 @@ Defines the options of the **XComponent**. An XComponent created with such const
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## imageAIOptions
 
 ```TypeScript

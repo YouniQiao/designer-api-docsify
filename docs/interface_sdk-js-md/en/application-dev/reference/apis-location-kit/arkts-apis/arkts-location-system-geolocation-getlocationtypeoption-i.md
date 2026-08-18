@@ -11,11 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GeolocationResponse } from 'GeolocationResponse';
-import { GetLocationOption } from 'GetLocationOption';
-import { GetLocationTypeOption } from 'GetLocationTypeOption';
-import { GetLocationTypeResponse } from 'GetLocationTypeResponse';
-import { SubscribeLocationOption } from 'SubscribeLocationOption';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
 ```
 
 ## complete

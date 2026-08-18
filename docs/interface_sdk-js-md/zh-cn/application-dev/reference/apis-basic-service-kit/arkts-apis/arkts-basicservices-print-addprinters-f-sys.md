@@ -1,5 +1,10 @@
 # addPrinters（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addPrinters
 
 ```TypeScript
@@ -23,7 +28,7 @@ function addPrinters(printers: Array<PrinterInfo>, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printers | Array&lt;[PrinterInfo](arkts-basicservices-print-printerinfo-i-sys.md)&gt; | 是 | 表示新到达的打印机列表。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步添加打印机之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步添加打印机之后的回调。 |
 
 **错误码：**
 

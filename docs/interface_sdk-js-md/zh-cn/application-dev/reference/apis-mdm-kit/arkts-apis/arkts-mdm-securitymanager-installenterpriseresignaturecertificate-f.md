@@ -1,5 +1,10 @@
 # installEnterpriseReSignatureCertificate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## installEnterpriseReSignatureCertificate
 
 ```TypeScript

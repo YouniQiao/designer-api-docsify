@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { bas } from 'bas';
+import { baseProfile } from '@kit.ConnectivityKit';
+import { bas } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceBatteryInfo

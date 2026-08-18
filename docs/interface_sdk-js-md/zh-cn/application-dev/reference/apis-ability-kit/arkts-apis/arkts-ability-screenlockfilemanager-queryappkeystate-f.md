@@ -1,5 +1,10 @@
 # queryAppKeyState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## queryAppKeyState
 
 ```TypeScript

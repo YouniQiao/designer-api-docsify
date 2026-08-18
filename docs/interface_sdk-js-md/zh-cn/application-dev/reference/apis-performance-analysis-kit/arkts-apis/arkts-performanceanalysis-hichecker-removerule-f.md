@@ -1,5 +1,10 @@
 # removeRule
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeRule
 
 ```TypeScript

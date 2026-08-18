@@ -1,5 +1,10 @@
 # getRemoteAbilityInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getRemoteAbilityInfo
 
 ```TypeScript
@@ -27,7 +32,7 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-elementname-depr-i.md) | 是 | 获得的ElementName信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回远程基本能力信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回远程基本能力信息。 |
 
 
 ## getRemoteAbilityInfo

@@ -11,14 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ExtraRegionPosition } from 'ExtraRegionPosition';
-import { ExpandedRegionLayoutOptions } from 'ExpandedRegionLayoutOptions';
-import { HoverModeRegionLayoutOptions } from 'HoverModeRegionLayoutOptions';
-import { FoldedRegionLayoutOptions } from 'FoldedRegionLayoutOptions';
-import { PresetSplitRatio } from 'PresetSplitRatio';
-import { FoldSplitContainer } from 'FoldSplitContainer';
-import { HoverModeStatus } from 'HoverModeStatus';
-import { OnHoverStatusChangeHandler } from 'OnHoverStatusChangeHandler';
+import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
 ```
 
 ## animationOptions

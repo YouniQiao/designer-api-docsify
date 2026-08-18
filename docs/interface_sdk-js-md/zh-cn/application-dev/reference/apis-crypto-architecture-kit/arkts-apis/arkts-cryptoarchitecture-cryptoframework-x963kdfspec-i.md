@@ -10,6 +10,11 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
+## 导入模块
+
+```TypeScript
+```
+
 ## info
 
 ```TypeScript

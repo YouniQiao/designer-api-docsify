@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from 'dataAbility';
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## createRdbPredicates

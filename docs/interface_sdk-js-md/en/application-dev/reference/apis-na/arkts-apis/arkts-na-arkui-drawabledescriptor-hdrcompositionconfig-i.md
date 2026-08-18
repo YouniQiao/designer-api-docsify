@@ -10,6 +10,11 @@ Options for HDR composition configuration.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## rect
 
 ```TypeScript

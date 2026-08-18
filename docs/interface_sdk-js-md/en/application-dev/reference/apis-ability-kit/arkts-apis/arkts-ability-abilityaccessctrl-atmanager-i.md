@@ -11,9 +11,8 @@ Program access control management class, providing capabilities such as permissi
 ## Modules to Import
 
 ```TypeScript
-import { Context } from 'Context';
-import { PermissionRequestResult } from 'PermissionRequestResult';
-import { Permissions } from 'Permissions';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## checkAccessToken

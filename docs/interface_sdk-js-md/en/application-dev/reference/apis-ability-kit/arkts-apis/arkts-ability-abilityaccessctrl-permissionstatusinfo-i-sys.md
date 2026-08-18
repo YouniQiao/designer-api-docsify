@@ -13,9 +13,8 @@ Indicates the permission status.
 ## Modules to Import
 
 ```TypeScript
-import { Context } from 'Context';
-import { PermissionRequestResult } from 'PermissionRequestResult';
-import { Permissions } from 'Permissions';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## grantFlags

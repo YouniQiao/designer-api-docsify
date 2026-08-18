@@ -1,5 +1,10 @@
 # is64Bit
 
+## 导入模块
+
+```TypeScript
+```
+
 ## is64Bit
 
 ```TypeScript

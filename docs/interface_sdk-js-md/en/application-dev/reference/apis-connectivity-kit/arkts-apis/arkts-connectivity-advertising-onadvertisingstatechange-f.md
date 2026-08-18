@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'advertising';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## onAdvertisingStateChange

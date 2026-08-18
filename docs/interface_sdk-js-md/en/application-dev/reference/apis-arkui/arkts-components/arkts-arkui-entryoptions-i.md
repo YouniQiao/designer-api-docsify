@@ -8,6 +8,11 @@ Defines the options of Entry ClassDecorator.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## routeName
 
 ```TypeScript

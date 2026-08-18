@@ -10,6 +10,11 @@ Implements a **MediaSourceInfo** object to provide the information about the med
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## format
 
 ```TypeScript

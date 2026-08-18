@@ -8,6 +8,11 @@ Provides information about a live form.
 
 **系统能力：** SystemCapability.Ability.Form
 
+## 导入模块
+
+```TypeScript
+```
+
 ## borderRadius
 
 ```TypeScript

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'inputEventClient';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## createTouchController

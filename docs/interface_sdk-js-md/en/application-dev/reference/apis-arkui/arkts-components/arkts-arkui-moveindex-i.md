@@ -8,6 +8,11 @@ Defines position of moved data.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## from
 
 ```TypeScript

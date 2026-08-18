@@ -8,6 +8,11 @@ Preferences实例配置选项。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## dataGroupId
 
 ```TypeScript

@@ -12,6 +12,11 @@ Inherits from IPropertySubscriber. Represents a subscriber that subscribes to ch
 
 **System API:** This is a system API.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## hasChanged
 
 ```TypeScript

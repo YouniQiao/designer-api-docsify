@@ -12,6 +12,11 @@ Represents an error that occurs when provided collection index is out of range
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_invoke
 
 ```TypeScript

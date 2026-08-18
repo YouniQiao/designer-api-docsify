@@ -8,6 +8,11 @@ Describes the configuration options for child components to be preloaded.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## independent
 
 ```TypeScript

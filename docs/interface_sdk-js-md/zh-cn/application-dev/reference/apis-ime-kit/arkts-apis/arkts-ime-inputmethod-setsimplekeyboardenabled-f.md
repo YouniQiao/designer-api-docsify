@@ -1,5 +1,10 @@
 # setSimpleKeyboardEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setSimpleKeyboardEnabled
 
 ```TypeScript

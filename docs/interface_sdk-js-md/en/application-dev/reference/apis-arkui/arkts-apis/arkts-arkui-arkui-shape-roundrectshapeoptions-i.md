@@ -1,8 +1,8 @@
 # RoundRectShapeOptions
 
-Represents the parameter of the constructor used to create a **RectShape** object with rounded corners. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#shapesize).
+Represents the parameter of the constructor used to create a **RectShape** object with rounded corners. This API inherits from [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#shapesize).
 
-**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#shapesize)
+**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#shapesize)
 
 **Since:** 12
 
@@ -13,10 +13,7 @@ Represents the parameter of the constructor used to create a **RectShape** objec
 ## Modules to Import
 
 ```TypeScript
-import { RectShape } from 'RectShape';
-import { CircleShape } from 'CircleShape';
-import { EllipseShape } from 'EllipseShape';
-import { PathShape } from 'PathShape';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## radiusHeight

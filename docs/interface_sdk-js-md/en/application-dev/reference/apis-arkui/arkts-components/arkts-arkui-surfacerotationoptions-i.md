@@ -8,6 +8,11 @@ Defines whether the orientation of the surface held by the current **XComponent*
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lock
 
 ```TypeScript

@@ -1,5 +1,10 @@
 # getOpNameSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getOpNameSync
 
 ```TypeScript

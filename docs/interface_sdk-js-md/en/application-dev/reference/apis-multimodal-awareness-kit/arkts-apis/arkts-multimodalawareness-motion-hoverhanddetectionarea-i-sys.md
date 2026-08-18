@@ -13,7 +13,8 @@ The basic data structure of the hover hand detection area.
 ## Modules to Import
 
 ```TypeScript
-import { motion } from 'motion';
+import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## height

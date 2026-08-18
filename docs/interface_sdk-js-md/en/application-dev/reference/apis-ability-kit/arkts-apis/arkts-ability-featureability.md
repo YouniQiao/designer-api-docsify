@@ -13,7 +13,7 @@ The FeatureAbility module provides APIs that enable user interaction. You can us
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'featureAbility';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

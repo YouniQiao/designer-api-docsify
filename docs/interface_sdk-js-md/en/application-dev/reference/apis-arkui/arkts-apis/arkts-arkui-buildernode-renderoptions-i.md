@@ -56,7 +56,7 @@ type?: NodeRenderType
 
 Rendering type of the node. Default value: **NodeRenderType.RENDER_TYPE_DISPLAY**.
 
-**Type:** [NodeRenderType](../../apis-na/arkts-apis/arkts-na-buildernode-noderendertype-e.md)
+**Type:** [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md)
 
 **Since:** 11
 

@@ -1,0 +1,22 @@
+# @ohos.graphics.hdrCapability
+
+The hdrCapability module provides enums related to the High Dynamic Range (HDR) capability. The HDR technology significantly expands the dynamic range and color expressiveness of images. It is applicable to scenarios such as video playback and image display. It addresses the issues of overexposure in bright areas and loss of details in dark areas in traditional SDR in high-contrast scenarios, delivering a more authentic and richer visual experience.
+
+**Since:** 23
+
+<!--Device-unnamed-declare namespace hdrCapability--><!--Device-unnamed-declare namespace hdrCapability-End-->
+
+**System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## Summary
+
+### Enums
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [HDRFormat](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md) |

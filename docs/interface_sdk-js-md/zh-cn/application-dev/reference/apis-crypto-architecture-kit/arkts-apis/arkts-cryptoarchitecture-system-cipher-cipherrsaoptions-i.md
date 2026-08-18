@@ -12,6 +12,11 @@
 
 **系统能力：** SystemCapability.Security.Cipher
 
+## 导入模块
+
+```TypeScript
+```
+
 ## action
 
 ```TypeScript

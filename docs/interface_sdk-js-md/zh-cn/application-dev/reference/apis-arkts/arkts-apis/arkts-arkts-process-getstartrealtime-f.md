@@ -1,5 +1,10 @@
 # getStartRealtime
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getStartRealtime
 
 ```TypeScript

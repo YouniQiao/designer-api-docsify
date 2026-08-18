@@ -10,6 +10,11 @@ Represents a dynamic synchronization scene.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getFrameRateRange
 
 ```TypeScript

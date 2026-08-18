@@ -14,6 +14,11 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

@@ -1,0 +1,114 @@
+# EditableTitleBarStyleV2Options
+
+Indicates the style options of the title bar.
+
+**Since:** 26.0.0
+
+<!--Device-unnamed-export declare interface EditableTitleBarStyleV2Options--><!--Device-unnamed-export declare interface EditableTitleBarStyleV2Options-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## backgroundBlurStyle
+
+```TypeScript
+backgroundBlurStyle?: BlurStyle
+```
+
+Background blur style
+
+**Type:** BlurStyle
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarStyleV2Options-backgroundBlurStyle?: BlurStyle--><!--Device-EditableTitleBarStyleV2Options-backgroundBlurStyle?: BlurStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## backgroundColor
+
+```TypeScript
+backgroundColor?: ResourceColor
+```
+
+Background color
+
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarStyleV2Options-backgroundColor?: ResourceColor--><!--Device-EditableTitleBarStyleV2Options-backgroundColor?: ResourceColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## contentMargin
+
+```TypeScript
+contentMargin?: LocalizedMargin
+```
+
+Content margin, supports RTL layout.
+
+**Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarStyleV2Options-contentMargin?: LocalizedMargin--><!--Device-EditableTitleBarStyleV2Options-contentMargin?: LocalizedMargin-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## safeAreaEdges
+
+```TypeScript
+safeAreaEdges?: Array<SafeAreaEdge>
+```
+
+Indicates the edges of the safe area.
+
+**Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarStyleV2Options-safeAreaEdges?: Array<SafeAreaEdge>--><!--Device-EditableTitleBarStyleV2Options-safeAreaEdges?: Array<SafeAreaEdge>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## safeAreaTypes
+
+```TypeScript
+safeAreaTypes?: Array<SafeAreaType>
+```
+
+Indicates the types of the safe area.
+
+**Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarStyleV2Options-safeAreaTypes?: Array<SafeAreaType>--><!--Device-EditableTitleBarStyleV2Options-safeAreaTypes?: Array<SafeAreaType>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

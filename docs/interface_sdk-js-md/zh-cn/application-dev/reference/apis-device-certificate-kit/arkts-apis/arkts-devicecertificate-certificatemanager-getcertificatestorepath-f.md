@@ -1,5 +1,10 @@
 # getCertificateStorePath
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCertificateStorePath
 
 ```TypeScript

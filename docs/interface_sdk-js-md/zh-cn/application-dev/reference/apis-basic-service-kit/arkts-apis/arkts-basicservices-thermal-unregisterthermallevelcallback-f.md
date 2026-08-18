@@ -1,5 +1,10 @@
 # unregisterThermalLevelCallback
 
+## 导入模块
+
+```TypeScript
+```
+
 ## unregisterThermalLevelCallback
 
 ```TypeScript
@@ -18,7 +23,7 @@ function unregisterThermalLevelCallback(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 可选参数，回调函数，无返回值。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 可选参数，回调函数，无返回值。 |
 
 **错误码：**
 

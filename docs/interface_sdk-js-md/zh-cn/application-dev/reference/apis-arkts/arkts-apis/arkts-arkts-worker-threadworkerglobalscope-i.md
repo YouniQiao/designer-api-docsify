@@ -10,6 +10,11 @@ Worker线程用于与宿主线程通信的类。其中postMessage接口用于向
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## callGlobalCallObjectMethod
 
 ```TypeScript

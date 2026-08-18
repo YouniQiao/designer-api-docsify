@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

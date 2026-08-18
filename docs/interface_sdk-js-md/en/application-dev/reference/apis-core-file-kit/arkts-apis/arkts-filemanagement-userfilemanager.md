@@ -17,7 +17,7 @@ The **userFileManager** module provides user data management capabilities, inclu
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'userFileManager';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

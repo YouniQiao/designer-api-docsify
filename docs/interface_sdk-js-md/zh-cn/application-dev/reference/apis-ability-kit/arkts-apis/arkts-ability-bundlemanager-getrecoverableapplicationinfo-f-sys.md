@@ -1,5 +1,10 @@
 # getRecoverableApplicationInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getRecoverableApplicationInfo
 
 ```TypeScript
@@ -22,7 +27,7 @@ function getRecoverableApplicationInfo(callback: AsyncCallback<Array<Recoverable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)，当获取成功时，err为undefined，data为获取到的所有可恢复的预置应用信息。 |
 
 **错误码：**
 

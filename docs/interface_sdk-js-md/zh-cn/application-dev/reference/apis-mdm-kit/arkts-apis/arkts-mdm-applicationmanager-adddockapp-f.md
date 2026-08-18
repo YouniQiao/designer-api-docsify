@@ -1,5 +1,10 @@
 # addDockApp
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addDockApp
 
 ```TypeScript

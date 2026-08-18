@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## eventType
 
 ```TypeScript

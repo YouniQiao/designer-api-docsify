@@ -1,5 +1,10 @@
 # addCheckRule
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addCheckRule
 
 ```TypeScript

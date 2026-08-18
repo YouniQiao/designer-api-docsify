@@ -1,5 +1,10 @@
 # offStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offStateChange
 
 ```TypeScript
@@ -20,7 +25,7 @@ function offStateChange(callback?: Callback<NearlinkState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)&gt; | 否 | 用于监听状态改变事件的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)&gt; | 否 | 用于监听状态改变事件的回调 |
 
 **错误码：**
 

@@ -10,6 +10,11 @@ Return encoded text.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## read
 
 ```TypeScript

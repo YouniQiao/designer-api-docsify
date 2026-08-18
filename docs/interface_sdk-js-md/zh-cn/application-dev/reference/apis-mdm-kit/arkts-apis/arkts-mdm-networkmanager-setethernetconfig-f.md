@@ -1,5 +1,10 @@
 # setEthernetConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setEthernetConfig
 
 ```TypeScript

@@ -11,7 +11,7 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'taskpool';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## addDependency

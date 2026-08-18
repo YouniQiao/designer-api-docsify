@@ -1,5 +1,10 @@
 # lastIndexOf
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lastIndexOf
 
 ```TypeScript

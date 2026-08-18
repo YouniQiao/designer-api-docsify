@@ -8,6 +8,11 @@ OffscreenCanvas组件用于绘制自定义图形。 使用[Canvas](../../../refe
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

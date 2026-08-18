@@ -1,5 +1,10 @@
 # getSdkVersion
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSdkVersion
 
 ```TypeScript

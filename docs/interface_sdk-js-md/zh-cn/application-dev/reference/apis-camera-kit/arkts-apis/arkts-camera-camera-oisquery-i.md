@@ -8,6 +8,11 @@ OIS (Optical Image Stabilization) query interface.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCurrentCustomOISBias
 
 ```TypeScript

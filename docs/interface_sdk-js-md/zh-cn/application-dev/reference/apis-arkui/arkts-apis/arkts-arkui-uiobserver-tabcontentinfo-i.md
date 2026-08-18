@@ -8,6 +8,11 @@ TabContent页面的切换信息。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## id
 
 ```TypeScript
@@ -76,7 +81,7 @@ state: TabContentState
 
 TabContent组件的状态。
 
-**类型：** [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
+**类型：** [TabContentState](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentstate-e.md)
 
 **起始版本：** 12
 

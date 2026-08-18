@@ -1,5 +1,10 @@
 # mmapSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## mmapSync
 
 ```TypeScript

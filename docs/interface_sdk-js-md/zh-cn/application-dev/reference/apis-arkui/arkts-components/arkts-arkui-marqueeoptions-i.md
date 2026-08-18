@@ -8,6 +8,11 @@ Marquee初始化参数。 > **说明：** > > 为规范匿名对象的定义，A
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## delay
 
 ```TypeScript

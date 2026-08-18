@@ -11,7 +11,7 @@ Information about the **NavDestination** component, returned by the system to de
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'uiObserver';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## index
@@ -162,7 +162,7 @@ state: NavDestinationState
 
 State of the **NavDestination** component.
 
-**Type:** [NavDestinationState](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationstate-e.md)
+**Type:** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
 
 **Since:** 11
 

@@ -1,5 +1,10 @@
 # createAVPlayer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## createAVPlayer
 
 ```TypeScript
@@ -20,7 +25,7 @@ function createAVPlayer(callback: AsyncCallback<AVPlayer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | 是 | 回调函数。异步返回AVPlayer实例，失败时返回null。可用于音视频播放。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | 是 | 回调函数。异步返回AVPlayer实例，失败时返回null。可用于音视频播放。 |
 
 **错误码：**
 
@@ -63,7 +68,7 @@ Creates an **AVPlayer** instance. This API uses an asynchronous callback to retu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | 是 | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | 是 | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
 
 **错误码：**
 

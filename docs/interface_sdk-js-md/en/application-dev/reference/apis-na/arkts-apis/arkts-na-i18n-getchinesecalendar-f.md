@@ -1,5 +1,10 @@
 # getChineseCalendar
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getChineseCalendar
 
 ```TypeScript
@@ -30,5 +35,5 @@ Obtains the ChineseCalendar object for the specified locale.
 
 | Type | Description |
 | --- | --- |
-| [ChineseCalendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
+| [ChineseCalendar](arkts-na-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
 

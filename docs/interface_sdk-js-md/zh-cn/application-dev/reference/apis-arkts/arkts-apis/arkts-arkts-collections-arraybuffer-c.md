@@ -8,6 +8,11 @@ ArkTS TypedArray（[Int8Array](arkts-collections.md#arktscollections)、 [Uint8A
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

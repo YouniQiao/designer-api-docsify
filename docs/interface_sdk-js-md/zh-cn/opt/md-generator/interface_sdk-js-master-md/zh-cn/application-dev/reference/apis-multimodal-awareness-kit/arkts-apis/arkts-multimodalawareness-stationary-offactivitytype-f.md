@@ -1,0 +1,34 @@
+# off_ActivityType
+
+## 导入模块
+
+```TypeScript
+```
+
+## off_ActivityType
+
+```TypeScript
+function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void
+```
+
+取消订阅设备状态服务。取消订阅后，将停止接收该状态相关的回调函数调用。调用off()时需要使用与on()相同的activity和event参数。
+
+**起始版本：** 9
+
+<!--Device-stationary-function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void--><!--Device-stationary-function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void-End-->
+
+**系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 |
+| event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 否 |
+
+**示例**
+
+```TypeScript
+stationary.off('still', stationary.ActivityEvent.ENTER);
+```

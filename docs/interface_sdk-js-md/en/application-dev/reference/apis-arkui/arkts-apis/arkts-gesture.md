@@ -2,6 +2,11 @@
 
 Enumerates gesture competition results.
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Namespaces

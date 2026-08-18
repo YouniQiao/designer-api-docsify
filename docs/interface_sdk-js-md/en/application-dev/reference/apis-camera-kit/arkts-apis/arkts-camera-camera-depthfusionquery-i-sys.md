@@ -13,7 +13,8 @@ A class for querying depth fusion capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getDepthFusionThreshold

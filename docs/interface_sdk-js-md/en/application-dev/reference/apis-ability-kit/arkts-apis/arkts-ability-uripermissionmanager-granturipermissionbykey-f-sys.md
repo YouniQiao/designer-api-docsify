@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from 'uriPermissionManager';
+import { uriPermissionManager } from '@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## grantUriPermissionByKey

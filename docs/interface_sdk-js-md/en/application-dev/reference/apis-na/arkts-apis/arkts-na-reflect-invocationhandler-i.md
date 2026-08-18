@@ -10,6 +10,11 @@ Interface for handling method invocations on a proxy object. Defines methods to 
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## get
 
 ```TypeScript

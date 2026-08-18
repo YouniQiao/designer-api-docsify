@@ -10,6 +10,11 @@ KioskManager模块提供Kiosk模式管理能力，包括系统进入/退出Kiosk
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

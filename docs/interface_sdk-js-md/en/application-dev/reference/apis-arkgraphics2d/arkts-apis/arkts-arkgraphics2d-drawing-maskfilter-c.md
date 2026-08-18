@@ -11,7 +11,8 @@ Implements a mask filter. > **NOTE：**> > - The initial APIs of this class are 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'drawing';
+import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlurMaskFilter

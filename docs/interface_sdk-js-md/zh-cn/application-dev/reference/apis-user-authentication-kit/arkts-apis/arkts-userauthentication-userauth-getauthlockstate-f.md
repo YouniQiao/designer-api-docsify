@@ -1,5 +1,10 @@
 # getAuthLockState
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getAuthLockState
 
 ```TypeScript

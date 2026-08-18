@@ -13,7 +13,7 @@ Provides APIs to manage albums.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'sendablePhotoAccessHelper';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## commitModify

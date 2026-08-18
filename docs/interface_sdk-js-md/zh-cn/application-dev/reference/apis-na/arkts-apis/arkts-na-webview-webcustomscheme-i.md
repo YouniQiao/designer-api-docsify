@@ -10,6 +10,11 @@ Defines the configuration of web custom scheme, related to [customizeSchemes](..
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isCodeCacheSupported
 
 ```TypeScript

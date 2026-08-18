@@ -1,5 +1,10 @@
 # WorkerLocal
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Classes

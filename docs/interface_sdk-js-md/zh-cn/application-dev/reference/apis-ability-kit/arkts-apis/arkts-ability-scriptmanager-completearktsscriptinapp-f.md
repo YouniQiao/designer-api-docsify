@@ -1,5 +1,10 @@
 # completeArkTSScriptInApp
 
+## 导入模块
+
+```TypeScript
+```
+
 ## completeArkTSScriptInApp
 
 ```TypeScript

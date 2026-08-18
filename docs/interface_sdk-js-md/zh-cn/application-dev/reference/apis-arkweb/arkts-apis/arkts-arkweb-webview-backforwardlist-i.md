@@ -8,6 +8,11 @@ BackForwardList是ArkWeb框架中用于访问Web组件浏览历史列表的接�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getItemAtIndex
 
 ```TypeScript

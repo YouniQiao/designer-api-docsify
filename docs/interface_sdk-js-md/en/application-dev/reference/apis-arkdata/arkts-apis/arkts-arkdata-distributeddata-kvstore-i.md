@@ -12,6 +12,13 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
+## Modules to Import
+
+```TypeScript
+import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
+```
+
 ## commit
 
 ```TypeScript

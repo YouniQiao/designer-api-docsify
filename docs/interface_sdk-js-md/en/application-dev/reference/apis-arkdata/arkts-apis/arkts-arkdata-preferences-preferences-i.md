@@ -11,7 +11,8 @@ Provides APIs for obtaining and modifying the stored data. Before calling any AP
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from 'preferences';
+import { preferences } from '@kit.ArkData';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## clear

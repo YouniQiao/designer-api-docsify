@@ -10,6 +10,11 @@ Defines the paragraph style options. Inherits [RichEditorRange](arkts-arkui-rich
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## style
 
 ```TypeScript

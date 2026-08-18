@@ -10,6 +10,11 @@ Defines the basic gesture event type. Inherits from BaseEvent.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## fingerInfos
 
 ```TypeScript

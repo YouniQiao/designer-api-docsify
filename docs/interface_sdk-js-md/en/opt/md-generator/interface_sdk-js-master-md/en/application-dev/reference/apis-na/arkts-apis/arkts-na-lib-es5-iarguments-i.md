@@ -1,0 +1,34 @@
+# IArguments
+
+**Since:** -1
+
+<!--Device-unnamed-interface IArguments--><!--Device-unnamed-interface IArguments-End-->
+
+## Modules to Import
+
+```TypeScript
+```
+
+## callee
+
+```TypeScript
+callee: Function
+```
+
+**Type:** Function
+
+**Since:** -1
+
+<!--Device-IArguments-callee: Function--><!--Device-IArguments-callee: Function-End-->
+
+## length
+
+```TypeScript
+length: number
+```
+
+**Type:** number
+
+**Since:** -1
+
+<!--Device-IArguments-length: number--><!--Device-IArguments-length: number-End-->

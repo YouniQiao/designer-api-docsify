@@ -8,6 +8,11 @@ A **VideoController** object can control one or more **Video** components.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

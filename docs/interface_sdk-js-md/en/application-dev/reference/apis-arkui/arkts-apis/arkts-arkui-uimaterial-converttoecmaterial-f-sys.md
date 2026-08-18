@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'uiMaterial';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## convertToECMaterial

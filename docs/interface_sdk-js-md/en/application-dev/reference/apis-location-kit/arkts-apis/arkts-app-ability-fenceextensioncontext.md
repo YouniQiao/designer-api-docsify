@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionContext } from 'FenceExtensionContext';
+import { FenceExtensionContext } from '@kit.LocationKit';
 ```
 
 ## Summary

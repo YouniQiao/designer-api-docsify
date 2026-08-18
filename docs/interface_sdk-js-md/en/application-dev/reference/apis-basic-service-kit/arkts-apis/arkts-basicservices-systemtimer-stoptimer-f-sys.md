@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from 'systemTimer';
+import { systemTimer } from '@kit.BasicServicesKit';
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## stopTimer

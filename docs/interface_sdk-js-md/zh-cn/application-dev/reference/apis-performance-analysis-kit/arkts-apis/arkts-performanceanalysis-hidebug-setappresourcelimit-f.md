@@ -1,5 +1,10 @@
 # setAppResourceLimit
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setAppResourceLimit
 
 ```TypeScript

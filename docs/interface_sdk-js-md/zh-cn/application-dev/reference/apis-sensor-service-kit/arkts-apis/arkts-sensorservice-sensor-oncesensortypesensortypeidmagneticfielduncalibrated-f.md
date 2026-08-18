@@ -1,5 +1,10 @@
 # once_SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED
 
+## 导入模块
+
+```TypeScript
+```
+
 ## once_SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED
 
 ```TypeScript
@@ -23,5 +28,5 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED | 是 | 未校准磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | 是 | 注册一次未校准磁场传感器的回调函数， 上报的数据类型为MagneticFieldUncalibratedResponse。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md)&gt; | 是 | 注册一次未校准磁场传感器的回调函数， 上报的数据类型为MagneticFieldUncalibratedResponse。 |
 

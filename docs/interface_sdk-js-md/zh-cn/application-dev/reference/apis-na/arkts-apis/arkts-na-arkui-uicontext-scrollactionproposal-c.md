@@ -2,7 +2,7 @@
 
 类ScrollActionProposal。默认滚动方向为向前。
 
-**继承/实现关系：** ScrollActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#targetedgestureproposal)
+**继承/实现关系：** ScrollActionProposal extends [TargetedGestureProposal](arkts-na-arkui-uicontext-targetedgestureproposal-c.md#targetedgestureproposal)
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,11 @@
 <!--Device-unnamed-export declare class ScrollActionProposal--><!--Device-unnamed-export declare class ScrollActionProposal-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+```
 
 ## constructor
 

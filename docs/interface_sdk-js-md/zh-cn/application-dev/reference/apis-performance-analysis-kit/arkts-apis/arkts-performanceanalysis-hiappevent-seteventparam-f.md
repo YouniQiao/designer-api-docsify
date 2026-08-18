@@ -1,5 +1,10 @@
 # setEventParam
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setEventParam
 
 ```TypeScript

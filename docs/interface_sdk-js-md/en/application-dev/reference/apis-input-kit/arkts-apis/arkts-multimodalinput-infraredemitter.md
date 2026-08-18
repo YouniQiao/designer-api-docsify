@@ -23,7 +23,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from 'infraredEmitter';
+import { infraredEmitter } from '@kit.InputKit';
 ```
 
 ## Summary

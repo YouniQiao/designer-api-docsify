@@ -8,6 +8,11 @@ Defines the LocalizedPosition.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## start
 
 ```TypeScript

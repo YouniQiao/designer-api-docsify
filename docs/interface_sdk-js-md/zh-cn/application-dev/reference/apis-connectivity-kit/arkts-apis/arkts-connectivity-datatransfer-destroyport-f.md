@@ -1,5 +1,10 @@
 # destroyPort
 
+## 导入模块
+
+```TypeScript
+```
+
 ## destroyPort
 
 ```TypeScript

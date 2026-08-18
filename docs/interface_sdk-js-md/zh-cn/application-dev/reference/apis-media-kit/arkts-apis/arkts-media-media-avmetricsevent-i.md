@@ -8,6 +8,11 @@ Describes the information of an Metrics Event.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
+## 导入模块
+
+```TypeScript
+```
+
 ## details
 
 ```TypeScript

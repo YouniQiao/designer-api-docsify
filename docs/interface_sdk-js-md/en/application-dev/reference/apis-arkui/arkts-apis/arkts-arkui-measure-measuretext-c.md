@@ -13,7 +13,7 @@ Defines the Measure interface.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureOptions } from 'MeasureOptions';
+import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## measureText

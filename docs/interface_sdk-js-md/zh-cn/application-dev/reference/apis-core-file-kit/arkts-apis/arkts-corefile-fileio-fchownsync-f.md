@@ -1,5 +1,10 @@
 # fchownSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## fchownSync
 
 ```TypeScript

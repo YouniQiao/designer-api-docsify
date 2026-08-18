@@ -1,5 +1,10 @@
 # install
 
+## 导入模块
+
+```TypeScript
+```
+
 ## install
 
 ```TypeScript

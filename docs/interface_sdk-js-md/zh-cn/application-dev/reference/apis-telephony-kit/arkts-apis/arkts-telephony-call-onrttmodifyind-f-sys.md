@@ -1,5 +1,10 @@
 # onRttModifyInd（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onRttModifyInd
 
 ```TypeScript
@@ -22,7 +27,7 @@ function onRttModifyInd(callback: Callback<RttEventInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RttEventInfo](arkts-telephony-call-rtteventinfo-i-sys.md)&gt; | 是 | Indicates the callback for getting the rtt event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RttEventInfo](arkts-telephony-call-rtteventinfo-i-sys.md)&gt; | 是 | Indicates the callback for getting the rtt event. |
 
 **错误码：**
 

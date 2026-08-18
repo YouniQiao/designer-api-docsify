@@ -8,6 +8,11 @@ XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取�
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

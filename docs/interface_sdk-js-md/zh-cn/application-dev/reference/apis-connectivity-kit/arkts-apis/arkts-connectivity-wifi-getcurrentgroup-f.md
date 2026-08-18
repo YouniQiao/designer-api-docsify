@@ -1,5 +1,10 @@
 # getCurrentGroup
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getCurrentGroup
 
 ```TypeScript
@@ -51,7 +56,7 @@ function getCurrentGroup(callback: AsyncCallback<WifiP2pGroupInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pGroupInfo&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pGroupInfo&gt; | 是 |  |
 
 **示例**
 

@@ -11,7 +11,7 @@ Ad request callback.
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from 'RespCallback';
+import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 ```
 
 ## constructor

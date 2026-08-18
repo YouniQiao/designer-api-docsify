@@ -8,6 +8,11 @@ Provides the custom drawing information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## baseline
 
 ```TypeScript

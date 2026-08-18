@@ -11,7 +11,7 @@ Reader represents the SE readers supported by this device.
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'omapi';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## closeSessions

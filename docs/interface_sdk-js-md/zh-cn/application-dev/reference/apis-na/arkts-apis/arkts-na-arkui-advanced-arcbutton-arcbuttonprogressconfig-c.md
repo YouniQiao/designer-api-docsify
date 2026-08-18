@@ -10,6 +10,11 @@ ArcButton内进度条的参数配置。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

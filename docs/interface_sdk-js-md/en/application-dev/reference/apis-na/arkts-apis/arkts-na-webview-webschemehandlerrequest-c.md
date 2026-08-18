@@ -10,6 +10,11 @@ Defines the Web resource request used for scheme handler.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getFrameUrl
 
 ```TypeScript
@@ -74,7 +79,7 @@ Get http body stream.
 
 | Type | Description |
 | --- | --- |
-| [WebHttpBodyStream](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
+| [WebHttpBodyStream](arkts-na-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
 
 ## getReferrer
 
@@ -140,7 +145,7 @@ Get request's resource type.
 
 | Type | Description |
 | --- | --- |
-| [WebResourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webresourcetype-e.md) | Return the request's resource type. |
+| [WebResourceType](arkts-na-webview-webresourcetype-e.md) | Return the request's resource type. |
 
 ## getRequestUrl
 

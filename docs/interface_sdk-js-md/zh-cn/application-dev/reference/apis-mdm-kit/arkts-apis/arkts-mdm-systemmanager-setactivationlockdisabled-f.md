@@ -1,5 +1,10 @@
 # setActivationLockDisabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setActivationLockDisabled
 
 ```TypeScript

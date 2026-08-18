@@ -1,5 +1,10 @@
 # getTypeDescriptor
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getTypeDescriptor
 
 ```TypeScript

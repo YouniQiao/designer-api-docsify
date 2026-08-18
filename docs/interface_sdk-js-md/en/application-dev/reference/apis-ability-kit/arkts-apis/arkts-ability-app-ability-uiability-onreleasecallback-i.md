@@ -11,11 +11,8 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 ## Modules to Import
 
 ```TypeScript
-import { Callee } from 'Callee';
-import { CalleeCallback } from 'CalleeCallback';
-import { Caller } from 'Caller';
-import { OnReleaseCallback } from 'OnReleaseCallback';
-import { OnRemoteStateChangeCallback } from 'OnRemoteStateChangeCallback';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## constructor

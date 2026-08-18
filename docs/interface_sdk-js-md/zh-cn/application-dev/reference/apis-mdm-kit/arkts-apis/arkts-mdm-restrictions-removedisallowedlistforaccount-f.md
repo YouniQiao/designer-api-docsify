@@ -1,5 +1,10 @@
 # removeDisallowedListForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## removeDisallowedListForAccount
 
 ```TypeScript

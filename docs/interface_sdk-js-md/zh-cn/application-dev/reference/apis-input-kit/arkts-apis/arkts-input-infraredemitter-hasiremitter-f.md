@@ -1,5 +1,10 @@
 # hasIrEmitter
 
+## 导入模块
+
+```TypeScript
+```
+
 ## hasIrEmitter
 
 ```TypeScript

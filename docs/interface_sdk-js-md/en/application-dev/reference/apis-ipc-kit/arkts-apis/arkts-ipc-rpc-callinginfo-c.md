@@ -11,7 +11,7 @@ Defines the IPC context, including the PID and UID, local and remote device IDs,
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'rpc';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## callerPid

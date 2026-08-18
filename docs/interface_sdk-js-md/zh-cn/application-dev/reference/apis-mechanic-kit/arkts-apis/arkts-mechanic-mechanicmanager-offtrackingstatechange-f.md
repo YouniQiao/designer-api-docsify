@@ -1,5 +1,10 @@
 # offTrackingStateChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offTrackingStateChange
 
 ```TypeScript
@@ -18,7 +23,7 @@ function offTrackingStateChange(callback?: Callback<TrackingEventInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)&gt; | 否 | Callback used to return the tracking event information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)&gt; | 否 | Callback used to return the tracking event information. |
 
 **错误码：**
 

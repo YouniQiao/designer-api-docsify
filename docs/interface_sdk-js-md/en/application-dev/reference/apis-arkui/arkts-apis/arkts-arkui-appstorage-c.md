@@ -8,6 +8,11 @@ For details about how to use AppStorage, see [AppStorage: Storing Application-wi
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Clear
 
 ```TypeScript

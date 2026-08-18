@@ -8,6 +8,11 @@ childProcessManager模块提供子进程管理能力，支持子进程创建和�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## 汇总
 
 ### 函数

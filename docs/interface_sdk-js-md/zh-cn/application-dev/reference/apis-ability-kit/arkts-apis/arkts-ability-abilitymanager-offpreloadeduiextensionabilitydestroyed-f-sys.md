@@ -1,5 +1,10 @@
 # offPreloadedUIExtensionAbilityDestroyed（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## offPreloadedUIExtensionAbilityDestroyed
 
 ```TypeScript

@@ -11,7 +11,7 @@ Provides APIs for data management in a single KV store, such as adding data, del
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'distributedKVStore';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## backup

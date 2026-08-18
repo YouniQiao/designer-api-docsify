@@ -8,6 +8,11 @@ Provides background brightness options. > **NOTE：**> > The brightness (gray sc
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## lightUpDegree
 
 ```TypeScript

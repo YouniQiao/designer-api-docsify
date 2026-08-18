@@ -10,6 +10,11 @@ Defines the Web's request info.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## formData
 
 ```TypeScript

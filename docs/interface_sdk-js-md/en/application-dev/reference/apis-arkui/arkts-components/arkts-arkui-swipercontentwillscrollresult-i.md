@@ -8,6 +8,11 @@ Provides information related to the upcoming scroll action, including the index 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## comingIndex
 
 ```TypeScript

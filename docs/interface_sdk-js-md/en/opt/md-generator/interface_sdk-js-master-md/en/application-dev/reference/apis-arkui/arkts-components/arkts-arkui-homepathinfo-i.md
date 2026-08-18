@@ -1,0 +1,54 @@
+# HomePathInfo
+
+Defines the home page **NavDestination** information.
+
+**Since:** 20
+
+<!--Device-unnamed-declare interface HomePathInfo--><!--Device-unnamed-declare interface HomePathInfo-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+```
+
+## name
+
+```TypeScript
+name: string
+```
+
+Name of the home page **NavDestination**.
+
+**Type:** string
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-HomePathInfo-name: string--><!--Device-HomePathInfo-name: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## param
+
+```TypeScript
+param?: Object
+```
+
+Detailed parameters of the home page **NavDestination**.
+
+**Type:** Object
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-HomePathInfo-param?: Object--><!--Device-HomePathInfo-param?: Object-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

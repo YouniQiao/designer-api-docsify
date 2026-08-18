@@ -1,5 +1,10 @@
 # getShortcutInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getShortcutInfo
 
 ```TypeScript
@@ -23,7 +28,7 @@ function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<Short
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ShortcutInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#asynccallback)。当函数调用成功，err为 undefined，data为当前用户下指定应用的ShortcutInfo信息。否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ShortcutInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#asynccallback)。当函数调用成功，err为 undefined，data为当前用户下指定应用的ShortcutInfo信息。否则为错误对象。 |
 
 **错误码：**
 

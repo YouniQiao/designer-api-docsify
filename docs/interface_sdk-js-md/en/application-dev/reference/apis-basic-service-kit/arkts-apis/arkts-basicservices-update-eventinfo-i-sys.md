@@ -13,7 +13,7 @@ Defines an **EventInfo** object, which is used to receive the event details tran
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'update';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## eventId

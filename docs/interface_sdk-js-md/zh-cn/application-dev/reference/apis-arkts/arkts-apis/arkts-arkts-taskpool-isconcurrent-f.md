@@ -1,5 +1,10 @@
 # isConcurrent
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isConcurrent
 
 ```TypeScript

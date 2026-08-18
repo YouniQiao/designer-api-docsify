@@ -1,5 +1,10 @@
 # getPublicCertificate
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getPublicCertificate
 
 ```TypeScript

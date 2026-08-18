@@ -11,7 +11,7 @@ SEService realizes the communication to available SEs on the device.
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'omapi';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## getReaders

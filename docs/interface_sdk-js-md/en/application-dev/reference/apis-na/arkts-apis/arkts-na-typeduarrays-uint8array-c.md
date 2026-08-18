@@ -10,6 +10,11 @@ class Uint8Array
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## $_get
 
 ```TypeScript

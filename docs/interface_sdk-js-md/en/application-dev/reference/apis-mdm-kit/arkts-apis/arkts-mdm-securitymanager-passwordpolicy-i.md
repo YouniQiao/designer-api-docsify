@@ -11,7 +11,8 @@ Represents a device screen lock password policy.
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from 'securityManager';
+import { securityManager } from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## additionalDescription

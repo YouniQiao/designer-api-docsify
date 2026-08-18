@@ -1,5 +1,10 @@
 # technology
 
+## 导入模块
+
+```TypeScript
+```
+
 ## technology
 
 ```TypeScript

@@ -13,7 +13,8 @@ Describes the filter for application lifecycle change events. It can be used as 
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'appManager';
+import { appManager } from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## abilityStateTypes

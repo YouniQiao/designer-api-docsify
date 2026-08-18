@@ -11,7 +11,7 @@ Enumerates other key information. This refers to the information of other keys t
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'systemManager';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## downTime

@@ -1,5 +1,10 @@
 # onDeviceConfigChange（系统接口）
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onDeviceConfigChange
 
 ```TypeScript
@@ -22,7 +27,7 @@ function onDeviceConfigChange(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 状态改变回调函数。, 0: config is added, 1: config is changed, 2: config is removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 状态改变回调函数。, 0: config is added, 1: config is changed, 2: config is removed. |
 
 **错误码：**
 

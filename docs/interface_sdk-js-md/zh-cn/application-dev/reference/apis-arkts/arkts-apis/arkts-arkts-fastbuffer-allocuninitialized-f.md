@@ -1,5 +1,10 @@
 # allocUninitialized
 
+## 导入模块
+
+```TypeScript
+```
+
 ## allocUninitialized
 
 ```TypeScript

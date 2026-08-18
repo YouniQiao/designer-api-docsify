@@ -1,0 +1,66 @@
+# off_drag（系统接口）
+
+## 导入模块
+
+```TypeScript
+```
+
+## off_drag
+
+```TypeScript
+function off(type: 'drag', callback?: Callback<DragState>): void
+```
+
+取消监听拖拽状态。
+
+**起始版本：** 10
+
+<!--Device-dragInteraction-function off(type: 'drag', callback?: Callback<DragState>): void--><!--Device-dragInteraction-function off(type: 'drag', callback?: Callback<DragState>): void-End-->
+
+**系统能力：** SystemCapability.Msdp.DeviceStatus.Drag
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'drag' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+**示例**
+
+```TypeScript
+// 取消注册单个回调函数
+function single_callback(event: dragInteraction.DragState) {
+  console.info(`Drag interaction event: ${event}`);
+  return false;
+}
+try {
+  dragInteraction.on('drag', single_callback);
+  dragInteraction.off("drag", single_callback);
+} catch (error) {
+  console.error(`Execute failed, code: ${error.code}, message: ${error.message}`);
+}
+```
+
+```TypeScript
+// 取消注册所有回调函数
+function all_callback(event: dragInteraction.DragState) {
+  console.info(`Drag interaction event: ${event}`);
+  return false;
+}
+try {
+  dragInteraction.on('drag', all_callback);
+  dragInteraction.off("drag");
+} catch (error) {
+  console.error(`Execute failed, code: ${error.code}, message: ${error.message}`);
+}
+```

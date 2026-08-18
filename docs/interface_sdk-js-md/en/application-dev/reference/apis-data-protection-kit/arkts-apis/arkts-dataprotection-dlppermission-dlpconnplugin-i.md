@@ -11,7 +11,7 @@ Registers the callback capability with the system ability (SA). This API is used
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'dlpPermission';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## connectServer

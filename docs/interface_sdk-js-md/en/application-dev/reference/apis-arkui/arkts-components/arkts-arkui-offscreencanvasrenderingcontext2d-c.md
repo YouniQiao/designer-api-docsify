@@ -10,6 +10,11 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

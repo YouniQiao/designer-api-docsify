@@ -1,0 +1,400 @@
+# AVDownloaderManager
+
+Definition of the Offline Download Management Interface
+
+**Since:** 26.0.0
+
+<!--Device-media-interface AVDownloaderManager--><!--Device-media-interface AVDownloaderManager-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## Modules to Import
+
+```TypeScript
+```
+
+## addAVDownloadTask
+
+```TypeScript
+addAVDownloadTask(source: MediaSource): string
+```
+
+Create a download task based on the media description.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string--><!--Device-AVDownloaderManager-addAVDownloadTask(source: MediaSource): string-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| source | [MediaSource](arkts-media-media-mediasource-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## allowsCellularAccess
+
+```TypeScript
+allowsCellularAccess(value: boolean): void
+```
+
+Set the network environment for the download. By default, the download is performed only in the Wi-Fi environment.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void--><!--Device-AVDownloaderManager-allowsCellularAccess(value: boolean): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | boolean | Yes |
+
+## getDownloadTasks
+
+```TypeScript
+getDownloadTasks(): Array<string>
+```
+
+Obtains all offline download tasks in the Task Manager. Ended download tasks are automatically cleared.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>--><!--Device-AVDownloaderManager-getDownloadTasks(): Array<string>-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array & lt;string & gt; |
+
+## getTaskCacheDirectory
+
+```TypeScript
+getTaskCacheDirectory(taskId: string): string
+```
+
+Obtains the offline download cache directory of a specified task.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string--><!--Device-AVDownloaderManager-getTaskCacheDirectory(taskId: string): string-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## getTaskProgress
+
+```TypeScript
+getTaskProgress(taskId: string): number
+```
+
+Obtains the progress of a specified offline download task.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double--><!--Device-AVDownloaderManager-getTaskProgress(taskId: string): double-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| number |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## getTaskStatus
+
+```TypeScript
+getTaskStatus(taskId: string): AVDownloadTaskState
+```
+
+Obtains the status of a specified offline download task. For details, see #AVDownloadTaskState.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState--><!--Device-AVDownloaderManager-getTaskStatus(taskId: string): AVDownloadTaskState-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## offProgressChange
+
+```TypeScript
+offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void
+```
+
+Deregisters a specified function's listening on task progress change events.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | No |
+
+## offStatusChange
+
+```TypeScript
+offStatusChange(callback?: OnAVDownloadTaskStateHandle): void
+```
+
+Deregisters a specified function's listening on task status change events.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-offStatusChange(callback?: OnAVDownloadTaskStateHandle): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | No |
+
+## onProgressChange
+
+```TypeScript
+onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
+```
+
+Registers a function to listen to the progress change value of an offline download task. The progress change of the offline download task exceeds 1% compared with that of the last time. The event is triggered after the interval exceeds 500 ms.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void--><!--Device-AVDownloaderManager-onProgressChange(callback: OnAVDownloadProgressChangeHandle): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | Yes |
+
+## onStatusChange
+
+```TypeScript
+onStatusChange(callback: OnAVDownloadTaskStateHandle): void
+```
+
+Registering a Function for Listening on Status Changes of Offline Download Tasks
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void--><!--Device-AVDownloaderManager-onStatusChange(callback: OnAVDownloadTaskStateHandle): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | Yes |
+
+## pauseDownloadTask
+
+```TypeScript
+pauseDownloadTask(taskId?: string): void
+```
+
+Suspending the download of a specified task
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-pauseDownloadTask(taskId?: string): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | string | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## release
+
+```TypeScript
+release(): void
+```
+
+Release resources used for AVDownloaderManager.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-release(): void--><!--Device-AVDownloaderManager-release(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## removeDownloadTask
+
+```TypeScript
+removeDownloadTask(taskId?: string): void
+```
+
+Remove a download task from the offline download manager
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-removeDownloadTask(taskId?: string): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | string | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## resumeDownloadTask
+
+```TypeScript
+resumeDownloadTask(taskId?: string): void
+```
+
+Resuming Offline Download of a Specified Task
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void--><!--Device-AVDownloaderManager-resumeDownloadTask(taskId?: string): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| taskId | string | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## setRequestTimeout
+
+```TypeScript
+setRequestTimeout(timeout: number): void
+```
+
+Sets the network timeout interval for HTTP requests. If the timeout interval is exceeded, the download fails.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void--><!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| timeout | number | Yes |

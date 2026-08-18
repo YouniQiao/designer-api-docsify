@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PrintExtensionAbility } from 'PrintExtensionAbility';
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -14,3 +14,8 @@ Common class for all integral types
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+

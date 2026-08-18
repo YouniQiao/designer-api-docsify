@@ -1,5 +1,10 @@
 # setGlobalRetryOptions
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setGlobalRetryOptions
 
 ```TypeScript

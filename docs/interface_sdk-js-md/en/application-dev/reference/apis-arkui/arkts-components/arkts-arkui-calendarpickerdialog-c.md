@@ -8,6 +8,11 @@ A calendar picker dialog box is a dialog box that allows users to select a date 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## show
 
 ```TypeScript

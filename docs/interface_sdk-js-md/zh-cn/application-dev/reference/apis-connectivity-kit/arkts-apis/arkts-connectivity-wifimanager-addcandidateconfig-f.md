@@ -1,5 +1,10 @@
 # addCandidateConfig
 
+## 导入模块
+
+```TypeScript
+```
+
 ## addCandidateConfig
 
 ```TypeScript
@@ -84,7 +89,7 @@ function addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback<in
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | 是 | 候选配置。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 表示addCandidateConfig的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 表示addCandidateConfig的回调函数。 |
 
 **错误码：**
 

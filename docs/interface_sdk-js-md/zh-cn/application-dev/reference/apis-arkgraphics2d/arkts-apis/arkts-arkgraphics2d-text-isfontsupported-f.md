@@ -1,5 +1,10 @@
 # isFontSupported
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isFontSupported
 
 ```TypeScript

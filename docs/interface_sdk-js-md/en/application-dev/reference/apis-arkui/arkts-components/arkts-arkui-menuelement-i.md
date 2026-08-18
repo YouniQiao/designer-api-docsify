@@ -8,6 +8,11 @@ Configures icon, text, and interaction information of a menu item.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## action
 
 ```TypeScript

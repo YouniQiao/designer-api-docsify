@@ -13,7 +13,7 @@ The **cooperate** module implements screen hopping for two or more networked dev
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from 'cooperate';
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

@@ -2,6 +2,12 @@
 
 Profiler tools for inspectors.
 
+## Modules to Import
+
+```TypeScript
+import { inspector } from '@kit.ArkUI';
+```
+
 ## Summary
 
 ### Namespaces

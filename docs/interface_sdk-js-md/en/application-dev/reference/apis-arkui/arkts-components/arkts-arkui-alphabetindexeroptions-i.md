@@ -8,6 +8,11 @@ Defines the options of the **AlphabetIndexer** component. > **NOTE：**> To stan
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## arrayValue
 
 ```TypeScript

@@ -10,6 +10,11 @@ Represent JSON class
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## parse
 
 ```TypeScript
@@ -33,7 +38,7 @@ Parses a JSON string to the specified Type
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | JSON string to parse |
-| type | [Type](arkts-na-util-type-e.md) | Yes | Target type for parsing |
+| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Target type for parsing |
 
 **Return value:**
 
@@ -66,7 +71,7 @@ Parses a JSON string to the specified Type with reviver function
 | --- | --- | --- | --- |
 | text | string | Yes | JSON string to parse |
 | reviver | ((key: string, value: Any) =&gt; Any) \| undefined | Yes | Function to transform values |
-| type | [Type](arkts-na-util-type-e.md) | Yes | Target type for parsing |
+| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Target type for parsing |
 | options | jsonx.ParseOptions | No | Parse options |
 
 **Return value:**

@@ -1,5 +1,10 @@
 # @ohos.arkui.advanced.ArcSlider
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Types

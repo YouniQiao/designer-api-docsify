@@ -10,6 +10,11 @@ DataPanelShadowOptions继承自MultiShadowOptions，具有MultiShadowOptions的�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 导入模块
+
+```TypeScript
+```
+
 ## colors
 
 ```TypeScript

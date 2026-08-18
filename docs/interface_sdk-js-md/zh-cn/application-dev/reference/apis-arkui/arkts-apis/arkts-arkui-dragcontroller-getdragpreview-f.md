@@ -1,12 +1,17 @@
 # getDragPreview
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDragPreview
 
 ```TypeScript
 function getDragPreview(): DragPreview
 ```
 
-返回一个代表拖拽背板的对象。 > **说明：** > > 从API version 11开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#uicontext)中的 > [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI > 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#dragcontroller)对象。
+返回一个代表拖拽背板的对象。 > **说明：** > > 从API version 11开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#uicontext)中的 > [getDragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI > 上下文关联的[DragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md#dragcontroller)对象。
 
 **起始版本：** 11
 

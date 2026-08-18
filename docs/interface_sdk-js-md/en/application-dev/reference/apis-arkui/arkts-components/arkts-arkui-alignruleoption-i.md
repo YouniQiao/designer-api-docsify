@@ -8,6 +8,11 @@ Defines the align rule options of relative container.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## bias
 
 ```TypeScript

@@ -6,6 +6,11 @@ A typed array of 8-bit unsigned integer (clamped) values. The contents are initi
 
 <!--Device-unnamed-interface Uint8ClampedArray--><!--Device-unnamed-interface Uint8ClampedArray-End-->
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## copyWithin
 
 ```TypeScript

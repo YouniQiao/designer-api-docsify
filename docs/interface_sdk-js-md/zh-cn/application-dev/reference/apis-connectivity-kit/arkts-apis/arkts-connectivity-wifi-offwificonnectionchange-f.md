@@ -1,5 +1,10 @@
 # off_wifiConnectionChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## off_wifiConnectionChange
 
 ```TypeScript
@@ -25,7 +30,7 @@ function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'wifiConnectionChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 状态改变回调函数。0:已断开，1:已连接 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。0:已断开，1:已连接 |
 
 **示例**
 

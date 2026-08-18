@@ -8,6 +8,11 @@ Describes the text paragraph style. Except the first paragraph, all paragraphs a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

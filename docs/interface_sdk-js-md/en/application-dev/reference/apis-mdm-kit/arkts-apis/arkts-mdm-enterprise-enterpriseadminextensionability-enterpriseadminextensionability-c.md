@@ -11,7 +11,7 @@ This module provides the [enterprise device management extension ability](../../
 ## Modules to Import
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from 'EnterpriseAdminExtensionAbility';
+import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 ```
 
 ## onAccountAdded

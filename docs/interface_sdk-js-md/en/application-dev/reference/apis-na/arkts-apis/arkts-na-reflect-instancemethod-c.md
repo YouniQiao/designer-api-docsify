@@ -12,6 +12,11 @@ Represents an instance method of a class or interface.
 
 **System capability:** SystemCapability.Utils.Lang
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## equals
 
 ```TypeScript

@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { MediaControlExtensionAbility } from 'MediaControlExtensionAbility';
+import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
+import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
 ```
 
 ## Summary

@@ -1,5 +1,10 @@
 # onPrinterChange
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onPrinterChange
 
 ```TypeScript

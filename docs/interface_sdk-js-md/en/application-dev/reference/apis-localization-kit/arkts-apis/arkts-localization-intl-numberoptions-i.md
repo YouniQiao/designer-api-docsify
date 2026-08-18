@@ -11,7 +11,8 @@ Options for creating the **NumberFormat** object. Since API version 9, the **Num
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'intl';
+import { intl } from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## compactDisplay

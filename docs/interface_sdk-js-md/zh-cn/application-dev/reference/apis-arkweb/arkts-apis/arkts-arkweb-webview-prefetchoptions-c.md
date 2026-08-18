@@ -8,6 +8,11 @@ PrefetchOptions是ArkWeb框架中用于自定义网页预取行为的配置类�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

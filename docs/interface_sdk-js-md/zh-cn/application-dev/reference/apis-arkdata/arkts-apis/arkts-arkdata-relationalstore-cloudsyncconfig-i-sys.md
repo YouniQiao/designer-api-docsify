@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
+## 导入模块
+
+```TypeScript
+```
+
 ## downloadOnly
 
 ```TypeScript

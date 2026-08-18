@@ -11,19 +11,7 @@ Declare the options of ToolBarV2ItemImage
 ## Modules to Import
 
 ```TypeScript
-import { ToolBarV2ItemState } from 'ToolBarV2ItemState';
-import { ToolBarV2SymbolGlyph } from 'ToolBarV2SymbolGlyph';
-import { ToolBarV2SymbolGlyphOptions } from 'ToolBarV2SymbolGlyphOptions';
-import { ToolBarV2ItemText } from 'ToolBarV2ItemText';
-import { ToolBarV2ItemTextOptions } from 'ToolBarV2ItemTextOptions';
-import { ToolBarV2ItemIconType } from 'ToolBarV2ItemIconType';
-import { ToolBarV2ItemImage } from 'ToolBarV2ItemImage';
-import { ToolBarV2ItemImageOptions } from 'ToolBarV2ItemImageOptions';
-import { ToolBarV2 } from 'ToolBarV2';
-import { ToolBarV2Item } from 'ToolBarV2Item';
-import { ToolBarV2ItemOptions } from 'ToolBarV2ItemOptions';
-import { ToolBarV2Modifier } from 'ToolBarV2Modifier';
-import { ToolBarV2ItemAction } from 'ToolBarV2ItemAction';
+import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUI';
 ```
 
 ## activatedColor

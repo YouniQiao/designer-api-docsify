@@ -1,5 +1,10 @@
 # getStorageSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getStorageSync
 
 ```TypeScript

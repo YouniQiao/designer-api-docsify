@@ -1,5 +1,10 @@
 # grantToolPermissionsByUser (System API)
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## grantToolPermissionsByUser
 
 ```TypeScript

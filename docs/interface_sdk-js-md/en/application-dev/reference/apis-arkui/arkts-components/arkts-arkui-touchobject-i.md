@@ -8,6 +8,11 @@ Type of the touch event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## getCurrentLocalPosition
 
 ```TypeScript

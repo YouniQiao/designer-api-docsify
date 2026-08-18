@@ -1,5 +1,10 @@
 # isScreenLockDisabledForAccount
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isScreenLockDisabledForAccount
 
 ```TypeScript

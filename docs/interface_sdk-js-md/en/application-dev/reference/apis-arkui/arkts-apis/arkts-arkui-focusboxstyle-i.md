@@ -8,6 +8,11 @@ Sets the system focus box style for the component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## margin
 
 ```TypeScript

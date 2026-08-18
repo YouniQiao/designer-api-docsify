@@ -11,7 +11,8 @@ Queries the time zone transition rule.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## nextTransition
@@ -40,5 +41,5 @@ Obtains the **nextTransition** object for the specified time.
 
 | Type | Description |
 | --- | --- |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
+| [ZoneOffsetTransition](../../apis-na/arkts-apis/arkts-na-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
 

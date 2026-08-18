@@ -12,6 +12,11 @@ Class ScrollActionProposal. The default scroll direction is forward.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript

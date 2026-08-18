@@ -1,5 +1,10 @@
 # getDisallowedRunningBundlesSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getDisallowedRunningBundlesSync
 
 ```TypeScript

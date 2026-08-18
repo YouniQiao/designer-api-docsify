@@ -13,7 +13,7 @@ System material object on the UI.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'uiMaterial';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## constructor

@@ -11,7 +11,8 @@ This module provides APIs for sending and processing events between threads in a
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'emitter';
+import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -10,6 +10,11 @@ Represents a download task, You can use this object to operate the corresponding
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## cancel
 
 ```TypeScript
@@ -52,7 +57,7 @@ Deserialize web download from typed array.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
+| [WebDownloadItem](arkts-na-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
 
 **Error codes:**
 
@@ -146,7 +151,7 @@ Get last error code of the web download.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
+| [WebDownloadErrorCode](arkts-na-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
 
 ## getMethod
 
@@ -304,7 +309,7 @@ Get state of the web download.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloadstate-e.md) | Returns the current download state. |
+| [WebDownloadState](arkts-na-webview-webdownloadstate-e.md) | Returns the current download state. |
 
 ## getSuggestedFileName
 

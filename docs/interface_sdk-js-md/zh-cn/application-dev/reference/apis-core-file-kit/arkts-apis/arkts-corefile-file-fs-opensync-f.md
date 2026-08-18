@@ -1,5 +1,10 @@
 # openSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openSync
 
 ```TypeScript

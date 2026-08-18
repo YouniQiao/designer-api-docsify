@@ -10,6 +10,11 @@ Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#badgeparam) and has all a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## value
 
 ```TypeScript

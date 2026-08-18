@@ -1,5 +1,10 @@
 # opendirSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## opendirSync
 
 ```TypeScript

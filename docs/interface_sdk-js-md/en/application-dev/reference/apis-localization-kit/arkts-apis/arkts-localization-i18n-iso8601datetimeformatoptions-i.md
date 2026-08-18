@@ -11,7 +11,8 @@ Represents optional configuration items for the ISO8601DateTimeFormat object. Th
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'i18n';
+import { i18n } from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## dateFormat
@@ -102,7 +103,7 @@ timeZone?: TimeZone
 
 TimeZone object used to format date, default value UTC.
 
-**Type:** [TimeZone](arkts-localization-i18n-timezone-c.md)
+**Type:** [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md)
 
 **Since:** 26.0.0
 

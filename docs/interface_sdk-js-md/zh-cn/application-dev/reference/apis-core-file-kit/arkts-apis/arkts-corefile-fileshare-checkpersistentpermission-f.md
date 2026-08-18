@@ -1,5 +1,10 @@
 # checkPersistentPermission
 
+## 导入模块
+
+```TypeScript
+```
+
 ## checkPersistentPermission
 
 ```TypeScript

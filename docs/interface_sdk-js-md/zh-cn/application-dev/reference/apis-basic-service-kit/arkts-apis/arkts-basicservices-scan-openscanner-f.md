@@ -1,5 +1,10 @@
 # openScanner
 
+## 导入模块
+
+```TypeScript
+```
+
 ## openScanner
 
 ```TypeScript

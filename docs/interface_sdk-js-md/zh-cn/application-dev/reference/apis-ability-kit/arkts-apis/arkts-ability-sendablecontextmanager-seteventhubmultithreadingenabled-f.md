@@ -1,5 +1,10 @@
 # setEventHubMultithreadingEnabled
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setEventHubMultithreadingEnabled
 
 ```TypeScript

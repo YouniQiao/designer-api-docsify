@@ -15,7 +15,8 @@ In the following API examples, you must first use on('inputStart') to obtain a *
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'inputMethodEngine';
+import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward

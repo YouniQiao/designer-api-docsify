@@ -1,5 +1,10 @@
 # supportsCACertDialog
 
+## 导入模块
+
+```TypeScript
+```
+
 ## supportsCACertDialog
 
 ```TypeScript

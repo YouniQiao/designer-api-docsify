@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from 'adminManager';
+import { adminManager } from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## getEnterpriseManagedTips

@@ -1,5 +1,10 @@
 # statSync
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## statSync
 
 ```TypeScript

@@ -8,6 +8,11 @@ Sets the spacing between child components of the **Row** component. > **NOTE：*
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## space
 
 ```TypeScript

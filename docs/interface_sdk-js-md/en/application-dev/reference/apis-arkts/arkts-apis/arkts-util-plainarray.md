@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { PlainArray } from 'PlainArray';
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
 ```
 
 ## Summary

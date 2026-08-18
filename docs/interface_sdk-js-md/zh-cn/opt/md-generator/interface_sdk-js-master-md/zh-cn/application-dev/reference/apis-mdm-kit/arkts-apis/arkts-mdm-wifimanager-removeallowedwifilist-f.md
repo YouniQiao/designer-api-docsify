@@ -1,0 +1,63 @@
+# removeAllowedWifiList
+
+## 导入模块
+
+```TypeScript
+```
+
+## removeAllowedWifiList
+
+```TypeScript
+function removeAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
+```
+
+移除Wi-Fi允许名单。若移除允许名单中的部分Wi-Fi，则当前设备仅允许连接剩下未移除的Wi-Fi。若移除允许名单中的所有Wi-Fi，则当前设备可以连接任意Wi-Fi。适用于企业Wi-Fi策略调整场景，例如公司更换Wi-Fi网络 时移除旧网络限制、或解除部分Wi-Fi限制以允许员工连接新的办公网络。
+
+**起始版本：** 19
+
+**需要权限：** ohos.permission.ENTERPRISE_MANAGE_WIFI
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-wifiManager-function removeAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void--><!--Device-wifiManager-function removeAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| list | Array&lt;[WifiAccessInfo](arkts-mdm-wifimanager-wifiaccessinfo-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+
+**示例**
+
+```TypeScript
+import { wifiManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.edmtest',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  let wifiIds: Array<wifiManager.WifiAccessInfo> = [{
+    // 需根据实际情况进行替换
+    ssid: "wifi_name",
+    bssid: "68:77:24:77:A6:D8"
+  }];
+  wifiManager.removeAllowedWifiList(wantTemp, wifiIds);
+  console.info(`Succeeded in removing allowed Wi-Fi list.`);
+} catch (err) {
+  console.error(`Failed to remove allowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
+}
+```

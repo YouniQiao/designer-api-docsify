@@ -15,7 +15,8 @@ Face metadata detected by the camera, which is extended from [MetadataObject](ar
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'camera';
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## emotion

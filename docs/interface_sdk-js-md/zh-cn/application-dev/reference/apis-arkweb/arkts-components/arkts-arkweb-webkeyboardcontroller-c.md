@@ -8,6 +8,11 @@ WebKeyboardController是ArkWeb提供的用于控制Web组件自定义键盘行�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## close
 
 ```TypeScript

@@ -10,6 +10,11 @@ Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseop
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## primary
 
 ```TypeScript

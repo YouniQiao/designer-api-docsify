@@ -1,0 +1,56 @@
+# switchUninstallState（系统接口）
+
+## 导入模块
+
+```TypeScript
+```
+
+## switchUninstallState
+
+```TypeScript
+function switchUninstallState(bundleName: string, state: boolean): void
+```
+
+切换指定应用的可卸载状态，此接口与EDM应用拦截管控机制不互相影响。
+
+**起始版本：** 23
+
+**需要权限：** ohos.permission.CHANGE_BUNDLE_UNINSTALL_STATE
+
+<!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void--><!--Device-bundleManager-function switchUninstallState(bundleName: string, state: boolean): void-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| bundleName | string | 是 |
+| state | boolean | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  bundleManager.switchUninstallState('com.example.myapplication', false);
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'switchUninstallState failed: %{public}s', message);
+}
+```

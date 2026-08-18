@@ -13,7 +13,8 @@ Disk information.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'volumeManager';
+import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## diskId

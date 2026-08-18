@@ -8,6 +8,11 @@ ProxyRule是ArkWeb框架中代理规则只读信息的类，通过[getProxyRules
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getSchemeFilter
 
 ```TypeScript

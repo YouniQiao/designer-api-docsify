@@ -11,7 +11,7 @@ Defines the status information of a media key.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'drm';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## keyId

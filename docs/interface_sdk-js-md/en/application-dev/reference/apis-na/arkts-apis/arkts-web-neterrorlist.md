@@ -1,5 +1,10 @@
 # @ohos.web.netErrorList
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## Summary
 
 ### Enums

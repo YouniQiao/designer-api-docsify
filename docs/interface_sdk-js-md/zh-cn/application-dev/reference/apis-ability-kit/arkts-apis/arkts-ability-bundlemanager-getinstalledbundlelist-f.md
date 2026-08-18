@@ -1,5 +1,10 @@
 # getInstalledBundleList
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getInstalledBundleList
 
 ```TypeScript

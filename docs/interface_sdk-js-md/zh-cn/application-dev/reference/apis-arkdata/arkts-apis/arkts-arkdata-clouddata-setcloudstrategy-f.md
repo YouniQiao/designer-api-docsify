@@ -1,5 +1,10 @@
 # setCloudStrategy
 
+## 导入模块
+
+```TypeScript
+```
+
 ## setCloudStrategy
 
 ```TypeScript

@@ -10,6 +10,11 @@ Implements a **NativeMediaPlayerHandler** object used as a parameter of the [Cre
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## Modules to Import
+
+```TypeScript
+```
+
 ## handleBufferedEndTimeChanged
 
 ```TypeScript
@@ -90,7 +95,7 @@ Called to notify the ArkWeb engine that an error occurs with the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [MediaError](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaerror-e.md) | Yes | Error object type. |
+| error | [MediaError](arkts-na-webview-mediaerror-e.md) | Yes | Error object type. |
 | errorMessage | string | Yes | Error message. |
 
 ## handleFullscreenChanged
@@ -201,7 +206,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [ReadyState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-readystate-e.md) | Yes | Cache status of the player. |
+| state | [ReadyState](arkts-na-webview-readystate-e.md) | Yes | Cache status of the player. |
 
 ## handleSeekFinished
 
@@ -255,7 +260,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-playbackstatus-e.md) | Yes | Player status. |
+| status | [PlaybackStatus](arkts-na-webview-playbackstatus-e.md) | Yes | Player status. |
 
 ## handleTimeUpdate
 

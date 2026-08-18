@@ -10,6 +10,11 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## 导入模块
+
+```TypeScript
+```
+
 ## onConnect
 
 ```TypeScript

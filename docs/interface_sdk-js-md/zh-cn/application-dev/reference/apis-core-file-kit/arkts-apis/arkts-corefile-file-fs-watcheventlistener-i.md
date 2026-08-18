@@ -8,6 +8,11 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
+## 导入模块
+
+```TypeScript
+```
+
 ## constructor
 
 ```TypeScript
@@ -26,5 +31,5 @@ Specifies the callback function to be invoked.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | 是 | Event for the callback to invoke. |
+| event | [WatchEvent](../../apis-na/arkts-apis/arkts-na-file-fs-watchevent-i.md) | 是 | Event for the callback to invoke. |
 

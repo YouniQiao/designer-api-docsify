@@ -1,5 +1,10 @@
 # isValid
 
+## 导入模块
+
+```TypeScript
+```
+
 ## isValid
 
 ```TypeScript

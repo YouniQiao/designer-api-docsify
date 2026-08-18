@@ -1,5 +1,10 @@
 # getStorageSync
 
+## 导入模块
+
+```TypeScript
+```
+
 ## getStorageSync
 
 ```TypeScript
