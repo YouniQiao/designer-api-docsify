@@ -1,6 +1,6 @@
 # WebDataBase
 
-Implements a **WebDataBase** object. > **NOTE：**> > - You must load the **Web** component before calling the APIs in **WebDataBase**.
+Implements a **WebDataBase** object. &gt; **NOTE：**&gt; &gt; - You must load the **Web** component before calling the APIs in **WebDataBase**.
 
 **Since:** 9
 

@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
-## off_drag('drag')
+## off('drag')
 
 ```TypeScript
 function off(type: 'drag', callback?: Callback<DragState>): void
@@ -26,7 +27,7 @@ function off(type: 'drag', callback?: Callback<DragState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'drag' | 是 | 监听类型，固定取值为 'drag'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | 否 |  |
 
 **错误码：**
 

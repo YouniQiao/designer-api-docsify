@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## next
@@ -43,7 +44,7 @@ next(): { value: RootInfo, done: boolean }
 
 | 类型 | 说明 |
 | --- | --- |
-| { value: RootInfo, done: boolean } | Returns RootInfo Object and boolean flag. |
+| object | Returns RootInfo Object and boolean flag. |
 
 **错误码：**
 

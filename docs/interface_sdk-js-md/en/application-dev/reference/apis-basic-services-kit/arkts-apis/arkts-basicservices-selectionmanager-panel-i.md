@@ -107,7 +107,7 @@ Unregisters the callback used to listen for the destroy event of the word select
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -142,7 +142,7 @@ Unregisters the callback used to listen for the hide event of the word selection
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback function that returns no value. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -177,7 +177,7 @@ Registers a callback to listen for the destroy event of the word selection panel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -214,7 +214,7 @@ Registers a callback to listen for the hide event of the word selection panel. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function that returns no value. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback function that returns no value. |
 
 **Examples**
 

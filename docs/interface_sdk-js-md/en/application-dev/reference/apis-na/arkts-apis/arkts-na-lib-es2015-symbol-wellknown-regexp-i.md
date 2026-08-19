@@ -31,8 +31,6 @@ Matches a string with this regular expression, and returns an array containing t
 
 | Type | Description |
 | --- | --- |
-| RegExpMatchArray |  |
-
 ## [Symbol.replace]
 
 ```TypeScript
@@ -56,8 +54,6 @@ Replaces text in a string, using this regular expression.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## [Symbol.replace]
 
 ```TypeScript
@@ -81,8 +77,6 @@ Replaces text in a string, using this regular expression.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## [Symbol.search]
 
 ```TypeScript
@@ -105,8 +99,6 @@ Finds the position beginning first substring match in a regular expression searc
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## [Symbol.split]
 
 ```TypeScript
@@ -130,5 +122,3 @@ Returns an array of substrings that were delimited by strings in the original in
 
 | Type | Description |
 | --- | --- |
-| string[] |  |
-

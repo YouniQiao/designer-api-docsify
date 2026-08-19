@@ -100,5 +100,5 @@ Set the RelativeContainer Options.
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableRelativeContainer](arkts-arkui-relativecontainer-extendablerelativecontainer-c.md) |  |
 

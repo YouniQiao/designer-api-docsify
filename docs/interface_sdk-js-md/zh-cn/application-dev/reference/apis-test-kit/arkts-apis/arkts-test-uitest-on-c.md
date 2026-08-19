@@ -11,6 +11,8 @@ UiTest框架从API version 9开始，通过On类提供了丰富的控件特征�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## afterComponent
@@ -720,7 +722,7 @@ let on: On = ON.longClickable(true); // 使用静态构造器ON创建On对象，
 originalText(text: string, pattern?: MatchPattern): On
 ```
 
-指定控件的文本内容和文本匹配模式，返回On对象自身。 > **说明：**> > 如果控件的无障碍属性 > [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) > 设置为'no'或'no-hide-descendants'，可以使用本接口指定目标控件的文本属性用于查找控件，使用[On.text()](#text)接口不生效。
+指定控件的文本内容和文本匹配模式，返回On对象自身。 &gt; **说明：**&gt; &gt; 如果控件的无障碍属性 &gt; [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) &gt; 设置为'no'或'no-hide-descendants'，可以使用本接口指定目标控件的文本属性用于查找控件，使用[On.text()](#text)接口不生效。
 
 **起始版本：** 23
 
@@ -850,7 +852,7 @@ let on: On = ON.selected(true); // 使用静态构造器ON创建On对象，指�
 text(txt: string, pattern?: MatchPattern): On
 ```
 
-指定目标控件文本属性，支持多种匹配模式，返回On对象自身。 > **说明：**> > 如果控件的无障碍属性 > [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) > 设置为'no'或'no-hide-descendants'，无法使用本接口指定目标控件的文本属性用于查找控件，可以使用[On.originalText()](#originaltext)接口实现。
+指定目标控件文本属性，支持多种匹配模式，返回On对象自身。 &gt; **说明：**&gt; &gt; 如果控件的无障碍属性 &gt; [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) &gt; 设置为'no'或'no-hide-descendants'，无法使用本接口指定目标控件的文本属性用于查找控件，可以使用[On.originalText()](#originaltext)接口实现。
 
 **起始版本：** 23
 

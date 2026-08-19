@@ -105,7 +105,7 @@ Create ASR processing controller on one audio capturer.
 
 | Type | Description |
 | --- | --- |
-| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) | ASR Processing Controller, or null when an error happens. |
+| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) \| null | ASR Processing Controller, or null when an error happens. |
 
 **Error codes:**
 

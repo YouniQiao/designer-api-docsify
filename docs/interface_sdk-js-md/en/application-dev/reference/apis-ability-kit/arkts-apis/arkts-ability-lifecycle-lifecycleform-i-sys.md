@@ -41,7 +41,7 @@ Called when the system shares the form.
 
 | Type | Description |
 | --- | --- |
-| { [key: string]: any } | Returns the wantParams object. |
+| object | Returns the wantParams object. |
 
 ## onShareForm
 

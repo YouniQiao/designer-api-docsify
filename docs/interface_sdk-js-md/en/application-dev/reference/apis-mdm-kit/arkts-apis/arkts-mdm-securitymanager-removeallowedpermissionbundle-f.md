@@ -12,7 +12,7 @@ import { securityManager } from '@kit.MDMKit';
 function removeAllowedPermissionBundle(admin: Want, permission: string, applicationInstance: common.ApplicationInstance): void
 ```
 
-Removes an application from the permission usage exception list. After the application is removed, it cannot use the corresponding permission any more. > **NOTE：**> > The permission must first be disabled via the > [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md) API before an application can be removed > from the permission usage exception list. Otherwise, error code 9201044 is returned.
+Removes an application from the permission usage exception list. After the application is removed, it cannot use the corresponding permission any more. &gt; **NOTE：**&gt; &gt; The permission must first be disabled via the &gt; [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md) API before an application can be removed &gt; from the permission usage exception list. Otherwise, error code 9201044 is returned.
 
 **Since:** 26.0.0
 

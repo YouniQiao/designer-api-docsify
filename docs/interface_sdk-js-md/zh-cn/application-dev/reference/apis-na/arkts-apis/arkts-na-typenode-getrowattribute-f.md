@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | 类型 | 说明 |
 | --- | --- |
-| RowAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| RowAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

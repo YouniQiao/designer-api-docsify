@@ -108,5 +108,5 @@ Set the Row Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableRow](arkts-arkui-row-extendablerow-c.md) |  |
 

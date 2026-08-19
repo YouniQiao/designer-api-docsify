@@ -31,8 +31,6 @@ Creates an array from an iterable object.
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## from
 
 ```TypeScript
@@ -57,5 +55,3 @@ Creates an array from an iterable object.
 
 | Type | Description |
 | --- | --- |
-| U[] |  |
-

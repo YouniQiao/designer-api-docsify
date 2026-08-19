@@ -27,5 +27,3 @@ Converts a string to a floating-point number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-

@@ -1,6 +1,6 @@
 # @ohos.application.formInfo
 
-formInfo模块提供了卡片信息和状态等相关类型和枚举。 > **说明：** > > 从API version 9 开始废弃，
+formInfo模块提供了卡片信息和状态等相关类型和枚举。 &gt; **说明：** &gt; &gt; 从API version 9 开始废弃，
 
 **起始版本：** 8
 

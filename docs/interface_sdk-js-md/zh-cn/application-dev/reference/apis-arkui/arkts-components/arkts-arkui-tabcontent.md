@@ -10,7 +10,7 @@
 TabContent()
 ```
 
-创建TabContent页签和内容。 > **说明：** > > TabContent组件仅能作为Tabs组件的子组件使用，否则会导致组件无法正常显示。
+创建TabContent页签和内容。 &gt; **说明：** &gt; &gt; TabContent组件仅能作为Tabs组件的子组件使用，否则会导致组件无法正常显示。
 
 **起始版本：** 7
 

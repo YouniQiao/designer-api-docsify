@@ -35,8 +35,6 @@ attributeModifier(
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## font
 
 ```TypeScript
@@ -59,8 +57,6 @@ font(value: Font | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fontColor
 
 ```TypeScript
@@ -83,8 +79,6 @@ fontColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuItemDivider
 
 ```TypeScript
@@ -107,8 +101,6 @@ menuItemDivider(options: DividerStyleOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuItemGroupDivider
 
 ```TypeScript
@@ -131,8 +123,6 @@ menuItemGroupDivider(options: DividerStyleOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## radius
 
 ```TypeScript
@@ -155,8 +145,6 @@ radius(value: Dimension | BorderRadiuses | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setMenuOptions
 
 ```TypeScript
@@ -173,8 +161,6 @@ setMenuOptions(): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## subMenuExpandSymbol
 
 ```TypeScript
@@ -197,8 +183,6 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## subMenuExpandingMode
 
 ```TypeScript
@@ -221,8 +205,6 @@ subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

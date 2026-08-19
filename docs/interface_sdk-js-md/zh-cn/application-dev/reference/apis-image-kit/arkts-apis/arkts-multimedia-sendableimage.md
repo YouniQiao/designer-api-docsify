@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## 汇总

@@ -507,7 +507,7 @@ onAppear?: () => void
 onDidAppear?: Callback<void>
 ```
 
-菜单弹出后的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。 2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。 3. 当菜单入场动效未完成时关闭菜单，该回调不会触发。 4.onAppear和onDidAppear触发时机相同，onDidAppear在onAppear后生效。
+菜单弹出后的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。 2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。 3. 当菜单入场动效未完成时关闭菜单，该回调不会触发。 4.onAppear和onDidAppear触发时机相同，onDidAppear在onAppear后生效。
 
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -527,7 +527,7 @@ onDidAppear?: Callback<void>
 onDidDisappear?: Callback<void>
 ```
 
-菜单消失后的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。 2. onDisappear和onDidDisappear触发时机相同，onDidDisappear在onDisappear后生效。
+菜单消失后的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。 2. onDisappear和onDidDisappear触发时机相同，onDidDisappear在onDisappear后生效。
 
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -567,7 +567,7 @@ onDisappear?: () => void
 onWillAppear?: Callback<void>
 ```
 
-菜单显示动效前的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。 2. aboutToAppear是初始化时触发调用，onWillAppear是在动画执行前触发调用，onWillAppear在aboutToAppear之后执行。
+菜单显示动效前的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。 2. aboutToAppear是初始化时触发调用，onWillAppear是在动画执行前触发调用，onWillAppear在aboutToAppear之后执行。
 
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -587,7 +587,7 @@ onWillAppear?: Callback<void>
 onWillDisappear?: Callback<void>
 ```
 
-菜单退出动效前的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。 2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。 3. aboutToDisappear和onWillDisappear触发时机相同，onWillDisappear在aboutToDisappear后生效。
+菜单退出动效前的事件回调。 **说明：** 1. 正常时序依次为：aboutToAppear&gt;&gt;onWillAppear&gt;&gt;onAppear&gt;&gt;onDidAppear&gt;&gt;aboutToDisappear&gt;&gt;onWillDisappear&gt;&gt;onDisappear&gt;&gt;onDidDisappear。 2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。 3. aboutToDisappear和onWillDisappear触发时机相同，onWillDisappear在aboutToDisappear后生效。
 
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 

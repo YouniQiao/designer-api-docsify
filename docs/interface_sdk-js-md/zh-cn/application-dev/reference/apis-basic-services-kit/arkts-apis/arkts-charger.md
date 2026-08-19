@@ -1,6 +1,6 @@
 # @ohos.charger
 
-提供充电类型。 > **说明：** > > 本模块为系统接口。
+提供充电类型。 &gt; **说明：** &gt; &gt; 本模块为系统接口。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { charger } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

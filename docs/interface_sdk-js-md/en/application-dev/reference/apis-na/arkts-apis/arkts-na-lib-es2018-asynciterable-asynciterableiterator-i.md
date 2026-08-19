@@ -25,5 +25,3 @@
 
 | Type | Description |
 | --- | --- |
-| [AsyncIterableIterator](arkts-na-lib-es2018-asynciterable-asynciterableiterator-i.md)&lt;T&gt; |  |
-

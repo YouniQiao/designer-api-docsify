@@ -22,7 +22,7 @@ dismiss: Callback<void>
 
 Callback for dismissing the dialog box. This API is called only when the dialog box needs to be exited.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 

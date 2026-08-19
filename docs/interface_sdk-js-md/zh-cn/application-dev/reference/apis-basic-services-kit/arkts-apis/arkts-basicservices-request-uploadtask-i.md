@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## delete
@@ -19,7 +21,7 @@
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-移除上传的任务，使用callback异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+移除上传的任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -33,7 +35,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **错误码：**
 
@@ -59,7 +61,7 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
 delete(): Promise<boolean>
 ```
 
-移除上传的任务，使用Promise异步回调。 > **说明：** > > 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+移除上传的任务，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
 
 **起始版本：** 23
 
@@ -142,7 +144,7 @@ Called when the current upload session complete.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload complete event. |
 
 **示例**
 
@@ -205,7 +207,7 @@ Called when the current upload session fail.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload fail change event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | The callback function for the upload fail change event. |
 
 **示例**
 
@@ -364,7 +366,7 @@ try {
 }
 ```
 
-## off_complete('complete' | 'fail')
+## off('complete' | 'fail')
 
 ```TypeScript
 off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
@@ -383,7 +385,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 取消订阅的事件类型。<br>- 取值为'complete'，表示上传任务完成。<br>- 取值为'fail'，表示上传任务失败。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -433,7 +435,7 @@ uploadTask.off('fail', upFailCallback1);
 uploadTask.off('fail');
 ```
 
-## off_fail('complete' | 'fail')
+## off('complete' | 'fail')
 
 ```TypeScript
 off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
@@ -452,7 +454,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 取消订阅的事件类型。<br>- 取值为'complete'，表示上传任务完成。<br>- 取值为'fail'，表示上传任务失败。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
@@ -502,7 +504,7 @@ uploadTask.off('fail', upFailCallback1);
 uploadTask.off('fail');
 ```
 
-## off_headerReceive('headerReceive')
+## off('headerReceive')
 
 ```TypeScript
 off(type: 'headerReceive', callback?: (header: object) => void): void
@@ -546,7 +548,7 @@ uploadTask.off('headerReceive', headerCallback1);
 uploadTask.off('headerReceive');
 ```
 
-## off_progress('progress')
+## off('progress')
 
 ```TypeScript
 off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void
@@ -608,7 +610,7 @@ Called when the current upload session complete.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload complete event. |
 
 **示例**
 
@@ -659,7 +661,7 @@ Called when the current upload session fail.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload fail event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | The callback function for the upload fail event. |
 
 **示例**
 
@@ -790,7 +792,7 @@ try {
 }
 ```
 
-## on_complete('complete' | 'fail')
+## on('complete' | 'fail')
 
 ```TypeScript
 on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
@@ -809,7 +811,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。<br/>- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 <br/>- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
 
 **错误码：**
 
@@ -835,7 +837,7 @@ let upFailCallback = (taskStates: Array<request.TaskState>) => {
 uploadTask.on('fail', upFailCallback);
 ```
 
-## on_fail('complete' | 'fail')
+## on('complete' | 'fail')
 
 ```TypeScript
 on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
@@ -854,7 +856,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | 是 | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。<br/>- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 <br/>- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | 是 | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
 
 **错误码：**
 
@@ -880,7 +882,7 @@ let upFailCallback = (taskStates: Array<request.TaskState>) => {
 uploadTask.on('fail', upFailCallback);
 ```
 
-## on_headerReceive('headerReceive')
+## on('headerReceive')
 
 ```TypeScript
 on(type: 'headerReceive', callback: (header: object) => void): void
@@ -916,13 +918,13 @@ let headerCallback = (headers: object) => {
 uploadTask.on('headerReceive', headerCallback);
 ```
 
-## on_progress('progress')
+## on('progress')
 
 ```TypeScript
 on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void
 ```
 
-订阅上传任务进度事件，使用callback异步回调。 > **说明：** > > 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
+订阅上传任务进度事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
 
 **起始版本：** 6
 
@@ -958,7 +960,7 @@ uploadTask.on('progress', upProgressCallback);
 remove(callback: AsyncCallback<boolean>): void
 ```
 
-移除上传的任务，使用callback异步回调。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用 > [delete](#delete)替代。
+移除上传的任务，使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 6开始支持，从API version 9开始废弃，建议使用 &gt; [delete](#delete)替代。
 
 **起始版本：** 6
 
@@ -976,7 +978,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
 
 **错误码：**
 
@@ -1004,7 +1006,7 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
 remove(): Promise<boolean>
 ```
 
-移除上传的任务，使用Promise异步回调。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](#delete)替代。
+移除上传的任务，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](#delete)替代。
 
 **起始版本：** 6
 

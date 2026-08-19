@@ -58,7 +58,7 @@ Set the digital indicator font (just support font size and weight).
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DigitIndicator](arkts-na-swiper-digitindicator-c.md) |  |
 
 ## fontColor
 
@@ -88,7 +88,7 @@ Set font color of the digital indicator.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DigitIndicator](arkts-na-swiper-digitindicator-c.md) |  |
 
 ## selectedDigitFont
 
@@ -118,7 +118,7 @@ Set the digital indicator font (just support font size and weight).
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DigitIndicator](arkts-na-swiper-digitindicator-c.md) |  |
 
 ## selectedFontColor
 
@@ -148,5 +148,5 @@ Set font color of the digital indicator when selected.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DigitIndicator](arkts-na-swiper-digitindicator-c.md) |  |
 

@@ -27,7 +27,7 @@ Requests the component from the component provider.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [RequestParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requestparameters-i.md) | Yes | Information about the component request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Asynchronous callback used to return the requested data. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Asynchronous callback used to return the requested data. |
 
 **Examples**
 

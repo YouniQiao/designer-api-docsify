@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

@@ -1,6 +1,6 @@
 # MediaAlbumChangeRequest
 
-MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 相册变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 相册变更请求。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
@@ -13,6 +13,7 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addAssets
@@ -76,7 +77,7 @@ constructor(album: Album)
 getAlbum(): Album
 ```
 
-获取当前相册变更请求中的相册。 > **注意：** > > 对于创建相册的变更请求，在调用接口 > > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) > > 的提交生效之前，该接口会返回null。
+获取当前相册变更请求中的相册。 &gt; **注意：** &gt; &gt; 对于创建相册的变更请求，在调用接口 &gt; &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) &gt; &gt; 的提交生效之前，该接口会返回null。
 
 **起始版本：** 11
 
@@ -115,7 +116,7 @@ getAlbum(): Album | null
 
 | 类型 | 说明 |
 | --- | --- |
-| Album | Returns the album, if the operation fails, returns null |
+| Album \| null | Returns the album, if the operation fails, returns null |
 
 **错误码：**
 

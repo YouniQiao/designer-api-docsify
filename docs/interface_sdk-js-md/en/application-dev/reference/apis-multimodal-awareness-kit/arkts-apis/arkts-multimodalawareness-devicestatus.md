@@ -21,9 +21,9 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 | Name | Description |
 | --- | --- |
 | [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) | Unsubscribes from steady standing status detection events. |
-| off_steadyStandingDetect | Unsubscribes from steady standing state events. |
+| [off_steadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) | Unsubscribes from steady standing state events. |
 | [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) | Subscribes to steady standing status detection events. |
-| on_steadyStandingDetect | Subscribes to steady standing state events. |
+| [on_steadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) | Subscribes to steady standing state events. |
 
 <!--Del-->
 ### Functions(System API)

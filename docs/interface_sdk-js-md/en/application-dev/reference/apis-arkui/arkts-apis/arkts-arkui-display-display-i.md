@@ -83,7 +83,7 @@ Obtains the cutout information of the display. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CutoutInfo](arkts-arkui-display-cutoutinfo-i.md)&gt; | Yes | Callback used to return the **CutoutInfo** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CutoutInfo](arkts-arkui-display-cutoutinfo-i.md)&gt; | Yes | Callback used to return the **CutoutInfo** object. |
 
 **Error codes:**
 
@@ -287,7 +287,7 @@ Unregister the callback for available area changes. This API can be properly cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -295,7 +295,7 @@ Unregister the callback for available area changes. This API can be properly cal
 | --- | --- |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## off_availableAreaChange('availableAreaChange')
+## off('availableAreaChange')
 
 ```TypeScript
 off(type: 'availableAreaChange', callback?: Callback<Rect>): void
@@ -316,7 +316,7 @@ Unsubscribes from changes of the available area on the display of the current de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -361,7 +361,7 @@ Register the callback for available area changes. This API can be properly calle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | Yes | Callback used to return the available area |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | Yes | Callback used to return the available area |
 
 **Error codes:**
 
@@ -369,7 +369,7 @@ Register the callback for available area changes. This API can be properly calle
 | --- | --- |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## on_availableAreaChange('availableAreaChange')
+## on('availableAreaChange')
 
 ```TypeScript
 on(type: 'availableAreaChange', callback: Callback<Rect>): void
@@ -390,7 +390,7 @@ Subscribes to changes of the available area on the display of the current device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | Yes | Callback used to return the new available area. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | Yes | Callback used to return the new available area. |
 
 **Error codes:**
 

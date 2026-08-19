@@ -1,6 +1,6 @@
 # TCPSocketConnection
 
-Defines a **TCPSocketConnection** object, that is, the connection between the TCPSocket client and the server. Before calling TCPSocketConnection APIs, you need to obtain a **TCPSocketConnection** object. > **NOTE：**> > The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is > successfully established between the TCPSocket client and the server.
+Defines a **TCPSocketConnection** object, that is, the connection between the TCPSocket client and the server. Before calling TCPSocketConnection APIs, you need to obtain a **TCPSocketConnection** object. &gt; **NOTE：**&gt; &gt; The TCPSocket client can call related APIs through the **TCPSocketConnection** object only after a connection is &gt; successfully established between the TCPSocket client and the server.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ Closes a TCP socket connection. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -181,7 +181,7 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 ```
 
-Obtains the remote address of a socket connection. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after a connection with the client is set up.
+Obtains the remote address of a socket connection. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 
@@ -195,7 +195,7 @@ Obtains the remote address of a socket connection. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -230,7 +230,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 getRemoteAddress(): Promise<NetAddress>
 ```
 
-Obtains the remote address of a socket connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after a connection with the client is set up.
+Obtains the remote address of a socket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 
@@ -276,7 +276,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of a TCPSocketConnection connection. This API uses a promise to return the result. > **NOTE：**> > - This API can be called only after a connection with the client is set up. > > - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the > close API is called). > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](#close) method to close the socket > connection, instead of directly operating the file descriptor.
+Obtains the file descriptor of a TCPSocketConnection connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after a connection with the client is set up. &gt; &gt; - This API returns **-1** in abnormal cases such as disconnection and socket closed (for example, after the &gt; close API is called). &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket &gt; connection, instead of directly operating the file descriptor.
 
 **Since:** 23
 
@@ -323,7 +323,7 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 });
 ```
 
-## off_close('close')
+## off('close')
 
 ```TypeScript
 off(type: 'close', callback?: Callback<void>): void
@@ -342,7 +342,7 @@ Unsubscribes from **close** events of the **TCPSocketConnection** object. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type.<br/> **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -367,7 +367,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -386,7 +386,7 @@ Unsubscribes from **error** events of the **TCPSocketConnection** object. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> **error**: error event. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -412,7 +412,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## off_message('message')
+## off('message')
 
 ```TypeScript
 off(type: 'message', callback?: Callback<SocketMessageInfo>): void
@@ -431,7 +431,7 @@ Unsubscribes from **message** events of the **TCPSocketConnection** object. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -465,7 +465,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## on_close('close')
+## on('close')
 
 ```TypeScript
 on(type: 'close', callback: Callback<void>): void
@@ -484,7 +484,7 @@ Subscribes to **close** events of the **TCPSocketConnection** object. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type.<br/> **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -506,7 +506,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -525,7 +525,7 @@ Subscribes to **error** events of the **TCPSocketConnection** object. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> **error**: error event. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -547,7 +547,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## on_message('message')
+## on('message')
 
 ```TypeScript
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
@@ -566,7 +566,7 @@ Subscribes to **message** events of the **TCPSocketConnection** object. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned.<br>**Since:** 11 |
 
 **Error codes:**
 
@@ -603,7 +603,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-Sends data over a **TCPSocketConnection** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after a connection with the client is set up.
+Sends data over a **TCPSocketConnection** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 
@@ -618,7 +618,7 @@ Sends data over a **TCPSocketConnection** object. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | Yes | Defines the parameters for sending data over a TCP socket connection. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -651,7 +651,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 send(options: TCPSendOptions): Promise<void>
 ```
 
-Sends data over a **TCPSocketConnection** object. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after a connection with the client is set up.
+Sends data over a **TCPSocketConnection** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after a connection with the client is set up.
 
 **Since:** 10
 

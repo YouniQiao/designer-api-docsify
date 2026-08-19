@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
 ```
 
 ## push
@@ -11,7 +12,7 @@
 function push(options: RouterOptions): void
 ```
 
-跳转到应用内的指定页面。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [pushUrl](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushurl)替代。
+跳转到应用内的指定页面。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用 &gt; [pushUrl](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushurl)替代。
 
 **起始版本：** 8
 

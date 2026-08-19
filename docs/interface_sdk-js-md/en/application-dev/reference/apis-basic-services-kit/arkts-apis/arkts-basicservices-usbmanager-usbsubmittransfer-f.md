@@ -13,7 +13,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Requests a USB data transfer. > **NOTE：**> > This API uses an asynchronous callback to return the result. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) > API to claim a communication interface.
+Requests a USB data transfer. &gt; **NOTE：**&gt; &gt; This API uses an asynchronous callback to return the result. &gt; &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface.
 
 **Since:** 23
 

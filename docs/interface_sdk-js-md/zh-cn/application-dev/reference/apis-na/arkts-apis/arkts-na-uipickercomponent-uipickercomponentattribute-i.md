@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<UIPickerComponentAttribute> | Attr
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## canLoop
 
 ```TypeScript
@@ -58,8 +56,6 @@ canLoop(isLoop: boolean | undefined): UIPickerComponentAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## displayedItemCount
 
 ```TypeScript
@@ -82,8 +78,6 @@ displayedItemCount(count: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableHapticFeedback
 
 ```TypeScript
@@ -106,8 +100,6 @@ enableHapticFeedback(enable: boolean | undefined): UIPickerComponentAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## itemHeight
 
 ```TypeScript
@@ -130,8 +122,6 @@ itemHeight(height: LengthMetrics | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -154,8 +144,6 @@ onChange(callback: OnUIPickerComponentCallback | undefined): UIPickerComponentAt
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## onScrollStop
 
 ```TypeScript
@@ -178,8 +166,6 @@ onScrollStop(callback: OnUIPickerComponentCallback | undefined): UIPickerCompone
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## selectionIndicator
 
 ```TypeScript
@@ -202,8 +188,6 @@ selectionIndicator(style: PickerIndicatorStyle | undefined): UIPickerComponentAt
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## default
 
 ```TypeScript

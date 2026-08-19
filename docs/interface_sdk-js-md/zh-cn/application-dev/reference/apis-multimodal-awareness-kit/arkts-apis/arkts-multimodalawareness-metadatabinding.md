@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## 汇总
@@ -20,9 +21,9 @@
 | 名称 | 说明 |
 | --- | --- |
 | [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md) | 取消订阅系统获取编码内容的事件。 |
-| off_operationSubmitMetadata | 取消订阅系统获取编码内容的事件。需先调用on('operationSubmitMetadata')方法订阅事件，未订阅时调用不产生效果。取消订阅后，应用将不再接收编码内容传递事件。 |
+| [off_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md) | 取消订阅系统获取编码内容的事件。需先调用on('operationSubmitMetadata')方法订阅事件，未订阅时调用不产生效果。取消订阅后，应用将不再接收编码内容传递事件。 |
 | [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md) | 订阅系统获取编码内容的事件。 |
-| on_operationSubmitMetadata | 订阅系统应用请求获取编码内容的事件。当系统应用（如截图）请求获取应用的编码内容时触发该事件，应用注册回调后，事件发生时通过回调通知应用。调用on()方法订阅事件后， <br>必须在不再需要监听事件时调用off()方法取消订阅，释放监听资源。 |
+| [on_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md) | 订阅系统应用请求获取编码内容的事件。当系统应用（如截图）请求获取应用的编码内容时触发该事件，应用注册回调后，事件发生时通过回调通知应用。调用on()方法订阅事件后， <br>必须在不再需要监听事件时调用off()方法取消订阅，释放监听资源。 |
 | [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md) | 第三方应用将需要编码的内容传递给接口服务，接口服务将内容传递给调用编码接口的系统应用或服务。本接口由第三方应用调用，供系统应用订阅获取数据。 <br>系统应用需先通过on('operationSubmitMetadata')方法订阅事件，才能接收到编码内容。 |
 
 <!--Del-->

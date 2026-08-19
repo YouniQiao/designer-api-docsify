@@ -31,7 +31,7 @@ Obtains the state of the screen hopping switch. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ state: boolean }&gt; | Yes |  |
 
 **Error codes:**
 
@@ -102,7 +102,7 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ state: boolean }&gt; | > } Promise used to return the state of the screen hopping switch. **true** if enabled and **false** if disabled. |
+| Promise&lt;{ state: boolean | > } Promise used to return the state of the screen hopping switch. **true** if enabled and **false** if disabled.<br>**Applicable version:** 12 and later |
 
 **Error codes:**
 

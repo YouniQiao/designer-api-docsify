@@ -11,6 +11,7 @@ WebSchemeHandlerRequest类模块定义了通过WebSchemeHandler拦截到的资�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getFrameUrl
@@ -75,7 +76,7 @@ getHttpBodyStream(): WebHttpBodyStream | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | 返回资源请求中的WebHttpBodyStream，如果没有则返回null。 |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) \| null | 返回资源请求中的WebHttpBodyStream，如果没有则返回null。 |
 
 ## getReferrer
 

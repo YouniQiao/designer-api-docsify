@@ -1,6 +1,6 @@
 # CalendarDialogOptions
 
-Defines the configuration options of the calendar picker dialog box. Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md). > **NOTE：**> > When the application window is resized, the width of the dialog box is continuously compressed. If the window width > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
+Defines the configuration options of the calendar picker dialog box. Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md). &gt; **NOTE：**&gt; &gt; When the application window is resized, the width of the dialog box is continuously compressed. If the window width &gt; is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the &gt; content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
 
 **Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
 
@@ -271,7 +271,7 @@ Triggered when the selection in the picker changes the selected date. The callba
 onDidAppear?: VoidCallback
 ```
 
-Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, this callback is not invoked.
+Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, this callback is not invoked.
 
 **Type:** VoidCallback
 
@@ -291,7 +291,7 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 onDidDisappear?: VoidCallback
 ```
 
-Event callback after the dialog box disappears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear.
+Event callback after the dialog box disappears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
 
 **Type:** VoidCallback
 
@@ -311,7 +311,7 @@ Event callback after the dialog box disappears. **NOTE：**1. The normal timing 
 onWillAppear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** VoidCallback
 
@@ -331,7 +331,7 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 onWillDisappear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to disappear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear. 2. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+Event callback when the dialog box is about to disappear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
 **Type:** VoidCallback
 

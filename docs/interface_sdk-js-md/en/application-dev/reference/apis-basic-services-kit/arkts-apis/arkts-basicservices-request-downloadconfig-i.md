@@ -53,7 +53,7 @@ Description of the download session. The default value is an empty string.
 enableMetered?: boolean
 ```
 
-Whether download is allowed on a metered connection. The value **true** means the download is allowed, and **false** means the opposite. The default value is **false**. > **NOTE：**> > In general cases, a mobile data connection is metered, while a Wi-Fi connection is not.
+Whether download is allowed on a metered connection. The value **true** means the download is allowed, and **false** means the opposite. The default value is **false**. &gt; **NOTE：**&gt; &gt; In general cases, a mobile data connection is metered, while a Wi-Fi connection is not.
 
 **Type:** boolean
 

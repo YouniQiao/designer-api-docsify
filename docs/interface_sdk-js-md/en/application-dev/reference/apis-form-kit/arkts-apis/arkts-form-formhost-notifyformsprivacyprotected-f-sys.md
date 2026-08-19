@@ -34,7 +34,7 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | ID of the widgets. |
 | isProtected | boolean | Yes | Whether a widget requires privacy protection. <br>**true**: The widget requires privacy protection. <br>**false**: The widget does not require privacy protection. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If privacy protection is set successfully, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If privacy protection is set successfully, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 

@@ -62,7 +62,7 @@ Changes the Ethernet IP address. Currently, this item is supported only on PCs/2
 SET_DEVICE_NAME = 3
 ```
 
-Changes the device name configuration. Currently, this item is supported only on PCs/2-in-1 devices, phones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options** > **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets.
+Changes the device name configuration. Currently, this item is supported only on PCs/2-in-1 devices, phones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options** &gt; **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets.
 
 **Since:** 26.0.0
 

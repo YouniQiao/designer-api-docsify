@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## getUidRxBytes
@@ -11,7 +12,7 @@
 function getUidRxBytes(uid: int, callback: AsyncCallback<long>): void
 ```
 
-获取指定应用从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用callback异步回调。 > **说明：** > > 若重启后该应用未产生流量消耗，则会抛出2103005错误码。
+获取指定应用从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用callback异步回调。 &gt; **说明：** &gt; &gt; 若重启后该应用未产生流量消耗，则会抛出2103005错误码。
 
 **起始版本：** 23
 
@@ -27,7 +28,7 @@ function getUidRxBytes(uid: int, callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | int | 是 | 指定查询的应用 uid。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。当成功获取到流量数据时，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当成功获取到流量数据时，error为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -73,7 +74,7 @@ statistics.getUidRxBytes(20010038, (error: BusinessError|null, stats: long|undef
 function getUidRxBytes(uid: int): Promise<long>
 ```
 
-获取指定应用从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用Promise异步回调。 > **说明：** > > 若重启后该应用未产生流量消耗，则会抛出2103005错误码。
+获取指定应用从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 若重启后该应用未产生流量消耗，则会抛出2103005错误码。
 
 **起始版本：** 23
 

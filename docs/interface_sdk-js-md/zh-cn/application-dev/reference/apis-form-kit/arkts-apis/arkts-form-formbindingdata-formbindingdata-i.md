@@ -11,6 +11,7 @@ FormBindingData对象的属性定义。
 ## 导入模块
 
 ```TypeScript
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## data

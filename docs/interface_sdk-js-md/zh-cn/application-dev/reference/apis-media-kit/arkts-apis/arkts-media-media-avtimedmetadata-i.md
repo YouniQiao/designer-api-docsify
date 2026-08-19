@@ -11,6 +11,7 @@ Interface for defining time base metadata
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## classify

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<RichTextAttribute> | AttributeModi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onComplete
 
 ```TypeScript
@@ -58,8 +56,6 @@ onComplete(callback: (() => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onStart
 
 ```TypeScript
@@ -82,8 +78,6 @@ onStart(callback: (() => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

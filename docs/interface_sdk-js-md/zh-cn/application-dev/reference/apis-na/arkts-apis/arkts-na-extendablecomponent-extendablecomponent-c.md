@@ -34,7 +34,7 @@ The dialog controller of the custom component.
 
 | 类型 | 说明 |
 | --- | --- |
-| promptAction.DialogController | The controller of dialog, or undefined if the custom component does not display in the dialog. |
+| promptAction.DialogController \| undefined | The controller of dialog, or undefined if the custom component does not display in the dialog. |
 
 ## getUIContext
 
@@ -106,7 +106,7 @@ onWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| theme | [Theme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-theme-i.md) | 是 | 自定义组件当前生效的Theme对象。 |
+| theme | [Theme](arkts-na-arkui-theme-theme-i.md) | 是 | 自定义组件当前生效的Theme对象。 |
 
 ## queryNavDestinationInfo
 
@@ -130,7 +130,7 @@ queryNavDestinationInfo(): NavDestinationInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) | The navigation destination information, or undefined if it is not available. |
+| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) \| undefined | The navigation destination information, or undefined if it is not available. |
 
 ## queryNavDestinationInfo
 
@@ -160,7 +160,7 @@ queryNavDestinationInfo(isInner: boolean | undefined): NavDestinationInfo | unde
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) | The navigation destination information, or undefined if it is not available. |
+| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) \| undefined | The navigation destination information, or undefined if it is not available. |
 
 ## queryNavigationInfo
 
@@ -184,7 +184,7 @@ queryNavigationInfo(): NavigationInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavigationInfo](../../apis-arkui/arkts-components/arkts-arkui-navigationinfo-t.md) | The navigation information, or undefined if it is not available |
+| [NavigationInfo](../../apis-arkui/arkts-components/arkts-arkui-navigationinfo-t.md) \| undefined | The navigation information, or undefined if it is not available |
 
 ## queryRouterPageInfo
 
@@ -208,5 +208,5 @@ queryRouterPageInfo(): RouterPageInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouterPageInfo](../../apis-arkui/arkts-components/arkts-arkui-routerpageinfo-t.md) | The router page information, or undefined if it is not available. |
+| [RouterPageInfo](../../apis-arkui/arkts-components/arkts-arkui-routerpageinfo-t.md) \| undefined | The router page information, or undefined if it is not available. |
 

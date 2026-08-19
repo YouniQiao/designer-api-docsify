@@ -43,7 +43,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, options?: RenderingContextOptions): CanvasRenderingContext2D
 ```
 
-从一个DrawingRenderingContext对象中获取一个CanvasRenderingContext2D对象， 该CanvasRenderingContext2D对象与入参的DrawingRenderingContext对象绑定了相同的Canvas组件。 > **说明：** > > - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建Canvas组件， > 否则会导致应用崩溃。 > > - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
+从一个DrawingRenderingContext对象中获取一个CanvasRenderingContext2D对象， 该CanvasRenderingContext2D对象与入参的DrawingRenderingContext对象绑定了相同的Canvas组件。 &gt; **说明：** &gt; &gt; - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建Canvas组件， &gt; 否则会导致应用崩溃。 &gt; &gt; - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
 
 **起始版本：** 23
 
@@ -140,7 +140,7 @@ offDetach(callback?: VoidCallback): void
 onAttach(callback: VoidCallback): void
 ```
 
-订阅CanvasRenderingContext2D与Canvas组件发生绑定的场景。 > **说明：** > > CanvasRenderingContext2D对象在同一时间只能与一个Canvas组件绑定。 > 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调， > 表示可以获取到canvas。 > 避免在'onAttach'中执行绘制方法，应保证Canvas组件已经'onReady'再进行绘制。 > 触发'onAttach'回调的一般场景： > 1、Canvas组件创建时绑定CanvasRenderingContext2D对象; > 2、CanvasRenderingContext2D对象新绑定一个Canvas组件时。
+订阅CanvasRenderingContext2D与Canvas组件发生绑定的场景。 &gt; **说明：** &gt; &gt; CanvasRenderingContext2D对象在同一时间只能与一个Canvas组件绑定。 &gt; 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调， &gt; 表示可以获取到canvas。 &gt; 避免在'onAttach'中执行绘制方法，应保证Canvas组件已经'onReady'再进行绘制。 &gt; 触发'onAttach'回调的一般场景： &gt; 1、Canvas组件创建时绑定CanvasRenderingContext2D对象; &gt; 2、CanvasRenderingContext2D对象新绑定一个Canvas组件时。
 
 **起始版本：** 23
 
@@ -170,7 +170,7 @@ onAttach(callback: VoidCallback): void
 onDetach(callback: VoidCallback): void
 ```
 
-订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。 > **说明：** > > 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调， > 表示应停止绘制行为。 > 触发'onDetach'回调的一般场景： > 1、Canvas组件销毁时解除绑定CanvasRenderingContext2D对象; > 2、CanvasRenderingContext2D对象新绑定一个Canvas组件，会先解除已有的绑定。
+订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。 &gt; **说明：** &gt; &gt; 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调， &gt; 表示应停止绘制行为。 &gt; 触发'onDetach'回调的一般场景： &gt; 1、Canvas组件销毁时解除绑定CanvasRenderingContext2D对象; &gt; 2、CanvasRenderingContext2D对象新绑定一个Canvas组件，会先解除已有的绑定。
 
 **起始版本：** 23
 
@@ -200,7 +200,7 @@ onDetach(callback: VoidCallback): void
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-配置并启动AI分析功能，使用Promise异步回调。 使用前需先设置enableAnalyzer为true，启用图像AI分析能力。 该方法调用时，将截取调用时刻的画面帧进行分析，使用时需注意启动分析的时机， 避免出现画面和分析内容不一致的情况。 未执行完重复调用该方法会触发错误回调。 > **说明：** > > 分析类型不支持动态修改。 > 当检测到画面有变化时，分析结果将自动销毁，可重新调用本接口启动分析。 > 该特性依赖设备能力，不支持该能力的情况下，将返回错误码。
+配置并启动AI分析功能，使用Promise异步回调。 使用前需先设置enableAnalyzer为true，启用图像AI分析能力。 该方法调用时，将截取调用时刻的画面帧进行分析，使用时需注意启动分析的时机， 避免出现画面和分析内容不一致的情况。 未执行完重复调用该方法会触发错误回调。 &gt; **说明：** &gt; &gt; 分析类型不支持动态修改。 &gt; 当检测到画面有变化时，分析结果将自动销毁，可重新调用本接口启动分析。 &gt; 该特性依赖设备能力，不支持该能力的情况下，将返回错误码。
 
 **起始版本：** 23
 
@@ -238,7 +238,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 stopImageAnalyzer(): void
 ```
 
-停止AI分析功能，AI分析展示的内容将被销毁。 > **说明：** > > 在startImageAnalyzer方法未返回结果时调用本方法，会触发其错误回调。 > 该特性依赖设备能力。
+停止AI分析功能，AI分析展示的内容将被销毁。 &gt; **说明：** &gt; &gt; 在startImageAnalyzer方法未返回结果时调用本方法，会触发其错误回调。 &gt; 该特性依赖设备能力。
 
 **起始版本：** 23
 

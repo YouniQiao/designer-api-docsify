@@ -1,6 +1,6 @@
 # UIContext
 
-UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 > 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext > 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中 > UIContext对象以uiContext表示。
+UIContext实例对象。 &gt; **说明：** &gt; - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 &gt; &gt; - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 &gt; [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 &gt; 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext &gt; 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中 &gt; UIContext对象以uiContext表示。
 
 **起始版本：** 10
 
@@ -11,6 +11,10 @@ UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为�
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## animateToImmediately
@@ -38,7 +42,7 @@ animateToImmediately(param: AnimateParam, processor: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | param | [AnimateParam](../../apis-na/arkts-apis/arkts-na-common-animateparam-i.md) | 是 | 设置动画效果相关参数。 |
-| processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
+| processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
 
 ## clearResourceCache
 
@@ -174,7 +178,7 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) | the luminance sampler or undefined. |
+| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) \| undefined | the luminance sampler or undefined. |
 
 **示例**
 
@@ -234,7 +238,7 @@ struct ImageRecycleSample {
 setDynamicDimming(id: string, value: number): void
 ```
 
-通过该方法设置组件的压暗程度。 > **说明：** > > 设置该属性后设置其他效果类属性会导致效果冲突。
+通过该方法设置组件的压暗程度。 &gt; **说明：** &gt; &gt; 设置该属性后设置其他效果类属性会导致效果冲突。
 
 **起始版本：** 12
 

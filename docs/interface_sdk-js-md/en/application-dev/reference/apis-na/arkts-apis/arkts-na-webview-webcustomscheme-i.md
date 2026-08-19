@@ -1,6 +1,6 @@
 # WebCustomScheme
 
-Defines the configuration of web custom scheme, related to [customizeSchemes](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#customizeschemes) method.
+Defines the configuration of web custom scheme, related to [customizeSchemes](arkts-na-webview-webviewcontroller-c.md#customizeschemes) method.
 
 **Since:** 23
 

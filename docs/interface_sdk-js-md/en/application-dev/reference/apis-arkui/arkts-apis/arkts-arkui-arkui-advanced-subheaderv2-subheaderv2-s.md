@@ -1,6 +1,6 @@
 # SubHeaderV2
 
-The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates. > **NOTE：**> > - This component can be used only in the stage model. > > - If the **SubHeaderV2** component has universal attributes and > universal events configured, the compiler toolchain automatically > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node > rather than the **SubHeaderV2** component itself. As a result, the configured universal attributes and universal > events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events > with the **SubHeaderV2** component.
+The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section. This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates. &gt; **NOTE：**&gt; &gt; - This component can be used only in the stage model. &gt; &gt; - If the **SubHeaderV2** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **SubHeaderV2** component itself. As a result, the configured universal attributes and universal &gt; events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events &gt; with the **SubHeaderV2** component.
 
 **Since:** 18
 
@@ -126,7 +126,7 @@ Title of the subheader. Default value: **undefined**
   titleBuilder?: SubHeaderV2TitleBuilder
 ```
 
-Custom content for the title area. Default value: **() => void**
+Custom content for the title area. Default value: **() =&gt; void**
 
 **Type:** [SubHeaderV2TitleBuilder](arkts-arkui-subheaderv2titlebuilder-t.md)
 

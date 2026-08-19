@@ -73,7 +73,7 @@ Obtains detailed attributes of a file or directory. The returned **Stat** object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string \| int | Yes | Application sandbox path, URI, or FD of the file or directory. <br>**Note：**: URIs can be passed since API version 22. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the file or directory information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the file or directory information obtained. |
 
 **Error codes:**
 

@@ -23,7 +23,7 @@ import { cameraPicker } from '@kit.CameraKit';
 enableAutoDeviceSwitch(enabled: boolean): void
 ```
 
-Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported) to check whether the device supports automatic camera switch. > **NOTE：**> > This API is used only for foldable devices with multiple front cameras. In different fold states, the system > can automatically switch to an available front camera. It does not enable automatic switching between front and > rear cameras.
+Enables or disables automatic camera switch. You can use [isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported) to check whether the device supports automatic camera switch. &gt; **NOTE：**&gt; &gt; This API is used only for foldable devices with multiple front cameras. In different fold states, the system &gt; can automatically switch to an available front camera. It does not enable automatic switching between front and &gt; rear cameras.
 
 **Since:** 23
 

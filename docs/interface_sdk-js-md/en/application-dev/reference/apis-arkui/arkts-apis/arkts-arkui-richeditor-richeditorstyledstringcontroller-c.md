@@ -34,7 +34,7 @@ Get the selection in the StyledString of the RichEditor.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) |  |
+| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) \| undefined |  |
 
 ## getStyledString
 
@@ -58,7 +58,7 @@ Get the StyledString of the RichEditor.
 
 | Type | Description |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) |  |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) \| undefined |  |
 
 ## onContentChanged
 

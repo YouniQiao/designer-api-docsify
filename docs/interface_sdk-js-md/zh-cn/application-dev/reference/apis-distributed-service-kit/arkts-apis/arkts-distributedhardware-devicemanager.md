@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## 汇总

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryDeviceEventStats
@@ -29,7 +30,7 @@ function queryDeviceEventStats(begin: long, end: long, callback: AsyncCallback<A
 | --- | --- | --- | --- |
 | begin | long | 是 | 起始时间，单位：ms。 |
 | end | long | 是 | 结束时间，单位：ms。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为起始和结束时间段内，系统事件（休眠、唤醒、解锁、锁屏）的统计信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceEventStats](arkts-backgroundtasks-usagestatistics-deviceeventstats-i-sys.md)&gt;&gt; | 是 | 回调函数。 当查询成功，err为undefined，data为起始和结束时间段内，系统事件（休眠、唤醒、解锁、锁屏）的统计信息；否则为错误对象。 |
 
 **错误码：**
 

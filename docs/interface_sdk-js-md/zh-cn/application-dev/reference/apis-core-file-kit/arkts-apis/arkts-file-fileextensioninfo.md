@@ -5,6 +5,7 @@
 ## 导入模块
 
 ```TypeScript
+import { fileExtensionInfo } from '@kit.CoreFileKit';
 ```
 
 ## 汇总

@@ -1,6 +1,6 @@
 # @ohos.deviceInfo
 
-The **deviceInfo** module provides terminal device information query, which cannot be configured by developers. > **NOTE：**> > The initial APIs of this module are supported since API version 6. Newly added APIs > will be marked with a superscript to indicate their earliest API version. > Some parameters whose return value is the default value are not yet available. > The APIs of this module return information about device getants. You are not expected to call these APIs > frequently.
+The **deviceInfo** module provides terminal device information query, which cannot be configured by developers. &gt; **NOTE：**&gt; &gt; The initial APIs of this module are supported since API version 6. Newly added APIs &gt; will be marked with a superscript to indicate their earliest API version. &gt; Some parameters whose return value is the default value are not yet available. &gt; The APIs of this module return information about device getants. You are not expected to call these APIs &gt; frequently.
 
 **Since:** 24
 

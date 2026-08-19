@@ -13,5 +13,6 @@
 ## 导入模块
 
 ```TypeScript
+import { picker } from '@kit.CoreFileKit';
 ```
 

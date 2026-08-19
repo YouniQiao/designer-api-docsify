@@ -73,7 +73,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
@@ -113,7 +113,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
@@ -154,7 +154,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
@@ -197,7 +197,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushPath
@@ -234,7 +234,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPath
 
@@ -270,7 +270,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -307,7 +307,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -346,7 +346,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## replacePath
 
@@ -382,7 +382,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## replacePath
 
@@ -418,7 +418,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
 ## replacePathByName
 
@@ -455,5 +455,5 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 

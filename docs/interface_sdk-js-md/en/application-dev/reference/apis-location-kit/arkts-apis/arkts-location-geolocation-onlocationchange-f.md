@@ -6,7 +6,7 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-## on_locationChange('locationChange')
+## on('locationChange')
 
 ```TypeScript
 function on(type: 'locationChange', request: LocationRequest, callback: Callback<Location>): void
@@ -32,7 +32,7 @@ Subscribe location changed
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
 | request | LocationRequest | Yes | Indicates the location request parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
 

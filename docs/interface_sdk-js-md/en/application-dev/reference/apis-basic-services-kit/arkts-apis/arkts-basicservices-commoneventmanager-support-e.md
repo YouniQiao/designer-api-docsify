@@ -312,7 +312,7 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 ```
 
-Indicates that a new application package has been installed on the device. When a new application is installed by a specified user on the device, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the installation event of themselves.
+Indicates that a new application package has been installed on the device. When a new application is installed by a specified user on the device, the event notification service is triggered to publish this event. &gt; **NOTE：**&gt; &gt; Third-party applications can only listen for the installation event of themselves.
 
 **Since:** 23
 
@@ -396,7 +396,7 @@ Indicates that an installed application has been completely uninstalled from the
 COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 ```
 
-Indicates that an application package has been changed (for example, an ability in the package has been enabled or disabled). When an application package installed on the device is updated or an ability in the package is enabled or disabled, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the change event of themselves.
+Indicates that an application package has been changed (for example, an ability in the package has been enabled or disabled). When an application package installed on the device is updated or an ability in the package is enabled or disabled, the event notification service is triggered to publish this event. &gt; **NOTE：**&gt; &gt; Third-party applications can only listen for the change event of themselves.
 
 **Since:** 23
 
@@ -410,7 +410,7 @@ Indicates that an application package has been changed (for example, an ability 
 COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 ```
 
-Indicates that the user has restarted the application package and killed all its processes. When the specified user restarts the application and kills all its processes, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the restart event of themselves.
+Indicates that the user has restarted the application package and killed all its processes. When the specified user restarts the application and kills all its processes, the event notification service is triggered to publish this event. &gt; **NOTE：**&gt; &gt; Third-party applications can only listen for the restart event of themselves.
 
 **Since:** 23
 
@@ -424,7 +424,7 @@ Indicates that the user has restarted the application package and killed all its
 COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 ```
 
-Indicates that the user has cleared the application package data. When the specified user clears the application package data on the device, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the data clearance event of themselves.
+Indicates that the user has cleared the application package data. When the specified user clears the application package data on the device, the event notification service is triggered to publish this event. &gt; **NOTE：**&gt; &gt; Third-party applications can only listen for the data clearance event of themselves.
 
 **Since:** 23
 
@@ -438,7 +438,7 @@ Indicates that the user has cleared the application package data. When the speci
 COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'
 ```
 
-Indicates that the user cleared the application package cache. When the cache of an application package installed on the device is cleared, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the cache clearance event of themselves.
+Indicates that the user cleared the application package cache. When the cache of an application package installed on the device is cleared, the event notification service is triggered to publish this event. &gt; **NOTE：**&gt; &gt; Third-party applications can only listen for the cache clearance event of themselves.
 
 **Since:** 23
 
@@ -2393,7 +2393,7 @@ Indicates that the SPN information had changed.
 COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'
 ```
 
-Indicates the result of applying a quick fix to the application. When the specified user applies a quick fix to the application on the device, the event notification service is triggered to publish this event. > **NOTE：**> > Third-party applications can only listen for the quick fix event of themselves.
+Indicates the result of applying a quick fix to the application. When the specified user applies a quick fix to the application on the device, the event notification service is triggered to publish this event. &gt; **NOTE：**&gt; &gt; Third-party applications can only listen for the quick fix event of themselves.
 
 **Since:** 23
 
@@ -2537,7 +2537,7 @@ Indicates that the screen has been locked. When the screen is locked, the event 
 COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 ```
 
-Indicates that the network connection state has changed. When the (Ethernet, Wi-Fi, or cellular) network connection state changes (disconnected, connecting, or connected) , the event notification service is triggered to publish this event. The following table lists the enum values and their corresponding connection status. > **NOTE：**> The following table lists the enum values and their corresponding connection status > > | Value | Connection State | > | ------ | ---------- | > | 2 | Connecting. | > | 3 | Connected. | > | 4 | Disconnecting.| > | 5 | Disconnected. |.
+Indicates that the network connection state has changed. When the (Ethernet, Wi-Fi, or cellular) network connection state changes (disconnected, connecting, or connected) , the event notification service is triggered to publish this event. The following table lists the enum values and their corresponding connection status. &gt; **NOTE：**&gt; The following table lists the enum values and their corresponding connection status &gt; &gt; | Value | Connection State | &gt; | ------ | ---------- | &gt; | 2 | Connecting. | &gt; | 3 | Connected. | &gt; | 4 | Disconnecting.| &gt; | 5 | Disconnected. |.
 
 **Since:** 23
 

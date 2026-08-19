@@ -33,8 +33,6 @@ Constructs the target with the elements of specified array as the arguments and 
 
 | Type | Description |
 | --- | --- |
-| R |  |
-
 
 ## construct
 
@@ -58,5 +56,3 @@ function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: 
 
 | Type | Description |
 | --- | --- |
-| any |  |
-

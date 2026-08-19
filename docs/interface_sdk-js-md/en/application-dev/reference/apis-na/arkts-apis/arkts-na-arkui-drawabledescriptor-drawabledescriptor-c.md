@@ -37,7 +37,7 @@ Get pixelMap of drawable image.
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | Return the PixelMap of the calling DrawableDescriptor object. |
+| image.PixelMap \| undefined | Return the PixelMap of the calling DrawableDescriptor object. |
 
 ## invalidate
 

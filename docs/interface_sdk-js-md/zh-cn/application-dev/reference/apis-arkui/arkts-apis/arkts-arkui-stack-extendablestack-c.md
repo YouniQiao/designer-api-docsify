@@ -108,5 +108,5 @@ Set the Stack Options.
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableStack](arkts-arkui-stack-extendablestack-c.md) |  |
 

@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { dataShare } from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## 汇总

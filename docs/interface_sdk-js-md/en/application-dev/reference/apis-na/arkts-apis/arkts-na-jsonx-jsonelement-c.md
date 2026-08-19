@@ -1196,7 +1196,7 @@ Attempts to get an array value from the element. Returns undefined if the value 
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[JsonElement](arkts-na-jsonx-jsonelement-c.md)&gt; | The array value if found, undefined otherwise. |
+| Array&lt;[JsonElement](arkts-na-jsonx-jsonelement-c.md)&gt; \| undefined | The array value if found, undefined otherwise. |
 
 ## tryAsBigInt
 
@@ -1220,7 +1220,7 @@ Attempts to get a bigint value from the element. Returns undefined if the value 
 
 | Type | Description |
 | --- | --- |
-| bigint | The bigint value if found, undefined otherwise. |
+| bigint \| undefined | The bigint value if found, undefined otherwise. |
 
 ## tryAsBoolean
 
@@ -1244,7 +1244,7 @@ Attempts to get a boolean value from the element. Returns undefined if the value
 
 | Type | Description |
 | --- | --- |
-| boolean | The boolean value if found, undefined otherwise. |
+| boolean \| undefined | The boolean value if found, undefined otherwise. |
 
 ## tryAsDouble
 
@@ -1268,7 +1268,7 @@ Attempts to get a double value from the element. Returns undefined if the value 
 
 | Type | Description |
 | --- | --- |
-| double | The double value if found, undefined otherwise. |
+| double \| undefined | The double value if found, undefined otherwise. |
 
 ## tryAsInteger
 
@@ -1292,7 +1292,7 @@ Attempts to get an integer value from the element. Returns undefined if the valu
 
 | Type | Description |
 | --- | --- |
-| int | The integer value if found, undefined otherwise. |
+| int \| undefined | The integer value if found, undefined otherwise. |
 
 ## tryAsLong
 
@@ -1316,7 +1316,7 @@ Attempts to get a long value from the element. Returns undefined if the value is
 
 | Type | Description |
 | --- | --- |
-| long | The long value if found, undefined otherwise. |
+| long \| undefined | The long value if found, undefined otherwise. |
 
 ## tryAsNull
 
@@ -1340,7 +1340,7 @@ Attempts to get a null value from the element. Returns undefined if the value is
 
 | Type | Description |
 | --- | --- |
-| null | The null value if found, undefined otherwise. |
+| null \| undefined | The null value if found, undefined otherwise. |
 
 ## tryAsString
 
@@ -1364,7 +1364,7 @@ Attempts to get a string value from the element. Returns undefined if the value 
 
 | Type | Description |
 | --- | --- |
-| string | The string value if found, undefined otherwise. |
+| string \| undefined | The string value if found, undefined otherwise. |
 
 ## tryGetArray
 
@@ -1487,7 +1487,7 @@ Attempts to get a double value from an object by key and ensures it is a double.
 
 | Type | Description |
 | --- | --- |
-| double | The double value if found, fallback value otherwise. |
+| double \| undefined | The double value if found, fallback value otherwise. |
 
 ## tryGetElement
 
@@ -1517,7 +1517,7 @@ Attempts to get a JSON element from an object by key. Returns undefined if the k
 
 | Type | Description |
 | --- | --- |
-| [JsonElement](arkts-na-jsonx-jsonelement-c.md) | The JSON element if found, undefined otherwise. |
+| [JsonElement](arkts-na-jsonx-jsonelement-c.md) \| undefined | The JSON element if found, undefined otherwise. |
 
 ## tryGetInteger
 
@@ -1609,7 +1609,7 @@ Attempts to get a null value from an object by key. Returns undefined if the key
 
 | Type | Description |
 | --- | --- |
-| null | The null value if found, undefined otherwise. |
+| null \| undefined | The null value if found, undefined otherwise. |
 
 ## tryGetString
 

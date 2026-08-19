@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -29,15 +30,15 @@
 | [getPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md) | 系统应用调用此接口，可以获取指定子身份资料的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。 |
 | [getPermissionUsedTypeInfos](arkts-ability-privacymanager-getpermissionusedtypeinfos-f-sys.md) | 查询设备上指定应用访问敏感权限时的信息（包括敏感权限名称、敏感权限访问方式）。 |
 | [offActiveStateChange](arkts-ability-privacymanager-offactivestatechange-f-sys.md) | 取消订阅指定权限列表的权限使用状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变更通知。 取消订阅时，若不传入回调函数，则批量删除permissionList下的所有回调函数。 |
-| off_activeStateChange | 取消订阅指定权限列表的权限使用状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变更通知。 取消订阅时，若不传入回调函数，则批量删除permissionList下的所有回调函数。 |
+| [off_activeStateChange](arkts-ability-privacymanager-offactivestatechange-f-sys.md) | 取消订阅指定权限列表的权限使用状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变更通知。 取消订阅时，若不传入回调函数，则批量删除permissionList下的所有回调函数。 |
 | [onActiveStateChange](arkts-ability-privacymanager-onactivestatechange-f-sys.md) | 订阅指定权限列表的权限使用状态变更事件。权限使用状态变更由 [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)和 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)调用触发。订阅成功 后，当权限使用状态变更时，回调函数会被触发，返回[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)对象，包含权限使用状态变化的详情。使用 callback异步回调。 允许相同permissionList订阅多个回调函数。 |
-| on_activeStateChange | 订阅指定权限列表的权限使用状态变更事件。权限使用状态变更由[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)和[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)调用触发。订阅成功后，当权限使用状态变更时，回调函数会被触发，返回[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)对象，包含权限使用状态变化的详情。使用callback异步回调。 允许相同permissionList订阅多个回调函数。 |
+| [on_activeStateChange](arkts-ability-privacymanager-onactivestatechange-f-sys.md) | 订阅指定权限列表的权限使用状态变更事件。权限使用状态变更由[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)和[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)调用触发。订阅成功后，当权限使用状态变更时，回调函数会被触发，返回[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)对象，包含权限使用状态变化的详情。使用callback异步回调。 允许相同permissionList订阅多个回调函数。 |
 | [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) | 设置是否记录当前用户的权限使用情况。系统应用调用此接口，可以设置当前用户的权限使用记录开关状态。使用Promise异步回调。 status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口可以正常添加使用记录；status为false时， [addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口不产生权限使用记录，并且删除当前用户的历史记录。 |
 | [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md) | 设置是否记录指定子身份资料的权限使用情况。系统应用调用此接口，可以设置指定子身份资料的权限使用记录开关状态。使用Promise异步回调。 status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口可以正常添加使用记录；status为false时，addPermissionUsedRecord][addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)接口不产生权限使用记录，并且删除指定子身份资料的历史记录。 |
-| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考on）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)停止使用权限。 |
-| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 on）。 使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 |
-| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 on ）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 当传入pid时，pid需要与 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 传入的pid相同，不满足配套关系返回错误码12100004。 |
-| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 on ）。使用callback异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 |
+| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)停止使用权限。 |
+| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。 使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 |
+| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 当传入pid时，pid需要与 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 传入的pid相同，不满足配套关系返回错误码12100004。 |
+| [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md) | 系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用callback异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 |
 | [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) | 系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。 适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。 该接口需与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)配套使用。 |
 | [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) | 系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。 适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用callback异步回调。 该接口需与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)配套使用。 |
 | [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) | 系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。 适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。 pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md)传入的pid相同。 |
@@ -65,7 +66,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md) | 表示权限使用状态变化类型的枚举。用于描述权限使用on)）的回调中返回，帮助应用感知权限从未使用到前台使用、后台使用的状态切换。 |
+| [PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md) | 表示权限使用状态变化类型的枚举。用于描述权限使用[on)](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）的回调中返回，帮助应用感知权限从未使用到前台使用、后台使用的状态切换。 |
 | [PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md) | 表示使用记录的查询方式的枚举。 |
 | [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 表示通过何种方式使用敏感权限的枚举。 \| 名称 \| 值 \| 说明 \| \| ----------------------- \| -- \| ---------------- \| \| NORMAL_TYPE \| 0 \| 表示通过弹窗授权或设置授权来使用敏感权限。 \| \| PICKER_TYPE \| 1 \| 表示通过某个PICKER服务来使用敏感权限，但此方式不会授予权限。 \| \| SECURITY_COMPONENT_TYPE \| 2 \| 表示通过安全控件授权的方式来使用敏感权限。安全控件是系统提供的授权控件，用户点击后应用可临时获取对应权限。 \| |
 <!--DelEnd-->

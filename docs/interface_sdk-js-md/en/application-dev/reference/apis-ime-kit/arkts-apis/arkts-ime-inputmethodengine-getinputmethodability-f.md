@@ -51,5 +51,5 @@ Get InputMethodAbility object to subscribe events about IME.
 
 | Type | Description |
 | --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | the object of the InputMethodAbility. |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) \| null | the object of the InputMethodAbility. |
 

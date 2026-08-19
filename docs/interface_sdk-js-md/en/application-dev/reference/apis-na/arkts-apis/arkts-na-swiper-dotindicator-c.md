@@ -40,7 +40,7 @@ Set the indicator color.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## constructor
 
@@ -88,7 +88,7 @@ Set indicator icon.
 
 | Type | Description |
 | --- | --- |
-| this | return the DotIndicator. |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) | return the DotIndicator. |
 
 ## itemHeight
 
@@ -118,7 +118,7 @@ Set the indicator item height.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## itemWidth
 
@@ -148,7 +148,7 @@ Set the indicator item width.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## mask
 
@@ -178,7 +178,7 @@ Setting indicator style mask.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## maxDisplayCount
 
@@ -208,7 +208,7 @@ Set the Indicator maxDisplayCount when selected.
 
 | Type | Description |
 | --- | --- |
-| this | return the DotIndicator |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) | return the DotIndicator |
 
 ## selectedColor
 
@@ -238,7 +238,7 @@ Set the navigation point color.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## selectedItemHeight
 
@@ -268,7 +268,7 @@ Set the indicator item height when selected.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## selectedItemWidth
 
@@ -298,7 +298,7 @@ Set the indicator item width when selected.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## space
 
@@ -328,5 +328,5 @@ Set the space between dots.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 

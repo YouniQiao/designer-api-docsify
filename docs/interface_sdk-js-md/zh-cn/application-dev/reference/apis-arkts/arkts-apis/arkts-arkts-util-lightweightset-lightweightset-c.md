@@ -11,6 +11,8 @@ LightWeightSet可用于存储一系列值，存储元素中value唯一。
 ## 导入模块
 
 ```TypeScript
+import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -323,7 +325,7 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-判断此容器与obj的构成元素是否相同。 > **说明：** > > 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
+判断此容器与obj的构成元素是否相同。 &gt; **说明：** &gt; &gt; 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -569,7 +571,7 @@ getValueAt(index: int): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回指定下标对应的值，如果下标超出范围则返回undefined。 |
+| T \| undefined | 返回指定下标对应的值，如果下标超出范围则返回undefined。 |
 
 ## has
 
@@ -807,7 +809,7 @@ remove(key: T): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 如果存在则返回被删除的值，否则返回undefined。 |
+| T \| undefined | 如果存在则返回被删除的值，否则返回undefined。 |
 
 **示例**
 

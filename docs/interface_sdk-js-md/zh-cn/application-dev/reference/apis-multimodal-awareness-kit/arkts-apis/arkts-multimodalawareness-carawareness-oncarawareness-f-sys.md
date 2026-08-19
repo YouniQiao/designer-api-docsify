@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onCarAwareness
@@ -29,7 +30,7 @@ function onCarAwareness(capability: Capability, callback: Callback<CarAwarenessI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | capability | Capability | 是 | 表示特定能力。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CarAwarenessInfo](arkts-multimodalawareness-carawareness-carawarenessinfo-i-sys.md)[]&gt; | 是 | Callback used to return obtaining corresponding capability data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CarAwarenessInfo](arkts-multimodalawareness-carawareness-carawarenessinfo-i-sys.md)[]&gt; | 是 | Callback used to return obtaining corresponding capability data. |
 | options | [CarAwarenessOptions](arkts-multimodalawareness-carawareness-carawarenessoptions-i-sys.md) | 否 | Indicates options to specific capability. |
 
 **错误码：**

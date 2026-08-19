@@ -40,8 +40,6 @@ attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | Att
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindSelectionMenu
 
 ```TypeScript
@@ -68,8 +66,6 @@ bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | u
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## caretColor
 
 ```TypeScript
@@ -92,8 +88,6 @@ caretColor(color: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## copyOption
 
 ```TypeScript
@@ -116,8 +110,6 @@ copyOption(value: CopyOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## editMenuOptions
 
 ```TypeScript
@@ -140,8 +132,6 @@ editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableHapticFeedback
 
 ```TypeScript
@@ -164,8 +154,6 @@ enableHapticFeedback(isEnabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onCopy
 
 ```TypeScript
@@ -188,8 +176,6 @@ onCopy(callback: Callback<string> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onTextSelectionChange
 
 ```TypeScript
@@ -212,8 +198,6 @@ onTextSelectionChange(callback: Callback<Array<string>> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onWillCopy
 
 ```TypeScript
@@ -236,8 +220,6 @@ onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedBackgroundColor
 
 ```TypeScript
@@ -260,8 +242,6 @@ selectedBackgroundColor(color: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setSelectionContainerOptions
 
 ```TypeScript
@@ -278,8 +258,6 @@ setSelectionContainerOptions(): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## textJoinStyle
 
 ```TypeScript
@@ -302,8 +280,6 @@ textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

@@ -31,8 +31,6 @@ Combines two or more arrays. This method returns a new array without modifying a
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## concat
 
 ```TypeScript
@@ -55,8 +53,6 @@ Combines two or more arrays. This method returns a new array without modifying a
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## every
 
 ```TypeScript
@@ -80,8 +76,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Type | Description |
 | --- | --- |
-| this is S[] |  |
-
 ## every
 
 ```TypeScript
@@ -105,8 +99,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## filter
 
 ```TypeScript
@@ -130,8 +122,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Type | Description |
 | --- | --- |
-| S[] |  |
-
 ## filter
 
 ```TypeScript
@@ -155,8 +145,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## forEach
 
 ```TypeScript
@@ -199,8 +187,6 @@ Returns the index of the first occurrence of a value in an array, or -1 if it is
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## join
 
 ```TypeScript
@@ -223,8 +209,6 @@ Adds all the elements of an array into a string, separated by the specified sepa
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## lastIndexOf
 
 ```TypeScript
@@ -248,8 +232,6 @@ Returns the index of the last occurrence of a specified value in an array, or -1
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## map
 
 ```TypeScript
@@ -273,8 +255,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | Type | Description |
 | --- | --- |
-| U[] |  |
-
 ## pop
 
 ```TypeScript
@@ -291,8 +271,6 @@ Removes the last element from an array and returns it. If the array is empty, un
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## push
 
 ```TypeScript
@@ -315,8 +293,6 @@ Appends new elements to the end of an array, and returns the new length of the a
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## reduce
 
 ```TypeScript
@@ -339,8 +315,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduce
 
 ```TypeScript
@@ -362,8 +336,6 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduce
 
 ```TypeScript
@@ -387,8 +359,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -411,8 +381,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -434,8 +402,6 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -459,8 +425,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## reverse
 
 ```TypeScript
@@ -477,8 +441,6 @@ Reverses the elements in an array in place. This method mutates the array and re
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## shift
 
 ```TypeScript
@@ -495,8 +457,6 @@ Removes the first element from an array and returns it. If the array is empty, u
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## slice
 
 ```TypeScript
@@ -520,8 +480,6 @@ Returns a copy of a section of an array. For both start and end, a negative inde
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## some
 
 ```TypeScript
@@ -545,8 +503,6 @@ Determines whether the specified callback function returns true for any element 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## sort
 
 ```TypeScript
@@ -569,8 +525,6 @@ Sorts an array in place. This method mutates the array and returns a reference t
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## splice
 
 ```TypeScript
@@ -594,8 +548,6 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## splice
 
 ```TypeScript
@@ -620,8 +572,6 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## toLocaleString
 
 ```TypeScript
@@ -638,8 +588,6 @@ Returns a string representation of an array. The elements are converted to strin
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -656,8 +604,6 @@ Returns a string representation of an array.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## unshift
 
 ```TypeScript
@@ -680,8 +626,6 @@ Inserts new elements at the start of an array, and returns the new length of the
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## length
 
 ```TypeScript

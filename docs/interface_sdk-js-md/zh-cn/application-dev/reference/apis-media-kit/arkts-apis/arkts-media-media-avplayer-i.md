@@ -1,6 +1,6 @@
 # AVPlayer
 
-播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个 AVPlayer实例。 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 on('stateChange')：监听播放状态机 AVPlayerState切换。on('error')：监听错误事件。 应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。 Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、 [视频播放开发指导](../../../media/media/video-playback.md)。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
+播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md)构建一个 AVPlayer实例。 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 on('stateChange')：监听播放状态机 AVPlayerState切换。on('error')：监听错误事件。 应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。 Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、 [视频播放开发指导](../../../media/media/video-playback.md)。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## addSubtitleFromFd
@@ -126,7 +127,7 @@ deselectTrack(index: int): Promise<void>
 getLoadedTimeRanges(): Promise<Array<Range>>
 ```
 
-获取已加载的时间区间段的列表。使用Promise异步回调。 > **说明：** > > - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。 > > - 对于网络媒体资源，返回本地已缓存的时间区间段的列表。
+获取已加载的时间区间段的列表。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。 &gt; &gt; - 对于网络媒体资源，返回本地已缓存的时间区间段的列表。
 
 **起始版本：** 26.0.0
 
@@ -208,7 +209,7 @@ getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>
 getSeekableTimeRanges(): Promise<Array<Range>>
 ```
 
-获取可跳转的时间区间段的列表。使用Promise异步回调。 > **说明：** > > - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。 > > - 对于仅支持分块传输的媒体资源，没有可跳转的时间范围。
+获取可跳转的时间区间段的列表。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。 &gt; &gt; - 对于仅支持分块传输的媒体资源，没有可跳转的时间范围。
 
 **起始版本：** 26.0.0
 
@@ -272,7 +273,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数，当获取音视频轨道信息成功，err为undefined，data为获取到的 MediaDescription数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数，当获取音视频轨道信息成功，err为undefined，data为获取到的 MediaDescription数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -356,7 +357,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 暂停播放的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 暂停播放的回调方法。 |
 
 **错误码：**
 
@@ -412,7 +413,7 @@ play(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 开始播放的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 开始播放的回调方法。 |
 
 **错误码：**
 
@@ -468,7 +469,7 @@ prepare(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 准备播放的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 准备播放的回调方法。 |
 
 **错误码：**
 
@@ -526,7 +527,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 销毁播放的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 销毁播放的回调方法。 |
 
 **错误码：**
 
@@ -582,7 +583,7 @@ reset(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 重置播放的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 重置播放的回调方法。 |
 
 **错误码：**
 
@@ -624,7 +625,7 @@ reset(): Promise<void>
 seek(timeMs: int, mode?: SeekMode): void
 ```
 
-跳转到指定播放位置，只能在prepared/playing/paused/completed状态调用，可以通过 on('seekDone')事件确认是否生效。 > **注意：** > > 从API版本26.0.0开始，直播场景支持seek。
+跳转到指定播放位置，只能在prepared/playing/paused/completed状态调用，可以通过 on('seekDone')事件确认是否生效。 &gt; **注意：** &gt; &gt; 从API版本26.0.0开始，直播场景支持seek。
 
 **起始版本：** 23
 
@@ -886,7 +887,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 停止播放的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 停止播放的回调方法。 |
 
 **错误码：**
 

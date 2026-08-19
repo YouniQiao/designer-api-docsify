@@ -27,7 +27,7 @@ Obtains the path of the configuration file with the highest priority. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ Obtains the path of the configuration file with the highest priority based on th
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -125,7 +125,7 @@ Obtains the path of the configuration file with the highest priority based on th
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
 | extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined). |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the configuration file path is successfully obtained, **err** is **undefined**, and **data** is the path of the configuration file with the highest priority. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

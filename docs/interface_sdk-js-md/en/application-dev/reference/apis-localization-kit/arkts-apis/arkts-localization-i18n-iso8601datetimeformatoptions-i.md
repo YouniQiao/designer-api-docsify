@@ -102,7 +102,7 @@ timeZone?: TimeZone
 
 TimeZone object used to format date, default value UTC.
 
-**Type:** [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md)
+**Type:** [TimeZone](arkts-localization-i18n-timezone-c.md)
 
 **Since:** 26.0.0
 

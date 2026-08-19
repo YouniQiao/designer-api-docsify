@@ -28,9 +28,9 @@ import { nfcController } from '@kit.ConnectivityKit';
 | [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md) | Checks whether NFC is enabled. |
 | [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md) | Checks whether a device supports NFC. |
 | [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | unregister nfc state changed event. |
-| off_nfcStateChange | unregister nfc state changed event. |
+| [off_nfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md) | unregister nfc state changed event. |
 | [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | register nfc state changed event. |
-| on_nfcStateChange | register nfc state changed event. |
+| [on_nfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md) | register nfc state changed event. |
 | [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md) | Enables NFC. |
 
 ### Enums

@@ -1,6 +1,6 @@
 # Lattice
 
-Lattice object. which is used to divide an image by lattice. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Lattice object. which is used to divide an image by lattice. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Type | Description |
 | --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice object. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined | Lattice object. |
 
 **Error codes:**
 
@@ -162,7 +162,7 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Type | Description |
 | --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice object. |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined | Lattice object. |
 
 **Error codes:**
 

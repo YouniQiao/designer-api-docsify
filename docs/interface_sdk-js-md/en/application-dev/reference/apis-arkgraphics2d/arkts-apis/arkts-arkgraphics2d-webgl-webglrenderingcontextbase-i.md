@@ -504,7 +504,7 @@ Creates a buffer
 
 | Type | Description |
 | --- | --- |
-| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) | The created buffer |
+| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | The created buffer |
 
 ## createFramebuffer
 
@@ -526,7 +526,7 @@ Creates a framebuffer
 
 | Type | Description |
 | --- | --- |
-| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) | The created framebuffer |
+| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | The created framebuffer |
 
 ## createProgram
 
@@ -548,7 +548,7 @@ Creates a program
 
 | Type | Description |
 | --- | --- |
-| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | The created program |
+| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | The created program |
 
 ## createRenderbuffer
 
@@ -570,7 +570,7 @@ Creates a renderbuffer
 
 | Type | Description |
 | --- | --- |
-| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) | The created renderbuffer |
+| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | The created renderbuffer |
 
 ## createShader
 
@@ -598,7 +598,7 @@ Creates a shader
 
 | Type | Description |
 | --- | --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | The created shader |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | The created shader |
 
 ## createTexture
 
@@ -620,7 +620,7 @@ Creates a texture
 
 | Type | Description |
 | --- | --- |
-| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) | The created texture |
+| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | The created texture |
 
 ## cullFace
 
@@ -1168,7 +1168,7 @@ Returns information about an active attribute
 
 | Type | Description |
 | --- | --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) | Information about the active attribute |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active attribute |
 
 ## getActiveUniform
 
@@ -1197,7 +1197,7 @@ Returns information about an active uniform
 
 | Type | Description |
 | --- | --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) | Information about the active uniform |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) \| null | Information about the active uniform |
 
 ## getAttachedShaders
 
@@ -1225,7 +1225,7 @@ Returns the shaders attached to a program
 
 | Type | Description |
 | --- | --- |
-| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] | Array of attached shaders |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] \| null | Array of attached shaders |
 
 ## getAttribLocation
 
@@ -1305,7 +1305,7 @@ Returns the WebGLContextAttributes for the current context
 
 | Type | Description |
 | --- | --- |
-| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | The WebGLContextAttributes object |
+| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) \| null | The WebGLContextAttributes object |
 
 ## getError
 
@@ -1441,7 +1441,7 @@ Returns the program info log
 
 | Type | Description |
 | --- | --- |
-| string | The program info log |
+| string \| null | The program info log |
 
 ## getProgramParameter
 
@@ -1527,7 +1527,7 @@ Returns the shader info log
 
 | Type | Description |
 | --- | --- |
-| string | The shader info log |
+| string \| null | The shader info log |
 
 ## getShaderParameter
 
@@ -1585,7 +1585,7 @@ Returns the shader precision format
 
 | Type | Description |
 | --- | --- |
-| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) | The precision format |
+| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) \| null | The precision format |
 
 ## getShaderSource
 
@@ -1613,7 +1613,7 @@ Returns the shader source
 
 | Type | Description |
 | --- | --- |
-| string | The shader source |
+| string \| null | The shader source |
 
 ## getSupportedExtensions
 
@@ -1635,7 +1635,7 @@ Returns a list of supported extensions
 
 | Type | Description |
 | --- | --- |
-| string[] | List of supported extensions |
+| string[] \| null | List of supported extensions |
 
 ## getTexParameter
 
@@ -1722,7 +1722,7 @@ Returns the location of a uniform variable
 
 | Type | Description |
 | --- | --- |
-| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) | The uniform location |
+| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | The uniform location |
 
 ## getVertexAttrib
 

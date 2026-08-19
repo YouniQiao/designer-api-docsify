@@ -30,7 +30,7 @@ Obtains information about all auto-startup application components. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the information is obtained, **err** is **undefined** and **data** is **Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the information is obtained, **err** is **undefined** and **data** is **Array&lt;[AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md)&gt;**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

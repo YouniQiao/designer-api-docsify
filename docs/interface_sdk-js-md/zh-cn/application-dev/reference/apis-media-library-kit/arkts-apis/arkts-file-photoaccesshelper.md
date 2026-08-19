@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## 汇总
@@ -96,7 +97,7 @@
 | [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md) | 文件检索结果集。 |
 | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md) | 媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。 |
 | [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md) | 媒体资产进度处理器，应用于onProgress方法中获取媒体资产进度。 |
-| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | 媒体变更请求，资产变更请求和相册变更请求的父类型。 > **注意**： > > 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会 > 提交生效。 |
+| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | 媒体变更请求，资产变更请求和相册变更请求的父类型。 &gt; **注意**： &gt; &gt; 媒体变更请求需要在调用[applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges)后才会 &gt; 提交生效。 |
 | [MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md) | 媒体库可用性信息。 |
 | [MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md) | 动态照片对象。 |
 | [PhotoAccessHelper](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md) | 提供访问照片和相册的功能。 |

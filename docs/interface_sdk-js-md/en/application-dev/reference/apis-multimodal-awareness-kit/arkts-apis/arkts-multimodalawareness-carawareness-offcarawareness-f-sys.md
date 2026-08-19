@@ -30,7 +30,7 @@ Unsubscribes from vehicle sensing results.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | capability | Capability | Yes | Specific capability. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CarAwarenessInfo](arkts-multimodalawareness-carawareness-carawarenessinfo-i-sys.md)[]&gt; | No | Callback used to return the corresponding capability data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CarAwarenessInfo](arkts-multimodalawareness-carawareness-carawarenessinfo-i-sys.md)[]&gt; | No | Callback used to return the corresponding capability data. |
 | options | [CarAwarenessOptions](arkts-multimodalawareness-carawareness-carawarenessoptions-i-sys.md) | No | Indicates options to specific capability. |
 
 **Error codes:**

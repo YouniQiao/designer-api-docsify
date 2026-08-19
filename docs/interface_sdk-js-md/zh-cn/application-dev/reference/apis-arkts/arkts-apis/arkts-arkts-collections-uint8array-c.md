@@ -1,6 +1,6 @@
 # Uint8Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md)实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型：** \@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md)实现。 &gt; **说明：**&gt; &gt; - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; **装饰器类型：** \@Sendable
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -19,7 +20,7 @@
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个数字。 > **说明：** > > 本接口不支持在.ets文件中使用（和本文中其他迭代器方法不同，其他迭代器方法没有此限制）。
+返回一个迭代器，迭代器的每一项都是一个数字。 &gt; **说明：** &gt; &gt; 本接口不支持在.ets文件中使用（和本文中其他迭代器方法不同，其他迭代器方法没有此限制）。
 
 **起始版本：** 12
 
@@ -67,7 +68,7 @@ at(index: number): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取到的元素；如果未找到，则返回**undefined**。 |
+| number \| undefined | 获取到的元素；如果未找到，则返回**undefined**。 |
 
 **错误码：**
 
@@ -411,7 +412,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回 **undefined**。 |
+| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回 **undefined**。 |
 
 **错误码：**
 
@@ -727,7 +728,7 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Uint16Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Uint8Array的长度， 则返回**-1**。如果传入负数，则从后到前从ArkTS Uint8Array末尾开始搜索。 |
+| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Uint8Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Uint8Array的长度， 则返回**-1**。如果传入负数，则从后到前从ArkTS Uint8Array末尾开始搜索。 |
 
 **返回值：**
 

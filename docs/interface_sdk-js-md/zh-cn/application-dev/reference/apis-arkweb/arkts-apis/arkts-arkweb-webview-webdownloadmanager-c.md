@@ -11,6 +11,7 @@ WebDownloadManager是ArkWeb框架下Web组件下载任务的静态管理类，�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## resumeDownload
@@ -19,7 +20,7 @@ WebDownloadManager是ArkWeb框架下Web组件下载任务的静态管理类，�
 static resumeDownload(webDownloadItem: WebDownloadItem): void
 ```
 
-恢复一个失败的下载任务，需通过[WebDownloadItem.deserialize](arkts-arkweb-webview-webdownloaditem-c.md#deserialize)方法获取反序列化后的对象，仅适用于之前失败的下载任 务。 > **说明：** > > - 在调用本接口前，若尚未创建Web组件且未执行initializeWebEngine方法完成Web内核初始化，必须先调用initializeWebEngine方法进行初始化，否则接口调用无效。 > > - 必须先调用[setDownloadDelegate](#setdownloaddelegate)设置下载委托，否则会抛出错误码17100018。
+恢复一个失败的下载任务，需通过[WebDownloadItem.deserialize](arkts-arkweb-webview-webdownloaditem-c.md#deserialize)方法获取反序列化后的对象，仅适用于之前失败的下载任 务。 &gt; **说明：** &gt; &gt; - 在调用本接口前，若尚未创建Web组件且未执行initializeWebEngine方法完成Web内核初始化，必须先调用initializeWebEngine方法进行初始化，否则接口调用无效。 &gt; &gt; - 必须先调用[setDownloadDelegate](#setdownloaddelegate)设置下载委托，否则会抛出错误码17100018。
 
 **起始版本：** 11
 
@@ -47,7 +48,7 @@ static resumeDownload(webDownloadItem: WebDownloadItem): void
 static setDownloadDelegate(delegate: WebDownloadDelegate): void
 ```
 
-设置接收从WebDownloadManager触发的下载进度的委托。 > **说明：** > > - 在调用本接口前，若尚未创建Web组件且未执行[initializeWebEngine](arkts-arkweb-webview-webviewcontroller-c.md#initializewebengine)方法，必须先调用该方法完成 > Web内核初始化，否则接口调用无效。
+设置接收从WebDownloadManager触发的下载进度的委托。 &gt; **说明：** &gt; &gt; - 在调用本接口前，若尚未创建Web组件且未执行[initializeWebEngine](arkts-arkweb-webview-webviewcontroller-c.md#initializewebengine)方法，必须先调用该方法完成 &gt; Web内核初始化，否则接口调用无效。
 
 **起始版本：** 11
 

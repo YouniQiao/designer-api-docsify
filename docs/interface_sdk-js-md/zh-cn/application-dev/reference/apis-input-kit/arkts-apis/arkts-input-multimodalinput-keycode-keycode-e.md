@@ -446,7 +446,7 @@ KEYCODE_STAR = 2010
 KEYCODE_POUND = 2011
 ```
 
-按键'*'。
+按键'#'。
 
 **起始版本：** 23
 
@@ -1076,7 +1076,7 @@ KEYCODE_DEL = 2055
 KEYCODE_GRAVE = 2056
 ```
 
-按键'*'。
+按键'`'。
 
 **起始版本：** 23
 
@@ -1188,7 +1188,7 @@ KEYCODE_APOSTROPHE = 2063
 KEYCODE_SLASH = 2064
 ```
 
-按键'*'。
+按键'/'。
 
 **起始版本：** 23
 
@@ -1202,7 +1202,7 @@ KEYCODE_SLASH = 2064
 KEYCODE_AT = 2065
 ```
 
-按键'*'。
+按键'@'。
 
 **起始版本：** 23
 
@@ -2620,7 +2620,7 @@ KEYCODE_BOOKMARKS = 2628
 KEYCODE_NEXT = 2629
 ```
 
-向下翻页键。
+Page Down键。
 
 **起始版本：** 23
 
@@ -2634,7 +2634,7 @@ KEYCODE_NEXT = 2629
 KEYCODE_PLAYPAUSE = 2630
 ```
 
-多媒体键：播放/暂停。 与KEYCODE_MEDIA_PLAY_PAUSE的区别为： KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
+多媒体键：播放/暂停。<br>与KEYCODE_MEDIA_PLAY_PAUSE的区别为：<br> KEYCODE_PLAYPAUSE是较早的定义， KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键设备设计，常见于较新的媒体键设备。
 
 **起始版本：** 23
 
@@ -2648,7 +2648,7 @@ KEYCODE_PLAYPAUSE = 2630
 KEYCODE_PREVIOUS = 2631
 ```
 
-向上翻页键。
+Page Up键。
 
 **起始版本：** 23
 

@@ -28,7 +28,7 @@ Unsubscribe to rotate sensor event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md)&gt; | No | Callback used for rotate event unsubscription. <br> If this parameter is not specified, all callbacks of the rotate event are unsubscribed from. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md)&gt; | No | Callback used for rotate event unsubscription. <br> If this parameter is not specified, all callbacks of the rotate event are unsubscribed from. |
 
 **Error codes:**
 

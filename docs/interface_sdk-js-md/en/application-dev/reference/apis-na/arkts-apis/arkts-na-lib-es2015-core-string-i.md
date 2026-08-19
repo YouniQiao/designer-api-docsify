@@ -33,8 +33,6 @@ Returns an `&lt;a&gt;` HTML anchor element and sets the name attribute to the te
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## big
 
 ```TypeScript
@@ -53,8 +51,6 @@ Returns a `&lt;big&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## blink
 
 ```TypeScript
@@ -73,8 +69,6 @@ Returns a `&lt;blink&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## bold
 
 ```TypeScript
@@ -93,8 +87,6 @@ Returns a `&lt;b&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## codePointAt
 
 ```TypeScript
@@ -117,8 +109,6 @@ Returns a nonnegative integer Number less than 1114112 (0x110000) that is the co
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## endsWith
 
 ```TypeScript
@@ -142,8 +132,6 @@ Returns true if the sequence of elements of searchString converted to a String i
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## fixed
 
 ```TypeScript
@@ -162,8 +150,6 @@ Returns a `&lt;tt&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## fontcolor
 
 ```TypeScript
@@ -188,8 +174,6 @@ Returns a `&lt;font&gt;` HTML element and sets the color attribute value
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## fontsize
 
 ```TypeScript
@@ -214,8 +198,6 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## fontsize
 
 ```TypeScript
@@ -240,8 +222,6 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## includes
 
 ```TypeScript
@@ -265,8 +245,6 @@ Returns true if searchString appears as a substring of the result of converting 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## italics
 
 ```TypeScript
@@ -285,8 +263,6 @@ Returns an `&lt;i&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## link
 
 ```TypeScript
@@ -311,8 +287,6 @@ Returns an `&lt;a&gt;` HTML element and sets the href attribute value
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## normalize
 
 ```TypeScript
@@ -335,8 +309,6 @@ Returns the String value result of normalizing the string into the normalization
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## normalize
 
 ```TypeScript
@@ -359,8 +331,6 @@ Returns the String value result of normalizing the string into the normalization
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## repeat
 
 ```TypeScript
@@ -383,8 +353,6 @@ Returns a String value that is made from count copies appended together. If coun
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## small
 
 ```TypeScript
@@ -403,8 +371,6 @@ Returns a `&lt;small&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## startsWith
 
 ```TypeScript
@@ -428,8 +394,6 @@ Returns true if the sequence of elements of searchString converted to a String i
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## strike
 
 ```TypeScript
@@ -448,8 +412,6 @@ Returns a `&lt;strike&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## sub
 
 ```TypeScript
@@ -468,8 +430,6 @@ Returns a `&lt;sub&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## sup
 
 ```TypeScript
@@ -488,5 +448,3 @@ Returns a `&lt;sup&gt;` HTML element
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

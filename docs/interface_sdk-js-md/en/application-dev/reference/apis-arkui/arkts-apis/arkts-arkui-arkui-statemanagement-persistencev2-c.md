@@ -46,7 +46,7 @@ Stores key-value pair data on the application disk. If the given key already exi
 
 | Type | Description |
 | --- | --- |
-| T | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
+| T \| undefined | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
 
 ## globalConnect
 
@@ -78,7 +78,7 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 
 | Type | Description |
 | --- | --- |
-| T | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
+| T \| undefined | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
 
 **Examples**
 

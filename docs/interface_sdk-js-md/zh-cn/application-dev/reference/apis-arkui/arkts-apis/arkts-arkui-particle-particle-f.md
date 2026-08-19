@@ -32,7 +32,7 @@ Defines Particle Component
 
 | 类型 | 说明 |
 | --- | --- |
-| ParticleAttribute |  |
+| ParticleAttribute | <br>**适用版本：** 23+ |
 
 
 ## Particle

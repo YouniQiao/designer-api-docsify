@@ -28,7 +28,7 @@ Sets a value of the specified key. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | key | string | Yes | Target key. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
 | value | string | Yes | Value to set. The value can contain a maximum of 96 bytes (including the end character). |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

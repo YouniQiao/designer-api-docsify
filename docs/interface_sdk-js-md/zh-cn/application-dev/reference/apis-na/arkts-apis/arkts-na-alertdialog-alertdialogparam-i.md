@@ -326,7 +326,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。 **说明：** - 默认值：ImmersiveMode.DEFAULT - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** [ImmersiveMode](arkts-na-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -370,7 +370,7 @@ levelMode?: LevelMode
 
 设置弹窗显示层级。 **说明：** - 默认值：LevelMode.OVERLAY。 - 当且仅当showInSubWindow属性设置为false时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** [LevelMode](arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -392,7 +392,7 @@ levelOrder?: LevelOrder
 
 设置弹窗显示的顺序。 **说明：** - 默认值：LevelOrder.clamp(0) - 不支持动态刷新顺序。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 18开始，该接口支持在原子化服务中使用。
 
-**类型：** [LevelOrder](arkts-na-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md)
 
 **默认值：** The value returns by LevelOrder.clamp(0)
 
@@ -492,7 +492,7 @@ offset?: Offset
 onDidAppear?: VoidCallback
 ```
 
-弹窗弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -512,7 +512,7 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-弹窗消失后的事件回调。 **说明：** 正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗消失后的事件回调。 **说明：** 正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -532,7 +532,7 @@ onDidDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-弹窗显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -552,7 +552,7 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-弹窗退出动效前的事件回调。 **说明：** 正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗退出动效前的事件回调。 **说明：** 正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 

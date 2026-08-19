@@ -32,7 +32,7 @@ Obtains information about the peer application in the specified session.
 
 | Type | Description |
 | --- | --- |
-| PeerInfo | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
+| PeerInfo \| undefined | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ Get the application information in the ability connection session
 
 | Type | Description |
 | --- | --- |
-| PeerInfo | Returns the collaborative application information at the sink end. |
+| PeerInfo \| undefined | Returns the collaborative application information at the sink end. |
 
 **Error codes:**
 

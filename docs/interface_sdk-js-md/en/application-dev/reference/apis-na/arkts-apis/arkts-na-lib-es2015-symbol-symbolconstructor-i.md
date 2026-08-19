@@ -31,8 +31,6 @@ Returns a new unique Symbol value.
 
 | Type | Description |
 | --- | --- |
-| symbol |  |
-
 ## for
 
 ```TypeScript
@@ -55,8 +53,6 @@ Returns a Symbol object from the global symbol registry matching the given key i
 
 | Type | Description |
 | --- | --- |
-| symbol |  |
-
 ## keyFor
 
 ```TypeScript
@@ -79,8 +75,6 @@ Returns a key from the global symbol registry matching the given Symbol if found
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## prototype
 
 ```TypeScript

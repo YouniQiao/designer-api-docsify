@@ -152,7 +152,7 @@ Unregister picture-in-picture active status change listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -179,7 +179,7 @@ Unregister picture-in-picture control event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
 
 ## offControlPanelActionEvent
 
@@ -213,7 +213,7 @@ Unregister picture-in-picture window size change event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -235,7 +235,7 @@ Unregister picture-in-picture lifecycle state change listener.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## off_activeStatusChange('activeStatusChange')
+## off('activeStatusChange')
 
 ```TypeScript
 off(type: 'activeStatusChange', callback?: Callback<boolean>): void
@@ -256,7 +256,7 @@ Unsubscribes from PiP window active status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -267,7 +267,7 @@ let callback = (activeStatus: boolean) => {
 this.pipController.off('activeStatusChange', callback);
 ```
 
-## off_controlEvent('controlEvent')
+## off('controlEvent')
 
 ```TypeScript
 off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
@@ -288,7 +288,7 @@ Unsubscribes from PiP action events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -299,13 +299,13 @@ let callbackFunc = (event: PiPWindow.ControlEventParam) => {
 this.pipController.off('controlEvent', callbackFunc);
 ```
 
-## off_controlPanelActionEvent('controlPanelActionEvent')
+## off('controlPanelActionEvent')
 
 ```TypeScript
 off(type: 'controlPanelActionEvent'): void
 ```
 
-Unsubscribes from PiP action events. The **[off('controlEvent')](#off_statechangestatechange)** API is preferred.
+Unsubscribes from PiP action events. The **[off('controlEvent')](#offstatechange)** API is preferred.
 
 **Since:** 11
 
@@ -327,7 +327,7 @@ Unsubscribes from PiP action events. The **[off('controlEvent')](#off_statechang
 this.pipController.off('controlPanelActionEvent');
 ```
 
-## off_pipWindowSizeChange('pipWindowSizeChange')
+## off('pipWindowSizeChange')
 
 ```TypeScript
 off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
@@ -348,7 +348,7 @@ Unsubscribes from the PiP window size change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -380,7 +380,7 @@ try {
 }
 ```
 
-## off_stateChange('stateChange')
+## off('stateChange')
 
 ```TypeScript
 off(type: 'stateChange'): void
@@ -426,7 +426,7 @@ Register picture-in-picture active status change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
 
 **Error codes:**
 
@@ -453,7 +453,7 @@ Register picture-in-picture control event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Used to handle {'controlEvent'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Used to handle {'controlEvent'} command. |
 
 ## onControlPanelActionEvent
 
@@ -493,7 +493,7 @@ Register picture-in-picture window size change event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the picture-in-picture window size. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the picture-in-picture window size. |
 
 **Error codes:**
 
@@ -522,7 +522,7 @@ Register picture-in-picture control state change listener.
 | --- | --- | --- | --- |
 | callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Yes | Used to handle {'stateChange'} command |
 
-## on_activeStatusChange('activeStatusChange')
+## on('activeStatusChange')
 
 ```TypeScript
 on(type: 'activeStatusChange', callback: Callback<boolean>): void
@@ -543,7 +543,7 @@ Subscribes to PiP window active status change events. To avoid potential memory 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
 
 **Examples**
 
@@ -554,7 +554,7 @@ let callback = (activeStatus: boolean) => {
 this.pipController.on('activeStatusChange', callback);
 ```
 
-## on_controlEvent('controlEvent')
+## on('controlEvent')
 
 ```TypeScript
 on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
@@ -575,7 +575,7 @@ Subscribes to PiP action events. To avoid potential memory leaks, you are advise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Action event callback of the PiP controller. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Action event callback of the PiP controller. |
 
 **Examples**
 
@@ -608,13 +608,13 @@ this.pipController.on('controlEvent', (control) => {
 });
 ```
 
-## on_controlPanelActionEvent('controlPanelActionEvent')
+## on('controlPanelActionEvent')
 
 ```TypeScript
 on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
 ```
 
-Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed. The [on('controlEvent')](#on_statechangestatechange) API is preferred.
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed. The [on('controlEvent')](#onstatechange) API is preferred.
 
 **Since:** 11
 
@@ -662,7 +662,7 @@ this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEven
 });
 ```
 
-## on_pipWindowSizeChange('pipWindowSizeChange')
+## on('pipWindowSizeChange')
 
 ```TypeScript
 on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
@@ -683,7 +683,7 @@ Subscribes to PiP window size change events. To avoid potential memory leaks, yo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the size of the current PiP window. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the size of the current PiP window. |
 
 **Error codes:**
 
@@ -705,7 +705,7 @@ try {
 }
 ```
 
-## on_stateChange('stateChange')
+## on('stateChange')
 
 ```TypeScript
 on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void
@@ -779,7 +779,7 @@ Sets whether to automatically start the PiP window when the application's main w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | If the PiP window needs to be automatically started when the application's main window transitions to the background, set this parameter to **true**. Otherwise, set this parameter to **false**. If the PiP feature under **Settings** > **System** > **Multi-window** is disabled, the PiP window will not be automatically started when the application's main window transitions to the background even if this parameter is set to **true**. |
+| enable | boolean | Yes | If the PiP window needs to be automatically started when the application's main window transitions to the background, set this parameter to **true**. Otherwise, set this parameter to **false**. If the PiP feature under **Settings** &gt; **System** &gt; **Multi-window** is disabled, the PiP window will not be automatically started when the application's main window transitions to the background even if this parameter is set to **true**. |
 
 **Examples**
 

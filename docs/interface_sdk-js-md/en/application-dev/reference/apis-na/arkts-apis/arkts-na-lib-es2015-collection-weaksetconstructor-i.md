@@ -29,8 +29,6 @@ new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>
 
 | Type | Description |
 | --- | --- |
-| WeakSet&lt;T&gt; |  |
-
 ## prototype
 
 ```TypeScript

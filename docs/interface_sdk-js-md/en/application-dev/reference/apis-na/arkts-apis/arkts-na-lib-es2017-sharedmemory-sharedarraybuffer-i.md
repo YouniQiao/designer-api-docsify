@@ -32,8 +32,6 @@ Returns a section of an SharedArrayBuffer.
 
 | Type | Description |
 | --- | --- |
-| [SharedArrayBuffer](arkts-na-lib-es2017-sharedmemory-sharedarraybuffer-i.md) |  |
-
 ## [Symbol.species]
 
 ```TypeScript

@@ -25,7 +25,7 @@ declare function mutableBuilder<Args extends Object[]>(builder: BuilderCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [BuilderCallback](arkts-arkui-buildercallback-t.md) | 是 | `@Builder`装饰的全局函数，作为`mutableBuilder`封装的目标构建函数。该函数需符合`BuilderCallback`类型，即 `(...args: Args) => void`，是一个无返回值的函数，其参数列表`...args`的类型由泛型`Args`指定。 |
+| builder | [BuilderCallback](arkts-arkui-buildercallback-t.md) | 是 | `@Builder`装饰的全局函数，作为`mutableBuilder`封装的目标构建函数。该函数需符合`BuilderCallback`类型，即 `(...args: Args) =&gt; void`，是一个无返回值的函数，其参数列表`...args`的类型由泛型`Args`指定。 |
 
 **返回值：**
 

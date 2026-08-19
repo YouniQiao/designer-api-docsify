@@ -11,6 +11,9 @@ TreeMap可用于存储具有关联关系的key-value键值对集合，存储元�
 ## 导入模块
 
 ```TypeScript
+import { TreeMap } from '@kit.ArkTS';
+import { TreeMapForEachCb } from '@kit.ArkTS';
+import { TreeMapComparator } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -562,7 +565,7 @@ get(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V | 如果存在与key关联的值则返回该值，否则返回undefined。 |
+| V \| undefined | 如果存在与key关联的值则返回该值，否则返回undefined。 |
 
 **示例**
 
@@ -697,7 +700,7 @@ getHigherKey(key: K): K | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| K | 返回值或undefined。 |
+| K \| undefined | 返回值或undefined。 |
 
 **错误码：**
 
@@ -840,7 +843,7 @@ getLowerKey(key: K): K | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| K | 返回值或undefined。 |
+| K \| undefined | 返回值或undefined。 |
 
 **错误码：**
 
@@ -1150,7 +1153,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V | 如果删除了元素则返回该元素的值，否则返回undefined。 |
+| V \| undefined | 如果删除了元素则返回该元素的值，否则返回undefined。 |
 
 **示例**
 

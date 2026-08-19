@@ -1,6 +1,6 @@
 # ColorFilter
 
-颜色滤波器，用于对图像或图形的颜色进行变换和处理，支持创建混合模式颜色滤波器、组合颜色滤波器、矩阵颜色滤波器、伽马颜色空间转换滤波器、亮度颜色滤波器和光照颜色滤波器等多种类型。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+颜色滤波器，用于对图像或图形的颜色进行变换和处理，支持创建混合模式颜色滤波器、组合颜色滤波器、矩阵颜色滤波器、伽马颜色空间转换滤波器、亮度颜色滤波器和光照颜色滤波器等多种类型。 &gt; **说明：** &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendModeColorFilter
@@ -71,7 +72,7 @@ static createBlendModeColorFilter(color: common2D.Color, mode: BlendMode): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -137,7 +138,7 @@ static createBlendModeColorFilter(color: common2D.Color | int, mode: BlendMode):
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回基于指定颜色和混合模式创建的颜色滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -203,7 +204,7 @@ static createComposeColorFilter(outer: ColorFilter, inner: ColorFilter): ColorFi
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回创建的组合颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回创建的组合颜色滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -263,7 +264,7 @@ static createLightingColorFilter(mutColor: common2D.Color | int, addColor: commo
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回创建的光照颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回创建的光照颜色滤波器。创建失败时返回undefined。 |
 
 ## createLinearToSRGBGamma
 
@@ -303,7 +304,7 @@ static createLinearToSRGBGamma(): ColorFilter | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
 
 ## createLumaColorFilter
 
@@ -343,7 +344,7 @@ static createLumaColorFilter(): ColorFilter | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
 
 ## createMatrixColorFilter
 
@@ -401,7 +402,7 @@ static createMatrixColorFilter(matrix: Array<double>): ColorFilter | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -447,5 +448,5 @@ static createSRGBGammaToLinear(): ColorFilter | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回创建的颜色滤波器。创建失败时返回undefined。 |
+| ColorFilter \| undefined | 返回创建的颜色滤波器。创建失败时返回undefined。 |
 

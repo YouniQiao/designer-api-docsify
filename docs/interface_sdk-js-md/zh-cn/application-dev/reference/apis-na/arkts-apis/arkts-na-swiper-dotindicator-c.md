@@ -40,7 +40,7 @@ Swiper组件圆点导航指示器的颜色。
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## constructor
 
@@ -48,7 +48,7 @@ Swiper组件圆点导航指示器的颜色。
 constructor()
 ```
 
-DotIndicator的构造函数。 > **说明：** > > - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、 > selectedItemHeight等参数变大而变大。 > > - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
+DotIndicator的构造函数。 &gt; **说明：** &gt; &gt; - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、 &gt; selectedItemHeight等参数变大而变大。 &gt; &gt; - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ Swiper组件圆点导航指示器的高。
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## itemWidth
 
@@ -118,7 +118,7 @@ Swiper组件圆点导航指示器的宽。
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## mask
 
@@ -148,7 +148,7 @@ mask(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## maxDisplayCount
 
@@ -178,7 +178,7 @@ maxDisplayCount(maxDisplayCount: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this | return the DotIndicator |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) | return the DotIndicator |
 
 ## selectedColor
 
@@ -208,7 +208,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## selectedItemHeight
 
@@ -238,7 +238,7 @@ selectedItemHeight(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## selectedItemWidth
 
@@ -268,7 +268,7 @@ selectedItemWidth(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 
 ## space
 
@@ -298,5 +298,5 @@ space(space: LengthMetrics | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [DotIndicator](arkts-na-swiper-dotindicator-c.md) |  |
 

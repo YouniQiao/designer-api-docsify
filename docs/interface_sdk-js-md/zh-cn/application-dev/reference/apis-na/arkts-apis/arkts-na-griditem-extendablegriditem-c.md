@@ -108,5 +108,5 @@ public setGridItemOptions(value?: GridItemOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableGridItem](arkts-na-griditem-extendablegriditem-c.md) |  |
 

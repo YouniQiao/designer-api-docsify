@@ -11,6 +11,7 @@ UDMF提供的数据操作接口包含三个可选参数：intention、key和visi
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## intention

@@ -1,6 +1,6 @@
 # Magnifier
 
-Provides the capability of displaying and hiding of the magnifier. The magnifier enlarges the component content for you to view the component details. > **NOTE：**> > - In the following API examples, you must first use [getMagnifier()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getmagnifier) in **UIContext** > to obtain a **Magnifier** instance, and then call the APIs using the obtained instance. > > - The magnifier capability of this class does not affect that of text components. For text components, you are > advised to use the built-in magnifier capability.
+Provides the capability of displaying and hiding of the magnifier. The magnifier enlarges the component content for you to view the component details. &gt; **NOTE：**&gt; &gt; - In the following API examples, you must first use [getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier) in **UIContext** &gt; to obtain a **Magnifier** instance, and then call the APIs using the obtained instance. &gt; &gt; - The magnifier capability of this class does not affect that of text components. For text components, you are &gt; advised to use the built-in magnifier capability.
 
 **Since:** 22
 
@@ -23,7 +23,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 bind(id: string): void
 ```
 
-Binds the magnifier to the component with the specified ID. > **NOTE：**> > Obtain the Magnifier instance by using the getMagnifier() method in UIContext.
+Binds the magnifier to the component with the specified ID. &gt; **NOTE：**&gt; &gt; Obtain the Magnifier instance by using the getMagnifier() method in UIContext.
 
 **Since:** 22
 
@@ -47,7 +47,7 @@ Binds the magnifier to the component with the specified ID. > **NOTE：**> > Obt
 show(x: number, y: number): void
 ```
 
-Sets the position of the component content displayed by the magnifier relative to the upper left corner of the component. After the setting is successful, the magnifier displays the content centered at the coordinate point. > **NOTE：**> > When the content of the component bound to the magnifier changes, the magnifier does not automatically update the > displayed content. You need to call the **show** API to update the displayed content of the magnifier.
+Sets the position of the component content displayed by the magnifier relative to the upper left corner of the component. After the setting is successful, the magnifier displays the content centered at the coordinate point. &gt; **NOTE：**&gt; &gt; When the content of the component bound to the magnifier changes, the magnifier does not automatically update the &gt; displayed content. You need to call the **show** API to update the displayed content of the magnifier.
 
 **Since:** 22
 

@@ -13,7 +13,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-Obtains an anonymous key certificate in offline mode. This API uses a promise to return the result. > **NOTE：**> > > - Offline key attestation depends on the network. You need to periodically connect to the network to use this API > to update the offline certificate. Offline anonymous key attestation is recommended. > > > - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to > verify the certificate expiration.
+Obtains an anonymous key certificate in offline mode. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; &gt; - Offline key attestation depends on the network. You need to periodically connect to the network to use this API &gt; to update the offline certificate. Offline anonymous key attestation is recommended. &gt; &gt; &gt; - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to &gt; verify the certificate expiration.
 
 **Since:** 26.0.0
 

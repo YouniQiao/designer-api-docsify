@@ -32,7 +32,7 @@ Get configuration of current Destination in module.json
 
 | Type | Description |
 | --- | --- |
-| [RouteMapConfig](arkts-na-navdestination-routemapconfig-i.md) |  |
+| [RouteMapConfig](arkts-na-navdestination-routemapconfig-i.md) \| undefined |  |
 
 ## mode
 

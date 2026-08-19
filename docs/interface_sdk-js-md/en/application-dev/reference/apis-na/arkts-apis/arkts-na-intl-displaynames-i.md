@@ -31,8 +31,6 @@ Receives a code and returns a string based on the locale and options provided wh
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## resolvedOptions
 
 ```TypeScript
@@ -49,5 +47,3 @@ Returns a new object with properties reflecting the locale and style formatting 
 
 | Type | Description |
 | --- | --- |
-| ResolvedDisplayNamesOptions |  |
-

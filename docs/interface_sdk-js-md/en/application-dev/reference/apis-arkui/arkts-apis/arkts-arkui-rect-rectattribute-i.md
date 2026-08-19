@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## radius
 
 ```TypeScript
@@ -58,8 +56,6 @@ radius(value: Length | Array<RadiusItem> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## radiusHeight
 
 ```TypeScript
@@ -82,8 +78,6 @@ radiusHeight(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## radiusWidth
 
 ```TypeScript
@@ -106,8 +100,6 @@ radiusWidth(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setRectOptions
 
 ```TypeScript
@@ -130,8 +122,6 @@ setRectOptions(options?: RectOptions | RoundedRectOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

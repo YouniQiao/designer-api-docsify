@@ -495,7 +495,7 @@ Offset of the dialog box relative to the alignment position. Default value: 1. I
 onDidAppear?: Callback<void>
 ```
 
-Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
+Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
 **Type:** Callback&lt;void&gt;
 
@@ -515,7 +515,7 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 onDidDisappear?: Callback<void>
 ```
 
-Event callback after the dialog box disappears. **NOTE：**The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Event callback after the dialog box disappears. **NOTE：**The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
 **Type:** Callback&lt;void&gt;
 
@@ -535,7 +535,7 @@ Event callback after the dialog box disappears. **NOTE：**The normal timing seq
 onWillAppear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** Callback&lt;void&gt;
 
@@ -555,7 +555,7 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 onWillDisappear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to disappear. **NOTE：**The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Event callback when the dialog box is about to disappear. **NOTE：**The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
 **Type:** Callback&lt;void&gt;
 

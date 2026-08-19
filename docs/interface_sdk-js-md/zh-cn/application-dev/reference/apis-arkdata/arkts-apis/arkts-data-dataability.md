@@ -11,6 +11,7 @@ DataAbility谓词用于构造关系型数据库的谓词，提供用于实现不
 ## 导入模块
 
 ```TypeScript
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## 汇总

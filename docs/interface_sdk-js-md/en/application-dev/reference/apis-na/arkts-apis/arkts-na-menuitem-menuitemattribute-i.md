@@ -35,8 +35,6 @@ attributeModifier(
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentFont
 
 ```TypeScript
@@ -59,8 +57,6 @@ contentFont(value: Font | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentFontColor
 
 ```TypeScript
@@ -83,8 +79,6 @@ contentFontColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## labelFont
 
 ```TypeScript
@@ -107,8 +101,6 @@ labelFont(value: Font | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## labelFontColor
 
 ```TypeScript
@@ -131,8 +123,6 @@ labelFontColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -155,8 +145,6 @@ onChange(callback: ((selected: boolean) => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectIcon
 
 ```TypeScript
@@ -179,8 +167,6 @@ selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selected
 
 ```TypeScript
@@ -203,8 +189,6 @@ selected(value: boolean | undefined | Bindable<boolean>): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setMenuItemOptions
 
 ```TypeScript
@@ -227,8 +211,6 @@ setMenuItemOptions(value?: MenuItemOptions | CustomBuilder): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## subMenuBuilder
 
 ```TypeScript
@@ -251,8 +233,6 @@ subMenuBuilder(builder: CustomBuilder | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

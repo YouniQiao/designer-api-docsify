@@ -81,7 +81,7 @@ Creates a MediaKeySystem instance.
 
 | Type | Description |
 | --- | --- |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | The MediaKeySystem instance or undefined. |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) \| undefined | The MediaKeySystem instance or undefined. |
 
 **Error codes:**
 

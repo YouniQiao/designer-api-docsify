@@ -292,7 +292,7 @@ enableScrollWithMouse(enabled: boolean | undefined): T
 fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 ```
 
-设置是否开启边缘渐隐效果及设置边缘渐隐长度。 > **说明：** > > fadingEdge是通过设置[overlay](arkts-arkui-commonmethod-c.md#overlay)属性和 > [blendMode](arkts-arkui-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER， > BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截 > 屏的接口有：[blur](arkts-arkui-commonmethod-c.md#blur)、 > [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、 > [brightness](arkts-arkui-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-commonmethod-c.md#visualeffect)、 > [grayscale](arkts-arkui-commonmethod-c.md#grayscale)、[saturate](arkts-arkui-commonmethod-c.md#saturate)、 > [contrast](arkts-arkui-commonmethod-c.md#contrast)、 > [invert](arkts-arkui-commonmethod-c.md#invert)、 > [sepia](arkts-arkui-commonmethod-c.md#sepia)、 > [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、 > [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、 > [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、 > [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)、 > [blendMode](arkts-arkui-commonmethod-c.md#blendmode)、 > [backgroundBrightness](arkts-arkui-commonmethod-c.md#backgroundbrightness)。 > > fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background](arkts-arkui-commonmethod-c.md#background)相关属性，会影响渐隐的显示效果。 > > fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果， > 导致材质效果与预期效果不一致。 > > fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-commonmethod-c.md#clip)属性为false不生效。
+设置是否开启边缘渐隐效果及设置边缘渐隐长度。 &gt; **说明：** &gt; &gt; fadingEdge是通过设置[overlay](arkts-arkui-commonmethod-c.md#overlay)属性和 &gt; [blendMode](arkts-arkui-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER， &gt; BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截 &gt; 屏的接口有：[blur](arkts-arkui-commonmethod-c.md#blur)、 &gt; [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、 &gt; [brightness](arkts-arkui-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-commonmethod-c.md#visualeffect)、 &gt; [grayscale](arkts-arkui-commonmethod-c.md#grayscale)、[saturate](arkts-arkui-commonmethod-c.md#saturate)、 &gt; [contrast](arkts-arkui-commonmethod-c.md#contrast)、 &gt; [invert](arkts-arkui-commonmethod-c.md#invert)、 &gt; [sepia](arkts-arkui-commonmethod-c.md#sepia)、 &gt; [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、 &gt; [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、 &gt; [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、 &gt; [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)、 &gt; [blendMode](arkts-arkui-commonmethod-c.md#blendmode)、 &gt; [backgroundBrightness](arkts-arkui-commonmethod-c.md#backgroundbrightness)。 &gt; &gt; fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background](arkts-arkui-commonmethod-c.md#background)相关属性，会影响渐隐的显示效果。 &gt; &gt; fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果， &gt; 导致材质效果与预期效果不一致。 &gt; &gt; fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-commonmethod-c.md#clip)属性为false不生效。
 
 **起始版本：** 14
 
@@ -323,7 +323,7 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 flingSpeedLimit(speedLimit: number): T
 ```
 
-限制跟手滑动结束后，惯性动效开始时的最大初始速度。 > **说明：** > > - 惯性动效是指手指快速滑动并离开屏幕后，滚动内容继续滚动并逐渐减速停止的效果，也称为惯性滚动。 > > - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用fling方法。 > > - 使用鼠标滚轮、键盘方向键方式滚动，或通过scrollTo等方法直接滚动到指定位置，不会产生惯性动效。 > > - 如果惯性动效通过fling方法触发，则flingSpeedLimit设置不生效。
+限制跟手滑动结束后，惯性动效开始时的最大初始速度。 &gt; **说明：** &gt; &gt; - 惯性动效是指手指快速滑动并离开屏幕后，滚动内容继续滚动并逐渐减速停止的效果，也称为惯性滚动。 &gt; &gt; - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用fling方法。 &gt; &gt; - 使用鼠标滚轮、键盘方向键方式滚动，或通过scrollTo等方法直接滚动到指定位置，不会产生惯性动效。 &gt; &gt; - 如果惯性动效通过fling方法触发，则flingSpeedLimit设置不生效。
 
 **起始版本：** 11
 
@@ -413,7 +413,7 @@ nestedScroll(value: NestedScrollOptions): T
 onDidScroll(handler: OnScrollCallback): T
 ```
 
-滚动组件滑动时触发，返回当前帧滑动的偏移量和当前滑动状态。 > **说明：** > > 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+滚动组件滑动时触发，返回当前帧滑动的偏移量和当前滑动状态。 &gt; **说明：** &gt; &gt; 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -569,7 +569,7 @@ onReachStart(event: () => void): T
 onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 ```
 
-滚动组件滑动时触发。 > **说明：** > > 从API version 11开始支持，从API version 12开始废弃。List、Grid和WaterFlow > 组件的onScroll事件在布局之后触发，
+滚动组件滑动时触发。 &gt; **说明：** &gt; &gt; 从API version 11开始支持，从API version 12开始废弃。List、Grid和WaterFlow &gt; 组件的onScroll事件在布局之后触发，
 
 **起始版本：** 11
 
@@ -663,7 +663,7 @@ onScrollStop(event: () => void): T
 onWillScroll(handler: Optional<OnWillScrollCallback>): T
 ```
 
-滚动事件回调，滚动组件滚动前触发。与 [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)的对比： onWillScroll在滚动发生前触发，可通过返回值指定将要滚动的偏移量，适用于需要拦截或自定义滚动行为的场景；onDidScroll在滚动发生时触发，返回当前帧的实际滚动偏移量和滑动状态，适用于仅需监听滚动过程的场景。两者可同 时使用。 回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。Scroll组件的 onWillScroll接口的参数类型是 ScrollOnWillScrollCallback。 > **说明：** > > - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。 > > - 调用不带动画的ScrollEdge和ScrollToIndex时，不触发onWillScroll。
+滚动事件回调，滚动组件滚动前触发。与 [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)的对比： onWillScroll在滚动发生前触发，可通过返回值指定将要滚动的偏移量，适用于需要拦截或自定义滚动行为的场景；onDidScroll在滚动发生时触发，返回当前帧的实际滚动偏移量和滑动状态，适用于仅需监听滚动过程的场景。两者可同 时使用。 回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。Scroll组件的 onWillScroll接口的参数类型是 ScrollOnWillScrollCallback。 &gt; **说明：** &gt; &gt; - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。 &gt; &gt; - 调用不带动画的ScrollEdge和ScrollToIndex时，不触发onWillScroll。
 
 **起始版本：** 12
 
@@ -725,7 +725,7 @@ onWillStartDragging(handler: VoidCallback): T
 onWillStartFling(handler: VoidCallback): T
 ```
 
-滚动组件将要开始惯性动效时触发。 > **说明：** > > - 如果惯性动效通过fling方法触发，则onWillStartFling不触发。 > > - 惯性动效的触发场景参考 > [flingSpeedLimit](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#flingspeedlimit11)方法的 > 说明。
+滚动组件将要开始惯性动效时触发。 &gt; **说明：** &gt; &gt; - 如果惯性动效通过fling方法触发，则onWillStartFling不触发。 &gt; &gt; - 惯性动效的触发场景参考 &gt; [flingSpeedLimit](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#flingspeedlimit11)方法的 &gt; 说明。
 
 **起始版本：** 21
 
@@ -879,7 +879,7 @@ scrollBarColor(color: Color | number | string | Resource): T
 scrollBarHeight(height: LengthMetrics | undefined): T
 ```
 
-设置滚动条滑轨高度。 未设置该接口时，滚动条滑轨高度默认自适应滚动组件高度，儿童智能表的默认高度为37vp。 > **说明：** > > 应确保scrollBarHeight与 > [scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)的设定 > 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
+设置滚动条滑轨高度。 未设置该接口时，滚动条滑轨高度默认自适应滚动组件高度，儿童智能表的默认高度为37vp。 &gt; **说明：** &gt; &gt; 应确保scrollBarHeight与 &gt; [scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)的设定 &gt; 值之和不超过滚动组件高度，否则滚动条可能无法正常显示。
 
 **起始版本：** 26.0.0
 

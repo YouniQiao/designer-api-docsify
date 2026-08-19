@@ -10,7 +10,7 @@
 GridContainer(value?: GridContainerOptions)
 ```
 
-创建纵向排布栅格布局容器。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。
+创建纵向排布栅格布局容器。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 

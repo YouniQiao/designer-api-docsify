@@ -20,7 +20,7 @@ import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 onCreate(want: Want): void
 ```
 
-Represents the callback triggered when the extended VPN is initialized. > **NOTE：**> > You are advised to call [onDestroy](#ondestroy) to listen to the destruction of the > extended VPN and clear resources in a timely manner.
+Represents the callback triggered when the extended VPN is initialized. &gt; **NOTE：**&gt; &gt; You are advised to call [onDestroy](#ondestroy) to listen to the destruction of the &gt; extended VPN and clear resources in a timely manner.
 
 **Since:** 11
 

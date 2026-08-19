@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
-## on_cooperation('cooperation')
+## on('cooperation')
 
 ```TypeScript
 function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void
@@ -17,7 +18,7 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 
 **废弃版本：** 23
 
-**替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-oncooperate-f-sys.md#on_cooperatecooperate)
+**替代接口：** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-oncooperate-f-sys.md#oncooperate)
 
 <!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void--><!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void-End-->
 
@@ -30,7 +31,7 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cooperation' | 是 | 注册类型，取值'cooperation'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceDescriptor: string, eventMsg: EventMsg }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceDescriptor: string, eventMsg: EventMsg }&gt; | 是 |  |
 
 **错误码：**
 

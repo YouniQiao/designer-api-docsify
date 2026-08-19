@@ -11,6 +11,7 @@ DRM（Digital Rights Management）框架组件支持音视频媒体业务数字�
 ## 导入模块
 
 ```TypeScript
+import { drm } from '@kit.DrmKit';
 ```
 
 ## 汇总

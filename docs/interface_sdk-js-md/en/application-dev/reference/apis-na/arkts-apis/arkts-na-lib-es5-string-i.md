@@ -31,8 +31,6 @@ Returns the character at the specified index.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## charCodeAt
 
 ```TypeScript
@@ -55,8 +53,6 @@ Returns the Unicode value of the character at the specified location.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## concat
 
 ```TypeScript
@@ -79,8 +75,6 @@ Returns a string that contains the concatenation of two or more strings.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## indexOf
 
 ```TypeScript
@@ -104,8 +98,6 @@ Returns the position of the first occurrence of a substring.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## lastIndexOf
 
 ```TypeScript
@@ -129,8 +121,6 @@ Returns the last occurrence of a substring in the string.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## localeCompare
 
 ```TypeScript
@@ -155,8 +145,6 @@ Determines whether two strings are equivalent in the current or specified locale
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## match
 
 ```TypeScript
@@ -179,8 +167,6 @@ Matches a string with a regular expression, and returns an array containing the 
 
 | Type | Description |
 | --- | --- |
-| [RegExpMatchArray](arkts-na-lib-es5-regexpmatcharray-i.md) |  |
-
 ## replace
 
 ```TypeScript
@@ -204,8 +190,6 @@ Replaces text in a string, using a regular expression or search string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## replace
 
 ```TypeScript
@@ -229,8 +213,6 @@ Replaces text in a string, using a regular expression or search string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## search
 
 ```TypeScript
@@ -253,8 +235,6 @@ Finds the first substring match in a regular expression search.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## slice
 
 ```TypeScript
@@ -278,8 +258,6 @@ Returns a section of a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## split
 
 ```TypeScript
@@ -303,8 +281,6 @@ Split a string into substrings using the specified separator and return them as 
 
 | Type | Description |
 | --- | --- |
-| string[] |  |
-
 ## substr
 
 ```TypeScript
@@ -330,8 +306,6 @@ Gets a substring beginning at the specified location and having the specified le
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## substring
 
 ```TypeScript
@@ -355,8 +329,6 @@ Returns the substring at the specified location within a String object.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toLocaleLowerCase
 
 ```TypeScript
@@ -379,8 +351,6 @@ Converts all alphabetic characters to lowercase, taking into account the host en
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toLocaleUpperCase
 
 ```TypeScript
@@ -403,8 +373,6 @@ Returns a string where all alphabetic characters have been converted to uppercas
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toLowerCase
 
 ```TypeScript
@@ -421,8 +389,6 @@ Converts all the alphabetic characters in a string to lowercase.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -439,8 +405,6 @@ Returns a string representation of a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toUpperCase
 
 ```TypeScript
@@ -457,8 +421,6 @@ Converts all the alphabetic characters in a string to uppercase.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## trim
 
 ```TypeScript
@@ -475,8 +437,6 @@ Removes the leading and trailing white space and line terminator characters from
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## valueOf
 
 ```TypeScript
@@ -493,8 +453,6 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## length
 
 ```TypeScript

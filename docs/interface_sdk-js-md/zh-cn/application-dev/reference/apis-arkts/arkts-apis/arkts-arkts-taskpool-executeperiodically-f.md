@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## executePeriodically
@@ -11,7 +12,7 @@
 function executePeriodically(period: number, task: Task, priority?: Priority): void
 ```
 
-周期任务每隔period时长执行一次。当前执行模式支持设置任务优先级，可通过cancel取消任务。 > **说明：** > > - 周期任务不能是任务组任务、串行队列任务或异步队列任务。 > - 同一个周期任务不能多次调用该接口。 > - 执行的任务不能拥有依赖关系。
+周期任务每隔period时长执行一次。当前执行模式支持设置任务优先级，可通过cancel取消任务。 &gt; **说明：** &gt; &gt; - 周期任务不能是任务组任务、串行队列任务或异步队列任务。 &gt; - 同一个周期任务不能多次调用该接口。 &gt; - 执行的任务不能拥有依赖关系。
 
 **起始版本：** 12
 

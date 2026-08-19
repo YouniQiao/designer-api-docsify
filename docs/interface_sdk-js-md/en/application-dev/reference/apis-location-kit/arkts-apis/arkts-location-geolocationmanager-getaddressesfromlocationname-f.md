@@ -25,7 +25,7 @@ Obtain latitude and longitude info from location address.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
 
 **Error codes:**
 

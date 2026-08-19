@@ -15,9 +15,10 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-## off_inputStart('inputStart')
+## off('inputStart')
 
 ```TypeScript
 off(
@@ -55,7 +56,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## off_keyboardHide('keyboardShow' | 'keyboardHide')
+## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -87,7 +88,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## off_keyboardShow('keyboardShow' | 'keyboardHide')
+## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -119,7 +120,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## on_inputStart('inputStart')
+## on('inputStart')
 
 ```TypeScript
 on(
@@ -157,7 +158,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## on_keyboardHide('keyboardShow' | 'keyboardHide')
+## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -193,7 +194,7 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 });
 ```
 
-## on_keyboardShow('keyboardShow' | 'keyboardHide')
+## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void

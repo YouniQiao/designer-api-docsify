@@ -18,7 +18,7 @@ Obtains the system region.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemRegion](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getsystemregion)
+**Substitutes:** [getSystemRegion](arkts-localization-i18n-system-c.md#getsystemregion)
 
 <!--Device-i18n-export function getSystemRegion(): string--><!--Device-i18n-export function getSystemRegion(): string-End-->
 

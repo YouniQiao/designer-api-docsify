@@ -2,7 +2,7 @@
 
 Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar, such as leap month.
 
-**Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-na-i18n-calendar-c.md)
+**Inheritance/Implementation:** ChineseCalendar extends [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md)
 
 **Since:** 26.0.0
 
@@ -81,5 +81,5 @@ Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](arkts-na-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
+| chineseCalendarTime | [ChineseCalendarTime](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
 

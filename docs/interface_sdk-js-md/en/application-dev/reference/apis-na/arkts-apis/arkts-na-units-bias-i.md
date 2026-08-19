@@ -16,7 +16,7 @@ Defines the Bias.
 horizontal?: double
 ```
 
-Horizontal ratio of the Bias, it must be >= 0.
+Horizontal ratio of the Bias, it must be &gt;= 0.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ Horizontal ratio of the Bias, it must be >= 0.
 vertical?: double
 ```
 
-Vertical ratio of the Bias, it must be >= 0.
+Vertical ratio of the Bias, it must be &gt;= 0.
 
 **Type:** double
 

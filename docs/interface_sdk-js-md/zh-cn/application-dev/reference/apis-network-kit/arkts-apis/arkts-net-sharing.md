@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -36,12 +37,12 @@
 | [isSharing](arkts-network-sharing-issharing-f-sys.md) | 获取当前网络共享状态，使用 Promise 异步回调。 |
 | [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md) | 判断是否支持网络共享，使用 callback 异步回调。 |
 | [isSharingSupported](arkts-network-sharing-issharingsupported-f-sys.md) | 判断是否支持网络共享，使用 Promise 异步回调。 |
-| [off_interfaceSharingStateChange](arkts-network-sharing-offinterfacesharingstatechange-f-sys.md#off_interfacesharingstatechangeinterfacesharingstatechange) | 注销网卡网络共享状态变化事件，使用 callback 异步回调。 |
-| [off_sharingStateChange](arkts-network-sharing-offsharingstatechange-f-sys.md#off_sharingstatechangesharingstatechange) | 注销网络共享状态变化事件，使用 callback 异步回调。 |
-| [off_sharingUpstreamChange](arkts-network-sharing-offsharingupstreamchange-f-sys.md#off_sharingupstreamchangesharingupstreamchange) | 注销上行网络变化事件，使用 callback 异步回调。 |
-| [on_interfaceSharingStateChange](arkts-network-sharing-oninterfacesharingstatechange-f-sys.md#on_interfacesharingstatechangeinterfacesharingstatechange) | 注册网卡网络共享状态变化事件，使用 callback 异步回调。 |
-| [on_sharingStateChange](arkts-network-sharing-onsharingstatechange-f-sys.md#on_sharingstatechangesharingstatechange) | 注册网络共享状态变化事件，使用 callback 异步回调。 |
-| [on_sharingUpstreamChange](arkts-network-sharing-onsharingupstreamchange-f-sys.md#on_sharingupstreamchangesharingupstreamchange) | 注册上行网络变化事件，使用 callback 异步回调。 |
+| [off_interfaceSharingStateChange](arkts-network-sharing-offinterfacesharingstatechange-f-sys.md#offinterfacesharingstatechange) | 注销网卡网络共享状态变化事件，使用 callback 异步回调。 |
+| [off_sharingStateChange](arkts-network-sharing-offsharingstatechange-f-sys.md#offsharingstatechange) | 注销网络共享状态变化事件，使用 callback 异步回调。 |
+| [off_sharingUpstreamChange](arkts-network-sharing-offsharingupstreamchange-f-sys.md#offsharingupstreamchange) | 注销上行网络变化事件，使用 callback 异步回调。 |
+| [on_interfaceSharingStateChange](arkts-network-sharing-oninterfacesharingstatechange-f-sys.md#oninterfacesharingstatechange) | 注册网卡网络共享状态变化事件，使用 callback 异步回调。 |
+| [on_sharingStateChange](arkts-network-sharing-onsharingstatechange-f-sys.md#onsharingstatechange) | 注册网络共享状态变化事件，使用 callback 异步回调。 |
+| [on_sharingUpstreamChange](arkts-network-sharing-onsharingupstreamchange-f-sys.md#onsharingupstreamchange) | 注册上行网络变化事件，使用 callback 异步回调。 |
 | [startSharing](arkts-network-sharing-startsharing-f-sys.md) | 开启指定类型共享，使用 callback 异步回调。 |
 | [startSharing](arkts-network-sharing-startsharing-f-sys.md) | 开启指定类型共享，使用 Promise 异步回调。 |
 | [stopSharing](arkts-network-sharing-stopsharing-f-sys.md) | 关闭指定类型共享，使用 callback 异步回调。 |

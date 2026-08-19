@@ -42,7 +42,7 @@ Returns ArrayBuffer from the serialized styled string.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer |  |
+| ArrayBuffer \| undefined |  |
 
 ## marshalling
 
@@ -74,7 +74,7 @@ Returns ArrayBuffer from the serialized styled string.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer |  |
+| ArrayBuffer \| undefined |  |
 
 ## unmarshalling
 

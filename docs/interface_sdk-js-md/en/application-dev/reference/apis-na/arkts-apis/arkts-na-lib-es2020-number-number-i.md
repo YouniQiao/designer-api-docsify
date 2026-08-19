@@ -32,5 +32,3 @@ Converts a number to a string by using the current or specified locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

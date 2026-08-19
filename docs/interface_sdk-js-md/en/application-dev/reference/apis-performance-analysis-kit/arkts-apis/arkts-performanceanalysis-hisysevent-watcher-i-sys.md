@@ -22,7 +22,7 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 onEvent: (info: SysEventInfo) => void
 ```
 
-Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void
+Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) =&gt; void
 
 **Type:** (info: SysEventInfo) =&gt; void
 
@@ -40,7 +40,7 @@ Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis
 onServiceDied: () => void
 ```
 
-Callback for disabling of event subscription: () => void
+Callback for disabling of event subscription: () =&gt; void
 
 **Type:** () =&gt; void
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## 汇总

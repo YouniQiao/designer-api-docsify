@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## usbCancelTransfer
@@ -11,7 +13,7 @@
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-取消异步传输请求。适用于需要主动终止未完成USB数据传输的场景，如用户手动取消长时间数据传输、传输超时后的错误恢复、应用切换时中止当前传输等。 > **说明：** > > 主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。 > 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
+取消异步传输请求。适用于需要主动终止未完成USB数据传输的场景，如用户手动取消长时间数据传输、传输超时后的错误恢复、应用切换时中止当前传输等。 &gt; **说明：** &gt; &gt; 主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。 &gt; 在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。
 
 **起始版本：** 23
 

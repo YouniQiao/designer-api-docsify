@@ -13,6 +13,7 @@ BackupExtensionAbility的上下文环境，继承自ExtensionContext。 用于�
 ## 导入模块
 
 ```TypeScript
+import { BackupExtensionContext } from '@kit.CoreFileKit';
 ```
 
 ## backupDir

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## mount
@@ -28,7 +29,7 @@ function mount(volumeId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeId | string | 是 | 卷设备id。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 挂载指定卷设备之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 挂载指定卷设备之后的回调。 |
 
 **错误码：**
 

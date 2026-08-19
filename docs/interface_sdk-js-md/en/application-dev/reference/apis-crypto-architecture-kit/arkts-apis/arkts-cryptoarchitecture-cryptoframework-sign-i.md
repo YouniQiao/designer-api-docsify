@@ -44,7 +44,7 @@ Obtains signing specifications. Currently, only RSA is supported.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the value of the signing parameter obtained. |
+| string \| int | Returns the value of the signing parameter obtained. |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ Initializes the **Sign** object using a private key. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | Private key used for the initialization. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -352,7 +352,7 @@ Signs the data, including data added via the update interface. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | The data to be signed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -387,7 +387,7 @@ Signs data. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the signature obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -523,7 +523,7 @@ Signs the data. This API returns the result synchronously. <br><br>**NOTE：**<b
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates data to be signed. This API uses an asynchronous callback to return the result. <br>This API can be called only after the [Sign](#sign) instance is initialized by using [init](#init) or [initSync](#initsync). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call [sign](#sign) after > [init](#init)), depending on the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates data to be signed. This API uses an asynchronous callback to return the result. <br>This API can be called only after the [Sign](#sign) instance is initialized by using [init](#init) or [initSync](#initsync). &gt; **NOTE：**&gt; &gt; You can call **update** multiple times or do not use **update** (call [sign](#sign) after &gt; [init](#init)), depending on the data volume. &gt; &gt; The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time. &gt; &gt; For details about the sample code for calling **update()** multiple times in signing, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar. &gt; &gt; **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. &gt; &gt; If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. &gt; If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
 
@@ -540,7 +540,7 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Data to pass in. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -558,7 +558,7 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 update(data: DataBlob): Promise<void>
 ```
 
-Updates data to be signed. This API uses a promise to return the result. <br>Before using this API, you must initialize the [Sign](#sign) instance by using [init()](#init). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > [sign](#sign) after > [init](#init)), depending on the > data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. > If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates data to be signed. This API uses a promise to return the result. <br>Before using this API, you must initialize the [Sign](#sign) instance by using [init()](#init). &gt; **NOTE：**&gt; &gt; You can call **update** multiple times or do not use **update** (call &gt; [sign](#sign) after &gt; [init](#init)), depending on the &gt; data volume. &gt; &gt; The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time. &gt; For details about the sample code for calling **update()** multiple times in signing, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar. &gt; &gt; **OnlySign** cannot be used with **update()**. If **OnlySign** is specified, use **sign()** to pass in data. &gt; &gt; If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **update()** is not supported. &gt; If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
 
@@ -598,7 +598,7 @@ Updates data to be signed. This API uses a promise to return the result. <br>Bef
 updateSync(data: DataBlob): void
 ```
 
-Updates data to be signed. This API returns the result synchronously. <br>This API can be called only after the [Sign](#sign) instance is initialized by using [initSync()](#initsync). > **NOTE：**> > You can call **updateSync** multiple times or do not use **updateSync** (call > [signSync](#signsync) after [initSync](#initsync)), > depending on the data volume. > > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > > For details about the sample code for calling **updateSync** multiple times in signing, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in > data. > > If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not > supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates data to be signed. This API returns the result synchronously. <br>This API can be called only after the [Sign](#sign) instance is initialized by using [initSync()](#initsync). &gt; **NOTE：**&gt; &gt; You can call **updateSync** multiple times or do not use **updateSync** (call &gt; [signSync](#signsync) after [initSync](#initsync)), &gt; depending on the data volume. &gt; &gt; The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is &gt; a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. &gt; This prevents too much memory from being requested at a time. &gt; &gt; For details about the sample code for calling **updateSync** multiple times in signing, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar. &gt; &gt; **OnlySign** cannot be used with **updateSync**. If **OnlySign** is specified, use **signSync** to pass in &gt; data. &gt; &gt; If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, **updateSync** is not &gt; supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 

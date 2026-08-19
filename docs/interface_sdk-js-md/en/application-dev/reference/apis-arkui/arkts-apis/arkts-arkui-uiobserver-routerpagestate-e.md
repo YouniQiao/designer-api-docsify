@@ -1,6 +1,6 @@
 # RouterPageState
 
-Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#on_navdestinationupdatenavdestinationupdate).
+Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#onnavdestinationupdate).
 
 **Since:** 11
 

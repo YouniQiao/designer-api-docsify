@@ -16,7 +16,7 @@ Context is the context base class of the stage model. It is used to access appli
 createBundleContext(bundleName: string): Context
 ```
 
-Creates the context based on the bundle name. > **NOTE：**> > If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) > instead. > > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md) > instead.
+Creates the context based on the bundle name. &gt; **NOTE：**&gt; &gt; If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead. &gt; &gt; This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md) &gt; instead.
 
 **Since:** 9
 
@@ -79,7 +79,7 @@ export default class EntryAbility extends UIAbility {
 createModuleContext(bundleName: string, moduleName: string): Context
 ```
 
-Creates the context based on the bundle name and module name. > **NOTE：**> > This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) > instead.
+Creates the context based on the bundle name and module name. &gt; **NOTE：**&gt; &gt; This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead.
 
 **Since:** 9
 

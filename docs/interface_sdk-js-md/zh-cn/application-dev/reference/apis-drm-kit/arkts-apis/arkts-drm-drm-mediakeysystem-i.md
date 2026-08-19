@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drm } from '@kit.DrmKit';
 ```
 
 ## clearOfflineMediaKeys
@@ -104,7 +105,7 @@ Create a MediaKeySession instance with level.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | A MediaKeySession instance or undefined. |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | A MediaKeySession instance or undefined. |
 
 **错误码：**
 
@@ -163,7 +164,7 @@ Create a MediaKeySession instance.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | A MediaKeySession instance or undefined. |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | A MediaKeySession instance or undefined. |
 
 **错误码：**
 
@@ -475,7 +476,7 @@ Unregister keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## off_keySystemRequired('keySystemRequired')
+## off('keySystemRequired')
 
 ```TypeScript
 off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -531,7 +532,7 @@ Register keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
 
-## on_keySystemRequired('keySystemRequired')
+## on('keySystemRequired')
 
 ```TypeScript
 on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void

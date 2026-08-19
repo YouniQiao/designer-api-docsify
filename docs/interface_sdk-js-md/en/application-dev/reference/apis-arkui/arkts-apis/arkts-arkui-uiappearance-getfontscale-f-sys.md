@@ -12,7 +12,7 @@ import { uiAppearance } from '@kit.ArkUI';
 function getFontScale(): number
 ```
 
-Obtains the current font size scale factor. <!--Del--> > **NOTE：**> This API is a system API in API version 19 and earlier. Using this API requires the > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) > permission. <!--DelEnd-->
+Obtains the current font size scale factor. <!--Del--> &gt; **NOTE：**&gt; This API is a system API in API version 19 and earlier. Using this API requires the &gt; [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration) &gt; permission. <!--DelEnd-->
 
 **Since:** 12
 

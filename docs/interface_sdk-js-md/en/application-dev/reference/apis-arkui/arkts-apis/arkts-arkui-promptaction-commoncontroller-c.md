@@ -72,5 +72,5 @@ Obtains the state of the custom dialog box.
 
 | Type | Description |
 | --- | --- |
-| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | State of the custom dialog box. |
+| [CommonState](../../apis-na/arkts-apis/arkts-na-promptaction-commonstate-e.md) | State of the custom dialog box. |
 

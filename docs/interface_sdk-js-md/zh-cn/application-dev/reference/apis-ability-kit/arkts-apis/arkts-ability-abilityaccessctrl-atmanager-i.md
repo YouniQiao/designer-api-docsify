@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## checkAccessToken
@@ -235,7 +236,7 @@ offSelfPermissionStateChange(
     ): void
 ```
 
-取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。 在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。 该接口通常与[onSelfPermissionStateChange](#on_selfpermissionstatechangeselfpermissionstatechange) 配套使用，用于取消通过onSelfPermissionStateChange创建的监听关系。
+取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。 在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。 该接口通常与[onSelfPermissionStateChange](#onselfpermissionstatechange) 配套使用，用于取消通过onSelfPermissionStateChange创建的监听关系。
 
 **起始版本：** 23
 
@@ -250,7 +251,7 @@ offSelfPermissionStateChange(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与onSelfPermissionStateChange 订阅时的权限列表匹配（不区分顺序）。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
@@ -275,7 +276,7 @@ try {
 }
 ```
 
-## off_selfPermissionStateChange('selfPermissionStateChange')
+## off('selfPermissionStateChange')
 
 ```TypeScript
 off(
@@ -285,7 +286,7 @@ off(
     ): void
 ```
 
-取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。 在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。 > **说明：**> 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。 > 该接口通常与[on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on_permissionstatechangepermissionstatechange)配套使用，用于取消通过on创建的监听关系。
+取消订阅自身指定权限列表的权限状态变更事件。取消订阅成功后，将不再接收指定权限列表的状态变化通知。 在无需继续监听权限变化、应用退出或切换页面等场景下，可调用该接口取消订阅。 &gt; **说明：**&gt; 当不传入callback参数时，将批量删除与permissionList相关联的所有回调函数。 &gt; 该接口通常与[on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#onpermissionstatechange)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 18
 
@@ -301,7 +302,7 @@ off(
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 取消订阅事件类型，固定为'selfPermissionStateChange'，权限状态变更事件。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 取消订阅的权限名列表，为空时表示取消订阅所有的权限状态变化，必须与on订阅时的权限列表匹配（不区分顺序）。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 | 回调函数。取消订阅指定权限名状态变更事件的回调。 不传入此参数时，将批量删除与permissionList相关联的所有回调函数。 |
 
 **错误码：**
 
@@ -339,7 +340,7 @@ onSelfPermissionStateChange(
     ): void
 ```
 
-订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。 可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用 [offSelfPermissionStateChange](#off_selfpermissionstatechangeselfpermissionstatechange)取消订阅。 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。 权限状态由“已授权”变更为“未授权”可能存在两种场景： - 用户主动撤销：系统会终止对应应用进程。 - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。 该接口通常与[offSelfPermissionStateChange](#off_selfpermissionstatechangeselfpermissionstatechange)配套使用， 当不再需要监听时应调用offSelfPermissionStateChange取消订阅。
+订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。 可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用 [offSelfPermissionStateChange](#offselfpermissionstatechange)取消订阅。 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。 权限状态由“已授权”变更为“未授权”可能存在两种场景： - 用户主动撤销：系统会终止对应应用进程。 - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。 该接口通常与[offSelfPermissionStateChange](#offselfpermissionstatechange)配套使用， 当不再需要监听时应调用offSelfPermissionStateChange取消订阅。
 
 **起始版本：** 23
 
@@ -354,7 +355,7 @@ onSelfPermissionStateChange(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
@@ -384,7 +385,7 @@ try {
 }
 ```
 
-## on_selfPermissionStateChange('selfPermissionStateChange')
+## on('selfPermissionStateChange')
 
 ```TypeScript
 on(
@@ -394,7 +395,7 @@ on(
     ): void
 ```
 
-订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off_permissionstatechangepermissionstatechange)取消订阅。 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。 > **说明：**> 权限状态由“已授权”变更为“未授权”可能存在两种场景： > - 用户主动撤销：系统会终止对应应用进程。 > - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。 > 该接口通常与[off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off_permissionstatechangepermissionstatechange)配套使用，当不再需要监听时应调用off取消订阅。
+订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange)取消订阅。 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。 &gt; **说明：**&gt; 权限状态由“已授权”变更为“未授权”可能存在两种场景： &gt; - 用户主动撤销：系统会终止对应应用进程。 &gt; - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。 &gt; 该接口通常与[off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange)配套使用，当不再需要监听时应调用off取消订阅。
 
 **起始版本：** 18
 
@@ -410,7 +411,7 @@ on(
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 | 订阅事件类型，固定为'selfPermissionStateChange'，自身权限状态变更事件。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表，为空时表示订阅所有的权限状态变化。传入无效值时返回错误码12100001。 <br>最大长度为1024。取值约束：列表中的权限名需为有效权限名，权限名长度不能超过256个字符。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 | 回调函数。订阅指定权限名状态变更事件的回调。 |
 
 **错误码：**
 
@@ -647,7 +648,7 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-t.md) | 是 | 请求权限的<!--RP1-->UIAbility<!--RP1End-->的Context。 <br>若传入其他应用、无效页面或非Stage模型的Context，接口可能报错或无法拉起弹窗。 |
 | permissionList | Array&lt;Permissions&gt; | 是 | 权限名列表。建议仅传入当前业务场景必要的敏感权限，避免一次申请过多权限。 <br>最小长度为1。取值约束：权限名长度不能超过256个字符。 |
-| requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
+| requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | 是 | 回调函数。调用完成后通过err返回错误信息，通过data返回权限请求结果对象。开发者可根据权限请求结果判断用户是否授权、是否展示过弹窗以及失败原因。 |
 
 **错误码：**
 
@@ -689,7 +690,7 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-用于<!--RP1-->[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。 > **说明：**> 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用 > [requestPermissionOnSetting](#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
+用于<!--RP1-->[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)<!--RP1End-->拉起弹窗请求 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。 &gt; **说明：**&gt; 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用 &gt; [requestPermissionOnSetting](#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
 
 **起始版本：** 23
 
@@ -752,7 +753,7 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((
 verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>
 ```
 
-校验应用是否已被授予指定权限，调用成功后，返回当前权限的授权状态，开发者可据此决定直接执行后续业务、继续发起权限申请，或引导用户前往系统设置修改授权状态。使用Promise异步回调。 适用于应用访问受保护资源前进行前置权限判断的场景。 > **说明：**> 建议使用[checkAccessToken](#checkaccesstoken)替代。
+校验应用是否已被授予指定权限，调用成功后，返回当前权限的授权状态，开发者可据此决定直接执行后续业务、继续发起权限申请，或引导用户前往系统设置修改授权状态。使用Promise异步回调。 适用于应用访问受保护资源前进行前置权限判断的场景。 &gt; **说明：**&gt; 建议使用[checkAccessToken](#checkaccesstoken)替代。
 
 **起始版本：** 23
 
@@ -820,7 +821,7 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
 verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 ```
 
-校验应用是否已被授予指定权限。调用成功后，返回当前权限的授权状态，开发者可据此决定后续操作。使用Promise异步回调。 > **说明：**> 从API version 8开始支持，从API version 9开始废弃，建议使用[checkAccessToken](#checkaccesstoken)替代。
+校验应用是否已被授予指定权限。调用成功后，返回当前权限的授权状态，开发者可据此决定后续操作。使用Promise异步回调。 &gt; **说明：**&gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[checkAccessToken](#checkaccesstoken)替代。
 
 **起始版本：** 8
 

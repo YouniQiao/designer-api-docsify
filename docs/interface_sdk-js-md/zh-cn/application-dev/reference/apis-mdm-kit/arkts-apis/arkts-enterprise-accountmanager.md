@@ -1,6 +1,6 @@
 # @ohos.enterprise.accountManager
 
-本模块提供设备账号管理能力，包括禁止创建本地账号等。 > **说明：** > > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+本模块提供设备账号管理能力，包括禁止创建本地账号等。 &gt; **说明：** &gt; &gt; 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 10
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## 汇总

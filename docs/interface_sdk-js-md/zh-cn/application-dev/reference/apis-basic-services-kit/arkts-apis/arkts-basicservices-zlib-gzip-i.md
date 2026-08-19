@@ -11,6 +11,7 @@ Gzip相关接口。
 ## 导入模块
 
 ```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## gzbuffer

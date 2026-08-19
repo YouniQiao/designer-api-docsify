@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
 ```
 
 ## 汇总

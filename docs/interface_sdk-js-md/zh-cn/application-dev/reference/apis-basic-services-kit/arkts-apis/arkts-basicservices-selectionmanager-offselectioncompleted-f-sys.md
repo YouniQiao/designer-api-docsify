@@ -3,15 +3,16 @@
 ## 导入模块
 
 ```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
-## off_selectionCompleted('selectionCompleted')
+## off('selectionCompleted')
 
 ```TypeScript
 function off(type: 'selectionCompleted', callback?: Callback<SelectionInfo>): void
 ```
 
-取消订阅划词完成事件，与 [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#on_selectioncompletedselectioncompleted) 搭配使用。
+取消订阅划词完成事件，与 [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#onselectioncompleted) 搭配使用。
 
 **起始版本：** 20
 
@@ -26,7 +27,7 @@ function off(type: 'selectionCompleted', callback?: Callback<SelectionInfo>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectionCompleted' | 是 | 取消订阅的事件类型，固定取值为'selectionCompleted'。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | 否 | 需要取消的回调函数（即之前通过on方法订阅时的回调实例）。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getCpuUsage
@@ -11,7 +12,7 @@
 function getCpuUsage() : double
 ```
 
-获取进程的CPU使用率。 > **注意** > > 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。
+获取进程的CPU使用率。 &gt; **注意** &gt; &gt; 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。
 
 **起始版本：** 23
 

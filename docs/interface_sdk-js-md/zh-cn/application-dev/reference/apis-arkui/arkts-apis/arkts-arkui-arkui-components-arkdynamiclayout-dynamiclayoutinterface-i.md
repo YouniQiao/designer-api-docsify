@@ -1,6 +1,6 @@
 # DynamicLayoutInterface
 
-动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。 > **说明：**
+动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。 &gt; **说明：**
 
 **起始版本：** 24
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -37,7 +38,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 是 | 指定动态布局组件的布局算法。取非法值时，按照[堆叠布局算法](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md) 布局子组件，子组件堆叠排列。 |
+| algorithm | [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md) | 是 | 指定动态布局组件的布局算法。取非法值时，按照[堆叠布局算法](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-stacklayoutalgorithm-c.md) 布局子组件，子组件堆叠排列。 |
 
 **返回值：**
 

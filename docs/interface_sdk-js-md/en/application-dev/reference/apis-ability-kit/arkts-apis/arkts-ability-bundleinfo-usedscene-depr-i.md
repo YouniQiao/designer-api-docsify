@@ -1,6 +1,6 @@
 # UsedScene
 
-> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [UsedScene](#usedscene) instead. Describes the application scenario and timing for using the permission.
+> **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [UsedScene](#usedscene) instead. Describes the application scenario and timing for using the permission.
 
 **Since:** 7
 

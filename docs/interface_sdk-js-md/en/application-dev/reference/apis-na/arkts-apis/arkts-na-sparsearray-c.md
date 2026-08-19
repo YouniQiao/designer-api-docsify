@@ -43,7 +43,7 @@ Returns the element at the specified index.
 
 | Type | Description |
 | --- | --- |
-| T | The element at the specified index, or undefined if the index is out of range. |
+| T \| undefined | The element at the specified index, or undefined if the index is out of range. |
 
 ## concat
 
@@ -318,7 +318,7 @@ Returns the value of the first element in the sparse array where predicate is tr
 
 | Type | Description |
 | --- | --- |
-| T | The value of the first element in the sparse array where predicate is true, and undefined otherwise. |
+| T \| undefined | The value of the first element in the sparse array where predicate is true, and undefined otherwise. |
 
 ## findIndex
 
@@ -378,7 +378,7 @@ Returns the value of the last element in the sparse array where predicate is tru
 
 | Type | Description |
 | --- | --- |
-| T | The value of the last element in the sparse array where predicate is true, and undefined otherwise. |
+| T \| undefined | The value of the last element in the sparse array where predicate is true, and undefined otherwise. |
 
 ## findLastIndex
 
@@ -813,7 +813,7 @@ Removes the last element from a sparse array and returns it.
 
 | Type | Description |
 | --- | --- |
-| T | The last element of the sparse array, or undefined if the sparse array is empty. |
+| T \| undefined | The last element of the sparse array, or undefined if the sparse array is empty. |
 
 ## push
 
@@ -1045,7 +1045,7 @@ Removes the first element from a sparse array and returns it.
 
 | Type | Description |
 | --- | --- |
-| T | The first element of the sparse array, or undefined if the sparse array is empty. |
+| T \| undefined | The first element of the sparse array, or undefined if the sparse array is empty. |
 
 ## slice
 

@@ -29,5 +29,3 @@ new (value: number | string | Date): Date
 
 | Type | Description |
 | --- | --- |
-| Date |  |
-

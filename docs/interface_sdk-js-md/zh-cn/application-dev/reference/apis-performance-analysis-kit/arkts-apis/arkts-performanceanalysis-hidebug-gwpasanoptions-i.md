@@ -11,6 +11,7 @@ GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分
 ## 导入模块
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## alwaysEnabled
@@ -69,7 +70,7 @@ maxSimutaneousAllocations?: int
 sampleRate?: int
 ```
 
-GWP-ASan采样频率，默认值为2500，需要传入大于0的正整数，若传入小数则向上取整。1/sampleRate的概率对分配的内存进行采样。建议值：>=1000，过小会显著影响性能。
+GWP-ASan采样频率，默认值为2500，需要传入大于0的正整数，若传入小数则向上取整。1/sampleRate的概率对分配的内存进行采样。建议值：&gt;=1000，过小会显著影响性能。
 
 **类型：** int
 

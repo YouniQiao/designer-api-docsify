@@ -36,13 +36,13 @@ Unsubscribe 'sizeUpdate' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel 
 | --- | --- | --- | --- |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | optional, the callback called when the panel size updates. |
 
-## off_sizeUpdate('sizeUpdate')
+## off('sizeUpdate')
 
 ```TypeScript
 off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call > [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) > to adjust the panel size, the system calculates the final value based on certain rules (for example, whether > the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the > panel layout.
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. When you call &gt; [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) &gt; to adjust the panel size, the system calculates the final value based on certain rules (for example, whether &gt; the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the &gt; panel layout.
 
 **Since:** 14
 
@@ -91,13 +91,13 @@ Subscribe 'sizeUpdate' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel wi
 | --- | --- | --- | --- |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | the callback called when the panel size updates. |
 
-## on_sizeUpdate('sizeUpdate')
+## on('sizeUpdate')
 
 ```TypeScript
 on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 ```
 
-Listens for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call > [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) > to adjust the panel size, the system calculates the final value based on certain rules (for example, whether > the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the > panel layout.
+Listens for the panel size change. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** &gt; state. When you call &gt; [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) &gt; to adjust the panel size, the system calculates the final value based on certain rules (for example, whether &gt; the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the &gt; panel layout.
 
 **Since:** 14
 
@@ -131,7 +131,7 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
 setShadow(radius: double, color: string, offsetX: double, offsetY: double): void
 ```
 
-Sets the shadow effect of the input method window. > **NOTE：**> > Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and > [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
+Sets the shadow effect of the input method window. &gt; **NOTE：**&gt; &gt; Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and &gt; [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
 
 **Since:** 23
 

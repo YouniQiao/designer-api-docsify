@@ -180,7 +180,7 @@ onAreaDidChange?: Callback<common2D.Rect>
 
 Callback triggered when the ImageGeneratorDialog changes in size or position.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;common2D.Rect&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;common2D.Rect&gt;
 
 **Since:** 23
 

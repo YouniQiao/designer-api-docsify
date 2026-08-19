@@ -30,8 +30,6 @@ new (pattern: RegExp | string, flags?: string): RegExp
 
 | Type | Description |
 | --- | --- |
-| RegExp |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,5 +51,3 @@ new (pattern: RegExp | string, flags?: string): RegExp
 
 | Type | Description |
 | --- | --- |
-| RegExp |  |
-

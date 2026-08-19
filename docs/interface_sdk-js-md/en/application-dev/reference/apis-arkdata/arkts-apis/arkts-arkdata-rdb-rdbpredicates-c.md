@@ -600,7 +600,7 @@ predicates.inAllDevices()
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync. > **NOTE：**> The value of **devices** can be obtained by using <!--RP2--> > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) > . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
+Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync. &gt; **NOTE：**&gt; The value of **devices** can be obtained by using <!--RP2--> &gt; [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync) &gt; . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system &gt; applications.
 
 **Since:** 8
 

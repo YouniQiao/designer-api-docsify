@@ -22,7 +22,7 @@ colors: Colors
 
 Define tokens associated with color resources.
 
-**Type:** [Colors](../../apis-na/arkts-apis/arkts-na-arkui-theme-colors-i.md)
+**Type:** [Colors](arkts-arkui-arkui-theme-colors-i.md)
 
 **Since:** 12
 

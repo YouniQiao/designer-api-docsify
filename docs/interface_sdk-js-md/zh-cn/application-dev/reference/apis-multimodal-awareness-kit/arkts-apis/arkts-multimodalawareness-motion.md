@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## 汇总
@@ -22,12 +23,12 @@
 | [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md) | 获取最新触控操作手状态。该方法直接返回最新的操作手状态，无需订阅事件即可调用。 |
 | [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) | 取消订阅握持手状态变化事件。 |
 | [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) | 取消订阅触控操作手变化事件。 |
-| off_holdingHandChanged | 取消订阅握持手状态变化感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('holdingHandChanged')：订阅握持手状态变化感知事件。 |
-| off_operatingHandChanged | 取消订阅触控操作手感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('operatingHandChanged')：订阅触控操作手感知事件。 |
+| [off_holdingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) | 取消订阅握持手状态变化感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('holdingHandChanged')：订阅握持手状态变化感知事件。 |
+| [off_operatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) | 取消订阅触控操作手感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('operatingHandChanged')：订阅触控操作手感知事件。 |
 | [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | 订阅握持手状态变化事件。 |
 | [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | 订阅触控操作手变化事件。 |
-| on_holdingHandChanged | 订阅握持手状态变化感知事件。系统通过传感器数据，结合识别算法判断当前握持手是左手还是右手。适用于阅读应用、视频播放等需要根据用户握持手状态调整界面布局或功能的场景。 <br>建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('holdingHandChanged')：取消订阅握持手状态变化感知事件。 |
-| on_operatingHandChanged | 订阅触控操作手感知事件。系统通过触控屏传感器采集用户触控数据，结合手势识别算法判断当前操作手是左手还是右手。适用于手势交付、单双手操作适配等场景， <br>通过识别用户的触控操作手状态优化界面布局和交互方式。建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。 <br>相关方法：off('operatingHandChanged')：取消订阅触控操作手感知事件。 如果设备不支持此功能，将返回801错误码。 |
+| [on_holdingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) | 订阅握持手状态变化感知事件。系统通过传感器数据，结合识别算法判断当前握持手是左手还是右手。适用于阅读应用、视频播放等需要根据用户握持手状态调整界面布局或功能的场景。 <br>建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('holdingHandChanged')：取消订阅握持手状态变化感知事件。 |
+| [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) | 订阅触控操作手感知事件。系统通过触控屏传感器采集用户触控数据，结合手势识别算法判断当前操作手是左手还是右手。适用于手势交付、单双手操作适配等场景， <br>通过识别用户的触控操作手状态优化界面布局和交互方式。建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。 <br>相关方法：off('operatingHandChanged')：取消订阅触控操作手感知事件。 如果设备不支持此功能，将返回801错误码。 |
 
 <!--Del-->
 ### 函数（系统接口）

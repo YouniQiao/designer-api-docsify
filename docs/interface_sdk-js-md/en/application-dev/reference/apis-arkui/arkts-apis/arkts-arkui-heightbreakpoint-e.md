@@ -1,6 +1,6 @@
 # HeightBreakpoint
 
-Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). The following table lists default aspect ratio breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window aspect ratios. Device manufacturers may customize these thresholds through product-specific configurations when needed.
+Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). The following table lists default aspect ratio breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window aspect ratios. Device manufacturers may customize these thresholds through product-specific configurations when needed.
 
 **Since:** 13
 

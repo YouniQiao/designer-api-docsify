@@ -22,9 +22,9 @@ import { systemLoad } from '@kit.BasicServicesKit';
 | --- | --- |
 | [getLevel](arkts-basicservices-systemload-getlevel-f.md) | Obtains the system load level. This API uses a promise to return the result. |
 | [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md) | Unregister system load callback for perception system load change |
-| off_systemLoadChange | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [off_systemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md) | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
 | [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md) | Register system load callback for perception system load change |
-| on_systemLoadChange | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [on_systemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md) | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
 
 ### Enums
 

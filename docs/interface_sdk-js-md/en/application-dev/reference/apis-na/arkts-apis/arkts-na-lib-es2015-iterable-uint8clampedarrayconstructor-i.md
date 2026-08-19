@@ -29,8 +29,6 @@ new (elements: Iterable<number>): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es2015-iterable-uint8clampedarray-i.md) |  |
-
 ## from
 
 ```TypeScript
@@ -55,5 +53,3 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es2015-iterable-uint8clampedarray-i.md) |  |
-

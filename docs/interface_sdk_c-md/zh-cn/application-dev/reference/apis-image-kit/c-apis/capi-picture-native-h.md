@@ -57,7 +57,7 @@
 | [Image_ErrorCode OH_PictureNative_RemoveMetadata(OH_PictureNative *picture, Image_MetadataType type)](#oh_picturenative_removemetadata) | 从Picture对象中移除元数据。 |
 | [Image_ErrorCode OH_PictureNative_DeepCopyWithItems(OH_PictureNative *source, const OH_PictureNative_AuxiliaryPictureCopyItem *auxiliaryPictureCopyItems, uint32_t auxiliaryPictureCopyCount, const OH_PictureNative_MetadataCopyItem *metadataCopyItems, uint32_t metadataCopyCount, Image_AuxiliaryPictureType *sourceAuxPictureAsMainPixelMap, OH_PictureNative **picture)](#oh_picturenative_deepcopywithitems) | 创建PictureNative对象的深拷贝，并将指定的辅助图和元数据拷贝到指定的目标类型。 |
 | [Image_ErrorCode OH_PictureNative_Release(OH_PictureNative *picture)](#oh_picturenative_release) | 释放OH_PictureNative指针。 |
-| [Image_ErrorCode OH_AuxiliaryPictureNative_Create(uint8_t *data, size_t dataLength, Image_Size *size, Image_AuxiliaryPictureType type, OH_AuxiliaryPictureNative **auxiliaryPicture)](#oh_auxiliarypicturenative_create) | 创建OH_AuxiliaryPictureNative指针。该接口仅支持传入{@link PIXEL_FORMAT}为BGRA_8888的连续像素数据，会创建出RGBA_8888的辅助图。 |
+| [Image_ErrorCode OH_AuxiliaryPictureNative_Create(uint8_t *data, size_t dataLength, Image_Size *size, Image_AuxiliaryPictureType type, OH_AuxiliaryPictureNative **auxiliaryPicture)](#oh_auxiliarypicturenative_create) | 创建OH_AuxiliaryPictureNative指针。该接口仅支持传入[PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format)为BGRA_8888的连续像素数据，会创建出RGBA_8888的辅助图。 |
 | [Image_ErrorCode OH_AuxiliaryPictureNative_CreateUsingAllocator(uint8_t *data, uint32_t dataLength, OH_AuxiliaryPictureInfo *info, IMAGE_ALLOCATOR_MODE allocator, OH_AuxiliaryPictureNative **auxiliaryPicture)](#oh_auxiliarypicturenative_createusingallocator) | 创建一个具有指定内存类型的OH_AuxiliaryPictureNative对象。<ul><li>系统默认根据图像类型、图像大小、平台能力等因素选择内存类型。</li><li>处理该接口返回的辅助图时，需要考虑stride的影响。</li><li>如果data为null或dataLength小于等于0，则不会初始化辅助图数据。</li></ul> |
 | [Image_ErrorCode OH_AuxiliaryPictureNative_WritePixels(OH_AuxiliaryPictureNative *auxiliaryPicture, uint8_t *source, size_t bufferSize)](#oh_auxiliarypicturenative_writepixels) | 读取缓冲区的图像像素数据，并将结果写入辅助图中。<br>使用约束：auxiliaryPicture和source均不能为空指针，bufferSize需与待写入像素数据大小匹配。 |
 | [Image_ErrorCode OH_AuxiliaryPictureNative_ReadPixels(OH_AuxiliaryPictureNative *auxiliaryPicture, uint8_t *destination, size_t *bufferSize)](#oh_auxiliarypicturenative_readpixels) | 读取辅助图的像素数据，结果写入缓冲区。<br>使用约束：auxiliaryPicture、destination和bufferSize均不能为空指针，bufferSize需表示destination可写入的缓冲区大小；接口执行成功后，bufferSize会更新为实际读取的数据大小。 |
@@ -152,7 +152,7 @@ Image_ErrorCode OH_ComposeOptions_SetDesiredPixelFormat(OH_ComposeOptions *optio
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ComposeOptions](capi-image-nativemodule-oh-composeoptions.md) *options | 被操作的OH_ComposeOptions指针。 |
-| PIXEL_FORMAT desiredPixelFormat | 被设置的像素格式，支持RGBA_1010102、YCBCR_P010和YCRCB_P010格式。 |
+| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) desiredPixelFormat | 被设置的像素格式，支持RGBA_1010102、YCBCR_P010和YCRCB_P010格式。 |
 
 **返回：**
 
@@ -177,7 +177,7 @@ Image_ErrorCode OH_ComposeOptions_GetDesiredPixelFormat(OH_ComposeOptions *optio
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ComposeOptions](capi-image-nativemodule-oh-composeoptions.md) *options | 被操作的OH_ComposeOptions指针。 |
-| PIXEL_FORMAT *desiredPixelFormat | 合成选项中的像素格式。 |
+| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) *desiredPixelFormat | 合成选项中的像素格式。 |
 
 **返回：**
 
@@ -225,7 +225,7 @@ Image_ErrorCode OH_PictureNative_CreatePicture(OH_PixelmapNative *mainPixelmap, 
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_PixelmapNative *mainPixelmap | 主图的OH_PixelmapNative指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *mainPixelmap | 主图的OH_PixelmapNative指针。 |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) **picture | 被创建的OH_PictureNative指针。 |
 
 **返回：**
@@ -251,7 +251,7 @@ Image_ErrorCode OH_PictureNative_GetMainPixelmap(OH_PictureNative *picture, OH_P
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 被操作的OH_PictureNative指针。 |
-| OH_PixelmapNative **mainPixelmap | 获取的OH_PixelmapNative指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **mainPixelmap | 获取的OH_PixelmapNative指针。 |
 
 **返回：**
 
@@ -276,7 +276,7 @@ Image_ErrorCode OH_PictureNative_GetHdrComposedPixelmap(OH_PictureNative *pictur
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 被操作的OH_PictureNative指针。 |
-| OH_PixelmapNative **hdrPixelmap | 获取的hdr图OH_PixelmapNative指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **hdrPixelmap | 获取的hdr图OH_PixelmapNative指针。 |
 
 **返回：**
 
@@ -302,7 +302,7 @@ Image_ErrorCode OH_PictureNative_GetHdrComposedPixelmapWithOptions(OH_PictureNat
 | -- | -- |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 被操作的OH_PictureNative指针。 |
 | [OH_ComposeOptions](capi-image-nativemodule-oh-composeoptions.md) *options | 合成选项OH_ComposeOptions指针。 |
-| OH_PixelmapNative **hdrPixelmap | 获取的HDR图OH_PixelmapNative指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **hdrPixelmap | 获取的HDR图OH_PixelmapNative指针。 |
 
 **返回：**
 
@@ -327,7 +327,7 @@ Image_ErrorCode OH_PictureNative_GetGainmapPixelmap(OH_PictureNative *picture, O
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 被操作的OH_PictureNative指针。 |
-| OH_PixelmapNative **gainmapPixelmap | 获取的增益图OH_PixelmapNative指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **gainmapPixelmap | 获取的增益图OH_PixelmapNative指针。 |
 
 **返回：**
 
@@ -653,7 +653,7 @@ Image_ErrorCode OH_AuxiliaryPictureNative_Create(uint8_t *data, size_t dataLengt
 
 **描述**
 
-创建OH_AuxiliaryPictureNative指针。该接口仅支持传入{@link PIXEL_FORMAT}为BGRA_8888的连续像素数据，会创建出RGBA_8888的辅助图。
+创建OH_AuxiliaryPictureNative指针。该接口仅支持传入[PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format)为BGRA_8888的连续像素数据，会创建出RGBA_8888的辅助图。
 
 **起始版本：** 13
 
@@ -897,7 +897,7 @@ Image_ErrorCode OH_AuxiliaryPictureNative_AcquirePixelmap(OH_AuxiliaryPictureNat
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AuxiliaryPictureNative](capi-image-nativemodule-oh-auxiliarypicturenative.md) *auxiliaryPicture | 指向OH_AuxiliaryPictureNative对象的指针。 |
-| OH_PixelmapNative **pixelmap | 输出参数，用于接收获取到的OH_PixelmapNative对象地址。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **pixelmap | 输出参数，用于接收获取到的OH_PixelmapNative对象地址。 |
 
 **返回：**
 
@@ -1120,7 +1120,7 @@ Image_ErrorCode OH_AuxiliaryPictureInfo_GetPixelFormat(OH_AuxiliaryPictureInfo *
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) *info | 将操作的OH_AuxiliaryPictureInfo指针。 |
-| PIXEL_FORMAT *pixelFormat | 获取的像素格式。 |
+| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) *pixelFormat | 获取的像素格式。 |
 
 **返回：**
 
@@ -1145,7 +1145,7 @@ Image_ErrorCode OH_AuxiliaryPictureInfo_SetPixelFormat(OH_AuxiliaryPictureInfo *
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) *info | 将操作的OH_AuxiliaryPictureInfo指针。 |
-| PIXEL_FORMAT pixelFormat | 将要设置的像素格式。 |
+| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) pixelFormat | 将要设置的像素格式。 |
 
 **返回：**
 
@@ -1341,7 +1341,7 @@ Image_ErrorCode OH_PictureNative_DecomposeToPicture(OH_PixelmapNative *hdrPixelm
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_PixelmapNative *hdrPixelmap | 被分解的HDR PixelMap指针，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *hdrPixelmap | 被分解的HDR PixelMap指针，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
 | [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions.md) *options | HDR分解配置选项，此参数为必填。 |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) **outOwnedPicture | 指向被创建的Picture对象指针。 |
 

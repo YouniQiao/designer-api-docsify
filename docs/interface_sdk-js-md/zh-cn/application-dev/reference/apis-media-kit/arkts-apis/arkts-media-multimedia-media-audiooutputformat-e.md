@@ -1,6 +1,6 @@
 # AudioOutputFormat
 
-> **说明：** > > 从API version 6开始支持，从API version 8 开始废弃，建议使用[ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)替代。 表示音频封装格式的枚举。
+> **说明：** &gt; &gt; 从API version 6开始支持，从API version 8 开始废弃，建议使用[ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)替代。 表示音频封装格式的枚举。
 
 **起始版本：** 6
 

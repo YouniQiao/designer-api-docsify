@@ -154,7 +154,7 @@ Executes subsequent operations if miss to compute a value for the specific key.
 
 | 类型 | 说明 |
 | --- | --- |
-| V | Returns the value associated with the key. |
+| V \| undefined | Returns the value associated with the key. |
 
 ## entries
 
@@ -204,7 +204,7 @@ Obtains the value associated with a specified key.
 
 | 类型 | 说明 |
 | --- | --- |
-| V | Returns the value associated with the key if the specified key is present in the buffer; returns null otherwise. |
+| V \| undefined | Returns the value associated with the key if the specified key is present in the buffer; returns null otherwise. |
 
 ## getCapacity
 
@@ -409,7 +409,7 @@ Adds a key-value pair to the buffer.
 
 | 类型 | 说明 |
 | --- | --- |
-| V | Returns the value associated with the added key; returns the original value if the key to add already exists, returns null otherwise. |
+| V \| undefined | Returns the value associated with the added key; returns the original value if the key to add already exists, returns null otherwise. |
 
 ## remove
 
@@ -437,7 +437,7 @@ Deletes a specified key and its associated value from the current buffer.
 
 | 类型 | 说明 |
 | --- | --- |
-| V | Returns an Optional object containing the deleted key-value pair; returns an empty Optional object if the key does not exist. |
+| V \| undefined | Returns an Optional object containing the deleted key-value pair; returns an empty Optional object if the key does not exist. |
 
 ## toString
 

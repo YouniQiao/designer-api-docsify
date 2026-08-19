@@ -12,7 +12,7 @@ import { dragController } from '@kit.ArkUI';
 function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: DragInfo): DragAction
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. > **NOTE：**> > - Since API version 11, you can use the > [getDragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getdragcontroller) API in > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) to obtain the > [DragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md) object associated with the current UI context. > > - For optimal drag and drop performance, limit the number of drag previews.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Since API version 11, you can use the &gt; [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the &gt; [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object associated with the current UI context. &gt; &gt; - For optimal drag and drop performance, limit the number of drag previews.
 
 **Since:** 11
 
@@ -50,7 +50,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Examples**
 
-You are advised to use the [getDragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

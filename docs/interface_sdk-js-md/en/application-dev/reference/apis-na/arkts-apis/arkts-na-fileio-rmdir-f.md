@@ -11,7 +11,7 @@
 function rmdir(path: string): Promise<void>
 ```
 
-Deletes a directory and all its subdirectories and files. This API uses a promise to return the result. > **NOTE：**> > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
+Deletes a directory and all its subdirectories and files. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 23
 
@@ -57,7 +57,7 @@ Deletes a directory and all its subdirectories and files. This API uses a promis
 function rmdir(path: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a directory and all its subdirectories and files. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
+Deletes a directory and all its subdirectories and files. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ Deletes a directory and all its subdirectories and files. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully deleted, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully deleted, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

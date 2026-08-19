@@ -13,6 +13,7 @@ HeifsMetadata implements Metadata HEIF序列图像元数据类，用于存储图
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone

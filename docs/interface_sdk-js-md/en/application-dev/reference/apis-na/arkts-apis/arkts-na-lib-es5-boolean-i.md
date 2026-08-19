@@ -25,5 +25,3 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

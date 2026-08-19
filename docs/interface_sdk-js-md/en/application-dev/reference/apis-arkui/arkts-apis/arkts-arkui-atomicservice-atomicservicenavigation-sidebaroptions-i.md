@@ -22,7 +22,7 @@ onChange?: Callback<boolean>
 
 Side bar status change callback.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
 
 **Since:** 18
 

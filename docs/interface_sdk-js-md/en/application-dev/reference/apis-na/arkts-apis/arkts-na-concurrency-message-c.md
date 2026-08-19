@@ -167,7 +167,7 @@ Returns the callback of this message
 
 | Type | Description |
 | --- | --- |
-| (() =&gt; void) | the callback, or undefined if not set |
+| [function](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) \| undefined | the callback, or undefined if not set |
 
 ## getObject
 

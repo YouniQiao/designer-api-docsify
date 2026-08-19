@@ -11,6 +11,7 @@ WebHttpBodyStream是HTTP请求体数据流对象，用于在自定义scheme拦�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getPosition

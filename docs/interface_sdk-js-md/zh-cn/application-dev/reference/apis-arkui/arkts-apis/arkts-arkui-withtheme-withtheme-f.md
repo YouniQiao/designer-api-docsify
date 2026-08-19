@@ -69,5 +69,5 @@ export declare function WithTheme(
 
 | 类型 | 说明 |
 | --- | --- |
-| [WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md) | WithTheme属性 |
+| WithTheme属性 | WithTheme属性 |
 

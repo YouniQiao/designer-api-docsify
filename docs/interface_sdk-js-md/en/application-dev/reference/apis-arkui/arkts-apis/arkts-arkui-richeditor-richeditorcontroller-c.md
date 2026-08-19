@@ -41,7 +41,7 @@ Add a builder span.
 
 | Type | Description |
 | --- | --- |
-| int | span index |
+| int \| undefined | span index |
 
 ## addImageSpan
 
@@ -72,7 +72,7 @@ Add a image span.
 
 | Type | Description |
 | --- | --- |
-| int | span index |
+| int \| undefined | span index |
 
 ## addSymbolSpan
 
@@ -103,7 +103,7 @@ Add a symbol span.
 
 | Type | Description |
 | --- | --- |
-| int | symbol span index |
+| int \| undefined | symbol span index |
 
 ## addTextSpan
 
@@ -134,7 +134,7 @@ Add a text span.
 
 | Type | Description |
 | --- | --- |
-| int | span index |
+| int \| undefined | span index |
 
 ## deleteSpans
 
@@ -188,7 +188,7 @@ Convert StyledString to spans in rich editor. return a empty Array&lt;RichEditor
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | return convert value |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; \| undefined | return convert value |
 
 **Error codes:**
 
@@ -224,7 +224,7 @@ Get span content.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditor-richeditorparagraphresult-i.md)&gt; |  |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditor-richeditorparagraphresult-i.md)&gt; \| undefined |  |
 
 ## getSelection
 
@@ -248,7 +248,7 @@ Called when the content is selected.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorSelection](arkts-arkui-richeditor-richeditorselection-i.md) |  |
+| [RichEditorSelection](arkts-arkui-richeditor-richeditorselection-i.md) \| undefined |  |
 
 ## getSpans
 
@@ -278,7 +278,7 @@ Get span content.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md)&gt; |  |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md)&gt; \| undefined |  |
 
 ## toStyledString
 
@@ -308,7 +308,7 @@ Convert spans to StyledString in rich editor. return a empty StyledString if con
 
 | Type | Description |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-styledstring-c.md) |  |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined |  |
 
 **Error codes:**
 

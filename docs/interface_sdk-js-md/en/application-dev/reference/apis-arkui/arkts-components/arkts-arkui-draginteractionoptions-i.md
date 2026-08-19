@@ -101,7 +101,7 @@ Whether to disable the lift animation effect during dragging. **true**: Disable 
 isMultiSelectionEnabled?: boolean
 ```
 
-Whether to enable multi-select clustering during drag operations. **true** to enable, **false** otherwise. This parameter takes effect only for the grid items and list items in the Grid and List containers. When this feature is enabled, child components cannot be dragged individually. Preview priority: string in [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview) > PixelMap in **dragPreview** > component snapshot. Builder previews not supported. This parameter is incompatible with bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu12) using **isShown** parameter. Default value: **false**
+Whether to enable multi-select clustering during drag operations. **true** to enable, **false** otherwise. This parameter takes effect only for the grid items and list items in the Grid and List containers. When this feature is enabled, child components cannot be dragged individually. Preview priority: string in [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview) &gt; PixelMap in **dragPreview** &gt; component snapshot. Builder previews not supported. This parameter is incompatible with bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu12) using **isShown** parameter. Default value: **false**
 
 **Type:** boolean
 

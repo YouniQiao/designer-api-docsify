@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## onNetStatsChange
@@ -27,7 +28,7 @@ function onNetStatsChange(callback: Callback<NetStatsChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md)&gt; | 是 | The callback of on. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md)&gt; | 是 | The callback of on. |
 
 **错误码：**
 

@@ -36,7 +36,7 @@ ListItem(value?: ListItemOptions)
 ListItem(value?: string)
 ```
 
-创建ListItem组件。 > **说明：** > > 从API version 7开始支持，从API version 10开始废弃。
+创建ListItem组件。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 10开始废弃。
 
 **起始版本：** 7
 

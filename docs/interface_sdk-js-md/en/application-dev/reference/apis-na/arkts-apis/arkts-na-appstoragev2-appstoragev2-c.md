@@ -41,7 +41,7 @@ If the value for the given key is already available, return the value. If not, a
 
 | Type | Description |
 | --- | --- |
-| T | the value of the existed key or the default value. Returns undefined if defaultCreator is not set and there is no data that matches type and key. |
+| T \| undefined | the value of the existed key or the default value. Returns undefined if defaultCreator is not set and there is no data that matches type and key. |
 
 ## connect
 
@@ -72,7 +72,7 @@ If the value for the given key is already available, return the value. If not, a
 
 | Type | Description |
 | --- | --- |
-| T | the value of the existed key or the default value. Returns undefined if defaultCreator is not set and there is no data that matches type. |
+| T \| undefined | the value of the existed key or the default value. Returns undefined if defaultCreator is not set and there is no data that matches type. |
 
 ## keys
 

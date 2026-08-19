@@ -89,5 +89,5 @@ Exports rendered content as an ImageBitmap object
 
 | Type | Description |
 | --- | --- |
-| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) |  |
+| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| undefined |  |
 

@@ -13,6 +13,7 @@ Defines the contact number information.
 ## 导入模块
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## alphaTag

@@ -49,7 +49,7 @@ pro.exit(0);
 getEnvironmentVar(name: string): string
 ```
 
-Obtains the value of an environment variable. > **NOTE：**> > Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is > returned.
+Obtains the value of an environment variable. &gt; **NOTE：**&gt; &gt; Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is &gt; returned.
 
 **Since:** 9
 

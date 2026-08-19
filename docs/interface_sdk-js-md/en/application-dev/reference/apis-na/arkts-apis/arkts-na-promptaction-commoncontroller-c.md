@@ -73,5 +73,5 @@ Get the state.
 
 | Type | Description |
 | --- | --- |
-| [CommonState](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-commonstate-e.md) | return the state. |
+| [CommonState](arkts-na-promptaction-commonstate-e.md) | return the state. |
 

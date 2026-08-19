@@ -39,7 +39,7 @@ Obtains the default time zone object used by an application. If the default time
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-na-i18n-timezone-c.md) | TimeZone object, first set by application, then system time zone, last GMT time zone. |
+| [TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md) | TimeZone object, first set by application, then system time zone, last GMT time zone. |
 
 ## getAvailableIDs
 
@@ -257,7 +257,7 @@ Creates a TimeZone object corresponding to the specified time zone city.
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-na-i18n-timezone-c.md) | TimeZone object corresponding to the specified time zone city ID. |
+| [TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md) | TimeZone object corresponding to the specified time zone city ID. |
 
 ## getTimezonesByLocation
 
@@ -288,7 +288,7 @@ Creates an array of TimeZone objects corresponding to the specified location.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TimeZone](arkts-na-i18n-timezone-c.md)&gt; | TimeZone objects corresponding to the specified location. |
+| Array&lt;[TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md)&gt; | TimeZone objects corresponding to the specified location. |
 
 **Error codes:**
 
@@ -319,7 +319,7 @@ Get the zone rules object corresponds to the timezone objects.
 
 | Type | Description |
 | --- | --- |
-| [ZoneRules](arkts-na-i18n-zonerules-c.md) | Returns a ZoneRuels object which defines timezone offset changing rule. |
+| [ZoneRules](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-zonerules-c.md) | Returns a ZoneRuels object which defines timezone offset changing rule. |
 
 ## isDaylightSavingTime
 

@@ -78,7 +78,7 @@ Particle lifetime.
 lifetimeRange?: int
 ```
 
-Particle lifetimeRange,value range [0, ∞). when lifetimeRange>lifetime,minimum lifetime is 0.
+Particle lifetimeRange,value range [0, ∞). when lifetimeRange&gt;lifetime,minimum lifetime is 0.
 
 **Type:** int
 

@@ -18,5 +18,5 @@ The function of suspend media play.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SuspendType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-suspendtype-e.md) | Yes | The scenario for suspending the media player. |
+| type | [SuspendType](arkts-na-webview-suspendtype-e.md) | Yes | The scenario for suspending the media player. |
 

@@ -29,5 +29,3 @@ new <T extends object = object>(iterable: Iterable<T>): WeakSet<T>
 
 | Type | Description |
 | --- | --- |
-| WeakSet&lt;T&gt; |  |
-

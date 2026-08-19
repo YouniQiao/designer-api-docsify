@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## centerX

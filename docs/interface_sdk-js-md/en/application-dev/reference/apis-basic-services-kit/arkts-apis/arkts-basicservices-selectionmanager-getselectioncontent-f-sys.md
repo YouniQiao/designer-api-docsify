@@ -12,7 +12,7 @@ import { selectionManager } from '@kit.BasicServicesKit';
 function getSelectionContent(): Promise<string>
 ```
 
-Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#on_selectioncompletedselectioncompleted) callback and is valid only after the word selection completion event is triggered.
+Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#onselectioncompleted) callback and is valid only after the word selection completion event is triggered.
 
 **Since:** 24
 

@@ -11,6 +11,7 @@ Socket的连接信息。
 ## 导入模块
 
 ```TypeScript
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

@@ -12,7 +12,7 @@ import { media } from '@kit.MediaKit';
 function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 ```
 
-Creates an AVRecorder instance. This API uses an asynchronous callback to return the result. > **NOTE：**> > An application can create multiple AVRecorder instances. However, because the device shares a common audio > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio > recording fails due to audio channel conflicts.
+Creates an AVRecorder instance. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; An application can create multiple AVRecorder instances. However, because the device shares a common audio &gt; channel, only one instance can record audio at a time. Any attempt to create the second instance for audio &gt; recording fails due to audio channel conflicts.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ Creates an AVRecorder instance. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md)&gt; | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md)&gt; | Yes | Callback function, which returns an **AVRecorder** instance for recording audio and video. Otherwise, **null** is returned. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-media-avrecorder-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVRecorder** instance is returned; otherwise, **undefined** is returned. The instance can be used to record audio and video. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Creates an **AVRecorder** instance. This API uses an asynchronous callback to re
 function createAVRecorder(): Promise<AVRecorder>
 ```
 
-Creates an AVRecorder instance. This API uses a promise to return the result. > **NOTE：**> > An application can create multiple AVRecorder instances. However, because the device shares a common audio > channel, only one instance can record audio at a time. Any attempt to create the second instance for audio > recording fails due to audio channel conflicts.
+Creates an AVRecorder instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; An application can create multiple AVRecorder instances. However, because the device shares a common audio &gt; channel, only one instance can record audio at a time. Any attempt to create the second instance for audio &gt; recording fails due to audio channel conflicts.
 
 **Since:** 9
 

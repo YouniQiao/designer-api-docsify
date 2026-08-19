@@ -125,5 +125,5 @@ Request AI image generation task to get the generated image.
 | --- | --- | --- | --- |
 | sessionId | int | Yes | The session id for requesting an AI image generation task. <br>Value: range:[0, +∞] |
 | params | [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Yes | Parameters for requesting an AI image generation task. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GenerateImageTaskPartialResult](arkts-arkui-imagegeneration-generateimagetaskpartialresult-i-sys.md)&gt; | Yes | the callback used to return the GenerateImageTaskPartialResult. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GenerateImageTaskPartialResult](arkts-arkui-imagegeneration-generateimagetaskpartialresult-i-sys.md)&gt; | Yes | the callback used to return the GenerateImageTaskPartialResult. |
 

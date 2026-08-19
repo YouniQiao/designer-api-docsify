@@ -21,7 +21,7 @@
 maxFontSize?: number | string | Resource
 ```
 
-设置文本最大显示字号，与minFontSize配合使用。当需要限制文本的最大显示尺寸以避免文本过大或需要实现字号自适应时传入此参数。 > **说明：**当设置minFontSize和maxFontSize时，font中的size将不生效。详细规则请参考Text组件的 > maxFontSize属性。
+设置文本最大显示字号，与minFontSize配合使用。当需要限制文本的最大显示尺寸以避免文本过大或需要实现字号自适应时传入此参数。 &gt; **说明：**当设置minFontSize和maxFontSize时，font中的size将不生效。详细规则请参考Text组件的 &gt; maxFontSize属性。
 
 **类型：** number \| string \| Resource
 
@@ -41,7 +41,7 @@ maxFontSize?: number | string | Resource
 minFontSize?: number | string | Resource
 ```
 
-设置文本最小显示字号，与maxFontSize配合使用。当需要限制文本的最小显示尺寸以避免文本过小或需要实现字号自适应时传入此参数。 > **说明：**当设置minFontSize和maxFontSize时，font中的size将不生效。默认最大行数为1，自适应高度方式为MIN_FONT_SIZE_FIRST。详细 > 规则请参考Text组件的minFontSize属性。
+设置文本最小显示字号，与maxFontSize配合使用。当需要限制文本的最小显示尺寸以避免文本过小或需要实现字号自适应时传入此参数。 &gt; **说明：**当设置minFontSize和maxFontSize时，font中的size将不生效。默认最大行数为1，自适应高度方式为MIN_FONT_SIZE_FIRST。详细 &gt; 规则请参考Text组件的minFontSize属性。
 
 **类型：** number \| string \| Resource
 

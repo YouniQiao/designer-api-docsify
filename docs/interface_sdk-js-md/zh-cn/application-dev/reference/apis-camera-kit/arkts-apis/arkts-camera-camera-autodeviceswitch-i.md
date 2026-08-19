@@ -13,6 +13,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableAutoDeviceSwitch
@@ -21,7 +23,7 @@
 enableAutoDeviceSwitch(enabled: boolean): void
 ```
 
-使能或去使能自动切换镜头。可以先通过[isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported)获取 当前设备是否支持自动切换镜头。 > **说明：** > > 该接口仅用于有多个前置镜头的折叠设备，在不同的折叠状态下可自动切换到当前可使用的前置镜头。无法实现前后置镜头的切换。
+使能或去使能自动切换镜头。可以先通过[isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported)获取 当前设备是否支持自动切换镜头。 &gt; **说明：** &gt; &gt; 该接口仅用于有多个前置镜头的折叠设备，在不同的折叠状态下可自动切换到当前可使用的前置镜头。无法实现前后置镜头的切换。
 
 **起始版本：** 23
 

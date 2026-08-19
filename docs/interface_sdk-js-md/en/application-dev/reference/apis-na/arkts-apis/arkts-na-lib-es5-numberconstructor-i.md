@@ -29,8 +29,6 @@ new(value?: any): Number
 
 | Type | Description |
 | --- | --- |
-| Number |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new(value?: any): Number
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## MAX_VALUE
 
 ```TypeScript

@@ -367,7 +367,7 @@ Returns the value to which the specified key is mapped, or undefined if this map
 
 | Type | Description |
 | --- | --- |
-| V | value if associated with key presents, undefined otherwise |
+| V \| undefined | value if associated with key presents, undefined otherwise |
 
 ## getIndexOfKey
 
@@ -528,7 +528,7 @@ Obtains the key at the location identified by index in an LightWeightMap contain
 
 | Type | Description |
 | --- | --- |
-| K | the key of key-value pairs or undefined |
+| K \| undefined | the key of key-value pairs or undefined |
 
 **Error codes:**
 
@@ -607,7 +607,7 @@ Obtains the value identified by index in an LightWeightMap container
 
 | Type | Description |
 | --- | --- |
-| V | the value of key-value pairs or undefined |
+| V \| undefined | the value of key-value pairs or undefined |
 
 **Error codes:**
 
@@ -929,7 +929,7 @@ Remove the mapping for this key from this map if present
 
 | Type | Description |
 | --- | --- |
-| V | the value associated with the key if it was removed, undefined otherwise |
+| V \| undefined | the value associated with the key if it was removed, undefined otherwise |
 
 ## removeAt
 

@@ -35,8 +35,6 @@ Returns the this object after copying a section of the array identified by start
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## every
 
 ```TypeScript
@@ -60,8 +58,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## fill
 
 ```TypeScript
@@ -86,8 +82,6 @@ Changes all array elements from `start` to `end` index to a static `value` and r
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## filter
 
 ```TypeScript
@@ -111,8 +105,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Type | Description |
 | --- | --- |
-| Int32Array |  |
-
 ## find
 
 ```TypeScript
@@ -136,8 +128,6 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## findIndex
 
 ```TypeScript
@@ -161,8 +151,6 @@ Returns the index of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## forEach
 
 ```TypeScript
@@ -205,8 +193,6 @@ Returns the index of the first occurrence of a value in an array.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## join
 
 ```TypeScript
@@ -229,8 +215,6 @@ Adds all the elements of an array separated by the specified separator string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## lastIndexOf
 
 ```TypeScript
@@ -254,8 +238,6 @@ Returns the index of the last occurrence of a value in an array.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## map
 
 ```TypeScript
@@ -279,8 +261,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | Type | Description |
 | --- | --- |
-| Int32Array |  |
-
 ## reduce
 
 ```TypeScript
@@ -303,8 +283,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## reduce
 
 ```TypeScript
@@ -326,8 +304,6 @@ reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: n
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## reduce
 
 ```TypeScript
@@ -351,8 +327,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -375,8 +349,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -398,8 +370,6 @@ reduceRight(callbackfn: (previousValue: number, currentValue: number, currentInd
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -423,8 +393,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## reverse
 
 ```TypeScript
@@ -441,8 +409,6 @@ Reverses the elements in an Array.
 
 | Type | Description |
 | --- | --- |
-| Int32Array |  |
-
 ## set
 
 ```TypeScript
@@ -485,8 +451,6 @@ Returns a section of an array.
 
 | Type | Description |
 | --- | --- |
-| Int32Array |  |
-
 ## some
 
 ```TypeScript
@@ -510,8 +474,6 @@ Determines whether the specified callback function returns true for any element 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## sort
 
 ```TypeScript
@@ -534,8 +496,6 @@ Sorts an array.
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## subarray
 
 ```TypeScript
@@ -559,8 +519,6 @@ Gets a new Int32Array view of the ArrayBuffer store for this array, referencing 
 
 | Type | Description |
 | --- | --- |
-| Int32Array |  |
-
 ## toLocaleString
 
 ```TypeScript
@@ -577,8 +535,6 @@ Converts a number to a string by using the current locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -595,8 +551,6 @@ Returns a string representation of an array.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## valueOf
 
 ```TypeScript
@@ -613,8 +567,6 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| Int32Array |  |
-
 ## BYTES_PER_ELEMENT
 
 ```TypeScript

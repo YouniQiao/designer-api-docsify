@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## 汇总

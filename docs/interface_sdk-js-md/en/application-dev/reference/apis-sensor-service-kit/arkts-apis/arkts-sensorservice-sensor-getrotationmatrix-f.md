@@ -25,7 +25,7 @@ Obtains the rotation matrix from a rotation vector. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;double&gt; | Yes | Rotation vector. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to return the rotation matrix. |
 
 **Error codes:**
 
@@ -136,7 +136,7 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 | --- | --- | --- | --- |
 | gravity | Array&lt;double&gt; | Yes | Gravity vector. |
 | geomagnetic | Array&lt;double&gt; | Yes | Geomagnetic vector. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Yes | Callback used to return the rotation matrix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Yes | Callback used to return the rotation matrix. |
 
 **Error codes:**
 

@@ -46,8 +46,6 @@ get(key: K): V | undefined
 
 | Type | Description |
 | --- | --- |
-| V |  |
-
 ## has
 
 ```TypeScript
@@ -68,8 +66,6 @@ has(key: K): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## size
 
 ```TypeScript

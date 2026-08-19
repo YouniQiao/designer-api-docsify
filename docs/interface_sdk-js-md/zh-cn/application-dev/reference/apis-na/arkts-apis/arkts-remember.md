@@ -18,5 +18,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [RememberInitialType](arkts-na-rememberinitialtype-t.md) | 状态变量初始值入参类型。基础类型使用类型T直接传入； 复杂类型（interface、class和包含Array、Map、Set和Date的内置类型）使用回调（() => T）初始化能避免重复创建实例，性能更高。 |
+| [RememberInitialType](arkts-na-rememberinitialtype-t.md) | 状态变量初始值入参类型。基础类型使用类型T直接传入； 复杂类型（interface、class和包含Array、Map、Set和Date的内置类型）使用回调（() =&gt; T）初始化能避免重复创建实例，性能更高。 |
 

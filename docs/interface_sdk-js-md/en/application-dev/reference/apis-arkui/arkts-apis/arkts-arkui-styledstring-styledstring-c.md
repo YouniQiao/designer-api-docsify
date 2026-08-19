@@ -156,7 +156,7 @@ Get the attribute objects of the subStyledString.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[SpanStyle](arkts-arkui-styledstring-spanstyle-i.md)&gt; |  |
+| Array&lt;[SpanStyle](arkts-arkui-styledstring-spanstyle-i.md)&gt; \| undefined |  |
 
 **Error codes:**
 
@@ -193,7 +193,7 @@ Get the substring of the StyledString.
 
 | Type | Description |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-styledstring-c.md) |  |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined |  |
 
 **Error codes:**
 

@@ -32,7 +32,7 @@ Sets whether to enable the notification sync feature for devices where the appli
 | --- | --- | --- | --- |
 | userId | int | Yes | User ID. |
 | enable | boolean | Yes | Whether to enable the notification sync feature. The value **true** means to enable the feature, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

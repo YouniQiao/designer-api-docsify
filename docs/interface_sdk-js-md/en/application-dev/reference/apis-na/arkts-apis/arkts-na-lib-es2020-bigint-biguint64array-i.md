@@ -25,8 +25,6 @@ A typed array of 64-bit unsigned integer values. The contents are initialized to
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;bigint&gt; |  |
-
 ## copyWithin
 
 ```TypeScript
@@ -51,8 +49,6 @@ Returns the this object after copying a section of the array identified by start
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## entries
 
 ```TypeScript
@@ -69,8 +65,6 @@ Yields index, value pairs for every entry in the array.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[number, bigint]&gt; |  |
-
 ## every
 
 ```TypeScript
@@ -94,8 +88,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## fill
 
 ```TypeScript
@@ -120,8 +112,6 @@ Changes all array elements from `start` to `end` index to a static `value` and r
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## filter
 
 ```TypeScript
@@ -145,8 +135,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## find
 
 ```TypeScript
@@ -170,8 +158,6 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## findIndex
 
 ```TypeScript
@@ -195,8 +181,6 @@ Returns the index of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## forEach
 
 ```TypeScript
@@ -239,8 +223,6 @@ Determines whether an array includes a certain element, returning true or false 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## indexOf
 
 ```TypeScript
@@ -264,8 +246,6 @@ Returns the index of the first occurrence of a value in an array.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## join
 
 ```TypeScript
@@ -288,8 +268,6 @@ Adds all the elements of an array separated by the specified separator string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## keys
 
 ```TypeScript
@@ -306,8 +284,6 @@ Yields each index in the array.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;number&gt; |  |
-
 ## lastIndexOf
 
 ```TypeScript
@@ -331,8 +307,6 @@ Returns the index of the last occurrence of a value in an array.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## map
 
 ```TypeScript
@@ -356,8 +330,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## reduce
 
 ```TypeScript
@@ -380,8 +352,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## reduce
 
 ```TypeScript
@@ -405,8 +375,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -429,8 +397,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -454,8 +420,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## reverse
 
 ```TypeScript
@@ -472,8 +436,6 @@ Reverses the elements in the array.
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## set
 
 ```TypeScript
@@ -516,8 +478,6 @@ Returns a section of an array.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## some
 
 ```TypeScript
@@ -541,8 +501,6 @@ Determines whether the specified callback function returns true for any element 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## sort
 
 ```TypeScript
@@ -565,8 +523,6 @@ Sorts the array.
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## subarray
 
 ```TypeScript
@@ -590,8 +546,6 @@ Gets a new BigUint64Array view of the ArrayBuffer store for this array, referenc
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## toLocaleString
 
 ```TypeScript
@@ -608,8 +562,6 @@ Converts the array to a string by using the current locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -626,8 +578,6 @@ Returns a string representation of the array.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## valueOf
 
 ```TypeScript
@@ -644,8 +594,6 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## values
 
 ```TypeScript
@@ -662,8 +610,6 @@ Yields each value in the array.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;bigint&gt; |  |
-
 ## BYTES_PER_ELEMENT
 
 ```TypeScript

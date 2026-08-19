@@ -29,8 +29,6 @@ new(length?: number): BigUint64Array
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new(array: Iterable<bigint>): BigUint64Array
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -75,8 +71,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigUint64Arr
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## from
 
 ```TypeScript
@@ -99,8 +93,6 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## from
 
 ```TypeScript
@@ -123,8 +115,6 @@ from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: a
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## of
 
 ```TypeScript
@@ -147,8 +137,6 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](arkts-na-lib-es2020-bigint-biguint64array-i.md) |  |
-
 ## BYTES_PER_ELEMENT
 
 ```TypeScript

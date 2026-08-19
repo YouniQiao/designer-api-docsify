@@ -33,7 +33,7 @@ Switch input method. The caller must be the current inputmethod.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | indicates the target input method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of switchInputMethod. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of switchInputMethod. |
 
 **Error codes:**
 

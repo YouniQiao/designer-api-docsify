@@ -6,13 +6,13 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## off_navDestinationUpdate('navDestinationUpdate')
+## off('navDestinationUpdate')
 
 ```TypeScript
 export function off(type: 'navDestinationUpdate', options: { navigationId: ResourceStr }, callback?: Callback<NavDestinationInfo>): void
 ```
 
-Unsubscribes from status changes of the **NavDestination** component. Compared with [uiObserver.off](#off_navdestinationupdatenavdestinationupdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
+Unsubscribes from status changes of the **NavDestination** component. Compared with [uiObserver.off](#offnavdestinationupdate), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
 
 **Since:** 11
 
@@ -30,10 +30,10 @@ Unsubscribes from status changes of the **NavDestination** component. Compared w
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | Yes | Event type. Set to **'navDestinationUpdate'** for **NavDestination** component status change events. |
 | options | { navigationId: ResourceStr } | Yes | ID of the target **Navigation** component. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | Callback used to return the result. It provides the current state of the **NavDestination** component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | No | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
 
-## off_navDestinationUpdate('navDestinationUpdate')
+## off('navDestinationUpdate')
 
 ```TypeScript
 export function off(type: 'navDestinationUpdate', callback?: Callback<NavDestinationInfo>): void
@@ -56,5 +56,5 @@ Unsubscribes from status changes of the **NavDestination** component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'navDestinationUpdate' | Yes | Event type. Set to **'navDestinationUpdate'** for **NavDestination** component status change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | Callback used to return the result. It provides the current state of the **NavDestination** component. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavDestinationInfo&gt; | No | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 

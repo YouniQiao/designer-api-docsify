@@ -11,7 +11,7 @@
 function finishTrace(name: string, taskId: number): void
 ```
 
-Marks the end of a timeslice trace task. > **NOTE：**> > To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in > **startTrace**.
+Marks the end of a timeslice trace task. &gt; **NOTE：**&gt; &gt; To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in &gt; **startTrace**.
 
 **Since:** 7
 

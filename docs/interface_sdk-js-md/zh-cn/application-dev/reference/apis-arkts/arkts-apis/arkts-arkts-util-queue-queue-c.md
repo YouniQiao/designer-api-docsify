@@ -11,6 +11,8 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 ## 导入模块
 
 ```TypeScript
+import { Queue } from '@kit.ArkTS';
+import { QueueForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator

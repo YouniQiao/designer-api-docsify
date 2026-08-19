@@ -33,8 +33,6 @@ Adds a value to the value at the given position in the array, returning the orig
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## and
 
 ```TypeScript
@@ -59,8 +57,6 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## compareExchange
 
 ```TypeScript
@@ -86,8 +82,6 @@ Replaces the value at the given position in the array if the original value equa
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## exchange
 
 ```TypeScript
@@ -112,8 +106,6 @@ Replaces the value at the given position in the array, returning the original va
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## isLockFree
 
 ```TypeScript
@@ -136,8 +128,6 @@ Returns a value indicating whether high-performance algorithms can use atomic op
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## load
 
 ```TypeScript
@@ -161,8 +151,6 @@ Returns the value at the given position in the array. Until this atomic operatio
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## notify
 
 ```TypeScript
@@ -187,8 +175,6 @@ Wakes up sleeping agents that are waiting on the given index of the array, retur
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## or
 
 ```TypeScript
@@ -213,8 +199,6 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## store
 
 ```TypeScript
@@ -239,8 +223,6 @@ Stores a value at the given position in the array, returning the new value. Unti
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## sub
 
 ```TypeScript
@@ -265,8 +247,6 @@ Subtracts a value from the value at the given position in the array, returning t
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## wait
 
 ```TypeScript
@@ -292,8 +272,6 @@ If the value at the given position in the array is equal to the provided value, 
 
 | Type | Description |
 | --- | --- |
-| "ok" |  |
-
 ## xor
 
 ```TypeScript
@@ -318,8 +296,6 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## [Symbol.toStringTag]
 
 ```TypeScript

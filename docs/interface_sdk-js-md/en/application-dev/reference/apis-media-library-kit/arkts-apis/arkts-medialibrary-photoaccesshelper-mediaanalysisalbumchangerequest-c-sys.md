@@ -106,7 +106,7 @@ Creates a MediaAnalysisAlbumChangeRequest instance.
 
 | Type | Description |
 | --- | --- |
-| [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) | Returns a MediaAnalysisAlbumChangeRequest instance. If the operation fails, returns null. |
+| [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) \| null | Returns a MediaAnalysisAlbumChangeRequest instance. If the operation fails, returns null. |
 
 **Error codes:**
 
@@ -126,7 +126,7 @@ static createAnalysisAlbumRequest(
     ): MediaAnalysisAlbumChangeRequest
 ```
 
-Creates a change request for the **Analysis** album. > **NOTE：**> > The album name must meet the following requirements: > > - The album name string length ranges from 1 to 255. > > - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates a change request for the **Analysis** album. &gt; **NOTE：**&gt; &gt; The album name must meet the following requirements: &gt; &gt; - The album name string length ranges from 1 to 255. &gt; &gt; - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 

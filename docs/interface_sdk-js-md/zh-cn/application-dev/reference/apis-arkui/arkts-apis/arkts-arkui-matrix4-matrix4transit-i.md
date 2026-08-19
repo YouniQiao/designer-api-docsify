@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## combine
@@ -248,7 +249,7 @@ Matrix的坐标点转换函数，可以将当前的变换效果作用到一个�
 
 | 类型 | 说明 |
 | --- | --- |
-| [             double,             double         ] | 返回矩阵变换后的Point对象。 |
+| [double, double] | 返回矩阵变换后的Point对象。 |
 
 ## translate
 

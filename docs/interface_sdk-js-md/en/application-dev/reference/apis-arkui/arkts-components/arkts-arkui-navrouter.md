@@ -64,5 +64,5 @@ Provides route information so that clicking the **NavRouter** component redirect
 
 | Name | Description |
 | --- | --- |
-| [NavRouteMode](arkts-arkui-navroutemode-e.md) | Defines the routing policy. > **NOTE：** |
+| [NavRouteMode](arkts-arkui-navroutemode-e.md) | Defines the routing policy. &gt; **NOTE：** |
 

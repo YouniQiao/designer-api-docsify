@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpJsHeapData
@@ -11,7 +12,7 @@
 function dumpJsHeapData(filename : string) : void
 ```
 
-虚拟机堆数据转储。 > **注意** > > 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
+虚拟机堆数据转储。 &gt; **注意** &gt; &gt; 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
 
 **起始版本：** 26.1.0
 
@@ -51,7 +52,7 @@ try {
 function dumpJsHeapData(filename: string, needClean: boolean): void
 ```
 
-虚拟机堆数据转储，支持清除nodeId缓存。 > **注意** > > 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
+虚拟机堆数据转储，支持清除nodeId缓存。 &gt; **注意** &gt; &gt; 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
 
 **起始版本：** 26.1.0
 

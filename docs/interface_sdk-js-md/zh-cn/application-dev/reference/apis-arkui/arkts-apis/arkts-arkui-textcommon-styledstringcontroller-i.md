@@ -30,7 +30,7 @@ ArkTS-Sta: getStyledString(): MutableStyledString | undefined 获取富文本组
 
 | 类型 | 说明 |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。 |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) \| undefined | 富文本组件显示的属性字符串。 |
 
 ## setStyledString
 

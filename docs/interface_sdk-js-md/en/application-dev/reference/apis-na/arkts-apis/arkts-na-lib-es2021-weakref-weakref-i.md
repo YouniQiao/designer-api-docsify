@@ -25,8 +25,6 @@ Returns the WeakRef instance's target object, or undefined if the target object 
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## [Symbol.toStringTag]
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # LinkParamCategory
 
-Enum definition of the paramCategory [paramCategory](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramcategory), paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink InsightIntentLink.
+Enum definition of the paramCategory [paramCategory](arkts-na-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramcategory), paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink InsightIntentLink.
 
 **Since:** 26.0.0
 

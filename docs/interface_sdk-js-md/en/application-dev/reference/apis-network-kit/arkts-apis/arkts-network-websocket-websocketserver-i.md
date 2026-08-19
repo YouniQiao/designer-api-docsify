@@ -92,7 +92,7 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 listAllConnections(): WebSocketConnection[]
 ```
 
-Obtains information about all clients connected to the server. **Required permission**: ohos.permission.INTERNET > **NOTE：**> > This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous > operation is complete, ensuring that information about all clients connected to the server can be correctly > obtained.
+Obtains information about all clients connected to the server. **Required permission**: ohos.permission.INTERNET &gt; **NOTE：**&gt; &gt; This API is called asynchronously. The **await** keyword needs to be used to wait until the asynchronous &gt; operation is complete, ensuring that information about all clients connected to the server can be correctly &gt; obtained.
 
 **Since:** 23
 
@@ -173,7 +173,7 @@ Cancels listening for events that a client requested to connect the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | the callback used to return the result.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | the callback used to return the result.<br>**Since:** 23 |
 
 ## offMessageReceive
 
@@ -194,7 +194,7 @@ Cancels listening for events that the server received a message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | the callback used to return the result.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | the callback used to return the result.<br>**Since:** 23 |
 
 ## offWebSocketServerClose
 
@@ -235,15 +235,15 @@ Cancels listening for the error events of a WebSocket Server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result.<br>**Since:** 23 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result.<br>**Since:** 23 |
 
-## off_close('close')
+## off('close')
 
 ```TypeScript
 off(type: 'close', callback?: ClientConnectionCloseCallback): void
 ```
 
-Unsubscribes from WebSocketServer close events. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocketServer close events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -268,13 +268,13 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('close');
 ```
 
-## off_connect('connect')
+## off('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 ```
 
-Unsubscribes from WebSocketServer connection events (the connection between the client and server is successfully established). This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocketServer connection events (the connection between the client and server is successfully established). This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -287,7 +287,7 @@ Unsubscribes from WebSocketServer connection events (the connection between the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Event type, which has a fixed value of **connect**. Successful calling of **offconnect()** indicates that listening for connection events is canceled successful. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | Callback used to return the information about connected clients. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | Callback used to return the information about connected clients. |
 
 **Examples**
 
@@ -299,13 +299,13 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('connect');
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from WebSocketServer error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from WebSocketServer error events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -318,7 +318,7 @@ Unsubscribes from WebSocketServer error events. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which has a fixed value of **error**. Successful calling of **offerror()** indicates that listening for the **error** events is canceled successfully. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the error code (default value: **200**). |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the error code (default value: **200**). |
 
 **Examples**
 
@@ -330,13 +330,13 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('error');
 ```
 
-## off_messageReceive('messageReceive')
+## off('messageReceive')
 
 ```TypeScript
 off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 ```
 
-Unsubscribes from the WebSocketServer event of receiving client messages. This API uses an asynchronous callback to return the result. > **NOTE：**> > You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. > If you do not pass the callback, you will cancel listening for all events.
+Unsubscribes from the WebSocketServer event of receiving client messages. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; You can pass the callback of the **on** function if you want to cancel listening for a certain type of event. &gt; If you do not pass the callback, you will cancel listening for all events.
 
 **Since:** 19
 
@@ -349,7 +349,7 @@ Unsubscribes from the WebSocketServer event of receiving client messages. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | Event type, which has a fixed value of **messageReceive**. Successful calling of **offmessageReceive()** indicates that listening for **messageReceive** events is canceled successfully. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | Callback used to return the result, which contains: <br>- **clientconnection**: client information. <br>- **data**: data sent by the client. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | Callback used to return the result, which contains: <br>- **clientconnection**: client information. <br>- **data**: data sent by the client. |
 
 **Examples**
 
@@ -380,7 +380,7 @@ Enables listening for events that a client requested to connect the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | the callback used to return the result.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | the callback used to return the result.<br>**Since:** 23 |
 
 ## onMessageReceive
 
@@ -401,7 +401,7 @@ Enables listening for events that the server received a message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | the callback used to return the result.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | the callback used to return the result.<br>**Since:** 23 |
 
 ## onWebSocketServerClose
 
@@ -442,9 +442,9 @@ Enables listening for the error events of a WebSocket Server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result.<br>**Since:** 23 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result.<br>**Since:** 23 |
 
-## on_close('close')
+## on('close')
 
 ```TypeScript
 on(type: 'close', callback: ClientConnectionCloseCallback): void
@@ -477,7 +477,7 @@ localServer.on('close', (clientConnection: webSocket.WebSocketConnection, closeR
 });
 ```
 
-## on_connect('connect')
+## on('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<WebSocketConnection>): void
@@ -496,7 +496,7 @@ Subscribes to the WebSocketServer connection event (the connection between the c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Event type, which has a fixed value of **connect**. Successful calling of **onconnect()** indicates that a connection is established between the client and server. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | Callback used to return the information about connected clients. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | Callback used to return the information about connected clients. |
 
 **Examples**
 
@@ -510,7 +510,7 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -529,7 +529,7 @@ Subscribes to WebSocketServer error events. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which has a fixed value of **error**. Successful calling of **onerror()** indicates that an error has occurred. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -543,7 +543,7 @@ wsServer.on('error', (err: BusinessError) => {
 });
 ```
 
-## on_messageReceive('messageReceive')
+## on('messageReceive')
 
 ```TypeScript
 on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
@@ -562,7 +562,7 @@ Subscribes to the WebSocketServer event of receiving client messages. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | Event type, which has a fixed value of **messageReceive**. Successful calling of **onmessageReceive()** indicates that a message is received from the client. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | Callback used to return the result. <br>**clientconnection** indicates the client information and **data** indicates the data message sent by the client. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | Callback used to return the result. <br>**clientconnection** indicates the client information and **data** indicates the data message sent by the client. |
 
 **Examples**
 
@@ -582,7 +582,7 @@ localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
 send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>
 ```
 
-Sends data through the WebSocket connection. This API uses a promise to return the result. > **NOTE：**> > The **send** API can be called only after a **connect** event is listened. > **Required permission**: ohos.permission.INTERNET
+Sends data through the WebSocket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The **send** API can be called only after a **connect** event is listened. &gt; **Required permission**: ohos.permission.INTERNET
 
 **Since:** 23
 
@@ -657,7 +657,7 @@ localServer.on('connect', async (connection: webSocket.WebSocketConnection) => {
 start(config: WebSocketServerConfig): Promise<boolean>
 ```
 
-Starts the WebSocketServer service based on the specified **config**. This API uses a promise to return the result. > **NOTE：**> > You are advised not to listen for the same port when calling this API multiple times. > **Required permission**: ohos.permission.INTERNET
+Starts the WebSocketServer service based on the specified **config**. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; You are advised not to listen for the same port when calling this API multiple times. &gt; **Required permission**: ohos.permission.INTERNET
 
 **Since:** 24
 

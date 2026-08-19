@@ -34,8 +34,6 @@ analyzerConfig(config: ImageAnalyzerConfig | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## attributeModifier
 
 ```TypeScript
@@ -58,8 +56,6 @@ attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifie
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## autoPlay
 
 ```TypeScript
@@ -82,8 +78,6 @@ autoPlay(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## controls
 
 ```TypeScript
@@ -106,8 +100,6 @@ controls(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableAnalyzer
 
 ```TypeScript
@@ -130,8 +122,6 @@ enableAnalyzer(enable: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableShortcutKey
 
 ```TypeScript
@@ -154,8 +144,6 @@ enableShortcutKey(enabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## loop
 
 ```TypeScript
@@ -178,8 +166,6 @@ loop(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## muted
 
 ```TypeScript
@@ -202,8 +188,6 @@ muted(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## objectFit
 
 ```TypeScript
@@ -226,8 +210,6 @@ objectFit(value: ImageFit | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onError
 
 ```TypeScript
@@ -244,14 +226,12 @@ onError(event: VoidCallback | ErrorCallback | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) \| undefined | 是 |  |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onFinish
 
 ```TypeScript
@@ -274,8 +254,6 @@ onFinish(event: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onFullscreenChange
 
 ```TypeScript
@@ -298,8 +276,6 @@ onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onPause
 
 ```TypeScript
@@ -322,8 +298,6 @@ onPause(event: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onPrepared
 
 ```TypeScript
@@ -346,8 +320,6 @@ onPrepared(callback: Callback<PreparedInfo> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onSeeked
 
 ```TypeScript
@@ -370,8 +342,6 @@ onSeeked(callback: Callback<PlaybackInfo> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onSeeking
 
 ```TypeScript
@@ -394,8 +364,6 @@ onSeeking(callback: Callback<PlaybackInfo> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onStart
 
 ```TypeScript
@@ -418,8 +386,6 @@ onStart(event: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onStop
 
 ```TypeScript
@@ -442,8 +408,6 @@ onStop(event: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onUpdate
 
 ```TypeScript
@@ -466,8 +430,6 @@ onUpdate(callback: Callback<PlaybackInfo> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setVideoOptions
 
 ```TypeScript
@@ -490,8 +452,6 @@ setVideoOptions(value: VideoOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## surfaceBackgroundColor
 
 ```TypeScript
@@ -514,8 +474,6 @@ surfaceBackgroundColor(color: ColorMetrics | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

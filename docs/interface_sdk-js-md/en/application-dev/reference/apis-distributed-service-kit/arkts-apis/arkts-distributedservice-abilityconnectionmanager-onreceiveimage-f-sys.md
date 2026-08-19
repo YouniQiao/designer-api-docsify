@@ -30,7 +30,7 @@ Registers receiveImage event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | int | Yes | Ability connection Session id. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | Yes | Used to handle ('receiveImage') command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | Yes | Used to handle ('receiveImage') command. |
 
 **Error codes:**
 

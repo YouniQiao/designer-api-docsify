@@ -29,7 +29,7 @@ start ManualNetworkScan , Real-time report.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkSearchRealTimeResult&gt; | Yes | Indicates the callback for manual network scan |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetworkSearchRealTimeResult&gt; | Yes | Indicates the callback for manual network scan |
 
 **Error codes:**
 

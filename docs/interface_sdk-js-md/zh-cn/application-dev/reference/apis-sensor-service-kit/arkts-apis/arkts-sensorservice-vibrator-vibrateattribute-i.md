@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## deviceId
@@ -19,7 +20,7 @@
 deviceId?: int
 ```
 
-设备ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填写时默认控制本地设备。从API version 19开始，设备ID可以使用 [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)或on查询。 从API version 19开始，该接口支持在原子化服务中使用。
+设备ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填写时默认控制本地设备。从API version 19开始，设备ID可以使用 [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)或[on](arkts-sensorservice-vibrator-onvibratorstatechange-f.md)查询。 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** int
 

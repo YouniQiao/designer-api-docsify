@@ -1,8 +1,8 @@
 # CustomDialogOptions
 
-Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) to provide enhanced customization capabilities for the dialog box.
+Extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) to provide enhanced customization capabilities for the dialog box.
 
-**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
+**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md)
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ Border width of the dialog box. <br>You can set the width for all four sides or 
 builder: CustomBuilder
 ```
 
-Custom content of the dialog box. <br>**NOTE：**<br>The builder needs to be assigned an arrow function in the following format: () => { this.XXX() }, where XXX indicates the internal builder name. <br>Global builders must be created inside the component and called within the internal builder. <br>The width and height percentages of the builder's root node are relative to the size of the dialog box container. <br>The width and height percentages of non-root nodes are relative to the size of their parent node.
+Custom content of the dialog box. <br>**NOTE：**<br>The builder needs to be assigned an arrow function in the following format: () =&gt; { this.XXX() }, where XXX indicates the internal builder name. <br>Global builders must be created inside the component and called within the internal builder. <br>The width and height percentages of the builder's root node are relative to the size of the dialog box container. <br>The width and height percentages of non-root nodes are relative to the size of their parent node.
 
 **Type:** CustomBuilder
 

@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { policy } from '@kit.NetworkKit';
 ```
 
-## on_netMeteredIfacesChange('netMeteredIfacesChange')
+## on('netMeteredIfacesChange')
 
 ```TypeScript
 function on(type: 'netMeteredIfacesChange', callback: Callback<Array<string>>): void
@@ -28,7 +29,7 @@ function on(type: 'netMeteredIfacesChange', callback: Callback<Array<string>>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netMeteredIfacesChange' | 是 | 订阅的事件类型。'netMeteredIfacesChange'：注册计量iface发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。注册计量 iface 发生改变时调用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。注册计量 iface 发生改变时调用。 |
 
 **错误码：**
 

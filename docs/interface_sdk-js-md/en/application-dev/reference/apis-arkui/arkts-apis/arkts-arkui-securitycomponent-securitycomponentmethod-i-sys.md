@@ -40,5 +40,5 @@ Key. User can set an key to the component to identify it.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 

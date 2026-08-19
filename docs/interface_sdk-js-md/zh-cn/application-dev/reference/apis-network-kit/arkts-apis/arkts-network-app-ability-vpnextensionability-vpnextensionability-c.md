@@ -11,6 +11,7 @@ VpnExtensionContext是VpnExtensionAbility的上下文环境，继承自 [Extensi
 ## 导入模块
 
 ```TypeScript
+import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 ```
 
 ## onCreate
@@ -19,7 +20,7 @@ VpnExtensionContext是VpnExtensionAbility的上下文环境，继承自 [Extensi
 onCreate(want: Want): void
 ```
 
-拓展VPN启动初始化的时候进行回调。 > **说明：** > > 建议配对调用[onDestroy](#ondestroy)监听拓展VPN的销毁，及时执行资源清理等操作。
+拓展VPN启动初始化的时候进行回调。 &gt; **说明：** &gt; &gt; 建议配对调用[onDestroy](#ondestroy)监听拓展VPN的销毁，及时执行资源清理等操作。
 
 **起始版本：** 11
 

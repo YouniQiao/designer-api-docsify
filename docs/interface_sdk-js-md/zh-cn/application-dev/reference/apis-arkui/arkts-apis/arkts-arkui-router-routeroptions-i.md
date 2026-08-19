@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
 ```
 
 ## params
@@ -53,7 +54,7 @@ recoverable?: boolean
 url: string
 ```
 
-表示目标页面的url，可以用以下两种格式： > - 页面绝对路径，由配置文件中pages列表提供，例如： > - pages/index/index > - pages/detail/detail > - 特殊值，如果url的值是"/"，则跳转到首页，首页默认为页面跳转配置项src数组的第一个数据项。 > - 传入不存在或无效的url路径时，跳转失败，具体错误码参见各接口的错误码说明。
+表示目标页面的url，可以用以下两种格式： &gt; - 页面绝对路径，由配置文件中pages列表提供，例如： &gt; - pages/index/index &gt; - pages/detail/detail &gt; - 特殊值，如果url的值是"/"，则跳转到首页，首页默认为页面跳转配置项src数组的第一个数据项。 &gt; - 传入不存在或无效的url路径时，跳转失败，具体错误码参见各接口的错误码说明。
 
 **类型：** string
 

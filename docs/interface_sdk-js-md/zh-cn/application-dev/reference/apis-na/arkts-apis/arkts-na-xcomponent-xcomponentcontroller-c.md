@@ -122,7 +122,7 @@ lockCanvas(): DrawingCanvas | null
 
 | 类型 | 说明 |
 | --- | --- |
-| DrawingCanvas | 可用于向XComponent区域绘制的画布对象或者空对象null。 如果surface不可用，则返回null。 |
+| DrawingCanvas \| null | 可用于向XComponent区域绘制的画布对象或者空对象null。 如果surface不可用，则返回null。 |
 
 ## onSurfaceChanged
 

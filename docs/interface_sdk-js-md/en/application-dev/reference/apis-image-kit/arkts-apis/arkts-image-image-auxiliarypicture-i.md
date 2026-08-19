@@ -52,7 +52,7 @@ Obtains the information about this auxiliary picture.
 
 | Type | Description |
 | --- | --- |
-| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | Returns the auxiliary picture information. If the operation fails, an error message is returned. |
+| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) \| undefined | Returns the auxiliary picture information. If the operation fails, an error message is returned. |
 
 ## getMetadata
 
@@ -157,7 +157,7 @@ Obtains the type of auxiliary picture.
 
 | Type | Description |
 | --- | --- |
-| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Returns the type of auxiliary picture. |
+| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) \| undefined | Returns the type of auxiliary picture. |
 
 ## readPixelsToBuffer
 

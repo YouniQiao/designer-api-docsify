@@ -26,7 +26,7 @@ Obtains the AttestResultInfo object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md)&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md)&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
 
 **Error codes:**
 

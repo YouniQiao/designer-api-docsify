@@ -1,6 +1,6 @@
 # @ohos.multimedia.camera
 
-本模块为开发者提供一套简单且易于理解的相机服务接口，开发者通过调用接口可以开发相机应用。应用通过访问和操作相机硬件，实现基础操作，如预览、拍照和录像；还可以通过接口组合完成更多操作，如控制闪光灯和曝光时间、对焦或调焦等。 > **说明：** > > - 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.multimedia.camera (相机管理)](#ohosmultimediacamera)。
+本模块为开发者提供一套简单且易于理解的相机服务接口，开发者通过调用接口可以开发相机应用。应用通过访问和操作相机硬件，实现基础操作，如预览、拍照和录像；还可以通过接口组合完成更多操作，如控制闪光灯和曝光时间、对焦或调焦等。 &gt; **说明：** &gt; &gt; - 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.multimedia.camera (相机管理)](#ohosmultimediacamera)。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## 汇总
@@ -37,7 +39,7 @@
 | [AutoDeviceSwitchQuery](arkts-camera-camera-autodeviceswitchquery-i.md) | 自动切换镜头查询类，用于查询设备是否支持自动切换镜头。 [自动切换镜头能力](../../../media/camera/camera-auto-switch.md)仅支持折叠屏设备使用，如需使能该能力请参考 [enableAutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#enableautodeviceswitch)。 |
 | [AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md) | 自动切换镜头状态信息。 |
 | [AutoExposure](arkts-camera-camera-autoexposure-i.md) | AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。 自动曝光类，对设备自动曝光（AE）操作。 |
-| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md) | 针对设备的自动曝光特性提供了一系列查询功能。 > > - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。 |
+| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md) | 针对设备的自动曝光特性提供了一系列查询功能。 &gt; &gt; - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。 |
 | [CameraConcurrentInfo](arkts-camera-camera-cameraconcurrentinfo-i.md) | 相机的输出并发能力信息。 |
 | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 相机设备信息。 |
 | [CameraInput](arkts-camera-camera-camerainput-i.md) | 相机设备输入对象。 会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。 |
@@ -67,13 +69,13 @@
 | [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md) | Provides APIs to obtain the manual exposure range supported. |
 | [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md) | Manual Focus Query object. |
 | [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md) | Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device. |
-| [MetadataBarcodeObject](arkts-camera-camera-metadatabarcodeobject-i.md) | 相机检测到的二维码元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通 过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
-| [MetadataCatBodyObject](arkts-camera-camera-metadatacatbodyobject-i.md) | 相机检测到的猫的身体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
-| [MetadataDogBodyObject](arkts-camera-camera-metadatadogbodyobject-i.md) | 相机检测到的狗的身体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
-| [MetadataHumanBodyObject](arkts-camera-camera-metadatahumanbodyobject-i.md) | 相机检测到的人体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
+| [MetadataBarcodeObject](arkts-camera-camera-metadatabarcodeobject-i.md) | 相机检测到的二维码元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通 过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
+| [MetadataCatBodyObject](arkts-camera-camera-metadatacatbodyobject-i.md) | 相机检测到的猫的身体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
+| [MetadataDogBodyObject](arkts-camera-camera-metadatadogbodyobject-i.md) | 相机检测到的狗的身体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
+| [MetadataHumanBodyObject](arkts-camera-camera-metadatahumanbodyobject-i.md) | 相机检测到的人体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
 | [MetadataObject](arkts-camera-camera-metadataobject-i.md) | 相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。 |
 | [MetadataOutput](arkts-camera-camera-metadataoutput-i.md) | metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
-| [MetadataSalientDetectionObject](arkts-camera-camera-metadatasalientdetectionobject-i.md) | 相机检测到的显著性物体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来 源，通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
+| [MetadataSalientDetectionObject](arkts-camera-camera-metadatasalientdetectionobject-i.md) | 相机检测到的显著性物体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来 源，通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
 | [OIS](arkts-camera-camera-ois-i.md) | OIS (Optical Image Stabilization) interface. |
 | [OISQuery](arkts-camera-camera-oisquery-i.md) | OIS (Optical Image Stabilization) query interface. |
 | [Photo](arkts-camera-camera-photo-i.md) | 全质量图对象。 |
@@ -117,7 +119,7 @@
 | [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md) | 物理光圈查询对象。 |
 | [ApertureVideoSession](arkts-camera-camera-aperturevideosession-i-sys.md) | Aperture video session object. |
 | [AutoExposure](arkts-camera-camera-autoexposure-i-sys.md) | AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。 自动曝光类，对设备自动曝光（AE）操作。 |
-| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i-sys.md) | 针对设备的自动曝光特性提供了一系列查询功能。 > > - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。 |
+| [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i-sys.md) | 针对设备的自动曝光特性提供了一系列查询功能。 &gt; &gt; - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。 |
 | [Beauty](arkts-camera-camera-beauty-i-sys.md) | Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) Provides APIs to obtain and set the beauty effect. |
 | [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) | Provides APIs to obtain and set the beauty effect. |
 | [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) | 相机设备信息。 |
@@ -145,8 +147,8 @@
 | [FluorescencePhotoSession](arkts-camera-camera-fluorescencephotosession-i-sys.md) | Fluorescence photo session object. |
 | [Focus](arkts-camera-camera-focus-i-sys.md) | Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。 对焦类，对设备对焦操作。 |
 | [FocusQuery](arkts-camera-camera-focusquery-i-sys.md) | 提供了查询是否支持当前对焦模式的方法。 @since版本号大于内层元素的情况，不影响接口使用。 |
-| [FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md) | Describes the focus tracking information, which is obtained by calling VideoSessionForSys. [on('focusTrackingInfoAvailable')](arkts-camera-camera-videosession-i.md#on_errorerror). |
-| [HighResolutionPhotoSession](arkts-camera-camera-highresolutionphotosession-i-sys.md) | HighResolutionPhotoSession extends Session, AutoExposure, Focus Implements a high-resolution photo session, which sets the parameters of the high-resolution photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). > **NOTE：**> > In high-resolution photo capture scenarios, the physical camera lens must be used instead of the logical lens. |
+| [FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md) | Describes the focus tracking information, which is obtained by calling VideoSessionForSys. [on('focusTrackingInfoAvailable')](arkts-camera-camera-videosession-i.md#onerror). |
+| [HighResolutionPhotoSession](arkts-camera-camera-highresolutionphotosession-i-sys.md) | HighResolutionPhotoSession extends Session, AutoExposure, Focus Implements a high-resolution photo session, which sets the parameters of the high-resolution photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). &gt; **NOTE：**&gt; &gt; In high-resolution photo capture scenarios, the physical camera lens must be used instead of the logical lens. |
 | [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md) | Implements imaging mode. |
 | [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md) | Imaging mode query object. |
 | [IsoInfo](arkts-camera-camera-isoinfo-i-sys.md) | 感光度（ISO）参数信息。 |
@@ -162,13 +164,13 @@
 | [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md) | ManualFocus object. |
 | [ManualIso](arkts-camera-camera-manualiso-i-sys.md) | ManualIso object. |
 | [ManualIsoQuery](arkts-camera-camera-manualisoquery-i-sys.md) | Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device. |
-| [MetadataBasicFaceObject](arkts-camera-camera-metadatabasicfaceobject-i-sys.md) | 相机检测到的基础人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
-| [MetadataCatFaceObject](arkts-camera-camera-metadatacatfaceobject-i-sys.md) | 相机检测到的猫脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
-| [MetadataDogFaceObject](arkts-camera-camera-metadatadogfaceobject-i-sys.md) | 相机检测到的狗脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
-| [MetadataFaceObject](arkts-camera-camera-metadatafaceobject-i-sys.md) | 相机检测到的人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。 |
+| [MetadataBasicFaceObject](arkts-camera-camera-metadatabasicfaceobject-i-sys.md) | 相机检测到的基础人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
+| [MetadataCatFaceObject](arkts-camera-camera-metadatacatfaceobject-i-sys.md) | 相机检测到的猫脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
+| [MetadataDogFaceObject](arkts-camera-camera-metadatadogfaceobject-i-sys.md) | 相机检测到的狗脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
+| [MetadataFaceObject](arkts-camera-camera-metadatafaceobject-i-sys.md) | 相机检测到的人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。 |
 | [MetadataObject](arkts-camera-camera-metadataobject-i-sys.md) | 相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。 |
 | [MetadataOutput](arkts-camera-camera-metadataoutput-i-sys.md) | metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
-| [NightPhotoSession](arkts-camera-camera-nightphotosession-i-sys.md) | NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ColorManagement, ManualExposure Implements a night photo session, which sets the parameters of the night photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md), [CameraOutput](arkts-camera-camera-cameraoutput-i.md), and [PhotoOutput](arkts-camera-camera-photooutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). For night photo capture scenarios, you must listen for the [onCaptureEnd](arkts-camera-camera-photooutput-i.md#on_photoavailablephotoavailable) event to mark the end of the photo capture session. |
+| [NightPhotoSession](arkts-camera-camera-nightphotosession-i-sys.md) | NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ColorManagement, ManualExposure Implements a night photo session, which sets the parameters of the night photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md), [CameraOutput](arkts-camera-camera-cameraoutput-i.md), and [PhotoOutput](arkts-camera-camera-photooutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). For night photo capture scenarios, you must listen for the [onCaptureEnd](arkts-camera-camera-photooutput-i.md#onphotoavailable) event to mark the end of the photo capture session. |
 | [PanoramaPhotoSession](arkts-camera-camera-panoramaphotosession-i-sys.md) | PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect Implements a panoramic photo session, which sets the parameters of the panoramic photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
 | [Photo](arkts-camera-camera-photo-i-sys.md) | 全质量图对象。 |
 | [PhotoOutput](arkts-camera-camera-photooutput-i-sys.md) | 拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
@@ -266,7 +268,7 @@
 | [FocusTrackingMode](arkts-camera-camera-focustrackingmode-e-sys.md) | Enumerates the focus tracking modes. |
 | [HostDeviceType](arkts-camera-camera-hostdevicetype-e-sys.md) | 枚举，远端相机设备类型。 |
 | [LightPaintingType](arkts-camera-camera-lightpaintingtype-e-sys.md) | Enumerates the types of light painting shutter modes. |
-| [LightStatus](arkts-camera-camera-lightstatus-e-sys.md) | Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i.md#on_errorerror). |
+| [LightStatus](arkts-camera-camera-lightstatus-e-sys.md) | Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i.md#onerror). |
 | [MetadataObjectType](arkts-camera-camera-metadataobjecttype-e-sys.md) | 枚举，metadata元数据检测类型。 |
 | [PolicyType](arkts-camera-camera-policytype-e-sys.md) | Enumerates the policy types. |
 | [PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md) | Enumerates the portrait effects. |

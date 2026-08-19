@@ -1,6 +1,6 @@
 # @ohos.enterprise.applicationManager
 
-本模块提供应用管理能力，包括管理应用运行禁止名单、应用运行允许名单、开机自启动应用名单、保活应用名单、不可关停应用名单、后台防冻结应用名单、允许发送通知应用名单、允许跨设备应用名单等。适用于企业设备管理场景，可实现应用运行权限管控、开 机自启动管理、保活应用管理等，提升企业设备安全性和合规性。 > **说明：** > > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。 > [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md)除外，该接口对所有应用开放。
+本模块提供应用管理能力，包括管理应用运行禁止名单、应用运行允许名单、开机自启动应用名单、保活应用名单、不可关停应用名单、后台防冻结应用名单、允许发送通知应用名单、允许跨设备应用名单等。适用于企业设备管理场景，可实现应用运行权限管控、开 机自启动管理、保活应用管理等，提升企业设备安全性和合规性。 &gt; **说明：** &gt; &gt; 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。 &gt; [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md)除外，该接口对所有应用开放。
 
 **起始版本：** 10
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## 汇总

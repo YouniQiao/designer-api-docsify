@@ -6,7 +6,7 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## on_bondStateChange('bondStateChange')
+## on('bondStateChange')
 
 ```TypeScript
 function on(type: 'bondStateChange', callback: Callback<BondStateParam>): void
@@ -33,7 +33,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded. On API 10
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md). |
 
 **Error codes:**
 

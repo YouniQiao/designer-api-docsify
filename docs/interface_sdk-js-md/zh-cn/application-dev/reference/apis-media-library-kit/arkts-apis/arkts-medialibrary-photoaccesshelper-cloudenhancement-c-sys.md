@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelAllCloudEnhancementTasks
@@ -220,7 +221,7 @@ static getCloudEnhancementInstance(context: Context): CloudEnhancement | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [CloudEnhancement](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md) | Returns cloud enhancement instance, if the operation fails, returns null |
+| [CloudEnhancement](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md) \| null | Returns cloud enhancement instance, if the operation fails, returns null |
 
 **错误码：**
 

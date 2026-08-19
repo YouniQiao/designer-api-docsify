@@ -41,7 +41,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; |  |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; \| undefined |  |
 
 **示例**
 

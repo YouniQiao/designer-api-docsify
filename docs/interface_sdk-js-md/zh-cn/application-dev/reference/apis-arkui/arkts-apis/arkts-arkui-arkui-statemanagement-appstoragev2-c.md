@@ -11,6 +11,7 @@ AppStorageV2提供应用级全局共享状态变量的能力，开发者可以�
 ## 导入模块
 
 ```TypeScript
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## connect
@@ -23,7 +24,7 @@ static connect<T extends object>(
   ): T | undefined
 ```
 
-将键值对数据存储在应用内存中。如果给定的key已经存在于[AppStorageV2](../../../ui/state-management/arkts-new-appstoragev2.md)中，返回对应的值；否则，通过获取 默认值的构造器构造默认值，并返回。 > **说明：** > > 1、若未指定key，使用第二个参数作为默认构造器；否则使用第三个参数（第二个参数非法也使用第三个参数作为默认构造器）。 > > 2、确保数据已经存储在AppStorageV2中，可省略默认构造器，获取存储的数据；否则必须指定默认构造器，不指定将导致应用异常。 > > 3、同一个key，connect不同类型的数据会导致应用异常，应用需要确保类型匹配。 > > 4、key建议使用有意义的值，可由字母、数字、下划线组成，长度不超过255个字符，使用非法字符或空字符的行为是未定义的。
+将键值对数据存储在应用内存中。如果给定的key已经存在于[AppStorageV2](../../../ui/state-management/arkts-new-appstoragev2.md)中，返回对应的值；否则，通过获取 默认值的构造器构造默认值，并返回。 &gt; **说明：** &gt; &gt; 1、若未指定key，使用第二个参数作为默认构造器；否则使用第三个参数（第二个参数非法也使用第三个参数作为默认构造器）。 &gt; &gt; 2、确保数据已经存储在AppStorageV2中，可省略默认构造器，获取存储的数据；否则必须指定默认构造器，不指定将导致应用异常。 &gt; &gt; 3、同一个key，connect不同类型的数据会导致应用异常，应用需要确保类型匹配。 &gt; &gt; 4、key建议使用有意义的值，可由字母、数字、下划线组成，长度不超过255个字符，使用非法字符或空字符的行为是未定义的。
 
 **起始版本：** 12
 
@@ -47,7 +48,7 @@ static connect<T extends object>(
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 创建或获取AppStorageV2数据成功时，返回数据；否则返回undefined。 |
+| T \| undefined | 创建或获取AppStorageV2数据成功时，返回数据；否则返回undefined。 |
 
 **示例**
 
@@ -75,7 +76,7 @@ const as3: SampleClass = AppStorageV2.connect(SampleClass) as SampleClass;
 static keys(): Array<string>
 ```
 
-获取[AppStorageV2](../../../ui/state-management/arkts-new-appstoragev2.md)中的所有key。 > **说明：** > > key在Array中的顺序是无序的，与key插入到AppStorageV2中的顺序无关。
+获取[AppStorageV2](../../../ui/state-management/arkts-new-appstoragev2.md)中的所有key。 &gt; **说明：** &gt; &gt; key在Array中的顺序是无序的，与key插入到AppStorageV2中的顺序无关。
 
 **起始版本：** 12
 
@@ -106,7 +107,7 @@ const keys: Array<string> = AppStorageV2.keys();
 static remove<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 ```
 
-将指定的键值对数据从[AppStorageV2](../../../ui/state-management/arkts-new-appstoragev2.md)里面删除。如果指定的键值不存在于AppStorageV2中，将删除失 败。 > **说明：** > > 删除AppStorageV2中不存在的key会报警告。
+将指定的键值对数据从[AppStorageV2](../../../ui/state-management/arkts-new-appstoragev2.md)里面删除。如果指定的键值不存在于AppStorageV2中，将删除失 败。 &gt; **说明：** &gt; &gt; 删除AppStorageV2中不存在的key会报警告。
 
 **起始版本：** 12
 

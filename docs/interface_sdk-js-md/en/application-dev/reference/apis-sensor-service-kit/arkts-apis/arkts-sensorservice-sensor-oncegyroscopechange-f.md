@@ -26,7 +26,7 @@ Subscribe to gyroscope sensor data once, {@code SensorId.GYROSCOPE}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | Yes | callback gyroscope data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;GyroscopeResponse&gt; | Yes | callback gyroscope data. |
 
 **Error codes:**
 

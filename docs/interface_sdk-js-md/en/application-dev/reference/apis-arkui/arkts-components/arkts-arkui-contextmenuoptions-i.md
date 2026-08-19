@@ -507,7 +507,7 @@ Callback invoked after the menu appears.
 onDidAppear?: Callback<void>
 ```
 
-Callback invoked after the menu appears. **NOTE：**1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**. 2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**. 3. If the menu is closed before the menu entrance animation is complete, this callback is not triggered. 4. **onAppear** and **onDidAppear** are invoked at the same time, but **onDidAppear** takes effect after **onAppear**.
+Callback invoked after the menu appears. **NOTE：**1. The normal sequence is **aboutToAppear** &gt; **onWillAppear** &gt; **onAppear** &gt; **onDidAppear** &gt; **aboutToDisappear** &gt; **onWillDisappear** &gt; **onDisappear** &gt; **onDidDisappear**. 2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**. 3. If the menu is closed before the menu entrance animation is complete, this callback is not triggered. 4. **onAppear** and **onDidAppear** are invoked at the same time, but **onDidAppear** takes effect after **onAppear**.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -527,7 +527,7 @@ Callback invoked after the menu appears. **NOTE：**1. The normal sequence is **
 onDidDisappear?: Callback<void>
 ```
 
-Callback invoked after the menu disappears. **NOTE：**1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**. 2. **onDisappear** and **onDidDisappear** are triggered at the same time, but **onDidDisappear** takes effect after **onDisappear**.
+Callback invoked after the menu disappears. **NOTE：**1. The normal sequence is **aboutToAppear** &gt; **onWillAppear** &gt; **onAppear** &gt; **onDidAppear** &gt; **aboutToDisappear** &gt; **onWillDisappear** &gt; **onDisappear** &gt; **onDidDisappear**. 2. **onDisappear** and **onDidDisappear** are triggered at the same time, but **onDidDisappear** takes effect after **onDisappear**.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -567,7 +567,7 @@ Callback invoked after the menu disappears.
 onWillAppear?: Callback<void>
 ```
 
-Callback triggered when the menu is about to appear. **NOTE：**1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**. 2. **aboutToAppear** is invoked during initialization; **onWillAppear** is invoked before the animation starts but after **aboutToAppear**.
+Callback triggered when the menu is about to appear. **NOTE：**1. The normal sequence is **aboutToAppear** &gt; **onWillAppear** &gt; **onAppear** &gt; **onDidAppear** &gt; **aboutToDisappear** &gt; **onWillDisappear** &gt; **onDisappear** &gt; **onDidDisappear**. 2. **aboutToAppear** is invoked during initialization; **onWillAppear** is invoked before the animation starts but after **aboutToAppear**.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -587,7 +587,7 @@ Callback triggered when the menu is about to appear. **NOTE：**1. The normal se
 onWillDisappear?: Callback<void>
 ```
 
-Callback triggered when the menu is about to disappear. **NOTE：**1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**. 2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**. 3. **aboutToDisappear** and **onWillDisappear** are invoked at the same time, but **onWillDisappear** takes effect after **aboutToDisappear**.
+Callback triggered when the menu is about to disappear. **NOTE：**1. The normal sequence is **aboutToAppear** &gt; **onWillAppear** &gt; **onAppear** &gt; **onDidAppear** &gt; **aboutToDisappear** &gt; **onWillDisappear** &gt; **onDisappear** &gt; **onDidDisappear**. 2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**. 3. **aboutToDisappear** and **onWillDisappear** are invoked at the same time, but **onWillDisappear** takes effect after **aboutToDisappear**.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 

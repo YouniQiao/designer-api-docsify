@@ -32,8 +32,6 @@ accessibilityActionOptions(option: AccessibilityActionOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityChecked
 
 ```TypeScript
@@ -56,8 +54,6 @@ accessibilityChecked(isCheck: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityCustomActions
 
 ```TypeScript
@@ -80,8 +76,6 @@ accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityDefaultFocus
 
 ```TypeScript
@@ -104,8 +98,6 @@ accessibilityDefaultFocus(focus: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityDescription
 
 ```TypeScript
@@ -128,8 +120,6 @@ accessibilityDescription(description: Resource | string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityFocusDrawLevel
 
 ```TypeScript
@@ -152,8 +142,6 @@ accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityGroup
 
 ```TypeScript
@@ -177,8 +165,6 @@ accessibilityGroup(isGroup: boolean | undefined, accessibilityOptions?: Accessib
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityLevel
 
 ```TypeScript
@@ -201,8 +187,6 @@ accessibilityLevel(value: string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityNextFocusId
 
 ```TypeScript
@@ -225,8 +209,6 @@ accessibilityNextFocusId(nextId: string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityNextFocusId
 
 ```TypeScript
@@ -250,8 +232,6 @@ accessibilityNextFocusId(nextId: string, nextFocusParams: AccessibilityNextFocus
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityRole
 
 ```TypeScript
@@ -274,8 +254,6 @@ accessibilityRole(role: AccessibilityRoleType | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityScrollTriggerable
 
 ```TypeScript
@@ -298,8 +276,6 @@ accessibilityScrollTriggerable(isTriggerable: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilitySelected
 
 ```TypeScript
@@ -322,8 +298,6 @@ accessibilitySelected(isSelect: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityStateDescription
 
 ```TypeScript
@@ -346,8 +320,6 @@ accessibilityStateDescription(description: string | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityText
 
 ```TypeScript
@@ -370,8 +342,6 @@ accessibilityText(text: Resource | string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityTextHint
 
 ```TypeScript
@@ -394,8 +364,6 @@ accessibilityTextHint(value: string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityUseSamePage
 
 ```TypeScript
@@ -418,8 +386,6 @@ accessibilityUseSamePage(pageMode: AccessibilitySamePageMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## accessibilityVirtualNode
 
 ```TypeScript
@@ -442,8 +408,6 @@ accessibilityVirtualNode(builder: CustomBuilder | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## advancedBlendMode
 
 ```TypeScript
@@ -467,8 +431,6 @@ advancedBlendMode(effect: BlendMode | Blender | undefined, type?: BlendApplyType
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## align
 
 ```TypeScript
@@ -491,8 +453,6 @@ align(alignment: Alignment | LocalizedAlignment | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## alignRules
 
 ```TypeScript
@@ -515,8 +475,6 @@ alignRules(value: AlignRuleOption | LocalizedAlignRuleOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## alignSelf
 
 ```TypeScript
@@ -539,8 +497,6 @@ alignSelf(value: ItemAlign | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## allowDrop
 
 ```TypeScript
@@ -563,8 +519,6 @@ allowDrop(value: Array<UniformDataType> | null | Array<string> | undefined): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## animation
 
 ```TypeScript
@@ -587,8 +541,6 @@ animation(value: AnimateParam | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## applyAttributesFinish
 
 ```TypeScript
@@ -623,8 +575,6 @@ aspectRatio(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backdropBlur
 
 ```TypeScript
@@ -649,8 +599,6 @@ backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptions?: Sys
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## background
 
 ```TypeScript
@@ -674,8 +622,6 @@ background(content: CustomBuilder | ResourceColor | undefined, options?: Backgro
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -700,8 +646,6 @@ backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBlurStyleO
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundBrightness
 
 ```TypeScript
@@ -724,8 +668,6 @@ backgroundBrightness(params: BackgroundBrightnessOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundColor
 
 ```TypeScript
@@ -748,8 +690,6 @@ backgroundColor(value: ResourceColor | ColorMetrics | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundEffect
 
 ```TypeScript
@@ -773,8 +713,6 @@ backgroundEffect(options: BackgroundEffectOptions | undefined, sysOptions?: Syst
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundFilter
 
 ```TypeScript
@@ -797,8 +735,6 @@ backgroundFilter(filter: Filter | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundImage
 
 ```TypeScript
@@ -821,8 +757,6 @@ backgroundImage(src: ResourceStr | PixelMap | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundImage
 
 ```TypeScript
@@ -846,8 +780,6 @@ backgroundImage(src: ResourceStr | PixelMap | undefined, options: BackgroundImag
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundImage
 
 ```TypeScript
@@ -871,8 +803,6 @@ backgroundImage(src: ResourceStr | PixelMap | undefined, repeat: ImageRepeat): t
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundImagePosition
 
 ```TypeScript
@@ -895,8 +825,6 @@ backgroundImagePosition(value: Position | Alignment | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundImageResizable
 
 ```TypeScript
@@ -919,8 +847,6 @@ backgroundImageResizable(value: ResizableOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backgroundImageSize
 
 ```TypeScript
@@ -943,8 +869,6 @@ backgroundImageSize(value: SizeOptions | ImageSize | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContentCover
 
 ```TypeScript
@@ -969,8 +893,6 @@ bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: Custo
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContentCover
 
 ```TypeScript
@@ -995,8 +917,6 @@ bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: Custo
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContextMenu
 
 ```TypeScript
@@ -1021,8 +941,6 @@ bindContextMenu(content: CustomBuilder | undefined, responseType: ResponseType |
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContextMenu
 
 ```TypeScript
@@ -1047,8 +965,6 @@ bindContextMenu(isShow: boolean | Bindable<boolean> | undefined, content: Custom
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuByIsShow
 
 ```TypeScript
@@ -1074,8 +990,6 @@ bindContextMenuByIsShow(isShow: boolean | Bindable<boolean> | undefined,
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuByResponseType
 
 ```TypeScript
@@ -1101,8 +1015,6 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement> | unde
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1126,8 +1038,6 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuWithResponseArray
 
 ```TypeScript
@@ -1152,8 +1062,6 @@ bindContextMenuWithResponseArray(content: CustomBuilderT<ResponseType> | Array<M
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindMenu
 
 ```TypeScript
@@ -1177,8 +1085,6 @@ bindMenu(content: Array<MenuElement> | CustomBuilder | undefined, options?: Menu
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindMenu
 
 ```TypeScript
@@ -1203,8 +1109,6 @@ bindMenu(isShow: boolean | Bindable<boolean> | undefined, content: Array<MenuEle
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindPopup
 
 ```TypeScript
@@ -1228,8 +1132,6 @@ bindPopup(show: boolean | undefined, popup: PopupOptions | CustomPopupOptions | 
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindSheet
 
 ```TypeScript
@@ -1254,8 +1156,6 @@ bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilde
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindTips
 
 ```TypeScript
@@ -1279,8 +1179,6 @@ bindTips(message: TipsMessageType | undefined, options?: TipsOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## blendMode
 
 ```TypeScript
@@ -1304,8 +1202,6 @@ blendMode(value: BlendMode | undefined, type?: BlendApplyType): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## blur
 
 ```TypeScript
@@ -1330,8 +1226,6 @@ blur(blurRadius: double | undefined, options?: BlurOptions, sysOptions?: SystemA
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## border
 
 ```TypeScript
@@ -1354,8 +1248,6 @@ border(value: BorderOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## borderColor
 
 ```TypeScript
@@ -1378,8 +1270,6 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined)
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## borderImage
 
 ```TypeScript
@@ -1402,8 +1292,6 @@ borderImage(value: BorderImageOption | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## borderRadius
 
 ```TypeScript
@@ -1427,8 +1315,6 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses | undefine
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## borderStyle
 
 ```TypeScript
@@ -1451,8 +1337,6 @@ borderStyle(value: BorderStyle | EdgeStyles | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## borderWidth
 
 ```TypeScript
@@ -1475,8 +1359,6 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## brightness
 
 ```TypeScript
@@ -1499,8 +1381,6 @@ brightness(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## chainMode
 
 ```TypeScript
@@ -1524,8 +1404,6 @@ chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## chainWeight
 
 ```TypeScript
@@ -1548,8 +1426,6 @@ chainWeight(chainWeight: ChainWeightOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## clickEffect
 
 ```TypeScript
@@ -1572,8 +1448,6 @@ clickEffect(value: ClickEffect | null | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## clip
 
 ```TypeScript
@@ -1596,8 +1470,6 @@ clip(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## clipShape
 
 ```TypeScript
@@ -1620,8 +1492,6 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## colorBlend
 
 ```TypeScript
@@ -1644,8 +1514,6 @@ colorBlend(value: Color | string | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## compositingFilter
 
 ```TypeScript
@@ -1668,8 +1536,6 @@ compositingFilter(filter: Filter | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## constraintSize
 
 ```TypeScript
@@ -1692,8 +1558,6 @@ constraintSize(value: ConstraintSizeOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contrast
 
 ```TypeScript
@@ -1716,8 +1580,6 @@ contrast(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## customProperty
 
 ```TypeScript
@@ -1741,8 +1603,6 @@ customProperty(name: string, value: CustomProperty): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## debugLine
 
 ```TypeScript
@@ -1766,8 +1626,6 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## defaultFocus
 
 ```TypeScript
@@ -1790,8 +1648,6 @@ defaultFocus(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## direction
 
 ```TypeScript
@@ -1814,8 +1670,6 @@ direction(value: Direction | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## displayPriority
 
 ```TypeScript
@@ -1838,8 +1692,6 @@ displayPriority(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## doubleSided
 
 ```TypeScript
@@ -1862,8 +1714,6 @@ doubleSided(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## dragPreview
 
 ```TypeScript
@@ -1887,8 +1737,6 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string | undefined, config?:
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## dragPreviewOptions
 
 ```TypeScript
@@ -1912,8 +1760,6 @@ dragPreviewOptions(value: DragPreviewOptions | undefined, options?: DragInteract
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## draggable
 
 ```TypeScript
@@ -1936,8 +1782,6 @@ draggable(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## drawModifier
 
 ```TypeScript
@@ -1960,8 +1804,6 @@ drawModifier(modifier: DrawModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## edgeLight
 
 ```TypeScript
@@ -1984,8 +1826,6 @@ edgeLight(params: EdgeLightParams | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableClickSoundEffect
 
 ```TypeScript
@@ -2008,8 +1848,6 @@ enableClickSoundEffect(enabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enabled
 
 ```TypeScript
@@ -2032,8 +1870,6 @@ enabled(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## excludeFromRenderGroup
 
 ```TypeScript
@@ -2056,8 +1892,6 @@ excludeFromRenderGroup(exclude: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## expandSafeArea
 
 ```TypeScript
@@ -2081,8 +1915,6 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## flexBasis
 
 ```TypeScript
@@ -2105,8 +1937,6 @@ flexBasis(value: double | string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## flexGrow
 
 ```TypeScript
@@ -2129,8 +1959,6 @@ flexGrow(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## flexShrink
 
 ```TypeScript
@@ -2153,8 +1981,6 @@ flexShrink(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## focusBox
 
 ```TypeScript
@@ -2177,8 +2003,6 @@ focusBox(style: FocusBoxStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## focusOnTouch
 
 ```TypeScript
@@ -2201,8 +2025,6 @@ focusOnTouch(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## focusScopeId
 
 ```TypeScript
@@ -2227,8 +2049,6 @@ focusScopeId(id: string | undefined, isGroup?: boolean, arrowStepOut?: boolean):
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## focusScopePriority
 
 ```TypeScript
@@ -2252,8 +2072,6 @@ focusScopePriority(scopeId: string | undefined, priority?: FocusPriority): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## focusable
 
 ```TypeScript
@@ -2276,8 +2094,6 @@ focusable(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## foregroundBlurStyle
 
 ```TypeScript
@@ -2302,8 +2118,6 @@ foregroundBlurStyle(style: BlurStyle | undefined, options?: ForegroundBlurStyleO
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## foregroundColor
 
 ```TypeScript
@@ -2326,8 +2140,6 @@ foregroundColor(value: ResourceColor | ColoringStrategy | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## foregroundEffect
 
 ```TypeScript
@@ -2350,8 +2162,6 @@ foregroundEffect(options: ForegroundEffectOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## foregroundFilter
 
 ```TypeScript
@@ -2374,8 +2184,6 @@ foregroundFilter(filter: Filter | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## freeze
 
 ```TypeScript
@@ -2398,8 +2206,6 @@ freeze(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## geometryTransition
 
 ```TypeScript
@@ -2423,8 +2229,6 @@ geometryTransition(id: string | undefined, options?: GeometryTransitionOptions):
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## gesture
 
 ```TypeScript
@@ -2448,8 +2252,6 @@ gesture(gesture: GestureType, mask?: GestureMask): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## gestureModifier
 
 ```TypeScript
@@ -2472,8 +2274,6 @@ gestureModifier(modifier: GestureModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## grayscale
 
 ```TypeScript
@@ -2496,8 +2296,6 @@ grayscale(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## groupDefaultFocus
 
 ```TypeScript
@@ -2520,8 +2318,6 @@ groupDefaultFocus(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## height
 
 ```TypeScript
@@ -2544,8 +2340,6 @@ height(heightValue: Length | LayoutPolicy | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hitTestBehavior
 
 ```TypeScript
@@ -2568,8 +2362,6 @@ hitTestBehavior(value: HitTestMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hoverEffect
 
 ```TypeScript
@@ -2592,8 +2384,6 @@ hoverEffect(value: HoverEffect | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hueRotate
 
 ```TypeScript
@@ -2616,8 +2406,6 @@ hueRotate(value: double | string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## id
 
 ```TypeScript
@@ -2640,8 +2428,6 @@ id(value: string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## ignoreLayoutSafeArea
 
 ```TypeScript
@@ -2665,8 +2451,6 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## inspectorLabel
 
 ```TypeScript
@@ -2689,8 +2473,6 @@ inspectorLabel(label: string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## invert
 
 ```TypeScript
@@ -2713,8 +2495,6 @@ invert(value: double | InvertOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## key
 
 ```TypeScript
@@ -2737,8 +2517,6 @@ key(value: string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## keyboardShortcut
 
 ```TypeScript
@@ -2763,8 +2541,6 @@ keyboardShortcut(value: string | FunctionKey | undefined, keys: Array<ModifierKe
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## layoutGravity
 
 ```TypeScript
@@ -2787,8 +2563,6 @@ layoutGravity(alignment: LocalizedAlignment | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## layoutWeight
 
 ```TypeScript
@@ -2811,8 +2585,6 @@ layoutWeight(value: double | string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## lightUpEffect
 
 ```TypeScript
@@ -2835,8 +2607,6 @@ lightUpEffect(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## linearGradient
 
 ```TypeScript
@@ -2859,8 +2629,6 @@ linearGradient(value: LinearGradientOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## linearGradientBlur
 
 ```TypeScript
@@ -2884,8 +2652,6 @@ linearGradientBlur(value: double | undefined, options: LinearGradientBlurOptions
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## margin
 
 ```TypeScript
@@ -2908,8 +2674,6 @@ margin(value: Margin | Length | LocalizedMargin | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## markAnchor
 
 ```TypeScript
@@ -2932,8 +2696,6 @@ markAnchor(value: Position | LocalizedPosition | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## mask
 
 ```TypeScript
@@ -2956,8 +2718,6 @@ mask(value: ProgressMask | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## maskShape
 
 ```TypeScript
@@ -2980,8 +2740,6 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## materialFilter
 
 ```TypeScript
@@ -3004,8 +2762,6 @@ materialFilter(filter: Filter | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## monopolizeEvents
 
 ```TypeScript
@@ -3028,8 +2784,6 @@ monopolizeEvents(monopolize: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## motionBlur
 
 ```TypeScript
@@ -3052,8 +2806,6 @@ motionBlur(value: MotionBlurOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## motionPath
 
 ```TypeScript
@@ -3076,8 +2828,6 @@ motionPath(value: MotionPathOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## mouseResponseRegion
 
 ```TypeScript
@@ -3100,8 +2850,6 @@ mouseResponseRegion(value: Array<Rectangle> | Rectangle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## nextFocus
 
 ```TypeScript
@@ -3124,8 +2872,6 @@ nextFocus(nextStep: FocusMovement | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## obscured
 
 ```TypeScript
@@ -3148,8 +2894,6 @@ obscured(reasons: Array<ObscuredReasons> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## offset
 
 ```TypeScript
@@ -3172,8 +2916,6 @@ offset(value: Position | Edges | LocalizedEdges | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityActionIntercept
 
 ```TypeScript
@@ -3196,8 +2938,6 @@ onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback | 
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityFocus
 
 ```TypeScript
@@ -3220,8 +2960,6 @@ onAccessibilityFocus(callback: AccessibilityFocusCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityHover
 
 ```TypeScript
@@ -3244,8 +2982,6 @@ onAccessibilityHover(callback: AccessibilityCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityHoverTransparent
 
 ```TypeScript
@@ -3268,8 +3004,6 @@ onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback | und
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAppear
 
 ```TypeScript
@@ -3292,8 +3026,6 @@ onAppear(event: (() => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAreaChange
 
 ```TypeScript
@@ -3316,8 +3048,6 @@ onAreaChange(event: ((oldValue: Area, newValue: Area) => void) | undefined): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAreaChange
 
 ```TypeScript
@@ -3341,8 +3071,6 @@ onAreaChange (event: AreaChangeCallback, options?: AreaChangeOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAttach
 
 ```TypeScript
@@ -3365,8 +3093,6 @@ onAttach(callback: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAxisEvent
 
 ```TypeScript
@@ -3389,8 +3115,6 @@ onAxisEvent(event: Callback<AxisEvent> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onBlur
 
 ```TypeScript
@@ -3413,8 +3137,6 @@ onBlur(event: (() => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChildTouchTest
 
 ```TypeScript
@@ -3437,8 +3159,6 @@ onChildTouchTest(event: ((value: Array<TouchTestInfo>) => TouchResult) | undefin
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onClick
 
 ```TypeScript
@@ -3461,8 +3181,6 @@ onClick(event: ((event: ClickEvent) => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onClick
 
 ```TypeScript
@@ -3486,8 +3204,6 @@ onClick(event: Callback<ClickEvent> | undefined, distanceThreshold: double | und
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDetach
 
 ```TypeScript
@@ -3510,8 +3226,6 @@ onDetach(callback: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDigitalCrown
 
 ```TypeScript
@@ -3534,8 +3248,6 @@ onDigitalCrown(handler: Callback<CrownEvent> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDisAppear
 
 ```TypeScript
@@ -3558,8 +3270,6 @@ onDisAppear(event: (() => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDragEnd
 
 ```TypeScript
@@ -3582,8 +3292,6 @@ onDragEnd(event: ((event: DragEvent, extraParams?: string) => void) | undefined)
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDragEnter
 
 ```TypeScript
@@ -3606,8 +3314,6 @@ onDragEnter(event: ((event: DragEvent, extraParams?: string) => void) | undefine
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDragLeave
 
 ```TypeScript
@@ -3630,8 +3336,6 @@ onDragLeave(event: ((event: DragEvent, extraParams?: string) => void) | undefine
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDragMove
 
 ```TypeScript
@@ -3654,8 +3358,6 @@ onDragMove(event: ((event: DragEvent, extraParams?: string) => void) | undefined
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDragSpringLoading
 
 ```TypeScript
@@ -3679,8 +3381,6 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null | undefined,
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDragStart
 
 ```TypeScript
@@ -3703,8 +3403,6 @@ onDragStart(event: ((event: DragEvent, extraParams?: string) => CustomBuilder | 
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDrop
 
 ```TypeScript
@@ -3727,8 +3425,6 @@ onDrop(event: ((event: DragEvent, extraParams?: string) => void) | undefined): t
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDrop
 
 ```TypeScript
@@ -3752,8 +3448,6 @@ onDrop(eventCallback: OnDragEventCallback | undefined, dropOptions: DropOptions)
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onFocus
 
 ```TypeScript
@@ -3776,8 +3470,6 @@ onFocus(event: (() => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onFocusAxisEvent
 
 ```TypeScript
@@ -3800,8 +3492,6 @@ onFocusAxisEvent(event: Callback<FocusAxisEvent> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onGestureCollectIntercept
 
 ```TypeScript
@@ -3824,8 +3514,6 @@ onGestureCollectIntercept(callback: GestureCollectInterceptCallback): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onGestureJudgeBegin
 
 ```TypeScript
@@ -3848,8 +3536,6 @@ onGestureJudgeBegin(callback: ((gestureInfo: GestureInfo, event: BaseGestureEven
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onGestureRecognizerJudgeBegin
 
 ```TypeScript
@@ -3872,8 +3558,6 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | un
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onGestureRecognizerJudgeBegin
 
 ```TypeScript
@@ -3897,8 +3581,6 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | un
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onHover
 
 ```TypeScript
@@ -3921,8 +3603,6 @@ onHover(event: ((isHover: boolean, event: HoverEvent) => void) | undefined): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onHoverMove
 
 ```TypeScript
@@ -3945,8 +3625,6 @@ onHoverMove(event: Callback<HoverEvent> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onKeyEvent
 
 ```TypeScript
@@ -3969,8 +3647,6 @@ onKeyEvent(event: Callback<KeyEvent, boolean> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onKeyEventDispatch
 
 ```TypeScript
@@ -3993,8 +3669,6 @@ onKeyEventDispatch(event: Callback<KeyEvent, boolean> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onKeyPreIme
 
 ```TypeScript
@@ -4017,8 +3691,6 @@ onKeyPreIme(event: Callback<KeyEvent, boolean> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onMouse
 
 ```TypeScript
@@ -4041,8 +3713,6 @@ onMouse(event: ((event: MouseEvent) => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onNeedSoftkeyboard
 
 ```TypeScript
@@ -4065,8 +3735,6 @@ onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | unde
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onPreDrag
 
 ```TypeScript
@@ -4089,8 +3757,6 @@ onPreDrag(callback: Callback<PreDragStatus> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onSizeChange
 
 ```TypeScript
@@ -4113,8 +3779,6 @@ onSizeChange(event: SizeChangeCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onTouch
 
 ```TypeScript
@@ -4137,8 +3801,6 @@ onTouch(event: ((event: TouchEvent) => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onTouchIntercept
 
 ```TypeScript
@@ -4161,8 +3823,6 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onTouchTestDone
 
 ```TypeScript
@@ -4185,8 +3845,6 @@ onTouchTestDone(callback: TouchTestDoneCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onVisibleAreaApproximateChange
 
 ```TypeScript
@@ -4210,8 +3868,6 @@ onVisibleAreaApproximateChange(options: VisibleAreaEventOptions | undefined, eve
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onVisibleAreaChange
 
 ```TypeScript
@@ -4235,8 +3891,6 @@ onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeC
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onVisibleAreaChange
 
 ```TypeScript
@@ -4261,8 +3915,6 @@ onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeC
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## opacity
 
 ```TypeScript
@@ -4285,8 +3937,6 @@ opacity(value: double | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## outline
 
 ```TypeScript
@@ -4309,8 +3959,6 @@ outline(value: OutlineOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## outlineColor
 
 ```TypeScript
@@ -4333,8 +3981,6 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## outlineRadius
 
 ```TypeScript
@@ -4357,8 +4003,6 @@ outlineRadius(value: Dimension | OutlineRadiuses | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## outlineStyle
 
 ```TypeScript
@@ -4381,8 +4025,6 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## outlineWidth
 
 ```TypeScript
@@ -4405,8 +4047,6 @@ outlineWidth(value: Dimension | EdgeOutlineWidths | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## overlay
 
 ```TypeScript
@@ -4430,8 +4070,6 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## padding
 
 ```TypeScript
@@ -4454,8 +4092,6 @@ padding(value: Padding | Length | LocalizedPadding | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## parallelGesture
 
 ```TypeScript
@@ -4479,8 +4115,6 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## pixelRound
 
 ```TypeScript
@@ -4503,8 +4137,6 @@ pixelRound(value: PixelRoundPolicy | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## pixelStretchEffect
 
 ```TypeScript
@@ -4527,8 +4159,6 @@ pixelStretchEffect(options: PixelStretchEffectOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## position
 
 ```TypeScript
@@ -4551,8 +4181,6 @@ position(value: Position | Edges | LocalizedEdges | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## priorityGesture
 
 ```TypeScript
@@ -4576,8 +4204,6 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## radialGradient
 
 ```TypeScript
@@ -4600,8 +4226,6 @@ radialGradient(value: RadialGradientOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## renderFit
 
 ```TypeScript
@@ -4624,8 +4248,6 @@ renderFit(fitMode: RenderFit | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## renderGroup
 
 ```TypeScript
@@ -4648,8 +4270,6 @@ renderGroup(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## responseRegion
 
 ```TypeScript
@@ -4672,8 +4292,6 @@ responseRegion(value: Array<Rectangle> | Rectangle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## responseRegionList
 
 ```TypeScript
@@ -4696,8 +4314,6 @@ responseRegionList(regions: Array<ResponseRegion> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## restoreId
 
 ```TypeScript
@@ -4720,8 +4336,6 @@ restoreId(value: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## reuse
 
 ```TypeScript
@@ -4744,8 +4358,6 @@ reuse(options: ReuseOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## reuseId
 
 ```TypeScript
@@ -4768,8 +4380,6 @@ reuseId(id: string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## rotate
 
 ```TypeScript
@@ -4792,8 +4402,6 @@ rotate(value: RotateOptions | RotateAngleOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## safeAreaPadding
 
 ```TypeScript
@@ -4816,8 +4424,6 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## saturate
 
 ```TypeScript
@@ -4840,8 +4446,6 @@ saturate(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## scale
 
 ```TypeScript
@@ -4864,8 +4468,6 @@ scale(value: ScaleOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## sepia
 
 ```TypeScript
@@ -4888,8 +4490,6 @@ sepia(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## shadow
 
 ```TypeScript
@@ -4912,8 +4512,6 @@ shadow(value: ShadowOptions | ShadowStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## sharedTransition
 
 ```TypeScript
@@ -4937,8 +4535,6 @@ sharedTransition(id: string | undefined, options?: sharedTransitionOptions): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## shouldBuiltInRecognizerParallelWith
 
 ```TypeScript
@@ -4961,8 +4557,6 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## shouldRecognizerParallelWith
 
 ```TypeScript
@@ -4985,8 +4579,6 @@ shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback | un
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## size
 
 ```TypeScript
@@ -5009,8 +4601,6 @@ size(value: SizeOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## smartGestureShortcut
 
 ```TypeScript
@@ -5033,8 +4623,6 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## spatialEffect
 
 ```TypeScript
@@ -5057,8 +4645,6 @@ spatialEffect(params: SpatialEffectParams | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## sphericalEffect
 
 ```TypeScript
@@ -5081,8 +4667,6 @@ sphericalEffect(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stateStyles
 
 ```TypeScript
@@ -5105,8 +4689,6 @@ stateStyles(value: StateStyles | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## sweepGradient
 
 ```TypeScript
@@ -5129,8 +4711,6 @@ sweepGradient(value: SweepGradientOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## systemBarEffect
 
 ```TypeScript
@@ -5147,8 +4727,6 @@ systemBarEffect(): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## systemMaterial
 
 ```TypeScript
@@ -5171,8 +4749,6 @@ systemMaterial(material: SystemUiMaterial | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## tabIndex
 
 ```TypeScript
@@ -5195,8 +4771,6 @@ tabIndex(index: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## tabStop
 
 ```TypeScript
@@ -5219,8 +4793,6 @@ tabStop(isTabStop: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## toolbar
 
 ```TypeScript
@@ -5243,8 +4815,6 @@ toolbar(value: CustomBuilder | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## transform
 
 ```TypeScript
@@ -5267,8 +4837,6 @@ transform(value: Matrix4Transit | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## transform3D
 
 ```TypeScript
@@ -5291,8 +4859,6 @@ transform3D(transform: Matrix4Transit | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## transition
 
 ```TypeScript
@@ -5315,8 +4881,6 @@ transition(value: TransitionEffect | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## transition
 
 ```TypeScript
@@ -5340,8 +4904,6 @@ transition(effect: TransitionEffect | undefined, onFinish: TransitionFinishCallb
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## translate
 
 ```TypeScript
@@ -5364,8 +4926,6 @@ translate(value: TranslateOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## useEffect
 
 ```TypeScript
@@ -5389,8 +4949,6 @@ useEffect(useEffect: boolean | undefined, effectType: EffectType | undefined): t
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## useEffect
 
 ```TypeScript
@@ -5413,8 +4971,6 @@ useEffect(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## useShadowBatching
 
 ```TypeScript
@@ -5437,8 +4993,6 @@ useShadowBatching(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## useUnionEffect
 
 ```TypeScript
@@ -5461,8 +5015,6 @@ useUnionEffect(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## useUnionEffect
 
 ```TypeScript
@@ -5486,8 +5038,6 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## visibility
 
 ```TypeScript
@@ -5510,8 +5060,6 @@ visibility(value: Visibility | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## visualEffect
 
 ```TypeScript
@@ -5534,8 +5082,6 @@ visualEffect(effect: VisualEffect | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## width
 
 ```TypeScript
@@ -5558,8 +5104,6 @@ width(widthValue: Length | LayoutPolicy | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## zIndex
 
 ```TypeScript
@@ -5582,8 +5126,6 @@ zIndex(value: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

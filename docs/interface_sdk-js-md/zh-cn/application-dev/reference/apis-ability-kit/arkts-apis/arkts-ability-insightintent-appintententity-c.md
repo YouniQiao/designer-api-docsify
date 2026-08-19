@@ -13,6 +13,9 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntent } from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## onQueryEntity

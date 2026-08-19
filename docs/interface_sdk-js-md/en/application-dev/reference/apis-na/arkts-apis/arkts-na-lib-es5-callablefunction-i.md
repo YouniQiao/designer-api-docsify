@@ -34,8 +34,6 @@ Calls the function with the specified object as the this value and the elements 
 
 | Type | Description |
 | --- | --- |
-| R |  |
-
 ## apply
 
 ```TypeScript
@@ -58,8 +56,6 @@ apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args:
 
 | Type | Description |
 | --- | --- |
-| R |  |
-
 ## bind
 
 ```TypeScript
@@ -83,8 +79,6 @@ For a given function, creates a bound function that has the same body as the ori
 
 | Type | Description |
 | --- | --- |
-| [OmitThisParameter](arkts-na-omitthisparameter-t.md)&lt;T&gt; |  |
-
 ## bind
 
 ```TypeScript
@@ -107,8 +101,6 @@ bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, this
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -132,8 +124,6 @@ bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args:
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -158,8 +148,6 @@ bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -185,8 +173,6 @@ bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, 
 
 | Type | Description |
 | --- | --- |
-| (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -209,8 +195,6 @@ bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): 
 
 | Type | Description |
 | --- | --- |
-| (...args: AX[]) =&gt; R |  |
-
 ## call
 
 ```TypeScript
@@ -235,5 +219,3 @@ Calls the function with the specified object as the this value and the specified
 
 | Type | Description |
 | --- | --- |
-| R |  |
-

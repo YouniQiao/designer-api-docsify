@@ -6,7 +6,7 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-## on_nmeaMessageChange('nmeaMessageChange')
+## on('nmeaMessageChange')
 
 ```TypeScript
 function on(type: 'nmeaMessageChange', callback: Callback<string>): void
@@ -31,7 +31,7 @@ Subscribe nmea message changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'nmeaMessageChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback for reporting the nmea message. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Indicates the callback for reporting the nmea message. |
 
 **Examples**
 

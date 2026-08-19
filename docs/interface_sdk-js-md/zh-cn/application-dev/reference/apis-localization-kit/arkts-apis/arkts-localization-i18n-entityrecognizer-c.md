@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -82,7 +83,7 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[EntityInfoItem](../../apis-na/arkts-apis/arkts-na-i18n-entityinfoitem-i.md)&gt; | 文本中的实体信息列表。 |
+| Array&lt;[EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md)&gt; | 文本中的实体信息列表。 |
 
 **错误码：**
 

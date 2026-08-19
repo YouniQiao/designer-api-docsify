@@ -31,8 +31,6 @@ Returns the absolute value of a number (the value without regard to whether it i
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## acos
 
 ```TypeScript
@@ -55,8 +53,6 @@ Returns the arc cosine (or inverse cosine) of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## asin
 
 ```TypeScript
@@ -79,8 +75,6 @@ Returns the arcsine of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## atan
 
 ```TypeScript
@@ -103,8 +97,6 @@ Returns the arctangent of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## atan2
 
 ```TypeScript
@@ -128,8 +120,6 @@ Returns the angle (in radians) from the X axis to a point.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## ceil
 
 ```TypeScript
@@ -152,8 +142,6 @@ Returns the smallest integer greater than or equal to its numeric argument.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## cos
 
 ```TypeScript
@@ -176,8 +164,6 @@ Returns the cosine of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## exp
 
 ```TypeScript
@@ -200,8 +186,6 @@ Returns e (the base of natural logarithms) raised to a power.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## floor
 
 ```TypeScript
@@ -224,8 +208,6 @@ Returns the greatest integer less than or equal to its numeric argument.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## log
 
 ```TypeScript
@@ -248,8 +230,6 @@ Returns the natural logarithm (base e) of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## max
 
 ```TypeScript
@@ -272,8 +252,6 @@ Returns the larger of a set of supplied numeric expressions.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## min
 
 ```TypeScript
@@ -296,8 +274,6 @@ Returns the smaller of a set of supplied numeric expressions.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## pow
 
 ```TypeScript
@@ -321,8 +297,6 @@ Returns the value of a base expression taken to a specified power.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## random
 
 ```TypeScript
@@ -339,8 +313,6 @@ Returns a pseudorandom number between 0 and 1.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## round
 
 ```TypeScript
@@ -363,8 +335,6 @@ Returns a supplied numeric expression rounded to the nearest integer.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## sin
 
 ```TypeScript
@@ -387,8 +357,6 @@ Returns the sine of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## sqrt
 
 ```TypeScript
@@ -411,8 +379,6 @@ Returns the square root of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## tan
 
 ```TypeScript
@@ -435,8 +401,6 @@ Returns the tangent of a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## E
 
 ```TypeScript

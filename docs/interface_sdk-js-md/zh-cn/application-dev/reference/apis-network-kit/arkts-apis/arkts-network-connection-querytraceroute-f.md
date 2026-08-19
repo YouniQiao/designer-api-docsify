@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## queryTraceRoute
@@ -11,7 +12,7 @@
 function queryTraceRoute(destination: string, option?: TraceRouteOptions): Promise<TraceRouteInfo[]>
 ```
 
-查询网络路由跟踪信息，使用Promise方式作为异步方法。 > **说明：** > > 应用调用该接口需申请精确位置权限。<!--RP1-->根据[申请位置权限开发指导](../../../device/location/location-permission-guidelines.md)&lt;!--RP1End- &gt; ->，调用方需同时申请ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION。
+查询网络路由跟踪信息，使用Promise方式作为异步方法。 &gt; **说明：** &gt; &gt; 应用调用该接口需申请精确位置权限。<!--RP1-->根据[申请位置权限开发指导](../../../device/location/location-permission-guidelines.md)&lt;!--RP1End- &gt; -&gt;，调用方需同时申请ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION。
 
 **起始版本：** 26.0.0
 

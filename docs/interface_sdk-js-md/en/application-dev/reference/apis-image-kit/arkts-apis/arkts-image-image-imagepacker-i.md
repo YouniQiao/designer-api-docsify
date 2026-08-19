@@ -136,7 +136,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE：**> > If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is > released in advance. You need to check the code and ensure that the PixelMap object is released after this API > is called.
+Compresses or re-encodes an image. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is &gt; released in advance. You need to check the code and ensure that the PixelMap object is released after this API &gt; is called.
 
 **Since:** 23
 
@@ -228,7 +228,7 @@ Encodes the image source into a file based on the specified encoding parameters.
 | source | ImageSource | Yes | Image source to encode. |
 | fd | int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -292,7 +292,7 @@ Encodes the image source into a file based on the specified encoding parameters.
 packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result. > **NOTE：**> > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
 
 **Since:** 23
 
@@ -307,7 +307,7 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 | source | PixelMap | Yes | PixelMap to encode. |
 | fd | int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -329,7 +329,7 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result. > **NOTE：**> > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap &gt; object is released in advance. You need to check the code and ensure that the PixelMap object is released after &gt; this API is called.
 
 **Since:** 23
 
@@ -461,7 +461,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | source | ImageSource | Yes | Image source to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
 ## packing
 
@@ -502,7 +502,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Compresses or re-encodes an image. This API uses an asynchronous callback to return the result. > **NOTE：**> > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
+Compresses or re-encodes an image. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
 
 **Since:** 8
 
@@ -522,7 +522,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
 ## packing
 
@@ -530,7 +530,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE：**> > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
+Compresses or re-encodes an image. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the &gt; PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is &gt; released after this API is called.
 
 **Since:** 8
 
@@ -609,7 +609,7 @@ Releases this ImagePacker instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 

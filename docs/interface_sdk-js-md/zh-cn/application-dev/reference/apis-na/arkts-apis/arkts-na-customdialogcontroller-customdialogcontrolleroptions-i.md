@@ -1,6 +1,6 @@
 # CustomDialogControllerOptions
 
-自定义弹窗的样式。 > **说明：** > > - 按下返回键和ESC键时会让弹窗退出。 > > - 弹窗在避让软键盘时到达极限高度之后会压缩高度。 > > 需要注意：高度压缩生效在外层容器上，如果容器根节点中的子组件设置了较大的固定高度，由于容器默认不裁剪，依然可能存在超出屏幕显示的情况。 > > - 自定义弹窗仅适用于简单提示场景，不能替代页面使用。弹窗避让软键盘时，与软键盘之间存在16vp的安全间距。 > > - 为了达成良好的视觉体验，弹窗的显示和关闭存在默认动画，动画时长不同设备间可能存在差异。 > > 需要注意：在动画播放过程中，页面不响应触摸、滑动、点击操作。关闭默认弹窗动画效果可设置openAnimation和closeAnimation的duration为0。 > > - 当前，ArkUI弹出框默认为非页面级弹出框，在页面路由跳转时，如果开发者未调用close方法将其关闭，弹出框将不会自动关闭。若需实现在跳转页面时覆盖弹出框的场景，可以使用 > [组件导航子页面显示类型的弹窗类型](../../../ui/arkts-navigation-navdestination.md#页面显示类型)或者 > [页面级弹出框](../../../ui/arkts-embedded-dialog.md)。
+自定义弹窗的样式。 &gt; **说明：** &gt; &gt; - 按下返回键和ESC键时会让弹窗退出。 &gt; &gt; - 弹窗在避让软键盘时到达极限高度之后会压缩高度。 &gt; &gt; 需要注意：高度压缩生效在外层容器上，如果容器根节点中的子组件设置了较大的固定高度，由于容器默认不裁剪，依然可能存在超出屏幕显示的情况。 &gt; &gt; - 自定义弹窗仅适用于简单提示场景，不能替代页面使用。弹窗避让软键盘时，与软键盘之间存在16vp的安全间距。 &gt; &gt; - 为了达成良好的视觉体验，弹窗的显示和关闭存在默认动画，动画时长不同设备间可能存在差异。 &gt; &gt; 需要注意：在动画播放过程中，页面不响应触摸、滑动、点击操作。关闭默认弹窗动画效果可设置openAnimation和closeAnimation的duration为0。 &gt; &gt; - 当前，ArkUI弹出框默认为非页面级弹出框，在页面路由跳转时，如果开发者未调用close方法将其关闭，弹出框将不会自动关闭。若需实现在跳转页面时覆盖弹出框的场景，可以使用 &gt; [组件导航子页面显示类型的弹窗类型](../../../ui/arkts-navigation-navdestination.md#页面显示类型)或者 &gt; [页面级弹出框](../../../ui/arkts-embedded-dialog.md)。
 
 **起始版本：** 23
 
@@ -198,7 +198,7 @@ borderWidth?: Dimension | EdgeWidths
 builder: CustomBuilder | ExtendableComponent
 ```
 
-自定义弹窗内容构造器。 **说明：** 若builder构造器使用回调函数作为入参，请注意使用this绑定问题，如builder: custombuilder({ callback: ()=> {...}})。 若在builder中监听数据变化可以使用[@Link](../../../ui/state-management/arkts-link.md)或 [@Consume](../../../ui/state-management/arkts-provide-and-consume.md)，而其他方式如 [@Prop](../../../reference/apis-arkui/arkui-ts/ts-state-management-prop.md)、 [@ObjectLink](../../../reference/apis-arkui/arkui-ts/ts-state-management-objectlink.md)不适用此场景。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+自定义弹窗内容构造器。 **说明：** 若builder构造器使用回调函数作为入参，请注意使用this绑定问题，如builder: custombuilder({ callback: ()=&gt; {...}})。 若在builder中监听数据变化可以使用[@Link](../../../ui/state-management/arkts-link.md)或 [@Consume](../../../ui/state-management/arkts-provide-and-consume.md)，而其他方式如 [@Prop](../../../reference/apis-arkui/arkui-ts/ts-state-management-prop.md)、 [@ObjectLink](../../../reference/apis-arkui/arkui-ts/ts-state-management-objectlink.md)不适用此场景。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** CustomBuilder \| [ExtendableComponent](arkts-na-extendablecomponent-extendablecomponent-c.md)
 
@@ -428,7 +428,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。 **说明：** - 默认值：ImmersiveMode.DEFAULT - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** [ImmersiveMode](arkts-na-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -514,7 +514,7 @@ levelMode?: LevelMode
 
 设置弹窗显示层级。 **说明：** - 默认值：LevelMode.OVERLAY。 - 当且仅当showInSubWindow属性设置为false时生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** [LevelMode](arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -536,7 +536,7 @@ levelOrder?: LevelOrder
 
 设置弹窗显示的顺序。 **说明：** - 默认值：LevelOrder.clamp(0) - 不支持动态刷新顺序。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 18开始，该接口支持在原子化服务中使用。
 
-**类型：** [LevelOrder](arkts-na-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md)
 
 **默认值：** The value returns by LevelOrder.clamp(0)
 
@@ -636,7 +636,7 @@ offset?: Offset
 onDidAppear?: VoidCallback
 ```
 
-弹窗弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -656,7 +656,7 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-弹窗消失后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗消失后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -676,7 +676,7 @@ onDidDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-弹窗显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -696,7 +696,7 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-弹窗退出动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
+弹窗退出动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 19开始，该接口支持在原子化服务中使用。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 

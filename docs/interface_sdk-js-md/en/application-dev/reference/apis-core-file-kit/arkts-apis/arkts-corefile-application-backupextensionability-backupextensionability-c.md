@@ -68,7 +68,7 @@ Callback to be called when the backup procedure is started. Developer could over
 
 | Type | Description |
 | --- | --- |
-| string | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| string \| Promise&lt;string&gt; | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
 **Examples**
 
@@ -353,7 +353,7 @@ Callback to be called when the restore procedure is started. Developer could ove
 
 | Type | Description |
 | --- | --- |
-| string | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| string \| Promise&lt;string&gt; | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
 **Examples**
 

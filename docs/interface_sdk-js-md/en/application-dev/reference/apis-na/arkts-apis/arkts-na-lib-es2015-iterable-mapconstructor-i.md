@@ -23,8 +23,6 @@ new(): Map<any, any>
 
 | Type | Description |
 | --- | --- |
-| Map&lt;any, any&gt; |  |
-
 ## constructor
 
 ```TypeScript
@@ -45,5 +43,3 @@ new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>
 
 | Type | Description |
 | --- | --- |
-| Map&lt;K, V&gt; |  |
-

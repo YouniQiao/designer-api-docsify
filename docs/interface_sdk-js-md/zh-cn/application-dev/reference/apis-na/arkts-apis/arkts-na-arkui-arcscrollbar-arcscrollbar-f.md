@@ -29,7 +29,7 @@ export declare function ArcScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
+| options | [ArcScrollBarOptions](arkts-na-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**

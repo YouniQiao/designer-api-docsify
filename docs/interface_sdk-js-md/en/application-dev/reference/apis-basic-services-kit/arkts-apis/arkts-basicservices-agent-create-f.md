@@ -13,7 +13,7 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function create(context: BaseContext, config: Config, callback: AsyncCallback<Task>): void
 ```
 
-Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 23
 
@@ -31,7 +31,7 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
 | config | Config | Yes | Task configuration. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Task** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Task&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Task** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -51,7 +51,7 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 function create(context: BaseContext, config: Config): Promise<Task>
 ```
 
-Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/ HTTPS is supported. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/ HTTPS is supported. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 23
 

@@ -105,7 +105,7 @@ Create a MediaKeySession instance with level.
 
 | Type | Description |
 | --- | --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | A MediaKeySession instance or undefined. |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | A MediaKeySession instance or undefined. |
 
 **Error codes:**
 
@@ -164,7 +164,7 @@ Create a MediaKeySession instance.
 
 | Type | Description |
 | --- | --- |
-| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) | A MediaKeySession instance or undefined. |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) \| undefined | A MediaKeySession instance or undefined. |
 
 **Error codes:**
 
@@ -476,7 +476,7 @@ Unregister keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off_keySystemRequired('keySystemRequired')
+## off('keySystemRequired')
 
 ```TypeScript
 off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -532,7 +532,7 @@ Register keySystemRequired events.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on_keySystemRequired('keySystemRequired')
+## on('keySystemRequired')
 
 ```TypeScript
 on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void

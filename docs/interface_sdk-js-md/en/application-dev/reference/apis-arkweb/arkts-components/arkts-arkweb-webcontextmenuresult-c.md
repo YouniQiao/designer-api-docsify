@@ -56,7 +56,7 @@ Constructs a **WebContextMenuResult** object.
 copy(): void
 ```
 
-Performs the copy text operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+Performs the copy text operation. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Performs the copy text operation. > **NOTE：**> > After the operation is comple
 copyImage(): void
 ```
 
-When **WebContextMenuParam** contains image content, this method is used to copy the image to the clipboard. Starting from API version 24, copying canvas images is supported. If you need to save the image to a local file, use the saveImage() method. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+When **WebContextMenuParam** contains image content, this method is used to copy the image to the clipboard. Starting from API version 24, copying canvas images is supported. If you need to save the image to a local file, use the saveImage() method. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ When **WebContextMenuParam** contains image content, this method is used to copy
 cut(): void
 ```
 
-Performs the cut operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+Performs the cut operation. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ Performs the cut operation. > **NOTE：**> > After the operation is complete, [c
 paste(): void
 ```
 
-Performs the paste operation, preserving the original format. If you need to paste plain text and match the target format, use the pasteAndMatchStyle() method. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released. > > The permission > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > must be declared.
+Performs the paste operation, preserving the original format. If you need to paste plain text and match the target format, use the pasteAndMatchStyle() method. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released. &gt; &gt; The permission &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &gt; must be declared.
 
 **Since:** 9
 
@@ -120,7 +120,7 @@ Performs the paste operation, preserving the original format. If you need to pas
 pasteAndMatchStyle(): void
 ```
 
-Performs the paste operation related to this context menu. The pasted content matches the target format and is presented as plain text. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released. > > The permission > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > must be declared.
+Performs the paste operation related to this context menu. The pasted content matches the target format and is presented as plain text. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released. &gt; &gt; The permission &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) &gt; must be declared.
 
 **Since:** 20
 
@@ -134,7 +134,7 @@ Performs the paste operation related to this context menu. The pasted content ma
 redo(): void
 ```
 
-Performs the redo operation, which re-executes the revoked operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+Performs the redo operation, which re-executes the revoked operation. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
 
@@ -148,7 +148,7 @@ Performs the redo operation, which re-executes the revoked operation. > **NOTE�
 requestPasswordAutoFill(): void
 ```
 
-Requests the username or password data in the password vault to be automatically filled in the current focused text box. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+Requests the username or password data in the password vault to be automatically filled in the current focused text box. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 23
 
@@ -162,7 +162,7 @@ Requests the username or password data in the password vault to be automatically
 saveImage(): void
 ```
 
-Saves the image related to this context menu. Calling this method triggers the download process. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+Saves the image related to this context menu. Calling this method triggers the download process. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 24
 
@@ -178,7 +178,7 @@ Saves the image related to this context menu. Calling this method triggers the d
 selectAll(): void
 ```
 
-Performs the select all operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+Performs the select all operation. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 9
 
@@ -194,7 +194,7 @@ Performs the select all operation. > **NOTE：**> > After the operation is compl
 undo(): void
 ```
 
-Performs the undo operation, which undoes the last editing operation. > **NOTE：**> > After the operation is complete, [closeContextMenu](#closecontextmenu) should be called > to close the menu. Failure to do so may result in menu resources not being properly released.
+Performs the undo operation, which undoes the last editing operation. &gt; **NOTE：**&gt; &gt; After the operation is complete, [closeContextMenu](#closecontextmenu) should be called &gt; to close the menu. Failure to do so may result in menu resources not being properly released.
 
 **Since:** 20
 

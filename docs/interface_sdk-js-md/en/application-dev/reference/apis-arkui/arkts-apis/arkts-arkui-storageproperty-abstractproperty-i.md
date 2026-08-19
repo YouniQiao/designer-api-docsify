@@ -50,8 +50,6 @@ info(): string
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## onChange
 
 ```TypeScript

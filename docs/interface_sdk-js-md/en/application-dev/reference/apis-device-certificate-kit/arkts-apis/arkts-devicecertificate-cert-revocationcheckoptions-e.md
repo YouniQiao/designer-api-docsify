@@ -78,7 +78,7 @@ This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows
 REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE = 4
 ```
 
-This parameter is valid when the **ACCESS_NETWORK** option is enabled. If this capability is enabled, the system continues to check the revocation status of the intermediate certificate if the OCSP or CRL check of the leaf certificate succeeds. This capability is disabled by default. > **NOTE：**> > This capability and **REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT** cannot be enabled at > the same time.
+This parameter is valid when the **ACCESS_NETWORK** option is enabled. If this capability is enabled, the system continues to check the revocation status of the intermediate certificate if the OCSP or CRL check of the leaf certificate succeeds. This capability is disabled by default. &gt; **NOTE：**&gt; &gt; This capability and **REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT** cannot be enabled at &gt; the same time.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ This parameter is valid when the **ACCESS_NETWORK** option is enabled. If this c
 REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT = 5
 ```
 
-If this capability is enabled, the system checks the revocation status of the leaf certificate based on the local CRL. This capability is disabled by default. > **NOTE：**> > This capability and **REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE** cannot be enabled at the same > time.
+If this capability is enabled, the system checks the revocation status of the leaf certificate based on the local CRL. This capability is disabled by default. &gt; **NOTE：**&gt; &gt; This capability and **REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE** cannot be enabled at the same &gt; time.
 
 **Since:** 23
 

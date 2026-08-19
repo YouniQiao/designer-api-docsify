@@ -547,7 +547,7 @@ public find(predicate: (value: T, index: int, array: Array<T>) => boolean): T | 
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 满足给定测试函数的第一个元素的值， 否则返回undefined。 |
+| T \| undefined | 满足给定测试函数的第一个元素的值， 否则返回undefined。 |
 
 ## findIndex
 
@@ -607,7 +607,7 @@ public findLast(predicate: (elem: T, index: int, array: Array<T>) => boolean): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 如果找到则返回该元素的值，否则返回undefined。 |
+| T \| undefined | 如果找到则返回该元素的值，否则返回undefined。 |
 
 ## findLastIndex
 
@@ -1188,7 +1188,7 @@ public pop(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 从数组中被删除的元素，如果数组为空则返回undefined。 |
+| T \| undefined | 从数组中被删除的元素，如果数组为空则返回undefined。 |
 
 ## push
 
@@ -1390,7 +1390,7 @@ public shift(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 从数组中被删除的元素，如果数组为空则返回undefined。 |
+| T \| undefined | 从数组中被删除的元素，如果数组为空则返回undefined。 |
 
 ## shrinkTo
 

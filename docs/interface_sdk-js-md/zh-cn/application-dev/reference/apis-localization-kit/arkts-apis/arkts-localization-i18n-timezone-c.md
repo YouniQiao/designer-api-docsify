@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppDefaultTimeZone
@@ -19,7 +20,7 @@
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
 
 **起始版本：** 26.0.0
 
@@ -35,7 +36,7 @@ static getAppDefaultTimeZone(): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
 
 **示例**
 
@@ -318,7 +319,7 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
 
 **示例**
 
@@ -355,7 +356,7 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md)&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
+| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
 
 **错误码：**
 
@@ -398,7 +399,7 @@ public getZoneRules(): ZoneRules
 
 | 类型 | 说明 |
 | --- | --- |
-| [ZoneRules](../../apis-na/arkts-apis/arkts-na-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
+| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
 
 ## isDaylightSavingTime
 
@@ -436,7 +437,7 @@ public isDaylightSavingTime(date: Date): boolean
 static setAppDefaultTimeZoneById(zoneID: string): void
 ```
 
-设置当前应用的默认时区，在应用运行时生命周期内有效。 > **说明：** > > 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
+设置当前应用的默认时区，在应用运行时生命周期内有效。 &gt; **说明：** &gt; &gt; 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
 
 **起始版本：** 26.0.0
 

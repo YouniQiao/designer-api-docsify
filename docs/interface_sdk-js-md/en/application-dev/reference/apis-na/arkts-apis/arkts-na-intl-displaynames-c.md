@@ -68,7 +68,7 @@ Returns the localized display name for the provided code.
 
 | Type | Description |
 | --- | --- |
-| string | the display name. |
+| string \| undefined | the display name. |
 
 ## resolvedOptions
 

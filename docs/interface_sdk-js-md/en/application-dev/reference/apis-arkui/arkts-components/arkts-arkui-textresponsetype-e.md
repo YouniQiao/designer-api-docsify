@@ -1,6 +1,6 @@
 # TextResponseType
 
-Response type of the menu. > **NOTE：**> > The system follows the priority order below when determining the menu type to display during text interactions: >
+Response type of the menu. &gt; **NOTE：**&gt; &gt; The system follows the priority order below when determining the menu type to display during text interactions: &gt;
 
 **Since:** 11
 

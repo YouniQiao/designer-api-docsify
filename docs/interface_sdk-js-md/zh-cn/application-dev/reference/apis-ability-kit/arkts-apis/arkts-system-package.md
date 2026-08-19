@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## 汇总

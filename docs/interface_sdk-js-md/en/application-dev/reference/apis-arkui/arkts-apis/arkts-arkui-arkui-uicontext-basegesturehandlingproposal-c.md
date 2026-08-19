@@ -1,6 +1,6 @@
 # BaseGestureHandlingProposal
 
-Base class for smart gesture handling. When dynamically customizing smart gesture behavior through the [registerMonitor](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, the callback parameter type is an instance of a specific subclass type.
+Base class for smart gesture handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor) API, the callback parameter type is an instance of a specific subclass type.
 
 **Since:** 26.0.0
 

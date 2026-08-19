@@ -33,8 +33,6 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Awaited](arkts-na-awaited-t.md)&lt;T[number]&gt;&gt; |  |
-
 ## any
 
 ```TypeScript
@@ -57,5 +55,3 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Awaited](arkts-na-awaited-t.md)&lt;T&gt;&gt; |  |
-

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<SideBarContainerAttribute> | Attri
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## autoHide
 
 ```TypeScript
@@ -58,8 +56,6 @@ autoHide(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## controlButton
 
 ```TypeScript
@@ -82,8 +78,6 @@ controlButton(value: ButtonStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## divider
 
 ```TypeScript
@@ -106,8 +100,6 @@ divider(value: DividerStyle | null | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## maxSideBarWidth
 
 ```TypeScript
@@ -130,8 +122,6 @@ maxSideBarWidth(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## minContentWidth
 
 ```TypeScript
@@ -154,8 +144,6 @@ minContentWidth(value: Dimension | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## minSideBarWidth
 
 ```TypeScript
@@ -178,8 +166,6 @@ minSideBarWidth(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -202,8 +188,6 @@ onChange(callback: ((value: boolean) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setSideBarContainerOptions
 
 ```TypeScript
@@ -226,8 +210,6 @@ setSideBarContainerOptions(type?: SideBarContainerType): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showControlButton
 
 ```TypeScript
@@ -250,8 +232,6 @@ showControlButton(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showSideBar
 
 ```TypeScript
@@ -274,8 +254,6 @@ showSideBar(value: boolean | Bindable<boolean> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showSideBarWithGesture
 
 ```TypeScript
@@ -298,8 +276,6 @@ showSideBarWithGesture(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sideBarPosition
 
 ```TypeScript
@@ -322,8 +298,6 @@ sideBarPosition(value: SideBarPosition | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sideBarWidth
 
 ```TypeScript
@@ -346,8 +320,6 @@ sideBarWidth(value: Length | Bindable<Length> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

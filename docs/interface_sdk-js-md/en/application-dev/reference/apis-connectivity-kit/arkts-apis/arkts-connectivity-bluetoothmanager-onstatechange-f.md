@@ -6,7 +6,7 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## on_stateChange('stateChange')
+## on('stateChange')
 
 ```TypeScript
 function on(type: 'stateChange', callback: Callback<BluetoothState>): void
@@ -33,7 +33,7 @@ Subscribe the event reported when the Bluetooth state changes. On API 10 and abo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
 
 **Error codes:**
 

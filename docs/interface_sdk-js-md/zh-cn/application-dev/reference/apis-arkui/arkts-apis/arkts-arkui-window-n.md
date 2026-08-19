@@ -9,6 +9,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -68,17 +71,17 @@
 | [getVisibleWindowInfo](arkts-arkui-window-getvisiblewindowinfo-f-sys.md) | 获取当前屏幕的可见主窗口（未退至后台的主窗口）信息。使用Promise异步回调。 |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md) | 获取指定的前台窗口当前栈顶Navigation中的 NavDestination名称，使用Promise异步回调。 |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md) | 获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过 [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode) 接口设置），截图结果为白屏。 |
-| on_systemBarTintChange | 开启状态栏、导航栏属性变化的监听。 |
+| [on_systemBarTintChange](arkts-arkui-window-onsystembartintchange-f-sys.md) | 开启状态栏、导航栏属性变化的监听。 |
 | [onSystemBarTintChange](arkts-arkui-window-onsystembartintchange-f-sys.md) | 开启状态栏、导航栏属性变化的监听。 |
-| off_systemBarTintChange | 关闭状态栏、导航栏属性变化的监听。 |
+| [off_systemBarTintChange](arkts-arkui-window-offsystembartintchange-f-sys.md) | 关闭状态栏、导航栏属性变化的监听。 |
 | [offSystemBarTintChange](arkts-arkui-window-offsystembartintchange-f-sys.md) | 关闭状态栏、导航栏属性变化的监听。 |
-| on_gestureNavigationEnabledChange | 添加手势导航启用状态变化的监听。 |
+| [on_gestureNavigationEnabledChange](arkts-arkui-window-ongesturenavigationenabledchange-f-sys.md) | 添加手势导航启用状态变化的监听。 |
 | [onGestureNavigationEnabledChange](arkts-arkui-window-ongesturenavigationenabledchange-f-sys.md) | 添加手势导航启用状态变化的监听。 |
-| off_gestureNavigationEnabledChange | 移除手势导航启用状态变化的监听。 |
+| [off_gestureNavigationEnabledChange](arkts-arkui-window-offgesturenavigationenabledchange-f-sys.md) | 移除手势导航启用状态变化的监听。 |
 | [offGestureNavigationEnabledChange](arkts-arkui-window-offgesturenavigationenabledchange-f-sys.md) | 移除手势导航启用状态变化的监听。 |
-| on_waterMarkFlagChange | 添加水印启用状态变化的监听。 |
+| [on_waterMarkFlagChange](arkts-arkui-window-onwatermarkflagchange-f-sys.md) | 添加水印启用状态变化的监听。 |
 | [onWaterMarkFlagChange](arkts-arkui-window-onwatermarkflagchange-f-sys.md) | 添加水印启用状态变化的监听。 |
-| off_waterMarkFlagChange | 移除水印启用状态变化的监听。 |
+| [off_waterMarkFlagChange](arkts-arkui-window-offwatermarkflagchange-f-sys.md) | 移除水印启用状态变化的监听。 |
 | [offWaterMarkFlagChange](arkts-arkui-window-offwatermarkflagchange-f-sys.md) | 移除水印启用状态变化的监听。 |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md) | 通知屏幕截屏的事件类型，使用Promise异步回调。 |
 | [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md) | 将指定的主窗口迁移到指定的屏幕上。使用Promise异步回调。 - 对于[主屏](../../../displaymanager/display-terminology.md#主屏)/ [扩展屏](../../../displaymanager/display-terminology.md#扩展屏)与 [虚拟屏](../../../displaymanager/display-terminology.md#虚拟屏)之间以及虚拟屏与虚拟屏之间的窗口迁移，仅主窗及其子窗会一起被迁移到对应屏幕上且被抬升，如果存在子窗，最上层可获焦子 窗会获取焦点，否则主窗口获焦。 - 对于主屏与扩展屏之间的窗口迁移，只会将主窗口迁移到对应屏幕，抬升并获取焦点。 <!--RP3--><!--RP3End--> |

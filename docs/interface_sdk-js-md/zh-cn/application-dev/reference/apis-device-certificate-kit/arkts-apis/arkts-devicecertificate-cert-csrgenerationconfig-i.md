@@ -1,6 +1,6 @@
 # CsrGenerationConfig
 
-用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。 > **说明：** > > - subject是X500DistinguishedName对象。 > > - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。 > > - attributes是可选参数，指定**PKCS #9**中规定的扩展类型跟扩展值生成CSR。例如challengePassword。 > > - outFormat指定输出CSR的格式，若不指定默认为PEM格式。
+用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。 &gt; **说明：** &gt; &gt; - subject是X500DistinguishedName对象。 &gt; &gt; - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。 &gt; &gt; - attributes是可选参数，指定**PKCS #9**中规定的扩展类型跟扩展值生成CSR。例如challengePassword。 &gt; &gt; - outFormat指定输出CSR的格式，若不指定默认为PEM格式。
 
 **起始版本：** 23
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## attributes

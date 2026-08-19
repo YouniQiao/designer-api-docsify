@@ -29,7 +29,7 @@ Listens for touchPad fingers rotate events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fingers | int | Yes | the number of fingers. |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Rotate](arkts-input-multimodalinput-gestureevent-rotate-i.md)&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Rotate](arkts-input-multimodalinput-gestureevent-rotate-i.md)&gt; | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 

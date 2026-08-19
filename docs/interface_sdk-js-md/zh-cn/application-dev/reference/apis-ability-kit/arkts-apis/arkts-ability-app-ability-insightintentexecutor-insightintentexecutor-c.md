@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InsightIntentExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecuteInServiceExtensionAbility
@@ -41,7 +42,7 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -146,7 +147,7 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, RecordDat
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -258,7 +259,7 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -347,7 +348,7 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, RecordDat
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -430,7 +431,7 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -548,7 +549,7 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordDat
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -672,7 +673,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 
@@ -782,7 +783,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
 
 | 类型 | 说明 |
 | --- | --- |
-| insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **示例**
 

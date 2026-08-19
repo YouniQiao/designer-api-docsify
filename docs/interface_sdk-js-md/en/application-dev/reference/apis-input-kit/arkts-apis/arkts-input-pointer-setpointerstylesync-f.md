@@ -12,7 +12,7 @@ import { pointer } from '@kit.InputKit';
 function setPointerStyleSync(windowId: int, pointerStyle: PointerStyle): void
 ```
 
-Sets the mouse pointer style type for a specified window and returns the result synchronously. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-cursorcontroller-c.md#setcursor).
+Sets the mouse pointer style type for a specified window and returns the result synchronously. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor).
 
 **Since:** 23
 

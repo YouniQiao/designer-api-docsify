@@ -34,7 +34,7 @@ Obtains a node by path. If no node is obtained, null is returned.
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the node object. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the node object. |
 
 **Examples**
 

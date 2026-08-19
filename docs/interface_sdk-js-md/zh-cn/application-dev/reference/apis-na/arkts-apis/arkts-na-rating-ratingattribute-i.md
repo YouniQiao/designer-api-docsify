@@ -32,8 +32,6 @@ attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -56,8 +54,6 @@ contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -80,8 +76,6 @@ onChange(callback: OnRatingChangeCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## starStyle
 
 ```TypeScript
@@ -104,8 +98,6 @@ starStyle(options: StarStyleOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## stars
 
 ```TypeScript
@@ -128,8 +120,6 @@ stars(value: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## stepSize
 
 ```TypeScript
@@ -152,8 +142,6 @@ stepSize(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

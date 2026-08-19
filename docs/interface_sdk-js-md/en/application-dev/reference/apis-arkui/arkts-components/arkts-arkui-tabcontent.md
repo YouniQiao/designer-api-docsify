@@ -31,7 +31,7 @@ Creates the **TabContent** component, which represents the content associated wi
 | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Represents an indicator style object. |
 | [LabelStyle](arkts-arkui-labelstyle-i.md) | Represents a style object for the label text and font. |
 | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Represents a label icon style object. |
-| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Defines the options for configuring images and text content on the tabs. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Defines the options for configuring images and text content on the tabs. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Types
 

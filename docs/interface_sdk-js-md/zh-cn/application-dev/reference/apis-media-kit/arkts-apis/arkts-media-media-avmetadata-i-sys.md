@@ -11,6 +11,7 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## gltf_offset

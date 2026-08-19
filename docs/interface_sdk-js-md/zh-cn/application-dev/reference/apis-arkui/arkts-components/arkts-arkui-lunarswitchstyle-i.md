@@ -19,7 +19,7 @@
 selectedColor?: ResourceColor
 ```
 
-设置开关开启时开关的背景颜色。 > 默认值：\$r('sys.color.ohos_id_color_text_primary_actived')。
+设置开关开启时开关的背景颜色。 &gt; 默认值：\$r('sys.color.ohos_id_color_text_primary_actived')。
 
 **类型：** ResourceColor
 
@@ -41,7 +41,7 @@ selectedColor?: ResourceColor
 strokeColor?: ResourceColor
 ```
 
-设置开关内部图标颜色。 > 默认值：Color.White。
+设置开关内部图标颜色。 &gt; 默认值：Color.White。
 
 **类型：** ResourceColor
 
@@ -63,7 +63,7 @@ strokeColor?: ResourceColor
 unselectedColor?: ResourceColor
 ```
 
-设置开关未开启时开关的边框颜色。 > 默认值：\$r('sys.color.ohos_id_color_switch_outline_off')。
+设置开关未开启时开关的边框颜色。 &gt; 默认值：\$r('sys.color.ohos_id_color_switch_outline_off')。
 
 **类型：** ResourceColor
 

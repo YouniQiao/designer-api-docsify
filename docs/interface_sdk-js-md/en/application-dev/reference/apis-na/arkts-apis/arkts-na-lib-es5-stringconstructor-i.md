@@ -29,8 +29,6 @@ new(value?: any): String
 
 | Type | Description |
 | --- | --- |
-| String |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new(value?: any): String
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## fromCharCode
 
 ```TypeScript
@@ -73,8 +69,6 @@ fromCharCode(...codes: number[]): string
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## prototype
 
 ```TypeScript

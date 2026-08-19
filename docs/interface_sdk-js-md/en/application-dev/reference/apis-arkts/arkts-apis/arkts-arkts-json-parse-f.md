@@ -34,5 +34,5 @@ Parses a JSON string into an ArkTS object or null.
 
 | Type | Description |
 | --- | --- |
-| Object | Return an Object, array, string, number, boolean, or null value corresponding to JSON text. |
+| Object \| null | Return an Object, array, string, number, boolean, or null value corresponding to JSON text. |
 

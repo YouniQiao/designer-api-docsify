@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.MDMKit';
 function installMarketApps(admin: Want, bundleNames: Array<string>): void
 ```
 
-Downloads and installs an application from AppGallery. > **NOTE：**> > After this API is successfully called, an application download task is generated on the home screen. The task is > the same as that created during download from AppGallery. Upon completion of the download and installation, the > installation result is returned through the > [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) > callback.
+Downloads and installs an application from AppGallery. &gt; **NOTE：**&gt; &gt; After this API is successfully called, an application download task is generated on the home screen. The task is &gt; the same as that created during download from AppGallery. Upon completion of the download and installation, the &gt; installation result is returned through the &gt; [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) &gt; callback.
 
 **Since:** 22
 

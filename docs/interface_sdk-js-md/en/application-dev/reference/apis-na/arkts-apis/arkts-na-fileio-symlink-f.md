@@ -60,7 +60,7 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void
 ```
 
-Creates a symbolic link based on a file path. This API uses an asynchronous callback to return the result. > **NOTE：**> > Since API version 11, this API cannot be used by third-party applications.
+Creates a symbolic link based on a file path. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Creates a symbolic link based on a file path. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | target | string | Yes | Application sandbox path of the target file. |
 | srcPath | string | Yes | Application sandbox path of the symbolic link. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the symbolic link is successfully created, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the symbolic link is successfully created, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

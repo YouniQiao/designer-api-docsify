@@ -1,6 +1,6 @@
 # UIContext
 
-Implements a **UIContext** instance. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a > **UIContext** instance: (1) using the > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from > ohos.window; (2) using the built-in method > [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom > component; (3) using static methods of the UIContext class such as > [getCallingScopeUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext). In this document, the **UIContext** instance > is represented by **uiContext**.
+Implements a **UIContext** instance. &gt; **NOTE：**&gt; &gt; - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. &gt; &gt; - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a &gt; **UIContext** instance: (1) using the &gt; [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from &gt; ohos.window; (2) using the built-in method &gt; [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom &gt; component; (3) using static methods of the UIContext class such as &gt; [getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext). In this document, the **UIContext** instance &gt; is represented by **uiContext**.
 
 **Since:** 10
 
@@ -42,7 +42,7 @@ Specifies a clear animation host instance context via the UIContext object and t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | AnimateParam | Yes | Animation settings. |
-| processor | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;void&gt; | Yes | Callback function. It specifies the closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
+| processor | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback function. It specifies the closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
 
 ## clearResourceCache
 
@@ -172,13 +172,13 @@ get the luminance sampler of the specified node. If the node cannot be found, re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | Yes | ID of target node. |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | ID of target node. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) | the luminance sampler or undefined. |
+| [LuminanceSampler](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md) \| undefined | the luminance sampler or undefined. |
 
 **Examples**
 
@@ -214,7 +214,7 @@ Set the switch for memory recycling of invisible image nodes
 setDynamicDimming(id: string, value: number): void
 ```
 
-Sets the dynamic dimming degree of the component. > **NOTE：**> > Applying other visual effects after this API is called may result in conflicts.
+Sets the dynamic dimming degree of the component. &gt; **NOTE：**&gt; &gt; Applying other visual effects after this API is called may result in conflicts.
 
 **Since:** 12
 

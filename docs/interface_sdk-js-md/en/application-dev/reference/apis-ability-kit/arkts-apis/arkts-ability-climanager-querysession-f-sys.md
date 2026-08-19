@@ -36,7 +36,7 @@ Query session status.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i-sys.md)&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

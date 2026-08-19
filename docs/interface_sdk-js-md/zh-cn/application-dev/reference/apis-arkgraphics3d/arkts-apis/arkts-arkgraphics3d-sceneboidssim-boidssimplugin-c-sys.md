@@ -38,7 +38,7 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) | 返回群组模拟世界实例，若不存在则返回null。 |
+| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) \| null | 返回群组模拟世界实例，若不存在则返回null。 |
 
 **示例**
 

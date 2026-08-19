@@ -11,6 +11,7 @@ LocalSocket连接。在调用LocalSocket的方法前，需要先通过 [socket.c
 ## 导入模块
 
 ```TypeScript
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## bind
@@ -19,7 +20,7 @@ LocalSocket连接。在调用LocalSocket的方法前，需要先通过 [socket.c
 bind(address: LocalAddress): Promise<void>
 ```
 
-绑定本地套接字文件的路径。使用Promise异步回调。 > **说明：** > > bind方法可以使客户端确保有个明确的本地套接字路径，显式的绑定一个本地套接字文件。 > > bind方法在本地套接字通信中非必须。
+绑定本地套接字文件的路径。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind方法可以使客户端确保有个明确的本地套接字路径，显式的绑定一个本地套接字文件。 &gt; &gt; bind方法在本地套接字通信中非必须。
 
 **起始版本：** 11
 
@@ -115,7 +116,7 @@ client.close().then(() => {
 connect(options: LocalConnectOptions): Promise<void>
 ```
 
-连接到指定的套接字文件。使用Promise异步回调。 > **说明：** > > 在没有执行localsocket.bind的情况下，也可以直接调用该接口完成与LocalSocket服务端的连接。
+连接到指定的套接字文件。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 在没有执行localsocket.bind的情况下，也可以直接调用该接口完成与LocalSocket服务端的连接。
 
 **起始版本：** 11
 
@@ -176,7 +177,7 @@ client.connect(connectOpt).then(() => {
 getExtraOptions(): Promise<ExtraOptionsBase>
 ```
 
-获取LocalSocket的套接字属性。使用Promise异步回调。 > **说明：** > > bind或connect方法调用成功后，才可调用此方法。
+获取LocalSocket的套接字属性。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
 
@@ -232,7 +233,7 @@ client.connect(connectOpt).then(() => {
 getLocalAddress(): Promise<string>
 ```
 
-获取LocalSocket的本地Socket地址。使用Promise异步回调。 > **说明：** > > bind方法调用成功后，才可调用此方法。
+获取LocalSocket的本地Socket地址。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind方法调用成功后，才可调用此方法。
 
 **起始版本：** 12
 
@@ -287,7 +288,7 @@ client.bind(address).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-获取LocalSocket的文件描述符。使用Promise异步回调。 > **说明：** > > - bind或connect方法调用成功后，才可调用此方法。 > > - 获取由系统内核分配的唯一文件描述符，用于标识当前使用的套接字。 > > - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
+获取LocalSocket的文件描述符。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - bind或connect方法调用成功后，才可调用此方法。 &gt; &gt; - 获取由系统内核分配的唯一文件描述符，用于标识当前使用的套接字。 &gt; &gt; - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 11
 
@@ -337,7 +338,7 @@ client.getSocketFd().then((data: number) => {
 getState(): Promise<SocketStateBase>
 ```
 
-获取LocalSocket状态。使用Promise异步回调。 > **说明：** > > bind或connect方法调用成功后，才可调用此方法。
+获取LocalSocket状态。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
 
@@ -381,7 +382,7 @@ client.connect(connectOpt).then(() => {
 });
 ```
 
-## off_close('close')
+## off('close')
 
 ```TypeScript
 off(type: 'close', callback?: Callback<void>): void
@@ -400,7 +401,7 @@ off(type: 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 取消订阅的事件类型。'close'：LocalSocket的关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -423,7 +424,7 @@ client.off('close', callback);
 client.off('close');
 ```
 
-## off_connect('connect')
+## off('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<void>): void
@@ -442,7 +443,7 @@ off(type: 'connect', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 取消订阅的事件类型。'connect'：LocalSocket的connect事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -465,7 +466,7 @@ client.off('connect', callback);
 client.off('connect');
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -484,7 +485,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 取消订阅的事件类型。'error'：LocalSocket的error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -507,7 +508,7 @@ client.off('error', callback);
 client.off('error');
 ```
 
-## off_message('message')
+## off('message')
 
 ```TypeScript
 off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
@@ -526,7 +527,7 @@ off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -554,7 +555,7 @@ client.on('message', callback);
 client.off('message');
 ```
 
-## on_close('close')
+## on('close')
 
 ```TypeScript
 on(type: 'close', callback: Callback<void>): void
@@ -573,7 +574,7 @@ on(type: 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 订阅LocalSocket的关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 以callback的形式异步返回关闭localsocket的结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 以callback的形式异步返回关闭localsocket的结果。 |
 
 **错误码：**
 
@@ -593,7 +594,7 @@ let callback = () => {
 client.on('close', callback);
 ```
 
-## on_connect('connect')
+## on('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<void>): void
@@ -612,7 +613,7 @@ on(type: 'connect', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 订阅的事件类型。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 以callback的形式异步返回与服务端连接的结果。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 以callback的形式异步返回与服务端连接的结果。 |
 
 **错误码：**
 
@@ -631,7 +632,7 @@ client.on('connect', () => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -650,7 +651,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅LocalSocket的error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 以callback的形式异步返回出现错误的结果。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 以callback的形式异步返回出现错误的结果。 |
 
 **错误码：**
 
@@ -669,7 +670,7 @@ client.on('error', (err: Object) => {
 });
 ```
 
-## on_message('message')
+## on('message')
 
 ```TypeScript
 on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
@@ -688,7 +689,7 @@ on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 是 | 以callback的形式异步返回接收的消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | 是 | 以callback的形式异步返回接收的消息。 |
 
 **错误码：**
 
@@ -719,7 +720,7 @@ client.on('message', (value: socket.LocalSocketMessageInfo) => {
 send(options: LocalSendOptions): Promise<void>
 ```
 
-通过LocalSocket连接发送数据。使用Promise异步回调。 > **说明：** > > connect方法调用成功后，才可调用此方法。
+通过LocalSocket连接发送数据。使用Promise异步回调。 &gt; **说明：** &gt; &gt; connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
 
@@ -785,7 +786,7 @@ client.send(sendOpt).then(() => {
 setExtraOptions(options: ExtraOptionsBase): Promise<void>
 ```
 
-设置LocalSocket的套接字属性。使用Promise异步回调。 > **说明：** > > bind或connect方法调用成功后，才可调用此方法。
+设置LocalSocket的套接字属性。使用Promise异步回调。 &gt; **说明：** &gt; &gt; bind或connect方法调用成功后，才可调用此方法。
 
 **起始版本：** 11
 

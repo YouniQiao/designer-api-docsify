@@ -34,7 +34,7 @@ Get caret offset from controller.
 
 | Type | Description |
 | --- | --- |
-| int |  |
+| int \| undefined |  |
 
 ## getPreviewText
 
@@ -58,7 +58,7 @@ Get PreviewText.
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | Return the PreviewText. |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) \| undefined | Return the PreviewText. |
 
 ## isEditing
 
@@ -82,7 +82,7 @@ Judge whether is in editing state
 
 | Type | Description |
 | --- | --- |
-| boolean | true means that the component is in editing state, false means is non in editing status |
+| boolean \| undefined | true means that the component is in editing state, false means is non in editing status |
 
 ## setCaretOffset
 
@@ -112,7 +112,7 @@ Set caret offset.
 
 | Type | Description |
 | --- | --- |
-| boolean | Return true if the caret offset was successfully set, false otherwise. |
+| boolean \| undefined | Return true if the caret offset was successfully set, false otherwise. |
 
 ## stopEditing
 

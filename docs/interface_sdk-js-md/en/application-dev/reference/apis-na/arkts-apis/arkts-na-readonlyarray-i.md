@@ -159,7 +159,7 @@ Returns the first element in the array that satisfies the provided testing funct
 
 | Type | Description |
 | --- | --- |
-| T | First element satisfying the test, or undefined if none found. |
+| T \| undefined | First element satisfying the test, or undefined if none found. |
 
 ## findIndex
 
@@ -219,7 +219,7 @@ Returns the last element in the array that satisfies the provided testing functi
 
 | Type | Description |
 | --- | --- |
-| T | Last element satisfying the test, or undefined if none found. |
+| T \| undefined | Last element satisfying the test, or undefined if none found. |
 
 ## findLastIndex
 

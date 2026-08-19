@@ -39,7 +39,7 @@ Add a text.
 
 | 类型 | 说明 |
 | --- | --- |
-| int | caret index |
+| int \| undefined | caret index |
 
 ## clearPreviewText
 
@@ -123,7 +123,7 @@ Get the index and relative position of the CaretOffset. &lt;p&gt;&lt;strong&gt;N
 
 | 类型 | 说明 |
 | --- | --- |
-| [CaretOffset](arkts-na-common-caretoffset-i.md) | index and relative position of the CaretOffset. |
+| [CaretOffset](arkts-na-common-caretoffset-i.md) \| undefined | index and relative position of the CaretOffset. |
 
 ## getSelection
 
@@ -147,7 +147,7 @@ Gets the selected range of text content.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextRange](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textrange-i.md) | range for selecting. |
+| [TextRange](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textrange-i.md) \| undefined | range for selecting. |
 
 ## getTextContentLineCount
 
@@ -171,7 +171,7 @@ Get the lines number of the text content. The getTextContentLineCount type is us
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Text content line count |
+| int \| undefined | Text content line count |
 
 ## getTextContentRect
 
@@ -195,7 +195,7 @@ Get the start and end positions of the text content. &lt;p&gt;&lt;strong&gt;NOTE
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectResult](arkts-na-common-rectresult-i.md) | Text content rect.The unit of the return value is pixel. |
+| [RectResult](arkts-na-common-rectresult-i.md) \| undefined | Text content rect.The unit of the return value is pixel. |
 
 ## scrollToVisible
 

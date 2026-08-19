@@ -82,7 +82,7 @@ Accessibility text of the icon on the right side of the subheader. Default value
 action?: SubHeaderV2OperationItemAction
 ```
 
-Event triggered when the item is operated. Default value: **() => void**.
+Event triggered when the item is operated. Default value: **() =&gt; void**.
 
 **Type:** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
 

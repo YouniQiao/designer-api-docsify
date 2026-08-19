@@ -32,8 +32,6 @@ Returns a string representation appropriate to the host environment's current lo
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -56,8 +54,6 @@ Returns a string representation of an object.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## valueOf
 
 ```TypeScript
@@ -74,8 +70,6 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## [Symbol.toStringTag]
 
 ```TypeScript

@@ -9,7 +9,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-## on_p2pPeerDeviceChange('p2pPeerDeviceChange')
+## on('p2pPeerDeviceChange')
 
 ```TypeScript
 function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): void
@@ -34,5 +34,5 @@ Subscribe P2P peer device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPeerDeviceChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pDevice[]&gt; | Yes | the callback of on |
 

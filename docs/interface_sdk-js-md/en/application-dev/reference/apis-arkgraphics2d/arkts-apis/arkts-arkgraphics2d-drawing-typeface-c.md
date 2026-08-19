@@ -1,6 +1,6 @@
 # Typeface
 
-Describes the style of a typeface, such as SimSun or KaiTi. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Describes the style of a typeface, such as SimSun or KaiTi. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Get the family name for this typeface.
 
 | Type | Description |
 | --- | --- |
-| string | Family name. |
+| string \| undefined | Family name. |
 
 ## isBold
 
@@ -144,7 +144,7 @@ Generate typeface from current typeface and TypefaceArguments.
 
 | Type | Description |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface. |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
 
 ## makeFromFile
 
@@ -204,7 +204,7 @@ Constructs a typeface from a file.
 
 | Type | Description |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface. |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
 
 **Error codes:**
 
@@ -266,7 +266,7 @@ Generate typeface from file and TypefaceArguments.
 
 | Type | Description |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface. |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
 
 ## makeFromRawFile
 
@@ -320,7 +320,7 @@ Constructs a typeface from a file, which must be stored in the resources/rawfile
 
 | Type | Description |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface. |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
 
 ## makeFromRawFileWithArguments
 
@@ -376,5 +376,5 @@ Generate typeface from Rawfile and TypefaceArguments.
 
 | Type | Description |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface. |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | Typeface. |
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## onCellularDataFlowChange
@@ -23,7 +24,7 @@ Callback when the uplink and downlink data flow state of cellular data services 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | 是 | Indicates the callback for getting the cellular data flow state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | 是 | Indicates the callback for getting the cellular data flow state. |
 
 **错误码：**
 
@@ -65,7 +66,7 @@ Callback when the uplink and downlink data flow state of cellular data services 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ObserverOptions | 是 | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | 是 | Indicates the callback for getting the cellular data flow state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | 是 | Indicates the callback for getting the cellular data flow state. |
 
 **错误码：**
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## isLocalWantAgent

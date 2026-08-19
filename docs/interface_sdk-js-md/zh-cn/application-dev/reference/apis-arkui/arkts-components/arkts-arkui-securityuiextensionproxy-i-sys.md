@@ -15,7 +15,7 @@
 ```TypeScript
 ```
 
-## off_asyncReceiverRegister('asyncReceiverRegister')
+## off('asyncReceiverRegister')
 
 ```TypeScript
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -40,7 +40,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | type | 'asyncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，取消订阅被拉起的Ability异步注册时触发的回调。 |
 | callback | Callback&lt;UIExtensionProxy&gt; | 否 | 回调函数。为空时取消订阅所有异步注册的回调。非空时取消订阅指定的异步注册回调。 |
 
-## off_syncReceiverRegister('syncReceiverRegister')
+## off('syncReceiverRegister')
 
 ```TypeScript
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -65,7 +65,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | type | 'syncReceiverRegister' | 是 | 固定填'syncReceiverRegister'，取消订阅被拉起的Ability同步注册时触发的回调。 |
 | callback | Callback&lt;UIExtensionProxy&gt; | 否 | 回调函数。为空时取消订阅所有同步注册的回调。非空时取消订阅指定的同步注册回调。 |
 
-## on_asyncReceiverRegister('asyncReceiverRegister')
+## on('asyncReceiverRegister')
 
 ```TypeScript
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
@@ -90,7 +90,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | type | 'asyncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，代表订阅被拉起的Ability异步注册时触发的回调。 |
 | callback | Callback&lt;UIExtensionProxy&gt; | 是 | 回调函数。订阅被拉起的Ability注册setReceiveDataCallback后触发的回调。 |
 
-## on_syncReceiverRegister('syncReceiverRegister')
+## on('syncReceiverRegister')
 
 ```TypeScript
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void

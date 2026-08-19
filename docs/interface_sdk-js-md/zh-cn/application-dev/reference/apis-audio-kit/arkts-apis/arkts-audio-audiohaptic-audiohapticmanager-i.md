@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createPlayer
@@ -114,7 +115,7 @@ Create an audio haptic player. This method uses a promise to return the result. 
 registerSource(audioUri: string, hapticUri: string): Promise<int>
 ```
 
-通过Uri注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+通过Uri注册音频和振动资源。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
 **起始版本：** 23
 
@@ -166,7 +167,7 @@ audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value) => {
 registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>
 ```
 
-通过文件描述符注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+通过文件描述符注册音频和振动资源。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
 **起始版本：** 23
 
@@ -306,7 +307,7 @@ audioHapticManagerInstance.setStreamUsage(id, usage);
 unregisterSource(id: int): Promise<void>
 ```
 
-取消注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
+取消注册音频和振动资源。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
 
 **起始版本：** 23
 

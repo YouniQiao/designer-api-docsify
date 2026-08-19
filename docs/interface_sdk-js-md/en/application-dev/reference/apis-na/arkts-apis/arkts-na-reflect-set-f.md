@@ -35,8 +35,6 @@ Sets the property of target, equivalent to `target[propertyKey] = value` when `r
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 
 ## set
 
@@ -61,5 +59,3 @@ function set(target: object, propertyKey: PropertyKey, value: any, receiver?: an
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

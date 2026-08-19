@@ -23,7 +23,7 @@ levelMode?: LevelMode
 
 The display mode of the overlay.
 
-**Type:** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**Type:** [LevelMode](arkts-na-promptaction-levelmode-e.md)
 
 **Since:** 26.0.0
 
@@ -43,7 +43,7 @@ levelOrder?: LevelOrder
 
 The display order of the overlay.
 
-**Type:** [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md)
+**Type:** [LevelOrder](arkts-na-promptaction-levelorder-c.md)
 
 **Since:** 26.0.0
 

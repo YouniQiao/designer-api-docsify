@@ -43,13 +43,13 @@ import { tag } from '@kit.ConnectivityKit';
 | [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md) | Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md) object from Want. |
 | [registerForegroundDispatch](arkts-connectivity-tag-registerforegrounddispatch-f.md) | Register tag foreground dispatch. Dispatches to this application only if a tag discovered. |
 | [unregisterForegroundDispatch](arkts-connectivity-tag-unregisterforegrounddispatch-f.md) | Unregister tag foreground dispatch. |
-| on_readerMode | Set reader mode enabled when the specific application is foreground. Dispatches to this application only if a tag discovered. |
+| [on_readerMode](arkts-connectivity-tag-onreadermode-f.md) | Set reader mode enabled when the specific application is foreground. Dispatches to this application only if a tag discovered. |
 | [onReaderMode](arkts-connectivity-tag-onreadermode-f.md) | Set reader mode enabled when the specific application is foreground. Dispatches to this application only if a tag discovered. |
-| off_readerMode | Disable foreground reader mode settings explicitly. |
+| [off_readerMode](arkts-connectivity-tag-offreadermode-f.md) | Disable foreground reader mode settings explicitly. |
 | [offReaderMode](arkts-connectivity-tag-offreadermode-f.md) | Disable foreground reader mode settings explicitly. |
-| on_readerModeWithInterval | Set reader mode enabled when the specific application is on foreground and set card presence interval. Tag infomation will be dispatched to the application only if a NFC tag is discovered. |
+| [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | Set reader mode enabled when the specific application is on foreground and set card presence interval. Tag infomation will be dispatched to the application only if a NFC tag is discovered. |
 | [onReaderModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) | Set reader mode enabled when the specific application is on foreground and set card presence interval. Tag infomation will be dispatched to the application only if a NFC tag is discovered. |
-| off_readerModeWithInterval | Disable foreground reader mode settings explicitly. |
+| [off_readerModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md) | Disable foreground reader mode settings explicitly. |
 | [offReaderModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md) | Disable foreground reader mode settings explicitly. |
 
 ### Interfaces

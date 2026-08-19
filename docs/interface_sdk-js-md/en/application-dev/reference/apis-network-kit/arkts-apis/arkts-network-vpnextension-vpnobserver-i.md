@@ -20,7 +20,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 offAuthorizationResult(callback?: Callback<boolean>): void
 ```
 
-Unregisters a listener for the user authorization result. > **NOTE：**> > If you have called onAuthorizationResult multiple times to register > listeners and want to unregister the listener, you need to pass the callback passed in the last call or pass no > parameter.
+Unregisters a listener for the user authorization result. &gt; **NOTE：**&gt; &gt; If you have called onAuthorizationResult multiple times to register &gt; listeners and want to unregister the listener, you need to pass the callback passed in the last call or pass no &gt; parameter.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Unregisters a listener for the user authorization result. > **NOTE：**> > If yo
 onAuthorizationResult(callback: Callback<boolean>): void
 ```
 
-Registers a listener for the user authorization result. The authorization result is displayed in a dialog box after [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md) is called. The notification is sent only when the user taps the dialog box, and only the result of the current VPN is received. If you do not need to listen for the authorization result, call offAuthorizationResult to cancel the registration. > **NOTE：**> > If this API is called multiple times, only the last callback takes effect.
+Registers a listener for the user authorization result. The authorization result is displayed in a dialog box after [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md) is called. The notification is sent only when the user taps the dialog box, and only the result of the current VPN is received. If you do not need to listen for the authorization result, call offAuthorizationResult to cancel the registration. &gt; **NOTE：**&gt; &gt; If this API is called multiple times, only the last callback takes effect.
 
 **Since:** 26.0.0
 

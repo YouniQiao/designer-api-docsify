@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## addDisallowedRunningBundlesSync
@@ -15,7 +16,7 @@ function addDisallowedRunningBundlesSync(
   ): void
 ```
 
-添加应用至应用运行禁止名单，添加至禁止名单的应用不允许在当前/指定用户下运行。从API version 21开始，如果应用运行允许名单 [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)非空，就不能再通过本接口添加应用运行禁止名单，否则会报9200010冲突错误 码。 > **说明：** > > 若指定应用正在运行，将其加入禁止名单后，系统将立即终止该应用进程。
+添加应用至应用运行禁止名单，添加至禁止名单的应用不允许在当前/指定用户下运行。从API version 21开始，如果应用运行允许名单 [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)非空，就不能再通过本接口添加应用运行禁止名单，否则会报9200010冲突错误 码。 &gt; **说明：** &gt; &gt; 若指定应用正在运行，将其加入禁止名单后，系统将立即终止该应用进程。
 
 **起始版本：** 12
 

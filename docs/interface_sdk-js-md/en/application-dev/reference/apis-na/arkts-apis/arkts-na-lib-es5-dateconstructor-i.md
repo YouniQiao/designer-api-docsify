@@ -37,8 +37,6 @@ Returns the number of milliseconds between midnight, January 1, 1970 Universal C
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(): Date
 
 | Type | Description |
 | --- | --- |
-| Date |  |
-
 ## constructor
 
 ```TypeScript
@@ -75,8 +71,6 @@ new(value: number | string): Date
 
 | Type | Description |
 | --- | --- |
-| Date |  |
-
 ## constructor
 
 ```TypeScript
@@ -105,8 +99,6 @@ Creates a new Date.
 
 | Type | Description |
 | --- | --- |
-| Date |  |
-
 ## constructor
 
 ```TypeScript
@@ -121,8 +113,6 @@ Creates a new Date.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## now
 
 ```TypeScript
@@ -139,8 +129,6 @@ Returns the number of milliseconds elapsed since midnight, January 1, 1970 Unive
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## parse
 
 ```TypeScript
@@ -163,8 +151,6 @@ Parses a string containing a date, and returns the number of milliseconds betwee
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## prototype
 
 ```TypeScript

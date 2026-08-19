@@ -1,6 +1,6 @@
 # @ohos.app.ability.continueManager
 
-continueManager提供了应用跨端迁移的管理能力，如获取应用跨端迁移过程中快速拉起目标应用的结果。 > 本模块接口仅可在Stage模型下使用。
+continueManager提供了应用跨端迁移的管理能力，如获取应用跨端迁移过程中快速拉起目标应用的结果。 &gt; 本模块接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ continueManager提供了应用跨端迁移的管理能力，如获取应用跨�
 ## 导入模块
 
 ```TypeScript
+import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -22,9 +23,9 @@ continueManager提供了应用跨端迁移的管理能力，如获取应用跨�
 | 名称 | 说明 |
 | --- | --- |
 | [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | Unregister prepareContinue event. |
-| off_prepareContinue | 在应用快速拉起时，注销回调函数，不再获取快速拉起结果。使用callback异步回调。 |
+| [off_prepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | 在应用快速拉起时，注销回调函数，不再获取快速拉起结果。使用callback异步回调。 |
 | [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart”功能时，即可获取 |
-| on_prepareContinue | 在应用快速拉起时，注册回调函数以获取快速拉起结果。使用callback异步回调。 |
+| [on_prepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | 在应用快速拉起时，注册回调函数以获取快速拉起结果。使用callback异步回调。 |
 
 ### 接口
 

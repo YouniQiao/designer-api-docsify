@@ -1,6 +1,6 @@
 # @ohos.enterprise.securityManager(安全管理)
 
-本模块提供企业设备安全管理能力，支持证书管理、设备安全策略管理、口令策略管理、剪贴板策略管理、水印策略管理、权限管理等功能。企业可使用本模块实现设备安全状态的实时监控、企业证书的生命周期管理、设备口令策略的统一配置、应用剪贴板使用行为 的管控、屏幕和应用水印的设置以防止信息泄露、以及应用权限的精细化管理等场景，帮助企业提升设备安全防护能力，降低数据泄露风险。 > **说明：** > > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+本模块提供企业设备安全管理能力，支持证书管理、设备安全策略管理、口令策略管理、剪贴板策略管理、水印策略管理、权限管理等功能。企业可使用本模块实现设备安全状态的实时监控、企业证书的生命周期管理、设备口令策略的统一配置、应用剪贴板使用行为 的管控、屏幕和应用水印的设置以防止信息泄露、以及应用权限的精细化管理等场景，帮助企业提升设备安全防护能力，降低数据泄露风险。 &gt; **说明：** &gt; &gt; 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## 汇总
@@ -55,7 +56,7 @@
 | [setScreenWatermarkImage(安全管理)](arkts-mdm-securitymanager-setscreenwatermarkimage-f.md) | 设置屏幕水印策略，对所有用户生效。 |
 | [setWatermarkImage(安全管理)](arkts-mdm-securitymanager-setwatermarkimage-f.md) | 为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。 |
 | [setWatermarkImage(安全管理)](arkts-mdm-securitymanager-setwatermarkimage-f.md) | 为指定用户的指定应用设置水印策略。当前只支持最多保存100个策略。 |
-| [uninstallEnterpriseReSignatureCertificate(安全管理)](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md) | 卸载企业应用重签名证书。卸载企业重签名证书后，使用该证书签名的应用在设备重启前正常运行，设备重启后无法运行。 使用场景： 1.安装新证书：调用[installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md)接 口安装新证书后，经新证书重签名的应用可正常运行。如果旧签名证书对应的应用为超级设备管理应用，需先取消激活后才能卸载证书，否则卸载证书后该应用无法卸载且无法运行。 2.恢复误删证书：调用[installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md) 接口重新安装误删除的证书后，已重签名的应用可正常运行，不受影响。 > **注意：** > > 删除证书常见证书过期和证书泄露场景，建议开发者在实现该功能时，强提示管理员谨慎删除证书，并确保删除证书前加载新的重签名证书，并完成所有应用更新切换到新的重签名证书，否则重启后历史安装的应用将无法运行。 |
+| [uninstallEnterpriseReSignatureCertificate(安全管理)](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md) | 卸载企业应用重签名证书。卸载企业重签名证书后，使用该证书签名的应用在设备重启前正常运行，设备重启后无法运行。 使用场景： 1.安装新证书：调用[installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md)接 口安装新证书后，经新证书重签名的应用可正常运行。如果旧签名证书对应的应用为超级设备管理应用，需先取消激活后才能卸载证书，否则卸载证书后该应用无法卸载且无法运行。 2.恢复误删证书：调用[installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md) 接口重新安装误删除的证书后，已重签名的应用可正常运行，不受影响。 &gt; **注意：** &gt; &gt; 删除证书常见证书过期和证书泄露场景，建议开发者在实现该功能时，强提示管理员谨慎删除证书，并确保删除证书前加载新的重签名证书，并完成所有应用更新切换到新的重签名证书，否则重启后历史安装的应用将无法运行。 |
 | [uninstallUserCertificate(安全管理)](arkts-mdm-securitymanager-uninstallusercertificate-f.md) | 卸载用户证书，使用Promise异步回调。适用于企业证书管理场景，如证书过期更换、撤销员工对企业资源的访问权限等。企业可在证书过期、更换或不再需要时调用此接口卸载证书，确保设备证书管理的灵活性和安全性。 |
 
 <!--Del-->

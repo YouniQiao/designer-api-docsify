@@ -238,7 +238,7 @@ Get raw object from the Object wrapped with an ObservedObject. If input paramete
 static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 ```
 
-Creates read-only data binding. Example. UIUtils.makeBinding&lt;number&gt;(()=>this.num); Supports simple getters for read-only data. Intended for primitive value parameters when calling a @Builder function where arguments are of type Binding.
+Creates read-only data binding. Example. UIUtils.makeBinding&lt;number&gt;(()=&gt;this.num); Supports simple getters for read-only data. Intended for primitive value parameters when calling a @Builder function where arguments are of type Binding.
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ Creates read-only data binding. Example. UIUtils.makeBinding&lt;number&gt;(()=>t
 static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
 ```
 
-Creates a mutable data binding. Two functions to implement function overloading. Example. UIUtils.makeBinding&lt;number&gt;(()=>this.num, val => this.num = val); Supports getter-setter pairs for mutable data. Intended for primitive value parameters when calling a @Builder function where arguments are of type MutableBinding. If provided, a MutableBinding is created.
+Creates a mutable data binding. Two functions to implement function overloading. Example. UIUtils.makeBinding&lt;number&gt;(()=&gt;this.num, val =&gt; this.num = val); Supports getter-setter pairs for mutable data. Intended for primitive value parameters when calling a @Builder function where arguments are of type MutableBinding. If provided, a MutableBinding is created.
 
 **Since:** 23
 

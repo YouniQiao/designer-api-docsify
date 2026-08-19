@@ -1,6 +1,6 @@
 # @ohos.app.ability.appRecovery
 
-appRecovery模块提供了应用在故障状态下的恢复能力。 > **说明：** > > API9仅支持单进程中单Ability的应用恢复。 > > API10支持进程中包含多个Ability的场景。 > > API24支持发生CPP_CRASH时应用恢复。
+appRecovery模块提供了应用在故障状态下的恢复能力。 &gt; **说明：** &gt; &gt; API9仅支持单进程中单Ability的应用恢复。 &gt; &gt; API10支持进程中包含多个Ability的场景。 &gt; &gt; API24支持发生CPP_CRASH时应用恢复。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ appRecovery模块提供了应用在故障状态下的恢复能力。 > **说明�
 ## 导入模块
 
 ```TypeScript
+import { appRecovery } from '@kit.AbilityKit';
 ```
 
 ## 汇总

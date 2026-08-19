@@ -147,7 +147,7 @@ Returns an instance of primitive type at passed index.
 
 | Type | Description |
 | --- | --- |
-| BigInt | the raw numeric value at index, or undefined if the index is out of bounds. |
+| BigInt \| undefined | the raw numeric value at index, or undefined if the index is out of bounds. |
 
 ## constructor
 
@@ -699,7 +699,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| BigInt |  |
+| BigInt \| undefined |  |
 
 ## findIndex
 

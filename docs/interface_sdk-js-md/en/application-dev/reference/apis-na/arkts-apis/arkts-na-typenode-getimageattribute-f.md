@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| ImageAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ImageAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

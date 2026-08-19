@@ -40,5 +40,5 @@ Gets the text content of the selected range.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | text content of the selected range. |
+| string \| undefined | text content of the selected range. |
 

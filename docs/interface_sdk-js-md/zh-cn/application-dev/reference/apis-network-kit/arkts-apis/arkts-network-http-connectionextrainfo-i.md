@@ -11,6 +11,7 @@ HTTP请求交互的详细信息。
 ## 导入模块
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## cipherSuite

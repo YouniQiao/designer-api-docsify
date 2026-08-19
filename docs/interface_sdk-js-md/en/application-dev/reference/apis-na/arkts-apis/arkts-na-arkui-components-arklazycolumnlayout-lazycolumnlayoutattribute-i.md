@@ -39,8 +39,6 @@ alignItems(value: HorizontalAlign | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## attributeModifier
 
 ```TypeScript
@@ -63,8 +61,6 @@ attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | Attri
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## footer
 
 ```TypeScript
@@ -87,8 +83,6 @@ footer(builder: CustomBuilder | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## header
 
 ```TypeScript
@@ -111,8 +105,6 @@ header(builder: CustomBuilder | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -135,8 +127,6 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): th
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setLazyColumnLayoutOptions
 
 ```TypeScript
@@ -153,8 +143,6 @@ setLazyColumnLayoutOptions(): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## space
 
 ```TypeScript
@@ -177,8 +165,6 @@ space(space: LengthMetrics | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## sticky
 
 ```TypeScript
@@ -201,8 +187,6 @@ sticky(sticky: StickyStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

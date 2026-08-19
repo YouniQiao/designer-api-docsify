@@ -1,6 +1,6 @@
 # MaskFilter
 
-蒙版滤镜对象，用于对绘制内容施加模糊效果。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+蒙版滤镜对象，用于对绘制内容施加模糊效果。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlurMaskFilter
@@ -71,7 +72,7 @@ static createBlurMaskFilter(blurType: BlurType, sigma: double): MaskFilter | und
 
 | 类型 | 说明 |
 | --- | --- |
-| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | 返回创建的蒙版滤镜对象。创建失败时返回undefined。 |
+| [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| undefined | 返回创建的蒙版滤镜对象。创建失败时返回undefined。 |
 
 **错误码：**
 

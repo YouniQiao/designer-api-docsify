@@ -147,7 +147,7 @@ Get the number value of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| double | Returns data of number type |
+| double \| long | Returns data of number type |
 
 **错误码：**
 

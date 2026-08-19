@@ -55,5 +55,5 @@ Returns an Array of objects representing the different components that can be us
 
 | Type | Description |
 | --- | --- |
-| { type: "element" \| "literal", value: string; }[] | []} An Array of components which contains the formatted parts from the list. |
+| { type: "element" \| "literal", value: string; | []} An Array of components which contains the formatted parts from the list. |
 

@@ -44,7 +44,7 @@ Obtains information about the next-level files or directories.
 
 | Type | Description |
 | --- | --- |
-| { value: FileInfo, done: boolean } | Returns FileInfo Object and boolean flag. |
+| object | Returns FileInfo Object and boolean flag. |
 
 **Error codes:**
 

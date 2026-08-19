@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -25,9 +26,9 @@
 | [getPrinterInformationById](arkts-basicservices-print-getprinterinformationbyid-f.md) | 根据打印机id获取打印机信息，使用Promise异步回调。 |
 | [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md) | 通知水印处理完成。 |
 | [offPrinterChange](arkts-basicservices-print-offprinterchange-f.md) | Unregister event callback for the change of printer. |
-| off_printerChange | 取消注册打印机变动事件回调，使用callback回调。 |
+| [off_printerChange](arkts-basicservices-print-offprinterchange-f.md) | 取消注册打印机变动事件回调，使用callback回调。 |
 | [onPrinterChange](arkts-basicservices-print-onprinterchange-f.md) | Register event callback for the change of printer. |
-| on_printerChange | 注册打印机变动事件回调，使用callback回调。 |
+| [on_printerChange](arkts-basicservices-print-onprinterchange-f.md) | 注册打印机变动事件回调，使用callback回调。 |
 | [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入 context。 |
 | [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入 context。 |
 | [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用callback异步回调。 |
@@ -76,16 +77,16 @@
 | [offJobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md) | Unregister event callback for the state change of print job. |
 | [offPrinterInfoQuery](arkts-basicservices-print-offprinterinfoquery-f-sys.md) | 查询到的打印机信息的Unregister事件回调。 |
 | [offPrinterStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md) | Unregister event callback for the state change of printer. |
-| off_extInfoChange | 取消注册打印扩展信息变化事件回调，使用callback回调。 |
-| off_jobStateChange | 取消注册打印任务状态变化事件回调，使用callback回调。 |
-| off_printerStateChange | 取消注册打印机状态变化事件回调，使用callback回调。 |
+| [off_extInfoChange](arkts-basicservices-print-offextinfochange-f-sys.md) | 取消注册打印扩展信息变化事件回调，使用callback回调。 |
+| [off_jobStateChange](arkts-basicservices-print-offjobstatechange-f-sys.md) | 取消注册打印任务状态变化事件回调，使用callback回调。 |
+| [off_printerStateChange](arkts-basicservices-print-offprinterstatechange-f-sys.md) | 取消注册打印机状态变化事件回调，使用callback回调。 |
 | [onExtInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md) | Register event callback for the information change of print extension. |
 | [onJobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md) | Register event callback for the state change of print job. |
 | [onPrinterInfoQuery](arkts-basicservices-print-onprinterinfoquery-f-sys.md) | 为查询到的打印机信息注册事件回调。 |
 | [onPrinterStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md) | Register event callback for the state change of printer. |
-| on_extInfoChange | 注册打印扩展信息变化事件回调，使用callback回调。 |
-| on_jobStateChange | 注册打印任务状态变化事件回调，使用callback回调。 |
-| on_printerStateChange | 注册打印机状态变化事件回调，使用callback回调。 |
+| [on_extInfoChange](arkts-basicservices-print-onextinfochange-f-sys.md) | 注册打印扩展信息变化事件回调，使用callback回调。 |
+| [on_jobStateChange](arkts-basicservices-print-onjobstatechange-f-sys.md) | 注册打印任务状态变化事件回调，使用callback回调。 |
+| [on_printerStateChange](arkts-basicservices-print-onprinterstatechange-f-sys.md) | 注册打印机状态变化事件回调，使用callback回调。 |
 | [queryAllActivePrintJobs](arkts-basicservices-print-queryallactiveprintjobs-f-sys.md) | 查询所有活跃中的打印任务，使用Promise进行异步回调。 |
 | [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md) | 查询所有打印任务，使用callback异步回调。 |
 | [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md) | 查询所有打印任务，使用Promise异步回调。 |

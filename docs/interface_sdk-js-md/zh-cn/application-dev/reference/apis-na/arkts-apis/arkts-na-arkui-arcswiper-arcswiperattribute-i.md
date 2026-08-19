@@ -39,8 +39,6 @@ customContentTransition(transition: ArcSwiperContentAnimatedTransition | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -63,8 +61,6 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## disableSwipe
 
 ```TypeScript
@@ -87,8 +83,6 @@ disableSwipe(disabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## disableTransitionAnimation
 
 ```TypeScript
@@ -111,8 +105,6 @@ disableTransitionAnimation(disabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## duration
 
 ```TypeScript
@@ -135,8 +127,6 @@ duration(duration: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## effectMode
 
 ```TypeScript
@@ -159,8 +149,6 @@ effectMode(edgeEffect: EdgeEffect | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## index
 
 ```TypeScript
@@ -183,8 +171,6 @@ index(index: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## indicator
 
 ```TypeScript
@@ -207,8 +193,6 @@ indicator(style: ArcDotIndicator | boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAnimationEnd
 
 ```TypeScript
@@ -225,14 +209,12 @@ onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [AnimationEndHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationendhandler-t.md) \| undefined | 是 |  |
+| handler | [AnimationEndHandler](arkts-na-animationendhandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAnimationStart
 
 ```TypeScript
@@ -249,14 +231,12 @@ onAnimationStart(handler: AnimationStartHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [AnimationStartHandler](../../apis-arkui/arkts-apis/arkts-arkui-animationstarthandler-t.md) \| undefined | 是 |  |
+| handler | [AnimationStartHandler](arkts-na-animationstarthandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -273,14 +253,12 @@ onChange(handler: IndexChangedHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [IndexChangedHandler](../../apis-arkui/arkts-apis/arkts-arkui-indexchangedhandler-t.md) \| undefined | 是 |  |
+| handler | [IndexChangedHandler](arkts-na-indexchangedhandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onGestureSwipe
 
 ```TypeScript
@@ -297,14 +275,12 @@ onGestureSwipe(handler: GestureSwipeHandler | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [GestureSwipeHandler](../../apis-arkui/arkts-apis/arkts-arkui-gestureswipehandler-t.md) \| undefined | 是 |  |
+| handler | [GestureSwipeHandler](arkts-na-gestureswipehandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setArcSwiperOptions
 
 ```TypeScript
@@ -321,14 +297,12 @@ setArcSwiperOptions(controller?: ArcSwiperController): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | 否 |  |
+| controller | [ArcSwiperController](arkts-na-arkui-arcswiper-arcswipercontroller-c.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## vertical
 
 ```TypeScript
@@ -351,8 +325,6 @@ vertical(isVertical: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

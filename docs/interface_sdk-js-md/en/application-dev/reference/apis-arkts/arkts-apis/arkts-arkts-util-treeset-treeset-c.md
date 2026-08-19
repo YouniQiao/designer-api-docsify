@@ -508,7 +508,7 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Type | Description |
 | --- | --- |
-| T | the higher value of the given key's element if exists, undefined otherwise |
+| T \| undefined | the higher value of the given key's element if exists, undefined otherwise |
 
 **Error codes:**
 
@@ -626,7 +626,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Type | Description |
 | --- | --- |
-| T | the lower value of the given key's element if exists, undefined otherwise |
+| T \| undefined | the lower value of the given key's element if exists, undefined otherwise |
 
 **Error codes:**
 

@@ -6,13 +6,13 @@
 import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
-## on_selectionCompleted('selectionCompleted')
+## on('selectionCompleted')
 
 ```TypeScript
 function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 ```
 
-Subscribes to the word selection completion event. This API is used together with [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#off_selectioncompletedselectioncompleted). [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#off_selectioncompletedselectioncompleted) is used to unsubscribe from the event.
+Subscribes to the word selection completion event. This API is used together with [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#offselectioncompleted). [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#offselectioncompleted) is used to unsubscribe from the event.
 
 **Since:** 20
 
@@ -27,7 +27,7 @@ Subscribes to the word selection completion event. This API is used together wit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectionCompleted' | Yes | Event type, which is **'selectionCompleted'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | Yes | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md). This callback is triggered only when the user selects text using the mouse or touchpad (by double-clicking, triple-clicking, or sliding the left mouse button) and then presses **Ctrl**. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | Yes | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md). This callback is triggered only when the user selects text using the mouse or touchpad (by double-clicking, triple-clicking, or sliding the left mouse button) and then presses **Ctrl**. |
 
 **Error codes:**
 

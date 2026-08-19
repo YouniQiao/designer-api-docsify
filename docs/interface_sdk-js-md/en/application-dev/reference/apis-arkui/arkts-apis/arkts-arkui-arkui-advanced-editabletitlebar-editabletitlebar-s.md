@@ -1,6 +1,6 @@
 # EditableTitleBar
 
-The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page. > **NOTE：**> > - This component can be used only in the stage model. > > - If the **EditableTitleBar** component has universal attributes and > universal events configured, the compiler toolchain automatically > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node > rather than the **EditableTitleBar** component itself. As a result, the configured universal attributes and > universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes > and events with the **EditableTitleBar** component.
+The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page. &gt; **NOTE：**&gt; &gt; - This component can be used only in the stage model. &gt; &gt; - If the **EditableTitleBar** component has universal attributes and &gt; universal events configured, the compiler toolchain automatically &gt; generates an additional **__Common__** node and mounts the universal attributes and universal events on this node &gt; rather than the **EditableTitleBar** component itself. As a result, the configured universal attributes and &gt; universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes &gt; and events with the **EditableTitleBar** component.
 
 **Since:** 10
 
@@ -148,7 +148,7 @@ List of menu items on the right. This parameter is required to display custom bu
 onCancel?: () => void
 ```
 
-Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond. Default value: **() => void** Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
+Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond. Default value: **() =&gt; void** Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
 
 **Type:** () =&gt; void
 
@@ -168,7 +168,7 @@ Cancel action event, which is triggered when the left button is of the Cancel ty
 onSave?: () => void
 ```
 
-Save button click event. This parameter is required to customize the save operation logic. If this parameter is not specified, clicking the button does not respond. Default value: **() => void**
+Save button click event. This parameter is required to customize the save operation logic. If this parameter is not specified, clicking the button does not respond. Default value: **() =&gt; void**
 
 **Type:** () =&gt; void
 

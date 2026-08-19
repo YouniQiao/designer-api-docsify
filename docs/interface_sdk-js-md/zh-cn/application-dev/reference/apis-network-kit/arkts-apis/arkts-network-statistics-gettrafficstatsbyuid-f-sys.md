@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## getTrafficStatsByUid
@@ -28,7 +29,7 @@ function getTrafficStatsByUid(uidInfo: UidInfo, callback: AsyncCallback<NetStats
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uidInfo | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | 是 | 指定查询的应用信息，参见[UidInfo](arkts-network-statistics-uidinfo-i-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | 是 | 回调函数。成功时 statsInfo 返回包含应用历史流量信息，error 为 undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | 是 | 回调函数。成功时 statsInfo 返回包含应用历史流量信息，error 为 undefined，否则为错误对象。 |
 
 **错误码：**
 

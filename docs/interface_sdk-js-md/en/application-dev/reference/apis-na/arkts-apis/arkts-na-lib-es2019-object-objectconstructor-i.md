@@ -31,8 +31,6 @@ Returns an object created by key-value entries for properties and methods
 
 | Type | Description |
 | --- | --- |
-| { [k: string]: T } |  |
-
 ## fromEntries
 
 ```TypeScript
@@ -55,5 +53,3 @@ Returns an object created by key-value entries for properties and methods
 
 | Type | Description |
 | --- | --- |
-| any |  |
-

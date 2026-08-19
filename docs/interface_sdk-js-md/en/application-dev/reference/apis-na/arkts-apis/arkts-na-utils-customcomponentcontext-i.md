@@ -32,7 +32,7 @@ Get global reuse pool from current custom component.
 
 | Type | Description |
 | --- | --- |
-| [IReusePool](arkts-na-utils-ireusepool-i.md) | Returns the recyclepool instance. |
+| [IReusePool](arkts-na-utils-ireusepool-i.md) \| undefined | Returns the recyclepool instance. |
 
 ## registerActiveAndInactiveCallback
 

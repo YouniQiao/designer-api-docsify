@@ -1034,7 +1034,7 @@ async function demo() {
 getDisplayDensity(): Promise<Point>
 ```
 
-Obtains the display density of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display density of the home screen. To obtain the display density > of a specified screen, use [getDisplayDensity](#getdisplaydensity)(displayId: number).
+Obtains the display density of the current device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method can only be used to obtain the display density of the home screen. To obtain the display density &gt; of a specified screen, use [getDisplayDensity](#getdisplaydensity)(displayId: number).
 
 **Since:** 23
 
@@ -1121,7 +1121,7 @@ async function demo() {
 getDisplayRotation(): Promise<DisplayRotation>
 ```
 
-Obtains the display rotation of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation > of a specified screen, use [getDisplayRotation](#getdisplayrotation)(displayId: number).
+Obtains the display rotation of the current device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation &gt; of a specified screen, use [getDisplayRotation](#getdisplayrotation)(displayId: number).
 
 **Since:** 23
 
@@ -1208,7 +1208,7 @@ async function demo() {
 getDisplaySize(): Promise<Point>
 ```
 
-Obtains the display size of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display size of the home screen. To obtain the display size of a > specified screen, use [getDisplaySize](#getdisplaysize)(displayId: number).
+Obtains the display size of the current device. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method can only be used to obtain the display size of the home screen. To obtain the display size of a &gt; specified screen, use [getDisplaySize](#getdisplaysize)(displayId: number).
 
 **Since:** 23
 
@@ -1295,7 +1295,7 @@ async function demo() {
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
 
-Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
+Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
 
@@ -1724,7 +1724,7 @@ async function demo() {
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
 
-Simulates a knuckle knock on the display. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
+Simulates a knuckle knock on the display. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the knuckle gesture is disabled on the device<!--RP4--><!--RP4End-->, 17000005 is returned.
 
 **Since:** 23
 
@@ -2636,7 +2636,7 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-Simulates pressing the Back button. This API uses a promise to return the result. > **NOTE：**> > This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button > on a specified screen, use pressBack(displayId: number).
+Simulates pressing the Back button. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button &gt; on a specified screen, use pressBack(displayId: number).
 
 **Since:** 23
 
@@ -3540,7 +3540,7 @@ Searches for the target component based on the attributes within a specified tim
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md). |
-| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md), in ms. The value is an integer greater than or equal to 0. <br>Unit: ms <br>Value range: The value should be >= 0 |
+| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md), in ms. The value is an integer greater than or equal to 0. <br>Unit: ms <br>Value range: The value should be &gt;= 0 |
 
 **Return value:**
 
@@ -3586,7 +3586,7 @@ Find the first matched [Component](arkts-test-uitest-component-c.md) on current 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md). |
-| time | int | Yes | duration of finding in milliseconds. <br>Value range: The value should be >= 0 <br>Unit: ms |
+| time | int | Yes | duration of finding in milliseconds. <br>Value range: The value should be &gt;= 0 <br>Unit: ms |
 
 **Return value:**
 

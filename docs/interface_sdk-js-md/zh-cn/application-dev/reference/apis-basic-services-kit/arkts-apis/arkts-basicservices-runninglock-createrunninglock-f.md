@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## createRunningLock
@@ -31,7 +32,7 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 | --- | --- | --- | --- |
 | name | string | 是 | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 要创建的锁的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象。 |
 
 **示例**
 

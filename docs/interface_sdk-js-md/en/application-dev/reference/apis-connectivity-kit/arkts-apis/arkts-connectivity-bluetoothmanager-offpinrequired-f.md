@@ -6,7 +6,7 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## off_pinRequired('pinRequired')
+## off('pinRequired')
 
 ```TypeScript
 function off(type: 'pinRequired', callback?: Callback<PinRequiredParam>): void
@@ -33,7 +33,7 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device. On AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | No | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PinRequiredParam&gt; | No | Callback used to listen for the pairing request event. |
 
 **Error codes:**
 

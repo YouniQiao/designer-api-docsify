@@ -15,6 +15,8 @@ Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i-sys.md)。 提供使
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableMacro
@@ -23,7 +25,7 @@ Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i-sys.md)。 提供使
 enableMacro(enabled: boolean): void
 ```
 
-使能当前的微距能力。 > **说明：** > > 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported)接口查询当前设备是否支持微距能力。
+使能当前的微距能力。 &gt; **说明：** &gt; &gt; 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported)接口查询当前设备是否支持微距能力。
 
 **起始版本：** 23
 

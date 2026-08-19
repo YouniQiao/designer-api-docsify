@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## offCellularDataFlowChange
@@ -23,7 +24,7 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | 否 | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | 否 | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
 
 **错误码：**
 

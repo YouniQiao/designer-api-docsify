@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
 ```
 
 ## 汇总

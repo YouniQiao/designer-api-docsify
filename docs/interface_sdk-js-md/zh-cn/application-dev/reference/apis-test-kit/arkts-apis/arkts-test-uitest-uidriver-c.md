@@ -1,6 +1,6 @@
 # UiDriver
 
-UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等API。 该类提供的方法除UiDriver.create()以外的所有方法都使用Promise方式作为异步方法，需使用await调用。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md)替代。
+UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等API。 该类提供的方法除UiDriver.create()以外的所有方法都使用Promise方式作为异步方法，需使用await调用。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md)替代。
 
 **起始版本：** 8
 
@@ -15,6 +15,8 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -23,7 +25,7 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 assertComponentExist(by: By): Promise<void>
 ```
 
-断言API，用于断言当前界面存在满足给出的目标控件属性的控件；如果控件不存在，该API将抛出JS异常，使当前测试用例失败。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[assertComponentExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#assertcomponentexist)替 > 代。
+断言API，用于断言当前界面存在满足给出的目标控件属性的控件；如果控件不存在，该API将抛出JS异常，使当前测试用例失败。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[assertComponentExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#assertcomponentexist)替 &gt; 代。
 
 **起始版本：** 8
 
@@ -73,7 +75,7 @@ async function demo() {
 click(x: number, y: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
+UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
 
 **起始版本：** 8
 
@@ -116,7 +118,7 @@ async function demo() {
 static create(): UiDriver
 ```
 
-静态方法，构造一个UiDriver对象，并返回该对象。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create)替代。
+静态方法，构造一个UiDriver对象，并返回该对象。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create)替代。
 
 **起始版本：** 8
 
@@ -151,7 +153,7 @@ async function demo() {
 delayMs(duration: number): Promise<void>
 ```
 
-UiDriver对象在给定的时间内延时。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[delayMs&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#delayms)替代。
+UiDriver对象在给定的时间内延时。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[delayMs&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#delayms)替代。
 
 **起始版本：** 8
 
@@ -193,7 +195,7 @@ async function demo() {
 doubleClick(x: number, y: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
+UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
 
 **起始版本：** 8
 
@@ -236,7 +238,7 @@ async function demo() {
 findComponent(by: By): Promise<UiComponent>
 ```
 
-在UiDriver对象中，根据给出的目标控件属性要求查找目标控件。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponent&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponent)替代。
+在UiDriver对象中，根据给出的目标控件属性要求查找目标控件。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponent&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponent)替代。
 
 **起始版本：** 8
 
@@ -278,7 +280,7 @@ async function demo() {
 findComponents(by: By): Promise<Array<UiComponent>>
 ```
 
-在UiDriver对象中，根据给出的目标控件属性要求查找出所有匹配控件，以列表保存。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponents&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponents)替代。
+在UiDriver对象中，根据给出的目标控件属性要求查找出所有匹配控件，以列表保存。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponents&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponents)替代。
 
 **起始版本：** 8
 
@@ -320,7 +322,7 @@ async function demo() {
 longClick(x: number, y: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
+UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
 
 **起始版本：** 8
 
@@ -363,7 +365,7 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-UiDriver对象进行点击BACK键的操作。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[pressBack&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#pressback)替代。
+UiDriver对象进行点击BACK键的操作。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[pressBack&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#pressback)替代。
 
 **起始版本：** 8
 
@@ -399,7 +401,7 @@ async function demo() {
 screenCap(savePath: string): Promise<boolean>
 ```
 
-UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[screenCap&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#screencap)替代。
+UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的图片至给出的保存路径中。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[screenCap&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#screencap)替代。
 
 **起始版本：** 8
 
@@ -441,7 +443,7 @@ async function demo() {
 swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目的坐标点。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[swipe&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#swipe)替代。
+UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目的坐标点。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[swipe&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#swipe)替代。
 
 **起始版本：** 8
 
@@ -486,7 +488,7 @@ async function demo() {
 triggerKey(keyCode: number): Promise<void>
 ```
 
-UiDriver对象采取如下操作：通过key值找到对应键并点击。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[triggerKey&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#triggerkey)替代。
+UiDriver对象采取如下操作：通过key值找到对应键并点击。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[triggerKey&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#triggerkey)替代。
 
 **起始版本：** 8
 

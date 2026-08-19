@@ -44,7 +44,7 @@ Sets the alignment style of the indexer pop-up window.
 autoCollapse(value: boolean)
 ```
 
-Sets whether to enable the adaptive collapse behavior for the indexer. When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and long collapse modes based on the indexer height. When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and long collapse modes based on the indexer height. > **NOTE：**> This API can be called within attributeModifier since API version 12.
+Sets whether to enable the adaptive collapse behavior for the indexer. When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and long collapse modes based on the indexer height. When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and long collapse modes based on the indexer height. &gt; **NOTE：**&gt; This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
 
@@ -248,7 +248,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 onSelected(callback: (index: number) => void)
 ```
 
-Triggered when an index item is selected, with the callback parameter being the index of the currently selected item. > **NOTE：**
+Triggered when an index item is selected, with the callback parameter being the index of the currently selected item. &gt; **NOTE：**
 
 **Since:** 7
 

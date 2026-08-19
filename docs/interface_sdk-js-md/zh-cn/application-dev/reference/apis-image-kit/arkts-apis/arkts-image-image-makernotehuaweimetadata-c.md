@@ -13,6 +13,7 @@ MakerNoteHuaweiMetadata implements Metadata 来自Huawei相机的照片元数据
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone

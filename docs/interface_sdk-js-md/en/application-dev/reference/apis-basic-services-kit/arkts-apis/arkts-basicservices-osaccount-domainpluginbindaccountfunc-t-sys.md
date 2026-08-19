@@ -21,5 +21,5 @@ Binds the specified domain account with an OS account.
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Indicates the domain account information. |
 | localId | int | Yes | Indicates the local ID of the OS account. <br>The value should be an integer. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for notifying the binding result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for notifying the binding result. |
 

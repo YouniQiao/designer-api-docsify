@@ -11,6 +11,7 @@ URLParams是一个用于解析、构造和操作URL参数的实用类。该类�
 ## 导入模块
 
 ```TypeScript
+import { url } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -383,7 +384,7 @@ get(name: string): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回第一个值，如果没找到，返回 null。 |
+| string \| null | 返回第一个值，如果没找到，返回 null。 |
 
 **示例**
 
@@ -400,7 +401,7 @@ let absentValue = paramsObject.get('abc'); // undefined
 get(name: string): string | undefined
 ```
 
-根据指定的键获取第一个键值对的值。 > **说明：** > > 若查找一个不存在的键值对名称时返回值为undefined。
+根据指定的键获取第一个键值对的值。 &gt; **说明：** &gt; &gt; 若查找一个不存在的键值对名称时返回值为undefined。
 
 **起始版本：** 23
 
@@ -420,7 +421,7 @@ get(name: string): string | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回按名称找到的第一个值。 如果未找到值，则返回undefined。 |
+| string \| undefined | 返回按名称找到的第一个值。 如果未找到值，则返回undefined。 |
 
 ## getAll
 

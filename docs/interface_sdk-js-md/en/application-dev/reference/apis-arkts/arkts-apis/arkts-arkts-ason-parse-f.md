@@ -34,5 +34,5 @@ Converts a JavaScript Object Notation (JSON) string into an ArkTS Value.
 
 | Type | Description |
 | --- | --- |
-| ISendable | Return an ArkTS Value. |
+| ISendable \| null | Return an ArkTS Value. |
 

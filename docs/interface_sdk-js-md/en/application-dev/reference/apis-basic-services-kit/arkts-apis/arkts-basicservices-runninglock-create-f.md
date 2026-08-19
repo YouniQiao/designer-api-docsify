@@ -28,7 +28,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the **RunningLock** object. The value must be a string. |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the **RunningLock** object. The value must be an enum. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
 **Error codes:**
 

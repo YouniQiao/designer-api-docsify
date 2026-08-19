@@ -1,6 +1,6 @@
 # @ohos.scan
 
-This module provides JavaScript APIs of the scan framework for discovering and connecting to scanners. > **NOTE：**> > This topic describes only public APIs provided by the module.
+This module provides JavaScript APIs of the scan framework for discovering and connecting to scanners. &gt; **NOTE：**&gt; &gt; This topic describes only public APIs provided by the module.
 
 **Since:** 23
 
@@ -29,12 +29,12 @@ import { scan } from '@kit.BasicServicesKit';
 | [init](arkts-basicservices-scan-init-f.md) | Initializes the scan service. This API uses a promise to return the result. |
 | [offScanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) | Unregister event callback for scanner device found. |
 | [offScanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) | Unregister event callback for scanner device sync. |
-| off_scanDeviceFound | Unregisters a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
-| off_scanDeviceSync | Unregisters a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
+| [off_scanDeviceFound](arkts-basicservices-scan-offscandevicefound-f.md) | Unregisters a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
+| [off_scanDeviceSync](arkts-basicservices-scan-offscandevicesync-f.md) | Unregisters a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
 | [onScanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) | Register event callback for scanner device found. |
 | [onScanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) | Register event callback for scanner device sync. |
-| on_scanDeviceFound | Registers a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
-| on_scanDeviceSync | Registers a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
+| [on_scanDeviceFound](arkts-basicservices-scan-onscandevicefound-f.md) | Registers a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result. |
+| [on_scanDeviceSync](arkts-basicservices-scan-onscandevicesync-f.md) | Registers a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result. |
 | [openScanner](arkts-basicservices-scan-openscanner-f.md) | Opens a scanner. This API uses a promise to return the result. |
 | [setScanAutoOption](arkts-basicservices-scan-setscanautooption-f.md) | Sets the scan option to auto mode. This API uses a promise to return the result. |
 | [setScannerParameter](arkts-basicservices-scan-setscannerparameter-f.md) | Sets scanner parameters. This API uses a promise to return the result. |
@@ -51,12 +51,12 @@ import { scan } from '@kit.BasicServicesKit';
 | [getAddedScanners](arkts-basicservices-scan-getaddedscanners-f-sys.md) | Obtains the added scanners. This API uses a promise to return the result. |
 | [offScanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) | Unregister event callback for scanner device add (system API). |
 | [offScanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) | Unregister event callback for scanner device delete (system API). |
-| off_scanDeviceAdd | Unregisters the callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| off_scanDeviceDel | Unregisters the callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
+| [off_scanDeviceAdd](arkts-basicservices-scan-offscandeviceadd-f-sys.md) | Unregisters the callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
+| [off_scanDeviceDel](arkts-basicservices-scan-offscandevicedel-f-sys.md) | Unregisters the callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
 | [onScanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) | Register event callback for scanner device add (system API). |
 | [onScanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) | Register event callback for scanner device delete (system API). |
-| on_scanDeviceAdd | Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
-| on_scanDeviceDel | Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
+| [on_scanDeviceAdd](arkts-basicservices-scan-onscandeviceadd-f-sys.md) | Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result. |
+| [on_scanDeviceDel](arkts-basicservices-scan-onscandevicedel-f-sys.md) | Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result. |
 <!--DelEnd-->
 
 ### Interfaces

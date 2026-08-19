@@ -11,6 +11,8 @@ USB配件句柄，包含配件文件描述符，用于通过CoreFileKit提供的
 ## 导入模块
 
 ```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## accessoryFd

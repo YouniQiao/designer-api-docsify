@@ -52,7 +52,7 @@ httpRequest.destroy();
 enableAutoCookie(enable: boolean): void
 ```
 
-Sets whether to automatically carry and share cookies. That is, whether to automatically reuse the cookies delivered by the server among multiple requests of the same **HttpRequest** instance. > **NOTE：**> > (1) The default value is **false**, indicating that cookies are not automatically carried. > (2) If the value is changed from **false** to **true**, the setting takes effect when the **request** API is > called to initiate a request, and cookies are automatically shared. > (3) If the value is changed from **true** to **false**, the cookie sharing status stored in the current > instance is cleared.
+Sets whether to automatically carry and share cookies. That is, whether to automatically reuse the cookies delivered by the server among multiple requests of the same **HttpRequest** instance. &gt; **NOTE：**&gt; &gt; (1) The default value is **false**, indicating that cookies are not automatically carried. &gt; (2) If the value is changed from **false** to **true**, the setting takes effect when the **request** API is &gt; called to initiate a request, and cookies are automatically shared. &gt; (3) If the value is changed from **true** to **false**, the cookie sharing status stored in the current &gt; instance is cleared.
 
 **Since:** 26.0.0
 
@@ -68,7 +68,7 @@ Sets whether to automatically carry and share cookies. That is, whether to autom
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether to automatically carry cookies. **true**: yes; **false**: no. |
 
-## off_dataEnd("dataEnd")
+## off("dataEnd")
 
 ```TypeScript
 off(type: "dataEnd", callback?: Callback<void>): void
@@ -89,7 +89,7 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -113,7 +113,7 @@ httpRequest.on("dataEnd", () => {
 httpRequest.off("dataEnd");
 ```
 
-## off_dataReceive("dataReceive")
+## off("dataReceive")
 
 ```TypeScript
 off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
@@ -134,7 +134,7 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -158,7 +158,7 @@ httpRequest.on("dataReceive", (data: ArrayBuffer) => {
 httpRequest.off("dataReceive");
 ```
 
-## off_dataReceiveProgress('dataReceiveProgress')
+## off('dataReceiveProgress')
 
 ```TypeScript
 off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void
@@ -179,7 +179,7 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
 
@@ -203,7 +203,7 @@ httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
 httpRequest.off("dataReceiveProgress");
 ```
 
-## off_dataSendProgress('dataSendProgress')
+## off('dataSendProgress')
 
 ```TypeScript
 off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
@@ -224,7 +224,7 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -248,7 +248,7 @@ httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
 httpRequest.off("dataSendProgress");
 ```
 
-## off_headerReceive("headerReceive")
+## off("headerReceive")
 
 ```TypeScript
 off(type: "headerReceive", callback?: AsyncCallback<Object>): void
@@ -260,7 +260,7 @@ Unregisters the observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [off_headersReceive](#off_headersreceiveheadersreceive)
+**Substitutes:** [off_headersReceive](#offheadersreceive)
 
 <!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
 
@@ -271,7 +271,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -289,7 +289,7 @@ let httpRequest = http.createHttp();
 httpRequest.off("headerReceive");
 ```
 
-## off_headersReceive("headersReceive")
+## off("headersReceive")
 
 ```TypeScript
 off(type: "headersReceive", callback?: Callback<Object>): void
@@ -310,7 +310,7 @@ Unregisters the observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
 
@@ -334,7 +334,7 @@ httpRequest.on("headersReceive", (header: Object) => {
 httpRequest.off("headersReceive");
 ```
 
-## on_dataEnd("dataEnd")
+## on("dataEnd")
 
 ```TypeScript
 on(type: "dataEnd", callback: Callback<void>): void
@@ -355,7 +355,7 @@ Registers an observer for events indicating completion of receiving HTTP streami
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataEnd" | Yes | Event type. The value is **dataEnd**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an **Error** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an **Error** object. |
 
 **Examples**
 
@@ -379,7 +379,7 @@ httpRequest.on("dataEnd", () => {
 httpRequest.off("dataEnd");
 ```
 
-## on_dataReceive("dataReceive")
+## on("dataReceive")
 
 ```TypeScript
 on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
@@ -400,7 +400,7 @@ Registers an observer for events indicating receiving of HTTP streaming response
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "dataReceive" | Yes | Event type. The value is **dataReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP streaming data of the ArrayBuffer type. Otherwise, **error** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP streaming data of the ArrayBuffer type. Otherwise, **error** is an error object. |
 
 **Examples**
 
@@ -424,7 +424,7 @@ httpRequest.on("dataReceive", (data: ArrayBuffer) => {
 httpRequest.off("dataReceive");
 ```
 
-## on_dataReceiveProgress('dataReceiveProgress')
+## on('dataReceiveProgress')
 
 ```TypeScript
 on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
@@ -445,7 +445,7 @@ Registers an observer for events indicating progress of receiving HTTP streaming
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes | Event type. The value is **dataReceiveProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md) object; otherwise, the callback content is **undefined**.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md) object; otherwise, the callback content is **undefined**.<br>**Since:** 11 |
 
 **Examples**
 
@@ -469,7 +469,7 @@ httpRequest.on("dataReceiveProgress", (data: http.DataReceiveProgressInfo) => {
 httpRequest.off("dataReceiveProgress");
 ```
 
-## on_dataSendProgress('dataSendProgress')
+## on('dataSendProgress')
 
 ```TypeScript
 on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
@@ -490,7 +490,7 @@ Registers an observer for events indicating progress of sending HTTP requests.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataSendProgress' | Yes | Event type. The value is **dataSendProgress**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md) object; otherwise, the callback content is **undefined**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is a [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md) object; otherwise, the callback content is **undefined**. |
 
 **Examples**
 
@@ -514,7 +514,7 @@ httpRequest.on("dataSendProgress", (data: http.DataSendProgressInfo) => {
 httpRequest.off("dataSendProgress");
 ```
 
-## on_headerReceive("headerReceive")
+## on("headerReceive")
 
 ```TypeScript
 on(type: "headerReceive", callback: AsyncCallback<Object>): void
@@ -526,7 +526,7 @@ Registers an observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on_headersReceive](#on_headersreceiveheadersreceive)
+**Substitutes:** [on_headersReceive](#onheadersreceive)
 
 <!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
@@ -537,7 +537,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headerReceive" | Yes | Event type. The value is **headerReceive**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined**, and **data** is the received HTTP response header. Otherwise, **error** is an error object. |
 
 **Examples**
 
@@ -561,7 +561,7 @@ httpRequest.on("headerReceive", (data: BusinessError) => {
 });
 ```
 
-## on_headersReceive("headersReceive")
+## on("headersReceive")
 
 ```TypeScript
 on(type: "headersReceive", callback: Callback<Object>): void
@@ -582,7 +582,7 @@ Registers an observer for HTTP Response Header events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
 
 **Examples**
 
@@ -627,7 +627,7 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "headersReceive" | Yes | Event type. The value is **headersReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
 
 **Examples**
 
@@ -655,7 +655,7 @@ httpRequest.once("headersReceive", (header: Object) => {
 request(url: string, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call > [requestInStream](#requestinstream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received. &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
 
 **Since:** 23
 
@@ -672,7 +672,7 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -755,7 +755,7 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call > [requestInStream](#requestinstream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received. &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
 
 **Since:** 23
 
@@ -773,7 +773,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md) object; otherwise, the callback content is undefined. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the result. If the operation is successful, the callback content is an [HttpResponse](arkts-network-http-httpresponse-i.md) object; otherwise, the callback content is undefined. |
 
 **Error codes:**
 
@@ -902,7 +902,7 @@ httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse
 request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 ```
 
-Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result. > **NOTE：**> > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call > [requestInStream](#requestinstream) to > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold > will fail to be received. > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request.
+Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set &gt; **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call &gt; [requestInStream](#requestinstream) to &gt; initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions &gt; earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold &gt; will fail to be received. &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request.
 
 **Since:** 23
 
@@ -1053,7 +1053,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the HTTP result code is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1148,7 +1148,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | --- | --- | --- | --- |
 | url | string | Yes | URL for initiating an HTTP request. |
 | options | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Yes | Request options. For details, see [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md) is returned. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the request is successful, **err** is **undefined**, and the [HTTP result code](arkts-network-http-responsecode-e.md) is returned. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1391,7 +1391,7 @@ promise.then((data: number) => {
 requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 ```
 
-Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously. > **NOTE：**> > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit** > parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). > (2) If you need to pass in cookies, add them to the **options** parameter. > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an > HTTP request. > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned. **Required permission**: ohos.permission.INTERNET
+Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously. &gt; **NOTE：**&gt; &gt; (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit** &gt; parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md). &gt; (2) If you need to pass in cookies, add them to the **options** parameter. &gt; (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an &gt; HTTP request. &gt; (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned. **Required permission**: ohos.permission.INTERNET
 
 **Since:** 26.0.0
 

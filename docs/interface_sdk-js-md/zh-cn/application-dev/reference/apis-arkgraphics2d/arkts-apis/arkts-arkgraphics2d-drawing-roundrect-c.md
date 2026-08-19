@@ -1,6 +1,6 @@
 # RoundRect
 
-圆角矩形对象。支持设置和获取指定圆角位置的圆角半径，以及对圆角矩形进行平移操作。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+圆角矩形对象。支持设置和获取指定圆角位置的圆角半径，以及对圆角矩形进行平移操作。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -117,7 +118,7 @@ getCorner(pos: CornerPos): common2D.Point | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 获取失败时返回undefined。 |
+| common2D.Point \| undefined | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 获取失败时返回undefined。 |
 
 **错误码：**
 

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModif
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## points
 
 ```TypeScript
@@ -58,8 +56,6 @@ points(value: Array<ShapePoint> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setPolygonOptions
 
 ```TypeScript
@@ -82,8 +78,6 @@ setPolygonOptions(options?: PolygonOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

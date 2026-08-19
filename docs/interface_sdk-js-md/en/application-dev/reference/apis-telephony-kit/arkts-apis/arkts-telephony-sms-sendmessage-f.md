@@ -12,7 +12,7 @@ import { sms } from '@kit.TelephonyKit';
 function sendMessage(options: SendMessageOptions): void
 ```
 
-Sends an SMS message. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 10. You are advised to use > [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md).
+Sends an SMS message. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 10. You are advised to use &gt; [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md).
 
 **Since:** 6
 

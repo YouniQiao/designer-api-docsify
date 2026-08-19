@@ -1,6 +1,6 @@
 # DlpConnManager
 
-Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA. > **NOTE：**> > **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback > capabilities from the SA.
+Calls **registerPlugin** and **unregisterPlugin** to register or unregister callback capabilities in the SA. &gt; **NOTE：**&gt; &gt; **registerPlugin** registers callback capabilities in the SA, and **unregisterPlugin** unregisters callback &gt; capabilities from the SA.
 
 **Since:** 21
 
@@ -45,7 +45,7 @@ Represents a constructor for instantiating [DlpConnManager](#dlpconnmanager).
 static registerPlugin(plugin: DlpConnPlugin): number
 ```
 
-Registers a callback with the SA. > **NOTE：**> > **registerPlugin** registers the callback with the SA.
+Registers a callback with the SA. &gt; **NOTE：**&gt; &gt; **registerPlugin** registers the callback with the SA.
 
 **Since:** 21
 
@@ -86,7 +86,7 @@ Registers a callback with the SA. > **NOTE：**> > **registerPlugin** registers 
 static unregisterPlugin(): void
 ```
 
-Unregisters a callback from the SA. This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released. > **NOTE：**> > **unregisterPlugin** unregisters a plug-in from the SA.
+Unregisters a callback from the SA. This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released. &gt; **NOTE：**&gt; &gt; **unregisterPlugin** unregisters a plug-in from the SA.
 
 **Since:** 21
 

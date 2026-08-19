@@ -13,6 +13,7 @@ LinkIntentInfo用于描述 @InsightIntentLink 装饰器支持的参数，例如�
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## uri

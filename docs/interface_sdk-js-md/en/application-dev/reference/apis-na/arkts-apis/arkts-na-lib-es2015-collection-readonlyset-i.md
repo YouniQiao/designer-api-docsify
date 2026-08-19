@@ -46,8 +46,6 @@ has(value: T): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## size
 
 ```TypeScript

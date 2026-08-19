@@ -23,5 +23,3 @@ new (): Int32Array
 
 | Type | Description |
 | --- | --- |
-| Int32Array |  |
-

@@ -1,6 +1,6 @@
 # CpuUsageHighPolicy
 
-Defines the configuration policy for the high CPU usage event. > **NOTE：**> > After this API is called, the setting is persisted. If this API is called again and the corresponding parameter > is not set, the value used by the system last time is used.
+Defines the configuration policy for the high CPU usage event. &gt; **NOTE：**&gt; &gt; After this API is called, the setting is persisted. If this API is called again and the corresponding parameter &gt; is not set, the value used by the system last time is used.
 
 **Since:** 23
 

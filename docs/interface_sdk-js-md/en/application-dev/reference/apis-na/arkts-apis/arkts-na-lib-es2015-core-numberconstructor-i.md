@@ -31,8 +31,6 @@ Returns true if passed value is finite. Unlike the global isFinite, Number.isFin
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## isInteger
 
 ```TypeScript
@@ -55,8 +53,6 @@ Returns true if the value passed is an integer, false otherwise.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## isNaN
 
 ```TypeScript
@@ -79,8 +75,6 @@ Returns a Boolean value that indicates whether a value is the reserved value NaN
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## isSafeInteger
 
 ```TypeScript
@@ -103,8 +97,6 @@ Returns true if the value passed is a safe integer.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## parseFloat
 
 ```TypeScript
@@ -127,8 +119,6 @@ Converts a string to a floating-point number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## parseInt
 
 ```TypeScript
@@ -152,8 +142,6 @@ Converts A string to an integer.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## EPSILON
 
 ```TypeScript

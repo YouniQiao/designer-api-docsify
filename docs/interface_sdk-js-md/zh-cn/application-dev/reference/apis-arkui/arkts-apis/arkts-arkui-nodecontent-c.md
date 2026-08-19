@@ -1,6 +1,6 @@
 # NodeContent
 
-NodeContent是ArkUI提供的ContentSlot的管理器，用于管理挂载到ContentSlot上的FrameNode节点内 容，支持动态添加、删除FrameNode节点。适用于需要通过ContentSlot动态管理FrameNode节点内容的场景，例如根据用户交互动态新增或移除文本、图片等自定义FrameNode节点。 > **说明：** > > - NodeContent对象不支持使用JSON序列化。
+NodeContent是ArkUI提供的ContentSlot的管理器，用于管理挂载到ContentSlot上的FrameNode节点内 容，支持动态添加、删除FrameNode节点。适用于需要通过ContentSlot动态管理FrameNode节点内容的场景，例如根据用户交互动态新增或移除文本、图片等自定义FrameNode节点。 &gt; **说明：** &gt; &gt; - NodeContent对象不支持使用JSON序列化。
 
 **继承/实现关系：** NodeContent extends Content
 

@@ -63,7 +63,7 @@ Add the ComponentContent to the OverlayManager with order.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
-| levelOrder | [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) | No |  |
+| levelOrder | [LevelOrder](arkts-na-promptaction-levelorder-c.md) | No |  |
 
 ## hideAllComponentContents
 
@@ -130,7 +130,7 @@ Opens an overlay with the specified ComponentContent and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;Object&gt; | Yes | The content will be added to the OverlayManager. |
-| options | [OrderOverlayOptions](arkts-na-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
+| options | [OrderOverlayOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
 

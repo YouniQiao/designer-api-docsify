@@ -25,7 +25,7 @@
 | [AutoPlayOptions](arkts-na-swiper-autoplayoptions-i.md) | Define autoPlay related options. |
 | [CachedCountOptions](arkts-na-swiper-cachedcountoptions-i.md) | 定义用于控制缓存计数行为的属性 |
 | [SwiperAnimationEvent](arkts-na-swiper-swiperanimationevent-i.md) | Provides an interface for swiper animation. |
-| [SwiperAttribute](arkts-na-swiper-swiperattribute-i.md) | 除支持通用属性外，还支持以下属性： |
+| [SwiperAttribute](arkts-na-swiper-swiperattribute-i.md) | 除支持通用属性外，还支持以下属性： &gt; |
 | [SwiperAutoFill](arkts-na-swiper-swiperautofill-i.md) | Set Swiper column count adaptation. |
 | [SwiperContentAnimatedTransition](arkts-na-swiper-swipercontentanimatedtransition-i.md) | Defines the swiper content animated transition options. |
 | [SwiperContentTransitionProxy](arkts-na-swiper-swipercontenttransitionproxy-i.md) | The proxy of SwiperContentAnimatedTransition. |

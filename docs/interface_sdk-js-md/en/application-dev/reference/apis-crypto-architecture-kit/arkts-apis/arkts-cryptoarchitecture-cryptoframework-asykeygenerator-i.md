@@ -40,7 +40,7 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 | --- | --- | --- | --- |
 | pubKey | DataBlob | Yes | The public key data blob. |
 | priKey | DataBlob | Yes | The private key data blob. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the asymmetric key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the asymmetric key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 | --- | --- | --- | --- |
 | pubKey | DataBlob \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 | priKey | DataBlob \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -288,7 +288,7 @@ try {
 convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 ```
 
-Converts data into an asymmetric key pair. This API uses a promise to return the result. > **NOTE：**> > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM > encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM > encoding format. > 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is > passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. > 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the > Crypto framework, the system does not verify whether the specifications of the generated key object are the > same as the key specifications specified for the asymmetric key generator.
+Converts data into an asymmetric key pair. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by &gt; the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM &gt; encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM &gt; encoding format. &gt; 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is &gt; passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. &gt; 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the &gt; Crypto framework, the system does not verify whether the specifications of the generated key object are the &gt; same as the key specifications specified for the asymmetric key generator.
 
 **Since:** 23
 
@@ -366,7 +366,7 @@ async function TestConvertPemKeyByPromise() {
 convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result. > **NOTE：**> > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM > encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM > encoding format. > 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is > passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. > 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the > Crypto framework, the system does not verify whether the specifications of the generated key object are the > same as the key specifications specified for the asymmetric key generator. > 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by &gt; the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM &gt; encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM &gt; encoding format. &gt; 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is &gt; passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. &gt; 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the &gt; Crypto framework, the system does not verify whether the specifications of the generated key object are the &gt; same as the key specifications specified for the asymmetric key generator. &gt; 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
 
 **Since:** 23
 
@@ -440,7 +440,7 @@ async function TestConvertPemKeyByPromise() {
 convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 ```
 
-Converts data into an asymmetric key pair. This API returns the result synchronously. > **NOTE：**> The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see > the description of > [convertPemKey](#convertpemkey) > . <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Converts data into an asymmetric key pair. This API returns the result synchronously. &gt; **NOTE：**&gt; The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see &gt; the description of &gt; [convertPemKey](#convertpemkey) &gt; . <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -521,7 +521,7 @@ function TestConvertPemKeyBySync() {
 convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. > **NOTE：**> The precautions for using **convertPemKeySync** are the same as those for > [convertPemKey](#convertpemkey) > . <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. &gt; **NOTE：**&gt; The precautions for using **convertPemKeySync** are the same as those for &gt; [convertPemKey](#convertpemkey) &gt; . <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -614,7 +614,7 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

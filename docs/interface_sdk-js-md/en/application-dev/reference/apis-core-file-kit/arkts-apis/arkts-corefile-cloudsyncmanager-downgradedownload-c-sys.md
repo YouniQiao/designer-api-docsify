@@ -133,7 +133,7 @@ Starts the full download for the specified application's cloud files. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the download progress. The parameter is **DownloadProgress**, and the return value is **void**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the download progress. The parameter is **DownloadProgress**, and the return value is **void**. |
 
 **Return value:**
 
@@ -200,7 +200,7 @@ Start to migrate the downloaded full data to the specified public directory of f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetUri | string | Yes | Transfer target Uri. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | Yes | Callback function. The callback will be triggered when the transfer progress changes or the transfer task completes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | Yes | Callback function. The callback will be triggered when the transfer progress changes or the transfer task completes. |
 
 **Error codes:**
 

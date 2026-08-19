@@ -31,5 +31,3 @@ Matches a string with this regular expression, and returns an iterable of matche
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;RegExpMatchArray&gt; |  |
-

@@ -1,6 +1,6 @@
 # DatePickerComponent
 
-DatePickerComponent组件用于选择日期（年月日）和时间（时分秒）。 > **说明：** > > - 该组件接口仅可在Stage模型下使用。
+DatePickerComponent组件用于选择日期（年月日）和时间（时分秒）。 &gt; **说明：** &gt; &gt; - 该组件接口仅可在Stage模型下使用。
 
 **起始版本：** 26.0.0
 
@@ -43,7 +43,7 @@ DatePickerComponent组件用于选择日期（年月日）和时间（时分秒�
 
 定义日期时间选择器组件的选项。
 
-**类型：** [DatePickerComponentOptions](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
+**类型：** [DatePickerComponentOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **起始版本：** 26.0.0
 

@@ -23,5 +23,3 @@ new (): Uint8Array
 
 | Type | Description |
 | --- | --- |
-| Uint8Array |  |
-

@@ -37,8 +37,6 @@ attributeModifier(modifier: AttributeModifier<UnionEffectContainerAttribute>
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## pointLight
 
 ```TypeScript
@@ -61,8 +59,6 @@ pointLight(light: PointLightStyle): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setUnionEffectContainerOptions
 
 ```TypeScript
@@ -85,8 +81,6 @@ setUnionEffectContainerOptions(options?: UnionEffectContainerOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## unionMode
 
 ```TypeScript
@@ -109,5 +103,3 @@ unionMode(mode: UnionMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

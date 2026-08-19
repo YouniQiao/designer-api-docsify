@@ -495,7 +495,7 @@ offset?: ActionSheetOffset
 onDidAppear?: Callback<void>
 ```
 
-弹窗弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
+弹窗弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
 
 **类型：** Callback&lt;void&gt;
 
@@ -515,7 +515,7 @@ onDidAppear?: Callback<void>
 onDidDisappear?: Callback<void>
 ```
 
-弹窗消失后的事件回调。 **说明：** 正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
+弹窗消失后的事件回调。 **说明：** 正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。
 
 **类型：** Callback&lt;void&gt;
 
@@ -535,7 +535,7 @@ onDidDisappear?: Callback<void>
 onWillAppear?: Callback<void>
 ```
 
-弹窗显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+弹窗显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
 **类型：** Callback&lt;void&gt;
 
@@ -555,7 +555,7 @@ onWillAppear?: Callback<void>
 onWillDisappear?: Callback<void>
 ```
 
-弹窗退出动效前的事件回调。 **说明：** 正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
+弹窗退出动效前的事件回调。 **说明：** 正常时序依次为：onWillAppear &gt;> onDidAppear &gt;> onWillDisappear &gt;> onDidDisappear。
 
 **类型：** Callback&lt;void&gt;
 

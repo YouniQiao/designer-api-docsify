@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<ToggleAttribute> | AttributeModifi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -58,8 +56,6 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefined): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -82,8 +78,6 @@ onChange(callback: ((isOn: boolean) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedColor
 
 ```TypeScript
@@ -106,8 +100,6 @@ selectedColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## switchPointColor
 
 ```TypeScript
@@ -130,8 +122,6 @@ switchPointColor(color: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## switchStyle
 
 ```TypeScript
@@ -154,8 +144,6 @@ switchStyle(value: SwitchStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

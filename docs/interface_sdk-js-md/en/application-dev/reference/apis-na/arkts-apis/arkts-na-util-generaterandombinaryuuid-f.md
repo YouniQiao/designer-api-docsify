@@ -31,5 +31,5 @@ Generate a random RFC 4122 version 4 binary UUID using a cryptographically secur
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Return a Uint8Array representing this UUID, or undefined on failure. |
+| Uint8Array \| undefined | Return a Uint8Array representing this UUID, or undefined on failure. |
 

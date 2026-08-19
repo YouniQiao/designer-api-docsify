@@ -6,7 +6,7 @@
 import { errorManager } from '@kit.AbilityKit';
 ```
 
-## on_globalErrorOccurred('globalErrorOccurred')
+## on('globalErrorOccurred')
 
 ```TypeScript
 function on(type: 'globalErrorOccurred', observer: GlobalObserver): void

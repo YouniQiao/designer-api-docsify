@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -83,7 +84,7 @@ getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[HolidayInfoItem](../../apis-na/arkts-apis/arkts-na-i18n-holidayinfoitem-i.md)&gt; | 返回节假日信息列表。 |
+| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; | 返回节假日信息列表。 |
 
 **错误码：**
 

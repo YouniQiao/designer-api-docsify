@@ -35,7 +35,7 @@ Generates a CSR.
 
 | Type | Description |
 | --- | --- |
-| string | CSR generated. |
+| string \| Uint8Array | CSR generated. |
 
 **Error codes:**
 

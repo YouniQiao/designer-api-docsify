@@ -48,7 +48,7 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap \| undefined&gt; | Yes | Callback used to return the album cover. to return when fetchAlbumCover completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap \| undefined&gt; | Yes | Callback used to return the album cover. to return when fetchAlbumCover completed. |
 
 **Error codes:**
 
@@ -261,7 +261,7 @@ fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: Pix
         callback: OnFrameFetched): void
 ```
 
-Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The given video resource is decoded first, and then image frames are extracted from each time point in the > **timesUs** array based on the provided **options** and **param**. > > - When each image extraction is complete, the system calls the callback function and passes the extraction > result. Note that the execution order of the callback function may be inconsistent with the time points in the > **timesUs** array.
+Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - The given video resource is decoded first, and then image frames are extracted from each time point in the &gt; **timesUs** array based on the provided **options** and **param**. &gt; &gt; - When each image extraction is complete, the system calls the callback function and passes the extraction &gt; result. Note that the execution order of the callback function may be inconsistent with the time points in the &gt; **timesUs** array.
 
 **Since:** 23
 
@@ -298,7 +298,7 @@ fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions,
       timeoutMs: long, callback: OnFrameFetched): void
 ```
 
-Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The given video resource is decoded first, and then image frames are extracted from each time point in the > **timesUs** array based on the provided **options** and **param**. > > - When each image extraction is complete, the system calls the callback function and passes the extraction > result. Note that the execution order of the callback function may be inconsistent with the time points in the > **timesUs** array. > > - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not > the entire batch thumbnail extraction process.
+Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - The given video resource is decoded first, and then image frames are extracted from each time point in the &gt; **timesUs** array based on the provided **options** and **param**. &gt; &gt; - When each image extraction is complete, the system calls the callback function and passes the extraction &gt; result. Note that the execution order of the callback function may be inconsistent with the time points in the &gt; **timesUs** array. &gt; &gt; - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not &gt; the entire batch thumbnail extraction process.
 
 **Since:** 26.0.0
 
@@ -347,7 +347,7 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadata instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
@@ -375,7 +375,7 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata \| undefined&gt; | Yes | Callback used to return the result, which is an **AVMetadata** instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata \| undefined&gt; | Yes | Callback used to return the result, which is an **AVMetadata** instance. |
 
 **Error codes:**
 
@@ -497,7 +497,7 @@ Releases this AVMetadataExtractor instance. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

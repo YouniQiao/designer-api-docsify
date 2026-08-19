@@ -172,7 +172,7 @@ Returns an instance of primitive type at passed index if index is correct.
 
 | Type | Description |
 | --- | --- |
-| BigInt | the element at the index, or undefined if out of bounds. |
+| BigInt \| undefined | the element at the index, or undefined if out of bounds. |
 
 ## constructor
 
@@ -724,7 +724,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| BigInt | the found element, or undefined if no element matches |
+| BigInt \| undefined | the found element, or undefined if no element matches |
 
 ## findIndex
 

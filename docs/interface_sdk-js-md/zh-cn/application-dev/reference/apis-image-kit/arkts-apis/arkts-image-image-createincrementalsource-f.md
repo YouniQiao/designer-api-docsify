@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## createIncrementalSource
@@ -29,7 +30,7 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createIncrementalSource
@@ -58,5 +59,5 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

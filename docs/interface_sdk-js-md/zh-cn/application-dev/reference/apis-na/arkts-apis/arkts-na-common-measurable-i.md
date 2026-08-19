@@ -32,7 +32,7 @@ Obtains the border width of the child component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; | Border width of the child component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
+| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; \| undefined | Border width of the child component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## getMargin
 
@@ -56,7 +56,7 @@ Obtains the margin of the child component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; | Margin of the child component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
+| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; \| undefined | Margin of the child component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## getPadding
 
@@ -80,7 +80,7 @@ Obtains the padding of the child component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; | the padding of sub component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
+| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; \| undefined | the padding of sub component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## measure
 
@@ -110,7 +110,7 @@ Applies the size constraint to the child component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureResult](arkts-na-common-measureresult-i.md) | Provides the measurement result of the component. If some errors occur in the internal runtime environment, returns undefined. |
+| [MeasureResult](arkts-na-common-measureresult-i.md) \| undefined | Provides the measurement result of the component. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## uniqueId
 

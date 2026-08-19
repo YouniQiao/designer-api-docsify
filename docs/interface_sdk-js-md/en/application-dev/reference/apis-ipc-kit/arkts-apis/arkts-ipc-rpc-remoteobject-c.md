@@ -423,7 +423,7 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API. > **NOTE：**> > - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and > asynchronous message processing. > > - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only > **onRemoteMessageRequest()** takes effect.
+Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API. &gt; **NOTE：**&gt; &gt; - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and &gt; asynchronous message processing. &gt; &gt; - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 
@@ -446,7 +446,7 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 | Type | Description |
 | --- | --- |
-| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean \| Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 ## onRemoteMessageRequest
 
@@ -460,7 +460,7 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**. > **NOTE：**> > You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to > implement synchronous and asynchronous message processing. > If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only > **onRemoteMessageRequest()** takes effect.
+Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**. &gt; **NOTE：**&gt; &gt; You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to &gt; implement synchronous and asynchronous message processing. &gt; If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only &gt; **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 
@@ -482,7 +482,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 | Type | Description |
 | --- | --- |
-| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean \| Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 ## onRemoteRequest
 
@@ -707,7 +707,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
@@ -900,5 +900,5 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
 

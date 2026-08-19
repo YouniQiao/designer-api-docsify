@@ -12,7 +12,7 @@ import { restrictions } from '@kit.MDMKit';
 function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void
 ```
 
-Disallows a feature. > **NOTE：**> > This API applies a device-level restriction policy that affects all users of the device. To set a restriction > policy for a specific user, use the > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API.
+Disallows a feature. &gt; **NOTE：**&gt; &gt; This API applies a device-level restriction policy that affects all users of the device. To set a restriction &gt; policy for a specific user, use the &gt; [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API.
 
 **Since:** 12
 

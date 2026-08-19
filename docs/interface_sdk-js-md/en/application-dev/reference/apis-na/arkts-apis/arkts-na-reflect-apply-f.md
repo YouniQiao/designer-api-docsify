@@ -33,8 +33,6 @@ Calls the function with the specified object as the this value and the elements 
 
 | Type | Description |
 | --- | --- |
-| R |  |
-
 
 ## apply
 
@@ -58,5 +56,3 @@ function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any
 
 | Type | Description |
 | --- | --- |
-| any |  |
-

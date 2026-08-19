@@ -126,7 +126,7 @@ Obtains the input field type of the web element (such as text box, password box,
 getLinkUrl(): string
 ```
 
-Obtains the URL link address that has passed the security check. This can be used to provide operations such as " Open Link", "Share Link", and "Copy Link" when building a custom menu. > **NOTE：**> > Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with > getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the > URL of the **src** attribute of the selected element (such as images, media, and other resources).
+Obtains the URL link address that has passed the security check. This can be used to provide operations such as " Open Link", "Share Link", and "Copy Link" when building a custom menu. &gt; **NOTE：**&gt; &gt; Compared with getUnfilteredLinkUrl(), this method performs a security check on the URL. Compared with &gt; getSourceUrl(), this method obtains the link URL at the long press position, whereas getSourceUrl() obtains the &gt; URL of the **src** attribute of the selected element (such as images, media, and other resources).
 
 **Since:** 9
 
@@ -148,7 +148,7 @@ Obtains the URL link address that has passed the security check. This can be use
 getMediaType(): ContextMenuMediaType
 ```
 
-Obtains the media type of the web element. > **NOTE：**> > Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides > richer media type identification capabilities.
+Obtains the media type of the web element. &gt; **NOTE：**&gt; &gt; Since API version 22, [getContextMenuMediaType](#getcontextmenumediatype) provides &gt; richer media type identification capabilities.
 
 **Since:** 9
 

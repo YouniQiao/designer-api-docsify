@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 ```
 
 ## 汇总

@@ -32,8 +32,6 @@ Pads the current string with a given string (possibly repeated) so that the resu
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## padStart
 
 ```TypeScript
@@ -57,5 +55,3 @@ Pads the current string with a given string (possibly repeated) so that the resu
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

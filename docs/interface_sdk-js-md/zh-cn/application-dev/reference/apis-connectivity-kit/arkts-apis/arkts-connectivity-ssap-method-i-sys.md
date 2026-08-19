@@ -13,6 +13,7 @@ SSAP方法。
 ## 导入模块
 
 ```TypeScript
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## methodUuid

@@ -23,7 +23,7 @@ import { AbilityStage } from '@kit.AbilityKit';
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when a system environment variable changes. You can override this callback to respond to changes in the system environment variables. For example, when the system language changes, the application can perform customized processing in the callback. > **NOTE：**> > There are certain restrictions when this callback is actually triggered. For example, if you set the application > language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, > see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+Called when a system environment variable changes. You can override this callback to respond to changes in the system environment variables. For example, when the system language changes, the application can perform customized processing in the callback. &gt; **NOTE：**&gt; &gt; There are certain restrictions when this callback is actually triggered. For example, if you set the application &gt; language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the &gt; system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details, &gt; see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ class MyUIAbility extends UIAbility {
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Called when the available memory of the entire device changes to a specified level. You can override this callback to respond to changes in the memory level, for example, releasing cached data. > **NOTE：**> > Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process. > Therefore, you are advised not to release UI components in this callback.
+Called when the available memory of the entire device changes to a specified level. You can override this callback to respond to changes in the memory level, for example, releasing cached data. &gt; **NOTE：**&gt; &gt; Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process. &gt; Therefore, you are advised not to release UI components in this callback.
 
 **Since:** 23
 

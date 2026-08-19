@@ -30,7 +30,7 @@ Creates a virtual screen. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | Yes | Virtual screen parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Screen&gt; | Yes | Callback used to return the created virtual screen. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Screen&gt; | Yes | Callback used to return the created virtual screen. |
 
 **Error codes:**
 

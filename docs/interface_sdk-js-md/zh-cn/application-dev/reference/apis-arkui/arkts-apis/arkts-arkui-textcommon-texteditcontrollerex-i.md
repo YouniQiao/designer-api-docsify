@@ -32,7 +32,7 @@ getCaretOffset(): int | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 当前光标所在位置。 |
+| int \| undefined | 当前光标所在位置。 |
 
 ## getPreviewText
 
@@ -56,7 +56,7 @@ getPreviewText(): PreviewText | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | 预上屏信息。 |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) \| undefined | 预上屏信息。 |
 
 ## isEditing
 
@@ -80,7 +80,7 @@ isEditing(): boolean | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true为编辑态，false为非编辑态。 |
+| boolean \| undefined | true为编辑态，false为非编辑态。 |
 
 ## setCaretOffset
 
@@ -110,7 +110,7 @@ setCaretOffset(offset: int): boolean | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 光标是否设置成功。<br/>true表示光标设置成功，false表示设置失败。 |
+| boolean \| undefined | 光标是否设置成功。<br/>true表示光标设置成功，false表示设置失败。 |
 
 ## stopEditing
 

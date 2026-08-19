@@ -208,7 +208,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | No | Callback function. |
 
 **Examples**
 
@@ -279,7 +279,7 @@ Registers an event processing callback to listen for different events on the rea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
 
 **Examples**
 
@@ -495,7 +495,7 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 | Type | Description |
 | --- | --- |
-| string | Data read from the readable stream. |
+| string \| null | Data read from the readable stream. |
 
 **Error codes:**
 
@@ -548,7 +548,7 @@ Reads a buffer of a specified size from the buffer. If the available buffer is s
 
 | Type | Description |
 | --- | --- |
-| buffer.Buffer | If no data is available to read, null is returned. |
+| buffer.Buffer \| string \| null | If no data is available to read, null is returned. |
 
 **Error codes:**
 

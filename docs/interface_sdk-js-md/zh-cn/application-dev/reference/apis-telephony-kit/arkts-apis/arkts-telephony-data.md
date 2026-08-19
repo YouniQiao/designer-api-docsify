@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## 汇总
@@ -36,7 +37,7 @@
 | [isCellularDataRoamingEnabledSync](arkts-telephony-data-iscellulardataroamingenabledsync-f.md) | 检查蜂窝数据业务是否启用漫游，调用此API返回结果。 |
 | [queryAllApns](arkts-telephony-data-queryallapns-f.md) | 异步获取默认移动数据的SIM卡的APN（access point name，接入点名称）信息。 |
 | [queryApnIds](arkts-telephony-data-queryapnids-f.md) | 异步获取传入的ApnInfo对应的ApnId信息。 |
-| [setPreferredApn](arkts-telephony-data-setpreferredapn-f.md) | 异步设置apnId对应的APN为首选APN。 > 注意: > > 如果传入的apnId为无效的apnId，切回运营商默认配置的优选Apn。 |
+| [setPreferredApn](arkts-telephony-data-setpreferredapn-f.md) | 异步设置apnId对应的APN为首选APN。 &gt; 注意: &gt; &gt; 如果传入的apnId为无效的apnId，切回运营商默认配置的优选Apn。 |
 | [showSystemApnSettings](arkts-telephony-data-showsystemapnsettings-f.md) | 打开当前默认移动数据卡对应的APN配置界面。使用Promise异步回调。 |
 
 <!--Del-->

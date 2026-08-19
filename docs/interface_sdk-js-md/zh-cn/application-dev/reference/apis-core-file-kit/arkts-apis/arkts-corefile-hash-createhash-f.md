@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## createHash
@@ -11,7 +12,7 @@
 function createHash(algorithm: string): HashStream
 ```
 
-创建并返回HashStream对象，用于生成哈希摘要。可以指定哈希计算采用的算法。HashStream采用流式处理机制，支持分批次更新数据，适用于大文件或数据流的哈希计算，避免一次性加载大文件到内存。 > **说明：** > > HashStream采用流式处理机制，支持分批次更新数据，适用于大文件或数据流的哈希计算，避免一次性加载大文件到内存。
+创建并返回HashStream对象，用于生成哈希摘要。可以指定哈希计算采用的算法。HashStream采用流式处理机制，支持分批次更新数据，适用于大文件或数据流的哈希计算，避免一次性加载大文件到内存。 &gt; **说明：** &gt; &gt; HashStream采用流式处理机制，支持分批次更新数据，适用于大文件或数据流的哈希计算，避免一次性加载大文件到内存。
 
 **起始版本：** 23
 

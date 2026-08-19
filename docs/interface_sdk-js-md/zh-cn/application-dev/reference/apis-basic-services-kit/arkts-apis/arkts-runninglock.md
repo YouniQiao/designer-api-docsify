@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

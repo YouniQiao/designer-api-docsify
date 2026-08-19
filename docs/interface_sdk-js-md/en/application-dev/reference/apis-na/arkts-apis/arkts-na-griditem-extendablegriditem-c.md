@@ -108,5 +108,5 @@ Set the GridItem Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableGridItem](arkts-na-griditem-extendablegriditem-c.md) |  |
 

@@ -28,5 +28,3 @@ Removes a property from an object, equivalent to `delete target[propertyKey]`, e
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

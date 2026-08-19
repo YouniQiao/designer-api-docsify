@@ -14,7 +14,7 @@ Used to mix colors.
 static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-Create ColorMetrics class using HDR color with default exposure. Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear). When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness. This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
+Create ColorMetrics class using HDR color with default exposure. Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear). When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness. This matches iOS UIColor behavior where RGB values &gt; 1.0 enable HDR rendering.
 
 **Since:** 26.0.0
 
@@ -136,7 +136,7 @@ Get blue value. Returns blue channel value as a floating-point number. For SDR c
 
 | Type | Description |
 | --- | --- |
-| double | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
+| double | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## getColorSpace
 
@@ -184,7 +184,7 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 
 | Type | Description |
 | --- | --- |
-| double | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
+| double | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## getRedValue
 
@@ -208,7 +208,7 @@ Get red value. Returns red channel value as a floating-point number. For SDR col
 
 | Type | Description |
 | --- | --- |
-| double | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
+| double | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## isHDR
 
@@ -216,7 +216,7 @@ Get red value. Returns red channel value as a floating-point number. For SDR col
 isHDR(): boolean
 ```
 
-Check if ColorMetrics represents an HDR color. Returns true if color was created using createHDRColorWithXx or has RGB values > 1.0.
+Check if ColorMetrics represents an HDR color. Returns true if color was created using createHDRColorWithXx or has RGB values &gt; 1.0.
 
 **Since:** 26.0.0
 

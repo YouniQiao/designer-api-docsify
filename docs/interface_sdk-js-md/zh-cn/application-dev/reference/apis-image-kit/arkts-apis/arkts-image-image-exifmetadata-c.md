@@ -13,6 +13,7 @@ ExifMetadata implements Metadata Exif（Exchangeable image file format）元数�
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone

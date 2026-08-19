@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## from
@@ -78,7 +79,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
 
 **示例**
 
@@ -125,7 +126,7 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
 
 **示例**
 

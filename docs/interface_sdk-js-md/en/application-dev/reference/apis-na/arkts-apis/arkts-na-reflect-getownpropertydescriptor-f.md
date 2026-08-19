@@ -31,5 +31,3 @@ Gets the own property descriptor of the specified object. An own property descri
 
 | Type | Description |
 | --- | --- |
-| [TypedPropertyDescriptor](arkts-na-lib-es5-typedpropertydescriptor-i.md)&lt;P extends keyof T ? T[P] : any&gt; |  |
-

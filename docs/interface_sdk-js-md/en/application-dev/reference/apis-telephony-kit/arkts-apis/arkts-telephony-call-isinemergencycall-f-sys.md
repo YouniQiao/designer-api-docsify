@@ -28,7 +28,7 @@ Checks whether a call is an emergency call. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates an emergency call, and the value **false** indicates a non-emergency call. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback function used to return the result. The value **true** indicates an emergency call, and the value **false** indicates a non-emergency call. |
 
 **Error codes:**
 

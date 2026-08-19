@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## setPreferredApn
@@ -11,7 +12,7 @@
 function setPreferredApn(apnId: int): Promise<boolean>
 ```
 
-异步设置apnId对应的APN为首选APN。 > 注意: > > 如果传入的apnId为无效的apnId，切回运营商默认配置的优选Apn。
+异步设置apnId对应的APN为首选APN。 &gt; 注意: &gt; &gt; 如果传入的apnId为无效的apnId，切回运营商默认配置的优选Apn。
 
 **起始版本：** 23
 

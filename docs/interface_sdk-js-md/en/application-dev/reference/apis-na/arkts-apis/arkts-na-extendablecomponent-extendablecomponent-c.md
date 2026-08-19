@@ -34,7 +34,7 @@ The dialog controller of the custom component.
 
 | Type | Description |
 | --- | --- |
-| promptAction.DialogController | The controller of dialog, or undefined if the custom component does not display in the dialog. |
+| promptAction.DialogController \| undefined | The controller of dialog, or undefined if the custom component does not display in the dialog. |
 
 ## getUIContext
 
@@ -58,7 +58,7 @@ Get current UIContext.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext that the custom component belongs to. |
+| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext that the custom component belongs to. |
 
 ## getUniqueId
 
@@ -106,7 +106,7 @@ The onWillApplyTheme function is a custom hook to get active theme object from t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [Theme](arkts-na-arkui-theme-theme-i.md) | Yes | Custom theme init params. |
+| theme | [Theme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-theme-i.md) | Yes | Custom theme init params. |
 
 ## queryNavDestinationInfo
 
@@ -130,7 +130,7 @@ Queries the navigation destination information.
 
 | Type | Description |
 | --- | --- |
-| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) | The navigation destination information, or undefined if it is not available. |
+| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) \| undefined | The navigation destination information, or undefined if it is not available. |
 
 ## queryNavDestinationInfo
 
@@ -160,7 +160,7 @@ Queries the navigation destination information.
 
 | Type | Description |
 | --- | --- |
-| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) | The navigation destination information, or undefined if it is not available. |
+| [NavDestinationInfo](../../apis-arkui/arkts-components/arkts-arkui-navdestinationinfo-t.md) \| undefined | The navigation destination information, or undefined if it is not available. |
 
 ## queryNavigationInfo
 
@@ -184,7 +184,7 @@ Query the navigation information of the current custom component.
 
 | Type | Description |
 | --- | --- |
-| [NavigationInfo](../../apis-arkui/arkts-components/arkts-arkui-navigationinfo-t.md) | The navigation information, or undefined if it is not available |
+| [NavigationInfo](../../apis-arkui/arkts-components/arkts-arkui-navigationinfo-t.md) \| undefined | The navigation information, or undefined if it is not available |
 
 ## queryRouterPageInfo
 
@@ -208,5 +208,5 @@ Query the router page information of the current custom component.
 
 | Type | Description |
 | --- | --- |
-| [RouterPageInfo](../../apis-arkui/arkts-components/arkts-arkui-routerpageinfo-t.md) | The router page information, or undefined if it is not available. |
+| [RouterPageInfo](../../apis-arkui/arkts-components/arkts-arkui-routerpageinfo-t.md) \| undefined | The router page information, or undefined if it is not available. |
 

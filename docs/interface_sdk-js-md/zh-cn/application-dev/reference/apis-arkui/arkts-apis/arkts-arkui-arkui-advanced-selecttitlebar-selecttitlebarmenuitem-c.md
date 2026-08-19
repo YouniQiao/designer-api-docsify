@@ -11,6 +11,7 @@ Declaration of the menu item on the right side.
 ## 导入模块
 
 ```TypeScript
+import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription

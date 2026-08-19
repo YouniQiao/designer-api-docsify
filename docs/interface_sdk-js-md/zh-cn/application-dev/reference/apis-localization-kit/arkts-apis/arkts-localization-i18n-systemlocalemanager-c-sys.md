@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -66,13 +67,13 @@ getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<Loc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | languages | Array&lt;string&gt; | 是 | 待排序的语言列表，要求是合法的语言ID。 |
-| options | [SortOptions](../../apis-na/arkts-apis/arkts-na-i18n-sortoptions-i-sys.md) | 否 | 语言排序选项。默认值：所有属性都取默认值时的配置项。 |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | 否 | 语言排序选项。默认值：所有属性都取默认值时的配置项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[LocaleItem](../../apis-na/arkts-apis/arkts-na-i18n-localeitem-i-sys.md)&gt; | 排序后的语言信息列表。 |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; | 排序后的语言信息列表。 |
 
 **错误码：**
 
@@ -122,13 +123,13 @@ getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | regions | Array&lt;string&gt; | 是 | 待排序的国家或地区列表，要求是合法的国家或地区ID。 |
-| options | [SortOptions](../../apis-na/arkts-apis/arkts-na-i18n-sortoptions-i-sys.md) | 否 | 国家或地区排序选项。 区域ID的默认值为系统当前区域ID，isUseLocalName的默认值为false，isSuggestedFirst的默认值为true。 |
+| options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | 否 | 国家或地区排序选项。 区域ID的默认值为系统当前区域ID，isUseLocalName的默认值为false，isSuggestedFirst的默认值为true。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[LocaleItem](../../apis-na/arkts-apis/arkts-na-i18n-localeitem-i-sys.md)&gt; | 排序后的国家或地区信息列表。 |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; | 排序后的国家或地区信息列表。 |
 
 **错误码：**
 
@@ -177,7 +178,7 @@ static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TimeZoneCityItem](../../apis-na/arkts-apis/arkts-na-i18n-timezonecityitem-i-sys.md)&gt; | 排序后的时区城市组合信息列表。 |
+| Array&lt;[TimeZoneCityItem](arkts-localization-i18n-timezonecityitem-i-sys.md)&gt; | 排序后的时区城市组合信息列表。 |
 
 **错误码：**
 

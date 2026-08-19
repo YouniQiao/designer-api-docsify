@@ -13,6 +13,7 @@ SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedre
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## details

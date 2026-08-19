@@ -1,6 +1,6 @@
 # ShadowLayer
 
-Implements a shadow layer. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Implements a shadow layer. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Creates a ShadowLayer object.
 
 | Type | Description |
 | --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer object. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined | ShadowLayer object. |
 
 **Error codes:**
 
@@ -146,7 +146,7 @@ Creates a ShadowLayer object.
 
 | Type | Description |
 | --- | --- |
-| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) | ShadowLayer object. |
+| [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| undefined | ShadowLayer object. |
 
 **Error codes:**
 

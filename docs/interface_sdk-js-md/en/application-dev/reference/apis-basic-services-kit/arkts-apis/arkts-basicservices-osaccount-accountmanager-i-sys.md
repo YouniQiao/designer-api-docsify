@@ -37,7 +37,7 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -234,7 +234,7 @@ Creates an OS account. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | localName | string | Yes | Name of the OS account to create. |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account to create. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -372,7 +372,7 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- | --- | --- |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account to create. |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -549,7 +549,7 @@ Obtains the bundle ID based on the specified UID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Process UID. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -869,7 +869,7 @@ Obtains the constraint source information of an OS account. This API uses an asy
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
 | constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) whose source information is to be obtained. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the [constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) source information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the [constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) source information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -987,7 +987,7 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the profile photo information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the profile photo information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1122,7 +1122,7 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
 
 **Error codes:**
 
@@ -1366,7 +1366,7 @@ Unsubscribes from the event indicating the completion of an OS account activatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -1400,7 +1400,7 @@ Unsubscribes from the event indicating that an OS account is being activated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -1431,7 +1431,7 @@ Unsubscribes from constraint change events associated with the specified callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback for receiving constraint change information. - Callback used to listen for the constraint change events.<br>The default value is **undefined**, indicating that all subscription records are unsubscribed.<br>If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback for receiving constraint change information. - Callback used to listen for the constraint change events.<br>The default value is **undefined**, indicating that all subscription records are unsubscribed.<br>If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
 
 **Error codes:**
 
@@ -1488,7 +1488,7 @@ Unsubscribes from the OS account switched event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
@@ -1520,7 +1520,7 @@ Unsubscribes from the OS account switching event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
@@ -1530,7 +1530,7 @@ Unsubscribes from the OS account switching event.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
-## off_activate('activate' | 'activating')
+## off('activate' | 'activating')
 
 ```TypeScript
 off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
@@ -1554,7 +1554,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
 **Error codes:**
 
@@ -1585,7 +1585,7 @@ try {
 }
 ```
 
-## off_activating('activate' | 'activating')
+## off('activate' | 'activating')
 
 ```TypeScript
 off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
@@ -1609,7 +1609,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
 **Error codes:**
 
@@ -1640,7 +1640,7 @@ try {
 }
 ```
 
-## off_switched('switched')
+## off('switched')
 
 ```TypeScript
 off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
@@ -1665,7 +1665,7 @@ Unsubscribes from the end of a switchover between a foreground OS account and a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switched** event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switched** event. |
 
 **Error codes:**
 
@@ -1690,7 +1690,7 @@ try {
 }
 ```
 
-## off_switching('switching')
+## off('switching')
 
 ```TypeScript
 off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
@@ -1715,7 +1715,7 @@ Unsubscribes from the switchover between a foreground OS account and a backgroun
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switching** event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switching** event. |
 
 **Error codes:**
 
@@ -1763,7 +1763,7 @@ Subscribes to the event indicating the completion of an OS account activation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -1797,7 +1797,7 @@ Subscribes to the event indicating that an OS account is being activated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -1829,7 +1829,7 @@ Subscribes to one or more constraint change events of the OS account to which th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | constraints | string[] | Yes | List of [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to be subscribed to. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the constraint change events. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the constraint change events. |
 
 **Error codes:**
 
@@ -1880,7 +1880,7 @@ Subscribes to the OS account switched event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
@@ -1912,7 +1912,7 @@ Subscribes to the OS account switching event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
@@ -1922,7 +1922,7 @@ Subscribes to the OS account switching event.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
-## on_activate('activate' | 'activating')
+## on('activate' | 'activating')
 
 ```TypeScript
 on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
@@ -1946,7 +1946,7 @@ Subscribes to the OS account activation states, including the states of the acco
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
 **Error codes:**
 
@@ -1977,7 +1977,7 @@ try {
 }
 ```
 
-## on_activating('activate' | 'activating')
+## on('activate' | 'activating')
 
 ```TypeScript
 on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
@@ -2001,7 +2001,7 @@ Subscribes to the OS account activation states, including the states of the acco
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
 | name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
 **Error codes:**
 
@@ -2032,7 +2032,7 @@ try {
 }
 ```
 
-## on_switched('switched')
+## on('switched')
 
 ```TypeScript
 on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
@@ -2057,7 +2057,7 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. <br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. <br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
@@ -2087,7 +2087,7 @@ try {
 }
 ```
 
-## on_switching('switching')
+## on('switching')
 
 ```TypeScript
 on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
@@ -2112,7 +2112,7 @@ Subscribes to the switchover between a foreground OS account and a background OS
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.<br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.<br>Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
@@ -2164,7 +2164,7 @@ Queries information about all the OS accounts created. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all created OS accounts. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all created OS accounts. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -2312,7 +2312,7 @@ Queries the maximum number of OS accounts that can be created. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the maximum number of OS accounts that can be created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the maximum number of OS accounts that can be created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2462,7 +2462,7 @@ Queries information about the OS account of the given ID. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
@@ -2539,7 +2539,7 @@ Removes an OS account. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2738,7 +2738,7 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 | localId | int | Yes | ID of the target OS account. |
 | constraints | Array&lt;string&gt; | Yes | [Constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to set or remove. |
 | enable | boolean | Yes | Whether to set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2820,7 +2820,7 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
 | localName | string | Yes | Account name to set. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2901,7 +2901,7 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | localId | int | Yes | ID of the target OS account. |
 | photo | string | Yes | Profile photo information. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getAsyKeySpec
@@ -45,7 +46,7 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint | 获取的密钥参数内容。 |
+| bigint \| string \| int | 获取的密钥参数内容。 |
 
 **错误码：**
 
@@ -141,7 +142,7 @@ async function testgetAsyKeySpec() {
 getEncodedDer(format: string): DataBlob
 ```
 
-支持根据指定的密钥格式（如规范、压缩状态等），获取符合ASN.1语法和DER编码的公钥数据。 > **说明：** > > 本接口和[Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded)的区别是： > 1. 本接口可以指定获取密钥数据的格式。 > 2. [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded)不支持指定获取密钥数据的格式。
+支持根据指定的密钥格式（如规范、压缩状态等），获取符合ASN.1语法和DER编码的公钥数据。 &gt; **说明：** &gt; &gt; 本接口和[Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded)的区别是： &gt; 1. 本接口可以指定获取密钥数据的格式。 &gt; 2. [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getencoded)不支持指定获取密钥数据的格式。
 
 **起始版本：** 23
 

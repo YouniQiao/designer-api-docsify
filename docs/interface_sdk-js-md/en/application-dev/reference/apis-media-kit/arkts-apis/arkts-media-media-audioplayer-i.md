@@ -40,7 +40,7 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
 
 ## getTrackDescription
 
@@ -66,7 +66,7 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 | --- | --- |
 | Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Promise used to return a **MediaDescription** array, which records the audio track information. |
 
-## on_audioInterrupt('audioInterrupt')
+## on('audioInterrupt')
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
@@ -78,7 +78,7 @@ Subscribes to the audio interruption event. For details, see [audio.InterruptEve
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'audioInterrupt', callback: Callback&lt;audio.InterruptEvent&gt;)
 
 <!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
@@ -91,7 +91,7 @@ Subscribes to the audio interruption event. For details, see [audio.InterruptEve
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
 | callback | (info: audio.InterruptEvent) =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_bufferingUpdate('bufferingUpdate')
+## on('bufferingUpdate')
 
 ```TypeScript
 on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void
@@ -103,7 +103,7 @@ Subscribes to the audio buffering update event. This API works only under online
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'bufferingUpdate', callback: OnBufferingUpdateHandler)
 
 <!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
 
@@ -116,7 +116,7 @@ Subscribes to the audio buffering update event. This API works only under online
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
 | callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) is fixed at **0**. |
 
-## on_dataLoad('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
 ```TypeScript
 on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
@@ -128,7 +128,7 @@ Subscribes to the audio playback events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -141,7 +141,7 @@ Subscribes to the audio playback events.
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -153,7 +153,7 @@ Subscribes to audio playback error events. After an error event is reported, you
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'error', callback: ErrorCallback)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'error', callback: ErrorCallback)
 
 <!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -164,9 +164,9 @@ Subscribes to audio playback error events. After an error event is reported, you
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during audio playback. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
 
-## on_finish('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
 ```TypeScript
 on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
@@ -178,7 +178,7 @@ Subscribes to the audio playback events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -191,7 +191,7 @@ Subscribes to the audio playback events.
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_pause('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
 ```TypeScript
 on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
@@ -203,7 +203,7 @@ Subscribes to the audio playback events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -216,7 +216,7 @@ Subscribes to the audio playback events.
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_play('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
 ```TypeScript
 on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
@@ -228,7 +228,7 @@ Subscribes to the audio playback events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -241,7 +241,7 @@ Subscribes to the audio playback events.
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_reset('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
 ```TypeScript
 on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
@@ -253,7 +253,7 @@ Subscribes to the audio playback events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -266,7 +266,7 @@ Subscribes to the audio playback events.
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_stop('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
 ```TypeScript
 on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
@@ -278,7 +278,7 @@ Subscribes to the audio playback events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -291,7 +291,7 @@ Subscribes to the audio playback events.
 | type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setvolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
-## on_timeUpdate('timeUpdate')
+## on('timeUpdate')
 
 ```TypeScript
 on(type: 'timeUpdate', callback: Callback<number>): void
@@ -303,7 +303,7 @@ Subscribes to the **'timeUpdate'** event. This event is reported every second wh
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'timeUpdate', callback: Callback&lt;int&gt;)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'timeUpdate', callback: Callback&lt;int&gt;)
 
 <!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void--><!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void-End-->
 
@@ -314,9 +314,9 @@ Subscribes to the **'timeUpdate'** event. This event is reported every second wh
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case.<br>The **'timeUpdate'** event is triggered when the audio playback starts after an audio playback timestamp update. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback invoked when the event is triggered. The input parameter is the updated timestamp. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Callback invoked when the event is triggered. The input parameter is the updated timestamp. |
 
-## on_volumeChange('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
+## on('play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange')
 
 ```TypeScript
 on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void
@@ -328,7 +328,7 @@ Subscribes to the audio playback events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-media-media-avplayer-i.md#on_mediakeysysteminfoupdatemediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
+**Substitutes:** [on](arkts-media-media-avplayer-i.md#onmediakeysysteminfoupdate)(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 

@@ -29,7 +29,7 @@ Unregisters the custom handler of EAP packets for extensible authentication. Thi
 | netType | int | Yes | Network type. The value can be **1** or **2**. <br>The value **1** indicates WLAN, and the value **2** indicates Ethernet. |
 | eapCode | int | Yes | EAP code. The value can be any of the following: <br>code=1 Request, code=2 Response, code=3 Success, code=4 Failure. |
 | eapType | int | Yes | EAP method. The value range is [0, 255]. <br>Common values include the following: eapType=1 Identity, eapType=2 Notification, eapType=3 NAK, eapType=4 MD5-Challenge, eapType=5 OTP (One-Time Password), eapType=6 GTC (Generic Token Card), eapType=13 EAP-TLS, eapType=21 EAP-TTLS, eapType=25 EAP-PEAP, eapType=254 Expanded Types, and eapType=255 Experimental use. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EapData](arkts-network-eap-eapdata-i.md)&gt; | Yes | Callback function, which returns the packet of the specified eapCode+ eapType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EapData](arkts-network-eap-eapdata-i.md)&gt; | Yes | Callback function, which returns the packet of the specified eapCode+ eapType. |
 
 **Error codes:**
 

@@ -28,5 +28,5 @@ export function getWaterFlowAttribute(node: FrameNode): WaterFlowAttribute | und
 
 | 类型 | 说明 |
 | --- | --- |
-| WaterFlowAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| WaterFlowAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

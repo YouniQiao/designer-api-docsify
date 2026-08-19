@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionUsedRecord
@@ -122,7 +123,7 @@ function getPermissionUsedRecord(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | request | [PermissionUsedRequest](arkts-ability-privacymanager-permissionusedrequest-i-sys.md) | 是 | 查询权限使用记录的请求。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | 是 | 回调函数。当查询记录成功，err为undefined，data为获取到的权限使用记录；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md)&gt; | 是 | 回调函数。当查询记录成功，err为undefined，data为获取到的权限使用记录；否则为错误对象。 |
 
 **错误码：**
 

@@ -13,7 +13,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-Cancels an asynchronous USB data transfer request. > **NOTE：**> > This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by > **usbSubmitTransfer**). > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) > API to claim a communication interface.
+Cancels an asynchronous USB data transfer request. &gt; **NOTE：**&gt; &gt; This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by &gt; **usbSubmitTransfer**). &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface.
 
 **Since:** 23
 

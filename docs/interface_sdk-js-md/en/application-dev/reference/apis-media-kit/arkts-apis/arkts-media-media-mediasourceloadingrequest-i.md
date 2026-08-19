@@ -93,7 +93,7 @@ The interface for application used to send requested data to AVPlayer.
 
 | Type | Description |
 | --- | --- |
-| int | accept bytes for current read. The value less than zero means failed. -2, means player need current data any more, the client should stop current read process. -3, means player buffer is full, the client should wait for next read. |
+| int \| undefined | accept bytes for current read. The value less than zero means failed. -2, means player need current data any more, the client should stop current read process. -3, means player buffer is full, the client should wait for next read. |
 
 ## respondHeader
 

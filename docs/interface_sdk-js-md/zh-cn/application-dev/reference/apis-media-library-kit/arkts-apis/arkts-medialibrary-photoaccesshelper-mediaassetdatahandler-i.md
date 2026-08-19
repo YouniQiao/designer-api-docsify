@@ -1,6 +1,6 @@
 # MediaAssetDataHandler
 
-媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。 > **说明：** > > - 本Interface首批接口从API version 11开始支持。
+媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 11开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## onDataPrepared

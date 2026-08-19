@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## 汇总

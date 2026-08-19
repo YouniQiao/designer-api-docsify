@@ -10,7 +10,7 @@ The **Stepper** component provides a step navigator, suitable for guiding users 
 Stepper(value?: { index?: number })
 ```
 
-Creates a **Stepper** component. > **NOTE：**
+Creates a **Stepper** component. &gt; **NOTE：**
 
 **Since:** 8
 

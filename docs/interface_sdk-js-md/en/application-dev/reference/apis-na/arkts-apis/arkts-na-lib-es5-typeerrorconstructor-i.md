@@ -31,8 +31,6 @@ new(message?: string): TypeError
 
 | Type | Description |
 | --- | --- |
-| TypeError |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(message?: string): TypeError
 
 | Type | Description |
 | --- | --- |
-| TypeError |  |
-
 ## prototype
 
 ```TypeScript

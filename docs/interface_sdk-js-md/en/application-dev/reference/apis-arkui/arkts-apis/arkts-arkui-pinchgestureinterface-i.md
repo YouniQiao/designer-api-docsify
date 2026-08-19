@@ -1,6 +1,6 @@
 # PinchGestureInterface
 
-**PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers. > **NOTE：**> > To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make > contact again to satisfy the recognition criteria.
+**PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers. &gt; **NOTE：**&gt; &gt; To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make &gt; contact again to satisfy the recognition criteria.
 
 **Inheritance/Implementation:** PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 

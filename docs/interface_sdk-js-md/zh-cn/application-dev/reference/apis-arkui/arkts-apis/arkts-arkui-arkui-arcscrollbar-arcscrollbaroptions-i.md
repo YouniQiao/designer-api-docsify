@@ -1,6 +1,6 @@
 # ArcScrollBarOptions
 
-ArcScrollBar的构造函数参数。 > **说明：** > > ArcScrollBar与可滚动组件需通过scroller进行绑定后方能实现联动，且ArcScrollBar与可滚动组件仅限于一对一的绑定方式。
+ArcScrollBar的构造函数参数。 &gt; **说明：** &gt; &gt; ArcScrollBar与可滚动组件需通过scroller进行绑定后方能实现联动，且ArcScrollBar与可滚动组件仅限于一对一的绑定方式。
 
 **起始版本：** 18
 
@@ -11,6 +11,7 @@ ArcScrollBar的构造函数参数。 > **说明：** > > ArcScrollBar与可滚�
 ## 导入模块
 
 ```TypeScript
+import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 ```
 
 ## scroller

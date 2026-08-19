@@ -34,7 +34,7 @@ getNodeByPath(path: string): Node | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 返回节点对象。 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回节点对象。 |
 
 **示例**
 

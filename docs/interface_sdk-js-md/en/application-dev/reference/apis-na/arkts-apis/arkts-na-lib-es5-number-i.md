@@ -31,8 +31,6 @@ Returns a string containing a number represented in exponential notation.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toFixed
 
 ```TypeScript
@@ -55,8 +53,6 @@ Returns a string representing a number in fixed-point notation.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toLocaleString
 
 ```TypeScript
@@ -80,8 +76,6 @@ Converts a number to a string by using the current or specified locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toPrecision
 
 ```TypeScript
@@ -104,8 +98,6 @@ Returns a string containing a number represented either in exponential or fixed-
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -128,8 +120,6 @@ Returns a string representation of an object.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## valueOf
 
 ```TypeScript
@@ -146,5 +136,3 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-

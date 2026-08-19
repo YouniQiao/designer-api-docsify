@@ -3,15 +3,16 @@
 ## 导入模块
 
 ```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
-## on_selectionCompleted('selectionCompleted')
+## on('selectionCompleted')
 
 ```TypeScript
 function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 ```
 
-订阅划词完成事件，与 [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#off_selectioncompletedselectioncompleted) 搭配使用取消订阅。
+订阅划词完成事件，与 [off('selectionCompleted')](arkts-basicservices-selectionmanager-offselectioncompleted-f-sys.md#offselectioncompleted) 搭配使用取消订阅。
 
 **起始版本：** 20
 
@@ -26,7 +27,7 @@ function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectionCompleted' | 是 | 设置监听类型，固定取值为'selectionCompleted'。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | 是 | 回调函数，返回划词事件信息[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | 是 | 回调函数，返回划词事件信息[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
 
 **错误码：**
 

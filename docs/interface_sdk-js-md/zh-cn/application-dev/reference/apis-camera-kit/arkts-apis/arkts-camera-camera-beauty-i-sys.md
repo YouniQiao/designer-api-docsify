@@ -15,6 +15,8 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) Provides 
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getBeauty

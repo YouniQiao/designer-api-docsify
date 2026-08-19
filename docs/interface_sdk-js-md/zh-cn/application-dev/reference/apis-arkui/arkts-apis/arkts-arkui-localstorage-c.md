@@ -1,6 +1,6 @@
 # LocalStorage(System API)
 
-LocalStorage是页面级的UI状态存储，通过[@Entry](../../../reference/apis-arkui/arkui-ts/ts-universal-entry.md#entry)装饰器接收的参数可以在页面内 共享同一个LocalStorage实例。具体UI使用说明，详见[LocalStorage：页面级UI状态存储](../../../ui/state-management/arkts-localstorage.md)。 > **说明：** > > 从API version 12开始，LocalStorage支持[Map](../../../ui/state-management/arkts-localstorage.md#装饰map类型变量)、 > [Set](../../../ui/state-management/arkts-localstorage.md#装饰set类型变量)、 > [Date类型](../../../ui/state-management/arkts-localstorage.md#装饰date类型变量)，支持null、undefined以及 > [联合类型](../../../ui/state-management/arkts-localstorage.md#localstorage支持联合类型)。
+LocalStorage是页面级的UI状态存储，通过[@Entry](../../../reference/apis-arkui/arkui-ts/ts-universal-entry.md#entry)装饰器接收的参数可以在页面内 共享同一个LocalStorage实例。具体UI使用说明，详见[LocalStorage：页面级UI状态存储](../../../ui/state-management/arkts-localstorage.md)。 &gt; **说明：** &gt; &gt; 从API version 12开始，LocalStorage支持[Map](../../../ui/state-management/arkts-localstorage.md#装饰map类型变量)、 &gt; [Set](../../../ui/state-management/arkts-localstorage.md#装饰set类型变量)、 &gt; [Date类型](../../../ui/state-management/arkts-localstorage.md#装饰date类型变量)，支持null、undefined以及 &gt; [联合类型](../../../ui/state-management/arkts-localstorage.md#localstorage支持联合类型)。
 
 **起始版本：** 9
 
@@ -180,7 +180,7 @@ get<T>(propName: string): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | LocalStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| T \| undefined | LocalStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 **示例**
 
@@ -196,7 +196,7 @@ let value: number = storage.get('PropA') as number; // 47
 static getShared(): LocalStorage
 ```
 
-获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。 > **说明：** > > 从API version 12开始，可使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [getSharedLocalStorage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
+获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。 &gt; **说明：** &gt; &gt; 从API version 12开始，可使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getSharedLocalStorage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)明确UI执行上下文中的LocalStorage实例。
 
 **起始版本：** 10
 
@@ -396,7 +396,7 @@ public ref<T>(propName: string): AbstractProperty<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | 返回LocalStorage中propName对应属性的引用，如果LocalStorage中不存在对应的propName，则返回 undefined。 |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | 返回LocalStorage中propName对应属性的引用，如果LocalStorage中不存在对应的propName，则返回 undefined。 |
 
 **示例**
 

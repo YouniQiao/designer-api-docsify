@@ -3,6 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { AdComponent } from '@kit.AdsKit';
+import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
+import { AutoAdComponent } from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## showAd
@@ -11,7 +15,7 @@
 function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void
 ```
 
-展示全屏广告。 > **说明：** > > 1. 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。 > > 2. 该接口仅支持展示激励广告和插屏广告。
+展示全屏广告。 &gt; **说明：** &gt; &gt; 1. 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。 &gt; &gt; 2. 该接口仅支持展示激励广告和插屏广告。
 
 **起始版本：** 11
 

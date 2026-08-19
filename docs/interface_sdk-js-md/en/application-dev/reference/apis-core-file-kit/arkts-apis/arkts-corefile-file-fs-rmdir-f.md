@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function rmdir(path: string): Promise<void>
 ```
 
-Removes a directory and all its subdirectories and files. This API uses a promise to return the result. > **NOTE：**> > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
+Removes a directory and all its subdirectories and files. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 9
 
@@ -60,7 +60,7 @@ Removes a directory and all its subdirectories and files. This API uses a promis
 declare function rmdir(path: string, callback: AsyncCallback<void>): void
 ```
 
-Removes a directory and all its subdirectories and files. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
+Removes a directory and all its subdirectories and files. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
 
 **Since:** 9
 
@@ -75,7 +75,7 @@ Removes a directory and all its subdirectories and files. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

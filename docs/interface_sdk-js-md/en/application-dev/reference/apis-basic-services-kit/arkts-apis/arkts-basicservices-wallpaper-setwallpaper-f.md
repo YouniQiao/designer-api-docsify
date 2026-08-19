@@ -34,7 +34,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setWallpaper. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setWallpaper. |
 
 **Examples**
 

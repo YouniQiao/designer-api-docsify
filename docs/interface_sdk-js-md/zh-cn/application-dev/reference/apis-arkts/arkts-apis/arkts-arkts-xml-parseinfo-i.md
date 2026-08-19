@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## getAttributeCount
@@ -103,7 +104,7 @@ console.info(str);
 getDepth(): int
 ```
 
-ArkTS-Sta: getDepth(): int 获取元素的当前深度。 > **说明：** > > 标签内的空白事件深度与标签的深度保持一致。
+ArkTS-Sta: getDepth(): int 获取元素的当前深度。 &gt; **说明：** &gt; &gt; 标签内的空白事件深度与标签的深度保持一致。
 
 **起始版本：** 23
 

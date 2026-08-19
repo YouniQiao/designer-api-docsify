@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## startEthEap

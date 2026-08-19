@@ -108,5 +108,5 @@ Set the Toggle Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableToggle](arkts-na-toggle-extendabletoggle-c.md) |  |
 

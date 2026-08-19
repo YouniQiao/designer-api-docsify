@@ -1,6 +1,6 @@
 # Path
 
-A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -213,7 +213,7 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 approximate(acceptableError: number): Array<number>
 ```
 
-Converts the existing path into an approximate path consisting of consecutive line segments. > **NOTE：**> > - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting > performance and memory usage. > > - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially > distorting the original shape. > > - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies > them to polygons by keeping just the start and end points of their Bezier curve segments.
+Converts the existing path into an approximate path consisting of consecutive line segments. &gt; **NOTE：**&gt; &gt; - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting &gt; performance and memory usage. &gt; &gt; - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially &gt; distorting the original shape. &gt; &gt; - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies &gt; them to polygons by keeping just the start and end points of their Bezier curve segments.
 
 **Since:** 20
 
@@ -263,7 +263,7 @@ Approximates the path with a series of line segments.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;double&gt; | Returns with the array containing point components. <br>There are three components for each point: <br>1. Fraction along the length of the path that the point resides [0.0, 1.0]. <br>2. The x coordinate of the point. <br>3. The y coordinate of the point. |
+| Array&lt;double&gt; \| undefined | Returns with the array containing point components. <br>There are three components for each point: <br>1. Fraction along the length of the path that the point resides [0.0, 1.0]. <br>2. The x coordinate of the point. <br>3. The y coordinate of the point. |
 
 **Error codes:**
 
@@ -546,7 +546,7 @@ Obtains the minimum bounding rectangle that encloses this path.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Rect object. |
+| common2D.Rect \| undefined | Rect object. |
 
 ## getConicWeightData
 
@@ -608,7 +608,7 @@ Gets fill type, the rule used to fill path.
 
 | Type | Description |
 | --- | --- |
-| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Returns the pathFillType. |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) \| undefined | Returns the pathFillType. |
 
 ## getLastPoint
 
@@ -652,7 +652,7 @@ Gets the last point of the path.
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | Returns the last point of the path, or undefined if the path is empty. |
+| common2D.Point \| undefined | Returns the last point of the path, or undefined if the path is empty. |
 
 ## getLength
 
@@ -753,7 +753,7 @@ Obtains the operation iterator of this path.
 
 | Type | Description |
 | --- | --- |
-| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Indicates the pointer to an pathIterator object. |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) \| undefined | Indicates the pointer to an pathIterator object. |
 
 ## getPointData
 
@@ -1154,7 +1154,7 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 | Type | Description |
 | --- | --- |
-| Path | New path generated. |
+| Path \| undefined | New path generated. |
 
 **Error codes:**
 

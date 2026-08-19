@@ -12,6 +12,8 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 ## 导入模块
 
 ```TypeScript
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -31,9 +33,9 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 | [download](arkts-basicservices-request-download-f.md) | 创建并启动一个下载任务，使用Promise异步回调。 |
 | [downloadFile](arkts-basicservices-request-downloadfile-f.md) | 创建并启动一个下载任务，使用Promise异步回调，支持HTTP协议。通过 on('complete'\|'pause'\|'remove') 可以获取任务下载时的状态信息，包括任务完成、暂停或移除。通过 on('fail')可以获取任务下载时的错误信息。 |
 | [upload](arkts-basicservices-request-upload-f.md) | 创建并启动一个上传任务，使用callback异步回调。 |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | 创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过 [on('complete'\|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progressprogress) 可获取任务上传时的成功信息或错误信息。 |
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | 创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过 [on('complete'\|'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) 可获取任务上传时的成功信息或错误信息。 |
 | [upload](arkts-basicservices-request-upload-f.md) | 创建并启动一个上传任务，使用Promise异步回调。 |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | 创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过 [on('complete'\|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progressprogress) 可获取任务上传时的成功信息或错误信息。 |
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md) | 创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过 [on('complete'\|'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) 可获取任务上传时的成功信息或错误信息。 |
 
 ### 接口
 
@@ -45,7 +47,7 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 | [File](arkts-basicservices-request-file-i.md) | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的文件列表。 |
 | [RequestData](arkts-basicservices-request-requestdata-i.md) | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的表单数据。 |
 | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | 上传任务的配置信息。 |
-| [TaskState](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是 [on('complete' \| 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progressprogress) 和 [off('complete' \| 'fail')](arkts-basicservices-request-uploadtask-i.md#off_progressprogress) 接口的回调参数。 |
+| [TaskState](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是 [on('complete' \| 'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) 和 [off('complete' \| 'fail')](arkts-basicservices-request-uploadtask-i.md#offprogress) 接口的回调参数。 |
 | [UploadTask](arkts-basicservices-request-uploadtask-i.md) | 上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过 [request.uploadFile](arkts-basicservices-request-uploadfile-f.md)获取，callback形式通过 [request.uploadFile](arkts-basicservices-request-uploadfile-f.md) 获取。 |
 
 ### 类型

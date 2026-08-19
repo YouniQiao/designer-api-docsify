@@ -11,6 +11,8 @@ UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## close
@@ -372,7 +374,7 @@ async function demo() {
 isActived(): Promise<boolean>
 ```
 
-判断窗口是否为用户正在交互窗口。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isactive)替代。
+判断窗口是否为用户正在交互窗口。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isactive)替代。
 
 **起始版本：** 9
 

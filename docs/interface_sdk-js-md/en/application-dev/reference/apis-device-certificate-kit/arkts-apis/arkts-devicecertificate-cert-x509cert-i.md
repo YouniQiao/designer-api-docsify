@@ -335,7 +335,7 @@ Obtains the serialized X.509 certificate data. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized X.509 certificate data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized X.509 certificate data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -651,7 +651,7 @@ async function certGetExtensionsObject() {
 getIssuerAltNames(): DataArray
 ```
 
-Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. > **NOTE：**> > The obtained IANs contain a string terminator.
+Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. &gt; **NOTE：**&gt; &gt; The obtained IANs contain a string terminator.
 
 **Since:** 23
 
@@ -737,7 +737,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getIssuerName(): DataBlob
 ```
 
-Obtains the issuer name of this X.509 certificate. > **NOTE：**> > - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove > this terminator based on your business requirements. > - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name > string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
+Obtains the issuer name of this X.509 certificate. &gt; **NOTE：**&gt; &gt; - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove &gt; this terminator based on your business requirements. &gt; - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name &gt; string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
 
 **Since:** 23
 
@@ -1402,7 +1402,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getSerialNumber(): number
 ```
 
-Obtains the X.509 certificate serial number. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 10. Use > [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
+Obtains the X.509 certificate serial number. &gt; **NOTE：**&gt; &gt; This API is supported since API version 9 and deprecated since API version 10. Use &gt; [X509Cert.getCertSerialNumber()](#getcertserialnumber) instead.
 
 **Since:** 9
 
@@ -1793,7 +1793,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getSubjectAltNames(): DataArray
 ```
 
-Obtains the Subject Alternative Names (SANs) of this X.509 certificate. > **NOTE：**> > The obtained SANs contain a string terminator.
+Obtains the Subject Alternative Names (SANs) of this X.509 certificate. &gt; **NOTE：**&gt; &gt; The obtained SANs contain a string terminator.
 
 **Since:** 23
 
@@ -1881,7 +1881,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-Obtains the subject name of this X.509 certificate. > **NOTE：**> > - If the encodingType parameter is not set, the obtained certificate subject name ends with a > NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements. > - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When > converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to > separate relative distinguished names. > - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate > subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
+Obtains the subject name of this X.509 certificate. &gt; **NOTE：**&gt; &gt; - If the encodingType parameter is not set, the obtained certificate subject name ends with a &gt; NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements. &gt; - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When &gt; converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to &gt; separate relative distinguished names. &gt; - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate &gt; subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
 
 **Since:** 23
 
@@ -2517,7 +2517,7 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # LayoutManager
 
-布局管理器对象。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
+布局管理器对象。 &gt; **说明：** &gt; &gt; 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
 **起始版本：** 23
 
@@ -39,7 +39,7 @@ getCharacterPositionAtCoordinate(x: double, y: double): PositionWithAffinity | u
 
 | 类型 | 说明 |
 | --- | --- |
-| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) | 字符的位置信息。当[LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined | 字符的位置信息。当[LayoutManager]{ |
 
 ## getCharacterPositionAtCoordinate
 
@@ -71,7 +71,7 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding):
 
 | 类型 | 说明 |
 | --- | --- |
-| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) | 字符的位置信息。当[LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined | 字符的位置信息。当[LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -101,7 +101,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -132,7 +132,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -163,7 +163,7 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) | 字形位置信息。 |
+| [PositionWithAffinity](arkts-arkui-textcommon-positionwithaffinity-i.md) \| undefined | 字形位置信息。 |
 
 ## getGlyphRangeForCharacterRange
 
@@ -193,7 +193,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -224,7 +224,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textcommon-textrange-i.md)&gt; \| undefined | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围，当返回的范围是异常值时，范围内元素为-1。当 [LayoutManager]{ |
 
 ## getLineCount
 
@@ -248,7 +248,7 @@ getLineCount(): int | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 组件内容的总行数。 |
+| int \| undefined | 组件内容的总行数。 |
 
 ## getLineMetrics
 
@@ -278,7 +278,7 @@ ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined 获取指定
 
 | 类型 | 说明 |
 | --- | --- |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) | 行信息、文本样式信息、以及字体属性信息。<br/>当行号小于0或超出实际行，返回无效值。 |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) \| undefined | 行信息、文本样式信息、以及字体属性信息。<br/>当行号小于0或超出实际行，返回无效值。 |
 
 ## getRectsForRange
 
@@ -310,5 +310,5 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; | 矩形区域数组。 |
+| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; \| undefined | 矩形区域数组。 |
 

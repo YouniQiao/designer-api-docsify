@@ -27,7 +27,7 @@ Get the option mode of NR.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NROptionMode](arkts-telephony-radio-nroptionmode-e-sys.md)&gt; | Yes | Indicates the callback for getting the selection mode of NR. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NROptionMode](arkts-telephony-radio-nroptionmode-e-sys.md)&gt; | Yes | Indicates the callback for getting the selection mode of NR. |
 
 **Error codes:**
 

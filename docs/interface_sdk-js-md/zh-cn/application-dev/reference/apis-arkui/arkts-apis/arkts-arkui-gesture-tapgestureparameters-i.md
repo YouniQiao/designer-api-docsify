@@ -1,6 +1,6 @@
 # TapGestureParameters
 
-> **说明：** > > 点击手势参数。继承自[BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)。
+> **说明：** &gt; &gt; 点击手势参数。继承自[BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)。
 
 **继承/实现关系：** TapGestureParameters extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md)
 

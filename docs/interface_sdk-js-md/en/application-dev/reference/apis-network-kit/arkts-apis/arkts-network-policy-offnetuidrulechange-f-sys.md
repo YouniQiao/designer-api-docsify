@@ -6,7 +6,7 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-## off_netUidRuleChange('netUidRuleChange')
+## off('netUidRuleChange')
 
 ```TypeScript
 function off(type: 'netUidRuleChange', callback?: Callback<NetUidRuleInfo>): void
@@ -29,7 +29,7 @@ Unsubscribes from **rule** changes. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netUidRuleChange' | Yes | Event type. The value **netUidRuleChange** indicates a rule change event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidRuleInfo](arkts-network-policy-netuidruleinfo-i-sys.md)&gt; | No | Callback used to return the result. It is called when the rule changes.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetUidRuleInfo](arkts-network-policy-netuidruleinfo-i-sys.md)&gt; | No | Callback used to return the result. It is called when the rule changes.<br>**Since:** 11 |
 
 **Error codes:**
 

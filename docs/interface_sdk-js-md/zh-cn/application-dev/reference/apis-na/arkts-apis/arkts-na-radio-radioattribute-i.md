@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<RadioAttribute> | AttributeModifie
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## checked
 
 ```TypeScript
@@ -58,8 +56,6 @@ checked(isChecked: boolean | undefined | Bindable<boolean>): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -82,8 +78,6 @@ contentModifier(modifier: ContentModifier<RadioConfiguration> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -106,8 +100,6 @@ onChange(callback: OnRadioChangeCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## radioStyle
 
 ```TypeScript
@@ -130,8 +122,6 @@ radioStyle(value?: RadioStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

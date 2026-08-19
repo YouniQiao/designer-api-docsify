@@ -1,6 +1,6 @@
 # @ohos.advertising
 
-The advertising module provides APIs for requesting and displaying ads. > **NOTE：**> The initial APIs of this module are supported since API version 11. > Newly added APIs will be marked with a superscript to indicate their earliest API version.
+The advertising module provides APIs for requesting and displaying ads. &gt; **NOTE：**&gt; The initial APIs of this module are supported since API version 11. &gt; Newly added APIs will be marked with a superscript to indicate their earliest API version.
 
 **Since:** 11
 
@@ -28,7 +28,7 @@ import { advertising } from '@kit.AdsKit';
 | [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md) | Parses and processes the body of an ad response (this API is only open to some pre-installed system applications). |
 | [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
 | [registerWebAdInterface](arkts-ads-advertising-registerwebadinterface-f.md) | Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications). |
-| [showAd](arkts-ads-advertising-showad-f.md) | Shows a full-screen ad. > **NOTE：**> > 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API. > > 2. This API only supports displaying rewarded ads and interstitial ads. |
+| [showAd](arkts-ads-advertising-showad-f.md) | Shows a full-screen ad. &gt; **NOTE：**&gt; &gt; 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API. &gt; &gt; 2. This API only supports displaying rewarded ads and interstitial ads. |
 
 ### Classes
 

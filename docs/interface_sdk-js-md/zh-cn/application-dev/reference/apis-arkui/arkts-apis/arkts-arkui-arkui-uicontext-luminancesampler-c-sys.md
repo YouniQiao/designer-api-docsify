@@ -1,6 +1,6 @@
 # LuminanceSampler（系统接口）
 
-设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。 > **说明：** > > 以下API需先使用UIContext中的[getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler)方法获取到LuminanceSampler对象，再通过该对象调用对应方法。
+设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。 &gt; **说明：** &gt; &gt; 以下API需先使用UIContext中的[getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler)方法获取到LuminanceSampler对象，再通过该对象调用对应方法。
 
 **起始版本：** 23
 
@@ -13,6 +13,10 @@
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## offBackgroundLuminanceChange
@@ -37,7 +41,7 @@ offBackgroundLuminanceChange(samplingCallback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 监听回调。 |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 监听回调。 |
 
 ## onBackgroundLuminanceChange
 
@@ -61,7 +65,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 监听回调。触发同时返回当前背景亮度。<br/>**说明：**监听回调里不能调用 offBackgroundLuminanceChange。 |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 监听回调。触发同时返回当前背景亮度。<br/>**说明：**监听回调里不能调用 offBackgroundLuminanceChange。 |
 
 ## setBackgroundLuminanceSamplingConfigs
 

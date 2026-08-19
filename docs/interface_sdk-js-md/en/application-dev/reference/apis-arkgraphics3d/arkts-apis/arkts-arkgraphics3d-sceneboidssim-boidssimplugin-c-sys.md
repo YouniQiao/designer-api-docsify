@@ -38,5 +38,5 @@ Gets the Boids simulation world instance associated with the specified scene.
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) | Returns the Boids simulation world instance, or null if it does not exist. |
+| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) \| null | Returns the Boids simulation world instance, or null if it does not exist. |
 

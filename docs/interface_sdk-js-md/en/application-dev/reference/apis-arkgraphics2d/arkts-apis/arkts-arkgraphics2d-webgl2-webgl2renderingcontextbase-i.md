@@ -623,7 +623,7 @@ Creates a query
 
 | Type | Description |
 | --- | --- |
-| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | The created query |
+| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | The created query |
 
 ## createSampler
 
@@ -645,7 +645,7 @@ Creates a sampler
 
 | Type | Description |
 | --- | --- |
-| [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | The created sampler |
+| [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | The created sampler |
 
 ## createTransformFeedback
 
@@ -667,7 +667,7 @@ Creates a transform feedback object
 
 | Type | Description |
 | --- | --- |
-| [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) | The created transform feedback |
+| [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | The created transform feedback |
 
 ## createVertexArray
 
@@ -689,7 +689,7 @@ Creates a vertex array object
 
 | Type | Description |
 | --- | --- |
-| [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) | The created vertex array object |
+| [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | The created vertex array object |
 
 ## deleteQuery
 
@@ -984,7 +984,7 @@ Creates a sync object
 
 | Type | Description |
 | --- | --- |
-| [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | The created sync object |
+| [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | The created sync object |
 
 ## framebufferTextureLayer
 
@@ -1045,7 +1045,7 @@ Gets active uniform block name
 
 | Type | Description |
 | --- | --- |
-| string | Uniform block name |
+| string \| null | Uniform block name |
 
 ## getActiveUniformBlockParameter
 
@@ -1258,7 +1258,7 @@ Gets a query
 
 | Type | Description |
 | --- | --- |
-| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | The query |
+| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | The query |
 
 ## getQueryParameter
 
@@ -1374,7 +1374,7 @@ Gets transform feedback varying
 
 | Type | Description |
 | --- | --- |
-| webgl.WebGLActiveInfo | Active info |
+| webgl.WebGLActiveInfo \| null | Active info |
 
 ## getUniformBlockIndex
 
@@ -1432,7 +1432,7 @@ Gets uniform indices
 
 | Type | Description |
 | --- | --- |
-| webgl.GLuint[] | Uniform indices |
+| webgl.GLuint[] \| null | Uniform indices |
 
 ## invalidateFramebuffer
 

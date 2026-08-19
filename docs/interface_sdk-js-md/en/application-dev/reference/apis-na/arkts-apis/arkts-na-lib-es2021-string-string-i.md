@@ -32,8 +32,6 @@ Replace all instances of a substring in a string, using a regular expression or 
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## replaceAll
 
 ```TypeScript
@@ -57,5 +55,3 @@ Replace all instances of a substring in a string, using a regular expression or 
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

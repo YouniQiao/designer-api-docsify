@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## rename
@@ -11,7 +14,7 @@
 declare function rename(oldPath: string, newPath: string): Promise<void>
 ```
 
-重命名文件或目录。使用Promise异步回调。 > **说明：** > > 该接口不支持在分布式文件路径下操作。
+重命名文件或目录。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
 
@@ -65,7 +68,7 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void
 ```
 
-重命名文件或目录。使用callback异步回调。 > **说明：** > > 该接口不支持在分布式文件路径下操作。
+重命名文件或目录。使用callback异步回调。 &gt; **说明：** &gt; &gt; 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
 
@@ -81,7 +84,7 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 | --- | --- | --- | --- |
 | oldPath | string | 是 | 文件或目录的应用沙箱原路径。 |
 | newPath | string | 是 | 文件或目录的应用沙箱新路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当重命名文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重命名文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

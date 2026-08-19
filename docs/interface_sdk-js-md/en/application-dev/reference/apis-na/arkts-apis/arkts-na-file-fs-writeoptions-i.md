@@ -1,8 +1,8 @@
 # WriteOptions
 
-Defines the options used in **write()**. It inherits from [Options](arkts-na-file-fs-options-i.md).
+Defines the options used in **write()**. It inherits from [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md).
 
-**Inheritance/Implementation:** WriteOptions extends [Options](arkts-na-file-fs-options-i.md)
+**Inheritance/Implementation:** WriteOptions extends [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md)
 
 **Since:** 23
 

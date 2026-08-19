@@ -74,7 +74,7 @@ Agent是否支持为异步任务更新发送推送通知。 true：表示支持�
 stateTransitionHistory?: boolean
 ```
 
-Agent是否支持查看任务状态变化历史。 true：表示支持，客户端可以查询任务从创建到完成的完整状态转换记录（如pending->running->completed）。 false：表示不支持状态历史查询。
+Agent是否支持查看任务状态变化历史。 true：表示支持，客户端可以查询任务从创建到完成的完整状态转换记录（如pending-&gt;running-&gt;completed）。 false：表示不支持状态历史查询。
 
 **类型：** boolean
 

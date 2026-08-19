@@ -117,7 +117,7 @@ Creates an ImageReceiver instance.
 
 | Type | Description |
 | --- | --- |
-| ImageReceiver | Returns the ImageReceiver instance if the operation is successful; returns undefined otherwise. |
+| ImageReceiver \| undefined | Returns the ImageReceiver instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageReceiver
@@ -146,7 +146,7 @@ Creates an ImageReceiver instance.
 
 | Type | Description |
 | --- | --- |
-| ImageReceiver | ImageReceiver instance created. If the operation fails, undefined is returned. |
+| ImageReceiver \| undefined | ImageReceiver instance created. If the operation fails, undefined is returned. |
 
 **Error codes:**
 

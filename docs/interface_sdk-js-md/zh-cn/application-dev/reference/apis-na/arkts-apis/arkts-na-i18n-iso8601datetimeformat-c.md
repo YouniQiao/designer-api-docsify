@@ -39,7 +39,7 @@ public constructor(options?: ISO8601DateTimeFormatOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ISO8601DateTimeFormatOptions](arkts-na-i18n-iso8601datetimeformatoptions-i.md) | 否 | 符合ISO 8601标准的日期格式化对象创建时的配置项。 默认值：所有属性都取默认值时的配置项。 |
+| options | [ISO8601DateTimeFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | 否 | 符合ISO 8601标准的日期格式化对象创建时的配置项。 默认值：所有属性都取默认值时的配置项。 |
 
 ## format
 

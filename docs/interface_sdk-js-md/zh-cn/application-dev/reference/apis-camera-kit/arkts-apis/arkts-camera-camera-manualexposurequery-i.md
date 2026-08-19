@@ -13,6 +13,8 @@ Provides APIs to obtain the manual exposure range supported.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposureBiasStep

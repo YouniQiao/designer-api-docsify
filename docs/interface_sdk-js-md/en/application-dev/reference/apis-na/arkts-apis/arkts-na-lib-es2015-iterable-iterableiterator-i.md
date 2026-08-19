@@ -25,5 +25,3 @@
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-

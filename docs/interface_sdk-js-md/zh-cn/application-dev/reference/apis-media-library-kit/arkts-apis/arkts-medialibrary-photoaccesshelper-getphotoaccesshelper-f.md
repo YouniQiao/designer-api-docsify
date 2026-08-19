@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getPhotoAccessHelper
@@ -92,7 +93,7 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper | null
 
 | 类型 | 说明 |
 | --- | --- |
-| PhotoAccessHelper | Instance of PhotoAccessHelper. if the operation fails, returns null. |
+| PhotoAccessHelper \| null | Instance of PhotoAccessHelper. if the operation fails, returns null. |
 
 **错误码：**
 

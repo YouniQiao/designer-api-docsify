@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { router } from '@kit.ArkUI';
 ```
 
 ## showAlertBeforeBackPage
@@ -11,7 +12,7 @@
 function showAlertBeforeBackPage(options: EnableAlertOptions): void
 ```
 
-开启页面返回询问对话框。调用此方法后，执行back返回页面时将弹出确认对话框，用户确认后才执行页面返回操作。 适用于需要防止用户误操作返回导致数据丢失的场景，例如用户正在填写表单、编辑文档或进行支付操作时，弹出确认对话框以避免意外退出。 > **说明：** > > - 从API version 9开始支持，从API version 18开始废弃，建议使用 > [showAlertBeforeBackPage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#showalertbeforebackpage)替代。showAlertBeforeBackPage需先 > 通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象。
+开启页面返回询问对话框。调用此方法后，执行back返回页面时将弹出确认对话框，用户确认后才执行页面返回操作。 适用于需要防止用户误操作返回导致数据丢失的场景，例如用户正在填写表单、编辑文档或进行支付操作时，弹出确认对话框以避免意外退出。 &gt; **说明：** &gt; &gt; - 从API version 9开始支持，从API version 18开始废弃，建议使用 &gt; [showAlertBeforeBackPage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#showalertbeforebackpage)替代。showAlertBeforeBackPage需先 &gt; 通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 &gt; [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。 &gt; &gt; - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 &gt; [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
 

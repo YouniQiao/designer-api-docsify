@@ -29,7 +29,7 @@ Obtains the operatorconfigs of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OperatorConfig](arkts-telephony-sim-operatorconfig-i-sys.md)&gt;&gt; | Yes | Indicates the callback for getting the operatorconfigs in a specified slot; returns empty OperatorConfig if no SIM card is inserted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OperatorConfig](arkts-telephony-sim-operatorconfig-i-sys.md)&gt;&gt; | Yes | Indicates the callback for getting the operatorconfigs in a specified slot; returns empty OperatorConfig if no SIM card is inserted. |
 
 **Error codes:**
 

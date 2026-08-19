@@ -21,7 +21,7 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 container?: () => void
 ```
 
-Right-click child component bound to the node. The child component is decorated with @Builder. Default value: **() => void**.
+Right-click child component bound to the node. The child component is decorated with @Builder. Default value: **() =&gt; void**.
 
 **Type:** () =&gt; void
 

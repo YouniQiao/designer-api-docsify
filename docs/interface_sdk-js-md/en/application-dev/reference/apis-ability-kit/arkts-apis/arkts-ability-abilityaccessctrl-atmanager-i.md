@@ -172,7 +172,7 @@ offSelfPermissionStateChange(
     ): void
 ```
 
-Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [onSelfPermissionStateChange](#on_selfpermissionstatechangeselfpermissionstatechange) to cancel the monitoring relationship created through on.
+Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [onSelfPermissionStateChange](#onselfpermissionstatechange) to cancel the monitoring relationship created through on.
 
 **Since:** 23
 
@@ -186,8 +186,8 @@ Unsubscribes from permission status change events for the specified permission l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [onSelfPermissionStateChange](#on_selfpermissionstatechangeselfpermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [onSelfPermissionStateChange](#onselfpermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
 
 **Error codes:**
 
@@ -196,7 +196,7 @@ Unsubscribes from permission status change events for the specified permission l
 | [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'on'. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
-## off_selfPermissionStateChange('selfPermissionStateChange')
+## off('selfPermissionStateChange')
 
 ```TypeScript
 off(
@@ -206,7 +206,7 @@ off(
     ): void
 ```
 
-Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on_permissionstatechangepermissionstatechange) to cancel the monitoring relationship created through on.
+Unsubscribes from permission status change events for the specified permission list of itself. After the unsubscription is successful, status change notifications for the specified permission list will no longer be received. This API can be called to unsubscribe in scenarios such as when there is no need to continue monitoring permission changes, when the app exits, or when switching pages. When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch. This API is usually used in conjunction with [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#onpermissionstatechange) to cancel the monitoring relationship created through on.
 
 **Since:** 18
 
@@ -221,8 +221,8 @@ Unsubscribes from permission status change events for the specified permission l
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Type of the unsubscription event, which is fixed as 'selfPermissionStateChange', indicating a permission status change event. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on_permissionstatechangepermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#onpermissionstatechange) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
 
 **Error codes:**
 
@@ -255,7 +255,7 @@ onSelfPermissionStateChange(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [offSelfPermissionStateChange](#off_selfpermissionstatechangeselfpermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [offSelfPermissionStateChange](#off_selfpermissionstatechangeselfpermissionstatechange). When monitoring is no longer needed, call offSelfPermissionStateChange to unsubscribe.
+Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [offSelfPermissionStateChange](#offselfpermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [offSelfPermissionStateChange](#offselfpermissionstatechange). When monitoring is no longer needed, call offSelfPermissionStateChange to unsubscribe.
 
 **Since:** 23
 
@@ -270,7 +270,7 @@ Subscribes to permission authorization status change events for a specified perm
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
 
 **Error codes:**
 
@@ -281,7 +281,7 @@ Subscribes to permission authorization status change events for a specified perm
 | [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
-## on_selfPermissionStateChange('selfPermissionStateChange')
+## on('selfPermissionStateChange')
 
 ```TypeScript
 on(
@@ -291,7 +291,7 @@ on(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off_permissionstatechangepermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off_permissionstatechangepermissionstatechange). When monitoring is no longer needed, call off to unsubscribe.
+Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange) to unsubscribe. - When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful. - When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails. There are two possible scenarios when the permission status changes from "authorized" to "unauthorized": - User actively revokes: The system will terminate the corresponding app process. - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends. This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange). When monitoring is no longer needed, call off to unsubscribe.
 
 **Since:** 18
 
@@ -307,7 +307,7 @@ Subscribes to permission authorization status change events for a specified perm
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Event type. The value is **'selfPermissionStateChange'**, which indicates the changes in the permission states specific to this application alone. |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to subscribe to. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes | Callback used to return the result. Callback for subscribing to status change events of the specified permission name. |
 
 **Error codes:**
 
@@ -496,7 +496,7 @@ Used by <!--RP1-->[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-t.md) | Yes | Context of the <!--RP1-->UIAbility<!--RP1End--> requesting the permission. <br>If the context of another app, an invalid page, or a non-stage model is passed in, the API may report an error or fail to display the dialog box. |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names. It is recommended to pass in only the sensitive permissions necessary for the current business scenario, avoiding requesting too many permissions at once. <br>The minimum length is 1. Value constraint: The permission name can contain a maximum of 256 characters. |
-| requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | Yes | Callback function. After the call is complete, error information is returned through **err**, and the permission request result object is returned through **data**. The developer can determine whether the user has authorized, whether a dialog box has been displayed, and the reason for failure based on the permission request result. |
+| requestCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | Yes | Callback function. After the call is complete, error information is returned through **err**, and the permission request result object is returned through **data**. The developer can determine whether the user has authorized, whether a dialog box has been displayed, and the reason for failure based on the permission request result. |
 
 **Error codes:**
 
@@ -597,7 +597,7 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((
 verifyAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>
 ```
 
-Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned. The developer can decide accordingly whether to directly execute subsequent services, continue to initiate a permission request, or guide the user to go to system settings to modify the authorization status. This API uses a promise to return the result. Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources. > **NOTE：**> You are advised to use [checkAccessToken](#checkaccesstoken).
+Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned. The developer can decide accordingly whether to directly execute subsequent services, continue to initiate a permission request, or guide the user to go to system settings to modify the authorization status. This API uses a promise to return the result. Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources. &gt; **NOTE：**&gt; You are advised to use [checkAccessToken](#checkaccesstoken).
 
 **Since:** 23
 
@@ -640,7 +640,7 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
 verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 ```
 
-Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned, and the developer can decide on subsequent operations accordingly. This API uses a promise to return the result. > **NOTE：**> This API is supported since API version 8 and deprecated since API version 9. It is recommended to use > [checkAccessToken](#checkaccesstoken) instead.
+Verifies whether an app has been granted the specified permission. After the call is successful, the authorization status of the current permission is returned, and the developer can decide on subsequent operations accordingly. This API uses a promise to return the result. &gt; **NOTE：**&gt; This API is supported since API version 8 and deprecated since API version 9. It is recommended to use &gt; [checkAccessToken](#checkaccesstoken) instead.
 
 **Since:** 8
 

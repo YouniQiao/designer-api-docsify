@@ -25,8 +25,6 @@ Returns a string representation of an object.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## valueOf
 
 ```TypeScript
@@ -43,5 +41,3 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| symbol |  |
-

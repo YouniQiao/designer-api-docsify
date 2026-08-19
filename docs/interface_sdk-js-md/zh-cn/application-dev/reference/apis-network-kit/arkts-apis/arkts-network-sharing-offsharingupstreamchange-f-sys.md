@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { sharing } from '@kit.NetworkKit';
 ```
 
-## off_sharingUpstreamChange('sharingUpstreamChange')
+## off('sharingUpstreamChange')
 
 ```TypeScript
 function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): void
@@ -28,7 +29,7 @@ function off(type: 'sharingUpstreamChange', callback?: Callback<NetHandle>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sharingUpstreamChange' | 是 | 注销的事件类型。'sharingUpstreamChange'：注销上行网络变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | 否 | 回调函数，注销上行网络变化事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 否 | 回调函数，注销上行网络变化事件。 |
 
 **错误码：**
 

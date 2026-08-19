@@ -1,6 +1,6 @@
 # CanvasRenderer
 
-CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 > **说明：** > > * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。 > > * 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时， > 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口， > 以防止指令在队列中堆积，从而避免内存占用过大的问题。 > > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
+CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 &gt; **说明：** &gt; &gt; * 建议使用时将CanvasRenderingContext2D对象与Canvas组件封装到同一个自定义组件中，保证两者一一对应且生命周期保持一致。 &gt; &gt; * 本文绘制接口在调用时会存入被关联的Canvas组件的指令队列中。仅当当前帧进入渲染阶段且关联的Canvas组件处于可见状态时， &gt; 这些指令才会从队列中被提取并执行。因此，在Canvas组件不可见的情况下，应尽量避免频繁调用绘制接口， &gt; 以防止指令在队列中堆积，从而避免内存占用过大的问题。 &gt; &gt; * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
 **继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
 
@@ -268,7 +268,7 @@ createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | nu
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | 通过指定图像和重复方式创建图片填充的模板对象。 |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) \| null | 通过指定图像和重复方式创建图片填充的模板对象。 |
 
 ## createRadialGradient
 
@@ -919,7 +919,7 @@ setPixelMap(value?: PixelMap): void
 setTransform(a: number, b: number, c: number, d: number, e: number, f: number): void
 ```
 
-setTransform方法使用的参数和transform()方法相同，但setTransform()方法会重置现有的变换矩阵并创建新的变换矩阵。 > **说明：** > > 图形中各个点变换后的坐标可通过下方坐标计算公式计算。 > > 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）： > > - x' = a * x + c * y + e > > - y' = b * x + d * y + f
+setTransform方法使用的参数和transform()方法相同，但setTransform()方法会重置现有的变换矩阵并创建新的变换矩阵。 &gt; **说明：** &gt; &gt; 图形中各个点变换后的坐标可通过下方坐标计算公式计算。 &gt; &gt; 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）： &gt; &gt; - x' = a * x + c * y + e &gt; &gt; - y' = b * x + d * y + f
 
 **起始版本：** 8
 
@@ -1092,7 +1092,7 @@ transferFromImageBitmap(bitmap: ImageBitmap): void
 transform(a: number, b: number, c: number, d: number, e: number, f: number): void
 ```
 
-transform方法对应一个变换矩阵，想对一个图形进行变化的时候，只要设置此变换矩阵相应的参数， 对图形的各个定点的坐标分别乘以这个矩阵，就能得到新的定点的坐标。矩阵变换效果可叠加。 > **说明：** > > 图形中各个点变换后的坐标可通过下方坐标计算公式计算。 > > 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）： > > - x' = a * x + c * y + e > > - y' = b * x + d * y + f
+transform方法对应一个变换矩阵，想对一个图形进行变化的时候，只要设置此变换矩阵相应的参数， 对图形的各个定点的坐标分别乘以这个矩阵，就能得到新的定点的坐标。矩阵变换效果可叠加。 &gt; **说明：** &gt; &gt; 图形中各个点变换后的坐标可通过下方坐标计算公式计算。 &gt; &gt; 变换后的坐标计算方式（x和y为变换前坐标，x'和y'为变换后坐标）： &gt; &gt; - x' = a * x + c * y + e &gt; &gt; - y' = b * x + d * y + f
 
 **起始版本：** 8
 
@@ -1344,7 +1344,7 @@ imageSmoothingEnabled为true时，用于设置图像平滑度，此属性为只�
 letterSpacing: LengthMetrics | string
 ```
 
-用于指定绘制文本时字母之间的间距，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 当使用LengthMetrics时： 字间距按照指定的单位设置； 不支持FP、PERCENT和LPX（按无效值处理）； 支持负数和小数，设为小数时字间距不四舍五入。 当使用string时： 不支持设置百分比（按无效值处理）； 支持负数和小数，设为小数时字间距不四舍五入； 若letterSpacing的赋值未指定单位（例如：**letterSpacing='10'**）， 且未指定LengthMetricsUnit时，默认单位设置为vp； 指定LengthMetricsUnit为px时，默认单位设置为px； 当letterSpacing的赋值指定单位时（例如：**letterSpacing='10vp'**）， 字间距按照指定的单位设置。 默认值：**0**（输入无效值时，字间距设为默认值） > **说明：** > > 推荐使用LengthMetrics，性能更好。
+用于指定绘制文本时字母之间的间距，此属性为只写属性，可通过赋值语句设置其值， 但无法通过读取操作获取其当前值，若尝试读取将返回undefined。 当使用LengthMetrics时： 字间距按照指定的单位设置； 不支持FP、PERCENT和LPX（按无效值处理）； 支持负数和小数，设为小数时字间距不四舍五入。 当使用string时： 不支持设置百分比（按无效值处理）； 支持负数和小数，设为小数时字间距不四舍五入； 若letterSpacing的赋值未指定单位（例如：**letterSpacing='10'**）， 且未指定LengthMetricsUnit时，默认单位设置为vp； 指定LengthMetricsUnit为px时，默认单位设置为px； 当letterSpacing的赋值指定单位时（例如：**letterSpacing='10vp'**）， 字间距按照指定的单位设置。 默认值：**0**（输入无效值时，字间距设为默认值） &gt; **说明：** &gt; &gt; 推荐使用LengthMetrics，性能更好。
 
 **类型：** LengthMetrics \| string
 

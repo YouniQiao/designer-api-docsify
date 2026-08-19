@@ -1,6 +1,6 @@
 # PathFillType
 
-Enumerates the fill types of a path. > **NOTE：**>  > As shown in the above figure, the path is a circle, the arrow indicates the path direction, **p** is any point " > inside" the path, the blue line is the ray emitted from **p**, and the black arrow indicates the fill result > using blue under the corresponding fill type. Under the **WINDING** fill rule, the number of intersection points > of the ray and path is 2 (not 0), and therefore **p** is colored. Under the **EVEN_ODD** filling rule, the number > of intersection points of the ray and path is 2 (an even number), and therefore **p** is not colored.
+Enumerates the fill types of a path. &gt; **NOTE：**&gt;  &gt; As shown in the above figure, the path is a circle, the arrow indicates the path direction, **p** is any point " &gt; inside" the path, the blue line is the ray emitted from **p**, and the black arrow indicates the fill result &gt; using blue under the corresponding fill type. Under the **WINDING** fill rule, the number of intersection points &gt; of the ray and path is 2 (not 0), and therefore **p** is colored. Under the **EVEN_ODD** filling rule, the number &gt; of intersection points of the ray and path is 2 (an even number), and therefore **p** is not colored.
 
 **Since:** 23
 

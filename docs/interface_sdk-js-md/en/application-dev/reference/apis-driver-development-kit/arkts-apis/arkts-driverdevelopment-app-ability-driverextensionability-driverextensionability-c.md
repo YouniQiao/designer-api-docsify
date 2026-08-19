@@ -40,7 +40,7 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
+| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
 
 **Examples**
 
@@ -170,7 +170,7 @@ Called back when all abilities connected to a driver extension are disconnected.
 
 | Type | Description |
 | --- | --- |
-| undefined |  |
+| undefined \| Promise&lt;void&gt; |  |
 
 ## onDump
 

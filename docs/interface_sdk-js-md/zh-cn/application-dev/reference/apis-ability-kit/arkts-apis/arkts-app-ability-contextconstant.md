@@ -13,6 +13,7 @@ ContextConstant提供Context相关的枚举，包含文件加密分区等级、U
 ## 导入模块
 
 ```TypeScript
+import { contextConstant } from '@kit.AbilityKit';
 ```
 
 ## 汇总

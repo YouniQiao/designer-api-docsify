@@ -35,8 +35,6 @@ attributeModifier(
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## font
 
 ```TypeScript
@@ -59,8 +57,6 @@ font(value: Font | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fontColor
 
 ```TypeScript
@@ -83,8 +79,6 @@ fontColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuItemDivider
 
 ```TypeScript
@@ -107,8 +101,6 @@ menuItemDivider(options: DividerStyleOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuItemGroupDivider
 
 ```TypeScript
@@ -131,8 +123,6 @@ menuItemGroupDivider(options: DividerStyleOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## radius
 
 ```TypeScript
@@ -155,8 +145,6 @@ radius(value: Dimension | BorderRadiuses | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## subMenuExpandSymbol
 
 ```TypeScript
@@ -179,8 +167,6 @@ subMenuExpandSymbol(symbol: SymbolGlyphModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## subMenuExpandingMode
 
 ```TypeScript
@@ -203,8 +189,6 @@ subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

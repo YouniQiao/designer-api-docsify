@@ -35,7 +35,7 @@ Take a screenshot of the specified component in synchronous mode, this mode will
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | The snapshot result in PixelMap format. |
+| image.PixelMap \| null | The snapshot result in PixelMap format. |
 
 **Error codes:**
 

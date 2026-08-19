@@ -329,7 +329,7 @@ pop(): int | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| int | int类型，如果位弹出成功则返回对应的int值，否则返回undefined。 |
+| int \| undefined | int类型，如果位弹出成功则返回对应的int值，否则返回undefined。 |
 
 ## push
 

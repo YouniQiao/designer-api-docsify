@@ -11,6 +11,7 @@ Media Stream. AVPlayer use this for mediaData access, current version only suppo
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## bitrate

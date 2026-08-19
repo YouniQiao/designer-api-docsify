@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## startDTMF
@@ -29,7 +30,7 @@ function startDTMF(callId: int, character: string, callback: AsyncCallback<void>
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。 |
 | character | string | 是 | DTMF码。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回启动双音多频的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回启动双音多频的结果。 |
 
 **错误码：**
 

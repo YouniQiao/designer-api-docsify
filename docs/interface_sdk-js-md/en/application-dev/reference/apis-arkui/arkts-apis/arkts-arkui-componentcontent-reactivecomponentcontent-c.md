@@ -1,6 +1,6 @@
 # ReactiveComponentContent
 
-ReactiveComponentContent is inherited from Content and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
+ReactiveComponentContent is inherited from Content and is a container component used to dynamically bear and reuse UI content. It uses the @Builder function to build the UI and uses [ReactiveBuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-reactivebuildernode-c.md) to generate and manage the component tree. The core value of this component is to provide complete lifecycle management for dynamic content so that it can be integrated into the ArkUI component reuse system. This component is especially suitable for scenarios that require high- performance rendering, such as long lists.
 
 **Inheritance/Implementation:** ReactiveComponentContent extends Content
 
@@ -32,9 +32,9 @@ Constructor of ReactiveComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;T&gt; | Yes | Encapsulates the WrappedBuilder object of the @Builder function with parameters. |
-| config | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
+| config | [BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. Transfers external data to the WrappedBuilder&lt;T&gt and build functions specified in the constructor. Multiple input parameters are supported. The default value is **undefined**. |
 
 **Examples**
@@ -105,7 +105,7 @@ struct Index {
 dispose(): void
 ```
 
-Immediately releases the reference relationship between this **ReactiveComponentContent** object and its [entity node](../../../ui/arkts-user-defined-node.md#basic-concepts). For details about the scenarios involving **ReactiveComponentContent** unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node). > **NOTE：**> > After calling **dispose**, the **ReactiveComponentContent** object cancels its reference to the backend entity > node. If the frontend object **ReactiveComponentContent** cannot be released, memory leaks may occur. To avoid > this, be sure to call **dispose** on the **ReactiveComponentContent** object when you no longer need it. This > reduces the complexity of reference relationships and lowers the risk of memory leaks.
+Immediately releases the reference relationship between this **ReactiveComponentContent** object and its [entity node](../../../ui/arkts-user-defined-node.md#basic-concepts). For details about the scenarios involving **ReactiveComponentContent** unbinding, see [Canceling the Reference to the Entity Node](../../../ui/arkts-user-defined-arktsNode-builderNode.md#canceling-the-reference-to-the-entity-node). &gt; **NOTE：**&gt; &gt; After calling **dispose**, the **ReactiveComponentContent** object cancels its reference to the backend entity &gt; node. If the frontend object **ReactiveComponentContent** cannot be released, memory leaks may occur. To avoid &gt; this, be sure to call **dispose** on the **ReactiveComponentContent** object when you no longer need it. This &gt; reduces the complexity of reference relationships and lowers the risk of memory leaks.
 
 **Since:** 22
 
@@ -357,7 +357,7 @@ struct Index {
 inheritFreezeOptions(enabled: boolean): void
 ```
 
-Sets whether the current **ReactiveComponentContent** object inherits the freeze policy configured by [ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. > **NOTE：**> > When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent > component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or > **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a > custom component, its freeze policy is not transferred to the child component.
+Sets whether the current **ReactiveComponentContent** object inherits the freeze policy configured by [ComponentOptions](../arkts-components/arkts-arkui-componentoptions-i.md) from its parent component's custom components. When inheritance is disabled (set to **false**), the **ReactiveComponentContent** object's freeze policy is set to **false**, which means its associated node remains unfrozen even in an inactive state. &gt; **NOTE：**&gt; &gt; When **inheritFreezeOptions** is set to **true** for a **ReactiveComponentContent** object, and its parent &gt; component is a custom component, **BuilderNode**, **ComponentContent**, **ReactiveBuilderNode**, or &gt; **ReactiveComponentContent**, it will inherit the parent component's freeze policy. If the child component is a &gt; custom component, its freeze policy is not transferred to the child component.
 
 **Since:** 22
 

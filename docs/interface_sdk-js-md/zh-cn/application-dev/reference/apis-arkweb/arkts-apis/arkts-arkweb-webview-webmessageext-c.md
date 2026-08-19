@@ -11,6 +11,7 @@ WebMessageExt是[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

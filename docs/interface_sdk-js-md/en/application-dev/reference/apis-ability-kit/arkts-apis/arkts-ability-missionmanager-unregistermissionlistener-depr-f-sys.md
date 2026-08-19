@@ -17,7 +17,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** off
+**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -32,7 +32,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -82,7 +82,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** off
+**Substitutes:** [off](arkts-ability-missionmanager-offmission-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

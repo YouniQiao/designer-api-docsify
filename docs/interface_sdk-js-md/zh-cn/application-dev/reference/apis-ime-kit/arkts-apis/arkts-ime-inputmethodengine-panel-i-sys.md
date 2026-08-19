@@ -11,6 +11,7 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## offSizeUpdate
@@ -45,7 +46,7 @@ panel.offSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.Ke
 });
 ```
 
-## off_sizeUpdate('sizeUpdate')
+## off('sizeUpdate')
 
 ```TypeScript
 off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
@@ -112,7 +113,7 @@ panel.onSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.Key
 });
 ```
 
-## on_sizeUpdate('sizeUpdate')
+## on('sizeUpdate')
 
 ```TypeScript
 on(type: 'sizeUpdate', callback: SizeUpdateCallback): void

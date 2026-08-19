@@ -6,7 +6,7 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
-## on_openDLPFile('openDLPFile')
+## on('openDLPFile')
 
 ```TypeScript
 function on(type: 'openDLPFile', listener: Callback<AccessedDLPFileInfo>): void
@@ -25,7 +25,7 @@ Subscribes to a DLP file open event. After this API is successfully called, a ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP file open event. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | Yes | Callback invoked when a DLP file is opened. The application will be notified when the DLP file is opened. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | Yes | Callback invoked when a DLP file is opened. The application will be notified when the DLP file is opened. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # Uint32Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md)实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md)实现。 &gt; **说明：**&gt; &gt; - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; **装饰器**：\@Sendable
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -67,7 +68,7 @@ at(index: number): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 指定下标的元素；如果不存在，则返回**undefined**。 |
+| number \| undefined | 指定下标的元素；如果不存在，则返回**undefined**。 |
 
 **错误码：**
 
@@ -411,7 +412,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint32Array>): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
+| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
 
 **错误码：**
 
@@ -727,7 +728,7 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Uint16Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Uint32Array的长度， 则返回**-1**。如果传入负数，则从ArkTS Uint32Array的末尾开始向前搜索。 |
+| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Uint32Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Uint32Array的长度， 则返回**-1**。如果传入负数，则从ArkTS Uint32Array的末尾开始向前搜索。 |
 
 **返回值：**
 

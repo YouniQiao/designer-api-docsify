@@ -1,6 +1,6 @@
 # Canvas
 
-A carrier that carries the drawn content and drawing status. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. > > > The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style > effects. This default brush is used when no brush or pen is actively set in the canvas.
+A carrier that carries the drawn content and drawing status. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions. &gt; &gt; &gt; The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style &gt; effects. This default brush is used when no brush or pen is actively set in the canvas.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 attachBrush(brush: Brush): void
 ```
 
-Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes. > **NOTE：**> > If the brush effect changes after this API is called, you must call the API again if you want to use the new > effect in the subsequent drawing.
+Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes. &gt; **NOTE：**&gt; &gt; If the brush effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 attachPen(pen: Pen): void
 ```
 
-Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes. > **NOTE：**> > If the pen effect changes after this API is called, you must call the API again if you want to use the new > effect in the subsequent drawing.
+Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes. &gt; **NOTE：**&gt; &gt; If the pen effect changes after this API is called, you must call the API again if you want to use the new &gt; effect in the subsequent drawing.
 
 **Since:** 23
 
@@ -1224,7 +1224,7 @@ Obtains the bounds of the cropping region of the canvas.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Rect object. |
+| common2D.Rect \| undefined | Rect object. |
 
 ## getSaveCount
 
@@ -1284,7 +1284,7 @@ Obtains the canvas matrix.
 
 | Type | Description |
 | --- | --- |
-| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Canvas matrix. |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| undefined | Canvas matrix. |
 
 ## getWidth
 

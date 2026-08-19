@@ -12,7 +12,7 @@ import { locationManager } from '@kit.MDMKit';
 function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 ```
 
-Sets a location service policy. This API can be used in enterprise management and control scenarios. For example, you can disable the location service in confidential areas to protect information security, or forcibly enable the location service in logistics and distribution applications to track device locations. > **NOTE：**> > - Disabled: Set this option when privacy protection or power saving is required. > > - Forced on: Set this option in scenarios such as device security tracking and asset management. > > - Default: This option removes policy restrictions and allows the user to control the setting independently.
+Sets a location service policy. This API can be used in enterprise management and control scenarios. For example, you can disable the location service in confidential areas to protect information security, or forcibly enable the location service in logistics and distribution applications to track device locations. &gt; **NOTE：**&gt; &gt; - Disabled: Set this option when privacy protection or power saving is required. &gt; &gt; - Forced on: Set this option in scenarios such as device security tracking and asset management. &gt; &gt; - Default: This option removes policy restrictions and allows the user to control the setting independently.
 
 **Since:** 12
 

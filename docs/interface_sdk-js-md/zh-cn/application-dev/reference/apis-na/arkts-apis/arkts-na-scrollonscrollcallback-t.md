@@ -4,7 +4,7 @@
 export type ScrollOnScrollCallback = (xOffset: double, yOffset: double, scrollState: ScrollState) => void
 ```
 
-Scroll滚动时触发的回调。 > **说明：** > 若通过onScrollFrameBegin事件和[scrollBy](arkts-na-scroll-scroller-c.md#scrollby)方法实现容器嵌套滚动，需设置子滚动节点的 > EdgeEffect为None。如Scroll嵌套List滚动时，List组件的[edgeEffect](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#edgeeffect) > 属性需设置为EdgeEffect.None。
+Scroll滚动时触发的回调。 &gt; **说明：** &gt; 若通过onScrollFrameBegin事件和[scrollBy](arkts-na-scroll-scroller-c.md#scrollby)方法实现容器嵌套滚动，需设置子滚动节点的 &gt; EdgeEffect为None。如Scroll嵌套List滚动时，List组件的[edgeEffect](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#edgeeffect) &gt; 属性需设置为EdgeEffect.None。
 
 **起始版本：** 23
 

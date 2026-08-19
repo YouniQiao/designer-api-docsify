@@ -52,7 +52,7 @@ Unsubscribe input text attribute change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | No | optional, the callback called when editor's attribute changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | No | optional, the callback called when editor's attribute changes. |
 
 ## offKeyDown
 
@@ -152,9 +152,9 @@ Unsubscribe text change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | optional, the callback called when the text changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | optional, the callback called when the text changes. |
 
-## off_cursorContextChange('cursorContextChange')
+## off('cursorContextChange')
 
 ```TypeScript
 off(type: 'cursorContextChange', callback?: (x: number, y: number, height: number) => void): void
@@ -183,7 +183,7 @@ inputMethodEngine.getKeyboardDelegate().off('cursorContextChange', (x: number, y
 });
 ```
 
-## off_editorAttributeChanged('editorAttributeChanged')
+## off('editorAttributeChanged')
 
 ```TypeScript
 off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void): void
@@ -210,7 +210,7 @@ Disables listening for the edit box attribute change event. This API uses an asy
 inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
 ```
 
-## off_keyDown('keyDown' | 'keyUp')
+## off('keyDown' | 'keyUp')
 
 ```TypeScript
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
@@ -244,7 +244,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 });
 ```
 
-## off_keyEvent('keyEvent')
+## off('keyEvent')
 
 ```TypeScript
 off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
@@ -277,7 +277,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyEvent', (keyEvent: KeyEvent) => 
 inputMethodEngine.getKeyboardDelegate().off('keyEvent');
 ```
 
-## off_keyUp('keyDown' | 'keyUp')
+## off('keyDown' | 'keyUp')
 
 ```TypeScript
 off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
@@ -311,7 +311,7 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 });
 ```
 
-## off_selectionChange('selectionChange')
+## off('selectionChange')
 
 ```TypeScript
 off(
@@ -344,7 +344,7 @@ inputMethodEngine.getKeyboardDelegate()
   });
 ```
 
-## off_textChange('textChange')
+## off('textChange')
 
 ```TypeScript
 off(type: 'textChange', callback?: (text: string) => void): void
@@ -411,7 +411,7 @@ Subscribe input text attribute change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | the callback called when editor's attribute changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | the callback called when editor's attribute changes. |
 
 ## onKeyDown
 
@@ -511,9 +511,9 @@ Subscribe text change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | the callback called when the text changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | the callback called when the text changes. |
 
-## on_cursorContextChange('cursorContextChange')
+## on('cursorContextChange')
 
 ```TypeScript
 on(type: 'cursorContextChange', callback: (x: number, y: number, height: number) => void): void
@@ -544,7 +544,7 @@ inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y:
 });
 ```
 
-## on_editorAttributeChanged('editorAttributeChanged')
+## on('editorAttributeChanged')
 
 ```TypeScript
 on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): void
@@ -574,7 +574,7 @@ inputMethodEngine.getKeyboardDelegate()
   });
 ```
 
-## on_keyDown('keyDown' | 'keyUp')
+## on('keyDown' | 'keyUp')
 
 ```TypeScript
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
@@ -610,7 +610,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 });
 ```
 
-## on_keyEvent('keyEvent')
+## on('keyEvent')
 
 ```TypeScript
 on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
@@ -645,7 +645,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
 });
 ```
 
-## on_keyUp('keyDown' | 'keyUp')
+## on('keyDown' | 'keyUp')
 
 ```TypeScript
 on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
@@ -681,7 +681,7 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 });
 ```
 
-## on_selectionChange('selectionChange')
+## on('selectionChange')
 
 ```TypeScript
 on(
@@ -717,7 +717,7 @@ inputMethodEngine.getKeyboardDelegate()
   });
 ```
 
-## on_textChange('textChange')
+## on('textChange')
 
 ```TypeScript
 on(type: 'textChange', callback: (text: string) => void): void

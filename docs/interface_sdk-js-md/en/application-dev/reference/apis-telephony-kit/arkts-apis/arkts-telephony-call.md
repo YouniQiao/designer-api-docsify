@@ -1,6 +1,6 @@
 # @ohos.telephony.call
 
-The **call** module provides call management functions, including making calls, redirecting to the dial screen, obtaining the call status, and formatting phone numbers. To subscribe to call status changes, use `observer.on('callStateChange')`.
+The **call** module provides call management functions, including making calls, redirecting to the dial screen, obtaining the call status, and formatting phone numbers. To subscribe to call status changes, use [`observer.on('callStateChange')`](arkts-telephony-observer-onnetworkstatechange-f.md).
 
 **Since:** 23
 
@@ -20,9 +20,9 @@ import { call } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications. |
-| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications. |
-| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications. |
+| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications. |
+| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. You can set call options as needed. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications. |
+| [dial](arkts-telephony-call-dial-f.md) | Initiates a call. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is supported since API version 6 and deprecated since API version 9. The substitute API is available &gt; only for system applications. |
 | [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result. A formatted phone number is a standard numeric string, for example, 555 0100. |
 | [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number based on specified formatting options. This API uses a promise to return the result. A formatted phone number is a standard numeric string, for example, 555 0100. |
 | [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md) | Formats a phone number. This API uses an asynchronous callback to return the result. A formatted phone number is a standard numeric string, for example, 555 0100. |
@@ -121,16 +121,16 @@ import { call } from '@kit.TelephonyKit';
 | [offReceiveRttMessage](arkts-telephony-call-offreceiverttmessage-f-sys.md) | Unsubscribe from the rtt message event. |
 | [offRttErrCause](arkts-telephony-call-offrtterrcause-f-sys.md) | Unsubscribe from the rtt error report event. |
 | [offRttModifyInd](arkts-telephony-call-offrttmodifyind-f-sys.md) | Unsubscribe from the rtt modify indication. |
-| off_audioDeviceChange | Unsubscribes from **audioDeviceChange** events. This API uses an asynchronous callback to return the result. |
-| off_callDetailsChange | Unsubscribes from **callDetailsChange** events. This API uses an asynchronous callback to return the result. |
-| off_callDisconnectedCause | Unsubscribes from **callDisconnectedCause** events. This API uses an asynchronous callback to return the result. |
-| off_callEventChange | Unsubscribes from **callEventChange** events. This API uses an asynchronous callback to return the result. |
-| [off_callSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md) | Unsubscribes from **callSessionEvent** events. This API uses an asynchronous callback to return the result. |
-| off_cameraCapabilitiesChange | Unsubscribes from **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result. |
-| off_imsCallModeChange | Unsubscribes from **imsCallModeChange** events. This API uses an asynchronous callback to return the result. |
-| [off_mmiCodeResult](arkts-telephony-call-mmicoderesult-e-sys.md) | Unsubscribes from **mmiCodeResult** events. This API uses an asynchronous callback to return the result. |
-| off_peerDimensionsChange | Unsubscribes from **peerDimensionsChange** events. This API uses an asynchronous callback to return the result. |
-| off_postDialDelay | Unsubscribes from **postDialDelay** events. This API uses an asynchronous callback to return the result. |
+| [off_audioDeviceChange](arkts-telephony-call-offaudiodevicechange-f-sys.md) | Unsubscribes from **audioDeviceChange** events. This API uses an asynchronous callback to return the result. |
+| [off_callDetailsChange](arkts-telephony-call-offcalldetailschange-f-sys.md) | Unsubscribes from **callDetailsChange** events. This API uses an asynchronous callback to return the result. |
+| [off_callDisconnectedCause](arkts-telephony-call-offcalldisconnectedcause-f-sys.md) | Unsubscribes from **callDisconnectedCause** events. This API uses an asynchronous callback to return the result. |
+| [off_callEventChange](arkts-telephony-call-offcalleventchange-f-sys.md) | Unsubscribes from **callEventChange** events. This API uses an asynchronous callback to return the result. |
+| [off_callSessionEvent](arkts-telephony-call-offcallsessionevent-f-sys.md) | Unsubscribes from **callSessionEvent** events. This API uses an asynchronous callback to return the result. |
+| [off_cameraCapabilitiesChange](arkts-telephony-call-offcameracapabilitieschange-f-sys.md) | Unsubscribes from **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result. |
+| [off_imsCallModeChange](arkts-telephony-call-offimscallmodechange-f-sys.md) | Unsubscribes from **imsCallModeChange** events. This API uses an asynchronous callback to return the result. |
+| [off_mmiCodeResult](arkts-telephony-call-offmmicoderesult-f-sys.md) | Unsubscribes from **mmiCodeResult** events. This API uses an asynchronous callback to return the result. |
+| [off_peerDimensionsChange](arkts-telephony-call-offpeerdimensionschange-f-sys.md) | Unsubscribes from **peerDimensionsChange** events. This API uses an asynchronous callback to return the result. |
+| [off_postDialDelay](arkts-telephony-call-offpostdialdelay-f-sys.md) | Unsubscribes from **postDialDelay** events. This API uses an asynchronous callback to return the result. |
 | [onAudioDeviceChange](arkts-telephony-call-onaudiodevicechange-f-sys.md) | Subscribe to the audioDeviceChange event. |
 | [onCallDetailsChange](arkts-telephony-call-oncalldetailschange-f-sys.md) | Subscribe to the callDetailsChange event. |
 | [onCallDisconnectedCause](arkts-telephony-call-oncalldisconnectedcause-f-sys.md) | Subscribe to the callDisconnectedCause event. |
@@ -144,16 +144,16 @@ import { call } from '@kit.TelephonyKit';
 | [onReceiveRttMessage](arkts-telephony-call-onreceiverttmessage-f-sys.md) | Subscribe to the rtt message event. |
 | [onRttErrCause](arkts-telephony-call-onrtterrcause-f-sys.md) | Subscribe to the rtt error event. |
 | [onRttModifyInd](arkts-telephony-call-onrttmodifyind-f-sys.md) | Subscribe to the rtt modify indication. |
-| on_audioDeviceChange | Subscribes to audio device change events. This API uses an asynchronous callback to return the result. |
-| on_callDetailsChange | Subscribes to **callDetailsChange** events. This API uses an asynchronous callback to return the result. |
-| on_callDisconnectedCause | Subscribes to **callDisconnectedCause** events. This API uses an asynchronous callback to return the result. |
-| on_callEventChange | Subscribes to **callEventChange** events. This API uses an asynchronous callback to return the result. |
-| [on_callSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md) | Subscribes to **callSessionEvent** events. This API uses an asynchronous callback to return the result. |
-| on_cameraCapabilitiesChange | Subscribes to **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result. |
-| on_imsCallModeChange | Subscribes to **imsCallModeChange** events. This API uses an asynchronous callback to return the result. |
-| [on_mmiCodeResult](arkts-telephony-call-mmicoderesult-e-sys.md) | Subscribes to **mmiCodeResult** events. This API uses an asynchronous callback to return the result. |
-| on_peerDimensionsChange | Subscribes to **peerDimensionsChange** events. This API uses an asynchronous callback to return the result. |
-| on_postDialDelay | Subscribes to **postDialDelay** events. This API uses an asynchronous callback to return the result. |
+| [on_audioDeviceChange](arkts-telephony-call-onaudiodevicechange-f-sys.md) | Subscribes to audio device change events. This API uses an asynchronous callback to return the result. |
+| [on_callDetailsChange](arkts-telephony-call-oncalldetailschange-f-sys.md) | Subscribes to **callDetailsChange** events. This API uses an asynchronous callback to return the result. |
+| [on_callDisconnectedCause](arkts-telephony-call-oncalldisconnectedcause-f-sys.md) | Subscribes to **callDisconnectedCause** events. This API uses an asynchronous callback to return the result. |
+| [on_callEventChange](arkts-telephony-call-oncalleventchange-f-sys.md) | Subscribes to **callEventChange** events. This API uses an asynchronous callback to return the result. |
+| [on_callSessionEvent](arkts-telephony-call-oncallsessionevent-f-sys.md) | Subscribes to **callSessionEvent** events. This API uses an asynchronous callback to return the result. |
+| [on_cameraCapabilitiesChange](arkts-telephony-call-oncameracapabilitieschange-f-sys.md) | Subscribes to **cameraCapabilitiesChange** events. This API uses an asynchronous callback to return the result. |
+| [on_imsCallModeChange](arkts-telephony-call-onimscallmodechange-f-sys.md) | Subscribes to **imsCallModeChange** events. This API uses an asynchronous callback to return the result. |
+| [on_mmiCodeResult](arkts-telephony-call-onmmicoderesult-f-sys.md) | Subscribes to **mmiCodeResult** events. This API uses an asynchronous callback to return the result. |
+| [on_peerDimensionsChange](arkts-telephony-call-onpeerdimensionschange-f-sys.md) | Subscribes to **peerDimensionsChange** events. This API uses an asynchronous callback to return the result. |
+| [on_postDialDelay](arkts-telephony-call-onpostdialdelay-f-sys.md) | Subscribes to **postDialDelay** events. This API uses an asynchronous callback to return the result. |
 | [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result. If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones. |
 | [postDialProceed](arkts-telephony-call-postdialproceed-f-sys.md) | Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result. If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones. |
 | [preloadCallUI](arkts-telephony-call-preloadcallui-f-sys.md) | Preload callUI. |

@@ -45,7 +45,7 @@ Returns the element at the specified index in the array.
 
 | Type | Description |
 | --- | --- |
-| T | The element at the specified index, or undefined if the index is out of bounds. |
+| T \| undefined | The element at the specified index, or undefined if the index is out of bounds. |
 
 ## join
 

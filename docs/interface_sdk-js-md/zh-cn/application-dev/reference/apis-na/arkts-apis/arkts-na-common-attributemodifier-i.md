@@ -134,8 +134,6 @@ monitoredStates(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int |  |
-
 ## default
 
 ```TypeScript

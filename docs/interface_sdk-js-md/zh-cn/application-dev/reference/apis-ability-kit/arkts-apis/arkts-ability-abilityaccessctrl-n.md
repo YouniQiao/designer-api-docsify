@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## 汇总

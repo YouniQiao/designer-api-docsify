@@ -29,7 +29,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | the callback of getImage. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | the callback of getImage. |
 
 **Error codes:**
 

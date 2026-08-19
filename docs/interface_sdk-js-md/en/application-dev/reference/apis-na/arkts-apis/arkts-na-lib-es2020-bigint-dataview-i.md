@@ -32,8 +32,6 @@ Gets the BigInt64 value at the specified byte offset from the start of the view.
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## getBigUint64
 
 ```TypeScript
@@ -57,8 +55,6 @@ Gets the BigUint64 value at the specified byte offset from the start of the view
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## setBigInt64
 
 ```TypeScript

@@ -16,7 +16,7 @@ function createSoundPool(
   ): void
 ```
 
-Creates a SoundPool instance. This API uses an asynchronous callback to return the result. > **NOTE：**> > - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. > Therefore, an application process can create only one SoundPool instance. > > - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, > an application process can create a maximum of 128 SoundPool instances.
+Creates a SoundPool instance. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. &gt; Therefore, an application process can create only one SoundPool instance. &gt; &gt; - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, &gt; an application process can create a maximum of 128 SoundPool instances.
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ Creates a SoundPool instance. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | maxStreams | number | Yes | Maximum number of streams that can be played by the SoundPool instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | Yes | Audio renderer parameters. When the **usage** parameter in **audioRenderInfo** is set to **STREAM_USAGE_UNKNOWN**, **STREAM_USAGE_MUSIC**, **STREAM_USAGE_MOVIE**, or **STREAM_USAGE_AUDIOBOOK**, the SoundPool uses the audio mixing mode when playing a short sound, without interrupting the playback of other audios. SoundPool supports setting **rendererFlags** to **1** for low- latency playback. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SoundPool&gt; | Yes | Callback used to return the result. If the operation is successful, a SoundPool instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SoundPool&gt; | Yes | Callback used to return the result. If the operation is successful, a SoundPool instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ Creates a **SoundPool** instance. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | maxStreams | int | Yes | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | Yes | Audio renderer parameters. When the **usage** parameter in **audioRenderInfo** is set to **STREAM_USAGE_UNKNOWN**, **STREAM_USAGE_MUSIC**, **STREAM_USAGE_MOVIE**, or **STREAM_USAGE_AUDIOBOOK**, the SoundPool uses the audio mixing mode when playing a short sound, without interrupting the playback of other audios. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SoundPool \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **undefined** is returned. The instance is used for loading and playback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SoundPool \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **undefined** is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 
@@ -100,7 +100,7 @@ Creates a **SoundPool** instance. This API uses an asynchronous callback to retu
 function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-Creates a SoundPool instance. This API uses a promise to return the result. > **NOTE：**> > - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. > Therefore, an application process can create only one SoundPool instance. > > - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, > an application process can create a maximum of 128 SoundPool instances.
+Creates a SoundPool instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode. &gt; Therefore, an application process can create only one SoundPool instance. &gt; &gt; - In API version 18 and later, the bottom layer of the created SoundPool object is in multiton mode. Therefore, &gt; an application process can create a maximum of 128 SoundPool instances.
 
 **Since:** 10
 

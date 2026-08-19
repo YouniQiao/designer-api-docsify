@@ -1,6 +1,6 @@
 # NetFirewallDnsParams(Network Firewall)
 
-Defines the DNS information of a firewall rule. > **Description** > > This parameter cannot be empty when **rule.type** of [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md) > is set to RULE_DNS.
+Defines the DNS information of a firewall rule. &gt; **Description** &gt; &gt; This parameter cannot be empty when **rule.type** of [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md) &gt; is set to RULE_DNS.
 
 **Since:** 15
 

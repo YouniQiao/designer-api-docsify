@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getTotalSizeOfVolume
@@ -28,7 +29,7 @@ function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeUuid | string | 是 | 卷设备uuid。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 获取指定卷设备总空间之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 获取指定卷设备总空间之后的回调。 |
 
 **错误码：**
 

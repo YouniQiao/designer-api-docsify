@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { IDataSourcePrefetching, IPrefetcher, BasicPrefetcher } from '@kit.ArkUI';
 ```
 
 ## 汇总

@@ -33,8 +33,6 @@ A trap method for a function call.
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## construct
 
 ```TypeScript
@@ -59,8 +57,6 @@ A trap for the `new` operator.
 
 | Type | Description |
 | --- | --- |
-| object |  |
-
 ## defineProperty
 
 ```TypeScript
@@ -85,8 +81,6 @@ A trap for `Object.defineProperty()`.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## deleteProperty
 
 ```TypeScript
@@ -110,8 +104,6 @@ A trap for the `delete` operator.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## get
 
 ```TypeScript
@@ -136,8 +128,6 @@ A trap for getting a property value.
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## getOwnPropertyDescriptor
 
 ```TypeScript
@@ -161,8 +151,6 @@ A trap for `Object.getOwnPropertyDescriptor()`.
 
 | Type | Description |
 | --- | --- |
-| PropertyDescriptor |  |
-
 ## getPrototypeOf
 
 ```TypeScript
@@ -185,8 +173,6 @@ A trap for the `[[GetPrototypeOf]]` internal method.
 
 | Type | Description |
 | --- | --- |
-| object |  |
-
 ## has
 
 ```TypeScript
@@ -210,8 +196,6 @@ A trap for the `in` operator.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## isExtensible
 
 ```TypeScript
@@ -234,8 +218,6 @@ A trap for `Object.isExtensible()`.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## ownKeys
 
 ```TypeScript
@@ -258,8 +240,6 @@ A trap for `Reflect.ownKeys()`.
 
 | Type | Description |
 | --- | --- |
-| ArrayLike&lt;string \| symbol&gt; |  |
-
 ## preventExtensions
 
 ```TypeScript
@@ -282,8 +262,6 @@ A trap for `Object.preventExtensions()`.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## set
 
 ```TypeScript
@@ -309,8 +287,6 @@ A trap for setting a property value.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## setPrototypeOf
 
 ```TypeScript
@@ -334,5 +310,3 @@ A trap for `Object.setPrototypeOf()`.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## hold
@@ -33,7 +34,7 @@ hold(timeout: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | int | 是 | 锁定和持有RunningLock的时长，单位：毫秒。<br>**-1**：永久持锁，需要主动释放。<br>**0**：默认3s后超时释放。<br> **>0**：按传入值超时释放。 |
+| timeout | int | 是 | 锁定和持有RunningLock的时长，单位：毫秒。<br>**-1**：永久持锁，需要主动释放。<br>**0**：默认3s后超时释放。<br> **&gt;0**：按传入值超时释放。 |
 
 **错误码：**
 

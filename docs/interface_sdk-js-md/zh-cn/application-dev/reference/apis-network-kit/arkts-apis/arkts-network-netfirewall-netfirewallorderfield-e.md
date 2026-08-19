@@ -1,6 +1,6 @@
 # NetFirewallOrderField(网络防火墙)
 
-枚举类型，防火墙规则排序方法。 > **说明：**> > [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md)接口，仅支持ORDER_BY_RULE_NAME字段。
+枚举类型，防火墙规则排序方法。 &gt; **说明：**&gt; &gt; [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md)接口，仅支持ORDER_BY_RULE_NAME字段。
 
 **起始版本：** 15
 

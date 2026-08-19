@@ -247,13 +247,13 @@ Unregisters the listener for disconnection notifications from the Callee UIAbili
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## off_release('release')
+## off('release')
 
 ```TypeScript
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](#on_releaserelease). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](#onrelease). It is currently not supported.
 
 **Since:** 9
 
@@ -307,13 +307,13 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off_release('release')
+## off('release')
 
 ```TypeScript
 off(type: 'release'): void
 ```
 
-Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](#on_releaserelease). It is currently not supported.
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](#onrelease). It is currently not supported.
 
 **Since:** 9
 
@@ -485,7 +485,7 @@ export default class MainAbility extends UIAbility {
 }
 ```
 
-## on_release('release')
+## on('release')
 
 ```TypeScript
 on(type: 'release', callback: OnReleaseCallback): void

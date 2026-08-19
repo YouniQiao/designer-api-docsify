@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## parse
@@ -33,5 +34,5 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): Obj
 
 | 类型 | 说明 |
 | --- | --- |
-| Object | 当传入的字符串为'null'时，返回null。 |
+| Object \| null | 当传入的字符串为'null'时，返回null。 |
 

@@ -44,7 +44,7 @@ static connect<T extends object>(
 
 | 类型 | 说明 |
 | --- | --- |
-| T | the value of the existing key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type. |
+| T \| undefined | the value of the existing key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type. |
 
 ## connect
 
@@ -82,7 +82,7 @@ static connect<T extends object>(
 
 | 类型 | 说明 |
 | --- | --- |
-| T | the value of the existed key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type and key. |
+| T \| undefined | the value of the existed key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type and key. |
 
 ## globalConnect
 
@@ -112,7 +112,7 @@ static globalConnect<T extends object>(params: ConnectOptions<T>): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | the value of the existed key or the default value |
+| T \| undefined | the value of the existed key or the default value |
 
 ## keys
 
@@ -120,7 +120,7 @@ static globalConnect<T extends object>(params: ConnectOptions<T>): T | undefined
 static keys(): string[]
 ```
 
-获取PersistenceV2中所有的key。 > **说明：** > > key在Array中的顺序是无序的，与key插入到PersistenceV2中的顺序无关。
+获取PersistenceV2中所有的key。 &gt; **说明：** &gt; &gt; key在Array中的顺序是无序的，与key插入到PersistenceV2中的顺序无关。
 
 **起始版本：** 26.0.0
 
@@ -168,7 +168,7 @@ static notifyOnError(callback: PersistenceErrorCallback | undefined): void
 static remove(keyOrType: string | Class): void
 ```
 
-将指定的键值对数据从PersistenceV2里面删除。如果指定的键值不存在于PersistenceV2中，将删除失败。 > **说明：** > > 删除PersistenceV2中不存在的key会打印warn日志警告。
+将指定的键值对数据从PersistenceV2里面删除。如果指定的键值不存在于PersistenceV2中，将删除失败。 &gt; **说明：** &gt; &gt; 删除PersistenceV2中不存在的key会打印warn日志警告。
 
 **起始版本：** 26.0.0
 

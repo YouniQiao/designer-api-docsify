@@ -43,7 +43,7 @@ Initializes current startup task. A developer could override this function to in
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Any&gt; | The result of initialization. |
+| Promise&lt;Any&gt; \| Promise&lt;void&gt; | The result of initialization. |
 
 ## onDependencyCompleted
 

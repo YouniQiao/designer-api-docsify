@@ -39,8 +39,6 @@ delete(key: K): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## forEach
 
 ```TypeScript
@@ -82,8 +80,6 @@ Returns a specified element from the Map object. If the value that is associated
 
 | Type | Description |
 | --- | --- |
-| V |  |
-
 ## has
 
 ```TypeScript
@@ -104,8 +100,6 @@ has(key: K): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## set
 
 ```TypeScript
@@ -129,8 +123,6 @@ Adds a new element with a specified key and value to the Map. If an element with
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## size
 
 ```TypeScript

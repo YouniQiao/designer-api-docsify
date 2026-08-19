@@ -1,6 +1,6 @@
 # MovingPhoto
 
-动态照片对象。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
+动态照片对象。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getUri
@@ -62,7 +63,7 @@ Obtains the URI of this moving photo.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Returns uri of the moving photo, if the operation fails, returns null |
+| string \| null | Returns uri of the moving photo, if the operation fails, returns null |
 
 **错误码：**
 

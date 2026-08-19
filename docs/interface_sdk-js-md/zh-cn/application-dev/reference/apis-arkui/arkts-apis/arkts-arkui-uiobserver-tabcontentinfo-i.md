@@ -11,6 +11,7 @@ TabContent页面的切换信息。
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## id
@@ -59,7 +60,7 @@ TabContent组件的下标索引。索引从0开始。
 lastIndex?: number
 ```
 
-最近一次聚焦的TabsContent组件的下标索引。索引从0开始。仅在 [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navdestinationupdatenavdestinationupdate)的回调函数中存在。
+最近一次聚焦的TabsContent组件的下标索引。索引从0开始。仅在 [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#onnavdestinationupdate)的回调函数中存在。
 
 **类型：** number
 
@@ -81,7 +82,7 @@ state: TabContentState
 
 TabContent组件的状态。
 
-**类型：** [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
+**类型：** [TabContentState](../../apis-na/arkts-apis/arkts-na-uiobserver-tabcontentstate-e.md)
 
 **起始版本：** 12
 

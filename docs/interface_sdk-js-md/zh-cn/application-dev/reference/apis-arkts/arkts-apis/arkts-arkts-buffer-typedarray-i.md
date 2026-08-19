@@ -15,5 +15,6 @@ TypedArray继承Int8Array的特性与方法。
 ## 导入模块
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 

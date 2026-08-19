@@ -1,6 +1,6 @@
 # ListScroller
 
-Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis. > **NOTE：**> > **ListScroller** inherits from Scroller and has all methods of > Scroller.
+Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis. &gt; **NOTE：**&gt; &gt; **ListScroller** inherits from Scroller and has all methods of &gt; Scroller.
 
 **Inheritance/Implementation:** ListScroller extends Scroller
 
@@ -52,7 +52,7 @@ Collapses the list items in the EXPANDED state and sets callback events.
 getItemRectInGroup(index: number, indexInGroup: number): RectResult
 ```
 
-Obtains the size of a list item in a list item group and its position relative to the list. > **NOTE：**> > - The value of **index** must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. > - The child component for which **index** is set must be a list item group. Otherwise, the **index** value is considered invalid. > - The value of **indexInGroup** must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. > - When **index** or **indexInGroup** is set to an invalid value, the returned size and position are both **0**.
+Obtains the size of a list item in a list item group and its position relative to the list. &gt; **NOTE：**&gt; &gt; - The value of **index** must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. &gt; - The child component for which **index** is set must be a list item group. Otherwise, the **index** value is considered invalid. &gt; - The value of **indexInGroup** must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. &gt; - When **index** or **indexInGroup** is set to an invalid value, the returned size and position are both **0**.
 
 **Since:** 11
 

@@ -400,7 +400,7 @@ levelMode?: LevelMode
 
 Defines the display level of the popup.
 
-**类型：** [LevelMode](arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **起始版本：** 26.0.0
 

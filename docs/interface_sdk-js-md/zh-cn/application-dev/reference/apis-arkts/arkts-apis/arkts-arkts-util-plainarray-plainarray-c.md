@@ -11,6 +11,8 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 ## 导入模块
 
 ```TypeScript
+import { PlainArray } from '@kit.ArkTS';
+import { PlainArrayForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -401,7 +403,7 @@ get(key: int): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 键值对中的value。 |
+| T \| undefined | 键值对中的value。 |
 
 **错误码：**
 
@@ -744,7 +746,7 @@ remove(key: int): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 如果key存在则返回映射的值，否则返回undefined。 |
+| T \| undefined | 如果key存在则返回映射的值，否则返回undefined。 |
 
 **错误码：**
 
@@ -831,7 +833,7 @@ removeAt(index: int): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | T类型的值，容器为空时返回undefined。 |
+| T \| undefined | T类型的值，容器为空时返回undefined。 |
 
 **错误码：**
 

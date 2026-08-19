@@ -1,6 +1,6 @@
 # MeasureUtils
 
-Provides APIs for measuring text metrics, such as text height and width. > **NOTE：**> > - In the following API examples, you must first use [getMeasureUtils()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getmeasureutils) in > **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance. > > - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) API. > > - Avoid using > [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale) > during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually > listen for font scale changes. > > - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies. > This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and > truncating by string length can split these multi-code-point characters, resulting in incorrect text display or > measurement errors. As such, you are advised to perform iterative truncation processing based on Unicode code > points. For details, see [Example 2 in measureTextSize](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-measureutils-c.md#measuretextsize).
+Provides APIs for measuring text metrics, such as text height and width. &gt; **NOTE：**&gt; &gt; - In the following API examples, you must first use [getMeasureUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmeasureutils) in &gt; **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance. &gt; &gt; - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md) API. &gt; &gt; - Avoid using &gt; [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale) &gt; during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually &gt; listen for font scale changes. &gt; &gt; - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies. &gt; This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and &gt; truncating by string length can split these multi-code-point characters, resulting in incorrect text display or &gt; measurement errors. As such, you are advised to perform iterative truncation processing based on Unicode code &gt; points. For details, see [Example 2 in measureTextSize](#measuretextsize).
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Converts a styled string into an array of corresponding [Paragraph](../../apis-a
 measureText(options: MeasureOptions): number
 ```
 
-Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line. > **NOTE：**> > **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**, > **maxLines**, and more) do not affect results. For layout-constrained width measurement, use > [measureTextSize](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-measureutils-c.md#measuretextsize).
+Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line. &gt; **NOTE：**&gt; &gt; **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**, &gt; **maxLines**, and more) do not affect results. For layout-constrained width measurement, use &gt; [measureTextSize](#measuretextsize).
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ Measures the single-line display width of the specified text. For multi-line tex
 measureTextSize(options: MeasureOptions): SizeOptions
 ```
 
-Measures the width and height of the given single-line text. > **NOTE：**> > When calling this MPI, do not use ApplicationContext.setFontSizeScale to set the font size scaling ratio. To > ensure the correctness of the time sequence, you are advised to monitor the font scaling changes by yourself to > ensure the accuracy of the calculation result.
+Measures the width and height of the given single-line text. &gt; **NOTE：**&gt; &gt; When calling this MPI, do not use ApplicationContext.setFontSizeScale to set the font size scaling ratio. To &gt; ensure the correctness of the time sequence, you are advised to monitor the font scaling changes by yourself to &gt; ensure the accuracy of the calculation result.
 
 **Since:** 12
 

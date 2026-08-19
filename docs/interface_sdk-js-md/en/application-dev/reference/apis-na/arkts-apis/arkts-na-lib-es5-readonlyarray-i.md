@@ -31,8 +31,6 @@ Combines two or more arrays.
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## concat
 
 ```TypeScript
@@ -55,8 +53,6 @@ Combines two or more arrays.
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## every
 
 ```TypeScript
@@ -80,8 +76,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Type | Description |
 | --- | --- |
-| this is readonly S[] |  |
-
 ## every
 
 ```TypeScript
@@ -105,8 +99,6 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## filter
 
 ```TypeScript
@@ -130,8 +122,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Type | Description |
 | --- | --- |
-| S[] |  |
-
 ## filter
 
 ```TypeScript
@@ -155,8 +145,6 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## forEach
 
 ```TypeScript
@@ -199,8 +187,6 @@ Returns the index of the first occurrence of a value in an array.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## join
 
 ```TypeScript
@@ -223,8 +209,6 @@ Adds all the elements of an array separated by the specified separator string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## lastIndexOf
 
 ```TypeScript
@@ -248,8 +232,6 @@ Returns the index of the last occurrence of a specified value in an array.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## map
 
 ```TypeScript
@@ -273,8 +255,6 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | Type | Description |
 | --- | --- |
-| U[] |  |
-
 ## reduce
 
 ```TypeScript
@@ -297,8 +277,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduce
 
 ```TypeScript
@@ -320,8 +298,6 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduce
 
 ```TypeScript
@@ -345,8 +321,6 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -369,8 +343,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -392,8 +364,6 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## reduceRight
 
 ```TypeScript
@@ -417,8 +387,6 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| U |  |
-
 ## slice
 
 ```TypeScript
@@ -442,8 +410,6 @@ Returns a section of an array.
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## some
 
 ```TypeScript
@@ -467,8 +433,6 @@ Determines whether the specified callback function returns true for any element 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## toLocaleString
 
 ```TypeScript
@@ -485,8 +449,6 @@ Returns a string representation of an array. The elements are converted to strin
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -503,8 +465,6 @@ Returns a string representation of an array.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## length
 
 ```TypeScript

@@ -119,7 +119,7 @@ Get the exception or object of the the JavaScript code execution result and seri
 
 | 类型 | 说明 |
 | --- | --- |
-| string | if an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of 2048 will be truncated; otherwise, return null. |
+| string \| null | if an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of 2048 will be truncated; otherwise, return null. |
 
 ## getNumber
 
@@ -141,7 +141,7 @@ Get the number value of the JavaScript code execution result.
 
 | 类型 | 说明 |
 | --- | --- |
-| double | Returns data of number type |
+| double \| long | Returns data of number type |
 
 **错误码：**
 

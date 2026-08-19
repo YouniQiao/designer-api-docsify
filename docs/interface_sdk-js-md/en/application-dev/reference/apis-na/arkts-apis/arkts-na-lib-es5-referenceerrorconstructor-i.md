@@ -31,8 +31,6 @@ new(message?: string): ReferenceError
 
 | Type | Description |
 | --- | --- |
-| [ReferenceError](arkts-na-lib-es5-referenceerror-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(message?: string): ReferenceError
 
 | Type | Description |
 | --- | --- |
-| [ReferenceError](arkts-na-lib-es5-referenceerror-i.md) |  |
-
 ## prototype
 
 ```TypeScript

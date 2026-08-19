@@ -44,7 +44,7 @@ When used by PersistenceV2, module-level storage path, different modules will ha
 
 | Type | Description |
 | --- | --- |
-| T | the value of the existing key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type. |
+| T \| undefined | the value of the existing key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type. |
 
 ## connect
 
@@ -82,7 +82,7 @@ If used by persistenceV2, module-level storage path, different modules will have
 
 | Type | Description |
 | --- | --- |
-| T | the value of the existed key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type and key. |
+| T \| undefined | the value of the existed key or the default value. returns undefined when defaultCreator is not set and there is no data with matching type and key. |
 
 ## globalConnect
 
@@ -112,7 +112,7 @@ Application-level storage path, sharing a storage path for all modules under the
 
 | Type | Description |
 | --- | --- |
-| T | the value of the existed key or the default value |
+| T \| undefined | the value of the existed key or the default value |
 
 ## keys
 

@@ -1,6 +1,6 @@
 # @ohos.application.formBindingData(卡片数据绑定类)
 
-卡片数据绑定模块提供卡片数据绑定的能力。包括FormBindingData对象的创建、相关信息的描述。 > **说明：** > > 从API version 9开始废弃，
+卡片数据绑定模块提供卡片数据绑定的能力。包括FormBindingData对象的创建、相关信息的描述。 &gt; **说明：** &gt; &gt; 从API version 9开始废弃，
 
 **起始版本：** 8
 

@@ -1,6 +1,6 @@
 # ImageFilter
 
-Implements an image filter. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Implements an image filter. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -74,7 +74,7 @@ Makes an ImageFilter object that applies the blend to the input.
 
 | Type | Description |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | ImageFilter object. |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 
 **Error codes:**
 
@@ -146,7 +146,7 @@ Creates an image filter with a given blur effect.
 
 | Type | Description |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | ImageFilter object. |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 
 **Error codes:**
 
@@ -206,7 +206,7 @@ Makes an ImageFilter object that combines the "inner" and "outer" filters, allow
 
 | Type | Description |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | ImageFilter object. |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 
 ## createFromColorFilter
 
@@ -266,7 +266,7 @@ Creates an image filter object with a given color filter effect.
 
 | Type | Description |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | ImageFilter object. |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 
 **Error codes:**
 
@@ -328,7 +328,7 @@ Makes an ImageFilter object that applies the bitmap to the input.
 
 | Type | Description |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | ImageFilter object. |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 
 ## createFromShaderEffect
 
@@ -380,7 +380,7 @@ Makes an ImageFilter object that renders the contents of the input Shader.
 
 | Type | Description |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | ImageFilter object. |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 
 ## createOffsetImageFilter
 
@@ -436,5 +436,5 @@ Makes an ImageFilter object that instance with the provided x and y offset.
 
 | Type | Description |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | ImageFilter object. |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | ImageFilter object. |
 

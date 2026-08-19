@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## hasDefaultNet
@@ -25,7 +26,7 @@ function hasDefaultNet(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回当前是否有可用网络。true表示当前有可用网络，false表示当前没有可用网络。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回当前是否有可用网络。true表示当前有可用网络，false表示当前没有可用网络。 |
 
 **错误码：**
 

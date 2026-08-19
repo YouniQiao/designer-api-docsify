@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Decimal } from '@kit.ArkTS';
 ```
 
 ## abs
@@ -2183,7 +2184,7 @@ static set(config: DecimalConfig): void
 static sign(n: Value): double
 ```
 
-根据参数n的值返回对应的符号： 1 如果 n > 0， -1 如果 n &lt; 0， 0 如果 n 为 0， NaN 其他情况
+根据参数n的值返回对应的符号： 1 如果 n &gt; 0， -1 如果 n &lt; 0， 0 如果 n 为 0， NaN 其他情况
 
 **起始版本：** 23
 

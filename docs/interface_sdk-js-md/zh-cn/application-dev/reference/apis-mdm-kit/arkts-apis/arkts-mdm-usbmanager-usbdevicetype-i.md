@@ -11,6 +11,7 @@ USB设备类型信息。 可通过[getDevices](../../apis-basic-services-kit/ark
 ## 导入模块
 
 ```TypeScript
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## baseClass

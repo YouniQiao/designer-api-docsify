@@ -448,7 +448,7 @@ Obtains the line measurement information of a line.
 
 | Type | Description |
 | --- | --- |
-| LineMetrics | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
+| LineMetrics \| undefined | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
 
 **Examples**
 

@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
-## on_densityUpdate('densityUpdate')
+## on('densityUpdate')
 
 ```TypeScript
 export function on(type: 'densityUpdate', context: UIContext, callback: Callback<DensityInfo>): void
@@ -29,7 +30,7 @@ export function on(type: 'densityUpdate', context: UIContext, callback: Callback
 | --- | --- | --- | --- |
 | type | 'densityUpdate' | 是 | 监听事件，固定为'densityUpdate'，即屏幕像素密度变化。 |
 | context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面的范围。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | 是 | 回调函数。携带DensityInfo，返回变化后的屏幕像素密度。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-densityinfo-c.md)&gt; | 是 | 回调函数。携带DensityInfo，返回变化后的屏幕像素密度。 |
 
 **示例**
 

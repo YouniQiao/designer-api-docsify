@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## 汇总

@@ -29,7 +29,7 @@ Notify print service the information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobId | string | Yes | Indicates id of the print job. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback function for indicating the result of API execution. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback function for indicating the result of API execution. |
 
 **Error codes:**
 

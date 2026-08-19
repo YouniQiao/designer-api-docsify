@@ -12,7 +12,7 @@ import { systemManager } from '@kit.MDMKit';
 function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 ```
 
-Sets whether to enable nonce for OTA update (nonce is enabled by default). When nonce is enabled, the system verifies the validity of the nonce during the OTA update process to prevent replay attacks and enhance system security. > **NOTE：**> > To ensure system security, it is not advised to disable nonce verification unless required by specific use cases > such as intranet updates.
+Sets whether to enable nonce for OTA update (nonce is enabled by default). When nonce is enabled, the system verifies the validity of the nonce during the OTA update process to prevent replay attacks and enhance system security. &gt; **NOTE：**&gt; &gt; To ensure system security, it is not advised to disable nonce verification unless required by specific use cases &gt; such as intranet updates.
 
 **Since:** 26.0.0
 

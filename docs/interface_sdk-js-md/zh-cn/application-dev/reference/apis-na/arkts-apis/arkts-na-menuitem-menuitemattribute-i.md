@@ -35,8 +35,6 @@ attributeModifier(
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentFont
 
 ```TypeScript
@@ -59,8 +57,6 @@ contentFont(value: Font | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentFontColor
 
 ```TypeScript
@@ -83,8 +79,6 @@ contentFontColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## labelFont
 
 ```TypeScript
@@ -107,8 +101,6 @@ labelFont(value: Font | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## labelFontColor
 
 ```TypeScript
@@ -131,8 +123,6 @@ labelFontColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -155,8 +145,6 @@ onChange(callback: ((selected: boolean) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectIcon
 
 ```TypeScript
@@ -179,8 +167,6 @@ selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selected
 
 ```TypeScript
@@ -203,8 +189,6 @@ selected(value: boolean | undefined | Bindable<boolean>): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

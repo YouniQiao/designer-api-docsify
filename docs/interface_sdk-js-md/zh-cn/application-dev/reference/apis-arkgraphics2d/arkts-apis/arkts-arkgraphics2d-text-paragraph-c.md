@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines
@@ -771,7 +772,7 @@ getLineMetrics(lineNumber: int): LineMetrics | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| LineMetrics | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
+| LineMetrics \| undefined | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
 
 **示例**
 

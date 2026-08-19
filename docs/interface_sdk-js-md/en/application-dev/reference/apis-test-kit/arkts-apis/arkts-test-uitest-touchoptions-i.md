@@ -21,7 +21,7 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 duration?: int
 ```
 
-Duration of the operation in milliseconds. <br>Value range: The value should be >= 1500 <br>Unit: ms <br>Default value: 1500
+Duration of the operation in milliseconds. <br>Value range: The value should be &gt;= 1500 <br>Unit: ms <br>Default value: 1500
 
 **Type:** int
 

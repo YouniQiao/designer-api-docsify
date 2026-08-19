@@ -11,6 +11,10 @@
 ## 导入模块
 
 ```TypeScript
+import { wifi } from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总
@@ -38,28 +42,28 @@
 | [isConnected](arkts-connectivity-wifi-isconnected-f.md) | 查询WLAN是否已连接。 |
 | [isFeatureSupported](arkts-connectivity-wifi-isfeaturesupported-f.md) | 判断设备是否支持相关WLAN特性。 |
 | [isWifiActive](arkts-connectivity-wifi-iswifiactive-f.md) | 查询WLAN是否已使能。 |
-| [off_hotspotStateChange](arkts-connectivity-wifi-offhotspotstatechange-f.md#off_hotspotstatechangehotspotstatechange) | 取消订阅WLAN热点状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
-| [off_p2pConnectionChange](arkts-connectivity-wifi-offp2pconnectionchange-f.md#off_p2pconnectionchangep2pconnectionchange) | 取消订阅P2P连接改变事件。 |
-| [off_p2pDeviceChange](arkts-connectivity-wifi-offp2pdevicechange-f.md#off_p2pdevicechangep2pdevicechange) | 取消订阅P2P本地设备改变事件。 |
-| [off_p2pDiscoveryChange](arkts-connectivity-wifi-offp2pdiscoverychange-f.md#off_p2pdiscoverychangep2pdiscoverychange) | 取消订阅P2P发现事件。 |
-| [off_p2pPeerDeviceChange](arkts-connectivity-wifi-offp2ppeerdevicechange-f.md#off_p2ppeerdevicechangep2ppeerdevicechange) | 取消订阅P2P对端设备改变事件。 |
-| [off_p2pPersistentGroupChange](arkts-connectivity-wifi-offp2ppersistentgroupchange-f.md#off_p2ppersistentgroupchangep2ppersistentgroupchange) | 取消订阅P2P持久群组改变事件。 |
-| [off_p2pStateChange](arkts-connectivity-wifi-offp2pstatechange-f.md#off_p2pstatechangep2pstatechange) | 取消订阅P2P状态改变事件。 |
-| [off_wifiConnectionChange](arkts-connectivity-wifi-offwificonnectionchange-f.md#off_wificonnectionchangewificonnectionchange) | 取消订阅WLAN连接状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
-| [off_wifiRssiChange](arkts-connectivity-wifi-offwifirssichange-f.md#off_wifirssichangewifirssichange) | 取消订阅WLAN RSSI改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
-| [off_wifiScanStateChange](arkts-connectivity-wifi-offwifiscanstatechange-f.md#off_wifiscanstatechangewifiscanstatechange) | 取消订阅WLAN扫描状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
-| [off_wifiStateChange](arkts-connectivity-wifi-offwifistatechange-f.md#off_wifistatechangewifistatechange) | 取消订阅WLAN状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
-| [on_hotspotStateChange](arkts-connectivity-wifi-onhotspotstatechange-f.md#on_hotspotstatechangehotspotstatechange) | 订阅WLAN热点状态改变事件。 |
-| [on_p2pConnectionChange](arkts-connectivity-wifi-onp2pconnectionchange-f.md#on_p2pconnectionchangep2pconnectionchange) | 订阅P2P连接改变事件。 |
-| [on_p2pDeviceChange](arkts-connectivity-wifi-onp2pdevicechange-f.md#on_p2pdevicechangep2pdevicechange) | 订阅P2P本地设备改变事件。 |
-| [on_p2pDiscoveryChange](arkts-connectivity-wifi-onp2pdiscoverychange-f.md#on_p2pdiscoverychangep2pdiscoverychange) | 订阅P2P发现事件。 |
-| [on_p2pPeerDeviceChange](arkts-connectivity-wifi-onp2ppeerdevicechange-f.md#on_p2ppeerdevicechangep2ppeerdevicechange) | 订阅P2P对端设备改变事件。 |
-| [on_p2pPersistentGroupChange](arkts-connectivity-wifi-onp2ppersistentgroupchange-f.md#on_p2ppersistentgroupchangep2ppersistentgroupchange) | 订阅P2P持久群组改变事件。 |
-| [on_p2pStateChange](arkts-connectivity-wifi-onp2pstatechange-f.md#on_p2pstatechangep2pstatechange) | 订阅P2P状态改变事件。 |
-| [on_wifiConnectionChange](arkts-connectivity-wifi-onwificonnectionchange-f.md#on_wificonnectionchangewificonnectionchange) | 订阅WLAN连接状态改变事件。 |
-| [on_wifiRssiChange](arkts-connectivity-wifi-onwifirssichange-f.md#on_wifirssichangewifirssichange) | 订阅WLAN RSSI改变事件。 |
-| [on_wifiScanStateChange](arkts-connectivity-wifi-onwifiscanstatechange-f.md#on_wifiscanstatechangewifiscanstatechange) | 订阅WLAN扫描状态改变事件。 |
-| [on_wifiStateChange](arkts-connectivity-wifi-onwifistatechange-f.md#on_wifistatechangewifistatechange) | 订阅WLAN状态改变事件。 |
+| [off_hotspotStateChange](arkts-connectivity-wifi-offhotspotstatechange-f.md#offhotspotstatechange) | 取消订阅WLAN热点状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
+| [off_p2pConnectionChange](arkts-connectivity-wifi-offp2pconnectionchange-f.md#offp2pconnectionchange) | 取消订阅P2P连接改变事件。 |
+| [off_p2pDeviceChange](arkts-connectivity-wifi-offp2pdevicechange-f.md#offp2pdevicechange) | 取消订阅P2P本地设备改变事件。 |
+| [off_p2pDiscoveryChange](arkts-connectivity-wifi-offp2pdiscoverychange-f.md#offp2pdiscoverychange) | 取消订阅P2P发现事件。 |
+| [off_p2pPeerDeviceChange](arkts-connectivity-wifi-offp2ppeerdevicechange-f.md#offp2ppeerdevicechange) | 取消订阅P2P对端设备改变事件。 |
+| [off_p2pPersistentGroupChange](arkts-connectivity-wifi-offp2ppersistentgroupchange-f.md#offp2ppersistentgroupchange) | 取消订阅P2P持久群组改变事件。 |
+| [off_p2pStateChange](arkts-connectivity-wifi-offp2pstatechange-f.md#offp2pstatechange) | 取消订阅P2P状态改变事件。 |
+| [off_wifiConnectionChange](arkts-connectivity-wifi-offwificonnectionchange-f.md#offwificonnectionchange) | 取消订阅WLAN连接状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
+| [off_wifiRssiChange](arkts-connectivity-wifi-offwifirssichange-f.md#offwifirssichange) | 取消订阅WLAN RSSI改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
+| [off_wifiScanStateChange](arkts-connectivity-wifi-offwifiscanstatechange-f.md#offwifiscanstatechange) | 取消订阅WLAN扫描状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
+| [off_wifiStateChange](arkts-connectivity-wifi-offwifistatechange-f.md#offwifistatechange) | 取消订阅WLAN状态改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
+| [on_hotspotStateChange](arkts-connectivity-wifi-onhotspotstatechange-f.md#onhotspotstatechange) | 订阅WLAN热点状态改变事件。 |
+| [on_p2pConnectionChange](arkts-connectivity-wifi-onp2pconnectionchange-f.md#onp2pconnectionchange) | 订阅P2P连接改变事件。 |
+| [on_p2pDeviceChange](arkts-connectivity-wifi-onp2pdevicechange-f.md#onp2pdevicechange) | 订阅P2P本地设备改变事件。 |
+| [on_p2pDiscoveryChange](arkts-connectivity-wifi-onp2pdiscoverychange-f.md#onp2pdiscoverychange) | 订阅P2P发现事件。 |
+| [on_p2pPeerDeviceChange](arkts-connectivity-wifi-onp2ppeerdevicechange-f.md#onp2ppeerdevicechange) | 订阅P2P对端设备改变事件。 |
+| [on_p2pPersistentGroupChange](arkts-connectivity-wifi-onp2ppersistentgroupchange-f.md#onp2ppersistentgroupchange) | 订阅P2P持久群组改变事件。 |
+| [on_p2pStateChange](arkts-connectivity-wifi-onp2pstatechange-f.md#onp2pstatechange) | 订阅P2P状态改变事件。 |
+| [on_wifiConnectionChange](arkts-connectivity-wifi-onwificonnectionchange-f.md#onwificonnectionchange) | 订阅WLAN连接状态改变事件。 |
+| [on_wifiRssiChange](arkts-connectivity-wifi-onwifirssichange-f.md#onwifirssichange) | 订阅WLAN RSSI改变事件。 |
+| [on_wifiScanStateChange](arkts-connectivity-wifi-onwifiscanstatechange-f.md#onwifiscanstatechange) | 订阅WLAN扫描状态改变事件。 |
+| [on_wifiStateChange](arkts-connectivity-wifi-onwifistatechange-f.md#onwifistatechange) | 订阅WLAN状态改变事件。 |
 | [p2pCancelConnect](arkts-connectivity-wifi-p2pcancelconnect-f.md) | 取消P2P连接。 |
 | [p2pConnect](arkts-connectivity-wifi-p2pconnect-f.md) | 使用指定配置发起与设备的P2P连接。 |
 | [removeGroup](arkts-connectivity-wifi-removegroup-f.md) | 移除P2P群组。 |
@@ -92,12 +96,12 @@
 | [getSupportedFeatures](arkts-connectivity-wifi-getsupportedfeatures-f-sys.md) | 查询设备支持的特性。 &lt;p&gt;检查设备是否支持指定特性。 |
 | [isHotspotActive](arkts-connectivity-wifi-ishotspotactive-f-sys.md) | 热点是否已使能。 |
 | [isHotspotDualBandSupported](arkts-connectivity-wifi-ishotspotdualbandsupported-f-sys.md) | 热点是否支持双频。 |
-| [off_hotspotStaJoin](arkts-connectivity-wifi-offhotspotstajoin-f-sys.md#off_hotspotstajoinhotspotstajoin) | 取消订阅WLAN热点STA加入事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
-| [off_hotspotStaLeave](arkts-connectivity-wifi-offhotspotstaleave-f-sys.md#off_hotspotstaleavehotspotstaleave) | 取消订阅WLAN热点STA离开事件。 |
-| [off_streamChange](arkts-connectivity-wifi-offstreamchange-f-sys.md#off_streamchangestreamchange) | 取消订阅WLAN数据流改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
-| [on_hotspotStaJoin](arkts-connectivity-wifi-onhotspotstajoin-f-sys.md#on_hotspotstajoinhotspotstajoin) | 订阅WLAN热点STA加入事件。 |
-| [on_hotspotStaLeave](arkts-connectivity-wifi-onhotspotstaleave-f-sys.md#on_hotspotstaleavehotspotstaleave) | 订阅WLAN热点STA离开事件。 |
-| [on_streamChange](arkts-connectivity-wifi-onstreamchange-f-sys.md#on_streamchangestreamchange) | 订阅WLAN数据流改变事件。 |
+| [off_hotspotStaJoin](arkts-connectivity-wifi-offhotspotstajoin-f-sys.md#offhotspotstajoin) | 取消订阅WLAN热点STA加入事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
+| [off_hotspotStaLeave](arkts-connectivity-wifi-offhotspotstaleave-f-sys.md#offhotspotstaleave) | 取消订阅WLAN热点STA离开事件。 |
+| [off_streamChange](arkts-connectivity-wifi-offstreamchange-f-sys.md#offstreamchange) | 取消订阅WLAN数据流改变事件。 &lt;p&gt;如果没有指定callback参数，将取消注册该事件关联的所有回调函数。&lt;/p&gt; |
+| [on_hotspotStaJoin](arkts-connectivity-wifi-onhotspotstajoin-f-sys.md#onhotspotstajoin) | 订阅WLAN热点STA加入事件。 |
+| [on_hotspotStaLeave](arkts-connectivity-wifi-onhotspotstaleave-f-sys.md#onhotspotstaleave) | 订阅WLAN热点STA离开事件。 |
+| [on_streamChange](arkts-connectivity-wifi-onstreamchange-f-sys.md#onstreamchange) | 订阅WLAN数据流改变事件。 |
 | [reassociate](arkts-connectivity-wifi-reassociate-f-sys.md) | 重新关联网络。 |
 | [reconnect](arkts-connectivity-wifi-reconnect-f-sys.md) | 重新连接网络。 |
 | [removeAllNetwork](arkts-connectivity-wifi-removeallnetwork-f-sys.md) | 移除所有网络配置。 |

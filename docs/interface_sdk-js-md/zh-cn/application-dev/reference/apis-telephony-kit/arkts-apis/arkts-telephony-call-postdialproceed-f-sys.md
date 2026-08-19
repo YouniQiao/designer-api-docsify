@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## postDialProceed
@@ -29,7 +30,7 @@ function postDialProceed(callId: int, proceed: boolean, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。 |
 | proceed | boolean | 是 | 用户选择是否发送DTMF(Dual Tone Multi Frequency，双音多频)音，默认为false。<br/>-true：是<br/>-false：否 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回继续进行通话的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回继续进行通话的结果。 |
 
 **错误码：**
 

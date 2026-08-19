@@ -1,6 +1,6 @@
 # Array
 
-一种线性数据结构，底层基于数组实现，可以在ArkTS上并发实例间传递。 当需要在ArkTS上并发实例间传递Array时，可以通过传递Array引用提升传递性能。 > **说明：**> > - 本模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > 本节使用以下标识来表示泛型的使用： - T：Type，支持 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器**：\@Sendable
+一种线性数据结构，底层基于数组实现，可以在ArkTS上并发实例间传递。 当需要在ArkTS上并发实例间传递Array时，可以通过传递Array引用提升传递性能。 &gt; **说明：**&gt; &gt; - 本模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; 本节使用以下标识来表示泛型的使用： - T：Type，支持 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器**：\@Sendable
 
 **继承/实现关系：** Array implements ConcatArray<T>
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -69,7 +70,7 @@ at(index: number): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回指定索引处的元素；如果索引超出范围或无效， 则返回**undefined**。 |
+| T \| undefined | 返回指定索引处的元素；如果索引超出范围或无效， 则返回**undefined**。 |
 
 **错误码：**
 
@@ -212,9 +213,9 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | number | 是 | 目标起始位置的下标。如果传入负数，则指代 `target + array.length`位置的下标。 |
-| start | number | 是 | 源起始位置下标。如果传入负数，则指代 **start + array.length**位置的下标。 |
-| end | number | 否 | 源终止位置下标。如果传入负数，则指代 `end + array.length`位置的下标。默认值为ArkTS Array的长度。 |
+| target | number | 是 | 目标起始位置的下标，如果`target &lt; 0`，则会从`target + array.length`位置开始。 取值应为整数，当输入浮点数时会向下取整。 |
+| start | number | 是 | 源起始位置下标，如果`start &lt; 0`，则会从`start + array.length`位置开始。 取值应为整数，当输入浮点数时会向下取整。拷贝过程中包含start位置下标所在的元素。 |
+| end | number | 否 | 源终止位置下标，如果`end &lt; 0`，则会从`end + array.length`位置终止。 默认为ArkTS Array的长度。取值应为整数，当输入浮点数时会向下取整。拷贝过程中不包含end位置下标所在的元素。 |
 
 **返回值：**
 
@@ -456,7 +457,7 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 第一个满足条件的元素的值；如果所有元素都不满足条件 ，则返回**undefined**。 |
+| T \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件 ，则返回**undefined**。 |
 
 **错误码：**
 
@@ -938,7 +939,7 @@ pop(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
+| T \| undefined | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
 
 **错误码：**
 
@@ -1176,7 +1177,7 @@ shift(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
+| T \| undefined | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
 
 **错误码：**
 

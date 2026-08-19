@@ -11,9 +11,10 @@
 ## 导入模块
 
 ```TypeScript
+import { mdns } from '@kit.NetworkKit';
 ```
 
-## off_discoveryStart('discoveryStart')
+## off('discoveryStart')
 
 ```TypeScript
 off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
@@ -34,7 +35,7 @@ off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | 是 | 取消订阅的事件，固定为'discoveryStart'。 <br>discoveryStart：开始搜索局域网内的MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 否 | MDNS服务的信息和事件错误信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 否 | MDNS服务的信息和事件错误信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -62,7 +63,7 @@ discoveryService.off('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
 });
 ```
 
-## off_discoveryStop('discoveryStop')
+## off('discoveryStop')
 
 ```TypeScript
 off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void
@@ -83,9 +84,9 @@ off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | 是 | 取消订阅的事件'discoveryStop'。 <br>discoveryStop：停止搜索局域网内的MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 否 | MDNS服务的信息和事件错误信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 否 | MDNS服务的信息和事件错误信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
 
-## off_serviceFound('serviceFound')
+## off('serviceFound')
 
 ```TypeScript
 off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
@@ -106,7 +107,7 @@ off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | 是 | 取消订阅的事件，固定为'serviceFound'。 <br>serviceFound：发现MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 否 | MDNS服务的信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 否 | MDNS服务的信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订 阅。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -137,7 +138,7 @@ discoveryService.off('serviceFound', (data: mdns.LocalServiceInfo) => {
 });
 ```
 
-## off_serviceLost('serviceLost')
+## off('serviceLost')
 
 ```TypeScript
 off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
@@ -158,7 +159,7 @@ off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | 是 | 取消订阅的事件，固定为'serviceLost'。 <br>serviceLost：移除MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 否 | MDNS服务的信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 否 | MDNS服务的信息。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **示例**
 
@@ -186,7 +187,7 @@ discoveryService.off('serviceLost', (data: mdns.LocalServiceInfo) => {
 });
 ```
 
-## on_discoveryStart('discoveryStart')
+## on('discoveryStart')
 
 ```TypeScript
 on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
@@ -207,7 +208,7 @@ on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | 是 | 订阅事件，固定为'discoveryStart'。 <br>discoveryStart：开始搜索局域网内的MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 是 | MDNS服务的信息和事件错误信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 是 | MDNS服务的信息和事件错误信息。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -231,7 +232,7 @@ discoveryService.on('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on_discoveryStop('discoveryStop')
+## on('discoveryStop')
 
 ```TypeScript
 on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
@@ -252,7 +253,7 @@ on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | 是 | 订阅事件，固定为'discoveryStop'。 <br>discoveryStop：停止搜索局域网内的MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 是 | MDNS服务的信息和事件错误信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | 是 | MDNS服务的信息和事件错误信息。<br>**起始版本：** 11 |
 
 **示例**
 
@@ -276,7 +277,7 @@ discoveryService.on('discoveryStop', (data: mdns.DiscoveryEventInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on_serviceFound('serviceFound')
+## on('serviceFound')
 
 ```TypeScript
 on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
@@ -297,7 +298,7 @@ on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | 是 | 订阅事件，固定为'serviceFound'。 <br>serviceFound：发现MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 | MDNS服务的信息，需调用resolveLocalService解析这个MDNS服务信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 | MDNS服务的信息，需调用resolveLocalService解析这个MDNS服务信息。 |
 
 **示例**
 
@@ -324,7 +325,7 @@ discoveryService.on('serviceFound', (data: mdns.LocalServiceInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on_serviceLost('serviceLost')
+## on('serviceLost')
 
 ```TypeScript
 on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
@@ -345,7 +346,7 @@ on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | 是 | 订阅事件，固定为'serviceLost'。 <br>serviceLost：移除MDNS服务事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 | MDNS服务的信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | 是 | MDNS服务的信息。 |
 
 **示例**
 

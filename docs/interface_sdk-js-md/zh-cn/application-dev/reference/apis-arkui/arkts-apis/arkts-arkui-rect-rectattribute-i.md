@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<RectAttribute> | AttributeModifier
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## radius
 
 ```TypeScript
@@ -58,8 +56,6 @@ radius(value: Length | Array<RadiusItem> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## radiusHeight
 
 ```TypeScript
@@ -82,8 +78,6 @@ radiusHeight(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## radiusWidth
 
 ```TypeScript
@@ -106,8 +100,6 @@ radiusWidth(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setRectOptions
 
 ```TypeScript
@@ -130,8 +122,6 @@ setRectOptions(options?: RectOptions | RoundedRectOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

@@ -27,7 +27,7 @@ Subscribe system keys.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyOptions | KeyOptions | Yes | the key events about input which is to be subscribed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | No | callback function, receive reported data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyOptions&gt; | No | callback function, receive reported data. |
 
 **Error codes:**
 

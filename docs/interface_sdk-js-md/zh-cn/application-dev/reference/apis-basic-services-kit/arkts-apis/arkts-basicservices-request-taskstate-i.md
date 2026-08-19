@@ -1,6 +1,6 @@
 # TaskState
 
-上传任务的任务信息，是 [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progressprogress) 和 [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#off_progressprogress) 接口的回调参数。
+上传任务的任务信息，是 [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) 和 [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#offprogress) 接口的回调参数。
 
 **起始版本：** 23
 
@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## message

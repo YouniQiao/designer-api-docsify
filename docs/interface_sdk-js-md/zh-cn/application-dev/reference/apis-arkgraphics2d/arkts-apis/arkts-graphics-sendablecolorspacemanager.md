@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## 汇总

@@ -41,5 +41,5 @@ attributeModifier(
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [MenuItemGroupAttribute](arkts-na-menuitemgroup-menuitemgroupattribute-i.md) |  |
 

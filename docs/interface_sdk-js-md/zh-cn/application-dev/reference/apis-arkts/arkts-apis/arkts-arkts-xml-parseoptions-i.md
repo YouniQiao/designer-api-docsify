@@ -11,6 +11,7 @@ XML解析选项，用于配置XmlPullParser的解析行为。开发者可通过s
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction

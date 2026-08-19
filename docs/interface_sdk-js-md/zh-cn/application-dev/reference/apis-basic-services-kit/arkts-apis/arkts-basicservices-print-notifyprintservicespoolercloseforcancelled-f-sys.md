@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## notifyPrintServiceSpoolerCloseForCancelled
@@ -28,7 +29,7 @@ Notify print service the information.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobId | string | 是 | Indicates id of the print job. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The callback function for indcating the result of API execution. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback function for indcating the result of API execution. |
 
 **错误码：**
 

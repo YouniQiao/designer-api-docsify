@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## getCellularRxBytes
@@ -11,7 +12,7 @@
 function getCellularRxBytes(callback: AsyncCallback<long>): void
 ```
 
-获取当前已处于连接状态的蜂窝网络对应的网卡从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用callback异步回调。 > **说明：** > > 本接口建议在蜂窝网络处于连接状态时调用，否则会抛出2103012错误码。
+获取当前已处于连接状态的蜂窝网络对应的网卡从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用callback异步回调。 &gt; **说明：** &gt; &gt; 本接口建议在蜂窝网络处于连接状态时调用，否则会抛出2103012错误码。
 
 **起始版本：** 23
 
@@ -23,7 +24,7 @@ function getCellularRxBytes(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。当成功获取到流量数据时，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当成功获取到流量数据时，error为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -68,7 +69,7 @@ statistics.getCellularRxBytes((error: BusinessError|null, stats: long|undefined)
 function getCellularRxBytes(): Promise<long>
 ```
 
-获取当前已处于连接状态的蜂窝网络对应的网卡从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用Promise异步回调。 > **说明：** > > 本接口建议在蜂窝网络处于连接状态时调用，否则会抛出2103012错误码。
+获取当前已处于连接状态的蜂窝网络对应的网卡从最近一次开机开始至接口调用时刻的下行流量总和（单位：字节）。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 本接口建议在蜂窝网络处于连接状态时调用，否则会抛出2103012错误码。
 
 **起始版本：** 23
 

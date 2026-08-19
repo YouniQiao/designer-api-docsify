@@ -28,7 +28,7 @@ Obtains the playback state. Available values are as follows: Playing Paused Stop
 
 | Type | Description |
 | --- | --- |
-| "Playing" |  |
+| "Playing" \| "Paused" \| "Stopped" |  |
 
 ## pause
 

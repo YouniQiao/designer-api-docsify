@@ -1,6 +1,6 @@
 # MediaSource
 
-媒体数据信息。来源于 [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) 。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
+媒体数据信息。来源于 [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) 。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 12开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableOfflineCache
@@ -77,7 +78,7 @@ Obtains the configured audio and video feature filtering values.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | If the TrackSelectionFilter object exists, the TrackSelectionFilter object is returned. Otherwise, the TrackSelectionFilter object is returned. |
+| [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) \| undefined | If the TrackSelectionFilter object exists, the TrackSelectionFilter object is returned. Otherwise, the TrackSelectionFilter object is returned. |
 
 ## setMediaResourceLoaderDelegate
 

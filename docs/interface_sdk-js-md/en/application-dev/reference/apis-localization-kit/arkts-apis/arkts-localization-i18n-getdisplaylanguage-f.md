@@ -18,7 +18,7 @@ Obtains the localized script for the specified language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDisplayLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getdisplaylanguage)
+**Substitutes:** [getDisplayLanguage](arkts-localization-i18n-system-c.md#getdisplaylanguage)
 
 <!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 

@@ -157,7 +157,7 @@ Get the component type of this class if it is a fixed array.
 
 | Type | Description |
 | --- | --- |
-| [Class](arkts-na-class-c.md) | the component type of the fixed array, or undefined if this class is not a fixed array. |
+| [Class](arkts-na-class-c.md) \| undefined | the component type of the fixed array, or undefined if this class is not a fixed array. |
 
 ## getInstanceField
 
@@ -187,7 +187,7 @@ Look up a instance field by name among the fields declared in this class.
 
 | Type | Description |
 | --- | --- |
-| reflect.InstanceField | the found instance field, or undefined if not found. |
+| reflect.InstanceField \| undefined | the found instance field, or undefined if not found. |
 
 ## getInstanceFields
 
@@ -242,7 +242,7 @@ Look up a instance method (including default methods from implemented interfaces
 
 | Type | Description |
 | --- | --- |
-| reflect.InstanceMethod | the found instance method, or undefined if not found. |
+| reflect.InstanceMethod \| undefined | the found instance method, or undefined if not found. |
 
 ## getInstanceMethods
 
@@ -368,7 +368,7 @@ Look up a static field by name among the fields declared in this class.
 
 | Type | Description |
 | --- | --- |
-| reflect.StaticField | the found static field, or undefined if not found. |
+| reflect.StaticField \| undefined | the found static field, or undefined if not found. |
 
 ## getStaticFields
 
@@ -423,7 +423,7 @@ Look up a static method among the methods declared in the class.
 
 | Type | Description |
 | --- | --- |
-| reflect.StaticMethod | the found static method, or undefined if not found. |
+| reflect.StaticMethod \| undefined | the found static method, or undefined if not found. |
 
 ## getStaticMethods
 
@@ -471,7 +471,7 @@ Get the super class of a class
 
 | Type | Description |
 | --- | --- |
-| [Class](arkts-na-class-c.md) | return the super class |
+| [Class](arkts-na-class-c.md) \| undefined | return the super class |
 
 ## getUnionConstituentTypes
 
@@ -495,7 +495,7 @@ Get all constituent types of a union class.
 
 | Type | Description |
 | --- | --- |
-| FixedArray&lt;[Class](arkts-na-class-c.md)&gt; | a fixed array of constituent types, or undefined if this is not a union class. |
+| FixedArray&lt;[Class](arkts-na-class-c.md)&gt; \| undefined | a fixed array of constituent types, or undefined if this is not a union class. |
 
 ## initialize
 
@@ -795,7 +795,7 @@ Get the class of an object of any type.
 
 | Type | Description |
 | --- | --- |
-| [Class](arkts-na-class-c.md) | the class of the object, or undefined if the object is not a class instance. |
+| [Class](arkts-na-class-c.md) \| undefined | the class of the object, or undefined if the object is not a class instance. |
 
 ## ofCaller
 
@@ -819,7 +819,7 @@ Get class of caller.
 
 | Type | Description |
 | --- | --- |
-| [Class](arkts-na-class-c.md) | the class of the caller, or undefined if there is no caller managed frame. |
+| [Class](arkts-na-class-c.md) \| undefined | the class of the caller, or undefined if there is no caller managed frame. |
 
 ## PRIMITIVE_BOOLEAN
 

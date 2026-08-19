@@ -1,6 +1,6 @@
 # WindowExtensionContext（系统接口）
 
-WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md)具有的能力，包括启动 Ability。 > **说明：** > > - 从API version 21开始废弃，推荐使用[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)。 > > - 本模块接口为系统接口。 > > - 本模块接口仅可在Stage模型下使用。
+WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md)具有的能力，包括启动 Ability。 &gt; **说明：** &gt; &gt; - 从API version 21开始废弃，推荐使用[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)。 &gt; &gt; - 本模块接口为系统接口。 &gt; &gt; - 本模块接口仅可在Stage模型下使用。
 
 **继承/实现关系：** WindowExtensionContext extends ExtensionContext
 
@@ -20,7 +20,7 @@ WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承
 startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-启动Ability，使用callback异步回调。 > **说明：** > > - 从API version 9开始支持，从API version 21开始废弃，推荐使用 > [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability) > 。
+启动Ability，使用callback异步回调。 &gt; **说明：** &gt; &gt; - 从API version 9开始支持，从API version 21开始废弃，推荐使用 &gt; [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability) &gt; 。
 
 **起始版本：** 9
 
@@ -40,7 +40,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | 是 | 启动Ability的want信息。 |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback形式返回启动结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback形式返回启动结果。 |
 
 **错误码：**
 
@@ -95,7 +95,7 @@ class WindowExtAbility extends WindowExtensionAbility {
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-启动Ability，使用Promise异步回调。 > **说明：** > > - 从API version 9开始支持，从API version 21开始废弃，推荐使用 > [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability) > 。
+启动Ability，使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 从API version 9开始支持，从API version 21开始废弃，推荐使用 &gt; [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability) &gt; 。
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # Region
 
-Describes a region, which is used to describe the region where the shape can be drawn. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Describes a region, which is used to describe the region where the shape can be drawn. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -109,7 +109,7 @@ Gets the boundary of the region, which represents by a path. Gets the bounds of 
 
 | Type | Description |
 | --- | --- |
-| Path | Returns Path object. |
+| Path \| undefined | Returns Path object. |
 
 ## getBounds
 
@@ -149,7 +149,7 @@ Gets the bounds of the region.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Returns Rect object. |
+| common2D.Rect \| undefined | Returns Rect object. |
 
 ## isComplex
 

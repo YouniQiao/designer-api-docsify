@@ -1,6 +1,6 @@
 # TapGestureInterface
 
-支持单击、双击和多次点击事件的识别。 > **说明：** > > 当组件同时绑定双击和单击手势且双击手势先绑定时，单击手势会有300ms的延时。
+支持单击、双击和多次点击事件的识别。 &gt; **说明：** &gt; &gt; 当组件同时绑定双击和单击手势且双击手势先绑定时，单击手势会有300ms的延时。
 
 **继承/实现关系：** TapGestureInterface extends GestureInterface<TapGestureInterface>
 

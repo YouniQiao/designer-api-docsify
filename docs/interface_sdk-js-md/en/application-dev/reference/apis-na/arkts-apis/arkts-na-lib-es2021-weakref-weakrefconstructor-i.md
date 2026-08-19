@@ -31,8 +31,6 @@ Creates a WeakRef instance for the given target object.
 
 | Type | Description |
 | --- | --- |
-| [WeakRef](arkts-na-lib-es2021-weakref-weakref-i.md)&lt;T&gt; |  |
-
 ## prototype
 
 ```TypeScript

@@ -36,5 +36,3 @@ setDistortionComponentOptions(options?: DistortionComponentOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

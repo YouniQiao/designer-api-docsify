@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ChildProcessOptions } from '@kit.AbilityKit';
 ```
 
 ## isolationMode

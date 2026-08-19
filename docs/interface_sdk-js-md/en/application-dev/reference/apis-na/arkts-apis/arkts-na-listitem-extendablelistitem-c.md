@@ -108,5 +108,5 @@ Set the ListItem Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableListItem](arkts-na-listitem-extendablelistitem-c.md) |  |
 

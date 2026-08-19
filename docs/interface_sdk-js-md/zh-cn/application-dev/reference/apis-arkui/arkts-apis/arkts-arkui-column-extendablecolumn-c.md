@@ -108,5 +108,5 @@ Set the Column Options.
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableColumn](arkts-arkui-column-extendablecolumn-c.md) |  |
 

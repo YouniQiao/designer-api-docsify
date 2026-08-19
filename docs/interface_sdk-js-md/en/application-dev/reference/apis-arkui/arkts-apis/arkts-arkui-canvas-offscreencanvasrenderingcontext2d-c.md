@@ -92,5 +92,5 @@ transfer the content to ImageBitmap
 
 | Type | Description |
 | --- | --- |
-| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) |  |
+| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| undefined |  |
 

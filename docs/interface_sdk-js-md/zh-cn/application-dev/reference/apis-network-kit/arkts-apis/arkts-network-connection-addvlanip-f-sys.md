@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## addVlanIp
@@ -11,7 +12,7 @@
 function addVlanIp(ifName: string, vlanId: int, address: LinkAddress): Promise<void>
 ```
 
-为以太网网卡上对应vlanId的虚拟局域网配置指定的IP地址及子网掩码。使用Promise异步回调。 > **说明：** > > - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
+为以太网网卡上对应vlanId的虚拟局域网配置指定的IP地址及子网掩码。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 本接口当前仅支持PC设备，其他设备类型上调用本接口返回错误码2100002。
 
 **起始版本：** 23
 

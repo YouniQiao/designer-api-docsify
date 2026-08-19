@@ -3669,7 +3669,7 @@ try {
 writeRawData(rawData: number[], size: number): void
 ```
 
-Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API cannot be called for multiple times in one parcel communication. > > - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, > pay attention to the SELinux configuration.
+Writes raw data to this **MessageSequence** object. &gt; **NOTE：**&gt; &gt; - This API cannot be called for multiple times in one parcel communication. &gt; &gt; - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, &gt; pay attention to the SELinux configuration.
 
 **Since:** 9
 
@@ -3719,7 +3719,7 @@ try {
 writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 ```
 
-Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API cannot be called for multiple times in one parcel communication. > > - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, > pay attention to the SELinux configuration.
+Writes raw data to this **MessageSequence** object. &gt; **NOTE：**&gt; &gt; - This API cannot be called for multiple times in one parcel communication. &gt; &gt; - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, &gt; pay attention to the SELinux configuration.
 
 **Since:** 23
 

@@ -29,5 +29,3 @@ new <T>(iterable?: Iterable<T> | null): Set<T>
 
 | Type | Description |
 | --- | --- |
-| Set&lt;T&gt; |  |
-

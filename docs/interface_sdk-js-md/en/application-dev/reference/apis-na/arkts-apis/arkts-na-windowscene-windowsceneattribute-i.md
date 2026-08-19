@@ -37,8 +37,6 @@ attractionEffect(destination: Position | undefined, fraction: double | undefined
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## attributeModifier
 
 ```TypeScript
@@ -62,5 +60,3 @@ attributeModifier(modifier:
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

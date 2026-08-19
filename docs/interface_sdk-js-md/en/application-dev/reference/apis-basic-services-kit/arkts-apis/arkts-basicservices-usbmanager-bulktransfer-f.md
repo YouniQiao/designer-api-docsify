@@ -18,7 +18,7 @@ function bulkTransfer(
   ): Promise<int>
 ```
 
-Performs bulk transfer. This API uses a promise to return the result. > **NOTE：**> > The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a > single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned. > > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) > API to claim a communication interface.
+Performs bulk transfer. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a &gt; single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned. &gt; &gt; Before calling this API, call the &gt; [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) &gt; API to claim a communication interface.
 
 **Since:** 23
 

@@ -31,8 +31,6 @@ Returns an array of key/values of the enumerable properties of an object
 
 | Type | Description |
 | --- | --- |
-| [string, T][] |  |
-
 ## entries
 
 ```TypeScript
@@ -55,8 +53,6 @@ Returns an array of key/values of the enumerable properties of an object
 
 | Type | Description |
 | --- | --- |
-| [string, any][] |  |
-
 ## getOwnPropertyDescriptors
 
 ```TypeScript
@@ -79,8 +75,6 @@ Returns an object containing all own property descriptors of an object
 
 | Type | Description |
 | --- | --- |
-| {[P in keyof T]: TypedPropertyDescriptor&lt;T[P]&gt;} & { [x: string]: PropertyDescriptor } |  |
-
 ## values
 
 ```TypeScript
@@ -103,8 +97,6 @@ Returns an array of values of the enumerable properties of an object
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## values
 
 ```TypeScript
@@ -127,5 +119,3 @@ Returns an array of values of the enumerable properties of an object
 
 | Type | Description |
 | --- | --- |
-| any[] |  |
-

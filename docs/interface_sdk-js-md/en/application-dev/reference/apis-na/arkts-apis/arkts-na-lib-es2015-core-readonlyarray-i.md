@@ -32,8 +32,6 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| S |  |
-
 ## find
 
 ```TypeScript
@@ -55,8 +53,6 @@ find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## findIndex
 
 ```TypeScript
@@ -80,5 +76,3 @@ Returns the index of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| number |  |
-

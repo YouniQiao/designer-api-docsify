@@ -126,7 +126,7 @@ Obtains the animation controller for playback control.
 
 | Type | Description |
 | --- | --- |
-| [AnimationController](arkts-arkui-arkui-drawabledescriptor-animationcontroller-i.md) | Animation controller object. |
+| [AnimationController](arkts-arkui-arkui-drawabledescriptor-animationcontroller-i.md) \| undefined | Animation controller object. |
 
 **Examples**
 

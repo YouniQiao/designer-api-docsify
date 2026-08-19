@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<EllipseAttribute> | AttributeModif
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setEllipseOptions
 
 ```TypeScript
@@ -58,8 +56,6 @@ setEllipseOptions(options?: EllipseOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

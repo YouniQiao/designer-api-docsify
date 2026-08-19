@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## updateRemindPolicy
@@ -30,7 +31,7 @@ function updateRemindPolicy(netType: NetBearType, simId: string, remindType: Rem
 | netType | NetBearType | 是 | 网络类型。 |
 | simId | string | 是 | SIM 卡 ID。 |
 | remindType | [RemindType](arkts-network-policy-remindtype-e-sys.md) | 是 | 提醒类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码错误信息。 |
 
 **错误码：**
 

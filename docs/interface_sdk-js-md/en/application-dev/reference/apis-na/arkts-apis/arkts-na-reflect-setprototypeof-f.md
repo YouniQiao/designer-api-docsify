@@ -28,5 +28,3 @@ Sets the prototype of a specified object o to object proto or null.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

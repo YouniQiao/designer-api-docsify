@@ -1,6 +1,6 @@
 # @ohos.stationary
 
-The **stationary** module provides APIs to report the device status, including absolute still and relative still. > **NOTE：**> > This module does not support x86 emulators.
+The **stationary** module provides APIs to report the device status, including absolute still and relative still. &gt; **NOTE：**&gt; &gt; This module does not support x86 emulators.
 
 **Since:** 9
 

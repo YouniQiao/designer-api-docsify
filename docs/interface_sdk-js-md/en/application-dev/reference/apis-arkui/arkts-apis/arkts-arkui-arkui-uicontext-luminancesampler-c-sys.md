@@ -1,6 +1,6 @@
 # LuminanceSampler (System API)
 
-Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback. > **NOTE：**> > In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in > **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
+Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback. &gt; **NOTE：**&gt; &gt; In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in &gt; **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ Unregisters the callback for listening to color picking. If no callback is speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;number&gt; | No | Callback to unregister. |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Callback to unregister. |
 
 ## onBackgroundLuminanceChange
 
@@ -65,7 +65,7 @@ Registers the callback for listening to color picking. The background luminance 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.<br>Note: offBackgroundLuminanceChange cannot be called in the listening callback. |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.<br>Note: offBackgroundLuminanceChange cannot be called in the listening callback. |
 
 ## setBackgroundLuminanceSamplingConfigs
 

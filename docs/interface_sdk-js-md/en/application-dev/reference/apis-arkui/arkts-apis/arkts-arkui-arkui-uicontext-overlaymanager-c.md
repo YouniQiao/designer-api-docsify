@@ -1,6 +1,6 @@
 # OverlayManager
 
-Provides the capability to draw overlays. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getOverlayManager()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getoverlaymanager) in > **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance. > > - The nodes on **OverlayManager** are above the page level, but below such components as created through > **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**. > > - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the > page, and the keyboard avoidance method is also the same as that of the page. > > - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the > application to prevent changes in property values when switching pages, which could lead to service errors.
+Provides the capability to draw overlays. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager) in &gt; **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance. &gt; &gt; - The nodes on **OverlayManager** are above the page level, but below such components as created through &gt; **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, and **Toast**. &gt; &gt; - The drawing method inside and outside the safe area of nodes on **OverlayManager** is consistent with that of the &gt; page, and the keyboard avoidance method is also the same as that of the page. &gt; &gt; - For properties related to **OverlayManager**, you are advised to use AppStorage for global storage across the &gt; application to prevent changes in property values when switching pages, which could lead to service errors.
 
 **Since:** 12
 
@@ -65,7 +65,7 @@ Creates an overlay node with the specified display order. This API allows you to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**. <br>**NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
-| levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |  |
+| levelOrder | [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | No |  |
 
 ## hideAllComponentContents
 
@@ -132,7 +132,7 @@ Opens an overlay with the specified ComponentContent and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent | Yes | Content to add to the new node on the OverlayManager. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>By default, the new node is centered on the page and stacked according to its stacking level. &lt;/p&gt; |
-| options | [OrderOverlayOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
 

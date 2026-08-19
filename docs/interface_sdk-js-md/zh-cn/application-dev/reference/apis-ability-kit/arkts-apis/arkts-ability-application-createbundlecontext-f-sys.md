@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createBundleContext
@@ -11,7 +12,7 @@
 export function createBundleContext(context: Context, bundleName: string): Promise<Context>
 ```
 
-根据入参Context创建相应应用的Context。使用Promise异步回调。 > **说明：** > > 从API version 18开始，Context支持获取当前应用的进程名 > [processName](arkts-ability-context-c.md)。 > createBundleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context和bundleName获得相应 > 的属性值。
+根据入参Context创建相应应用的Context。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 18开始，Context支持获取当前应用的进程名 &gt; [processName](arkts-ability-context-c.md)。 &gt; createBundleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context和bundleName获得相应 &gt; 的属性值。
 
 **起始版本：** 23
 

@@ -147,7 +147,7 @@ Get the number value of the web message.
 
 | Type | Description |
 | --- | --- |
-| double | Returns data of number type |
+| double \| long | Returns data of number type |
 
 **Error codes:**
 
@@ -203,7 +203,7 @@ Get the type of the web message.
 
 | Type | Description |
 | --- | --- |
-| [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
+| [WebMessageType](arkts-na-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
 
 ## setArray
 
@@ -399,7 +399,7 @@ Set the type of the web message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | Yes | set WebMessageType type data |
+| type | [WebMessageType](arkts-na-webview-webmessagetype-e.md) | Yes | set WebMessageType type data |
 
 **Error codes:**
 

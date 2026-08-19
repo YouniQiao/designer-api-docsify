@@ -1,6 +1,6 @@
 # MediaSourceLoadingRequest
 
-用于定义加载请求的对象。应用程序通过该对象来获取请求的资源位置，通过该对象和播放器进行数据交互。 > **说明：** > > - 本Interface首批接口从API version 18开始支持。
+用于定义加载请求的对象。应用程序通过该对象来获取请求的资源位置，通过该对象和播放器进行数据交互。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 18开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## finishLoading
@@ -92,7 +93,7 @@ The interface for application used to send requested data to AVPlayer.
 
 | 类型 | 说明 |
 | --- | --- |
-| int | accept bytes for current read. The value less than zero means failed. -2, means player need current data any more, the client should stop current read process. -3, means player buffer is full, the client should wait for next read. |
+| int \| undefined | accept bytes for current read. The value less than zero means failed. -2, means player need current data any more, the client should stop current read process. -3, means player buffer is full, the client should wait for next read. |
 
 ## respondHeader
 

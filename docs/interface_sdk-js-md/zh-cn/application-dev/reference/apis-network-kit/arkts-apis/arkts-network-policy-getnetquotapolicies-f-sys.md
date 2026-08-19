@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getNetQuotaPolicies
@@ -27,7 +28,7 @@ function getNetQuotaPolicies(callback: AsyncCallback<Array<NetQuotaPolicy>>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | 是 | 回调函数。返回获取结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | 是 | 回调函数。返回获取结果。 |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 资产变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 资产变更请求。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
@@ -13,6 +13,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addResource
@@ -21,7 +22,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 addResource(type: ResourceType, fileUri: string): void
 ```
 
-通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). > **注意：** > > 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
+通过文件URI从应用沙箱添加资源，待添加资源的数据来源可参考 [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md). &gt; **注意：** &gt; &gt; 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
 
 **起始版本：** 23
 
@@ -53,7 +54,7 @@ addResource(type: ResourceType, fileUri: string): void
 addResource(type: ResourceType, data: ArrayBuffer): void
 ```
 
-通过ArrayBuffer数据添加资源。 > **注意：** > > 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
+通过ArrayBuffer数据添加资源。 &gt; **注意：** &gt; &gt; 对于同一个资产变更请求，成功添加资源后不支持重复调用该接口。对于动态照片，可调用两次该接口分别添加图片和视频资源。
 
 **起始版本：** 23
 
@@ -174,7 +175,7 @@ static createAssetRequest(context: Context, photoType: PhotoType, extension: str
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | Returns a MediaAssetChangeRequest instance, if the operation fails, returns null |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) \| null | Returns a MediaAssetChangeRequest instance, if the operation fails, returns null |
 
 **错误码：**
 
@@ -247,7 +248,7 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | Returns a MediaAssetChangeRequest instance, if the operation fails, returns null |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) \| null | Returns a MediaAssetChangeRequest instance, if the operation fails, returns null |
 
 **错误码：**
 
@@ -317,7 +318,7 @@ static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | Returns a MediaAssetChangeRequest instance. if the operation fails, returns null. |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) \| null | Returns a MediaAssetChangeRequest instance. if the operation fails, returns null. |
 
 **错误码：**
 
@@ -466,7 +467,7 @@ discardCameraPhoto(): void
 getAsset(): PhotoAsset
 ```
 
-获取当前资产变更请求中的资产。 > **注意：** > > 对于创建资产的变更请求，在调用接口 > > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) > > 的提交生效之前，该接口会返回null。
+获取当前资产变更请求中的资产。 &gt; **注意：** &gt; &gt; 对于创建资产的变更请求，在调用接口 &gt; &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) &gt; &gt; 的提交生效之前，该接口会返回null。
 
 **起始版本：** 11
 
@@ -509,7 +510,7 @@ getAsset(): PhotoAsset | null
 
 | 类型 | 说明 |
 | --- | --- |
-| PhotoAsset | Returns the asset. if the operation fails, returns null. |
+| PhotoAsset \| null | Returns the asset. if the operation fails, returns null. |
 
 **错误码：**
 
@@ -523,7 +524,7 @@ getAsset(): PhotoAsset | null
 getWriteCacheHandler(): Promise<int>
 ```
 
-获取临时文件写句柄。使用Promise异步回调。 > **注意：** > > 对于同一个资产变更请求，不支持在成功获取临时文件写句柄后，重复调用该接口。
+获取临时文件写句柄。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 对于同一个资产变更请求，不支持在成功获取临时文件写句柄后，重复调用该接口。
 
 **起始版本：** 23
 

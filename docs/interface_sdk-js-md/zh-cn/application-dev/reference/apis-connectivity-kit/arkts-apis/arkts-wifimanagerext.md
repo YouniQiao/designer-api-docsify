@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

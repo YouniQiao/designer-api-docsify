@@ -75,7 +75,7 @@ Returns result string by index.
 
 | Type | Description |
 | --- | --- |
-| string | resulting string. |
+| string \| undefined | resulting string. |
 
 ## $_set
 

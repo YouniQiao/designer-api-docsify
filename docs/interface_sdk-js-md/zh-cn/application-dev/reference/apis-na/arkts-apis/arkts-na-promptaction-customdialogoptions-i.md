@@ -2,7 +2,7 @@
 
 自定义弹窗的内容，继承自BaseDialogOptions。
 
-**继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](arkts-na-promptaction-basedialogoptions-i.md)
+**继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md)
 
 **起始版本：** 23
 
@@ -125,7 +125,7 @@ borderWidth?: Dimension | EdgeWidths
 builder: CustomBuilder
 ```
 
-设置自定义弹窗的内容。<br/>**说明：** <br/>builder需要赋值为箭头函数，格式如下：() => { this.XXX() }，其中XXX是内部builder名。 <br/>全局builder需要在组件内部创建，并在内部builder中调用。 <br/>builder根节点宽高百分比相对弹窗容器大小。 <br/>builder非根节点宽高百分比相对父节点大小。
+设置自定义弹窗的内容。<br/>**说明：** <br/>builder需要赋值为箭头函数，格式如下：() =&gt; { this.XXX() }，其中XXX是内部builder名。 <br/>全局builder需要在组件内部创建，并在内部builder中调用。 <br/>builder根节点宽高百分比相对弹窗容器大小。 <br/>builder非根节点宽高百分比相对父节点大小。
 
 **类型：** CustomBuilder
 

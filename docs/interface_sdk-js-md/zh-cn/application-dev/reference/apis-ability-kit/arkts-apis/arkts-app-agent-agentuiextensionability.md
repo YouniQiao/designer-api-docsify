@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AgentUIExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## 汇总

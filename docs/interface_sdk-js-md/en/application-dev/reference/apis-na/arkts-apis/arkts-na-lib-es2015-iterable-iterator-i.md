@@ -29,8 +29,6 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| [IteratorResult](arkts-na-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
-
 ## return
 
 ```TypeScript
@@ -51,8 +49,6 @@ return?(value?: TReturn): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| [IteratorResult](arkts-na-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
-
 ## throw
 
 ```TypeScript
@@ -73,5 +69,3 @@ throw?(e?: any): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| [IteratorResult](arkts-na-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
-

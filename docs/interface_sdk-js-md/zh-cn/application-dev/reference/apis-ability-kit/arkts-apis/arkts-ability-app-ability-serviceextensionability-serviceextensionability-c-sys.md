@@ -13,6 +13,7 @@ ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台
 ## 导入模块
 
 ```TypeScript
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -79,7 +80,7 @@ Extension生命周期回调，如果是connectAbility拉起的服务，会在onC
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
+| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
 
 **示例**
 
@@ -323,7 +324,7 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; \| undefined | Promise that returns no value. |
 
 **示例**
 

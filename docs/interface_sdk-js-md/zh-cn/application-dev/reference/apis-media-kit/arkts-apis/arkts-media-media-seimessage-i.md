@@ -11,6 +11,7 @@ Describes the information of an SEI message.
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## payload

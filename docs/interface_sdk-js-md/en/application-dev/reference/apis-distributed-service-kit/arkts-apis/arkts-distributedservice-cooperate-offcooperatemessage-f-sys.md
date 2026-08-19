@@ -28,7 +28,7 @@ Disables listening for screen hopping status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CooperateMessage](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md)&gt; | No | Callback for which listening <br> is disabled. If this parameter is not specified, listening will be disabled for all registered callbacks. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CooperateMessage](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md)&gt; | No | Callback for which listening <br> is disabled. If this parameter is not specified, listening will be disabled for all registered callbacks. |
 
 **Error codes:**
 

@@ -29,8 +29,6 @@ new <T = any>(values?: readonly T[] | null): Set<T>
 
 | Type | Description |
 | --- | --- |
-| Set&lt;T&gt; |  |
-
 ## prototype
 
 ```TypeScript

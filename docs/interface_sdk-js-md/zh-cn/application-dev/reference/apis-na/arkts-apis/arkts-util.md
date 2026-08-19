@@ -29,7 +29,7 @@ util模块提供常用工具函数， 如用于字符串编码和解码的TextEn
 | [getHash](arkts-na-util-gethash-f.md) | Get the hash code of an object. |
 | [getMainThreadStackTrace](arkts-na-util-getmainthreadstacktrace-f.md) | Get stack trace of main thread. |
 | [parseUUID](arkts-na-util-parseuuid-f.md) | Parse a UUID from the string standard representation as described in the RFC 4122 version 4. |
-| [promisify](arkts-na-util-promisify-f.md) | Takes a function following the common error-first callback style, i.e taking an (err, value) => callback as the last argument, and return a function that returns promises. |
+| [promisify](arkts-na-util-promisify-f.md) | Takes a function following the common error-first callback style, i.e taking an (err, value) =&gt; callback as the last argument, and return a function that returns promises. |
 
 ### 类
 

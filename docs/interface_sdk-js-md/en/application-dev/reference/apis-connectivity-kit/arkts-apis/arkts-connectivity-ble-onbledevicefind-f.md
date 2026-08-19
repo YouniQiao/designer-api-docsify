@@ -6,7 +6,7 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-## on_BLEDeviceFind('BLEDeviceFind')
+## on('BLEDeviceFind')
 
 ```TypeScript
 function on(type: 'BLEDeviceFind', callback: Callback<Array<ScanResult>>): void
@@ -33,7 +33,7 @@ Subscribe BLE scan result. On API 10 and above, the permission required by this 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ScanResult&gt;&gt; | Yes | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ScanResult&gt;&gt; | Yes | Callback used to listen for the scan result event. |
 
 **Error codes:**
 

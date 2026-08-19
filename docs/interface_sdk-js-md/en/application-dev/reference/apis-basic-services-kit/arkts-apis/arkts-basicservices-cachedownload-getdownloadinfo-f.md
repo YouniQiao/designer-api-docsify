@@ -32,7 +32,7 @@ Obtains the download information based on the URL. The download information is s
 
 | Type | Description |
 | --- | --- |
-| DownloadInfo | Returns the download information of the corresponding URL if the operation is successful; returns **undefined** if the specified URL does not exist. |
+| DownloadInfo \| undefined | Returns the download information of the corresponding URL if the operation is successful; returns **undefined** if the specified URL does not exist. |
 
 **Error codes:**
 

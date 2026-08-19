@@ -13,6 +13,8 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getExposureMode
@@ -21,7 +23,7 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 getExposureMode(): ExposureMode
 ```
 
-获取当前曝光模式。 > **说明：** > > 若未通过[setExposureMode](#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
+获取当前曝光模式。 &gt; **说明：** &gt; &gt; 若未通过[setExposureMode](#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
 
 **起始版本：** 23
 
@@ -121,7 +123,7 @@ offExposureStateChange(callback?: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback，callback对象如果为空或为匿名函数，则取消所有callback。 |
 
 ## onExposureStateChange
 
@@ -145,7 +147,7 @@ onExposureStateChange(callback: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 | 回调函数，返回当前曝光状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 | 回调函数，返回当前曝光状态。 |
 
 ## setExposureBias
 

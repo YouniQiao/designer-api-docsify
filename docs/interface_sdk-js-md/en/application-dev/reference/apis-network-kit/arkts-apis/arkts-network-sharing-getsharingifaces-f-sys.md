@@ -29,7 +29,7 @@ Obtains the names of NICs in the specified network sharing state. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md) | Yes | Network sharing state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array of NIC names. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array of NIC names. |
 
 **Error codes:**
 

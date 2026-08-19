@@ -1,6 +1,6 @@
 # MacSpec
 
-消息认证码参数，计算HMAC或CMAC时，需要构建子类对象并作为输入参数。 > **说明：** > > algName是必选参数，表示消息认证码算法。
+消息认证码参数，计算HMAC或CMAC时，需要构建子类对象并作为输入参数。 &gt; **说明：** &gt; &gt; algName是必选参数，表示消息认证码算法。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## algName

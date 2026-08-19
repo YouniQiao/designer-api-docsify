@@ -27,5 +27,3 @@ Returns a Boolean value that indicates whether a value is the reserved value NaN
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

@@ -13,6 +13,7 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 ## 导入模块
 
 ```TypeScript
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## constructor

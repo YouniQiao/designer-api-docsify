@@ -11,6 +11,8 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 ## 导入模块
 
 ```TypeScript
+import { LinkedList } from '@kit.ArkTS';
+import { LinkedListForEachCb } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -1065,14 +1067,14 @@ removeByIndex(index: int): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | T类型的值，如果下标超出范围（大于等于length或小于0），抛出异常。 |
+| T \| undefined | T类型的值，如果下标超出范围（大于等于length或小于0），抛出异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. It must be >= 0 && &lt;= \\${length}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. It must be &gt;= 0 && &lt;= \\${length}. Received value is: \\${index} |
 
 **示例**
 
@@ -1148,7 +1150,7 @@ removeFirst(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回此list的头部元素。 |
+| T \| undefined | 返回此list的头部元素。 |
 
 **错误码：**
 
@@ -1291,7 +1293,7 @@ removeLast(): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回此list的尾部元素。 |
+| T \| undefined | 返回此list的尾部元素。 |
 
 **错误码：**
 

@@ -212,7 +212,7 @@ immersiveMode?: ImmersiveMode
 
 Overlay effect for the page-level dialog box. <br>**NOTE：**<br>- Default value: **ImmersiveMode.DEFAULT** <br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
+**Type:** [ImmersiveMode](../../apis-na/arkts-apis/arkts-na-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -298,7 +298,7 @@ levelMode?: LevelMode
 
 Display level of the dialog box. <br>**NOTE：**<br>- Default value: **LevelMode.OVERLAY** <br>- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
-**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
+**Type:** [LevelMode](../../apis-na/arkts-apis/arkts-na-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
@@ -320,7 +320,7 @@ levelOrder?: LevelOrder
 
 Display order of the dialog box. <br>**NOTE：**<br>- Default value: **LevelOrder.clamp(0)** <br>- Dynamic updating is not supported.
 
-**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
+**Type:** [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md)
 
 **Default:** The value returned by LevelOrder.clamp(0)
 
@@ -440,7 +440,7 @@ Offset of the dialog box based on the **alignment** settings. <br>Default value:
 onDidAppear?: () => void
 ```
 
-Event callback after the dialog box appears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. <br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. <br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
+Event callback after the dialog box appears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. <br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. <br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
 
 **Type:** () =&gt; void
 
@@ -460,7 +460,7 @@ Event callback after the dialog box appears. <br>**NOTE：**<br>1. The normal ti
 onDidDisappear?: () => void
 ```
 
-Event callback after the dialog box disappears. <br>**NOTE：**<br>The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. <br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
+Event callback after the dialog box disappears. <br>**NOTE：**<br>The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
 
 **Type:** () =&gt; void
 
@@ -480,7 +480,7 @@ Event callback after the dialog box disappears. <br>**NOTE：**<br>The normal ti
 onWillAppear?: () => void
 ```
 
-Event callback when the dialog box is about to appear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** () =&gt; void
 
@@ -500,7 +500,7 @@ Event callback when the dialog box is about to appear. <br>**NOTE：**<br>1. The
 onWillDisappear?: () => void
 ```
 
-Event callback when the dialog box is about to disappear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. <br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+Event callback when the dialog box is about to disappear. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
 **Type:** () =&gt; void
 
@@ -522,7 +522,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback for interactive dismissal of the dialog box. <br>**NOTE：**<br>1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**. <br>2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 

@@ -57,8 +57,6 @@ Returns an array of objects representing the relative time format in parts that 
 
 | Type | Description |
 | --- | --- |
-| RelativeTimeFormatPart[] |  |
-
 ## resolvedOptions
 
 ```TypeScript
@@ -75,5 +73,3 @@ Provides access to the locale and options computed during initialization of this
 
 | Type | Description |
 | --- | --- |
-| ResolvedRelativeTimeFormatOptions |  |
-

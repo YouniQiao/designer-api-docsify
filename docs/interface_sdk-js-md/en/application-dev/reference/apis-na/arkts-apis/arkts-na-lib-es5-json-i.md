@@ -32,8 +32,6 @@ Converts a JavaScript Object Notation (JSON) string into an object.
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## stringify
 
 ```TypeScript
@@ -58,8 +56,6 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## stringify
 
 ```TypeScript
@@ -84,5 +80,3 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

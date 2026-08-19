@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [AbilityFirstFrameStateObserver](arkts-ability-abilityfirstframestateobserver-i-sys.md) | The module defines the observer used to listen for the first frame rendering completion event of a given ability. It is used as an input parameter of [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationstateapplicationstate) to listen for the completion event. |
+| [AbilityFirstFrameStateObserver](arkts-ability-abilityfirstframestateobserver-i-sys.md) | The module defines the observer used to listen for the first frame rendering completion event of a given ability. It is used as an input parameter of [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) to listen for the completion event. |
 <!--DelEnd-->
 

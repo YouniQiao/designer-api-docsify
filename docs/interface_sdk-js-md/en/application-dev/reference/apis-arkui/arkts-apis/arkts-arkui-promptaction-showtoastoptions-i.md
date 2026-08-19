@@ -218,7 +218,7 @@ showMode?: ToastShowMode
 
 Display level mode of the toast.<br> Default value: **ToastShowMode.DEFAULT**, which means to show the toast in the application.
 
-**Type:** [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md)
+**Type:** [ToastShowMode](../../apis-na/arkts-apis/arkts-na-promptaction-toastshowmode-e.md)
 
 **Default:** ToastShowMode.DEFAULT
 

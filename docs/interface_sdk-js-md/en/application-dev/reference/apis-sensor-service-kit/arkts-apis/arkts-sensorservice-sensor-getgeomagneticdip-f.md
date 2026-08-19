@@ -29,7 +29,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
 
 **Examples**
 

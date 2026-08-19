@@ -122,7 +122,7 @@ Get a Canvas for drawing into the surface created by XComponent.
 
 | Type | Description |
 | --- | --- |
-| DrawingCanvas | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
+| DrawingCanvas \| null | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
 
 ## onSurfaceChanged
 

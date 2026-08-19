@@ -69,7 +69,7 @@ Enter the value to obtain the LazyForEach.
 | Name | Description |
 | --- | --- |
 | [DataAddOperation](arkts-arkui-dataaddoperation-i.md) | Represents an operation for adding data. |
-| [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Listener for data changes. > **NOTE：**> > In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value > is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside > the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**, > the value of **index** can equal the data source length.) |
+| [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Listener for data changes. &gt; **NOTE：**&gt; &gt; In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value &gt; is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside &gt; the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**, &gt; the value of **index** can equal the data source length.) |
 | [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) | Represents an operation for changing data. |
 | [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) | Represents an operation for deleting data. |
 | [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) | Represents an operation for exchanging data. |

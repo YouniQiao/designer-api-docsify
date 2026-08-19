@@ -32,8 +32,6 @@ Creates a Proxy object. The Proxy object allows you to create an object that can
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## revocable
 
 ```TypeScript
@@ -57,5 +55,3 @@ Creates a revocable Proxy object.
 
 | Type | Description |
 | --- | --- |
-| { proxy: T; revoke: () =&gt; void; } |  |
-

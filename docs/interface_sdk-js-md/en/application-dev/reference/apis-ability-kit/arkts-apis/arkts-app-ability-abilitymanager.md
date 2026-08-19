@@ -20,9 +20,9 @@ import { abilityManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md) | Obtains the UIAbility running information. This API uses a promise to return the result. > **NOTE：**> > If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility > running information of all applications; otherwise, it can obtain the UIAbility running information of the > current application. |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md) | Obtains the UIAbility running information. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility &gt; running information of all applications; otherwise, it can obtain the UIAbility running information of the &gt; current application. |
 | [isEmbeddedUIExtensionSupported](arkts-ability-abilitymanager-isembeddeduiextensionsupported-f.md) | Indicates whether the current device supports EmbeddedUIExtensionAbility. |
-| [restartSelfAtomicService](arkts-ability-abilitymanager-restartselfatomicservice-f.md) | Restarts the current atomic service. > **NOTE：**> > - Currently, atomic services can be started only in an independent window. > > - If you call this API, > ApplicationContext.restartApp(), or > [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds > after a successful call to this API, the system returns error code 16000064. |
+| [restartSelfAtomicService](arkts-ability-abilitymanager-restartselfatomicservice-f.md) | Restarts the current atomic service. &gt; **NOTE：**&gt; &gt; - Currently, atomic services can be started only in an independent window. &gt; &gt; - If you call this API, &gt; ApplicationContext.restartApp(), or &gt; [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds &gt; after a successful call to this API, the system returns error code 16000064. |
 
 <!--Del-->
 ### Functions(System API)
@@ -49,11 +49,11 @@ import { abilityManager } from '@kit.AbilityKit';
 | [offAbilityForegroundState](arkts-ability-abilitymanager-offabilityforegroundstate-f-sys.md) | Unregister Ability foreground or background state observer. |
 | [offPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-offpreloadeduiextensionabilitydestroyed-f-sys.md) | Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
 | [offPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-offpreloadeduiextensionabilityloaded-f-sys.md) | Unsubscribes from loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
-| off_abilityForegroundState | Unregisters the observer used to listen for ability start or exit events. |
+| [off_abilityForegroundState](arkts-ability-abilitymanager-offabilityforegroundstate-f-sys.md) | Unregisters the observer used to listen for ability start or exit events. |
 | [onAbilityForegroundState](arkts-ability-abilitymanager-onabilityforegroundstate-f-sys.md) | Register Ability foreground or background state observer. |
 | [onPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-onpreloadeduiextensionabilitydestroyed-f-sys.md) | Subscribes to destroyed events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
 | [onPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-onpreloadeduiextensionabilityloaded-f-sys.md) | Subscribes to loaded events of a preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process. |
-| on_abilityForegroundState | Registers an observer to listen for ability start or exit events. |
+| [on_abilityForegroundState](arkts-ability-abilitymanager-onabilityforegroundstate-f-sys.md) | Registers an observer to listen for ability start or exit events. |
 | [preloadUIExtensionAbility](arkts-ability-abilitymanager-preloaduiextensionability-f-sys.md) | Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance and returns the instance ID. This API uses a promise to return the result. |
 | [queryAtomicServiceStartupRule](arkts-ability-abilitymanager-queryatomicservicestartuprule-f-sys.md) | Obtains the rule for launching an [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) in embedded mode. This API uses a promise to return the result. This API can be properly called only on phones and tablets. On other devices, it returns the error code 801. |
 | [setResidentProcessEnabled](arkts-ability-abilitymanager-setresidentprocessenabled-f-sys.md) | Enables or disables the resident process of an application. |

@@ -11,6 +11,8 @@ UiTest框架在API9中，Component类代表了UI界面上的一个控件，提�
 ## 导入模块
 
 ```TypeScript
+import { Component, DisplayRotation, Driver, MatchPattern, MouseButton, ON, On, PointerMatrix, ResizeDirection, UIElementInfo, UIEventObserver, UiDirection, UiWindow, WindowMode, Point, WindowFilter, Rect, TouchPadSwipeOptions, InputTextMode, WindowChangeType, ComponentEventType, WindowChangeOptions, ComponentEventOptions, TouchOptions, KeyOptions, PenKey, PenMode, PenKeyOperation, PenKeyOperationOptions } from '@kit.TestKit';
+import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 ```
 
 ## clearText
@@ -511,7 +513,7 @@ async function demo() {
 getText(): Promise<string>
 ```
 
-获取控件对象的文本信息。使用Promise异步回调。 > **说明：**> > 如果控件的无障碍属性 > [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) > 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](#getoriginaltext) > 获取控件的文本信息。
+获取控件对象的文本信息。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 如果控件的无障碍属性 &gt; [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel) &gt; 设置为'no'或'no-hide-descendants'，无法使用本接口获取控件的文本信息，可以使用[Component.getOriginalText()](#getoriginaltext) &gt; 获取控件的文本信息。
 
 **起始版本：** 23
 

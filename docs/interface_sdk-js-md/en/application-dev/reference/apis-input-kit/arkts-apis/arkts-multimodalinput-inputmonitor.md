@@ -1,6 +1,6 @@
 # @ohos.multimodalInput.inputMonitor
 
-The **inputMonitor** module implements listening for events of input devices, including the touchscreen, mouse, and touchpad. > **NOTE：**> > - In this document, **global** indicates the entire touchscreen or touchpad. For example, listening for global > touch events means to listen for touch events triggered when a user touches at any position on the touchpad.
+The **inputMonitor** module implements listening for events of input devices, including the touchscreen, mouse, and touchpad. &gt; **NOTE：**&gt; &gt; - In this document, **global** indicates the entire touchscreen or touchpad. For example, listening for global &gt; touch events means to listen for touch events triggered when a user touches at any position on the touchpad.
 
 **Since:** 23
 
@@ -36,19 +36,19 @@ import { inputMonitor } from '@kit.InputKit';
 | [offTouch](arkts-input-inputmonitor-offtouch-f-sys.md) | Cancel listening for touch input events. |
 | [offTouchscreenPinch](arkts-input-inputmonitor-offtouchscreenpinch-f-sys.md) | Disables listening touchscreen pinch gesture events. |
 | [offTouchscreenSwipe](arkts-input-inputmonitor-offtouchscreenswipe-f-sys.md) | Disables listening touchscreen swipe gesture events. |
-| off_fingerprint | Disables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the result. |
-| [off_fourFingersSwipe](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md) | Disables listening for four-finger swipe events. This API uses an asynchronous callback to return the result. |
-| off_keyPressed | Cancels listening for the press and release events of the specified key, which can be the **META_LEFT**, **META_RIGHT**, power, or volume key. This API must be used together with **inputMonitor.on ('keyPressed')**. This API uses an asynchronous callback to return the result. |
-| off_mouse | Disables listening for global mouse events. This API uses an asynchronous callback to return the result. |
-| off_pinch | Disables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
-| off_pinch | Disables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
-| off_rotate | Disables listening for rotation events of the touchpad. This API uses an asynchronous callback to return the result. |
-| [off_swipeInward](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md) | Cancels listening for inward swipe events. This API uses an asynchronous callback to return the result. |
-| [off_threeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md) | Disables listening for three-finger swipe events. This API uses an asynchronous callback to return the result. |
-| [off_threeFingersTap](arkts-input-multimodalinput-gestureevent-threefingerstap-i.md) | Disables listening for three-finger tap events. This API uses an asynchronous callback to return the result. |
-| off_touch | Cancels listening for global touchscreen input events. This API uses an asynchronous callback to return the result. |
-| off_touchscreenPinch | Disables listening for touchscreen pinch events. This API uses an asynchronous callback to return the result. |
-| off_touchscreenSwipe | Disables listening for touchscreen swipe events. This API uses an asynchronous callback to return the result. |
+| [off_fingerprint](arkts-input-inputmonitor-offfingerprint-f-sys.md) | Disables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the result. |
+| [off_fourFingersSwipe](arkts-input-inputmonitor-offfourfingersswipe-f-sys.md) | Disables listening for four-finger swipe events. This API uses an asynchronous callback to return the result. |
+| [off_keyPressed](arkts-input-inputmonitor-offkeypressed-f-sys.md) | Cancels listening for the press and release events of the specified key, which can be the **META_LEFT**, **META_RIGHT**, power, or volume key. This API must be used together with **inputMonitor.on ('keyPressed')**. This API uses an asynchronous callback to return the result. |
+| [off_mouse](arkts-input-inputmonitor-offmouse-f-sys.md) | Disables listening for global mouse events. This API uses an asynchronous callback to return the result. |
+| [off_pinch](arkts-input-inputmonitor-offpinch-f-sys.md) | Disables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
+| [off_pinch](arkts-input-inputmonitor-offpinch-f-sys.md) | Disables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
+| [off_rotate](arkts-input-inputmonitor-offrotate-f-sys.md) | Disables listening for rotation events of the touchpad. This API uses an asynchronous callback to return the result. |
+| [off_swipeInward](arkts-input-inputmonitor-offswipeinward-f-sys.md) | Cancels listening for inward swipe events. This API uses an asynchronous callback to return the result. |
+| [off_threeFingersSwipe](arkts-input-inputmonitor-offthreefingersswipe-f-sys.md) | Disables listening for three-finger swipe events. This API uses an asynchronous callback to return the result. |
+| [off_threeFingersTap](arkts-input-inputmonitor-offthreefingerstap-f-sys.md) | Disables listening for three-finger tap events. This API uses an asynchronous callback to return the result. |
+| [off_touch](arkts-input-inputmonitor-offtouch-f-sys.md) | Cancels listening for global touchscreen input events. This API uses an asynchronous callback to return the result. |
+| [off_touchscreenPinch](arkts-input-inputmonitor-offtouchscreenpinch-f-sys.md) | Disables listening for touchscreen pinch events. This API uses an asynchronous callback to return the result. |
+| [off_touchscreenSwipe](arkts-input-inputmonitor-offtouchscreenswipe-f-sys.md) | Disables listening for touchscreen swipe events. This API uses an asynchronous callback to return the result. |
 | [onFingerprint](arkts-input-inputmonitor-onfingerprint-f-sys.md) | Enables listening for fingerprint key events. |
 | [onFourFingersSwipe](arkts-input-inputmonitor-onfourfingersswipe-f-sys.md) | Listens for touchPad four fingers swipe events. |
 | [onKeyPressed](arkts-input-inputmonitor-onkeypressed-f-sys.md) | Enables listening for release events of specified keys, such as the logo, power, and volume keys. |
@@ -63,20 +63,20 @@ import { inputMonitor } from '@kit.InputKit';
 | [onTouch](arkts-input-inputmonitor-ontouch-f-sys.md) | Listens for touch input events. |
 | [onTouchscreenPinch](arkts-input-inputmonitor-ontouchscreenpinch-f-sys.md) | Enables listening touchscreen pinch gesture events. |
 | [onTouchscreenSwipe](arkts-input-inputmonitor-ontouchscreenswipe-f-sys.md) | Enables listening touchscreen swipe gesture events. |
-| on_fingerprint | Enables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the result. |
-| [on_fourFingersSwipe](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md) | Enables listening for four-finger swipe events. This API uses an asynchronous callback to return the result. |
-| on_keyPressed | Listens for the press and release events of the specified key, which can be the **META_LEFT**, **META_RIGHT**, power, or volume key. This API uses an asynchronous callback to return the result. |
-| on_mouse | Enables listening for global mouse events. This API uses an asynchronous callback to return the result. |
-| on_mouse | Enables listening for mouse events. When the mouse pointer moves to the specified rectangular area, a callback is triggered. This API uses an asynchronous callback to return the result. |
-| on_pinch | Enables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
-| on_pinch | Enables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
-| on_rotate | Enables listening for rotation events of the touchpad. This API uses an asynchronous callback to return the result. |
-| [on_swipeInward](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md) | Listens for inward swipe events. This API uses an asynchronous callback to return the result. |
-| [on_threeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md) | Enables listening for three-finger swipe events. This API uses an asynchronous callback to return the result. |
-| [on_threeFingersTap](arkts-input-multimodalinput-gestureevent-threefingerstap-i.md) | Enables listening for three-finger tap events. This API uses an asynchronous callback to return the result. |
-| on_touch | Listens for global touchscreen input events. This API uses an asynchronous callback to return the result. |
-| on_touchscreenPinch | Enables listening for touchscreen pinch events. This API uses an asynchronous callback to return the result. |
-| on_touchscreenSwipe | Enables listening for touchscreen swipe events. This API uses an asynchronous callback to return the result. |
+| [on_fingerprint](arkts-input-inputmonitor-onfingerprint-f-sys.md) | Enables listening for fingerprint gesture input events. This API uses an asynchronous callback to return the result. |
+| [on_fourFingersSwipe](arkts-input-inputmonitor-onfourfingersswipe-f-sys.md) | Enables listening for four-finger swipe events. This API uses an asynchronous callback to return the result. |
+| [on_keyPressed](arkts-input-inputmonitor-onkeypressed-f-sys.md) | Listens for the press and release events of the specified key, which can be the **META_LEFT**, **META_RIGHT**, power, or volume key. This API uses an asynchronous callback to return the result. |
+| [on_mouse](arkts-input-inputmonitor-onmouse-f-sys.md) | Enables listening for global mouse events. This API uses an asynchronous callback to return the result. |
+| [on_mouse](arkts-input-inputmonitor-onmouse-f-sys.md) | Enables listening for mouse events. When the mouse pointer moves to the specified rectangular area, a callback is triggered. This API uses an asynchronous callback to return the result. |
+| [on_pinch](arkts-input-inputmonitor-onpinch-f-sys.md) | Enables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
+| [on_pinch](arkts-input-inputmonitor-onpinch-f-sys.md) | Enables listening for global touchpad pinch events. This API uses an asynchronous callback to return the result. |
+| [on_rotate](arkts-input-inputmonitor-onrotate-f-sys.md) | Enables listening for rotation events of the touchpad. This API uses an asynchronous callback to return the result. |
+| [on_swipeInward](arkts-input-inputmonitor-onswipeinward-f-sys.md) | Listens for inward swipe events. This API uses an asynchronous callback to return the result. |
+| [on_threeFingersSwipe](arkts-input-inputmonitor-onthreefingersswipe-f-sys.md) | Enables listening for three-finger swipe events. This API uses an asynchronous callback to return the result. |
+| [on_threeFingersTap](arkts-input-inputmonitor-onthreefingerstap-f-sys.md) | Enables listening for three-finger tap events. This API uses an asynchronous callback to return the result. |
+| [on_touch](arkts-input-inputmonitor-ontouch-f-sys.md) | Listens for global touchscreen input events. This API uses an asynchronous callback to return the result. |
+| [on_touchscreenPinch](arkts-input-inputmonitor-ontouchscreenpinch-f-sys.md) | Enables listening for touchscreen pinch events. This API uses an asynchronous callback to return the result. |
+| [on_touchscreenSwipe](arkts-input-inputmonitor-ontouchscreenswipe-f-sys.md) | Enables listening for touchscreen swipe events. This API uses an asynchronous callback to return the result. |
 | [queryTouchEvents](arkts-input-inputmonitor-querytouchevents-f-sys.md) | Queries recent touchscreen input events. A maximum of 100 events can be queried. Since API version 26.0.0, a maximum of 60 events can be queried. This API uses a promise to return the result. |
 <!--DelEnd-->
 

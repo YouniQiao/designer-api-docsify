@@ -1,6 +1,6 @@
 # Font
 
-Font类用于描述字型绘制时所使用的属性（如大小、字体、粗细、倾斜、缩放等），并支持文本测量、字形转换、路径轮廓获取、主题字体跟随等能力。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+Font类用于描述字型绘制时所使用的属性（如大小、字体、粗细、倾斜、缩放等），并支持文本测量、字形转换、路径轮廓获取、主题字体跟随等能力。 &gt; **说明：** &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ Font类用于描述字型绘制时所使用的属性（如大小、字体、粗�
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## countText
@@ -99,7 +100,7 @@ createPathForGlyph(index: int): Path | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回指定字形的路径轮廓。获取失败时返回undefined。 |
+| Path \| undefined | 返回指定字形的路径轮廓。获取失败时返回undefined。 |
 
 ## enableEmbolden
 
@@ -237,7 +238,7 @@ getBounds(glyphs: Array<int>): Array<common2D.Rect> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Rect&gt; | 返回字形边界矩形数组。 |
+| Array&lt;common2D.Rect&gt; \| undefined | 返回字形边界矩形数组。 |
 
 ## getEdging
 
@@ -279,7 +280,7 @@ getEdging(): FontEdging | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) | 返回字型边缘效果。获取失败时返回undefined。 |
+| [FontEdging](arkts-arkgraphics2d-drawing-fontedging-e.md) \| undefined | 返回字型边缘效果。获取失败时返回undefined。 |
 
 ## getHinting
 
@@ -321,7 +322,7 @@ getHinting(): FontHinting | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | 返回字型轮廓效果。获取失败时返回undefined。 |
+| [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) \| undefined | 返回字型轮廓效果。获取失败时返回undefined。 |
 
 ## getMetrics
 
@@ -363,7 +364,7 @@ getMetrics(): FontMetrics | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) | 与字体关联的度量属性对象。获取失败时返回undefined。 |
+| [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) \| undefined | 与字体关联的度量属性对象。获取失败时返回undefined。 |
 
 ## getScaleX
 
@@ -495,7 +496,7 @@ getTextPath(text: string, byteLength: int, x: double, y: double): Path | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回获取到的文本的路径轮廓。获取失败时返回undefined。 |
+| Path \| undefined | 返回获取到的文本的路径轮廓。获取失败时返回undefined。 |
 
 **错误码：**
 
@@ -563,7 +564,7 @@ getTextPathWithFallback(text: string, byteLength: int, x: double, y: double): Pa
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
+| Path \| undefined | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
 
 ## getTypeface
 
@@ -605,7 +606,7 @@ getTypeface(): Typeface | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 字体。获取失败时返回undefined。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 字体。获取失败时返回undefined。 |
 
 ## getWidths
 
@@ -665,7 +666,7 @@ getWidths(glyphs: Array<int>): Array<double> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;double&gt; | 返回字形宽度数组，浮点数。单位为物理像素px。获取失败时返回undefined。 |
+| Array&lt;double&gt; \| undefined | 返回字形宽度数组，浮点数。单位为物理像素px。获取失败时返回undefined。 |
 
 **错误码：**
 
@@ -902,7 +903,7 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 measureText(text: string, encoding: TextEncoding): double
 ```
 
-测量文本的宽度。 > **说明：** > > 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用 > [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12)替代。
+测量文本的宽度。 &gt; **说明：** &gt; &gt; 此接口用于测量原始字符串的文本宽度，若想测量排版后的文本宽度，建议使用 &gt; [measure.measureText](../../../reference/apis-arkui/arkts-apis-uicontext-measureutils.md#measuretext12)替代。
 
 **起始版本：** 23
 
@@ -1271,7 +1272,7 @@ textToGlyphs(text: string, glyphCount?: int): Array<int> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;int&gt; | 返回转换得到的字形索引数组。创建失败时返回undefined。 |
+| Array&lt;int&gt; \| undefined | 返回转换得到的字形索引数组。创建失败时返回undefined。 |
 
 **错误码：**
 

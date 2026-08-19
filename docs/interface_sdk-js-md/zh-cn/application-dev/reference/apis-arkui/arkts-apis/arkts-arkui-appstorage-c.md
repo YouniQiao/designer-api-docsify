@@ -1,6 +1,6 @@
 # AppStorage(System API)
 
-AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，将UI状态数据存储于运行内存，实现应用级全局状态共享。具体UI使用说明，详见 [AppStorage：应用全局的UI状态存储](../../../ui/state-management/arkts-appstorage.md)。 > **说明：** > > 从API version 12开始，AppStorage支持[Map](../../../ui/state-management/arkts-appstorage.md#装饰map类型变量)、 > [Set](../../../ui/state-management/arkts-appstorage.md#装饰set类型变量)、 > [Date类型](../../../ui/state-management/arkts-appstorage.md#装饰date类型变量)，支持null、undefined以及 > [联合类型](../../../ui/state-management/arkts-appstorage.md#appstorage支持联合类型)。
+AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，将UI状态数据存储于运行内存，实现应用级全局状态共享。具体UI使用说明，详见 [AppStorage：应用全局的UI状态存储](../../../ui/state-management/arkts-appstorage.md)。 &gt; **说明：** &gt; &gt; 从API version 12开始，AppStorage支持[Map](../../../ui/state-management/arkts-appstorage.md#装饰map类型变量)、 &gt; [Set](../../../ui/state-management/arkts-appstorage.md#装饰set类型变量)、 &gt; [Date类型](../../../ui/state-management/arkts-appstorage.md#装饰date类型变量)，支持null、undefined以及 &gt; [联合类型](../../../ui/state-management/arkts-appstorage.md#appstorage支持联合类型)。
 
 **起始版本：** 7
 
@@ -117,7 +117,7 @@ static Get<T>(propName: string): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| T \| undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 **示例**
 
@@ -168,7 +168,7 @@ AppStorage.Has('simpleProp');
 static IsMutable(propName: string): boolean
 ```
 
-返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中propName对应的属性是否是可变的。 > **说明：** > > 从API version 7开始支持，从API version 10开始废弃，暂无替代接口。
+返回[AppStorage](../../../ui/state-management/arkts-appstorage.md)中propName对应的属性是否是可变的。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 10开始废弃，暂无替代接口。
 
 **起始版本：** 7
 
@@ -273,7 +273,7 @@ linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get()
 static Prop(propName: string): any
 ```
 
-与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立单向数据绑定。如果给定的propName在AppStorage中存在，则返 回与AppStorage中propName对应属性的单向绑定数据。如果AppStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回AppStorage中。 > **说明：** > > Prop仅支持S类型（number、boolean、string）。
+与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立单向数据绑定。如果给定的propName在AppStorage中存在，则返 回与AppStorage中propName对应属性的单向绑定数据。如果AppStorage中不存在propName，则返回undefined。单向绑定数据的修改不会同步回AppStorage中。 &gt; **说明：** &gt; &gt; Prop仅支持S类型（number、boolean、string）。
 
 **起始版本：** 7
 
@@ -578,7 +578,7 @@ static get<T>(propName: string): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
+| T \| undefined | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
 **示例**
 
@@ -750,7 +750,7 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; \| undefined | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
 **示例**
 

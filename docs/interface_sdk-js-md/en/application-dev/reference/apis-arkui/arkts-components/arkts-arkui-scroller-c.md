@@ -79,7 +79,7 @@ Obtains the current scrolling offset. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;
 
 | Type | Description |
 | --- | --- |
-| [OffsetResult](arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is void. |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is void.<br>**Applicable version:** 11 and later |
 
 ## fling
 
@@ -134,7 +134,7 @@ Obtains the FrameNode corresponding to this scroller.
 
 | Type | Description |
 | --- | --- |
-| FrameNode | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
+| FrameNode \| undefined | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
 
 ## getItemIndex
 
@@ -257,7 +257,7 @@ Obtains the current scrolling offset.
 
 | Type | Description |
 | --- | --- |
-| [OffsetResult](arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) \| undefined | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
 
 ## scrollBy
 

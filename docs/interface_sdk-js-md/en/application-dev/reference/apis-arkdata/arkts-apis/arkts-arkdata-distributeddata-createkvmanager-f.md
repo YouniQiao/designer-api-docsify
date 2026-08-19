@@ -29,7 +29,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
 
 **Examples**
 

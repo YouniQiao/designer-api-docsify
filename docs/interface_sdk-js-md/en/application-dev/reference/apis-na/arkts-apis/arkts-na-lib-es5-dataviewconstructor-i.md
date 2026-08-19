@@ -31,8 +31,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, byteLength?: number): DataView
 
 | Type | Description |
 | --- | --- |
-| DataView |  |
-
 ## prototype
 
 ```TypeScript

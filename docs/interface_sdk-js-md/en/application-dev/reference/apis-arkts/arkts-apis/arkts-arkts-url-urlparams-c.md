@@ -306,7 +306,7 @@ Obtains the value of the first key-value pair based on the specified key.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the first value found by name. If no value is found, null is returned. |
+| string \| null | Returns the first value found by name. If no value is found, null is returned. |
 
 **Examples**
 
@@ -343,7 +343,7 @@ Obtains the value of the first key-value pair based on the specified key.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the first value found by name. If no value is found, undefined is returned. |
+| string \| undefined | Returns the first value found by name. If no value is found, undefined is returned. |
 
 ## getAll
 

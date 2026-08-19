@@ -151,7 +151,7 @@ Set the Button Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableButton](arkts-na-button-extendablebutton-c.md) |  |
 
 ## setButtonOptions
 
@@ -181,5 +181,5 @@ Set the Button Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableButton](arkts-na-button-extendablebutton-c.md) |  |
 

@@ -1,6 +1,6 @@
 # Array
 
-A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance. > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > This section uses the following to identify the use of generics: - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
+A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; This section uses the following to identify the use of generics: - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Inheritance/Implementation:** Array implements ConcatArray<T>
 
@@ -70,7 +70,7 @@ Returns the element at a given index in this ArkTS array.
 
 | Type | Description |
 | --- | --- |
-| T | Element at the given index. If the index is out of range or invalid, **undefined** is returned. |
+| T \| undefined | Element at the given index. If the index is out of range or invalid, **undefined** is returned. |
 
 **Error codes:**
 
@@ -457,7 +457,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Type | Description |
 | --- | --- |
-| T | Value of the first element that passes the test. If none of the elements pass the test , **undefined** is returned. |
+| T \| undefined | Value of the first element that passes the test. If none of the elements pass the test , **undefined** is returned. |
 
 **Error codes:**
 
@@ -939,7 +939,7 @@ Removes the last element from this ArkTS array and returns that element. If the 
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. If the array is empty, **undefined** is returned. |
+| T \| undefined | Element removed. If the array is empty, **undefined** is returned. |
 
 **Error codes:**
 
@@ -1177,7 +1177,7 @@ Removes the first element from this ArkTS array and returns that element. If the
 
 | Type | Description |
 | --- | --- |
-| T | Element removed. If the array is empty, **undefined** is returned. |
+| T \| undefined | Element removed. If the array is empty, **undefined** is returned. |
 
 **Error codes:**
 

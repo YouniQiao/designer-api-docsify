@@ -421,7 +421,7 @@ The at() method takes an integer value and returns a new string consisting of th
 
 | Type | Description |
 | --- | --- |
-| string | A string consisting of the single UTF-16 code unit located at the specified position. Returns undefined if the given index can not be found. |
+| string \| undefined | A string consisting of the single UTF-16 code unit located at the specified position. Returns undefined if the given index can not be found. |
 
 ## big
 
@@ -583,7 +583,7 @@ Gets the codepoint at the specified index in this string. Is similar to charAt(i
 
 | Type | Description |
 | --- | --- |
-| int | the codepoint at the specified index |
+| int \| undefined | the codepoint at the specified index |
 
 ## codePointCount
 
@@ -927,7 +927,7 @@ Checks if this string contains the specified string. The search starts from spec
 public contains(str: string, fromIndex: double): boolean
 ```
 
-Checks if this string contains the specified string. The search starts from specified index (negative fromIndex is equivalent to fromIndex = 0, and fromIndex >= length implies no match).
+Checks if this string contains the specified string. The search starts from specified index (negative fromIndex is equivalent to fromIndex = 0, and fromIndex &gt;= length implies no match).
 
 **Since:** 26.0.0
 
@@ -1460,7 +1460,7 @@ Finds the first occurrence of a character in this string.
 public indexOf(ch: char, fromIndex: int): int
 ```
 
-Finds the first occurrence of a character in this string at position >= fromIndex. Negative fromIndex is equivalent to 0, and fromIndex >= length implies no match.
+Finds the first occurrence of a character in this string at position &gt;= fromIndex. Negative fromIndex is equivalent to 0, and fromIndex &gt;= length implies no match.
 
 **Since:** 26.0.0
 
@@ -1743,7 +1743,7 @@ Finds the last occurrence of a character in this string.
 public lastIndexOf(str: string, fromIndex?: int): int
 ```
 
-Finds the last occurrence of another string in this string. If fromIndex is undefined, search starts from the end of the string. If fromIndex >= length, it is treated as length (search from end). If fromIndex is negative, returns -1 (no match).
+Finds the last occurrence of another string in this string. If fromIndex is undefined, search starts from the end of the string. If fromIndex &gt;= length, it is treated as length (search from end). If fromIndex is negative, returns -1 (no match).
 
 **Since:** 26.0.0
 
@@ -1760,7 +1760,7 @@ Finds the last occurrence of another string in this string. If fromIndex is unde
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | str | string | Yes | the substring to search for within this string. |
-| fromIndex | int | No | position to start searching backwards from. If undefined, searches from the end of the string. If >= string length, searches from the end. If negative, returns -1. <br>The value should be an integer. |
+| fromIndex | int | No | position to start searching backwards from. If undefined, searches from the end of the string. If &gt;= string length, searches from the end. If negative, returns -1. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1858,7 +1858,7 @@ Retrieves the result of matching a string against a regular expression
 
 | Type | Description |
 | --- | --- |
-| RegExpMatchArray | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| RegExpMatchArray \| null | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
 
 ## match
 
@@ -1888,7 +1888,7 @@ Retrieves the result of matching a string against a regular expression
 
 | Type | Description |
 | --- | --- |
-| RegExpMatchArray | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| RegExpMatchArray \| null | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
 
 ## match
 
@@ -1918,7 +1918,7 @@ Retrieves the result of matching a string against a regular expression
 
 | Type | Description |
 | --- | --- |
-| RegExpMatchArray | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| RegExpMatchArray \| null | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
 
 ## matchAll
 
@@ -3015,7 +3015,7 @@ Selects a substring of this string, starting at a specified index and ending at 
 public substring(begin: int, end: int): string
 ```
 
-Selects a substring of this string, starting at a specified index and ending at index before another specified index. If 'begin' &lt; 0, then 'begin' is assumed to be equal to zero. If 'begin' &gt; this.length, then 'begin' is assumed to be equal to the this.length. If 'end' &lt; 0, then 'end' is assumed to be equal to zero. If 'end' &gt; this.length, then 'end' is assumed to be equal to this.length. If 'begin' > 'end', then these are swapped. If 'begin' == 'end', then an empty string is returned.
+Selects a substring of this string, starting at a specified index and ending at index before another specified index. If 'begin' &lt; 0, then 'begin' is assumed to be equal to zero. If 'begin' &gt; this.length, then 'begin' is assumed to be equal to the this.length. If 'end' &lt; 0, then 'end' is assumed to be equal to zero. If 'end' &gt; this.length, then 'end' is assumed to be equal to this.length. If 'begin' &gt; 'end', then these are swapped. If 'begin' == 'end', then an empty string is returned.
 
 **Since:** 26.0.0
 

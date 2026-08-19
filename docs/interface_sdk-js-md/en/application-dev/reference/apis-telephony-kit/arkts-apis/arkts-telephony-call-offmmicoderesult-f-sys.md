@@ -28,7 +28,7 @@ Unsubscribe from the mmiCodeResult event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | No | Indicates the callback used to cancel getting mmicode registered listening. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MmiCodeResults](arkts-telephony-call-mmicoderesults-i-sys.md)&gt; | No | Indicates the callback used to cancel getting mmicode registered listening. |
 
 **Error codes:**
 

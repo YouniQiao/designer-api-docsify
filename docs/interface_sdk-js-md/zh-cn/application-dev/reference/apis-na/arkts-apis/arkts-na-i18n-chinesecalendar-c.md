@@ -1,8 +1,8 @@
 # ChineseCalendar
 
-提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](arkts-na-i18n-calendar-c.md)，支持[Calendar](arkts-na-i18n-calendar-c.md)的方法。
+提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md)，支持[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md)的方法。
 
-**继承/实现关系：** ChineseCalendar extends [Calendar](arkts-na-i18n-calendar-c.md)
+**继承/实现关系：** ChineseCalendar extends [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md)
 
 **起始版本：** 26.0.0
 
@@ -81,5 +81,5 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](arkts-na-i18n-chinesecalendartime-i.md) | 是 | 农历时间对象。 |
+| chineseCalendarTime | [ChineseCalendarTime](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-chinesecalendartime-i.md) | 是 | 农历时间对象。 |
 

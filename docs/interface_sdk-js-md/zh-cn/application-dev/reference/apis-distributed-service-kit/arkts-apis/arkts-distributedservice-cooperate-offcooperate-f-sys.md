@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
-## off_cooperate('cooperate')
+## off('cooperate')
 
 ```TypeScript
 function off(type: 'cooperate', callback?: Callback<void>): void
@@ -17,7 +18,7 @@ function off(type: 'cooperate', callback?: Callback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [off](#off_cooperatecooperate)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
+**替代接口：** [off](#offcooperate)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
 
 <!--Device-cooperate-function off(type: 'cooperate', callback?: Callback<void>): void--><!--Device-cooperate-function off(type: 'cooperate', callback?: Callback<void>): void-End-->
 
@@ -30,7 +31,7 @@ function off(type: 'cooperate', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cooperate' | 是 | 监听类型，取值为'cooperate'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消注册的回调函数，若无此参数，则取消当前应用注册的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消注册的回调函数，若无此参数，则取消当前应用注册的所有回调函数。 |
 
 **错误码：**
 

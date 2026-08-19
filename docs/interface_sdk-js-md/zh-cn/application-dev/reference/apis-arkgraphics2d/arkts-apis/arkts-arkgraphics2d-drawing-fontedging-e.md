@@ -1,6 +1,6 @@
 # FontEdging
 
-字型边缘效果类型枚举。 > **说明：** > > FontEdging不支持位图字体（如点阵字体、emoji等）。
+字型边缘效果类型枚举。 &gt; **说明：** &gt; &gt; FontEdging不支持位图字体（如点阵字体、emoji等）。
 
 **起始版本：** 23
 

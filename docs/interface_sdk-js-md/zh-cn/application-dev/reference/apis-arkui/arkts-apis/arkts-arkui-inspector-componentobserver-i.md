@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## offDrawChildren
@@ -35,7 +36,7 @@ offDrawChildren(callback?: Callback<int[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onDrawChildren方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onDrawChildren方法中的callback为相同对象时才能取消回调成功。 |
 
 **示例**
 
@@ -96,7 +97,7 @@ offLayoutChildren(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onLayoutChildren方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和onLayoutChildren方法中的callback为相同对象时才能取消回调成功。 |
 
 **示例**
 
@@ -167,7 +168,7 @@ struct ImageExample {
 }
 ```
 
-## off_draw('draw')
+## off('draw')
 
 ```TypeScript
 off(type: 'draw', callback?: () => void): void
@@ -192,7 +193,7 @@ off(type: 'draw', callback?: () => void): void
 | type | 'draw' | 是 | 必须填写字符串'draw'。<br/>draw：组件绘制送显完成。<br>**起始版本：** 12 |
 | callback | () =&gt; void | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。callback需要和on('draw')方法中的callback为相同对象时才能取消回调成功。<br>**起始版本：** 12 |
 
-## off_drawChildren('drawChildren')
+## off('drawChildren')
 
 ```TypeScript
 off(type: 'drawChildren', callback?: Callback<void>): void
@@ -215,9 +216,9 @@ off(type: 'drawChildren', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | 是 | 必须填写字符串'drawChildren'。<br/>drawChildren：子组件绘制送显完成。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和on('drawChildren')方法中的callback为相同对象时才能取消回调成功。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和on('drawChildren')方法中的callback为相同对象时才能取消回调成功。 |
 
-## off_layout('layout')
+## off('layout')
 
 ```TypeScript
 off(type: 'layout', callback?: () => void): void
@@ -264,7 +265,7 @@ onDrawChildren(callback: Callback<int[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | 是 | 监听drawChildren的回调，回调参数为子组件uniqueId数组，表示绘制送显完成的子组件的唯一标识列表。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | 是 | 监听drawChildren的回调，回调参数为子组件uniqueId数组，表示绘制送显完成的子组件的唯一标识列表。 |
 
 **示例**
 
@@ -325,9 +326,9 @@ onLayoutChildren(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 监听layoutChildren的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 监听layoutChildren的回调。 |
 
-## on_draw('draw')
+## on('draw')
 
 ```TypeScript
 on(type: 'draw', callback: () => void): void
@@ -352,7 +353,7 @@ on(type: 'draw', callback: () => void): void
 | type | 'draw' | 是 | 必须填写字符串'draw'。<br/>draw：组件绘制送显完成。<br>**起始版本：** 12 |
 | callback | () =&gt; void | 是 | 监听draw的回调。<br>**起始版本：** 12 |
 
-## on_drawChildren('drawChildren')
+## on('drawChildren')
 
 ```TypeScript
 on(type: 'drawChildren', callback: Callback<void>): void
@@ -375,9 +376,9 @@ on(type: 'drawChildren', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | 是 | 必须填写字符串'drawChildren'。<br/>drawChildren：子组件绘制送显完成。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 监听drawChildren的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 监听drawChildren的回调。 |
 
-## on_layout('layout')
+## on('layout')
 
 ```TypeScript
 on(type: 'layout', callback: () => void): void

@@ -38,7 +38,7 @@ Sets the default focus flag of the accessibility feature.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
 
 ## accessibilityDescription
 
@@ -68,7 +68,7 @@ Sets the accessibility description. This property provides additional context or
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
 
 ## accessibilityNextFocusId
 
@@ -98,7 +98,7 @@ Sets the ID of the next component to receive accessibility focus.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
 
 ## accessibilityRole
 
@@ -128,7 +128,7 @@ Sets the accessibility role, which represents the custom type of the component.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
 
 ## align
 
@@ -158,7 +158,7 @@ align
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## alignRules
 
@@ -188,7 +188,7 @@ Specifies the alignRules of relative container
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## backgroundColor
 
@@ -218,7 +218,7 @@ Background color.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## borderColor
 
@@ -248,7 +248,7 @@ Color of the border.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## borderRadius
 
@@ -278,7 +278,7 @@ Radius of the border.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## borderStyle
 
@@ -308,7 +308,7 @@ Style of the border.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## borderWidth
 
@@ -338,7 +338,7 @@ Width of the border.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## chainMode
 
@@ -369,7 +369,7 @@ Specifies the direction and style of chain in relative container
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## constraintSize
 
@@ -399,7 +399,7 @@ constraint Size: minWidth: minimum Width, maxWidth: maximum Width, minHeight: mi
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## enabled
 
@@ -429,7 +429,7 @@ If the value is true, the component is available and can respond to operations s
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## fallbackLineSpacing
 
@@ -459,7 +459,7 @@ Whether to include the ascent and descent of fallback fonts to prevent line over
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
 
 ## focusBox
 
@@ -489,7 +489,7 @@ Set the focusBox style.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## fontColor
 
@@ -519,7 +519,7 @@ Font color of the inner text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## fontFamily
 
@@ -549,7 +549,7 @@ Font family of the inner text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## fontSize
 
@@ -579,7 +579,7 @@ Font size of the inner text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## fontStyle
 
@@ -609,7 +609,7 @@ Font style of the inner text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## fontWeight
 
@@ -639,7 +639,7 @@ Font weight of the inner text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## height
 
@@ -669,7 +669,7 @@ Sets the height of the component.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## heightAdaptivePolicy
 
@@ -699,7 +699,7 @@ Called when the height adaptive policy is set.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## iconColor
 
@@ -729,7 +729,7 @@ Color of the icon.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## iconSize
 
@@ -759,7 +759,7 @@ Icon size.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## id
 
@@ -789,7 +789,7 @@ Id. User can set an id to the component to identify it.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## layoutDirection
 
@@ -819,7 +819,7 @@ Layout direction of the icon and text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## markAnchor
 
@@ -849,7 +849,7 @@ Anchor of the security component for positioning. The top start edge of the comp
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## maxFontScale
 
@@ -879,7 +879,7 @@ Sets the maximum font scale factor for text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
 
 ## maxFontSize
 
@@ -909,7 +909,7 @@ Called when the maximum font size of the font is set.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## maxLines
 
@@ -939,7 +939,7 @@ Called when the maximum number of lines of text is set.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## minFontScale
 
@@ -969,7 +969,7 @@ Sets the minimum font scale factor for text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attributes of the security component. |
 
 ## minFontSize
 
@@ -999,7 +999,7 @@ Called when the minimum font size of the font is set.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## offset
 
@@ -1029,7 +1029,7 @@ Coordinate offset relative to the layout completion position. Setting this attri
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) |  |
 
 ## padding
 
@@ -1059,7 +1059,7 @@ Padding between the background border and icon/inner text.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## position
 
@@ -1089,7 +1089,7 @@ Position of the security component.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## size
 
@@ -1119,7 +1119,7 @@ The size of the component.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## textIconSpace
 
@@ -1149,7 +1149,7 @@ Space between the inner text and icon.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 
 ## width
 
@@ -1179,5 +1179,5 @@ Sets the width of the component.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the security component. |
+| [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md) | Returns the attribute of the security component. |
 

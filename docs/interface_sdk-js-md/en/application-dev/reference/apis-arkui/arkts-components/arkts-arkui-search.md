@@ -35,7 +35,7 @@ Defines the constructor of Search.
 | [CancelButtonOptions](arkts-arkui-cancelbuttonoptions-i.md) | Defines the CancelButton options. |
 | [IconOptions](arkts-arkui-iconoptions-i.md) | Defines the icon options. |
 | [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | Defines the SearchButton options. |
-| [SearchOptions](arkts-arkui-searchoptions-i.md) | Describes the initialization options of the **Search** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [SearchOptions](arkts-arkui-searchoptions-i.md) | Describes the initialization options of the **Search** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Types
 

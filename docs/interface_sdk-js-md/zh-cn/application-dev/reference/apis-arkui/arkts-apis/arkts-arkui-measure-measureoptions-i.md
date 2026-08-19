@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## baselineOffset

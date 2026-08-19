@@ -25,7 +25,7 @@ Stops listening for an input device event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | No | Callback for the input device event. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | No | Callback for the input device event. |
 
 **Error codes:**
 

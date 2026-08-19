@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<SliderAttribute> | AttributeModifi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## blockBorderColor
 
 ```TypeScript
@@ -58,8 +56,6 @@ blockBorderColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## blockBorderWidth
 
 ```TypeScript
@@ -82,8 +78,6 @@ blockBorderWidth(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## blockColor
 
 ```TypeScript
@@ -106,8 +100,6 @@ blockColor(value: ResourceColor | LinearGradient | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## blockSize
 
 ```TypeScript
@@ -130,8 +122,6 @@ blockSize(value: SizeOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## blockStyle
 
 ```TypeScript
@@ -154,8 +144,6 @@ blockStyle(value: SliderBlockStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -178,8 +166,6 @@ contentModifier(modifier: ContentModifier<SliderConfiguration> | undefined): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -202,8 +188,6 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableHapticFeedback
 
 ```TypeScript
@@ -226,8 +210,6 @@ enableHapticFeedback(enabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## minResponsiveDistance
 
 ```TypeScript
@@ -250,8 +232,6 @@ minResponsiveDistance(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -274,8 +254,6 @@ onChange(callback: ((value: double, mode: SliderChangeMode) => void) | undefined
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## prefix
 
 ```TypeScript
@@ -299,8 +277,6 @@ prefix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedBorderRadius
 
 ```TypeScript
@@ -323,8 +299,6 @@ selectedBorderRadius(value: Dimension | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedColor
 
 ```TypeScript
@@ -347,8 +321,6 @@ selectedColor(selectedColor: ResourceColor | LinearGradient | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setSliderOptions
 
 ```TypeScript
@@ -371,8 +343,6 @@ setSliderOptions(options?: SliderOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## showSteps
 
 ```TypeScript
@@ -395,8 +365,6 @@ showSteps(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## showSteps
 
 ```TypeScript
@@ -420,8 +388,6 @@ showSteps(value: boolean | undefined, options?: SliderShowStepOptions | undefine
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## showTips
 
 ```TypeScript
@@ -445,8 +411,6 @@ showTips(value: boolean | undefined, content?: ResourceStr | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## slideRange
 
 ```TypeScript
@@ -469,8 +433,6 @@ slideRange(value: SlideRange | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## sliderInteractionMode
 
 ```TypeScript
@@ -493,8 +455,6 @@ sliderInteractionMode(value: SliderInteraction | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stepColor
 
 ```TypeScript
@@ -517,8 +477,6 @@ stepColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stepSize
 
 ```TypeScript
@@ -541,8 +499,6 @@ stepSize(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## suffix
 
 ```TypeScript
@@ -566,8 +522,6 @@ suffix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## trackBorderRadius
 
 ```TypeScript
@@ -590,8 +544,6 @@ trackBorderRadius(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## trackColor
 
 ```TypeScript
@@ -614,8 +566,6 @@ trackColor(value: ResourceColor | LinearGradient | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## trackColorMetrics
 
 ```TypeScript
@@ -638,8 +588,6 @@ trackColorMetrics(color: ColorMetricsLinearGradient | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## trackThickness
 
 ```TypeScript
@@ -662,8 +610,6 @@ trackThickness(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

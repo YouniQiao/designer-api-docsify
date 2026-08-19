@@ -1949,7 +1949,7 @@ Returns a JSON representation of the date.
 
 | Type | Description |
 | --- | --- |
-| string | The JSON string or null if invalid. |
+| string \| null | The JSON string or null if invalid. |
 
 ## toLocaleDateString
 

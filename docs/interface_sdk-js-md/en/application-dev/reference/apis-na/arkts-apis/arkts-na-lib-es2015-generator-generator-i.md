@@ -25,8 +25,6 @@
 
 | Type | Description |
 | --- | --- |
-| Generator&lt;T, TReturn, TNext&gt; |  |
-
 ## next
 
 ```TypeScript
@@ -47,8 +45,6 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| IteratorResult&lt;T, TReturn&gt; |  |
-
 ## return
 
 ```TypeScript
@@ -69,8 +65,6 @@ return(value: TReturn): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| IteratorResult&lt;T, TReturn&gt; |  |
-
 ## throw
 
 ```TypeScript
@@ -91,5 +85,3 @@ throw(e: any): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| IteratorResult&lt;T, TReturn&gt; |  |
-

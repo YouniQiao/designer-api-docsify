@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## moveFileSync
@@ -11,7 +14,7 @@
 declare function moveFileSync(src: string, dest: string, mode?: number): void
 ```
 
-以同步方式移动文件至目标路径。 > **说明：** > > 该接口不支持在分布式文件路径下操作。
+以同步方式移动文件至目标路径。 &gt; **说明：** &gt; &gt; 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
 

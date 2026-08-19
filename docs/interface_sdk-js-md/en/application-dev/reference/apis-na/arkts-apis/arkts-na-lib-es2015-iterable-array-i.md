@@ -25,8 +25,6 @@ Iterator
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 ## entries
 
 ```TypeScript
@@ -43,8 +41,6 @@ Returns an iterable of key, value pairs for every entry in the array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, T]&gt; |  |
-
 ## keys
 
 ```TypeScript
@@ -61,8 +57,6 @@ Returns an iterable of keys in the array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |  |
-
 ## values
 
 ```TypeScript
@@ -79,5 +73,3 @@ Returns an iterable of values in the array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-

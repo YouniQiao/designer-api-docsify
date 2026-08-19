@@ -1,6 +1,6 @@
 # ConstraintSizeOptions
 
-约束尺寸类型，用于描述组件布局时对尺寸大小的范围限制。 > **说明：** > > 在Row、Column、 > RelativeContainer组件中，width、height设置auto表示自适应子组件。在 > TextInput组件中，width设置auto表示自适应文本宽度。
+约束尺寸类型，用于描述组件布局时对尺寸大小的范围限制。 &gt; **说明：** &gt; &gt; 在Row、Column、 &gt; RelativeContainer组件中，width、height设置auto表示自适应子组件。在 &gt; TextInput组件中，width设置auto表示自适应文本宽度。
 
 **起始版本：** 23
 

@@ -373,7 +373,7 @@ Queries the value associated with the specified key
 
 | Type | Description |
 | --- | --- |
-| T | the value of key-value pairs |
+| T \| undefined | the value of key-value pairs |
 
 **Error codes:**
 
@@ -707,7 +707,7 @@ Remove the key-value pair based on a specified key if it exists and return the v
 
 | Type | Description |
 | --- | --- |
-| T | target mapped value, or undefined if key is not exist |
+| T \| undefined | target mapped value, or undefined if key is not exist |
 
 **Error codes:**
 
@@ -785,7 +785,7 @@ Remove the key-value pair at a specified index if it exists and return the value
 
 | Type | Description |
 | --- | --- |
-| T | the T type, or undefined if container is empty |
+| T \| undefined | the T type, or undefined if container is empty |
 
 **Error codes:**
 

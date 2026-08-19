@@ -29,8 +29,6 @@ next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;IteratorResult&lt;T, TReturn&gt;&gt; |  |
-
 ## return
 
 ```TypeScript
@@ -51,8 +49,6 @@ return?(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TRetu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;IteratorResult&lt;T, TReturn&gt;&gt; |  |
-
 ## throw
 
 ```TypeScript
@@ -73,5 +69,3 @@ throw?(e?: any): Promise<IteratorResult<T, TReturn>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;IteratorResult&lt;T, TReturn&gt;&gt; |  |
-

@@ -1,6 +1,6 @@
 # ImageData
 
-ImageData对象可以存储canvas渲染的像素数据。 > **说明：** > > 创建ImageData时，宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。 > 当创建面积超过536870911px时，返回值的width和height均为0px，data为undefined。
+ImageData对象可以存储canvas渲染的像素数据。 &gt; **说明：** &gt; &gt; 创建ImageData时，宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。 &gt; 当创建面积超过536870911px时，返回值的width和height均为0px，data为undefined。
 
 **起始版本：** 8
 
@@ -114,7 +114,7 @@ readonly height: number
 readonly width: number
 ```
 
-矩形区域实际像素宽度。 <br>单位为px。 > **说明：** > > 可使用[px2vp](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12) > 接口进行单位转换。
+矩形区域实际像素宽度。 <br>单位为px。 &gt; **说明：** &gt; &gt; 可使用[px2vp](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12) &gt; 接口进行单位转换。
 
 **类型：** number
 

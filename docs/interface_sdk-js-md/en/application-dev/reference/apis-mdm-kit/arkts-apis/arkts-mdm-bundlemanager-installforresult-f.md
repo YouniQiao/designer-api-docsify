@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.MDMKit';
 function installForResult(admin: Want, hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs the application bundle in the specified path and returns the installation result. This API uses a promise to return the result. This API can be used to install only applications of the **enterprise_mdm** (MDM application) or **enterprise_normal** (common enterprise application) distribution type. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md) API to query the BundleInfo of an application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type. > **NOTE：**> > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait > for the asynchronous return of this API.
+Installs the application bundle in the specified path and returns the installation result. This API uses a promise to return the result. This API can be used to install only applications of the **enterprise_mdm** (MDM application) or **enterprise_normal** (common enterprise application) distribution type. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md) API to query the BundleInfo of an application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type. &gt; **NOTE：**&gt; &gt; This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait &gt; for the asynchronous return of this API.
 
 **Since:** 26.0.0
 

@@ -114,5 +114,5 @@ public setTextOptions(
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableText](arkts-arkui-text-extendabletext-c.md) |  |
 

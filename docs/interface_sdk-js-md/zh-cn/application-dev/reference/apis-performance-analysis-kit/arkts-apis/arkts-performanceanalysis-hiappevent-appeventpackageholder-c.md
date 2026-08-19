@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## constructor
@@ -179,5 +180,5 @@ takeNext(): AppEventPackage | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | 取出的事件包对象，订阅事件数据被全部取出后 会返回null。 |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) \| null | 取出的事件包对象，订阅事件数据被全部取出后 会返回null。 |
 

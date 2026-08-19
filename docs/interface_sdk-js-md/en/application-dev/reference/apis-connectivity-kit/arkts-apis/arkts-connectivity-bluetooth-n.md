@@ -63,22 +63,22 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 | [getBluetoothScanMode](arkts-connectivity-bluetooth-getbluetoothscanmode-f.md) | Obtains the Bluetooth scanning mode of a device. |
 | [startBluetoothDiscovery](arkts-connectivity-bluetooth-startbluetoothdiscovery-f.md) | Starts scanning Bluetooth devices. |
 | [stopBluetoothDiscovery](arkts-connectivity-bluetooth-stopbluetoothdiscovery-f.md) | Stops Bluetooth device scanning. |
-| [on_bluetoothDeviceFind](arkts-connectivity-bluetooth-onbluetoothdevicefind-f.md#on_bluetoothdevicefindbluetoothdevicefind) | Subscribe the event reported when a remote Bluetooth device is discovered. |
-| [off_bluetoothDeviceFind](arkts-connectivity-bluetooth-offbluetoothdevicefind-f.md#off_bluetoothdevicefindbluetoothdevicefind) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
-| [on_bondStateChange](arkts-connectivity-bluetooth-onbondstatechange-f.md#on_bondstatechangebondstatechange) | Subscribe the event reported when a remote Bluetooth device is bonded. |
-| [off_bondStateChange](arkts-connectivity-bluetooth-offbondstatechange-f.md#off_bondstatechangebondstatechange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
-| [on_pinRequired](arkts-connectivity-bluetooth-onpinrequired-f.md#on_pinrequiredpinrequired) | Subscribe the event of a pairing request from a remote Bluetooth device. |
-| [off_pinRequired](arkts-connectivity-bluetooth-offpinrequired-f.md#off_pinrequiredpinrequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
-| [on_stateChange](arkts-connectivity-bluetooth-onstatechange-f.md#on_statechangestatechange) | Subscribe the event reported when the Bluetooth state changes. |
-| [off_stateChange](arkts-connectivity-bluetooth-offstatechange-f.md#off_statechangestatechange) | Unsubscribe the event reported when the Bluetooth state changes. |
+| [on_bluetoothDeviceFind](arkts-connectivity-bluetooth-onbluetoothdevicefind-f.md#onbluetoothdevicefind) | Subscribe the event reported when a remote Bluetooth device is discovered. |
+| [off_bluetoothDeviceFind](arkts-connectivity-bluetooth-offbluetoothdevicefind-f.md#offbluetoothdevicefind) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
+| [on_bondStateChange](arkts-connectivity-bluetooth-onbondstatechange-f.md#onbondstatechange) | Subscribe the event reported when a remote Bluetooth device is bonded. |
+| [off_bondStateChange](arkts-connectivity-bluetooth-offbondstatechange-f.md#offbondstatechange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
+| [on_pinRequired](arkts-connectivity-bluetooth-onpinrequired-f.md#onpinrequired) | Subscribe the event of a pairing request from a remote Bluetooth device. |
+| [off_pinRequired](arkts-connectivity-bluetooth-offpinrequired-f.md#offpinrequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
+| [on_stateChange](arkts-connectivity-bluetooth-onstatechange-f.md#onstatechange) | Subscribe the event reported when the Bluetooth state changes. |
+| [off_stateChange](arkts-connectivity-bluetooth-offstatechange-f.md#offstatechange) | Unsubscribe the event reported when the Bluetooth state changes. |
 | [sppListen](arkts-connectivity-bluetooth-spplisten-f.md) | Creates a Bluetooth server listening socket. |
 | [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md) | Waits for a remote device to connect. |
 | [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md) | Connects to a remote device over the socket. |
 | [sppCloseServerSocket](arkts-connectivity-bluetooth-sppcloseserversocket-f.md) | Disables an spp server socket and releases related resources. |
 | [sppCloseClientSocket](arkts-connectivity-bluetooth-sppcloseclientsocket-f.md) | Disables an spp client socket and releases related resources. |
 | [sppWrite](arkts-connectivity-bluetooth-sppwrite-f.md) | Write data through the socket. |
-| [on_sppRead](arkts-connectivity-bluetooth-onsppread-f.md#on_sppreadsppread) | Subscribe the event reported when data is read from the socket. |
-| [off_sppRead](arkts-connectivity-bluetooth-offsppread-f.md#off_sppreadsppread) | Unsubscribe the event reported when data is read from the socket. |
+| [on_sppRead](arkts-connectivity-bluetooth-onsppread-f.md#onsppread) | Subscribe the event reported when data is read from the socket. |
+| [off_sppRead](arkts-connectivity-bluetooth-offsppread-f.md#offsppread) | Unsubscribe the event reported when data is read from the socket. |
 | [getProfile](arkts-connectivity-bluetooth-getprofile-f.md) | Obtains the instance of profile. |
 
 <!--Del-->

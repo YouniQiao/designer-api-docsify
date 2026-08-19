@@ -1,6 +1,6 @@
 # DatePickerOptions
 
-Describes the parameters of the date picker. > **NOTE：**> > - For details about how to use **Date**, see TimePickerOptions. > > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take > effect. > **NOTE：**> > Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
+Describes the parameters of the date picker. &gt; **NOTE：**&gt; &gt; - For details about how to use **Date**, see TimePickerOptions. &gt; &gt; - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take &gt; effect. &gt; **NOTE：**&gt; &gt; Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
 
 **Since:** 8
 

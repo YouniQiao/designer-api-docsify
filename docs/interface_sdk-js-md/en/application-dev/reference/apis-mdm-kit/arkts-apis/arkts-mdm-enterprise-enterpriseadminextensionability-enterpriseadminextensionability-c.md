@@ -714,7 +714,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onLogCollected(result: common.Result): void
 ```
 
-Callback triggered upon completion of log collection, after a log collection task is successfully created via the [systemManager.startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) API. It contains the log collection result. > **NOTE：**> > When log collection succeeds, the app must access the sandbox directory (**\/data/edm/log**) in its > **EnterpriseAdminExtensionAbility** to retrieve the logs. For details about how to obtain logs, see the following > sample code. After the app obtains the logs, you are advised to call > [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to > remove the collected logs.
+Callback triggered upon completion of log collection, after a log collection task is successfully created via the [systemManager.startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md) API. It contains the log collection result. &gt; **NOTE：**&gt; &gt; When log collection succeeds, the app must access the sandbox directory (**\/data/edm/log**) in its &gt; **EnterpriseAdminExtensionAbility** to retrieve the logs. For details about how to obtain logs, see the following &gt; sample code. After the app obtains the logs, you are advised to call &gt; [systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md) to &gt; remove the collected logs.
 
 **Since:** 23
 

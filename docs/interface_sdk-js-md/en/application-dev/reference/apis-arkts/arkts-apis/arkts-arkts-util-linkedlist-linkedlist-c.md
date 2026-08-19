@@ -842,14 +842,14 @@ Removes and returns the element at the specified index in this linkedlist.
 
 | Type | Description |
 | --- | --- |
-| T | the T type, if the index is out of bounds (greater than or equal to length or less than 0), throw an exception |
+| T \| undefined | the T type, if the index is out of bounds (greater than or equal to length or less than 0), throw an exception |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && &lt;= \\${length}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be &gt;= 0 && &lt;= \\${length}. Received value is: \\${index} |
 
 ## removeFirst
 
@@ -913,7 +913,7 @@ Retrieves and removes the head (first element) of this linkedList.
 
 | Type | Description |
 | --- | --- |
-| T | the head of this list |
+| T \| undefined | the head of this list |
 
 **Error codes:**
 
@@ -1031,7 +1031,7 @@ Removes and returns the last element from this linkedList.
 
 | Type | Description |
 | --- | --- |
-| T | the head of this list |
+| T \| undefined | the head of this list |
 
 **Error codes:**
 

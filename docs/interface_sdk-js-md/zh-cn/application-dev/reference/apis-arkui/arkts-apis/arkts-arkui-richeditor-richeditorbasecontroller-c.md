@@ -70,7 +70,7 @@ getCaretOffset(): int | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 当前光标所在位置。<br/>返回undefined时表示controller未与组件绑定。 |
+| int \| undefined | 当前光标所在位置。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## getCaretRect
 
@@ -94,7 +94,7 @@ getCaretRect(): RectResult | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) | 当前光标与RichEditor的相对位置。 |
+| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) \| undefined | 当前光标与RichEditor的相对位置。 |
 
 ## getLayoutManager
 
@@ -118,7 +118,7 @@ getLayoutManager(): LayoutManager | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | 布局管理器对象。<br/>返回undefined时表示controller未与组件绑定。 |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined | 布局管理器对象。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## getPreviewText
 
@@ -142,7 +142,7 @@ getPreviewText(): PreviewText | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | 预上屏信息。<br/>返回undefined时表示controller未与组件绑定。 |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) \| undefined | 预上屏信息。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## getTypingStyle
 
@@ -166,7 +166,7 @@ getTypingStyle(): RichEditorTextStyle | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) | 用户预设样式。<br/>返回undefined时表示controller未与组件绑定。 |
+| [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) \| undefined | 用户预设样式。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## isEditing
 
@@ -190,7 +190,7 @@ isEditing(): boolean | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true为编辑态，false为非编辑态。<br/>返回undefined时表示controller未与组件绑定。 |
+| boolean \| undefined | true为编辑态，false为非编辑态。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## scrollToVisible
 
@@ -242,7 +242,7 @@ setCaretOffset(offset: int): boolean | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 光标是否设置成功。<br/>true表示光标位置设置成功，false表示未成功。<br/>返回undefined时表示controller未与组件绑定。 |
+| boolean \| undefined | 光标是否设置成功。<br/>true表示光标位置设置成功，false表示未成功。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## setSelection
 

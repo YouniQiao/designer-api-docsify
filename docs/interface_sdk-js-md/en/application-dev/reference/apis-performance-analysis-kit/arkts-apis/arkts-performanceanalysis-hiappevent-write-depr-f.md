@@ -82,7 +82,7 @@ Writes event information to the event file of the current day. This API uses an 
 | eventName | string | Yes | Application event name. |
 | eventType | EventType | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. |
 
 **Examples**
 

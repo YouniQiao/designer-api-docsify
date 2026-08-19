@@ -31,5 +31,3 @@ Determines whether the given value inherits from this function if this function 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

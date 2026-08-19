@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithDataSource
@@ -33,7 +34,7 @@ function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSou
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | 返回MediaSource，用于媒体资源设置。 |
 
 **示例**
 

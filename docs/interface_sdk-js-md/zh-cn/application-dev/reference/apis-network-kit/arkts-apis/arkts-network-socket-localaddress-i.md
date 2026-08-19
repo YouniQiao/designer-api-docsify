@@ -11,6 +11,7 @@ LocalSocket本地套接字文件路径信息，在传入套接字路径进行绑
 ## 导入模块
 
 ```TypeScript
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

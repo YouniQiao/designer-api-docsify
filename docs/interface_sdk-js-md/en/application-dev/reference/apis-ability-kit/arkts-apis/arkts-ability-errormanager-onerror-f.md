@@ -6,7 +6,7 @@
 import { errorManager } from '@kit.AbilityKit';
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 function on(type: 'error', observer: ErrorObserver): number

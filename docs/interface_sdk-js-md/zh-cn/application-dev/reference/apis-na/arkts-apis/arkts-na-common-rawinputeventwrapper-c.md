@@ -32,7 +32,7 @@ Attempts to get the keyboard event. Returns the event object if it is a keyboard
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyEvent](arkts-na-common-keyevent-i.md) | The keyboard event object or null. |
+| [KeyEvent](arkts-na-common-keyevent-i.md) \| null | The keyboard event object or null. |
 
 ## asMouseEvent
 
@@ -56,7 +56,7 @@ Attempts to get the mouse event. Returns the event object if it is a mouse event
 
 | 类型 | 说明 |
 | --- | --- |
-| [MouseEvent](arkts-na-common-mouseevent-i.md) | The mouse event object or null. |
+| [MouseEvent](arkts-na-common-mouseevent-i.md) \| null | The mouse event object or null. |
 
 ## asTouchEvent
 
@@ -80,7 +80,7 @@ Attempts to get the touch event. Returns the event object if it is a touch event
 
 | 类型 | 说明 |
 | --- | --- |
-| [TouchEvent](arkts-na-common-touchevent-i.md) | The touch event object or null. |
+| [TouchEvent](arkts-na-common-touchevent-i.md) \| null | The touch event object or null. |
 
 ## isKeyEvent
 

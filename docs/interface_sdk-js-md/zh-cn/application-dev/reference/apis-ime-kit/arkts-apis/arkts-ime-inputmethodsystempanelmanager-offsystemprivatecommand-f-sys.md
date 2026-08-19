@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## offSystemPrivateCommand
@@ -27,7 +28,7 @@ function offSystemPrivateCommand(callback?: Callback<Record<string, CommandDataT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 当输入法应用发送私有数据命令时触发的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | 否 | 当输入法应用发送私有数据命令时触发的回调。 |
 
 **错误码：**
 

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<RatingAttribute> | AttributeModifi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -58,8 +56,6 @@ contentModifier(modifier: ContentModifier<RatingConfiguration> | undefined): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -82,8 +78,6 @@ onChange(callback: OnRatingChangeCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setRatingOptions
 
 ```TypeScript
@@ -106,8 +100,6 @@ setRatingOptions(options?: RatingOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## starStyle
 
 ```TypeScript
@@ -130,8 +122,6 @@ starStyle(options: StarStyleOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stars
 
 ```TypeScript
@@ -154,8 +144,6 @@ stars(value: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stepSize
 
 ```TypeScript
@@ -178,8 +166,6 @@ stepSize(value: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

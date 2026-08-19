@@ -34,7 +34,7 @@ Called when a connection is set up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application bundle name, browser extension source URL, and extension process ID. |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application bundle name, browser extension source URL, and extension process ID. |
 
 **Examples**
 
@@ -101,7 +101,7 @@ Called when a connection is interrupted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application package name, browser extension source URL, and extension process ID. |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application package name, browser extension source URL, and extension process ID. |
 
 **Examples**
 
@@ -168,7 +168,7 @@ Called when the connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [NmErrorCode](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | Error code. |
+| code | [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | Error code. |
 | errMsg | string | Yes | Error message. |
 
 **Examples**

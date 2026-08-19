@@ -36,7 +36,7 @@ constructor(uiContext: UIContext, builder: CustomBuilder, options?: BuildOptions
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 用于创建 ReactiveComponentContent 的 UIContext对象 |
 | builder | CustomBuilder | 是 | 将被调用来构建 ReactiveComponentContent 的builder。 |
-| options | [BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md) | 否 | 构建时要使用的选项。 |
+| options | [BuildOptions](arkts-na-buildernode-buildoptions-i.md) | 否 | 构建时要使用的选项。 |
 
 ## dispose
 

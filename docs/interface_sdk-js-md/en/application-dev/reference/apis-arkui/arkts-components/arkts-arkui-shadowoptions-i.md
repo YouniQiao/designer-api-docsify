@@ -61,7 +61,7 @@ Whether to fill the inside of the component with shadow. **true**: Fill the insi
 offsetX?: number | Resource
 ```
 
-Offset of the shadow along the x-axis. Default value: **0** Unit: px **NOTE：**To use a value in the unit of vp, you can use [vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px) to convert the value. If **offsetX** is of the Resource type, its value must be of the number type.
+Offset of the shadow along the x-axis. Default value: **0** Unit: px **NOTE：**To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value. If **offsetX** is of the Resource type, its value must be of the number type.
 
 **Type:** number \| Resource
 
@@ -81,7 +81,7 @@ Offset of the shadow along the x-axis. Default value: **0** Unit: px **NOTE：**
 offsetY?: number | Resource
 ```
 
-Offset of the shadow along the y-axis. Default value: **0** Unit: px **NOTE：**To use a value in the unit of vp, you can use [vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px) to convert the value. If **offsetY** is of the Resource type, its value must be of the number type.
+Offset of the shadow along the y-axis. Default value: **0** Unit: px **NOTE：**To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value. If **offsetY** is of the Resource type, its value must be of the number type.
 
 **Type:** number \| Resource
 
@@ -101,7 +101,7 @@ Offset of the shadow along the y-axis. Default value: **0** Unit: px **NOTE：**
 radius: number | Resource
 ```
 
-Blur radius of the shadow. Value range: [0, +∞) Unit: px **NOTE：**A value less than 0 evaluates to the value **0**. To use a value in the unit of vp, you can use [vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px) to convert the value. If **radius** is of the Resource type, its value must be of the number type.
+Blur radius of the shadow. Value range: [0, +∞) Unit: px **NOTE：**A value less than 0 evaluates to the value **0**. To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value. If **radius** is of the Resource type, its value must be of the number type.
 
 **Type:** number \| Resource
 

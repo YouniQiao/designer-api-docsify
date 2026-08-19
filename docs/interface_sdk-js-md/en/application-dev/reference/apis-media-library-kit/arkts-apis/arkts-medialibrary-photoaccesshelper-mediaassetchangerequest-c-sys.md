@@ -22,7 +22,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, proxy: PhotoProxy): void
 ```
 
-Adds resources using **PhotoProxy** data. > **NOTE：**> > For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
+Adds resources using **PhotoProxy** data. &gt; **NOTE：**&gt; &gt; For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
 **Since:** 23
 
@@ -195,7 +195,7 @@ Creates an asset change request with the specified file name.
 
 | Type | Description |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | Returns a MediaAssetChangeRequest instance. if the operation fails, returns null |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) \| null | Returns a MediaAssetChangeRequest instance. if the operation fails, returns null |
 
 **Error codes:**
 
@@ -212,7 +212,7 @@ Creates an asset change request with the specified file name.
 static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result. > **NOTE：**> > - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be > permanently deleted. The deleted assets are not stored in the recycle bin. > > - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this > operation.
+Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be &gt; permanently deleted. The deleted assets are not stored in the recycle bin. &gt; &gt; - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 24
 
@@ -268,7 +268,7 @@ async function example(context: Context, assetUri: string) {
 static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes cloud media assets to the trash in batches. This API uses a promise to return the result. > **NOTE：**> > - If the assets are only on the local device, no changes are made. > > - If the assets are only in the cloud, they are moved directly to the trash. > > - If the assets are on both the local device and the cloud, after deletion, they only remain on the local > device, and the cloud copies are moved in the trash.
+Deletes cloud media assets to the trash in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If the assets are only on the local device, no changes are made. &gt; &gt; - If the assets are only in the cloud, they are moved directly to the trash. &gt; &gt; - If the assets are on both the local device and the cloud, after deletion, they only remain on the local &gt; device, and the cloud copies are moved in the trash.
 
 **Since:** 26.0.0
 
@@ -321,7 +321,7 @@ async function example(context: Context, assetUri: string) {
 static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>
 ```
 
-Permanently deletes images or videos in batches. This API uses a promise to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Permanently deletes images or videos in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 23
 
@@ -384,7 +384,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>
 ```
 
-Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 23
 
@@ -424,7 +424,7 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes local media assets to the trash in batches. This API uses a promise to return the result. > **NOTE：**> > - If the assets are only on the local device, they are moved directly to the trash. > > - If the assets are only in the cloud, no changes are made. > > - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and > the local copies are moved in the trash.
+Deletes local media assets to the trash in batches. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - If the assets are only on the local device, they are moved directly to the trash. &gt; &gt; - If the assets are only in the cloud, no changes are made. &gt; &gt; - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and &gt; the local copies are moved in the trash.
 
 **Since:** 26.0.0
 

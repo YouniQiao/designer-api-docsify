@@ -44,7 +44,7 @@ Use snapshot when Effect Component have no visual effect.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i.md) |  |
 
 **Error codes:**
 

@@ -29,7 +29,7 @@ Sets the screen to mirror mode. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | mainScreen | long | Yes | ID of the primary screen. The ID must be a non-negative integer. |
 | mirrorScreen | Array&lt;long&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the group ID of the secondary screens, where the ID is a positive integer. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the group ID of the secondary screens, where the ID is a positive integer. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # OverlayManager
 
-提供绘制浮层的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > - 以下API需先使用UIContext中的[getOverlayManager()](arkts-na-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到 > OverlayManager对象，再通过该对象调用对应方法。 > > - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。 > > - OverlayManager上节点安全区域内外的绘制方式与Page一致，键盘避让方式与Page一致。 > > - 与OverlayManager相关的属性推荐采用AppStorage来进行应用全局存储，以免切换页面后属性值发生变化从而导致业务错误。
+提供绘制浮层的能力。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; - 以下API需先使用UIContext中的[getOverlayManager()](arkts-na-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到 &gt; OverlayManager对象，再通过该对象调用对应方法。 &gt; &gt; - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。 &gt; &gt; - OverlayManager上节点安全区域内外的绘制方式与Page一致，键盘避让方式与Page一致。 &gt; &gt; - 与OverlayManager相关的属性推荐采用AppStorage来进行应用全局存储，以免切换页面后属性值发生变化从而导致业务错误。
 
 **起始版本：** 23
 
@@ -63,7 +63,7 @@ addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: Level
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 <br>**说明：** <br/> 新增的节点默认处于页面居中位置，按层级堆叠。 |
-| levelOrder | [LevelOrder](arkts-na-promptaction-levelorder-c.md) | 否 |  |
+| levelOrder | [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) | 否 |  |
 
 ## hideAllComponentContents
 

@@ -39,7 +39,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
-| options | [SymbolDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
+| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
 
 **Error codes:**
 
@@ -229,5 +229,5 @@ Obtains the options for creating a SymbolDateTimeFormat object. This will allow 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-resolvedsymboldatetimeformatoptions-i.md) | Symbol options for SymbolDateTimeFormat. |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | Symbol options for SymbolDateTimeFormat. |
 

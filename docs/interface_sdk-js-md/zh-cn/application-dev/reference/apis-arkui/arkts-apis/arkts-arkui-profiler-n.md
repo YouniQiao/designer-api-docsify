@@ -13,6 +13,7 @@ inspector的性能分析（Profiler）工具。
 ## 导入模块
 
 ```TypeScript
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## 汇总

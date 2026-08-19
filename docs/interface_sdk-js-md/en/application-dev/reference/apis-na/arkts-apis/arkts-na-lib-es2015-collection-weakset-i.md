@@ -31,8 +31,6 @@ Appends a new object to the end of the WeakSet.
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## delete
 
 ```TypeScript
@@ -55,8 +53,6 @@ Removes the specified element from the WeakSet.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## has
 
 ```TypeScript
@@ -77,5 +73,3 @@ has(value: T): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

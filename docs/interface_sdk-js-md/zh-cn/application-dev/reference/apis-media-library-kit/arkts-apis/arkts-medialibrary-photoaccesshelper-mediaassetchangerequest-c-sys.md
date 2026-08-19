@@ -1,6 +1,6 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 资产变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 资产变更请求。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
@@ -13,6 +13,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addResource
@@ -21,7 +22,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 addResource(type: ResourceType, proxy: PhotoProxy): void
 ```
 
-通过PhotoProxy数据添加资源。 > **注意：** > > 对于同一个资产变更请求，不支持在成功添加资源后，重复调用该接口。
+通过PhotoProxy数据添加资源。 &gt; **注意：** &gt; &gt; 对于同一个资产变更请求，不支持在成功添加资源后，重复调用该接口。
 
 **起始版本：** 23
 
@@ -194,7 +195,7 @@ static createAssetRequest(context: Context, displayName: string, options?: Photo
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | Returns a MediaAssetChangeRequest instance. if the operation fails, returns null |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) \| null | Returns a MediaAssetChangeRequest instance. if the operation fails, returns null |
 
 **错误码：**
 
@@ -211,7 +212,7 @@ static createAssetRequest(context: Context, displayName: string, options?: Photo
 static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-通过资产URI批量彻底删除照片或视频，不经过回收站。使用promise异步回调。 > **说明：** > > - 对仅存在于本端设备的资产、仅存在于云端的资产、存在于本端设备和云端的资产，均可以彻底删除，不经过回收站。 > > - 此操作不可逆。执行此操作后文件资源将被彻底删除，请谨慎操作。
+通过资产URI批量彻底删除照片或视频，不经过回收站。使用promise异步回调。 &gt; **说明：** &gt; &gt; - 对仅存在于本端设备的资产、仅存在于云端的资产、存在于本端设备和云端的资产，均可以彻底删除，不经过回收站。 &gt; &gt; - 此操作不可逆。执行此操作后文件资源将被彻底删除，请谨慎操作。
 
 **起始版本：** 24
 
@@ -267,7 +268,7 @@ async function example(context: Context, assetUri: string) {
 static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-批量删除云端状态的媒体资产（照片或视频）到回收站。使用promise异步回调。 > **说明：** > > - 对仅存在于本端设备的资产，不做任何处理。 > > - 对仅存在于云端的资产，直接删除到回收站。 > > - 对存在于本端设备和云端的资产，删除后变化为本地资产，云端资产进入回收站。
+批量删除云端状态的媒体资产（照片或视频）到回收站。使用promise异步回调。 &gt; **说明：** &gt; &gt; - 对仅存在于本端设备的资产，不做任何处理。 &gt; &gt; - 对仅存在于云端的资产，直接删除到回收站。 &gt; &gt; - 对存在于本端设备和云端的资产，删除后变化为本地资产，云端资产进入回收站。
 
 **起始版本：** 26.0.0
 
@@ -320,7 +321,7 @@ async function example(context: Context, assetUri: string) {
 static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>
 ```
 
-批量彻底删除照片或者视频。使用Promise异步回调。 > **注意：** > > 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
+批量彻底删除照片或者视频。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
 **起始版本：** 23
 
@@ -383,7 +384,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>
 ```
 
-通过资产Uri批量彻底删除照片或者视频。使用promise异步回调。 > **注意：** > > 此操作不可逆，执行此操作后文件资源将被彻底删除，请谨慎操作。
+通过资产Uri批量彻底删除照片或者视频。使用promise异步回调。 &gt; **注意：** &gt; &gt; 此操作不可逆，执行此操作后文件资源将被彻底删除，请谨慎操作。
 
 **起始版本：** 23
 
@@ -423,7 +424,7 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-批量删除本地状态的媒体资产（照片或视频）到回收站。使用promise异步回调。 > **说明：** > > - 对仅存在于本端设备的资产，直接删除到回收站。 > > - 对仅存在于云端的资产，不做任何处理。 > > - 对存在于本端设备和云端的资产，删除后变化为云端资产，本地资产进入回收站。
+批量删除本地状态的媒体资产（照片或视频）到回收站。使用promise异步回调。 &gt; **说明：** &gt; &gt; - 对仅存在于本端设备的资产，直接删除到回收站。 &gt; &gt; - 对仅存在于云端的资产，不做任何处理。 &gt; &gt; - 对存在于本端设备和云端的资产，删除后变化为云端资产，本地资产进入回收站。
 
 **起始版本：** 26.0.0
 

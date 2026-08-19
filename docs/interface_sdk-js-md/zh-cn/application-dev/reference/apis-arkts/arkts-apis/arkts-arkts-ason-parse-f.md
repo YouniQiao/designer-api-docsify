@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## parse
@@ -33,5 +34,5 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 
 | 类型 | 说明 |
 | --- | --- |
-| ISendable | 返回ISendable数据或null。入参为null时，返回null。 |
+| ISendable \| null | 返回ISendable数据或null。入参为null时，返回null。 |
 

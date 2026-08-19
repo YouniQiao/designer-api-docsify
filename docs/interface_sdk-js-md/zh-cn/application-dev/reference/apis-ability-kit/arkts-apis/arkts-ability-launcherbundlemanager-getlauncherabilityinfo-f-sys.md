@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfo
@@ -29,7 +30,7 @@ function getLauncherAbilityInfo(bundleName: string, userId: int, callback: Async
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | userId | int | 是 | 被查询的用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)。当函数调用成功，err为 undefined，data为bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)信息。 否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)。当函数调用成功，err为 undefined，data为bundle包含的[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)信息。 否则为错误对象。 |
 
 **错误码：**
 

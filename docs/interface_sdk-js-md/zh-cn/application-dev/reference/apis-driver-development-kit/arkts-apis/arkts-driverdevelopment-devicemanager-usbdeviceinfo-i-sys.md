@@ -15,6 +15,7 @@ USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemana
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## interfaceDescList

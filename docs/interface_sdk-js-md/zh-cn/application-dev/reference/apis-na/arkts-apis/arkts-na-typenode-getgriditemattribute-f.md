@@ -28,5 +28,5 @@ export function getGridItemAttribute(node: FrameNode): GridItemAttribute | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| GridItemAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| GridItemAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

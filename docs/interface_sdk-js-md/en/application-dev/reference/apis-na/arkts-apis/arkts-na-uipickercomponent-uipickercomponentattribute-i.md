@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<UIPickerComponentAttribute> | Attr
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## canLoop
 
 ```TypeScript
@@ -58,8 +56,6 @@ canLoop(isLoop: boolean | undefined): UIPickerComponentAttribute
 
 | Type | Description |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## displayedItemCount
 
 ```TypeScript
@@ -82,8 +78,6 @@ displayedItemCount(count: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableHapticFeedback
 
 ```TypeScript
@@ -106,8 +100,6 @@ enableHapticFeedback(enable: boolean | undefined): UIPickerComponentAttribute
 
 | Type | Description |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## itemHeight
 
 ```TypeScript
@@ -130,8 +122,6 @@ itemHeight(height: LengthMetrics | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -154,8 +144,6 @@ onChange(callback: OnUIPickerComponentCallback | undefined): UIPickerComponentAt
 
 | Type | Description |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## onScrollStop
 
 ```TypeScript
@@ -178,8 +166,6 @@ onScrollStop(callback: OnUIPickerComponentCallback | undefined): UIPickerCompone
 
 | Type | Description |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## selectionIndicator
 
 ```TypeScript
@@ -202,8 +188,6 @@ selectionIndicator(style: PickerIndicatorStyle | undefined): UIPickerComponentAt
 
 | Type | Description |
 | --- | --- |
-| [UIPickerComponentAttribute](arkts-na-uipickercomponent-uipickercomponentattribute-i.md) |  |
-
 ## setUIPickerComponentOptions
 
 ```TypeScript
@@ -226,8 +210,6 @@ setUIPickerComponentOptions(options?: UIPickerComponentOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

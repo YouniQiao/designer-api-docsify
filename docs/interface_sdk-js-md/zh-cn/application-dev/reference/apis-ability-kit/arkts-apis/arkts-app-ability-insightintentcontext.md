@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## 汇总

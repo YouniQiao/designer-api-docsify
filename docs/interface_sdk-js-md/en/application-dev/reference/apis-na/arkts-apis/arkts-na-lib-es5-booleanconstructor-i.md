@@ -29,8 +29,6 @@ new(value?: any): Boolean
 
 | Type | Description |
 | --- | --- |
-| Boolean |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new(value?: any): Boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## prototype
 
 ```TypeScript

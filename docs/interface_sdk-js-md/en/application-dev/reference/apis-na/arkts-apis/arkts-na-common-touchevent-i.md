@@ -34,7 +34,7 @@ Obtains all historical points of the current frame.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[HistoricalPoint](arkts-na-common-historicalpoint-i.md)&gt; | return all historical points. Undefined will be returned if the internal runtime environment is broken. |
+| Array&lt;[HistoricalPoint](arkts-na-common-historicalpoint-i.md)&gt; \| undefined | return all historical points. Undefined will be returned if the internal runtime environment is broken. |
 
 ## preventDefault
 

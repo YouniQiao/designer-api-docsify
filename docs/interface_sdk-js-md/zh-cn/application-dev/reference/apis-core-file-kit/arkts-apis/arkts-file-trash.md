@@ -1,6 +1,6 @@
 # @ohos.file.trash
 
-该模块提供可以查询、还原或彻底删除最近删除（回收站）里的文件/文件夹的能力。当前仅支持本地文件目录。 应用可通过FileAccess的删除操作将文件/文件夹移动到回收站， 具体可参考[@ohos.file.fileAccess](arkts-file-fileaccess.md)。 > **说明：** > > - 当前只支持FilePicker、文件管理器调用。 > - 本模块为系统接口。 > - 当前只支持文件管理器调用。 > - 本模块接口从API version 23开始废弃。不建议使用以下接口。
+该模块提供可以查询、还原或彻底删除最近删除（回收站）里的文件/文件夹的能力。当前仅支持本地文件目录。 应用可通过FileAccess的删除操作将文件/文件夹移动到回收站， 具体可参考[@ohos.file.fileAccess](arkts-file-fileaccess.md)。 &gt; **说明：** &gt; &gt; - 当前只支持FilePicker、文件管理器调用。 &gt; - 本模块为系统接口。 &gt; - 当前只支持文件管理器调用。 &gt; - 本模块接口从API version 23开始废弃。不建议使用以下接口。
 
 **起始版本：** 10
 
@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## 汇总

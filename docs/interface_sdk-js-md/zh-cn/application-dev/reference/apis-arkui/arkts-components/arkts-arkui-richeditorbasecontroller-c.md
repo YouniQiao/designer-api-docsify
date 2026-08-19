@@ -97,7 +97,7 @@ getCaretRect(): RectResult | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| RectResult | 当前光标与RichEditor的相对位置。 |
+| RectResult \| undefined | 当前光标与RichEditor的相对位置。 |
 
 ## getLayoutManager
 

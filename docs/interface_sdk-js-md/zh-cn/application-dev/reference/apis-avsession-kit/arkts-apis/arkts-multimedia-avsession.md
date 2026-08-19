@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## 汇总
@@ -62,15 +63,15 @@
 | [offDistributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) | Unregister distributed session changed callback |
 | [offSessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | Unregister Session service death callback, notifying the application to clean up resources. |
 | [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) | 取消注册通用事件回调监听 |
-| off_deviceAvailable | 取消设备发现回调的监听。 |
-| off_deviceLogEvent | 取消监听日志事件的回调。 |
-| off_deviceOffline | 取消设备下线回调的监听。 |
-| off_deviceStateChanged | 取消投播设备连接状态的监听。 |
-| off_distributedSessionChange | 取消最新分布式远端会话变更的监听事件，取消后，不再进行该事件的监听。 |
-| [off_sessionCreate](arkts-avsession-avsession-offsessioncreate-f-sys.md#off_sessioncreatesessioncreate) | 注销会话创建事件监听。注销后，不再接收该事件。 |
-| [off_sessionDestroy](arkts-avsession-avsession-offsessiondestroy-f-sys.md#off_sessiondestroysessiondestroy) | 注销会话销毁事件监听。注销后，不再监听该事件。 |
-| off_sessionServiceDie | 取消会话服务死亡监听，取消后，不再进行服务死亡监听。 |
-| [off_topSessionChange](arkts-avsession-avsession-offtopsessionchange-f-sys.md#off_topsessionchangetopsessionchange) | 注销最新播放会话变更事件监听。注销后，不再进行该事件的监听。 |
+| [off_deviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md) | 取消设备发现回调的监听。 |
+| [off_deviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md) | 取消监听日志事件的回调。 |
+| [off_deviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md) | 取消设备下线回调的监听。 |
+| [off_deviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md) | 取消投播设备连接状态的监听。 |
+| [off_distributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) | 取消最新分布式远端会话变更的监听事件，取消后，不再进行该事件的监听。 |
+| [off_sessionCreate](arkts-avsession-avsession-offsessioncreate-f-sys.md#offsessioncreate) | 注销会话创建事件监听。注销后，不再接收该事件。 |
+| [off_sessionDestroy](arkts-avsession-avsession-offsessiondestroy-f-sys.md#offsessiondestroy) | 注销会话销毁事件监听。注销后，不再监听该事件。 |
+| [off_sessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | 取消会话服务死亡监听，取消后，不再进行服务死亡监听。 |
+| [off_topSessionChange](arkts-avsession-avsession-offtopsessionchange-f-sys.md#offtopsessionchange) | 注销最新播放会话变更事件监听。注销后，不再进行该事件的监听。 |
 | [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) | 允许在系统控制入口显示的会话变更的监听事件。使用callback异步回调。 |
 | [onAudioZoneSessionChange](arkts-avsession-avsession-onaudiozonesessionchange-f-sys.md) | 注册音区会话变化回调 |
 | [onDeviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | Register device discovery callback |
@@ -80,15 +81,15 @@
 | [onDistributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) | Register distributed session changed callback |
 | [onSessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | Register Session service death callback, notifying the application to clean up resources. |
 | [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) | 监听系统通用事件命令回调 |
-| on_deviceAvailable | 设备发现回调监听。 |
-| on_deviceLogEvent | 监听日志事件的回调。 |
-| on_deviceOffline | 设备下线回调监听。 |
-| on_deviceStateChanged | 投播设备连接状态的回调函数。 |
-| on_distributedSessionChange | 最新分布式远端会话变更的监听事件。 |
-| [on_sessionCreate](arkts-avsession-avsession-onsessioncreate-f-sys.md#on_sessioncreatesessioncreate) | 会话的创建事件监听。 使用callback异步回调。 |
-| [on_sessionDestroy](arkts-avsession-avsession-onsessiondestroy-f-sys.md#on_sessiondestroysessiondestroy) | 会话的销毁事件监听。使用callback异步回调。 |
-| on_sessionServiceDie | 监听会话的服务死亡事件。通知应用清理资源。 |
-| [on_topSessionChange](arkts-avsession-avsession-ontopsessionchange-f-sys.md#on_topsessionchangetopsessionchange) | 最新播放会话变更的事件监听。使用callback异步回调。 |
+| [on_deviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | 设备发现回调监听。 |
+| [on_deviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) | 监听日志事件的回调。 |
+| [on_deviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md) | 设备下线回调监听。 |
+| [on_deviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md) | 投播设备连接状态的回调函数。 |
+| [on_distributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) | 最新分布式远端会话变更的监听事件。 |
+| [on_sessionCreate](arkts-avsession-avsession-onsessioncreate-f-sys.md#onsessioncreate) | 会话的创建事件监听。 使用callback异步回调。 |
+| [on_sessionDestroy](arkts-avsession-avsession-onsessiondestroy-f-sys.md#onsessiondestroy) | 会话的销毁事件监听。使用callback异步回调。 |
+| [on_sessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | 监听会话的服务死亡事件。通知应用清理资源。 |
+| [on_topSessionChange](arkts-avsession-avsession-ontopsessionchange-f-sys.md#ontopsessionchange) | 最新播放会话变更的事件监听。使用callback异步回调。 |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | 发送按键事件给置顶会话。结果通过callback异步回调方式返回。 |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | 发送按键事件给置顶会话。结果通过Promise异步回调方式返回。 |
 | [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md) | 发送通用事件命令 |

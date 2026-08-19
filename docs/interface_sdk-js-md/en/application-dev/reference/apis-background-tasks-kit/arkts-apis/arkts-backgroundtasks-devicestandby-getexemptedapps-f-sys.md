@@ -29,7 +29,7 @@ Returns the information about the specified exempted application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resourceTypes | int | Yes | the combination of [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) values. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | Yes | the callback of getExemptedApps. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md)&gt;&gt; | Yes | the callback of getExemptedApps. |
 
 **Error codes:**
 

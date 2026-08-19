@@ -35,7 +35,7 @@ Listen on component event once, additional listening options can be set.
 | --- | --- | --- | --- |
 | componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes | Component event type to be listened on. |
 | options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Yes | Additional listening options of component event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ Listen for dialog show once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Listen for toast show once
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
@@ -116,7 +116,7 @@ Listen on window change once, additional listening options can be set.
 | --- | --- | --- | --- |
 | windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes | Window change type to be listened on. |
 | options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Yes | Additional listening options of window change. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | function, returns the monitored UIElementInfo. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Starts listening for component operation events of the specified type with exten
 | type | 'componentEventOccur' | Yes | Type of the event to subscribe to, which can be **componentEventOccur**. This event is triggered when the component operation is detected. |
 | componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes | Type of the component operation event. |
 | options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Yes | Extended configuration, including the listening timeout interval and the matching condition of the component to be listened for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -207,7 +207,7 @@ Subscribes to events of the dialog component. This API uses a callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dialogShow' | Yes | Event type. The value is fixed at **'dialogShow'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -254,7 +254,7 @@ Subscribes to events of the toast component. This API uses a callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toastShow' | Yes | Event type. The value is fixed at **'toastShow'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -303,7 +303,7 @@ Starts listening for window change events of the specified type with extended co
 | type | 'windowChange' | Yes | Type of the event to subscribe to, which can be **windowChange**. This event is triggered when the window changes. |
 | windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes | Type of the window change event. |
 | options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Yes | Extended configuration, including the listening timeout interval and the bundle name of the window to be listened for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback triggered to return event information when an event occurs. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes | Callback triggered to return event information when an event occurs. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # RectUtils
 
-This module provides tools for processing rectangles. Use scenarios: 1. Quickly create rectangles and get their basic features, like making a new rectangle, copying one, and obtaining its width, height, and center point. 2. Calculate and adjust boundaries, such as obtaining the inclusion relationship, calculating and updating intersections and unions between rectangles, and updating boundary values. > **NOTE：**> > - The initial APIs of this class are supported since API version 20. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+This module provides tools for processing rectangles. Use scenarios: 1. Quickly create rectangles and get their basic features, like making a new rectangle, copying one, and obtaining its width, height, and center point. 2. Calculate and adjust boundaries, such as obtaining the inclusion relationship, calculating and updating intersections and unions between rectangles, and updating boundary values. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 20. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -384,7 +384,7 @@ Makes a deep copy of a 2D rectangular object.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Returns an Rect object has the same boundary coordinates with the source. |
+| common2D.Rect \| undefined | Returns an Rect object has the same boundary coordinates with the source. |
 
 ## makeEmpty
 
@@ -424,7 +424,7 @@ Makes an uninitialized 2D rectangular object with zero dimensions and origin at 
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Returns an empty Rect object with all coordinates (left, top, right, bottom) set to 0. |
+| common2D.Rect \| undefined | Returns an empty Rect object with all coordinates (left, top, right, bottom) set to 0. |
 
 ## makeLtrb
 
@@ -482,7 +482,7 @@ Makes a 2D rectangular object from boundary coordinates.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Returns an Rect object with the specific coordinates (left, top, right, bottom). |
+| common2D.Rect \| undefined | Returns an Rect object with the specific coordinates (left, top, right, bottom). |
 
 ## offset
 

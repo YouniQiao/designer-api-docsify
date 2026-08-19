@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVTranscoder
@@ -11,7 +12,7 @@
 function createAVTranscoder(): Promise<AVTranscoder>
 ```
 
-创建视频转码实例。使用Promise异步回调。 > **说明：** > > 可创建的视频转码实例不能超过2个。
+创建视频转码实例。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 可创建的视频转码实例不能超过2个。
 
 **起始版本：** 12
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## transformRotationMatrix
@@ -26,7 +27,7 @@ function transformRotationMatrix(inRotationVector: Array<double>, coordinates: C
 | --- | --- | --- | --- |
 | inRotationVector | Array&lt;double&gt; | 是 | 旋转矩阵。 |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 是 | 指定坐标系方向。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回映射后的旋转矩阵。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回映射后的旋转矩阵。 |
 
 **错误码：**
 

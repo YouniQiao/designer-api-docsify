@@ -1,6 +1,6 @@
 # Lattice
 
-矩形网格对象。该对象用于将图像按照矩形网格进行划分，支持固定指定网格区域、缩放其余网格实现局部拉伸、自定义网格绘制类型、网格颜色填充以及指定绘制边界矩形等能力。创建Lattice对象后，需配合 [Canvas.drawImageLattice](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagelattice)方法使用以实现图像的局部拉伸绘制。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+矩形网格对象。该对象用于将图像按照矩形网格进行划分，支持固定指定网格区域、缩放其余网格实现局部拉伸、自定义网格绘制类型、网格颜色填充以及指定绘制边界矩形等能力。创建Lattice对象后，需配合 [Canvas.drawImageLattice](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagelattice)方法使用以实现图像的局部拉伸绘制。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createImageLattice
@@ -83,7 +84,7 @@ static createImageLattice(xDivs: Array<int>, yDivs: Array<int>, fXCount: int, fY
 
 | 类型 | 说明 |
 | --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。创建失败时返回undefined。 |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -161,7 +162,7 @@ static createImageLatticeWithArrayInt(xDivs: Array<int>, yDivs: Array<int>, fXCo
 
 | 类型 | 说明 |
 | --- | --- |
-| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。创建失败时返回undefined。 |
+| [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) \| undefined | 返回创建的矩形网格对象，该对象可传入绘制接口以实现图像局部拉伸——固定网格保持原始大小、其余网格自适应缩放填充剩余空间。创建失败时返回undefined。 |
 
 **错误码：**
 

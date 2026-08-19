@@ -1,6 +1,6 @@
 # CmsGenerator
 
-Provides APIs for generating the messages in CMS format. > **NOTE：**> > PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7 > supports data types including data, signed data, enveloped data, signed and enveloped data, digested > data, and encrypted data. It is often used to protect data integrity and confidentiality.
+Provides APIs for generating the messages in CMS format. &gt; **NOTE：**&gt; &gt; PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7 &gt; supports data types including data, signed data, enveloped data, signed and enveloped data, digested &gt; data, and encrypted data. It is often used to protect data integrity and confidentiality.
 
 **Since:** 23
 
@@ -508,7 +508,7 @@ Obtains the CMS message, for example, the CMS signed data or CMS enveloped data.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | CMS message generated. |
+| Uint8Array \| string | CMS message generated. |
 
 **Error codes:**
 

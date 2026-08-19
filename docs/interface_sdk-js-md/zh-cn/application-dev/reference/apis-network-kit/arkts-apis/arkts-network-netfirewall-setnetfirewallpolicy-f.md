@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## setNetFirewallPolicy
@@ -11,7 +12,7 @@
 function setNetFirewallPolicy(userId: int, policy: NetFirewallPolicy): Promise<void>
 ```
 
-设置系统用户ID的防火墙策略，包含防火墙开关状态，默认的出站/入站行为（允许/阻止）。支持不同的系统用户ID配置不同的防火墙策略。使用Promise异步回调。 > **说明：** > > 同一系统用户下，多应用调用该接口下发策略，会以最新下发的策略为准。
+设置系统用户ID的防火墙策略，包含防火墙开关状态，默认的出站/入站行为（允许/阻止）。支持不同的系统用户ID配置不同的防火墙策略。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 同一系统用户下，多应用调用该接口下发策略，会以最新下发的策略为准。
 
 **起始版本：** 15
 

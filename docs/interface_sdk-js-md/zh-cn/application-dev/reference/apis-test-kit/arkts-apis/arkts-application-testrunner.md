@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { TestRunner } from '@kit.TestKit';
 ```
 
 ## 汇总

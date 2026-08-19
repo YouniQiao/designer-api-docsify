@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
 ## accessibilityDescription
@@ -81,7 +82,7 @@ accessibilityText?: ResourceStr
 action?: SubHeaderV2OperationItemAction
 ```
 
-选项操作事件回调，点击操作项时触发，用于执行自定义操作。默认值：() => void。
+选项操作事件回调，点击操作项时触发，用于执行自定义操作。默认值：() =&gt; void。
 
 **类型：** [SubHeaderV2OperationItemAction](arkts-arkui-subheaderv2operationitemaction-t.md)
 

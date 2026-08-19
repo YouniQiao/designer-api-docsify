@@ -29,8 +29,6 @@ new <K extends object = object, V = any>(entries?: readonly [K, V][] | null): We
 
 | Type | Description |
 | --- | --- |
-| WeakMap&lt;K, V&gt; |  |
-
 ## prototype
 
 ```TypeScript

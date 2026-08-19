@@ -158,7 +158,7 @@ Obtains the param of the specified NavDestination.
 
 | Type | Description |
 | --- | --- |
-| Object | Returns the detailed parameter of the NavDestination if it exists in the stack, otherwise returns undefined; |
+| Object \| null \| undefined | Returns the detailed parameter of the NavDestination if it exists in the stack, otherwise returns undefined; |
 
 ## getParamByName
 
@@ -212,7 +212,7 @@ Obtains the parent of the current stack.
 
 | Type | Description |
 | --- | --- |
-| [NavPathStack](arkts-na-navigation-navpathstack-c.md) | Returns the parent of the current stack. If no parent, it returns null. |
+| [NavPathStack](arkts-na-navigation-navpathstack-c.md) \| null | Returns the parent of the current stack. If no parent, it returns null. |
 
 ## getPathStack
 
@@ -322,7 +322,7 @@ Pops the top NavDestination out of the stack.
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](arkts-na-navigation-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| [NavPathInfo](arkts-na-navigation-navpathinfo-c.md) \| undefined | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## pop
 
@@ -353,7 +353,7 @@ Pops the top NavDestination out of the stack.
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](arkts-na-navigation-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| [NavPathInfo](arkts-na-navigation-navpathinfo-c.md) \| undefined | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## popToIndex
 

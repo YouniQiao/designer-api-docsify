@@ -11,6 +11,7 @@ This parameter specifies the selection result of a filtering dimension. The inde
 ## 导入模块
 
 ```TypeScript
+import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
 ## index

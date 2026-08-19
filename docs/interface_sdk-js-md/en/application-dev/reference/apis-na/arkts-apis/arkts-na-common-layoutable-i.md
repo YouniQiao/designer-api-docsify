@@ -32,7 +32,7 @@ Obtains the border width of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; | the borderWidth of sub component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
+| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; \| undefined | the borderWidth of sub component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## getMargin
 
@@ -56,7 +56,7 @@ Obtains the margin of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; | the margin of sub component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
+| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; \| undefined | the margin of sub component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## getPadding
 
@@ -80,7 +80,7 @@ Call this method to get the padding of sub component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; | Padding of the child component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
+| [DirectionalEdgesT](../../apis-arkui/arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;double&gt; \| undefined | Padding of the child component, unit is vp. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## layout
 

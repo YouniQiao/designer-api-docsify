@@ -1,6 +1,6 @@
 # SurfaceRect
 
-描述XComponent所持有的surface的矩形。 > **说明：** > 如果未调用[setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口，且未设置 > [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border)和 > padding，则**surfaceWidth**和**surfaceHeight**属性默认为**XComponent**的尺寸。 > > 请确保**surfaceWidth**和**surfaceHeight**的值不超过8192 px。超过此限制可能导致渲染问题。 > > 在沉浸式场景中，**SurfaceRect**的默认布局不包含安全区域。要实现沉浸式效果，必须使用 > [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口设置surface显示区域。
+描述XComponent所持有的surface的矩形。 &gt; **说明：** &gt; 如果未调用[setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口，且未设置 &gt; [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border)和 &gt; padding，则**surfaceWidth**和**surfaceHeight**属性默认为**XComponent**的尺寸。 &gt; &gt; 请确保**surfaceWidth**和**surfaceHeight**的值不超过8192 px。超过此限制可能导致渲染问题。 &gt; &gt; 在沉浸式场景中，**SurfaceRect**的默认布局不包含安全区域。要实现沉浸式效果，必须使用 &gt; [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)接口设置surface显示区域。
 
 **起始版本：** 12
 

@@ -1,6 +1,6 @@
 # ArcSlider
 
-The **ArcSlider** component is designed for circular screens on wearables to quickly adjust settings, such as the volume and brightness. > **NOTE：**
+The **ArcSlider** component is designed for circular screens on wearables to quickly adjust settings, such as the volume and brightness. &gt; **NOTE：**
 
 **Since:** 18
 

@@ -27,5 +27,3 @@ Evaluates JavaScript code and executes it.
 
 | Type | Description |
 | --- | --- |
-| any |  |
-

@@ -27,7 +27,7 @@ Subscribes to changes of specified attributes of a display.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayAttributeOption | Array&lt;string&gt; | Yes | Attribute names. Only attributes contained in [Display](arkts-arkui-display-display-i.md) are supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
 
 **Error codes:**
 

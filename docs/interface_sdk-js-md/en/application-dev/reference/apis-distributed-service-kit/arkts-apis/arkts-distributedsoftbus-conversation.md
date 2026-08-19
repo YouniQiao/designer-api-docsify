@@ -1,6 +1,6 @@
 # @ohos.distributedSoftBus.conversation(Cross-Device Wakeup and Message Transfer)
 
-The DSoftBus module **conversation** provides APIs for cross-device interaction of apps, including obtaining the trusted device list, and sending and receiving session data. With this module, your app can obtain trusted devices under the same account, register a listener to receive cross-device data, and send data to a specified device through a session channel. This module is applicable to scenarios that require cross-device collaboration and multi-device data transfer, simplifying the development of cross-device interaction. > **NOTE：**> > The APIs provided by this module are system APIs and can be used only in the stage model.
+The DSoftBus module **conversation** provides APIs for cross-device interaction of apps, including obtaining the trusted device list, and sending and receiving session data. With this module, your app can obtain trusted devices under the same account, register a listener to receive cross-device data, and send data to a specified device through a session channel. This module is applicable to scenarios that require cross-device collaboration and multi-device data transfer, simplifying the development of cross-device interaction. &gt; **NOTE：**&gt; &gt; The APIs provided by this module are system APIs and can be used only in the stage model.
 
 **Since:** 26.1.0
 

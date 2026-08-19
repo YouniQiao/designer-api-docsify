@@ -29,8 +29,6 @@ format(value: number): string
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## resolvedOptions
 
 ```TypeScript
@@ -45,5 +43,3 @@ resolvedOptions(): ResolvedNumberFormatOptions
 
 | Type | Description |
 | --- | --- |
-| ResolvedNumberFormatOptions |  |
-

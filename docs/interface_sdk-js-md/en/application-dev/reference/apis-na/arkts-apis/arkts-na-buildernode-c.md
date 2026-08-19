@@ -83,7 +83,7 @@ Build the BuilderNode with the builder. Support the type that WrappedBuilder con
 | --- | --- | --- | --- |
 | builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | Yes | Defines the builder that will be called to build the node. |
 | arg | T | Yes | Defines the args that will be used in the builder. |
-| options | [BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md) | Yes | Defines the options that will be used when building. |
+| options | [BuildOptions](arkts-na-buildernode-buildoptions-i.md) | Yes | Defines the options that will be used when building. |
 
 ## constructor
 
@@ -107,8 +107,8 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the BuilderNode |
-| options | [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md) | No | Render options of the Builder Node |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the BuilderNode |
+| options | [RenderOptions](arkts-na-buildernode-renderoptions-i.md) | No | Render options of the Builder Node |
 
 ## dispose
 
@@ -150,7 +150,7 @@ Get the FrameNode in BuilderNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode inside the BuilderNode, or null if not contained. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | Returns a FrameNode inside the BuilderNode, or null if not contained. |
 
 ## inheritFreezeOptions
 
@@ -222,7 +222,7 @@ Dispatches the input event to the FrameNode in the BuilderNode. postInputEvent d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | Yes | The event which will be sent. |
+| event | [InputEventType](arkts-na-inputeventtype-t.md) | Yes | The event which will be sent. |
 
 **Return value:**
 
@@ -252,7 +252,7 @@ Dispatch event to targetNode with competition strategy. postInputEventWithStrate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | Yes | The event which will be sent to the targetNode. |
+| event | [InputEventType](arkts-na-inputeventtype-t.md) | Yes | The event which will be sent to the targetNode. |
 | competitionStrategy | CompetitionStrategy | No | The competition strategy. |
 
 **Return value:**

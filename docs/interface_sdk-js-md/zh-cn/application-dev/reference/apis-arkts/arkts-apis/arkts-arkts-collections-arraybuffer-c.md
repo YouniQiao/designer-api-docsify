@@ -1,6 +1,6 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint8Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Int16Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint16Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Int32Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint32Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint8ClampedArray](../../apis-na/arkts-apis/arkts-collections.md)、 [Float32Array](../../apis-na/arkts-apis/arkts-collections.md)）的底层数据结构。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
+ArkTS TypedArray（[Int8Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint8Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Int16Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint16Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Int32Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint32Array](../../apis-na/arkts-apis/arkts-collections.md)、 [Uint8ClampedArray](../../apis-na/arkts-apis/arkts-collections.md)、 [Float32Array](../../apis-na/arkts-apis/arkts-collections.md)）的底层数据结构。 &gt; **说明：**&gt; &gt; - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@ ArkTS TypedArray（[Int8Array](../../apis-na/arkts-apis/arkts-collections.md)、
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -61,7 +62,7 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 是 | 开始索引。如果`begin &lt; 0`，则会从`begin + arrayBuffer.byteLength`位置开始。 如果`begin &lt; -arrayBuffer.byteLength`，则从0开始。默认值为0。 |
+| begin | number | 是 | 开始索引。如果`begin &lt; 0`，则会从`begin + arrayBuffer.byteLength`位置开始。 如果`begin &lt; -arrayBuffer.byteLength`，则从0开始。 |
 | end | number | 否 | 结束索引（不包括该元素）。如果`end &lt; 0`，则会到`end + arrayBuffer.byteLength`位置结束。 如果`end &gt; arrayBuffer.byteLength`，则截取到arrayBuffer.byteLength位置。默认为原ArkTS ArrayBuffer的长度。 |
 
 **返回值：**

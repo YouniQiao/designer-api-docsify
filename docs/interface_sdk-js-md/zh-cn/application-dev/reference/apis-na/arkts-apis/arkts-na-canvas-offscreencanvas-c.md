@@ -89,5 +89,5 @@ transferToImageBitmap(): ImageBitmap | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageBitmap](arkts-na-canvas-imagebitmap-c.md) | 创建的ImageBitmap对象。 |
+| [ImageBitmap](arkts-na-canvas-imagebitmap-c.md) \| undefined | 创建的ImageBitmap对象。 |
 

@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## 汇总
@@ -88,7 +90,7 @@
 | [ResultCode](arkts-userauthentication-userauth-resultcode-e.md) | 表示返回码的枚举。 |
 | [ReuseMode](arkts-userauthentication-userauth-reusemode-e.md) | 复用解锁认证结果的模式。该枚举定义了认证结果复用的四种模式，用于控制何种认证结果可以在何种条件下被复用。应用可根据业务场景选择合适的复用模式，以在安全性和用户体验之间取得平衡。 |
 | [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md) | 表示返回码的枚举。该枚举定义了用户认证操作可能返回的所有结果码，包括成功码和各类错误码。应用可根据返回码判断认证结果，并采取相应的处理措施。 |
-| [UserAuthTipCode](arkts-userauthentication-userauth-userauthtipcode-e.md) | 表示身份认证中间状态的枚举。该枚举用于描述认证过程中的各种中间状态，包括认证不通过、超时、冻结状态以及认证界面的加载和释放等。应用可通过 [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on_resultresult)接口订阅这些中间状态，以便在认证过程中提 供更精细的用户反馈和状态感知。 |
+| [UserAuthTipCode](arkts-userauthentication-userauth-userauthtipcode-e.md) | 表示身份认证中间状态的枚举。该枚举用于描述认证过程中的各种中间状态，包括认证不通过、超时、冻结状态以及认证界面的加载和释放等。应用可通过 [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#onresult)接口订阅这些中间状态，以便在认证过程中提 供更精细的用户反馈和状态感知。 |
 | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 表示身份认证的凭据类型枚举。该枚举定义了系统支持的认证类型，包括锁屏密码认证（PIN）、生物特征认证（人脸、指纹）等。应用在发起认证时需指定认证类型列表，用户可选择其中任意一种完成认证。不同认证类型具有不同的安全强度和用户体验特 点，应用应根据业务场景选择合适的认证类型。 |
 
 <!--Del-->

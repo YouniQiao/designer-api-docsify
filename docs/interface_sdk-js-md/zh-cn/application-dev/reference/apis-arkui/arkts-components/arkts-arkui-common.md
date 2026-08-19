@@ -124,7 +124,7 @@ Common()
 | [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) | 投影样式参数。 |
 | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | [nestedScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#nestedscroll11)属性参数对象。 |
 | [OverlayOffset](arkts-arkui-overlayoffset-i.md) | 设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [OverlayOptions](arkts-arkui-overlayoptions-i.md) | 浮层的定位。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 > > align和offset都设置时，效果重叠，浮层相对于组件方位定位后，再基于当前位置的左上角进行偏移。 |
+| [OverlayOptions](arkts-arkui-overlayoptions-i.md) | 浮层的定位。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 &gt; &gt; align和offset都设置时，效果重叠，浮层相对于组件方位定位后，再基于当前位置的左上角进行偏移。 |
 | [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
 | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Provide an interface for the text style of picker |
 | [PixelMapMock](arkts-arkui-pixelmapmock-i-sys.md) | 带有release函数的像素图对象。 |
@@ -140,7 +140,7 @@ Common()
 | [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | 配置自定义拖拽过程中的预览图样式。 |
 | [PreviewParams](arkts-arkui-previewparams-i.md) | Define Preview property |
 | [ProvideOptions](arkts-arkui-provideoptions-i.md) | ProvideOptions是\@Provide的选项。允许在同一组件树上通过allowOverride重写同名的\@Provide，适用于子组件需要覆盖父组件同名\@Provide值的场景，提高了跨层级状态管理的灵活性。具体例子可见 [\@Provide支持allowOverride参数](../../../ui/state-management/arkts-provide-and-consume.md#provide支持allowoverride参数)。 |
-| [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | 径向渐变参数。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | 径向渐变参数。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 &gt; |
 | [Rectangle](arkts-arkui-rectangle-i.md) | 矩形区域类型。 |
 | [RectResult](arkts-arkui-rectresult-i.md) | 位置和尺寸类型，用于描述组件的位置和宽高。 |
 | [ResponseRegion](arkts-arkui-responseregion-i.md) | 由输入工具类型、触摸位置和大小组成的触摸热区。 |
@@ -161,7 +161,7 @@ Common()
 | [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) | 三维空间中的空间角位置。 |
 | [SpringBackAction](arkts-arkui-springbackaction-i.md) | 控制半模态关闭前的回弹。 |
 | [StateStyles](arkts-arkui-statestyles-i.md) | 组件不同状态下的样式。 |
-| [SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md) | 角度渐变参数。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md) | 角度渐变参数。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 &gt; |
 | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | 系统自适应调节参数，系统会默认开启根据芯片算力进行自适应效果调节的能力。 |
 | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | Defines the span options of TextContentController. |
 | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | Defines the options of decoration. |

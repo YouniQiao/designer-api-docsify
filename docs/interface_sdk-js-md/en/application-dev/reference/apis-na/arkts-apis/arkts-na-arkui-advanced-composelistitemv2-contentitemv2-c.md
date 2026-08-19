@@ -37,7 +37,7 @@ The constructor of ContentItemV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ContentItemV2Options](arkts-na-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | No | The options of ContentItemV2 |
+| options | [ContentItemV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | No | The options of ContentItemV2 |
 
 ## description
 
@@ -90,7 +90,7 @@ Sets the icon.
 
 The type of icon.
 
-**Type:** [IconTypeV2](arkts-na-arkui-advanced-composelistitemv2-icontypev2-e.md)
+**Type:** [IconTypeV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **Since:** 26.0.0
 

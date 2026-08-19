@@ -11,6 +11,7 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## adjustPanelRect
@@ -383,7 +384,7 @@ hide(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板隐藏成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板隐藏成功，err为undefined，否则err为错误对象。 |
 
 **示例**
 
@@ -451,7 +452,7 @@ moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | x | int | 是 | 横轴方向移动的值，单位为px。该参数应为整数。值大于0表示右移，小于0表示左移。超出屏幕范围时返回错误码401。 |
 | y | int | 是 | 纵轴方向移动的值，单位为px。该参数应为整数。值大于0表示下移，小于0表示上移。超出屏幕范围时返回错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板位置移动成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板位置移动成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -538,7 +539,7 @@ offHide(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -564,7 +565,7 @@ offShow(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -602,7 +603,7 @@ panel.offSizeChange((windowSize: window.Size) => {
 });
 ```
 
-## off_hide('hide')
+## off('hide')
 
 ```TypeScript
 off(type: 'hide', callback?: () => void): void
@@ -635,7 +636,7 @@ off(type: 'hide', callback?: () => void): void
 panel.off('hide');
 ```
 
-## off_show('show')
+## off('show')
 
 ```TypeScript
 off(type: 'show', callback?: () => void): void
@@ -668,7 +669,7 @@ off(type: 'show', callback?: () => void): void
 panel.off('show');
 ```
 
-## off_sizeChange('sizeChange')
+## off('sizeChange')
 
 ```TypeScript
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
@@ -717,7 +718,7 @@ onHide(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -745,7 +746,7 @@ onShow(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -788,7 +789,7 @@ panel.onSizeChange((windowSize: window.Size, keyboardArea: inputMethodEngine.Key
 });
 ```
 
-## on_hide('hide')
+## on('hide')
 
 ```TypeScript
 on(type: 'hide', callback: () => void): void
@@ -817,7 +818,7 @@ panel.on('hide', () => {
 });
 ```
 
-## on_show('show')
+## on('show')
 
 ```TypeScript
 on(type: 'show', callback: () => void): void
@@ -846,7 +847,7 @@ panel.on('show', () => {
 });
 ```
 
-## on_sizeChange('sizeChange')
+## on('sizeChange')
 
 ```TypeScript
 on(type: 'sizeChange', callback: SizeChangeCallback): void
@@ -904,7 +905,7 @@ resize(width: long, height: long, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | width | long | 是 | 目标面板的宽度，单位为vp。该参数应为大于或等于0的整数，不超出屏幕宽度。超出范围时返回错误码401。 |
 | height | long | 是 | 目标面板的高度，单位为vp。该参数应为大于或等于0的整数，不高于屏幕高度的0.7倍。超出范围时返回错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板大小改变成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板大小改变成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -1193,7 +1194,7 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 具体页面的路径。路径长度建议不超过1024字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -1281,7 +1282,7 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | path | string | 是 | LocalStorage相关联的具体页面的路径。路径长度建议不超过1024字符。 |
 | storage | LocalStorage | 是 | 存储单元，为应用程序范围内的可变和不可变状态属性提供存储。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
 
@@ -1372,7 +1373,7 @@ show(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当面板显示成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板显示成功，err为undefined，否则err为错误对象。 |
 
 **示例**
 
@@ -1476,7 +1477,7 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt;&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

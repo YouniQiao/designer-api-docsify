@@ -593,7 +593,7 @@ Obtains the first value of a given key from the query component of this URI. If 
 
 | Type | Description |
 | --- | --- |
-| string | Return decoded value, If no corresponding value is found return a null object. |
+| string \| null | Return decoded value, If no corresponding value is found return a null object. |
 
 ## getQueryValues
 

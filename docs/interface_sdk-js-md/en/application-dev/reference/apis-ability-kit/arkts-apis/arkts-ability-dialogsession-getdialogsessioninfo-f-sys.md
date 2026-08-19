@@ -75,7 +75,7 @@ Query the session info of dialog.
 
 | Type | Description |
 | --- | --- |
-| [DialogSessionInfo](arkts-ability-dialogsession-dialogsessioninfo-i-sys.md) | Returns the session info when the target DialogSessionInfo of dialogSessionId exists. Returns null if the target DialogSessionInfo of dialogSessionId not exist. |
+| [DialogSessionInfo](arkts-ability-dialogsession-dialogsessioninfo-i-sys.md) \| null | Returns the session info when the target DialogSessionInfo of dialogSessionId exists. Returns null if the target DialogSessionInfo of dialogSessionId not exist. |
 
 **Error codes:**
 

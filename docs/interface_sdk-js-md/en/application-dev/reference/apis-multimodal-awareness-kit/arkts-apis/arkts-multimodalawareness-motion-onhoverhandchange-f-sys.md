@@ -29,7 +29,7 @@ Subscribes to hover hand events and immediately starts detection for five second
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | Yes | Rectangular detection area for hover hand. <br> Repeated calls will override the previously set detection area. <br> If the area exceeds the screen bounds, it defaults to detecting the overlap. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | Yes | Callback used to return hover hand action. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | Yes | Callback used to return hover hand action. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ Subscribes to hover hand events and immediately starts detection.
 | --- | --- | --- | --- |
 | detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | Yes | Rectangular detection area for hover hand. <br> Repeated calls will override the previously set detection area. <br> If the area exceeds the screen bounds, it defaults to detecting the overlap. |
 | duration | int | Yes | Detection duration. <br> Unit: Seconds. The value must be an integer within [1,10]. <br> Subscription ends automatically after duration expires. Call again to restart the detection. <br> Hover hand events are high power consumption events, developers are advised to set the duration as needed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | Yes | Callback used to return hover hand action. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | Yes | Callback used to return hover hand action. |
 
 **Error codes:**
 

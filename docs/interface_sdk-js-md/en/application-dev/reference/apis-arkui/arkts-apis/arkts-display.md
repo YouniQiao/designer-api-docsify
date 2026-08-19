@@ -51,12 +51,12 @@ import { display } from '@kit.ArkUI';
 | [offFoldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) | Unregister the callback for fold status changes. |
 | [offRemove](arkts-arkui-display-offremove-f.md) | Unregister the callback for display remove events. |
 | off_add | Unsubscribes from display changes. |
-| off_brightnessInfoChange | Unsubscribes from events related to screen brightness information changes. |
-| off_captureStatusChange | Unsubscribes from events indicating the status of the device's screen content is being captured. |
+| [off_brightnessInfoChange](arkts-arkui-display-offbrightnessinfochange-f.md) | Unsubscribes from events related to screen brightness information changes. |
+| [off_captureStatusChange](arkts-arkui-display-offcapturestatuschange-f.md) | Unsubscribes from events indicating the status of the device's screen content is being captured. |
 | off_change | Unsubscribes from display changes. |
-| off_foldAngleChange | Unsubscribes from folding angle change events of the foldable device. |
-| off_foldDisplayModeChange | Unsubscribes from display mode change events of the foldable device. |
-| off_foldStatusChange | Unsubscribes from fold status change events of the foldable device. |
+| [off_foldAngleChange](arkts-arkui-display-offfoldanglechange-f.md) | Unsubscribes from folding angle change events of the foldable device. |
+| [off_foldDisplayModeChange](arkts-arkui-display-offfolddisplaymodechange-f.md) | Unsubscribes from display mode change events of the foldable device. |
+| [off_foldStatusChange](arkts-arkui-display-offfoldstatuschange-f.md) | Unsubscribes from fold status change events of the foldable device. |
 | off_remove | Unsubscribes from display changes. |
 | [onAdd](arkts-arkui-display-onadd-f.md) | Register the callback for display add events. |
 | [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) | Register the callback for brightness info changes. |
@@ -68,12 +68,12 @@ import { display } from '@kit.ArkUI';
 | [onFoldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Register the callback for fold status changes. |
 | [onRemove](arkts-arkui-display-onremove-f.md) | Register the callback for display remove events. |
 | on_add | Subscribes to display changes. |
-| on_brightnessInfoChange | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
-| on_captureStatusChange | Subscribes to events indicating the status of the device's screen content is being captured. |
+| [on_brightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
+| [on_captureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md) | Subscribes to events indicating the status of the device's screen content is being captured. |
 | on_change | Subscribes to display changes. |
-| on_foldAngleChange | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
-| on_foldDisplayModeChange | Subscribes to display mode change events of the foldable device. To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange'). The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. |
-| on_foldStatusChange | Subscribes to fold status change events of the foldable device. To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange') . The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange') . |
+| [on_foldAngleChange](arkts-arkui-display-onfoldanglechange-f.md) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
+| [on_foldDisplayModeChange](arkts-arkui-display-onfolddisplaymodechange-f.md) | Subscribes to display mode change events of the foldable device. To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange'). The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. |
+| [on_foldStatusChange](arkts-arkui-display-onfoldstatuschange-f.md) | Subscribes to fold status change events of the foldable device. To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange') . The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange') . |
 | on_remove | Subscribes to display changes. |
 | [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) | Sets a surface for a virtual screen. This API uses a promise to return the result. |
 
@@ -86,9 +86,9 @@ import { display } from '@kit.ArkUI';
 | [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md) | Add surface for the virtual screen. |
 | [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md) | Checks whether there is a visible privacy window on a display. The window privacy mode can be set by calling setWindowPrivacyMode(). The content in the privacy window cannot be captured or recorded. |
 | [offPrivateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) | Unregister the callback for private mode changes. |
-| off_privateModeChange | Unsubscribes from privacy mode changes of this display. |
+| [off_privateModeChange](arkts-arkui-display-offprivatemodechange-f-sys.md) | Unsubscribes from privacy mode changes of this display. |
 | [onPrivateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) | Register the callback for private mode changes. |
-| on_privateModeChange | Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display , the display is in privacy mode, and the content in the privacy window cannot be captured or recorded. |
+| [on_privateModeChange](arkts-arkui-display-onprivatemodechange-f-sys.md) | Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display , the display is in privacy mode, and the content in the privacy window cannot be captured or recorded. |
 | [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md) | Removes windows from the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result. |
 | [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md) | Remove surface for the virtual screen. |
 | [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md) | Sets the display mode of the foldable device. |
@@ -127,8 +127,8 @@ import { display } from '@kit.ArkUI';
 | [CornerType](arkts-arkui-display-cornertype-e.md) | Enumerates the types of corners on the screen. |
 | [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md) | Enumerates the display modes for screen content. |
 | [DisplayState](arkts-arkui-display-displaystate-e.md) | Enumerates the states of a display. |
-| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Enumerates the display modes of a foldable device. > **NOTE：**> For foldable devices where both the inner and outer screens can serve as the primary screen �� like large or wide- > folding models �� the inner screen's display mode is **FOLD_DISPLAY_MODE_FULL**, and the outer screen's display > mode is **FOLD_DISPLAY_MODE_MAIN**. > For foldable devices where the outer screen serves only as an auxiliary display �� like small-folding models �� the > inner screen's display mode is **FOLD_DISPLAY_MODE_MAIN**, and the outer screen's display mode is > **FOLD_DISPLAY_MODE_SUB**. |
-| [FoldStatus](arkts-arkui-display-foldstatus-e.md) | Enumerates the fold statuses of a foldable device. For dual-fold axis devices, when oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. > **NOTE：**> Devices with only one fold axis can be in the **FOLD_STATUS_EXPANDED**, **FOLD_STATUS_FOLDED**, or > **FOLD_STATUS_HALF_FOLDED** state. > Devices with two fold axes can be in any of the states provided in the table above, except for > **FOLD_STATUS_UNKNOWN**, which indicates an unusable fold status. |
+| [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Enumerates the display modes of a foldable device. &gt; **NOTE：**&gt; For foldable devices where both the inner and outer screens can serve as the primary screen �� like large or wide- &gt; folding models �� the inner screen's display mode is **FOLD_DISPLAY_MODE_FULL**, and the outer screen's display &gt; mode is **FOLD_DISPLAY_MODE_MAIN**. &gt; For foldable devices where the outer screen serves only as an auxiliary display �� like small-folding models �� the &gt; inner screen's display mode is **FOLD_DISPLAY_MODE_MAIN**, and the outer screen's display mode is &gt; **FOLD_DISPLAY_MODE_SUB**. |
+| [FoldStatus](arkts-arkui-display-foldstatus-e.md) | Enumerates the fold statuses of a foldable device. For dual-fold axis devices, when oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. &gt; **NOTE：**&gt; Devices with only one fold axis can be in the **FOLD_STATUS_EXPANDED**, **FOLD_STATUS_FOLDED**, or &gt; **FOLD_STATUS_HALF_FOLDED** state. &gt; Devices with two fold axes can be in any of the states provided in the table above, except for &gt; **FOLD_STATUS_UNKNOWN**, which indicates an unusable fold status. |
 | [Orientation](arkts-arkui-display-orientation-e.md) | Enumerates the orientations of a display. |
 | [ScreenShape](arkts-arkui-display-screenshape-e.md) | Enumerates the screen shapes of a display. |
 

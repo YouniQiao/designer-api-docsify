@@ -1,6 +1,6 @@
 # Region
 
-区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -108,7 +109,7 @@ getBoundaryPath(): Path | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | 返回当前区域边界的路径。 |
+| Path \| undefined | 返回当前区域边界的路径。 |
 
 ## getBounds
 
@@ -148,7 +149,7 @@ getBounds(): common2D.Rect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 返回当前区域的边界矩形。 |
+| common2D.Rect \| undefined | 返回当前区域的边界矩形。 |
 
 ## isComplex
 

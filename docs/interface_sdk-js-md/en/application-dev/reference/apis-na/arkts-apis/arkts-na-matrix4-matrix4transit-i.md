@@ -248,7 +248,7 @@ Matrix coordinate point conversion function Which can apply the current transfor
 
 | Type | Description |
 | --- | --- |
-| [             double,             double         ] | Return to Matrix4Transit |
+| [double, double] | Return to Matrix4Transit |
 
 ## translate
 

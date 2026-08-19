@@ -42,7 +42,7 @@ contentOptions: DownloadContentOptions
 
 Set DownloadFileButton Content.
 
-**Type:** [DownloadContentOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md)
+**Type:** [DownloadContentOptions](arkts-na-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md)
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ styleOptions: DownloadStyleOptions
 
 Set DownloadFileButton Style.
 
-**Type:** [DownloadStyleOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
+**Type:** [DownloadStyleOptions](arkts-na-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
 
 **Since:** 23
 

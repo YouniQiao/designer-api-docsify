@@ -69,7 +69,7 @@ Creates an ImageSource instance based on the URI.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -140,7 +140,7 @@ Creates an ImageSource instance based on the URI.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -209,7 +209,7 @@ Creates an ImageSource instance based on the file descriptor.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -283,7 +283,7 @@ Creates an ImageSource instance based on the file descriptor.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -350,7 +350,7 @@ Creates an ImageSource instance based on the buffer.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -420,7 +420,7 @@ Creates an ImageSource instance based on the buffer.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -497,5 +497,5 @@ Creates an ImageSource instance based on the raw file descriptor.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

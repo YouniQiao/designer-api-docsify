@@ -41,7 +41,7 @@ Set the attribute modifier
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [MenuItemGroupAttribute](arkts-na-menuitemgroup-menuitemgroupattribute-i.md) |  |
 
 ## setMenuItemGroupOptions
 
@@ -65,8 +65,6 @@ setMenuItemGroupOptions(value?: MenuItemGroupOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

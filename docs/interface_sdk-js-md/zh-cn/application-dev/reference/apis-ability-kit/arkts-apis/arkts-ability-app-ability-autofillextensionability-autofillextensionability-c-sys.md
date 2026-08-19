@@ -15,6 +15,7 @@ AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类�
 ## 导入模块
 
 ```TypeScript
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -132,7 +133,7 @@ onDestroy(): Promise<void> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; \| undefined | the promise returned by the function. |
 
 **示例**
 

@@ -1,6 +1,6 @@
 # Typeface
 
-Typeface类用于表示和管理字体对象。支持的字体操作包括：获取字体族名、从字体文件或rawfile资源构造字体、结合字体属性构造新字体，以及检查字体的加粗、斜体状态等。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+Typeface类用于表示和管理字体对象。支持的字体操作包括：获取字体族名、从字体文件或rawfile资源构造字体、结合字体属性构造新字体，以及检查字体的加粗、斜体状态等。 &gt; **说明：** &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ Typeface类用于表示和管理字体对象。支持的字体操作包括：获
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## getFamilyName
@@ -51,7 +52,7 @@ getFamilyName(): string | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。创建失败时返回undefined。 |
+| string \| undefined | 返回字体的族名，表示当前Typeface对象对应的字体设计名称。创建失败时返回undefined。 |
 
 ## isBold
 
@@ -143,7 +144,7 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回基于当前字体结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromFile
 
@@ -203,7 +204,7 @@ static makeFromFile(filePath: string): Typeface | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载的字体对象。创建失败时返回undefined。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从指定字体文件加载的字体对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -265,7 +266,7 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 
 | 类型 | 说明 |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从指定字体文件加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFile
 
@@ -319,7 +320,7 @@ static makeFromRawFile(rawfile: Resource): Typeface | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从rawfile资源加载的字体对象（异常情况下会返回空指针）。 |
 
 ## makeFromRawFileWithArguments
 
@@ -375,5 +376,5 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 
 | 类型 | 说明 |
 | --- | --- |
-| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
+| [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) \| undefined | 返回从rawfile资源加载并结合字体属性构造的字体对象（异常情况下会返回空指针）。 |
 

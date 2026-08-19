@@ -79,7 +79,7 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | abilityType | AbilityType | Yes | Accessibility application type. |
 | stateType | AbilityState | Yes | Accessibility application status. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the query of the accessibility app list is successful, **err** is **undefined** and **data** is the accessibility app information list; otherwise, the value is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the query of the accessibility app list is successful, **err** is **undefined** and **data** is the accessibility app information list; otherwise, the value is an error object. |
 
 **Error codes:**
 

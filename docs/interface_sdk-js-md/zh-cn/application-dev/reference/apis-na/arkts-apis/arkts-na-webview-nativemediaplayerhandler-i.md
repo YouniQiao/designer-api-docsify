@@ -1,6 +1,6 @@
 # NativeMediaPlayerHandler
 
-[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback) 回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
+[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback) 回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 12开始支持。 &gt; &gt; - 示例效果请以真机运行为准。
 
 **起始版本：** 23
 

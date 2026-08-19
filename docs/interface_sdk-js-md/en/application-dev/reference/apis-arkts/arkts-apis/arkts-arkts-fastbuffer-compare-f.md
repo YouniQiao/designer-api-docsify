@@ -33,7 +33,7 @@ Compares buf1 to buf2
 
 | Type | Description |
 | --- | --- |
-| -1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
+| -1 \| 0 \| 1 | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
 
 **Error codes:**
 

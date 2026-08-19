@@ -44,7 +44,7 @@ immersiveMode?: ImmersiveMode
 
 Determine the immersive mode of the dialog.
 
-**Type:** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
+**Type:** [ImmersiveMode](arkts-na-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -88,7 +88,7 @@ levelMode?: LevelMode
 
 Determine the display level of the dialog.
 
-**Type:** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**Type:** [LevelMode](arkts-na-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 

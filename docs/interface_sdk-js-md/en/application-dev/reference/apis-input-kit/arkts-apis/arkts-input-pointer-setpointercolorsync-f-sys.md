@@ -12,7 +12,7 @@ import { pointer } from '@kit.InputKit';
 function setPointerColorSync(color: int): void
 ```
 
-Sets the pointer color. This API returns the result synchronously. > **NOTE：**> > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
+Sets the pointer color. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 23
 

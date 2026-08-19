@@ -26,7 +26,7 @@ Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) instance. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioRenderer instance obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioRenderer instance obtained; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -82,7 +82,7 @@ Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) instance. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md) \| null&gt; | Yes | Callback used to return the audio renderer instance, or null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md) \| null&gt; | Yes | Callback used to return the audio renderer instance, or null when an error happens. |
 
 
 ## createAudioRenderer

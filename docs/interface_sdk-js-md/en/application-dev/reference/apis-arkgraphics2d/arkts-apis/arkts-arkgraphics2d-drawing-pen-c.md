@@ -1,6 +1,6 @@
 # Pen
 
-Defines a pen, which is used to describe the style and color to outline a shape. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Defines a pen, which is used to describe the style and color to outline a shape. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -132,7 +132,7 @@ Obtains the color of this pen.
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | Returns a 32-bit (ARGB) variable that describes the color. |
+| common2D.Color \| undefined | Returns a 32-bit (ARGB) variable that describes the color. |
 
 ## getColor4f
 
@@ -172,7 +172,7 @@ Obtains the color of a pen. The color is used by the pen to outline a shape.
 
 | Type | Description |
 | --- | --- |
-| common2D.Color4f | Returns four floating point values that describes the color. |
+| common2D.Color4f \| undefined | Returns four floating point values that describes the color. |
 
 ## getColorFilter
 
@@ -212,7 +212,7 @@ Obtains the color filter of this pen.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | ColorFilter. |
+| ColorFilter \| undefined | ColorFilter. |
 
 ## getFillPath
 

@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addLcdJumpCount
@@ -219,7 +220,7 @@ static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordM
 
 | 类型 | 说明 |
 | --- | --- |
-| [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) | Returns media asset custom record manager instance if operation fails, return null. |
+| [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) \| null | Returns media asset custom record manager instance if operation fails, return null. |
 
 **错误码：**
 

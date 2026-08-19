@@ -12,7 +12,7 @@ import { pointer } from '@kit.InputKit';
 function setPointerColor(color: int, callback: AsyncCallback<void>): void
 ```
 
-Sets the mouse pointer color. This API uses an asynchronous callback to return the result. > **NOTE：**> > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
+Sets the mouse pointer color. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 23
 
@@ -27,7 +27,7 @@ Sets the mouse pointer color. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | int | Yes | Pointer color. The default value is **black** (0x000000). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -73,7 +73,7 @@ struct Index {
 function setPointerColor(color: int): Promise<void>
 ```
 
-Sets the mouse pointer color. This API uses a promise to return the result. > **NOTE：**> > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
+Sets the mouse pointer color. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 23
 

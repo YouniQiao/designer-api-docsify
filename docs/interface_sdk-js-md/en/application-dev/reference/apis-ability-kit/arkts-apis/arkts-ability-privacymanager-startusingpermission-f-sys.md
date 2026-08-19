@@ -12,7 +12,7 @@ import { privacyManager } from '@kit.AbilityKit';
 function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
 
 **Since:** 9
 
@@ -77,7 +77,7 @@ function startUsingPermission(
   ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
 
 **Since:** 23
 
@@ -167,7 +167,7 @@ function startUsingPermission(
    ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends. When a pid is passed in, the pid must be the same as the pid passed into [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md). If the pairing relationship is not satisfied, error code 12100004 is returned.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends. When a pid is passed in, the pid must be the same as the pid passed into [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md). If the pairing relationship is not satisfied, error code 12100004 is returned.
 
 **Since:** 26.0.0
 
@@ -220,7 +220,7 @@ function startUsingPermission(
   ): void
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses an asynchronous callback to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) for the subscription method). This API uses an asynchronous callback to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) must be called to stop using the permission when the usage ends.
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ A system application can call this API to report the application's permission us
 | --- | --- | --- | --- |
 | tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be used. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

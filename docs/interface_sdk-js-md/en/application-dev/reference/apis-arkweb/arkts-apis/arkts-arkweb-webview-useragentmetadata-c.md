@@ -20,7 +20,7 @@ import { webview } from '@kit.ArkWeb';
 getArchitecture(): string
 ```
 
-Obtains the architecture type of the platform. If the corresponding [setArchitecture](#setarchitecture) is not called for configuration, the default value of the architecture type is: "".
+Obtains the architecture type of the platform. If the corresponding [setArchitecture](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setarchitecture) is not called for configuration, the default value of the architecture type is: "".
 
 **Since:** 24
 
@@ -42,7 +42,7 @@ Obtains the architecture type of the platform. If the corresponding [setArchitec
 getBitness(): string
 ```
 
-Obtains the bitness type of the platform. If the corresponding [setBitness](#setbitness) is not called for configuration, the default value of the bitness type is: Desktop: "64", other devices: "".
+Obtains the bitness type of the platform. If the corresponding [setBitness](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setbitness) is not called for configuration, the default value of the bitness type is: Desktop: "64", other devices: "".
 
 **Since:** 24
 
@@ -64,7 +64,7 @@ Obtains the bitness type of the platform. If the corresponding [setBitness](#set
 getBrandVersionList(): Array<UserAgentBrandVersion>
 ```
 
-Obtains the brand and version information list. If the corresponding [setBrandVersionList](#setbrandversionlist) is not called for configuration, the default value of the list is: [{"brand":"Chromium","version":[ChromeCompatibleVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}, {"brand":"ArkWeb","version":[OSVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}].
+Obtains the brand and version information list. If the corresponding [setBrandVersionList](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setbrandversionlist) is not called for configuration, the default value of the list is: [{"brand":"Chromium","version":[ChromeCompatibleVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}, {"brand":"ArkWeb","version":[OSVersion](../../../web/web-default-userAgent.md#default-user-agent-structure)}].
 
 **Since:** 24
 
@@ -78,7 +78,7 @@ Obtains the brand and version information list. If the corresponding [setBrandVe
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Brand and version information list. |
+| Array&lt;[UserAgentBrandVersion](../../apis-na/arkts-apis/arkts-na-webview-useragentbrandversion-c.md)&gt; | Brand and version information list. |
 
 ## getFormFactors
 
@@ -86,7 +86,7 @@ Obtains the brand and version information list. If the corresponding [setBrandVe
 getFormFactors(): Array<UserAgentFormFactor>
 ```
 
-Obtains the device form factor information, such as phone and tablet. If the corresponding [setFormFactors](#setformfactors) is not called for configuration, the default value of the form factor information is: Phone: "Mobile", Watch: "Watch", Automotive: "Automotive", PC: "Desktop" , Tablet: "Tablet".
+Obtains the device form factor information, such as phone and tablet. If the corresponding [setFormFactors](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setformfactors) is not called for configuration, the default value of the form factor information is: Phone: "Mobile", Watch: "Watch", Automotive: "Automotive", PC: "Desktop" , Tablet: "Tablet".
 
 **Since:** 24
 
@@ -100,7 +100,7 @@ Obtains the device form factor information, such as phone and tablet. If the cor
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Device form information. |
+| Array&lt;[UserAgentFormFactor](../../apis-na/arkts-apis/arkts-na-webview-useragentformfactor-e.md)&gt; | Device form information. |
 
 ## getFullVersion
 
@@ -108,7 +108,7 @@ Obtains the device form factor information, such as phone and tablet. If the cor
 getFullVersion(): string
 ```
 
-Obtains the full version number. If the corresponding [setFullVersion](#setfullversion) is not called for configuration, the default value of the version number is: "".
+Obtains the full version number. If the corresponding [setFullVersion](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setfullversion) is not called for configuration, the default value of the version number is: "".
 
 **Since:** 24
 
@@ -130,7 +130,7 @@ Obtains the full version number. If the corresponding [setFullVersion](#setfullv
 getMobile(): boolean
 ```
 
-Obtains whether the device is a mobile device. If the corresponding [setMobile](#setmobile) is not called for configuration, the default value is: Phone: true, Watch, Automotive, Tablet, Large screen: false.
+Obtains whether the device is a mobile device. If the corresponding [setMobile](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setmobile) is not called for configuration, the default value is: Phone: true, Watch, Automotive, Tablet, Large screen: false.
 
 **Since:** 24
 
@@ -152,7 +152,7 @@ Obtains whether the device is a mobile device. If the corresponding [setMobile](
 getModel(): string
 ```
 
-Obtains the device model. If the corresponding [setModel](#setmodel) is not called for configuration, the default value of the model is: Phone: obtains the device model based on const.product.model; Watch, Large screen, Automotive, PC, Tablet: "".
+Obtains the device model. If the corresponding [setModel](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setmodel) is not called for configuration, the default value of the model is: Phone: obtains the device model based on const.product.model; Watch, Large screen, Automotive, PC, Tablet: "".
 
 **Since:** 24
 
@@ -174,7 +174,7 @@ Obtains the device model. If the corresponding [setModel](#setmodel) is not call
 getPlatform(): string
 ```
 
-Obtains the operating system name. If the corresponding [setPlatform](#setplatform) is not called for configuration, the default value of the name is: "OpenHarmony".
+Obtains the operating system name. If the corresponding [setPlatform](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setplatform) is not called for configuration, the default value of the name is: "OpenHarmony".
 
 **Since:** 24
 
@@ -196,7 +196,7 @@ Obtains the operating system name. If the corresponding [setPlatform](#setplatfo
 getPlatformVersion(): string
 ```
 
-Obtains the operating system version number. If the corresponding [setPlatformVersion](#setplatformversion) is not called for configuration, the default value of the version number is: follows the OpenHarmony platform version number rules, same as const.product.os.dist.version.
+Obtains the operating system version number. If the corresponding [setPlatformVersion](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setplatformversion) is not called for configuration, the default value of the version number is: follows the OpenHarmony platform version number rules, same as const.product.os.dist.version.
 
 **Since:** 24
 
@@ -218,7 +218,7 @@ Obtains the operating system version number. If the corresponding [setPlatformVe
 getWow64(): boolean
 ```
 
-Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If the corresponding [setWow64](#setwow64) is not called for configuration, the default value is false.
+Obtains whether the binary file is running in 32-bit mode on 64-bit Windows. If the corresponding [setWow64](../../apis-na/arkts-apis/arkts-na-webview-useragentmetadata-c.md#setwow64) is not called for configuration, the default value is false.
 
 **Since:** 24
 
@@ -298,7 +298,7 @@ Sets the brand and version information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes | Sec-CH-UA-Full-Version-List** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](../../apis-na/arkts-apis/arkts-na-webview-useragentbrandversion-c.md)&gt; | Yes | Sec-CH-UA-Full-Version-List** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setFormFactors
 
@@ -320,7 +320,7 @@ Sets the device form, such as the mobile phone or tablet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes | Sec-CH-UA-Form-Factor** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
+| formFactors | Array&lt;[UserAgentFormFactor](../../apis-na/arkts-apis/arkts-na-webview-useragentformfactor-e.md)&gt; | Yes | Sec-CH-UA-Form-Factor** of the request header. If this parameter is left empty, the default ArkWeb value is used. |
 
 ## setFullVersion
 

@@ -20,7 +20,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 static create(options: AnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. > **NOTE：**> > - Since API version 10, you can use the > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.
+Creates an **AnimatorResult** object for animations. &gt; **NOTE：**&gt; &gt; - Since API version 10, you can use the &gt; [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.
 
 **Since:** 9
 

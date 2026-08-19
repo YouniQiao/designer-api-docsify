@@ -1,6 +1,6 @@
 # MediaAssetManager
 
-媒体资产管理类，管理媒体资源读取。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+媒体资产管理类，管理媒体资源读取。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 11开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelRequest

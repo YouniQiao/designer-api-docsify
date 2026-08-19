@@ -25,8 +25,6 @@ Iterates over values in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 ## entries
 
 ```TypeScript
@@ -43,8 +41,6 @@ Returns an iterable of [v,v] pairs for every value `v` in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |  |
-
 ## keys
 
 ```TypeScript
@@ -61,8 +57,6 @@ Despite its name, returns an iterable of the values in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-
 ## values
 
 ```TypeScript
@@ -79,5 +73,3 @@ Returns an iterable of values in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
-

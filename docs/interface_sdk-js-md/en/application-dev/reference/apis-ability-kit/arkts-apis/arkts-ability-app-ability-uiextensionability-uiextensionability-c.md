@@ -164,7 +164,7 @@ Called back before an UI extension is destroyed.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; \| undefined | the promise returned by the function. |
 
 ## onForeground
 

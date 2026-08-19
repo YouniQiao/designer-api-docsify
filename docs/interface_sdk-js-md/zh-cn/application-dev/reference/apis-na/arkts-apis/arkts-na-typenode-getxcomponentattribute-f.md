@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode which type is XComponent to set attribut
 
 | 类型 | 说明 |
 | --- | --- |
-| XComponentAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| XComponentAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

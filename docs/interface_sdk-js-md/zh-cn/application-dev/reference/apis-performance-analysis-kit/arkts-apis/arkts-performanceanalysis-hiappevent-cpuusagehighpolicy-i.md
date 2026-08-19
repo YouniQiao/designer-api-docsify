@@ -1,6 +1,6 @@
 # CpuUsageHighPolicy
 
-提供CPU高负载事件配置策略的定义。 > **注意：** > > 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。
+提供CPU高负载事件配置策略的定义。 &gt; **注意：** &gt; &gt; 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## backgroundLoadThreshold

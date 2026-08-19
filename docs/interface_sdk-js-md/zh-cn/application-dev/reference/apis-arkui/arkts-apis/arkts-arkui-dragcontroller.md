@@ -1,6 +1,6 @@
 # @ohos.arkui.dragController
 
-本模块提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。 > **说明：** > > - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见 > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)说明。 > > - 示例效果请以真机运行为准，当前 DevEco Studio预览器不支持。
+本模块提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。 &gt; **说明：** &gt; &gt; - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见 &gt; [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)说明。 &gt; &gt; - 示例效果请以真机运行为准，当前 DevEco Studio预览器不支持。
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -42,7 +43,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | 定义拖拽的悬停检测状态的枚举类型。 默认系统配置下，如果没有触发CANCEL，状态报告如下： 保持Hover-->500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END |
+| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | 定义拖拽的悬停检测状态的枚举类型。 默认系统配置下，如果没有触发CANCEL，状态报告如下： 保持Hover--&gt;500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END |
 | [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | 定义应用是否可以发起拖拽的枚举类型。仅在onDragStart调用时有效。 |
 | [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md) | 拖拽开始和结束状态。 |
 

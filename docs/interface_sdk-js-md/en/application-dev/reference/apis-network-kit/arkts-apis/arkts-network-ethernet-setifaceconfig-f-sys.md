@@ -30,7 +30,7 @@ Sets the network interface configuration information. This API uses an asynchron
 | --- | --- | --- | --- |
 | iface | string | Yes | Interface name. |
 | ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Network interface configuration to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
 
 **Error codes:**
 

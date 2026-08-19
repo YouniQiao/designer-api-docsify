@@ -12,7 +12,7 @@ import { zlib } from '@kit.BasicServicesKit';
 function compressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void
 ```
 
-Compresses a file. This API uses an asynchronous callback to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+Compresses a file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
 **Since:** 23
 
@@ -29,7 +29,7 @@ Compresses a file. This API uses an asynchronous callback to return the result. 
 | inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
 | options | Options | Yes | Compression parameters. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ try {
 function compressFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-Compresses a file. This API uses a promise to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
+Compresses a file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive &gt; periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
 
 **Since:** 23
 

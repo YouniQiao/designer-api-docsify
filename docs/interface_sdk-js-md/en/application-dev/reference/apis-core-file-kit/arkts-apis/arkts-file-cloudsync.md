@@ -89,7 +89,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | [FileState](arkts-corefile-cloudsync-filestate-e.md) | Enumerates the device-cloud file sync states. |
 | [NotifyType](arkts-corefile-cloudsync-notifytype-e.md) | Enumerates the data change types. |
 | [State](arkts-corefile-cloudsync-state-e.md) | Enumerates the download states of a cloud file. |
-| [SyncState](arkts-corefile-cloudsync-syncstate-e.md) | Enumerates the device-cloud sync states. > **NOTE：**> > If a sync progress event listener is registered for an application, a callback will be invoked to notify the > application when the device-cloud sync state is changed. |
+| [SyncState](arkts-corefile-cloudsync-syncstate-e.md) | Enumerates the device-cloud sync states. &gt; **NOTE：**&gt; &gt; If a sync progress event listener is registered for an application, a callback will be invoked to notify the &gt; application when the device-cloud sync state is changed. |
 
 <!--Del-->
 ### Enums(System API)

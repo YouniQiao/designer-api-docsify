@@ -93,7 +93,7 @@ Queries and returns the uniform type descriptor by the given uniform data type I
 
 | Type | Description |
 | --- | --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | Returns the uniform type descriptor corresponding to the uniform data type ID or null if the uniform data type does not exist. |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) \| null | Returns the uniform type descriptor corresponding to the uniform data type ID or null if the uniform data type does not exist. |
 
 **Error codes:**
 

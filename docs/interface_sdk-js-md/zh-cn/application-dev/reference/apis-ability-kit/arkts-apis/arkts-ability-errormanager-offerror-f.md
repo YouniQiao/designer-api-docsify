@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { errorManager } from '@kit.AbilityKit';
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void
@@ -27,7 +28,7 @@ function off(type: 'error', observerId: number, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 填写'error'，表示错误观测器。 |
 | observerId | number | 是 | 由on方法返回的观测器的index值。没有具体的单位。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示指定的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的回调方法。 |
 
 **错误码：**
 
@@ -60,7 +61,7 @@ try {
 ```
 
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 function off(type: 'error', observerId: number): Promise<void>

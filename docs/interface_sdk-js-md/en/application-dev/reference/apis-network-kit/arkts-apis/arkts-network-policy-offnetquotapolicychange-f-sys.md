@@ -6,7 +6,7 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-## off_netQuotaPolicyChange('netQuotaPolicyChange')
+## off('netQuotaPolicyChange')
 
 ```TypeScript
 function off(type: 'netQuotaPolicyChange', callback?: Callback<Array<NetQuotaPolicy>>): void
@@ -29,7 +29,7 @@ Unsubscribes from the changes of the metering network policy. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netQuotaPolicyChange' | Yes | Event type. The value **netQuotaPolicyChange** indicates a network quota policy change event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | No | Callback used to return the result. It is called when the registered network quota policy changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | No | Callback used to return the result. It is called when the registered network quota policy changes. |
 
 **Error codes:**
 

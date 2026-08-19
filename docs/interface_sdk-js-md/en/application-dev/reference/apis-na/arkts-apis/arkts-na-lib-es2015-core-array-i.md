@@ -33,8 +33,6 @@ Returns the this object after copying a section of the array identified by start
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fill
 
 ```TypeScript
@@ -59,8 +57,6 @@ Changes all array elements from `start` to `end` index to a static `value` and r
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## find
 
 ```TypeScript
@@ -84,8 +80,6 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| S |  |
-
 ## find
 
 ```TypeScript
@@ -107,8 +101,6 @@ find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): 
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## findIndex
 
 ```TypeScript
@@ -132,5 +124,3 @@ Returns the index of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| number |  |
-

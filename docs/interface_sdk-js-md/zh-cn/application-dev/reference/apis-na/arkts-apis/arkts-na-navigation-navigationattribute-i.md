@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<NavigationAttribute> | AttributeMo
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backButtonIcon
 
 ```TypeScript
@@ -59,8 +57,6 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## customNavContentTransition
 
 ```TypeScript
@@ -83,8 +79,6 @@ customNavContentTransition(delegate: ((from: NavContentInfo, to: NavContentInfo,
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## divider
 
 ```TypeScript
@@ -107,8 +101,6 @@ divider(style: NavigationDividerStyle | null): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableDragBar
 
 ```TypeScript
@@ -131,8 +123,6 @@ enableDragBar(isEnabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableModeChangeAnimation
 
 ```TypeScript
@@ -155,8 +145,6 @@ enableModeChangeAnimation(isEnabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableToolBarAdaptation
 
 ```TypeScript
@@ -179,8 +167,6 @@ enableToolBarAdaptation(enable: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableVisibilityLifecycleWithContentCover
 
 ```TypeScript
@@ -203,8 +189,6 @@ enableVisibilityLifecycleWithContentCover(isEnabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideBackButton
 
 ```TypeScript
@@ -227,8 +211,6 @@ hideBackButton(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideNavBar
 
 ```TypeScript
@@ -251,8 +233,6 @@ hideNavBar(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -275,8 +255,6 @@ hideTitleBar(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -300,8 +278,6 @@ hideTitleBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideToolBar
 
 ```TypeScript
@@ -324,8 +300,6 @@ hideToolBar(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideToolBar
 
 ```TypeScript
@@ -349,8 +323,6 @@ hideToolBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## ignoreLayoutSafeArea
 
 ```TypeScript
@@ -374,8 +346,6 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menus
 
 ```TypeScript
@@ -399,8 +369,6 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: Na
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## minContentWidth
 
 ```TypeScript
@@ -423,8 +391,6 @@ minContentWidth(value: Dimension | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## mode
 
 ```TypeScript
@@ -447,8 +413,6 @@ mode(value: NavigationMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## navBarPosition
 
 ```TypeScript
@@ -471,8 +435,6 @@ navBarPosition(value: NavBarPosition | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## navBarWidth
 
 ```TypeScript
@@ -495,8 +457,6 @@ navBarWidth(value: Length | Bindable<Length> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## navBarWidthRange
 
 ```TypeScript
@@ -522,8 +482,6 @@ navBarWidthRange(value: [
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## navDestination
 
 ```TypeScript
@@ -546,8 +504,6 @@ navDestination(builder: PageMapBuilder | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onNavBarStateChange
 
 ```TypeScript
@@ -570,8 +526,6 @@ onNavBarStateChange(callback: ((isVisible: boolean) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onNavigationModeChange
 
 ```TypeScript
@@ -594,8 +548,6 @@ onNavigationModeChange(callback: ((mode: NavigationMode) => void) | undefined): 
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onTitleModeChange
 
 ```TypeScript
@@ -618,8 +570,6 @@ onTitleModeChange(callback: ((titleMode: NavigationTitleMode) => void) | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## recoverable
 
 ```TypeScript
@@ -642,8 +592,6 @@ recoverable(recoverable: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setNavigationOptions
 
 ```TypeScript
@@ -668,8 +616,6 @@ setNavigationOptions(pathInfos?: NavPathStack, homeDestination?: HomePathInfo, m
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setNavigationOptions
 
 ```TypeScript
@@ -693,8 +639,6 @@ setNavigationOptions(pathInfos?: NavPathStack,  moduleInfo?: NavigationModuleInf
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## splitPlaceholder
 
 ```TypeScript
@@ -717,8 +661,6 @@ splitPlaceholder<T extends Object>(placeholder: ComponentContent<T>): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## systemBarStyle
 
 ```TypeScript
@@ -741,8 +683,6 @@ systemBarStyle(style: SystemBarStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## title
 
 ```TypeScript
@@ -766,8 +706,6 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## titleMode
 
 ```TypeScript
@@ -790,8 +728,6 @@ titleMode(value: NavigationTitleMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## toolbarConfiguration
 
 ```TypeScript
@@ -815,8 +751,6 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder | undefined, opti
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

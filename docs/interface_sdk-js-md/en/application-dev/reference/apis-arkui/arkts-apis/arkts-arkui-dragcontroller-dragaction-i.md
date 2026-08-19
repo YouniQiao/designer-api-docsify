@@ -38,7 +38,7 @@ Deregisters a callback for listening on drag status changes. This callback is no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | No | with drag event and status information |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | No | with drag event and status information |
 
 ## onStatusChange
 
@@ -62,7 +62,7 @@ Registers a callback for listening on drag status changes. This callback is trig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | Yes | with drag event and status information |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | Yes | with drag event and status information |
 
 ## startDrag
 
@@ -86,7 +86,7 @@ trigger drag action
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise can indicate the start result is returned, or null is returned if it's failed for some errors, for example: execution environment broken or excess parameters passed in. |
+| Promise&lt;void&gt; \| null | A Promise can indicate the start result is returned, or null is returned if it's failed for some errors, for example: execution environment broken or excess parameters passed in. |
 
 **Error codes:**
 

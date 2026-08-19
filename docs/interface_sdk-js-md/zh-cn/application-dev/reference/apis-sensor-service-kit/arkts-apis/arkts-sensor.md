@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## 汇总
@@ -144,7 +145,7 @@
 | [off_SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR](arkts-sensorservice-sensor-offsensortypesensortypeidrotationvector-f.md#off_sensortypesensor_type_id_rotation_vector) | 取消订阅旋转矢量传感器数据。off取消订阅必须与on订阅成对出现。 |
 | [off_SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-offsensortypesensortypeidsignificantmotion-f.md#off_sensortypesensor_type_id_significant_motion) | 取消订阅有效运动传感器数据。off取消订阅必须与on订阅成对出现。 |
 | [off_SensorType.SENSOR_TYPE_ID_WEAR_DETECTION](arkts-sensorservice-sensor-offsensortypesensortypeidweardetection-f.md#off_sensortypesensor_type_id_wear_detection) | 取消订阅佩戴检测传感器数据。off取消订阅必须与on订阅成对出现。 |
-| off_sensorStatusChange | 取消监听传感器上线下线状态的变化。当不再需要感知传感器上下线状态时调用此接口取消监听。off取消监听必须与on监听成对出现。 |
+| [off_sensorStatusChange](arkts-sensorservice-sensor-offsensorstatuschange-f.md) | 取消监听传感器上线下线状态的变化。当不再需要感知传感器上下线状态时调用此接口取消监听。off取消监听必须与on监听成对出现。 |
 | [onAccelerometerChange](arkts-sensorservice-sensor-onaccelerometerchange-f.md) | Subscribe to accelerometer sensor data, {@code SensorId.ACCELEROMETER}. |
 | [onAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onaccelerometeruncalibratedchange-f.md) | Subscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
 | [onAmbientLightChange](arkts-sensorservice-sensor-onambientlightchange-f.md) | Subscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}. |
@@ -211,7 +212,7 @@
 | [on_SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR](arkts-sensorservice-sensor-onsensortypesensortypeidrotationvector-f.md#on_sensortypesensor_type_id_rotation_vector) | 监听旋转矢量传感器的数据变化。适用于需要感知设备三维空间旋转状态的场景。如果多次调用该接口，仅最后一次调用生效。 |
 | [on_SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION](arkts-sensorservice-sensor-onsensortypesensortypeidsignificantmotion-f.md#on_sensortypesensor_type_id_significant_motion) | 监听有效运动传感器数据变化。适用于需要检测设备是否有显著运动的场景。如果多次调用该接口，仅最后一次调用生效。 |
 | [on_SensorType.SENSOR_TYPE_ID_WEAR_DETECTION](arkts-sensorservice-sensor-onsensortypesensortypeidweardetection-f.md#on_sensortypesensor_type_id_wear_detection) | 监听所佩戴的检测传感器的数据变化。适用于需要检测设备是否被佩戴的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| on_sensorStatusChange | 监听传感器上线下线状态的变化，callback返回传感器状态事件数据。适用于需要感知传感器设备动态上下线的场景，如远程传感器连接或断开时自动更新传感器列表或订阅状态。 |
+| [on_sensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md) | 监听传感器上线下线状态的变化，callback返回传感器状态事件数据。适用于需要感知传感器设备动态上下线的场景，如远程传感器连接或断开时自动更新传感器列表或订阅状态。 |
 | [onceAccelerometerChange](arkts-sensorservice-sensor-onceaccelerometerchange-f.md) | Subscribe to accelerometer sensor data once, {@code SensorId.ACCELEROMETER}. |
 | [onceAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onceaccelerometeruncalibratedchange-f.md) | Subscribe to uncalibrated accelerometer sensor data once, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
 | [onceAmbientLightChange](arkts-sensorservice-sensor-onceambientlightchange-f.md) | Subscribe to ambient light sensor data once, {@code SensorId.AMBIENT_LIGHT}. |

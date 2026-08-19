@@ -29,8 +29,6 @@ new(arrayLength?: number): any[]
 
 | Type | Description |
 | --- | --- |
-| any[] |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new <T>(arrayLength: number): T[]
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## constructor
 
 ```TypeScript
@@ -73,8 +69,6 @@ new <T>(...items: T[]): T[]
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## constructor
 
 ```TypeScript
@@ -95,8 +89,6 @@ new <T>(...items: T[]): T[]
 
 | Type | Description |
 | --- | --- |
-| any[] |  |
-
 ## constructor
 
 ```TypeScript
@@ -117,8 +109,6 @@ new <T>(...items: T[]): T[]
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## constructor
 
 ```TypeScript
@@ -139,8 +129,6 @@ new <T>(...items: T[]): T[]
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## isArray
 
 ```TypeScript
@@ -161,8 +149,6 @@ isArray(arg: any): arg is any[]
 
 | Type | Description |
 | --- | --- |
-| arg is any[] |  |
-
 ## prototype
 
 ```TypeScript

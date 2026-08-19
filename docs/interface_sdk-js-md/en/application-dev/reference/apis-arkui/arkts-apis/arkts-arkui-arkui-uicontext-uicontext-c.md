@@ -1,6 +1,6 @@
 # UIContext
 
-Implements a **UIContext** instance. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a > **UIContext** instance: (1) using the > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from > ohos.window; (2) using the built-in method > [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom > component; (3) using static methods of the UIContext class such as > [getCallingScopeUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext). In this document, the **UIContext** instance > is represented by **uiContext**.
+Implements a **UIContext** instance. &gt; **NOTE：**&gt; &gt; - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. &gt; &gt; - The following APIs must be called through a corresponding UIContext instance. There are three ways to obtain a &gt; **UIContext** instance: (1) using the &gt; [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10) method from &gt; ohos.window; (2) using the built-in method &gt; [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom &gt; component; (3) using static methods of the UIContext class such as &gt; [getCallingScopeUIContext](#getcallingscopeuicontext). In this document, the **UIContext** instance &gt; is represented by **uiContext**.
 
 **Since:** 10
 
@@ -23,7 +23,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor
 ```
 
-Registers a local input event monitor. The "Local" in the interface name indicates that the monitor is only valid within the current UIContext, and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors. Performance Warning: Do not perform time-consuming operations in the callback! Monitor Object Notes: - The returned Monitor object is a unique identifier created by the system. - Developers cannot actively construct or forge this object. - Must save the returned monitor object reference for subsequent cancellation. - It is recommended to use a variable to save it to avoid losing the reference. Usage Examples: ```typescript // Monitor a single event type const monitor1 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent(); console.log(`Mouse: (\${mouseEvent.windowX}, \${mouseEvent.windowY})`); return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue } return { action: InputEventInterceptAction.BLOCK }; // Block event } ); // Monitor multiple event types (using bitwise operations) const monitor2 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent()!; console.log(`Mouse button: \${mouseEvent.button}`); return { action: InputEventInterceptAction.BLOCK }; } return { action: InputEventInterceptAction.CONTINUE }; } ); // When unregistering the monitor, use the returned Monitor object uiContext.removeLocalInputEventMonitor(monitor1); uiContext.removeLocalInputEventMonitor(monitor2); ```
+Registers a local input event monitor. The "Local" in the interface name indicates that the monitor is only valid within the current UIContext, and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors. Performance Warning: Do not perform time-consuming operations in the callback! Monitor Object Notes: - The returned Monitor object is a unique identifier created by the system. - Developers cannot actively construct or forge this object. - Must save the returned monitor object reference for subsequent cancellation. - It is recommended to use a variable to save it to avoid losing the reference. Usage Examples: ```typescript // Monitor a single event type const monitor1 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) =&gt; { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent(); console.log(`Mouse: (\${mouseEvent.windowX}, \${mouseEvent.windowY})`); return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue } return { action: InputEventInterceptAction.BLOCK }; // Block event } ); // Monitor multiple event types (using bitwise operations) const monitor2 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) =&gt; { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent()!; console.log(`Mouse button: \${mouseEvent.button}`); return { action: InputEventInterceptAction.BLOCK }; } return { action: InputEventInterceptAction.CONTINUE }; } ); // When unregistering the monitor, use the returned Monitor object uiContext.removeLocalInputEventMonitor(monitor1); uiContext.removeLocalInputEventMonitor(monitor2); ```
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ Registers a local input event monitor. The "Local" in the interface name indicat
 animateTo(value: AnimateParam, event: () => void): void
 ```
 
-Adds transition animations for state changes in closure code. > **NOTE：**> > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**. > > - When **animateTo** is called in > [aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the > component's build method is not executed yet, and internal components are not created. This means the animation > has no initial values to work with and will not function as expected. > > - During execution of > [aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear), > the component is being destroyed, so animations should not be used. > > - When a component appears or disappears, animation effects can be added through > component transition. > > - For properties that component transitions do not support, refer to > [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion), > which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes. > > - In certain scenarios, using animateTo with > [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may > produce unexpected results. For details, see > [Using animateTo Failed in State Management V2](../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2). > > > - When a UIAbility switches from the foreground to the background, any limited iteration animations that are > currently running will end immediately, thereby triggering the > onFinish animation completion callback. > > - If transition animations are turned off in Developer options, animations end on the current frame, and the > **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this > callback.
+Adds transition animations for state changes in closure code. &gt; **NOTE：**&gt; &gt; - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**. &gt; &gt; - When **animateTo** is called in &gt; [aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear), the &gt; component's build method is not executed yet, and internal components are not created. This means the animation &gt; has no initial values to work with and will not function as expected. &gt; &gt; - During execution of &gt; [aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear), &gt; the component is being destroyed, so animations should not be used. &gt; &gt; - When a component appears or disappears, animation effects can be added through &gt; component transition. &gt; &gt; - For properties that component transitions do not support, refer to &gt; [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion), &gt; which uses **animateTo** to achieve the effect of the component disappearing after the animation finishes. &gt; &gt; - In certain scenarios, using animateTo with &gt; [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) may &gt; produce unexpected results. For details, see &gt; [Using animateTo Failed in State Management V2](../../../ui/state-management/arkts-new-local.md#using-animateto-failed-in-state-management-v2). &gt; &gt; &gt; - When a UIAbility switches from the foreground to the background, any limited iteration animations that are &gt; currently running will end immediately, thereby triggering the &gt; onFinish animation completion callback. &gt; &gt; - If transition animations are turned off in Developer options, animations end on the current frame, and the &gt; **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this &gt; callback.
 
 **Since:** 10
 
@@ -130,7 +130,7 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise<void>
 ```
 
-Closes the sheet corresponding to **bindSheetContent**. This API uses a promise to return the result. > **NOTE：**> > Closing a sheet using this API will not invoke the **shouldDismiss** callback.
+Closes the sheet corresponding to **bindSheetContent**. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Closing a sheet using this API will not invoke the **shouldDismiss** callback.
 
 **Since:** 12
 
@@ -168,7 +168,7 @@ Closes the sheet corresponding to **bindSheetContent**. This API uses a promise 
 constructor()
 ```
 
-Construct a **UIContext** object. > **NOTE：**> > A **UIContext** object created using the constructor points to an ambiguous UI context, meaning it is not bound > to any specific UI instance. The unique ID of such a UIContext instance is -1.
+Construct a **UIContext** object. &gt; **NOTE：**&gt; &gt; A **UIContext** object created using the constructor points to an ambiguous UI context, meaning it is not bound &gt; to any specific UI instance. The unique ID of such a UIContext instance is -1.
 
 **Since:** 22
 
@@ -222,7 +222,7 @@ Creates an **Animator** object.
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#createanimator) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createanimator) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -258,7 +258,7 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined
 ```
 
-Creates a UI instance that does not depend on a window and returns its UI context. The created UI instance is a singleton. > **NOTE：**> > The returned UI context can only be used to create [custom nodes](../../../ui/arkts-user-defined-node.md). It > cannot be used for other UI operations.
+Creates a UI instance that does not depend on a window and returns its UI context. The created UI instance is a singleton. &gt; **NOTE：**&gt; &gt; The returned UI context can only be used to create [custom nodes](../../../ui/arkts-user-defined-node.md). It &gt; cannot be used for other UI operations.
 
 **Since:** 17
 
@@ -280,7 +280,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Context of the created UI instance, or **undefined** if creation fails. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | Context of the created UI instance, or **undefined** if creation fails. |
 
 **Error codes:**
 
@@ -295,7 +295,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 static destroyUIContextWithoutWindow(): void
 ```
 
-Destroys the UI instance created using [createUIContextWithoutWindow](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#createuicontextwithoutwindow).
+Destroys the UI instance created using [createUIContextWithoutWindow](#createuicontextwithoutwindow).
 
 **Since:** 17
 
@@ -437,7 +437,7 @@ Obtains all currently valid UIContext instances.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | Array of all currently valid UIContext instances. Returns an empty array if no valid UIContext instance exists. |
 
 ## getAtomicServiceBar
 
@@ -461,7 +461,7 @@ Get AtomicServiceBar.
 
 | Type | Description |
 | --- | --- |
-| Nullable&lt;[AtomicServiceBar](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| Nullable&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -491,7 +491,7 @@ Get the FrameNode attached to current window by id.
 
 | Type | Description |
 | --- | --- |
-| FrameNode | The instance of FrameNode. |
+| FrameNode \| null | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -499,7 +499,7 @@ Get the FrameNode attached to current window by id.
 static getCallingScopeUIContext(): UIContext | undefined
 ```
 
-Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous. > **NOTE：**> > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its > validity via the [isAvailable](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#isavailable) API.
+Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). This API returns **undefined** if the calling scope is ambiguous. &gt; **NOTE：**&gt; &gt; The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous &gt; task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its &gt; validity via the [isAvailable](#isavailable) API.
 
 **Since:** 22
 
@@ -515,7 +515,7 @@ Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the current [calling scope](../../../ui/arkts-global-interface.md#basic-concepts). Returns **undefined** if the calling scope is ambiguous. |
 
 ## getComponentSnapshot
 
@@ -539,7 +539,7 @@ Get ComponentSnapshot.
 
 | Type | Description |
 | --- | --- |
-| [ComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
+| [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
 
 ## getComponentUtils
 
@@ -563,7 +563,7 @@ get object ComponentUtils.
 
 | Type | Description |
 | --- | --- |
-| [ComponentUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -587,7 +587,7 @@ Get object context menu controller.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -611,7 +611,7 @@ Get object cursor controller.
 
 | Type | Description |
 | --- | --- |
-| [CursorController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
 ## getDialogPresenter
 
@@ -659,7 +659,7 @@ Get DragController.
 
 | Type | Description |
 | --- | --- |
-| [DragController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md) | the DragController |
+| [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -757,7 +757,7 @@ Get FocusController.
 
 | Type | Description |
 | --- | --- |
-| [FocusController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-focuscontroller-c.md) | the FocusController |
+| [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) | the FocusController |
 
 ## getFont
 
@@ -781,7 +781,7 @@ Obtains a **Font** object.
 
 | Type | Description |
 | --- | --- |
-| [Font](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-font-c.md) | Font** object. |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | Font** object. |
 
 ## getFrameNodeById
 
@@ -811,7 +811,7 @@ Get FrameNode by id.
 
 | Type | Description |
 | --- | --- |
-| FrameNode | The instance of FrameNode. |
+| FrameNode \| null | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -841,7 +841,7 @@ Get FrameNode by uniqueId. Obtains the entity node, FrameNode, of a component on
 
 | Type | Description |
 | --- | --- |
-| FrameNode | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| FrameNode \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -865,7 +865,7 @@ Obtains the context of this ability.
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-na/arkts-apis/arkts-na-context-t.md) | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
+| [Context](arkts-arkui-context-t.md) \| undefined | Context of the ability. The context type depends on the ability type. For example, if this API is called in a page within a UIAbility window, the returned context type is [UIAbilityContext]{ |
 
 ## getId
 
@@ -913,7 +913,7 @@ Obtains the avoidance mode of the virtual keyboard.
 
 | Type | Description |
 | --- | --- |
-| [KeyboardAvoidMode](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | Avoidance mode of the virtual keyboard. |
+| [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Avoidance mode of the virtual keyboard. |
 
 ## getLastFocusedUIContext
 
@@ -937,7 +937,7 @@ Obtains the UIContext of the UI instance that most recently switched to the focu
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the focused state. Returns **undefined** if the most recently focused instance has been destroyed or if no instance has ever been focused. |
 
 ## getLastForegroundUIContext
 
@@ -961,7 +961,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) \| undefined | UIContext of the UI instance that most recently switched to the foreground state. Returns **undefined** if the most recently foreground UI instance has been destroyed or if no UI instance has ever been in the foreground. |
 
 ## getMagnifier
 
@@ -969,7 +969,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 getMagnifier(): Magnifier
 ```
 
-Obtains a [Magnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-magnifier-c.md) object, which can be used to control the display and hiding of a magnifier.
+Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) object, which can be used to control the display and hiding of a magnifier.
 
 **Since:** 22
 
@@ -985,7 +985,7 @@ Obtains a [Magnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-magnifie
 
 | Type | Description |
 | --- | --- |
-| [Magnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-magnifier-c.md) | Magnifier** object, which can be used to control the display and hiding of a magnifier. |
+| [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier** object, which can be used to control the display and hiding of a magnifier. |
 
 ## getMaxFontScale
 
@@ -1033,7 +1033,7 @@ Obtains a **MeasureUtils** object for text calculation.
 
 | Type | Description |
 | --- | --- |
-| [MeasureUtils](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-measureutils-c.md) | Text metrics, such as text height and width. |
+| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | Text metrics, such as text height and width. |
 
 ## getMediaQuery
 
@@ -1057,7 +1057,7 @@ get object mediaQuery.
 
 | Type | Description |
 | --- | --- |
-| [MediaQuery](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1087,7 +1087,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| observer.NavigationInfo | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| observer.NavigationInfo \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1111,7 +1111,7 @@ Obtains the OverlayManager object.
 
 | Type | Description |
 | --- | --- |
-| [OverlayManager](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
+| [OverlayManager](arkts-arkui-arkui-uicontext-overlaymanager-c.md) | OverlayManager instance obtained. |
 
 ## getOverlayManagerOptions
 
@@ -1135,7 +1135,7 @@ Get object OverlayManagerOptions.
 
 | Type | Description |
 | --- | --- |
-| [OverlayManagerOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1165,7 +1165,7 @@ Get page information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| [PageInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1187,7 +1187,7 @@ Obtains the root node of the page corresponding to the UIContext.
 
 | Type | Description |
 | --- | --- |
-| FrameNode | FrameNode of the root node of the page or **null**. <br>If no valid FrameNode is available, **null** is returned. <br>If no page is loaded in the window, **null** is returned. |
+| FrameNode \| null | FrameNode of the root node of the page or **null**. <br>If no valid FrameNode is available, **null** is returned. <br>If no page is loaded in the window, **null** is returned. |
 
 **Error codes:**
 
@@ -1241,7 +1241,7 @@ Obtains a PromptAction object.
 
 | Type | Description |
 | --- | --- |
-| [PromptAction](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md) | PromptAction object. |
+| [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md) | PromptAction object. |
 
 ## getRouter
 
@@ -1265,7 +1265,7 @@ Obtains a Router object.
 
 | Type | Description |
 | --- | --- |
-| [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md) | Router object. |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) | Router object. |
 
 ## getSharedLocalStorage
 
@@ -1289,7 +1289,7 @@ Obtains the **LocalStorage** instance shared by this stage.
 
 | Type | Description |
 | --- | --- |
-| LocalStorage | LocalStorage** instance if it exists; **undefined** if it does not exist. |
+| LocalStorage \| undefined | LocalStorage** instance if it exists; **undefined** if it does not exist. |
 
 ## getSmartGestureController
 
@@ -1313,7 +1313,7 @@ Get object smart gesture controller.
 
 | Type | Description |
 | --- | --- |
-| [SmartGestureController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
+| [SmartGestureController](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
 
 ## getTextMenuController
 
@@ -1321,7 +1321,7 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Obtains a [TextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md) object, which can be used to control the context menu on selection.
+Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) object, which can be used to control the context menu on selection.
 
 **Since:** 16
 
@@ -1337,7 +1337,7 @@ Obtains a [TextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext
 
 | Type | Description |
 | --- | --- |
-| [TextMenuController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md) | Obtained **TextMenuController** object. |
+| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | Obtained **TextMenuController** object. |
 
 ## getUIInspector
 
@@ -1361,7 +1361,7 @@ Obtains the **UIInspector** object.
 
 | Type | Description |
 | --- | --- |
-| [UIInspector](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
+| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
 
 ## getUIObserver
 
@@ -1385,7 +1385,7 @@ Obtains the **UIObserver** object.
 
 | Type | Description |
 | --- | --- |
-| [UIObserver](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uiobserver-c.md) | UIObserver** object. |
+| [UIObserver](arkts-arkui-arkui-uicontext-uiobserver-c.md) | UIObserver** object. |
 
 ## getWindowHeightBreakpoint
 
@@ -1417,7 +1417,7 @@ Obtains the height breakpoint value of the window where this instance is located
 getWindowId(): number | undefined
 ```
 
-Obtains the ID of the window to which the current application instance belongs. > **NOTE：**> > If the UIContext resides inside a > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that runs in the main > application process, the top-level window ID of the main application is returned.
+Obtains the ID of the window to which the current application instance belongs. &gt; **NOTE：**&gt; &gt; If the UIContext resides inside a &gt; [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that runs in the main &gt; application process, the top-level window ID of the main application is returned.
 
 **Since:** 23
 
@@ -1433,7 +1433,7 @@ Obtains the ID of the window to which the current application instance belongs. 
 
 | Type | Description |
 | --- | --- |
-| number | ID of the window to which the current application instance belongs. If the window does not exist, **undefined** is returned. |
+| number \| undefined | ID of the window to which the current application instance belongs. If the window does not exist, **undefined** is returned. |
 
 ## getWindowName
 
@@ -1457,7 +1457,7 @@ Obtains the name of the window where this instance is located.
 
 | Type | Description |
 | --- | --- |
-| string | Name of the window where the current instance is located. If the window does not exist, **undefined** is returned. |
+| string \| undefined | Name of the window where the current instance is located. If the window does not exist, **undefined** is returned. |
 
 ## getWindowWidthBreakpoint
 
@@ -1616,7 +1616,7 @@ Converts a value in lpx units to a value in px.
 openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions?: SheetOptions, targetId?: number): Promise<void>
 ```
 
-Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result. > **NOTE：**> > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**. > > 2. Since [updateBindSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#updatebindsheet) and [closeBindSheet](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#closebindsheet) > depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself. > > 3. Setting **SheetOptions.UIContext** is not supported.
+Creates a sheet whose content is as defined in **bindSheetContent** and displays the sheet. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set &gt; **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**. &gt; &gt; 2. Since [updateBindSheet](#updatebindsheet) and [closeBindSheet](#closebindsheet) &gt; depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself. &gt; &gt; 3. Setting **SheetOptions.UIContext** is not supported.
 
 **Since:** 12
 
@@ -1675,7 +1675,7 @@ Post a frame callback to run on the next frame after the specified delay.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 | delayTime | number | Yes | The delay time in milliseconds, |
 
 ## postFrameCallback
@@ -1700,7 +1700,7 @@ Post a frame callback to run on the next frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | Yes | The frame callback to run on the next frame. |
 
 ## px2fp
 
@@ -1844,7 +1844,7 @@ Require DynamicSyncScene by id.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[DynamicSyncScene](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -1852,7 +1852,7 @@ Require DynamicSyncScene by id.
 static resolveUIContext(): ResolvedUIContext
 ```
 
-Obtains a UIContext instance along with its resolution strategy using a predefined priority order. > **NOTE：**> > This API resolves and returns a UIContext instance together with the strategy used to determine it, > > based on the following priority rules (in order): > > 1. UIContext in the current calling scope. > > 2. If only one UI instance exists, its UIContext is returned. > > 3. If a UI instance has switched to the focused state, and the most recently focused UI instance has not been > destroyed, the UIContext of that most recently focused instance is returned. > > 4. If a UI instance has switched to the foreground state, and the most recently foreground UI instance has not > been destroyed, the UIContext of that most recently foreground instance is returned. > > 5. If multiple UI instances exist, the UIContext with the largest unique instance ID is returned. > > 6. If none of the above conditions are met, an invalid UIContext instance is returned.
+Obtains a UIContext instance along with its resolution strategy using a predefined priority order. &gt; **NOTE：**&gt; &gt; This API resolves and returns a UIContext instance together with the strategy used to determine it, &gt; &gt; based on the following priority rules (in order): &gt; &gt; 1. UIContext in the current calling scope. &gt; &gt; 2. If only one UI instance exists, its UIContext is returned. &gt; &gt; 3. If a UI instance has switched to the focused state, and the most recently focused UI instance has not been &gt; destroyed, the UIContext of that most recently focused instance is returned. &gt; &gt; 4. If a UI instance has switched to the foreground state, and the most recently foreground UI instance has not &gt; been destroyed, the UIContext of that most recently foreground instance is returned. &gt; &gt; 5. If multiple UI instances exist, the UIContext with the largest unique instance ID is returned. &gt; &gt; 6. If none of the above conditions are met, an invalid UIContext instance is returned.
 
 **Since:** 22
 
@@ -1868,7 +1868,7 @@ Obtains a UIContext instance along with its resolution strategy using a predefin
 
 | Type | Description |
 | --- | --- |
-| [ResolvedUIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-resolveduicontext-c.md) | UIContext instance along with its resolution strategy. |
+| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | UIContext instance along with its resolution strategy. |
 
 ## runScopedTask
 
@@ -1916,7 +1916,7 @@ Set custom keyboard continue feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | The custom keyboard continue feature. |
+| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | The custom keyboard continue feature. |
 
 ## setImageCacheCount
 
@@ -1972,7 +1972,7 @@ Set image cache capacity of raw image data size in bytes before decode. if not s
 setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 ```
 
-Sets the avoidance mode for the virtual keyboard. > **NOTE：**> > With **KeyboardAvoidMode.RESIZE**, the page is resized to prevent the virtual keyboard from obstructing the > view. Regarding components on the page, those whose width and height are set in percentage are resized with the > page, and those whose width and height are set to specific values are laid out according to their settings. > With **KeyboardAvoidMode.RESIZE**, **expandSafeArea([SafeAreaType.KEYBOARD],[SafeAreaEdge.BOTTOM])** does not > take effect. > > With **KeyboardAvoidMode.NONE**, keyboard avoidance is disabled, and the page will be covered by the displayed > keyboard. > > **setKeyboardAvoidMode** only affects page layouts. It does not apply to popup components, including the > following: **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, **Toast**, **OverlayManager**. > For details about the avoidance mode of popup components, see > CustomDialogControllerOptions.
+Sets the avoidance mode for the virtual keyboard. &gt; **NOTE：**&gt; &gt; With **KeyboardAvoidMode.RESIZE**, the page is resized to prevent the virtual keyboard from obstructing the &gt; view. Regarding components on the page, those whose width and height are set in percentage are resized with the &gt; page, and those whose width and height are set to specific values are laid out according to their settings. &gt; With **KeyboardAvoidMode.RESIZE**, **expandSafeArea([SafeAreaType.KEYBOARD],[SafeAreaEdge.BOTTOM])** does not &gt; take effect. &gt; &gt; With **KeyboardAvoidMode.NONE**, keyboard avoidance is disabled, and the page will be covered by the displayed &gt; keyboard. &gt; &gt; **setKeyboardAvoidMode** only affects page layouts. It does not apply to popup components, including the &gt; following: **Dialog**, **Popup**, **Menu**, **BindSheet**, **BindContentCover**, **Toast**, **OverlayManager**. &gt; For details about the avoidance mode of popup components, see &gt; CustomDialogControllerOptions.
 
 **Since:** 11
 
@@ -1988,7 +1988,7 @@ Sets the avoidance mode for the virtual keyboard. > **NOTE：**> > With **Keyboa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.<br>When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.<br>When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
 
 ## setOverlayManagerOptions
 
@@ -2012,7 +2012,7 @@ Init OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | Yes | Options. |
+| options | [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | Yes | Options. |
 
 **Return value:**
 
@@ -2098,7 +2098,7 @@ Sets the text selection clear policy for text component. Default policy: **TextS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
+| policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
 
 ## showActionSheet
 
@@ -2301,7 +2301,7 @@ Unbind tabs from scrollable container component.
 updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-Updates the style of the sheet corresponding to the provided **bindSheetContent**. This API uses a promise to return the result. > **NOTE：**> > **SheetOptions.UIContext**, **SheetOptions.mode**, and callback functions cannot be updated.
+Updates the style of the sheet corresponding to the provided **bindSheetContent**. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; **SheetOptions.UIContext**, **SheetOptions.mode**, and callback functions cannot be updated.
 
 **Since:** 12
 

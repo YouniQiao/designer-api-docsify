@@ -12,7 +12,7 @@ import { appManager } from '@kit.AbilityKit';
 function killProcessWithAccount(bundleName: string, accountId: int): Promise<void>
 ```
 
-Kills a process by bundle name and account ID. This API uses a promise to return the result. > **NOTE：**> > The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the > current user.
+Kills a process by bundle name and account ID. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
     Promise<void>
 ```
 
-Kills a process by bundle name and account ID. This API uses a promise to return the result. > **NOTE：**> > The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the > current user.
+Kills a process by bundle name and account ID. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
 
 **Since:** 23
 
@@ -145,7 +145,7 @@ try {
 function killProcessWithAccount(bundleName: string, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the > current user.
+Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the &gt; current user.
 
 **Since:** 23
 
@@ -165,7 +165,7 @@ Kills a process by bundle name and account ID. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | accountId | int | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the API call result. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the API call result. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

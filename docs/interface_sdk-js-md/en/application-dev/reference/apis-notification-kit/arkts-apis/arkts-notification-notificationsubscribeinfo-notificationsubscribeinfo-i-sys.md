@@ -34,7 +34,7 @@ Bundle names of the applications whose notifications to subscribe to. If this pa
 deviceType?: string
 ```
 
-Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-services-kit/arkts-apis/arkts-deviceinfo.md).
+Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-na/arkts-apis/arkts-deviceinfo.md).
 
 **Type:** string
 

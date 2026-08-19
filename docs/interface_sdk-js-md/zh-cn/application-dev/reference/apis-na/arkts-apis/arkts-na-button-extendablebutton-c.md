@@ -151,7 +151,7 @@ Set the Button Options.
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableButton](arkts-na-button-extendablebutton-c.md) |  |
 
 ## setButtonOptions
 
@@ -181,5 +181,5 @@ Set the Button Options.
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableButton](arkts-na-button-extendablebutton-c.md) |  |
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## startBackgroundRunning
@@ -30,7 +31,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 | context | Context | 是 | 应用运行的上下文。 <br> <br>FA模型的应用Context定义见Context。<br>Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | bgMode | BackgroundMode | 是 | 长时任务类型。 |
 | wantAgent | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | 是 | 通知参数，用于指定点击长时任务通知后跳转的界面。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，申请长时任务成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，申请长时任务成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

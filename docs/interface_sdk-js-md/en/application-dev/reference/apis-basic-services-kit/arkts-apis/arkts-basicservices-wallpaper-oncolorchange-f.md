@@ -6,7 +6,7 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
-## on_colorChange('colorChange')
+## on('colorChange')
 
 ```TypeScript
 function on(type: 'colorChange', callback: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void

@@ -1,6 +1,6 @@
 # TCPSocketConnection
 
-TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调用TCPSocketConnection的方法前，需要先获取TCPSocketConnection对象。 > **说明：** > > 客户端与服务端成功建立连接后，才能通过返回的TCPSocketConnection对象调用相应的接口。
+TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调用TCPSocketConnection的方法前，需要先获取TCPSocketConnection对象。 &gt; **说明：** &gt; &gt; 客户端与服务端成功建立连接后，才能通过返回的TCPSocketConnection对象调用相应的接口。
 
 **起始版本：** 10
 
@@ -11,6 +11,7 @@ TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调�
 ## 导入模块
 
 ```TypeScript
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -33,7 +34,7 @@ close(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -180,7 +181,7 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 ```
 
-获取对端Socket地址。使用callback异步回调。 > **说明：** > > 与客户端建立连接后，才可调用此方法。
+获取对端Socket地址。使用callback异步回调。 &gt; **说明：** &gt; &gt; 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -194,7 +195,7 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -229,7 +230,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 getRemoteAddress(): Promise<NetAddress>
 ```
 
-获取对端Socket地址。使用Promise异步回调。 > **说明：** > > 与客户端建立连接后，才可调用此方法。
+获取对端Socket地址。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -275,7 +276,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 getSocketFd(): Promise<int>
 ```
 
-获取TCPSocketConnection连接的文件描述符。使用Promise异步回调。 > **说明：** > > - 与客户端建立连接后，才可调用此方法。 > > - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 > > - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭 > Socket连接，避免直接操作文件描述符进行关闭。
+获取TCPSocketConnection连接的文件描述符。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 与客户端建立连接后，才可调用此方法。 &gt; &gt; - 连接断开、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 &gt; &gt; - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭 &gt; Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 23
 
@@ -322,7 +323,7 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 });
 ```
 
-## off_close('close')
+## off('close')
 
 ```TypeScript
 off(type: 'close', callback?: Callback<void>): void
@@ -341,7 +342,7 @@ off(type: 'close', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 取消订阅的事件类型。'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -366,7 +367,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -385,7 +386,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 取消订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。 |
 
 **错误码：**
 
@@ -411,7 +412,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## off_message('message')
+## off('message')
 
 ```TypeScript
 off(type: 'message', callback?: Callback<SocketMessageInfo>): void
@@ -430,7 +431,7 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 取消订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 否 | 回调函数。可以指定传入on中的callback取消对应的订阅，也可以不指定callback清空所有订阅。<br>**起始版本：** 11 |
 
 **错误码：**
 
@@ -464,7 +465,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## on_close('close')
+## on('close')
 
 ```TypeScript
 on(type: 'close', callback: Callback<void>): void
@@ -483,7 +484,7 @@ on(type: 'close', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 订阅的事件类型。'close'：关闭事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -505,7 +506,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -524,7 +525,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -546,7 +547,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 });
 ```
 
-## on_message('message')
+## on('message')
 
 ```TypeScript
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
@@ -565,7 +566,7 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：接收消息事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。<br>**起始版本：** 11 |
 
 **错误码：**
 
@@ -602,7 +603,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-通过TCPSocketConnection连接发送数据。使用callback异步回调。 > **说明：** > > 与客户端建立连接后，才可调用此方法。
+通过TCPSocketConnection连接发送数据。使用callback异步回调。 &gt; **说明：** &gt; &gt; 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -617,7 +618,7 @@ send(options: TCPSendOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TCPSendOptions](arkts-network-socket-tcpsendoptions-i.md) | 是 | TCPSocketConnection发送请求的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -650,7 +651,7 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 send(options: TCPSendOptions): Promise<void>
 ```
 
-通过TCPSocketConnection连接发送数据。使用Promise异步回调。 > **说明：** > > 与客户端建立连接后，才可调用此方法。
+通过TCPSocketConnection连接发送数据。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 与客户端建立连接后，才可调用此方法。
 
 **起始版本：** 10
 

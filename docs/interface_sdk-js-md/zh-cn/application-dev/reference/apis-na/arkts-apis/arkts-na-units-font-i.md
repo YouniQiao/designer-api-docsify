@@ -1,6 +1,6 @@
 # Font
 
-设置文本样式。 > **说明：** > > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
+设置文本样式。 &gt; **说明：** &gt; &gt; 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
 **起始版本：** 23
 

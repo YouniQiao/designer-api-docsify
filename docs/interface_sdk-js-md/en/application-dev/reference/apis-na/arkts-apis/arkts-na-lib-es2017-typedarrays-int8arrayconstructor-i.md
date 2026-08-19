@@ -23,5 +23,3 @@ new (): Int8Array
 
 | Type | Description |
 | --- | --- |
-| Int8Array |  |
-

@@ -32,8 +32,6 @@ accessibilityActionOptions(option: AccessibilityActionOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityChecked
 
 ```TypeScript
@@ -56,8 +54,6 @@ accessibilityChecked(isCheck: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityCustomActions
 
 ```TypeScript
@@ -80,8 +76,6 @@ accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityDefaultFocus
 
 ```TypeScript
@@ -104,8 +98,6 @@ accessibilityDefaultFocus(focus: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityDescription
 
 ```TypeScript
@@ -128,8 +120,6 @@ accessibilityDescription(description: Resource | string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityFocusDrawLevel
 
 ```TypeScript
@@ -152,8 +142,6 @@ accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityGroup
 
 ```TypeScript
@@ -177,8 +165,6 @@ accessibilityGroup(isGroup: boolean | undefined, accessibilityOptions?: Accessib
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityLevel
 
 ```TypeScript
@@ -201,8 +187,6 @@ accessibilityLevel(value: string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityNextFocusId
 
 ```TypeScript
@@ -225,8 +209,6 @@ accessibilityNextFocusId(nextId: string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityNextFocusId
 
 ```TypeScript
@@ -250,8 +232,6 @@ accessibilityNextFocusId(nextId: string, nextFocusParams: AccessibilityNextFocus
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityRole
 
 ```TypeScript
@@ -274,8 +254,6 @@ accessibilityRole(role: AccessibilityRoleType | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityScrollTriggerable
 
 ```TypeScript
@@ -298,8 +276,6 @@ accessibilityScrollTriggerable(isTriggerable: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilitySelected
 
 ```TypeScript
@@ -322,8 +298,6 @@ accessibilitySelected(isSelect: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityStateDescription
 
 ```TypeScript
@@ -346,8 +320,6 @@ accessibilityStateDescription(description: string | Resource | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityText
 
 ```TypeScript
@@ -370,8 +342,6 @@ accessibilityText(text: Resource | string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityTextHint
 
 ```TypeScript
@@ -394,8 +364,6 @@ accessibilityTextHint(value: string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityUseSamePage
 
 ```TypeScript
@@ -418,8 +386,6 @@ accessibilityUseSamePage(pageMode: AccessibilitySamePageMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## accessibilityVirtualNode
 
 ```TypeScript
@@ -442,8 +408,6 @@ accessibilityVirtualNode(builder: CustomBuilder | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## advancedBlendMode
 
 ```TypeScript
@@ -467,8 +431,6 @@ advancedBlendMode(effect: BlendMode | Blender | undefined, type?: BlendApplyType
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## align
 
 ```TypeScript
@@ -491,8 +453,6 @@ align(alignment: Alignment | LocalizedAlignment | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## alignRules
 
 ```TypeScript
@@ -515,8 +475,6 @@ alignRules(value: AlignRuleOption | LocalizedAlignRuleOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## alignSelf
 
 ```TypeScript
@@ -539,8 +497,6 @@ alignSelf(value: ItemAlign | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## allowDrop
 
 ```TypeScript
@@ -563,8 +519,6 @@ allowDrop(value: Array<UniformDataType> | null | Array<string> | undefined): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## animation
 
 ```TypeScript
@@ -587,8 +541,6 @@ animation(value: AnimateParam | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## aspectRatio
 
 ```TypeScript
@@ -611,8 +563,6 @@ aspectRatio(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backdropBlur
 
 ```TypeScript
@@ -637,8 +587,6 @@ backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptions?: Sys
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## background
 
 ```TypeScript
@@ -662,8 +610,6 @@ background(content: CustomBuilder | ResourceColor | undefined, options?: Backgro
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -688,8 +634,6 @@ backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBlurStyleO
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundBrightness
 
 ```TypeScript
@@ -712,8 +656,6 @@ backgroundBrightness(params: BackgroundBrightnessOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundColor
 
 ```TypeScript
@@ -736,8 +678,6 @@ backgroundColor(value: ResourceColor | ColorMetrics | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundEffect
 
 ```TypeScript
@@ -761,8 +701,6 @@ backgroundEffect(options: BackgroundEffectOptions | undefined, sysOptions?: Syst
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundFilter
 
 ```TypeScript
@@ -785,8 +723,6 @@ backgroundFilter(filter: Filter | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundImage
 
 ```TypeScript
@@ -809,8 +745,6 @@ backgroundImage(src: ResourceStr | PixelMap | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundImage
 
 ```TypeScript
@@ -834,8 +768,6 @@ backgroundImage(src: ResourceStr | PixelMap | undefined, options: BackgroundImag
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundImage
 
 ```TypeScript
@@ -859,8 +791,6 @@ backgroundImage(src: ResourceStr | PixelMap | undefined, repeat: ImageRepeat): t
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundImagePosition
 
 ```TypeScript
@@ -883,8 +813,6 @@ backgroundImagePosition(value: Position | Alignment | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundImageResizable
 
 ```TypeScript
@@ -907,8 +835,6 @@ backgroundImageResizable(value: ResizableOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backgroundImageSize
 
 ```TypeScript
@@ -931,8 +857,6 @@ backgroundImageSize(value: SizeOptions | ImageSize | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContentCover
 
 ```TypeScript
@@ -957,8 +881,6 @@ bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: Custo
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContentCover
 
 ```TypeScript
@@ -983,8 +905,6 @@ bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: Custo
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContextMenu
 
 ```TypeScript
@@ -1009,8 +929,6 @@ bindContextMenu(content: CustomBuilder | undefined, responseType: ResponseType |
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContextMenu
 
 ```TypeScript
@@ -1035,8 +953,6 @@ bindContextMenu(isShow: boolean | Bindable<boolean> | undefined, content: Custom
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuByIsShow
 
 ```TypeScript
@@ -1062,8 +978,6 @@ bindContextMenuByIsShow(isShow: boolean | Bindable<boolean> | undefined,
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuByResponseType
 
 ```TypeScript
@@ -1089,8 +1003,6 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement> | unde
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1114,8 +1026,6 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1140,8 +1050,6 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindMenu
 
 ```TypeScript
@@ -1165,8 +1073,6 @@ bindMenu(content: Array<MenuElement> | CustomBuilder | undefined, options?: Menu
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindMenu
 
 ```TypeScript
@@ -1191,8 +1097,6 @@ bindMenu(isShow: boolean | Bindable<boolean> | undefined, content: Array<MenuEle
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindPopup
 
 ```TypeScript
@@ -1216,8 +1120,6 @@ bindPopup(show: boolean | undefined, popup: PopupOptions | CustomPopupOptions | 
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindSheet
 
 ```TypeScript
@@ -1242,8 +1144,6 @@ bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilde
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindTips
 
 ```TypeScript
@@ -1267,8 +1167,6 @@ bindTips(message: TipsMessageType | undefined, options?: TipsOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## blendMode
 
 ```TypeScript
@@ -1292,8 +1190,6 @@ blendMode(value: BlendMode | undefined, type?: BlendApplyType): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## blur
 
 ```TypeScript
@@ -1318,8 +1214,6 @@ blur(blurRadius: double | undefined, options?: BlurOptions, sysOptions?: SystemA
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## border
 
 ```TypeScript
@@ -1342,8 +1236,6 @@ border(value: BorderOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## borderColor
 
 ```TypeScript
@@ -1366,8 +1258,6 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined)
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## borderImage
 
 ```TypeScript
@@ -1390,8 +1280,6 @@ borderImage(value: BorderImageOption | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## borderRadius
 
 ```TypeScript
@@ -1415,8 +1303,6 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## borderStyle
 
 ```TypeScript
@@ -1439,8 +1325,6 @@ borderStyle(value: BorderStyle | EdgeStyles | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## borderWidth
 
 ```TypeScript
@@ -1463,8 +1347,6 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## brightness
 
 ```TypeScript
@@ -1487,8 +1369,6 @@ brightness(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## chainMode
 
 ```TypeScript
@@ -1512,8 +1392,6 @@ chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## chainWeight
 
 ```TypeScript
@@ -1536,8 +1414,6 @@ chainWeight(chainWeight: ChainWeightOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## clickEffect
 
 ```TypeScript
@@ -1560,8 +1436,6 @@ clickEffect(value: ClickEffect | null | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## clip
 
 ```TypeScript
@@ -1584,8 +1458,6 @@ clip(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## clipShape
 
 ```TypeScript
@@ -1608,8 +1480,6 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## colorBlend
 
 ```TypeScript
@@ -1632,8 +1502,6 @@ colorBlend(value: Color | string | Resource | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## compositingFilter
 
 ```TypeScript
@@ -1656,8 +1524,6 @@ compositingFilter(filter: Filter | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## constraintSize
 
 ```TypeScript
@@ -1680,8 +1546,6 @@ constraintSize(value: ConstraintSizeOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contrast
 
 ```TypeScript
@@ -1704,8 +1568,6 @@ contrast(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## customProperty
 
 ```TypeScript
@@ -1729,8 +1591,6 @@ customProperty(name: string, value: CustomProperty): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## debugLine
 
 ```TypeScript
@@ -1754,8 +1614,6 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## defaultFocus
 
 ```TypeScript
@@ -1778,8 +1636,6 @@ defaultFocus(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## direction
 
 ```TypeScript
@@ -1802,8 +1658,6 @@ direction(value: Direction | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## displayPriority
 
 ```TypeScript
@@ -1826,8 +1680,6 @@ displayPriority(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## doubleSided
 
 ```TypeScript
@@ -1850,8 +1702,6 @@ doubleSided(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## dragPreview
 
 ```TypeScript
@@ -1875,8 +1725,6 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string | undefined, config?:
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## dragPreviewOptions
 
 ```TypeScript
@@ -1900,8 +1748,6 @@ dragPreviewOptions(value: DragPreviewOptions | undefined, options?: DragInteract
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## draggable
 
 ```TypeScript
@@ -1924,8 +1770,6 @@ draggable(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## drawModifier
 
 ```TypeScript
@@ -1948,8 +1792,6 @@ drawModifier(modifier: DrawModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## edgeLight
 
 ```TypeScript
@@ -1972,8 +1814,6 @@ edgeLight(params: EdgeLightParams | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableClickSoundEffect
 
 ```TypeScript
@@ -1996,8 +1836,6 @@ enableClickSoundEffect(enabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enabled
 
 ```TypeScript
@@ -2020,8 +1858,6 @@ enabled(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## excludeFromRenderGroup
 
 ```TypeScript
@@ -2044,8 +1880,6 @@ excludeFromRenderGroup(exclude: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## expandSafeArea
 
 ```TypeScript
@@ -2069,8 +1903,6 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## flexBasis
 
 ```TypeScript
@@ -2093,8 +1925,6 @@ flexBasis(value: double | string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## flexGrow
 
 ```TypeScript
@@ -2117,8 +1947,6 @@ flexGrow(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## flexShrink
 
 ```TypeScript
@@ -2141,8 +1969,6 @@ flexShrink(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## focusBox
 
 ```TypeScript
@@ -2165,8 +1991,6 @@ focusBox(style: FocusBoxStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## focusOnTouch
 
 ```TypeScript
@@ -2189,8 +2013,6 @@ focusOnTouch(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## focusScopeId
 
 ```TypeScript
@@ -2215,8 +2037,6 @@ focusScopeId(id: string | undefined, isGroup?: boolean, arrowStepOut?: boolean):
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## focusScopePriority
 
 ```TypeScript
@@ -2240,8 +2060,6 @@ focusScopePriority(scopeId: string | undefined, priority?: FocusPriority): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## focusable
 
 ```TypeScript
@@ -2264,8 +2082,6 @@ focusable(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## foregroundBlurStyle
 
 ```TypeScript
@@ -2290,8 +2106,6 @@ foregroundBlurStyle(style: BlurStyle | undefined, options?: ForegroundBlurStyleO
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## foregroundColor
 
 ```TypeScript
@@ -2314,8 +2128,6 @@ foregroundColor(value: ResourceColor | ColoringStrategy | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## foregroundEffect
 
 ```TypeScript
@@ -2338,8 +2150,6 @@ foregroundEffect(options: ForegroundEffectOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## foregroundFilter
 
 ```TypeScript
@@ -2362,8 +2172,6 @@ foregroundFilter(filter: Filter | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## freeze
 
 ```TypeScript
@@ -2386,8 +2194,6 @@ freeze(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## geometryTransition
 
 ```TypeScript
@@ -2411,8 +2217,6 @@ geometryTransition(id: string | undefined, options?: GeometryTransitionOptions):
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## gesture
 
 ```TypeScript
@@ -2436,8 +2240,6 @@ gesture(gesture: GestureType, mask?: GestureMask): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## gestureModifier
 
 ```TypeScript
@@ -2460,8 +2262,6 @@ gestureModifier(modifier: GestureModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## grayscale
 
 ```TypeScript
@@ -2484,8 +2284,6 @@ grayscale(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## groupDefaultFocus
 
 ```TypeScript
@@ -2508,8 +2306,6 @@ groupDefaultFocus(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## height
 
 ```TypeScript
@@ -2532,8 +2328,6 @@ height(heightValue: Length | LayoutPolicy | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hitTestBehavior
 
 ```TypeScript
@@ -2556,8 +2350,6 @@ hitTestBehavior(value: HitTestMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hoverEffect
 
 ```TypeScript
@@ -2580,8 +2372,6 @@ hoverEffect(value: HoverEffect | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hueRotate
 
 ```TypeScript
@@ -2604,8 +2394,6 @@ hueRotate(value: double | string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## id
 
 ```TypeScript
@@ -2628,8 +2416,6 @@ id(value: string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## ignoreLayoutSafeArea
 
 ```TypeScript
@@ -2653,8 +2439,6 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## inspectorLabel
 
 ```TypeScript
@@ -2677,8 +2461,6 @@ inspectorLabel(label: string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## invert
 
 ```TypeScript
@@ -2701,8 +2483,6 @@ invert(value: double | InvertOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## key
 
 ```TypeScript
@@ -2725,8 +2505,6 @@ key(value: string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## keyboardShortcut
 
 ```TypeScript
@@ -2751,8 +2529,6 @@ keyboardShortcut(value: string | FunctionKey | undefined, keys: Array<ModifierKe
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## layoutGravity
 
 ```TypeScript
@@ -2775,8 +2551,6 @@ layoutGravity(alignment: LocalizedAlignment | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## layoutWeight
 
 ```TypeScript
@@ -2799,8 +2573,6 @@ layoutWeight(value: double | string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## lightUpEffect
 
 ```TypeScript
@@ -2823,8 +2595,6 @@ lightUpEffect(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## linearGradient
 
 ```TypeScript
@@ -2847,8 +2617,6 @@ linearGradient(value: LinearGradientOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## linearGradientBlur
 
 ```TypeScript
@@ -2872,8 +2640,6 @@ linearGradientBlur(value: double | undefined, options: LinearGradientBlurOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## margin
 
 ```TypeScript
@@ -2896,8 +2662,6 @@ margin(value: Margin | Length | LocalizedMargin | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## markAnchor
 
 ```TypeScript
@@ -2920,8 +2684,6 @@ markAnchor(value: Position | LocalizedPosition | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## mask
 
 ```TypeScript
@@ -2944,8 +2706,6 @@ mask(value: ProgressMask | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## maskShape
 
 ```TypeScript
@@ -2968,8 +2728,6 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## materialFilter
 
 ```TypeScript
@@ -2992,8 +2750,6 @@ materialFilter(filter: Filter | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## monopolizeEvents
 
 ```TypeScript
@@ -3016,8 +2772,6 @@ monopolizeEvents(monopolize: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## motionBlur
 
 ```TypeScript
@@ -3040,8 +2794,6 @@ motionBlur(value: MotionBlurOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## motionPath
 
 ```TypeScript
@@ -3064,8 +2816,6 @@ motionPath(value: MotionPathOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## mouseResponseRegion
 
 ```TypeScript
@@ -3088,8 +2838,6 @@ mouseResponseRegion(value: Array<Rectangle> | Rectangle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## nextFocus
 
 ```TypeScript
@@ -3112,8 +2860,6 @@ nextFocus(nextStep: FocusMovement | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## obscured
 
 ```TypeScript
@@ -3136,8 +2882,6 @@ obscured(reasons: Array<ObscuredReasons> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## offset
 
 ```TypeScript
@@ -3160,8 +2904,6 @@ offset(value: Position | Edges | LocalizedEdges | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityActionIntercept
 
 ```TypeScript
@@ -3184,8 +2926,6 @@ onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback | 
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityFocus
 
 ```TypeScript
@@ -3208,8 +2948,6 @@ onAccessibilityFocus(callback: AccessibilityFocusCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityHover
 
 ```TypeScript
@@ -3232,8 +2970,6 @@ onAccessibilityHover(callback: AccessibilityCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAccessibilityHoverTransparent
 
 ```TypeScript
@@ -3256,8 +2992,6 @@ onAccessibilityHoverTransparent(callback: AccessibilityTransparentCallback | und
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAppear
 
 ```TypeScript
@@ -3280,8 +3014,6 @@ onAppear(event: (() => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAreaChange
 
 ```TypeScript
@@ -3304,8 +3036,6 @@ onAreaChange(event: ((oldValue: Area, newValue: Area) => void) | undefined): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAreaChange
 
 ```TypeScript
@@ -3329,8 +3059,6 @@ onAreaChange (event: AreaChangeCallback, options?: AreaChangeOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAttach
 
 ```TypeScript
@@ -3353,8 +3081,6 @@ onAttach(callback: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAxisEvent
 
 ```TypeScript
@@ -3377,8 +3103,6 @@ onAxisEvent(event: Callback<AxisEvent> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onBlur
 
 ```TypeScript
@@ -3401,8 +3125,6 @@ onBlur(event: (() => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChildTouchTest
 
 ```TypeScript
@@ -3425,8 +3147,6 @@ onChildTouchTest(event: ((value: Array<TouchTestInfo>) => TouchResult) | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onClick
 
 ```TypeScript
@@ -3449,8 +3169,6 @@ onClick(event: ((event: ClickEvent) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onClick
 
 ```TypeScript
@@ -3474,8 +3192,6 @@ onClick(event: Callback<ClickEvent> | undefined, distanceThreshold: double | und
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDetach
 
 ```TypeScript
@@ -3498,8 +3214,6 @@ onDetach(callback: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDigitalCrown
 
 ```TypeScript
@@ -3522,8 +3236,6 @@ onDigitalCrown(handler: Callback<CrownEvent> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDisAppear
 
 ```TypeScript
@@ -3546,8 +3258,6 @@ onDisAppear(event: (() => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDragEnd
 
 ```TypeScript
@@ -3570,8 +3280,6 @@ onDragEnd(event: ((event: DragEvent, extraParams?: string) => void) | undefined)
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDragEnter
 
 ```TypeScript
@@ -3594,8 +3302,6 @@ onDragEnter(event: ((event: DragEvent, extraParams?: string) => void) | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDragLeave
 
 ```TypeScript
@@ -3618,8 +3324,6 @@ onDragLeave(event: ((event: DragEvent, extraParams?: string) => void) | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDragMove
 
 ```TypeScript
@@ -3642,8 +3346,6 @@ onDragMove(event: ((event: DragEvent, extraParams?: string) => void) | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDragSpringLoading
 
 ```TypeScript
@@ -3667,8 +3369,6 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null | undefined,
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDragStart
 
 ```TypeScript
@@ -3691,8 +3391,6 @@ onDragStart(event: ((event: DragEvent, extraParams?: string) => CustomBuilder | 
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDrop
 
 ```TypeScript
@@ -3715,8 +3413,6 @@ onDrop(event: ((event: DragEvent, extraParams?: string) => void) | undefined): t
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDrop
 
 ```TypeScript
@@ -3740,8 +3436,6 @@ onDrop(eventCallback: OnDragEventCallback | undefined, dropOptions: DropOptions)
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onFocus
 
 ```TypeScript
@@ -3764,8 +3458,6 @@ onFocus(event: (() => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onFocusAxisEvent
 
 ```TypeScript
@@ -3788,8 +3480,6 @@ onFocusAxisEvent(event: Callback<FocusAxisEvent> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onGestureCollectIntercept
 
 ```TypeScript
@@ -3812,8 +3502,6 @@ onGestureCollectIntercept(callback: GestureCollectInterceptCallback): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onGestureJudgeBegin
 
 ```TypeScript
@@ -3836,8 +3524,6 @@ onGestureJudgeBegin(callback: ((gestureInfo: GestureInfo, event: BaseGestureEven
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onGestureRecognizerJudgeBegin
 
 ```TypeScript
@@ -3860,8 +3546,6 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | un
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onGestureRecognizerJudgeBegin
 
 ```TypeScript
@@ -3885,8 +3569,6 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback | un
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onHover
 
 ```TypeScript
@@ -3909,8 +3591,6 @@ onHover(event: ((isHover: boolean, event: HoverEvent) => void) | undefined): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onHoverMove
 
 ```TypeScript
@@ -3933,8 +3613,6 @@ onHoverMove(event: Callback<HoverEvent> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onKeyEvent
 
 ```TypeScript
@@ -3957,8 +3635,6 @@ onKeyEvent(event: Callback<KeyEvent, boolean> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onKeyEventDispatch
 
 ```TypeScript
@@ -3981,8 +3657,6 @@ onKeyEventDispatch(event: Callback<KeyEvent, boolean> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onKeyPreIme
 
 ```TypeScript
@@ -4005,8 +3679,6 @@ onKeyPreIme(event: Callback<KeyEvent, boolean> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onMouse
 
 ```TypeScript
@@ -4029,8 +3701,6 @@ onMouse(event: ((event: MouseEvent) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onNeedSoftkeyboard
 
 ```TypeScript
@@ -4053,8 +3723,6 @@ onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | unde
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onPreDrag
 
 ```TypeScript
@@ -4077,8 +3745,6 @@ onPreDrag(callback: Callback<PreDragStatus> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onSizeChange
 
 ```TypeScript
@@ -4101,8 +3767,6 @@ onSizeChange(event: SizeChangeCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onTouch
 
 ```TypeScript
@@ -4125,8 +3789,6 @@ onTouch(event: ((event: TouchEvent) => void) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onTouchIntercept
 
 ```TypeScript
@@ -4149,8 +3811,6 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onTouchTestDone
 
 ```TypeScript
@@ -4173,8 +3833,6 @@ onTouchTestDone(callback: TouchTestDoneCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onVisibleAreaApproximateChange
 
 ```TypeScript
@@ -4198,8 +3856,6 @@ onVisibleAreaApproximateChange(options: VisibleAreaEventOptions | undefined, eve
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onVisibleAreaChange
 
 ```TypeScript
@@ -4223,8 +3879,6 @@ onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeC
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onVisibleAreaChange
 
 ```TypeScript
@@ -4249,8 +3903,6 @@ onVisibleAreaChange(ratios: Array<double> | undefined, event: VisibleAreaChangeC
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## opacity
 
 ```TypeScript
@@ -4273,8 +3925,6 @@ opacity(value: double | Resource | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## outline
 
 ```TypeScript
@@ -4297,8 +3947,6 @@ outline(value: OutlineOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## outlineColor
 
 ```TypeScript
@@ -4321,8 +3969,6 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## outlineRadius
 
 ```TypeScript
@@ -4345,8 +3991,6 @@ outlineRadius(value: Dimension | OutlineRadiuses | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## outlineStyle
 
 ```TypeScript
@@ -4369,8 +4013,6 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## outlineWidth
 
 ```TypeScript
@@ -4393,8 +4035,6 @@ outlineWidth(value: Dimension | EdgeOutlineWidths | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## overlay
 
 ```TypeScript
@@ -4411,15 +4051,13 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| CustomBuilder \| [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;Object&gt; \| undefined | 是 |  |
+| value | string \| CustomBuilder \| [ComponentContent](arkts-na-componentcontent-c.md)&lt;Object&gt; \| undefined | 是 |  |
 | options | [OverlayOptions](arkts-na-common-overlayoptions-i.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## padding
 
 ```TypeScript
@@ -4442,8 +4080,6 @@ padding(value: Padding | Length | LocalizedPadding | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## parallelGesture
 
 ```TypeScript
@@ -4467,8 +4103,6 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## pixelRound
 
 ```TypeScript
@@ -4491,8 +4125,6 @@ pixelRound(value: PixelRoundPolicy | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## pixelStretchEffect
 
 ```TypeScript
@@ -4515,8 +4147,6 @@ pixelStretchEffect(options: PixelStretchEffectOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## position
 
 ```TypeScript
@@ -4539,8 +4169,6 @@ position(value: Position | Edges | LocalizedEdges | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## priorityGesture
 
 ```TypeScript
@@ -4564,8 +4192,6 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## radialGradient
 
 ```TypeScript
@@ -4588,8 +4214,6 @@ radialGradient(value: RadialGradientOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## renderFit
 
 ```TypeScript
@@ -4612,8 +4236,6 @@ renderFit(fitMode: RenderFit | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## renderGroup
 
 ```TypeScript
@@ -4636,8 +4258,6 @@ renderGroup(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## responseRegion
 
 ```TypeScript
@@ -4660,8 +4280,6 @@ responseRegion(value: Array<Rectangle> | Rectangle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## responseRegionList
 
 ```TypeScript
@@ -4684,8 +4302,6 @@ responseRegionList(regions: Array<ResponseRegion> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## restoreId
 
 ```TypeScript
@@ -4708,8 +4324,6 @@ restoreId(value: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## reuse
 
 ```TypeScript
@@ -4732,8 +4346,6 @@ reuse(options: ReuseOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## reuseId
 
 ```TypeScript
@@ -4756,8 +4368,6 @@ reuseId(id: string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## rotate
 
 ```TypeScript
@@ -4780,8 +4390,6 @@ rotate(value: RotateOptions | RotateAngleOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## safeAreaPadding
 
 ```TypeScript
@@ -4804,8 +4412,6 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## saturate
 
 ```TypeScript
@@ -4828,8 +4434,6 @@ saturate(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## scale
 
 ```TypeScript
@@ -4852,8 +4456,6 @@ scale(value: ScaleOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sepia
 
 ```TypeScript
@@ -4876,8 +4478,6 @@ sepia(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## shadow
 
 ```TypeScript
@@ -4900,8 +4500,6 @@ shadow(value: ShadowOptions | ShadowStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sharedTransition
 
 ```TypeScript
@@ -4925,8 +4523,6 @@ sharedTransition(id: string | undefined, options?: sharedTransitionOptions): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## shouldBuiltInRecognizerParallelWith
 
 ```TypeScript
@@ -4949,8 +4545,6 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## shouldRecognizerParallelWith
 
 ```TypeScript
@@ -4973,8 +4567,6 @@ shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback | un
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## size
 
 ```TypeScript
@@ -4997,8 +4589,6 @@ size(value: SizeOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## smartGestureShortcut
 
 ```TypeScript
@@ -5021,8 +4611,6 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## spatialEffect
 
 ```TypeScript
@@ -5045,8 +4633,6 @@ spatialEffect(params: SpatialEffectParams | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sphericalEffect
 
 ```TypeScript
@@ -5069,8 +4655,6 @@ sphericalEffect(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## stateStyles
 
 ```TypeScript
@@ -5093,8 +4677,6 @@ stateStyles(value: StateStyles | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sweepGradient
 
 ```TypeScript
@@ -5117,8 +4699,6 @@ sweepGradient(value: SweepGradientOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## systemBarEffect
 
 ```TypeScript
@@ -5135,8 +4715,6 @@ systemBarEffect(): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## systemMaterial
 
 ```TypeScript
@@ -5159,8 +4737,6 @@ systemMaterial(material: SystemUiMaterial | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## tabIndex
 
 ```TypeScript
@@ -5183,8 +4759,6 @@ tabIndex(index: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## tabStop
 
 ```TypeScript
@@ -5207,8 +4781,6 @@ tabStop(isTabStop: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## toolbar
 
 ```TypeScript
@@ -5231,8 +4803,6 @@ toolbar(value: CustomBuilder | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## transform
 
 ```TypeScript
@@ -5255,8 +4825,6 @@ transform(value: Matrix4Transit | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## transform3D
 
 ```TypeScript
@@ -5279,8 +4847,6 @@ transform3D(transform: Matrix4Transit | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## transition
 
 ```TypeScript
@@ -5303,8 +4869,6 @@ transition(value: TransitionEffect | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## transition
 
 ```TypeScript
@@ -5328,8 +4892,6 @@ transition(effect: TransitionEffect | undefined, onFinish: TransitionFinishCallb
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## translate
 
 ```TypeScript
@@ -5352,8 +4914,6 @@ translate(value: TranslateOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## useEffect
 
 ```TypeScript
@@ -5377,8 +4937,6 @@ useEffect(useEffect: boolean | undefined, effectType: EffectType | undefined): t
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## useEffect
 
 ```TypeScript
@@ -5401,8 +4959,6 @@ useEffect(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## useShadowBatching
 
 ```TypeScript
@@ -5425,8 +4981,6 @@ useShadowBatching(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## useUnionEffect
 
 ```TypeScript
@@ -5449,8 +5003,6 @@ useUnionEffect(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## useUnionEffect
 
 ```TypeScript
@@ -5474,8 +5026,6 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## visibility
 
 ```TypeScript
@@ -5498,8 +5048,6 @@ visibility(value: Visibility | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## visualEffect
 
 ```TypeScript
@@ -5522,8 +5070,6 @@ visualEffect(effect: VisualEffect | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## width
 
 ```TypeScript
@@ -5546,8 +5092,6 @@ width(widthValue: Length | LayoutPolicy | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## zIndex
 
 ```TypeScript
@@ -5570,8 +5114,6 @@ zIndex(value: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

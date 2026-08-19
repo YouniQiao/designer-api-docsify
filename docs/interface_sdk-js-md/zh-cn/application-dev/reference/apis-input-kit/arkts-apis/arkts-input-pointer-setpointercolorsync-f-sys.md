@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { pointer } from '@kit.InputKit';
 ```
 
 ## setPointerColorSync
@@ -11,7 +12,7 @@
 function setPointerColorSync(color: int): void
 ```
 
-设置鼠标光标颜色，使用同步方式进行设置。 > **说明：** > > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+设置鼠标光标颜色，使用同步方式进行设置。 &gt; **说明：** &gt; &gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
 **起始版本：** 23
 

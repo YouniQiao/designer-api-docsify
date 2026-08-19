@@ -121,7 +121,7 @@ export default class EntryAbility extends UIAbility {
 createModuleContext(moduleName: string): Context
 ```
 
-Creates the context based on the module name. > **NOTE：**> > - Only the context of other modules in the current application and the context of the intra-application HSP can > be obtained. The context of other applications cannot be obtained. > > - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) > instead. Otherwise, resource acquisition may fail. > > - Creating a module context involves resource querying and initialization, which can be time-consuming. In > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+Creates the context based on the module name. &gt; **NOTE：**&gt; &gt; - Only the context of other modules in the current application and the context of the intra-application HSP can &gt; be obtained. The context of other applications cannot be obtained. &gt; &gt; - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use &gt; [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md) &gt; instead. Otherwise, resource acquisition may fail. &gt; &gt; - Creating a module context involves resource querying and initialization, which can be time-consuming. In &gt; scenarios where application fluidity is critical, avoid frequently or repeatedly calling the &gt; **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 9
 
@@ -246,7 +246,7 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.<br>Note: Only the EL2 encryption level is supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.<br>Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
@@ -592,7 +592,7 @@ Process name of the current application.
 resourceDir: string
 ```
 
-Resource directory. > **NOTE: ** > > You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**. > The **resfile** directory can be accessed only in read-only mode.
+Resource directory. &gt; **NOTE: ** &gt; &gt; You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**. &gt; The **resfile** directory can be accessed only in read-only mode.
 
 **Type:** string
 

@@ -36,8 +36,6 @@ camera(camera: DepthCameraParams): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## depthMap
 
 ```TypeScript
@@ -61,8 +59,6 @@ depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## light
 
 ```TypeScript
@@ -85,8 +81,6 @@ light(light: DepthLightParams): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onComplete
 
 ```TypeScript
@@ -109,8 +103,6 @@ onComplete(callback: DepthComponentCompleteCallback): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onError
 
 ```TypeScript
@@ -133,8 +125,6 @@ onError(callback: DepthComponentErrorCallback): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setDepthComponentOptions
 
 ```TypeScript
@@ -158,5 +148,3 @@ setDepthComponentOptions(background: ResourceStr | PixelMap, options?: DepthComp
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

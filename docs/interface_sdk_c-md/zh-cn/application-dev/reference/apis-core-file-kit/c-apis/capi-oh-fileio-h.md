@@ -2,7 +2,9 @@
 
 ## 概述
 
-Provide fileio APIS.
+fileio模块接口定义，提供获取文件存储位置的native接口，帮助应用根据文件存储位置选择合适的访问策略等。
+
+**引用文件：** <filemanagement/fileio/oh_fileio.h>
 
 **库：** libohfileio.so
 

@@ -1,6 +1,6 @@
 # Router
 
-提供通过不同的url访问不同的页面，包括跳转到应用内的指定页面、同应用内的某个页面替换当前页面、返回上一页面或指定的页面等。 > **说明：** > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getRouter()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取 > 到Router对象，再通过该对象调用对应方法。
+提供通过不同的url访问不同的页面，包括跳转到应用内的指定页面、同应用内的某个页面替换当前页面、返回上一页面或指定的页面等。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 10开始支持。 &gt; &gt; - 以下API需先使用UIContext中的[getRouter()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取 &gt; 到Router对象，再通过该对象调用对应方法。
 
 **起始版本：** 23
 
@@ -88,7 +88,7 @@ clear(): void
 getLength(): string
 ```
 
-获取当前在页面栈内的页面数量。 > **说明：** > 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](#getstacksize)替代。
+获取当前在页面栈内的页面数量。 &gt; **说明：** &gt; 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](#getstacksize)替代。
 
 **起始版本：** 23
 
@@ -206,7 +206,7 @@ getStateByIndex(index: int): router.RouterState | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| router.RouterState | Page state. |
+| router.RouterState \| undefined | Page state. |
 
 ## getStateByUrl
 
@@ -279,7 +279,7 @@ pushNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | 跳转页面描述信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 
@@ -353,7 +353,7 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, call
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | 跳转页面描述信息。 |
 | mode | router.RouterMode | 是 | 跳转页面使用的模式。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 
@@ -427,7 +427,7 @@ pushUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | 跳转页面描述信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 
@@ -501,7 +501,7 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncC
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | 跳转页面描述信息。 |
 | mode | router.RouterMode | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。 建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 
@@ -575,7 +575,7 @@ replaceNamedRoute(options: router.NamedRouterOptions, callback: AsyncCallback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | 替换页面描述信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 
@@ -647,7 +647,7 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, c
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | 是 | 替换页面描述信息。 |
 | mode | router.RouterMode | 是 | 跳转页面使用的模式。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 
@@ -719,7 +719,7 @@ replaceUrl(options: router.RouterOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | 替换页面描述信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 
@@ -791,7 +791,7 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: Asy
 | --- | --- | --- | --- |
 | options | router.RouterOptions | 是 | 替换页面描述信息。 |
 | mode | router.RouterMode | 是 | 跳转页面使用的模式，可选Standard（标准模式）或Single（单例模式）。 建议根据页面栈管理需求选择：Standard模式适用于常规页面跳转；Single模式可避免相同页面重复入栈，适合登录页、主页等单例场景。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | router跳转结果回调函数。<br/>当路由跳转成功时，error为undefined。当路由跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
 

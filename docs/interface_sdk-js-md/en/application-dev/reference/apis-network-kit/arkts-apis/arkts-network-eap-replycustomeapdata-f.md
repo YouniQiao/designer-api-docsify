@@ -12,7 +12,7 @@ import { eap } from '@kit.NetworkKit';
 function replyCustomEapData(result: CustomResult, data: EapData): void
 ```
 
-Notifies the system of the extensible authentication result. > **NOTE：**> > - If this callback is used to process received EAP data packets, the customized portion added by the server must > be removed from the EAP data transmitted to the system. > > - If this callback is used to process sent EAP data packets, the EAP data transmitted to the system is the EAP > data with the customized portion added by the server.
+Notifies the system of the extensible authentication result. &gt; **NOTE：**&gt; &gt; - If this callback is used to process received EAP data packets, the customized portion added by the server must &gt; be removed from the EAP data transmitted to the system. &gt; &gt; - If this callback is used to process sent EAP data packets, the EAP data transmitted to the system is the EAP &gt; data with the customized portion added by the server.
 
 **Since:** 20
 

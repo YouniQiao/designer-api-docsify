@@ -1,6 +1,6 @@
 # BitVector
 
-一种线性数据结构，底层基于数组实现。BitVector 中存储的元素为 bit 值，能够存储和处理 bit 级别的操作。 > **NOTE：**> > - 此模块仅支持在 ArkTS 文件（文件后缀为 .ets）中导入使用。 > **装饰器**：\@Sendable
+一种线性数据结构，底层基于数组实现。BitVector 中存储的元素为 bit 值，能够存储和处理 bit 级别的操作。 &gt; **NOTE：**&gt; &gt; - 此模块仅支持在 ArkTS 文件（文件后缀为 .ets）中导入使用。 &gt; **装饰器**：\@Sendable
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

@@ -1,6 +1,6 @@
 # Pen
 
-画笔对象，用于描述所绘制图形形状的轮廓信息，支持设置颜色、线宽、抗锯齿、透明度、混合模式、转角样式、线帽样式，以及颜色滤波器、蒙版滤波器、路径效果、着色器、阴影层等绘制效果。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+画笔对象，用于描述所绘制图形形状的轮廓信息，支持设置颜色、线宽、抗锯齿、透明度、混合模式、转角样式、线帽样式，以及颜色滤波器、蒙版滤波器、路径效果、着色器、阴影层等绘制效果。 &gt; **说明：** &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -131,7 +132,7 @@ getColor(): common2D.Color | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color | 返回画笔当前设置的颜色。获取失败时返回undefined。 |
+| common2D.Color \| undefined | 返回画笔当前设置的颜色。获取失败时返回undefined。 |
 
 ## getColor4f
 
@@ -171,7 +172,7 @@ getColor4f(): common2D.Color4f | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Color4f | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。获取失败时返回undefined。 |
+| common2D.Color4f \| undefined | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。获取失败时返回undefined。 |
 
 ## getColorFilter
 
@@ -211,7 +212,7 @@ getColorFilter(): ColorFilter | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ColorFilter | 返回画笔当前设置的颜色滤波器，可用于查询当前画笔的颜色过滤效果。获取失败时返回undefined。 |
+| ColorFilter \| undefined | 返回画笔当前设置的颜色滤波器，可用于查询当前画笔的颜色过滤效果。获取失败时返回undefined。 |
 
 ## getFillPath
 

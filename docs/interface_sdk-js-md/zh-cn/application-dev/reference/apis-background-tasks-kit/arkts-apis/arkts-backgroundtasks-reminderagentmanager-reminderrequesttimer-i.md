@@ -13,6 +13,7 @@ ReminderRequestTimer extends ReminderRequest 倒计时实例对象，用于设�
 ## 导入模块
 
 ```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## repeatCount

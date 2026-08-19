@@ -16,7 +16,7 @@ Attraction field parameters, used to configure the attraction field in the scene
 accelerationMag?: double
 ```
 
-The magnitude of the attraction acceleration applied to the individual, with the direction pointing toward the attraction field entity. Value >= 0. Default value: 0.0.
+The magnitude of the attraction acceleration applied to the individual, with the direction pointing toward the attraction field entity. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ The magnitude of the attraction acceleration applied to the individual, with the
 radius?: double
 ```
 
-The radius of the attraction field. Only individuals strictly within this distance are attracted (boundary force is 0). Value >= 0. Default value: 0.0.
+The radius of the attraction field. Only individuals strictly within this distance are attracted (boundary force is 0). Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 

@@ -102,7 +102,7 @@ Callback invoked to notify the application when the progress value of the arc sl
 
 Callback invoked to notify the application when the arc slider is enlarged or reduced. Default value: If this parameter is not provided, no callback will be invoked.
 
-**Type:** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
+**Type:** [ArcSliderEnlargeHandler](../../apis-na/arkts-apis/arkts-na-arcsliderenlargehandler-t.md)
 
 **Since:** 18
 

@@ -11,7 +11,7 @@
 function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result. > **NOTE：**> > A stability test scenario refers to a specific testing environment designed to verify application reliability > under complex, extreme, or long-term operating conditions.
+Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; A stability test scenario refers to a specific testing environment designed to verify application reliability &gt; under complex, extreme, or long-term operating conditions.
 
 **Since:** 8
 
@@ -27,7 +27,7 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the API call result and the result indicating whether the system is undergoing a stability test. You can perform error handling or custom processing in this callback. **true** if the system is undergoing a stability test, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the API call result and the result indicating whether the system is undergoing a stability test. You can perform error handling or custom processing in this callback. **true** if the system is undergoing a stability test, **false** otherwise. |
 
 **Examples**
 
@@ -50,7 +50,7 @@ appManager.isRunningInStabilityTest((error, flag) => {
 function isRunningInStabilityTest(): Promise<boolean>
 ```
 
-Checks whether the system is undergoing a stability test. This API uses a promise to return the result. > **NOTE：**> > A stability test scenario refers to a specific testing environment designed to verify application reliability > under complex, extreme, or long-term operating conditions.
+Checks whether the system is undergoing a stability test. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; A stability test scenario refers to a specific testing environment designed to verify application reliability &gt; under complex, extreme, or long-term operating conditions.
 
 **Since:** 8
 

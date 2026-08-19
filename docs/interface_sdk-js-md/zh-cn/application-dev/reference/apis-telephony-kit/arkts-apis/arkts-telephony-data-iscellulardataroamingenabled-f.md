@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## isCellularDataRoamingEnabled
@@ -26,7 +27,7 @@ function isCellularDataRoamingEnabled(slotId: int, callback: AsyncCallback<boole
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。&lt;br /&gt;- 0：卡槽1。&lt;br /&gt;- 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 以callback形式异步返回结果。&lt;br /&gt;true：蜂窝数据业务已启用漫游。&lt;br /&gt;false：蜂窝数据业务已禁用漫游。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以callback形式异步返回结果。&lt;br /&gt;true：蜂窝数据业务已启用漫游。&lt;br /&gt;false：蜂窝数据业务已禁用漫游。 |
 
 **错误码：**
 

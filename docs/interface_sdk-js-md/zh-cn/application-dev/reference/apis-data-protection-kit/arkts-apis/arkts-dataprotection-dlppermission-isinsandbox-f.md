@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## isInSandbox
@@ -63,7 +64,7 @@ function isInSandbox(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。返回true表示当前应用运行在沙箱中，返回false表示当前应用不是 运行在沙箱中。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。返回true表示当前应用运行在沙箱中，返回false表示当前应用不是 运行在沙箱中。 |
 
 **错误码：**
 

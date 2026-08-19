@@ -27,5 +27,3 @@ Gets the unencoded version of an encoded component of a Uniform Resource Identif
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

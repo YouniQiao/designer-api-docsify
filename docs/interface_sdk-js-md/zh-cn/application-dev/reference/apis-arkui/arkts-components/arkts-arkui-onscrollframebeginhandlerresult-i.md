@@ -1,6 +1,6 @@
 # OnScrollFrameBeginHandlerResult
 
-[OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md)返回的实际相对上一帧滚动偏移量。 > **说明：** > > 为规范匿名对象的定义，API version 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+[OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md)返回的实际相对上一帧滚动偏移量。 &gt; **说明：** &gt; &gt; 为规范匿名对象的定义，API version 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
 
 **起始版本：** 18
 

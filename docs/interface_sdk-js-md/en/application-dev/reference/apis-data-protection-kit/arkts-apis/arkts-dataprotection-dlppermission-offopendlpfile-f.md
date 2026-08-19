@@ -6,7 +6,7 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
-## off_openDLPFile('openDLPFile')
+## off('openDLPFile')
 
 ```TypeScript
 function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): void
@@ -25,7 +25,7 @@ Unsubscribes from the DLP file open event. This API can be called only in non-DL
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP file open event. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | No | Callback for the DLP file open event. The application will not be notified when a DLP file is opened. By default, this parameter is left blank, which unregisters all callbacks for the file open event. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AccessedDLPFileInfo](arkts-dataprotection-dlppermission-accesseddlpfileinfo-i.md)&gt; | No | Callback for the DLP file open event. The application will not be notified when a DLP file is opened. By default, this parameter is left blank, which unregisters all callbacks for the file open event. |
 
 **Error codes:**
 

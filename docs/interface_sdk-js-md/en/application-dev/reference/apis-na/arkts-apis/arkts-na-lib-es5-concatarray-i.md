@@ -29,8 +29,6 @@ join(separator?: string): string
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## slice
 
 ```TypeScript
@@ -52,8 +50,6 @@ slice(start?: number, end?: number): T[]
 
 | Type | Description |
 | --- | --- |
-| T[] |  |
-
 ## length
 
 ```TypeScript

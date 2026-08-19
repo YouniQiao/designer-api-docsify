@@ -11,6 +11,11 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## 汇总
@@ -34,23 +39,23 @@
 | [sendEvent](arkts-accessibility-accessibility-sendevent-f.md) | 发送无障碍事件，事件将被分发到系统中已注册且匹配事件类型的辅助扩展应用进行响应。使用Promise异步回调。 |
 | [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) | 发送无障碍事件，事件将被分发到系统中已注册且匹配事件类型的辅助应用进行响应。使用callback异步回调。 |
 | [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md) | 发送无障碍事件，事件将被分发到系统中已注册且匹配事件类型的辅助扩展应用进行响应。使用Promise异步回调。 |
-| on_accessibilityStateChange | 监听辅助应用启用状态变化事件。使用callback异步回调。 如需获取系统内辅助应用信息，推荐使用 [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md)。 |
+| [on_accessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md) | 监听辅助应用启用状态变化事件。使用callback异步回调。 如需获取系统内辅助应用信息，推荐使用 [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md)。 |
 | [onAccessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md) | Register the observe of the accessibility state changed. |
-| on_touchGuideStateChange | 监听触摸浏览功能启用状态变化事件。使用callback异步回调。 如需获取系统内辅助应用信息，推荐使用 [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md)。 |
+| [on_touchGuideStateChange](arkts-accessibility-accessibility-ontouchguidestatechange-f.md) | 监听触摸浏览功能启用状态变化事件。使用callback异步回调。 如需获取系统内辅助应用信息，推荐使用 [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md)。 |
 | [onTouchGuideStateChange](arkts-accessibility-accessibility-ontouchguidestatechange-f.md) | Register the observe of the touchGuide state changed. |
-| off_accessibilityStateChange | 取消监听辅助应用启用状态变化事件。使用callback异步回调。 |
+| [off_accessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md) | 取消监听辅助应用启用状态变化事件。使用callback异步回调。 |
 | [offAccessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md) | Unregister the observe of the accessibility state changed. |
-| off_touchGuideStateChange | 取消监听触摸浏览启用状态变化事件。使用callback异步回调。 |
+| [off_touchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md) | 取消监听触摸浏览启用状态变化事件。使用callback异步回调。 |
 | [offTouchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md) | Unregister the observe of the touchGuide state changed. |
 | [getCaptionsManager](arkts-accessibility-accessibility-getcaptionsmanager-f.md) | 获取无障碍字幕配置管理实例。 |
 | [isScreenReaderOpenSync](arkts-accessibility-accessibility-isscreenreaderopensync-f.md) | 查询屏幕朗读模式是否开启。 |
-| on_screenReaderStateChange | 监听屏幕朗读模式启用状态变化事件。使用callback异步回调。 |
+| [on_screenReaderStateChange](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md) | 监听屏幕朗读模式启用状态变化事件。使用callback异步回调。 |
 | [onScreenReaderStateChange](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md) | Register the observe of the screen reader state changed. |
-| off_screenReaderStateChange | 取消监听屏幕朗读启用状态变化事件。使用callback异步回调。 |
+| [off_screenReaderStateChange](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md) | 取消监听屏幕朗读启用状态变化事件。使用callback异步回调。 |
 | [offScreenReaderStateChange](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md) | Unregister the observe of the screen reader state changed. |
-| on_touchModeChange | 监听触摸浏览功能下的单击/双击操作模式变化事件。使用callback异步回调。 |
+| [on_touchModeChange](arkts-accessibility-accessibility-ontouchmodechange-f.md) | 监听触摸浏览功能下的单击/双击操作模式变化事件。使用callback异步回调。 |
 | [onTouchModeChange](arkts-accessibility-accessibility-ontouchmodechange-f.md) | Register the observe of the touch mode changed. |
-| off_touchModeChange | 取消监听触摸浏览功能下的单击/双击操作模式变化事件。使用callback异步回调。 |
+| [off_touchModeChange](arkts-accessibility-accessibility-offtouchmodechange-f.md) | 取消监听触摸浏览功能下的单击/双击操作模式变化事件。使用callback异步回调。 |
 | [offTouchModeChange](arkts-accessibility-accessibility-offtouchmodechange-f.md) | Unregister the observe of the touch mode changed. |
 | [getTouchModeSync](arkts-accessibility-accessibility-gettouchmodesync-f.md) | 查询触摸浏览功能下的单击/双击操作模式，可用于根据当前操作模式调整应用的交互响应方式（如单击模式下直接响应点击、双击模式下需双击确认操作）。 |
 | [onAnimationReduceStateChange](arkts-accessibility-accessibility-onanimationreducestatechange-f.md) | 监听减弱动效模式启用状态变化事件。使用callback异步回调。 |

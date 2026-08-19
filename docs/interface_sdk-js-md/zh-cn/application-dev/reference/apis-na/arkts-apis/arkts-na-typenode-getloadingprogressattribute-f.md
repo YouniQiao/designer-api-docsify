@@ -28,5 +28,5 @@ export function getLoadingProgressAttribute(node: FrameNode): LoadingProgressAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| LoadingProgressAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| LoadingProgressAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

@@ -40,7 +40,7 @@ rect: RectEvent
 
 Position information of the surface, used to specify the display position and size of the surface during same- layer rendering.
 
-**Type:** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
+**Type:** [RectEvent](../../apis-na/arkts-apis/arkts-na-webview-rectevent-i.md)
 
 **Since:** 12
 

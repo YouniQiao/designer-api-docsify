@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## getSelectionContent
@@ -11,7 +12,7 @@
 function getSelectionContent(): Promise<string>
 ```
 
-获取选中文本的内容。使用Promise异步回调。需在 [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#on_selectioncompletedselectioncompleted) 回调中调用，且仅在划词完成事件触发后有效。
+获取选中文本的内容。使用Promise异步回调。需在 [on('selectionCompleted')](arkts-basicservices-selectionmanager-onselectioncompleted-f-sys.md#onselectioncompleted) 回调中调用，且仅在划词完成事件触发后有效。
 
 **起始版本：** 24
 

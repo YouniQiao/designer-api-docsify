@@ -285,7 +285,7 @@ Returns a value associated with key if present.
 
 | Type | Description |
 | --- | --- |
-| V | value if associated with key is present. |
+| V \| undefined | value if associated with key is present. |
 
 ## get
 

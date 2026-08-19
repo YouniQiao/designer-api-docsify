@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -19,7 +20,7 @@
 blur(radius: double): Filter
 ```
 
-将模糊效果添加到效果链表中，返回链表的实例。着色器平铺模式使用DECAL，如需指定平铺模式， 可使用[blur](#blur)接口。 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。 > **说明：** > > 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
+将模糊效果添加到效果链表中，返回链表的实例。着色器平铺模式使用DECAL，如需指定平铺模式， 可使用[blur](#blur)接口。 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。 &gt; **说明：** &gt; &gt; 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
 
 **起始版本：** 23
 
@@ -112,7 +113,7 @@ struct Index {
 blur(radius: double, tileMode: TileMode): Filter
 ```
 
-将模糊效果添加到效果链表中，返回链表的实例。支持选择着色器效果平铺模式， 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。 > **说明：** > > 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
+将模糊效果添加到效果链表中，返回链表的实例。支持选择着色器效果平铺模式， 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。 &gt; **说明：** &gt; &gt; 该接口为静态模糊接口，为静态图像提供模糊化效果，如果要对组件进行实时渲染的模糊，可以使用[动态模糊](../../../ui/arkts-blur-effect.md)。
 
 **起始版本：** 23
 
@@ -295,7 +296,7 @@ struct Index {
 getEffectPixelMap(): Promise<image.PixelMap>
 ```
 
-获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。 如需指定渲染模式，可使用[getEffectPixelMap](#geteffectpixelmap)接口。 常用于图片处理后需要保存或显示结果的场景。 > **说明：** > > 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。 如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)和 [getEffectPixelMap](#geteffectpixelmap)。
+获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。 如需指定渲染模式，可使用[getEffectPixelMap](#geteffectpixelmap)接口。 常用于图片处理后需要保存或显示结果的场景。 &gt; **说明：** &gt; &gt; 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。 如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)和 [getEffectPixelMap](#geteffectpixelmap)。
 
 **起始版本：** 23
 
@@ -393,7 +394,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getPixelMap(): image.PixelMap
 ```
 
-获取已添加链表效果的源图像的image.PixelMap。常用于图片处理后需要保存或显示结果的场景。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃，建议使用[getEffectPixelMap](#geteffectpixelmap)替代。
+获取已添加链表效果的源图像的image.PixelMap。常用于图片处理后需要保存或显示结果的场景。 &gt; **说明：** &gt; &gt; 从API version 9开始支持，从API version 11开始废弃，建议使用[getEffectPixelMap](#geteffectpixelmap)替代。
 
 **起始版本：** 9
 

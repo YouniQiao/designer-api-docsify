@@ -248,7 +248,7 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 onSelected(callback: (index: number) => void)
 ```
 
-注册索引项选中事件回调，回调参数为当前选中项索引。 > **说明：** > 从API version 7开始支持，从API version 8开始废弃，建议使用[onSelect](#onselect)替代。
+注册索引项选中事件回调，回调参数为当前选中项索引。 &gt; **说明：** &gt; 从API version 7开始支持，从API version 8开始废弃，建议使用[onSelect](#onselect)替代。
 
 **起始版本：** 7
 

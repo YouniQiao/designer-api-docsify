@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function getDefaultNet(callback: AsyncCallback<NetHandle>): void
 ```
 
-Obtains the network handle used by the system by default, including the network ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > - Default network used by the system. The network must have the > [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network. > > - The return value of this interface is determined by the system and is irrelevant to whether the application > specifies a network. > > - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch) > Wi-Fi > Cellular. In special cases, > the actual return result prevails. > > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available, > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more > network information. > **Required permission**: ohos.permission.GET_NETWORK_INFO
+Obtains the network handle used by the system by default, including the network ID. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; - Default network used by the system. The network must have the &gt; [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network. &gt; &gt; - The return value of this interface is determined by the system and is irrelevant to whether the application &gt; specifies a network. &gt; &gt; - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch) &gt; Wi-Fi &gt; Cellular. In special cases, &gt; the actual return result prevails. &gt; &gt; - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available, &gt; **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more &gt; network information. &gt; **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Obtains the network handle used by the system by default, including the network 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the result. When the network handle of the default activated network is successfully obtained, **error** is **undefined** and **data** is the network handle of the default network; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetHandle&gt; | Yes | Callback used to return the result. When the network handle of the default activated network is successfully obtained, **error** is **undefined** and **data** is the network handle of the default network; otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -61,7 +61,7 @@ connection.getDefaultNet((error: BusinessError, data: connection.NetHandle) => {
 function getDefaultNet(): Promise<NetHandle>
 ```
 
-Obtains the network handle used by the system by default, including the network ID. This API uses a promise to return the result. > **NOTE：**> > - Default network used by the system. The network must have the > [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network. > > - The return value of this interface is determined by the system and is irrelevant to whether the application > specifies a network. > > - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch) > Wi-Fi > Cellular. In special cases, > the actual returned result prevails. > > - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available, > **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more > network information. > **Required permission**: ohos.permission.GET_NETWORK_INFO
+Obtains the network handle used by the system by default, including the network ID. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Default network used by the system. The network must have the &gt; [NET_CAPABILITY_INTERNET](arkts-network-connection-netcap-e.md) capability and is not a VPN network. &gt; &gt; - The return value of this interface is determined by the system and is irrelevant to whether the application &gt; specifies a network. &gt; &gt; - Generally, the priority is as follows: Ethernet (PC) | Bluetooth (watch) &gt; Wi-Fi &gt; Cellular. In special cases, &gt; the actual returned result prevails. &gt; &gt; - [NetHandle](arkts-network-connection-nethandle-i.md) is the unique identifier of the network. If no network is available, &gt; **0** is returned. It can be used by [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md) to query more &gt; network information. &gt; **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 23
 

@@ -27,8 +27,6 @@ Gets the most likely values for the language, script, and region of the locale b
 
 | Type | Description |
 | --- | --- |
-| Locale |  |
-
 ## minimize
 
 ```TypeScript
@@ -45,8 +43,6 @@ Attempts to remove information about the locale that would be added by calling `
 
 | Type | Description |
 | --- | --- |
-| Locale |  |
-
 ## toString
 
 ```TypeScript
@@ -63,8 +59,6 @@ Returns the locale's full locale identifier string.
 
 | Type | Description |
 | --- | --- |
-| BCP47LanguageTag |  |
-
 ## baseName
 
 ```TypeScript

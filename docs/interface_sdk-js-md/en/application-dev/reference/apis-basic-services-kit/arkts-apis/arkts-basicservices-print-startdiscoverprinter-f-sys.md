@@ -31,7 +31,7 @@ Discovers printers by specifying the extension list. The discovered printers con
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extensionList | Array&lt;string&gt; | Yes | List of [PrintExtensionAbilities](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) to be loaded. The list members are the bundle names of the applications with print extension abilities. An empty list indicates that all extension abilities are loaded. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is discovered. |
 
 **Error codes:**
 

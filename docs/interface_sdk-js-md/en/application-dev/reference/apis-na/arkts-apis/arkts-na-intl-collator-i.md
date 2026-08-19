@@ -30,8 +30,6 @@ compare(x: string, y: string): number
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## resolvedOptions
 
 ```TypeScript
@@ -46,5 +44,3 @@ resolvedOptions(): ResolvedCollatorOptions
 
 | Type | Description |
 | --- | --- |
-| ResolvedCollatorOptions |  |
-

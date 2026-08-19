@@ -31,7 +31,7 @@ Notifies the print service of the spooler shutdown information. This API uses an
 | --- | --- | --- | --- |
 | jobId | string | Yes | ID of the print job. |
 | type | 'spooler_closed_for_cancelled' \| 'spooler_closed_for_started' | Yes | Spooler shutdown information. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

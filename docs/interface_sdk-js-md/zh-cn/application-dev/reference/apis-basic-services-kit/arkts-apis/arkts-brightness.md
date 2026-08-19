@@ -1,6 +1,6 @@
 # @ohos.brightness
 
-该模块提供屏幕亮度的设置接口。 > **说明：** > > - 本模块接口为系统接口。
+该模块提供屏幕亮度的设置接口。 &gt; **说明：** &gt; &gt; - 本模块接口为系统接口。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { brightness } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

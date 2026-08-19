@@ -11,6 +11,7 @@ cookie的相关字段。
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## domain

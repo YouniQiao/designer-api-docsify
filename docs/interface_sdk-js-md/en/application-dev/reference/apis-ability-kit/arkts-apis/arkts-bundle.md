@@ -1,6 +1,6 @@
 # @ohos.bundle
 
-The module provides APIs for obtaining information about an application, including bundle information, [application information](arkts-ability-applicationinfo-applicationinfo-depr-i.md#applicationinfo), and [ability information](arkts-ability-abilityinfo-abilityinfo-depr-i.md#abilityinfo). It also provides APIs to obtain and set the application disabling state. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md) instead.
+The module provides APIs for obtaining information about an application, including bundle information, [application information](arkts-ability-applicationinfo-applicationinfo-depr-i.md#applicationinfo), and [ability information](arkts-ability-abilityinfo-abilityinfo-depr-i.md#abilityinfo). It also provides APIs to obtain and set the application disabling state. &gt; **NOTE：**&gt; &gt; The APIs of this module have been deprecated since API version 9. You are advised to use &gt; [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md) instead.
 
 **Since:** 7
 
@@ -98,20 +98,20 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Options that contain the user ID. |
+| [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Options that contain the user ID. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AbilitySubType](arkts-ability-bundle-abilitysubtype-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Enumerates the ability subtypes. |
-| [AbilityType](arkts-ability-bundle-abilitytype-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md) instead. Enumerates the ability types. |
-| [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) instead. Enumerates the bundle flags, which indicate the type of bundle information to obtain. If an API does not match the flag, the flag is ignored. For example, using **GET_ABILITY_INFO_WITH_PERMISSION** to obtain the application information does not affect the result. Flags can be used together. For example, you can use the combination of **GET_APPLICATION_INFO_WITH_PERMISSION** and **GET_APPLICATION_INFO_WITH_DISABLE** to obtain the result that contains both application permission information and disabled application information. |
-| [ColorMode](arkts-ability-bundle-colormode-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Enumerates the color modes of applications and widgets. |
-| [DisplayOrientation](arkts-ability-bundle-displayorientation-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) instead. Enumerates display orientations. |
-| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md) > instead. Enumerates the permission grant states. |
-| [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [errorcode-bundle](../errorcode-bundle.md) instead. |
-| [LaunchMode](arkts-ability-bundle-launchmode-e.md) | > **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md) instead. Enumerates the ability launch modes. |
+| [AbilitySubType](arkts-ability-bundle-abilitysubtype-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Enumerates the ability subtypes. |
+| [AbilityType](arkts-ability-bundle-abilitytype-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md) instead. Enumerates the ability types. |
+| [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) instead. Enumerates the bundle flags, which indicate the type of bundle information to obtain. If an API does not match the flag, the flag is ignored. For example, using **GET_ABILITY_INFO_WITH_PERMISSION** to obtain the application information does not affect the result. Flags can be used together. For example, you can use the combination of **GET_APPLICATION_INFO_WITH_PERMISSION** and **GET_APPLICATION_INFO_WITH_DISABLE** to obtain the result that contains both application permission information and disabled application information. |
+| [ColorMode](arkts-ability-bundle-colormode-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Enumerates the color modes of applications and widgets. |
+| [DisplayOrientation](arkts-ability-bundle-displayorientation-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) instead. Enumerates display orientations. |
+| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md) &gt; instead. Enumerates the permission grant states. |
+| [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [errorcode-bundle](../errorcode-bundle.md) instead. |
+| [LaunchMode](arkts-ability-bundle-launchmode-e.md) | > **NOTE：**&gt; &gt; This API has been supported since API version 7 and deprecated since API version 9. You are advised to use &gt; [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md) instead. Enumerates the ability launch modes. |
 
 <!--Del-->
 ### Enums(System API)

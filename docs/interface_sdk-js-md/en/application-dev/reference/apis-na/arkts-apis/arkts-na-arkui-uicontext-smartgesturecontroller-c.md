@@ -97,7 +97,7 @@ Register a callback function to monitor gesture events. This method enables the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](arkts-na-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-na-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Callback function invoked when a gesture is recognized. |
+| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BaseGestureHandlingProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Callback function invoked when a gesture is recognized. |
 
 ## requestSelected
 
@@ -145,5 +145,5 @@ Unregister a callback function to monitor gesture events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](arkts-na-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-na-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Callback function invoked when a gesture is recognized. |
+| monitorCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BaseGestureHandlingProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Callback function invoked when a gesture is recognized. |
 

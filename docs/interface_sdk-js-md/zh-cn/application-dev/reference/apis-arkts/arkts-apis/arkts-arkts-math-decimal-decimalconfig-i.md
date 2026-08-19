@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Decimal } from '@kit.ArkTS';
 ```
 
 ## crypto

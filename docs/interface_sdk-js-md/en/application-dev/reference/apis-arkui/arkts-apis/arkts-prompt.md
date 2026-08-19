@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [promptAction/promptAction](arkts-arkui-promptaction-n.md)
+**Substitutes:** [promptAction/promptAction](../../apis-na/arkts-apis/arkts-na-promptaction-n.md)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 

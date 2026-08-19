@@ -40,5 +40,5 @@ Called when the paste button is clicked.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the paste button. |
+| [PasteButtonAttribute](arkts-arkui-pastebutton-pastebuttonattribute-i.md) | Returns the attribute of the paste button. |
 

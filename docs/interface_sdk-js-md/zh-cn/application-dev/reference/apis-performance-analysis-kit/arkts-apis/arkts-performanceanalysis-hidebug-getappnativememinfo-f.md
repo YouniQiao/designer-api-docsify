@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppNativeMemInfo
@@ -11,7 +12,7 @@
 function getAppNativeMemInfo(): NativeMemInfo
 ```
 
-获取应用进程内存信息。读取/proc/{pid}/smaps_rollup和/proc/{pid}/statm节点的数据。 > **注意** > > 由于读取/proc/{pid}/smaps_rollup耗时较长，推荐使用异步接口hidebug.getAppNativeMemInfoAsync，以避免应用丢帧或卡顿。 > > 推荐使用hidebug.getRssInfo接口获取应用的rss使用信息。
+获取应用进程内存信息。读取/proc/{pid}/smaps_rollup和/proc/{pid}/statm节点的数据。 &gt; **注意** &gt; &gt; 由于读取/proc/{pid}/smaps_rollup耗时较长，推荐使用异步接口hidebug.getAppNativeMemInfoAsync，以避免应用丢帧或卡顿。 &gt; &gt; 推荐使用hidebug.getRssInfo接口获取应用的rss使用信息。
 
 **起始版本：** 23
 

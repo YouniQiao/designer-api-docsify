@@ -18,7 +18,7 @@ Obtains the system language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getsystemlanguage)
+**Substitutes:** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
 
 <!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
 

@@ -51,7 +51,7 @@ Obtains the instance of profile.
 
 | Type | Description |
 | --- | --- |
-| A2dpSourceProfile | Returns instance of profile. |
+| A2dpSourceProfile \| HandsFreeAudioGatewayProfile | Returns instance of profile. |
 
 **Examples**
 

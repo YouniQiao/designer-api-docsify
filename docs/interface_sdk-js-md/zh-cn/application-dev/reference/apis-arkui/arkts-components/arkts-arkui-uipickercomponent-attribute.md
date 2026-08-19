@@ -69,7 +69,7 @@ displayedItemCount(count: Optional<int>)
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下： > > "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下： &gt; &gt; "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **起始版本：** 22
 
@@ -117,7 +117,7 @@ itemHeight(height: Optional<LengthMetrics>)
 onChange(callback: Optional<OnUIPickerComponentCallback>)
 ```
 
-滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。 > **说明：** > > - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。 > > - 选中项区域可通过设置[selectionIndicator](#selectionindicator)进行标识。 > 如果设置选中项指示器为背景，则背景区域即为选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
+滑动选择器选项时，若选中项发生变化，触发该事件。适用于需要在选中项变化时实时更新界面、加载对应数据或执行相关逻辑的场景。 &gt; **说明：** &gt; &gt; - 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。 &gt; &gt; - 选中项区域可通过设置[selectionIndicator](#selectionindicator)进行标识。 &gt; 如果设置选中项指示器为背景，则背景区域即为选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
 
 **起始版本：** 22
 
@@ -141,7 +141,7 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 ```
 
-选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画， 则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。 > **说明：** > > **onChange与onScrollStop的差异：** > > - **触发时机**：onChange在选中项发生变化时立即触发；onScrollStop在滑动动画完全停止后触发。 > > - **触发频率**：连续滑动过程中，onChange可能多次触发（每次选中项变化都会触发）；onScrollStop只在滑动停止时触发一次。 > > - **使用场景**：onChange适用于需要实时响应的场景（如实时显示选中内容、联动更新其他组件）；onScrollStop适用于需要最终确认的场景 > （如提交最终选择结果、保存数据）。 > > - **两者关系**：一次完整的滑动操作可能先后触发这两个事件，可根据实际需求同时使用或选择使用。
+选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画， 则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。 &gt; **说明：** &gt; &gt; **onChange与onScrollStop的差异：** &gt; &gt; - **触发时机**：onChange在选中项发生变化时立即触发；onScrollStop在滑动动画完全停止后触发。 &gt; &gt; - **触发频率**：连续滑动过程中，onChange可能多次触发（每次选中项变化都会触发）；onScrollStop只在滑动停止时触发一次。 &gt; &gt; - **使用场景**：onChange适用于需要实时响应的场景（如实时显示选中内容、联动更新其他组件）；onScrollStop适用于需要最终确认的场景 &gt; （如提交最终选择结果、保存数据）。 &gt; &gt; - **两者关系**：一次完整的滑动操作可能先后触发这两个事件，可根据实际需求同时使用或选择使用。
 
 **起始版本：** 22
 

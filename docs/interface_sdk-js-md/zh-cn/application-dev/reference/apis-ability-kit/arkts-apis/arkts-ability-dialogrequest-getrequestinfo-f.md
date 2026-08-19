@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## getRequestInfo
@@ -11,7 +12,7 @@
 function getRequestInfo(want: Want): RequestInfo
 ```
 
-从Want中获取请求方的RequestInfo。 > **说明：** > > 该接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则能从Want中获取请求方的RequestInfo。其他场景使用该接口，均无法获取返回值。
+从Want中获取请求方的RequestInfo。 &gt; **说明：** &gt; &gt; 该接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则能从Want中获取请求方的RequestInfo。其他场景使用该接口，均无法获取返回值。
 
 **起始版本：** 23
 

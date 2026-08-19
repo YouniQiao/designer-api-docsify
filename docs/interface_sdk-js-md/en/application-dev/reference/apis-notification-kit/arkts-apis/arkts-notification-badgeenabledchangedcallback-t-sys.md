@@ -4,7 +4,7 @@
 export type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
 ```
 
-Defines a callback function to listen for the enabling state changes of the application badge. type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
+Defines a callback function to listen for the enabling state changes of the application badge. type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =&gt; void
 
 **Since:** 23
 

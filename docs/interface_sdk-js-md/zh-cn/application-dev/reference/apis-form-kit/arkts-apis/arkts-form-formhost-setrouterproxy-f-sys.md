@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formHost } from '@kit.FormKit';
 ```
 
 ## setRouterProxy
@@ -11,7 +12,7 @@
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback: AsyncCallback<void>): void
 ```
 
-设置卡片跳转代理。使用callback异步回调，返回卡片跳转所需要Want信息。 > **说明：** > > - 一般情况下，对于桌面添加的卡片，当卡片触发router跳转时，卡片框架会检测其跳转目的地是否合理，是否有跳转权限，然后进行应用跳转。如果卡片使用方添加了卡片，并设置了卡片跳转代理，那么卡片触发router跳转时，卡片框架不 > 会再为其进行跳转操作，会把包含跳转目的地的want参数返回给卡片使用方。因此如果卡片使用方希望使用该want信息进行应用跳转，需要确保自身拥有应用跳转的权限，参考 > [UIAbilityContext.startAbility()](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#startability) > 接口。 > > - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
+设置卡片跳转代理。使用callback异步回调，返回卡片跳转所需要Want信息。 &gt; **说明：** &gt; &gt; - 一般情况下，对于桌面添加的卡片，当卡片触发router跳转时，卡片框架会检测其跳转目的地是否合理，是否有跳转权限，然后进行应用跳转。如果卡片使用方添加了卡片，并设置了卡片跳转代理，那么卡片触发router跳转时，卡片框架不 &gt; 会再为其进行跳转操作，会把包含跳转目的地的want参数返回给卡片使用方。因此如果卡片使用方希望使用该want信息进行应用跳转，需要确保自身拥有应用跳转的权限，参考 &gt; [UIAbilityContext.startAbility()](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#startability) &gt; 接口。 &gt; &gt; - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
 
 **起始版本：** 23
 
@@ -28,8 +29,8 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当指定卡片设置router跳转代理成功时，error为undefined；否则抛出异常。 |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当指定卡片设置router跳转代理成功时，error为undefined；否则抛出异常。 |
 
 **错误码：**
 
@@ -50,7 +51,7 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<void>
 ```
 
-设置卡片跳转代理。使用Promise异步回调，返回卡片跳转所需要Want信息。 > **说明：** > > - 一般情况下，对于桌面添加的卡片，当卡片触发router跳转时，卡片框架会检测其跳转目的地是否合理，是否有跳转权限，然后进行应用跳转。如果卡片使用方添加了卡片，并设置了卡片跳转代理，那么卡片触发router跳转时，卡片框架不 > 会再为其进行跳转操作，会把包含跳转目的地的want参数返回给卡片使用方。因此如果卡片使用方希望使用该want信息进行应用跳转，需要确保自身拥有应用跳转的权限，参考 > [UIAbilityContext.startAbility()](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#startability) > 接口。 > > - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
+设置卡片跳转代理。使用Promise异步回调，返回卡片跳转所需要Want信息。 &gt; **说明：** &gt; &gt; - 一般情况下，对于桌面添加的卡片，当卡片触发router跳转时，卡片框架会检测其跳转目的地是否合理，是否有跳转权限，然后进行应用跳转。如果卡片使用方添加了卡片，并设置了卡片跳转代理，那么卡片触发router跳转时，卡片框架不 &gt; 会再为其进行跳转操作，会把包含跳转目的地的want参数返回给卡片使用方。因此如果卡片使用方希望使用该want信息进行应用跳转，需要确保自身拥有应用跳转的权限，参考 &gt; [UIAbilityContext.startAbility()](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#startability) &gt; 接口。 &gt; &gt; - 一个formId最多只能设置一个跳转代理，多次设置后，最后设置的proxy生效。
 
 **起始版本：** 23
 
@@ -67,7 +68,7 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
 
 **返回值：**
 

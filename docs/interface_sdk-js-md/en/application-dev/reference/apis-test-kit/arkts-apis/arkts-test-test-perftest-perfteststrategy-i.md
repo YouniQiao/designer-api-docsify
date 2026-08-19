@@ -1,6 +1,6 @@
 # PerfTestStrategy
 
-Represents the performance test strategy. > **NOTE：**> > The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call > this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the > code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that > the code segment execution meets the expectation, and **false** indicates the opposite.
+Represents the performance test strategy. &gt; **NOTE：**&gt; &gt; The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call &gt; this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the &gt; code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that &gt; the code segment execution meets the expectation, and **false** indicates the opposite.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ actionCode: Callback<Callback<boolean>>
 
 Code segment to test. The input parameter is a callback function, which needs to be called in the code segment to notify the framework that the execution is complete. Otherwise, the execution will time out. For details, see the following description.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ resetCode?: Callback<Callback<boolean>>
 
 Code segment for resetting the environment after the test is complete. This parameter is passed for resetting after each test when the test code segment modifies the global status (such as global variables and configurations). The default value is empty. This code segment is not executed when the framework is performing the test. The input parameter is a callback function, which needs to be called in the code segment to notify the framework that the execution is complete. Otherwise, the execution will time out. For details, see the following description.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
 
 **Since:** 23
 

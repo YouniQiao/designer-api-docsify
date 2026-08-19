@@ -1,6 +1,6 @@
 # @ohos.enterprise.telephonyManager
 
-本模块提供通话管理能力。 > **说明：** > > 本模块接口仅适用于Stage模型。 > > 本模块接口仅对设备管理应用开放，调用接口前需激活该应用，详情请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。 > > 全局通用限制类策略由restrictions提供，若要全局禁用通话，请参考 > [@ohos.enterprise.restrictions（限制类策略）](arkts-enterprise-restrictions.md)。
+本模块提供通话管理能力。 &gt; **说明：** &gt; &gt; 本模块接口仅适用于Stage模型。 &gt; &gt; 本模块接口仅对设备管理应用开放，调用接口前需激活该应用，详情请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。 &gt; &gt; 全局通用限制类策略由restrictions提供，若要全局禁用通话，请参考 &gt; [@ohos.enterprise.restrictions（限制类策略）](arkts-enterprise-restrictions.md)。
 
 **起始版本：** 20
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## 汇总

@@ -34,7 +34,7 @@ Obtains the low-resolution snapshot of a given mission. This API uses an asynchr
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | int | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
 
 **Error codes:**
 

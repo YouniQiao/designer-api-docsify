@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ChildProcessOptions } from '@kit.AbilityKit';
 ```
 
 ## 汇总

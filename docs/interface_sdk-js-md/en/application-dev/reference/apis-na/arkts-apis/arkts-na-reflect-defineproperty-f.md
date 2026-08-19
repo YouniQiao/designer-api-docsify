@@ -29,5 +29,3 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

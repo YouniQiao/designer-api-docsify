@@ -36,7 +36,7 @@ Obtains the value of the specified effect property.
 
 | Type | Description |
 | --- | --- |
-| Object | Effect property value. If the value fails to be obtained, null is returned. |
+| Object \| null \| undefined | Effect property value. If the value fails to be obtained, null is returned. |
 
 ## setPropertyValue
 

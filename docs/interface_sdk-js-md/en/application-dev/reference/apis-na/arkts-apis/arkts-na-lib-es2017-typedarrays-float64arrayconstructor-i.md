@@ -23,5 +23,3 @@ new (): Float64Array
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-

@@ -31,8 +31,6 @@ Return the String value whose elements are, in order, the elements in the List e
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## raw
 
 ```TypeScript
@@ -56,5 +54,3 @@ String.raw is usually used as a tag function of a Tagged Template String. When c
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

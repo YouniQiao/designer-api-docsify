@@ -27,7 +27,7 @@ Disable foreground reader mode settings explicitly.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | The element name of application, must include the bundleName and abilityName. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TagInfo](arkts-connectivity-tag-taginfo-i.md)&gt; | No | The callback to dispatched the TagInfo object for application. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TagInfo](arkts-connectivity-tag-taginfo-i.md)&gt; | No | The callback to dispatched the TagInfo object for application. |
 
 **Error codes:**
 

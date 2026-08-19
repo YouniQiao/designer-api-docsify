@@ -1,6 +1,6 @@
 # AppStateFilter（系统接口）
 
-应用生命周期变化事件的过滤器，可作为 [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationstateapplicationstate)的参数用 于筛选所需监听的应用生命周期变化事件。
+应用生命周期变化事件的过滤器，可作为 [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate)的参数用 于筛选所需监听的应用生命周期变化事件。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## abilityStateTypes

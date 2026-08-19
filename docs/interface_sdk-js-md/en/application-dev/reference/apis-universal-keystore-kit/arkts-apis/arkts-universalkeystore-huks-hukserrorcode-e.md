@@ -1,6 +1,6 @@
 # HuksErrorCode
 
-Enumerates the error codes. > **NOTE：**> > This API is deprecated since API version 9. You are advised to use > [HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksexceptionerrcode-e.md).
+Enumerates the error codes. &gt; **NOTE：**&gt; &gt; This API is deprecated since API version 9. You are advised to use &gt; [HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksexceptionerrcode-e.md).
 
 **Since:** 8
 

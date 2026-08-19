@@ -23,5 +23,3 @@ new (): Uint16Array
 
 | Type | Description |
 | --- | --- |
-| Uint16Array |  |
-

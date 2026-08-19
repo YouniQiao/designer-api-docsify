@@ -23,5 +23,3 @@ new (): Float32Array
 
 | Type | Description |
 | --- | --- |
-| Float32Array |  |
-

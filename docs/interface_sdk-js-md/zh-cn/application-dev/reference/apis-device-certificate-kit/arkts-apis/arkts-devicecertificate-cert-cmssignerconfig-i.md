@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## addAttr
@@ -97,7 +100,7 @@ mdName: string
 rsaSignaturePadding?: CmsRsaSignaturePadding
 ```
 
-RSA签名填充方式。默认值为：PKCS1_PADDING。 <br>当设置为 PKCS1_PSS_PADDING 时，mdName 必须为 "SHA256"、"SHA384" 或 "SHA512"。 > **说明：** > > 仅当签名者私钥类型为RSA时有效。
+RSA签名填充方式。默认值为：PKCS1_PADDING。 <br>当设置为 PKCS1_PSS_PADDING 时，mdName 必须为 "SHA256"、"SHA384" 或 "SHA512"。 &gt; **说明：** &gt; &gt; 仅当签名者私钥类型为RSA时有效。
 
 **类型：** [CmsRsaSignaturePadding](arkts-devicecertificate-cert-cmsrsasignaturepadding-e.md)
 

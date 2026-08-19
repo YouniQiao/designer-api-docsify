@@ -32,7 +32,7 @@ Get the StyledString of the component.
 
 | Type | Description |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) |  |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) \| undefined |  |
 
 ## setStyledString
 

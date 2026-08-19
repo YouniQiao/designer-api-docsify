@@ -1,6 +1,6 @@
 # MediaInfo
 
-Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
+Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ mediaSrcList: MediaSourceInfo[]
 
 Source of the media. There may be multiple sources. The application needs to select a supported source to play.
 
-**Type:** [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md)[]
+**Type:** [MediaSourceInfo](../../apis-na/arkts-apis/arkts-na-webview-mediasourceinfo-c.md)[]
 
 **Since:** 12
 
@@ -178,7 +178,7 @@ preload: Preload
 
 Whether preloading is required.
 
-**Type:** [Preload](arkts-arkweb-webview-preload-e.md)
+**Type:** [Preload](../../apis-na/arkts-apis/arkts-na-webview-preload-e.md)
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ surfaceInfo: NativeMediaPlayerSurfaceInfo
 
 Surface information used for same-layer rendering.
 
-**Type:** [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md)
+**Type:** [NativeMediaPlayerSurfaceInfo](../../apis-na/arkts-apis/arkts-na-webview-nativemediaplayersurfaceinfo-c.md)
 
 **Since:** 12
 

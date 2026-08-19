@@ -34,7 +34,7 @@
 | [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md) | Defines font weight configurations. When the configuration object (including an empty object **{}**) is passed, the default values are used for properties that are not explicitly set. When **null** or **undefined** is passed, default values are not applied, and the font weight behavior is consistent with that of the parent component text. |
 | [IMEClient](arkts-arkui-imeclient-i.md) | Defines the input method client type bound to an input component. |
 | [InsertValue](arkts-arkui-insertvalue-i.md) | Defines the inserted text value info. |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Implements a layout manager object. > **NOTE：**> > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- > to-date layout information. |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Implements a layout manager object. &gt; **NOTE：**&gt; &gt; After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- &gt; to-date layout information. |
 | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | Configures the line spacing of text and whether it applies only between lines. |
 | [MaxLinesOptions](arkts-arkui-maxlinesoptions-i.md) | Configures the display effect of the **TextArea** component when the text exceeds the maximum number of lines. |
 | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | Defines the options of the numeric flip animation. |

@@ -213,7 +213,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-na-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -299,7 +299,7 @@ levelMode?: LevelMode
 
 设置弹窗显示层级。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
 
-**类型：** [LevelMode](arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -321,7 +321,7 @@ levelOrder?: LevelOrder
 
 设置弹窗显示的顺序。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelOrder.clamp(0) &lt;br /&gt;- 不支持动态刷新顺序。
 
-**类型：** [LevelOrder](arkts-na-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md)
 
 **默认值：** The value returned by LevelOrder.clamp(0)
 
@@ -441,7 +441,7 @@ offset?: Offset
 onDidAppear?: VoidCallback
 ```
 
-弹窗弹出后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br /&gt;2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 &lt;br /&gt;3.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。 &lt;br /&gt;4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
+弹窗弹出后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 &lt;br /&gt;2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 &lt;br /&gt;3.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。 &lt;br /&gt;4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
 
 **类型：** VoidCallback
 
@@ -461,7 +461,7 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-弹窗消失后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 <br/>当弹窗退场动画未完成时（例如：同时触发弹窗关闭和页面切换），该回调不会触发。
+弹窗消失后的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 <br/>当弹窗退场动画未完成时（例如：同时触发弹窗关闭和页面切换），该回调不会触发。
 
 **类型：** VoidCallback
 
@@ -481,7 +481,7 @@ onDidDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-弹窗显示动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br /&gt;2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+弹窗显示动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 &lt;br /&gt;2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
 **类型：** VoidCallback
 
@@ -501,7 +501,7 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-弹窗退出动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br /&gt;2.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
+弹窗退出动效前的事件回调。 &lt;br /&gt;**说明：** &lt;br /&gt;1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onDateAccept/onCancel/onDateChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 &lt;br /&gt;2.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
 
 **类型：** VoidCallback
 
@@ -523,7 +523,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 交互式关闭回调函数。 <br/>**说明：** <br/>1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。 在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。 <br/>2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DismissDialogAction](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 23
 

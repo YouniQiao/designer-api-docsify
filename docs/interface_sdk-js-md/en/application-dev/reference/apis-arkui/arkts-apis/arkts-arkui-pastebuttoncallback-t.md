@@ -23,5 +23,5 @@ Callback function when the paste button is clicked.
 | --- | --- | --- | --- |
 | event | [ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md) | Yes | The click event. |
 | result | [PasteButtonOnClickResult](arkts-arkui-pastebutton-pastebuttononclickresult-e.md) | Yes | The result of click event. |
-| error | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | No | The error code and message of click event. |
+| error | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | No | The error code and message of click event. |
 

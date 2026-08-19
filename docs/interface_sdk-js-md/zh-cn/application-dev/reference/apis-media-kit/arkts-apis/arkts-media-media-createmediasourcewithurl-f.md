@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithUrl
@@ -67,7 +68,7 @@ Creates a media source for streaming media to be pre-downloaded.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns null otherwise. |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns null otherwise. |
 
 **错误码：**
 

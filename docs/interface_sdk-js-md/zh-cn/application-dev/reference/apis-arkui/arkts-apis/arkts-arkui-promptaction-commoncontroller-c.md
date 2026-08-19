@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## close
@@ -71,5 +72,5 @@ getState(): CommonState
 
 | 类型 | 说明 |
 | --- | --- |
-| [CommonState](../../apis-na/arkts-apis/arkts-na-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
+| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
 

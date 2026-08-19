@@ -29,8 +29,6 @@ new(value?: any): Object
 
 | Type | Description |
 | --- | --- |
-| Object |  |
-
 ## constructor
 
 ```TypeScript
@@ -45,8 +43,6 @@ new(value?: any): Object
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## constructor
 
 ```TypeScript
@@ -67,8 +63,6 @@ new(value?: any): Object
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## create
 
 ```TypeScript
@@ -91,8 +85,6 @@ Creates an object that has the specified prototype or that has null prototype.
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## create
 
 ```TypeScript
@@ -116,8 +108,6 @@ Creates an object that has the specified prototype, and that optionally contains
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## defineProperties
 
 ```TypeScript
@@ -141,8 +131,6 @@ Adds one or more properties to an object, and/or modifies attributes of existing
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## defineProperty
 
 ```TypeScript
@@ -167,8 +155,6 @@ Adds a property to an object, or modifies attributes of an existing property.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## freeze
 
 ```TypeScript
@@ -191,8 +177,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## freeze
 
 ```TypeScript
@@ -215,8 +199,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 | Type | Description |
 | --- | --- |
-| [Readonly](arkts-na-readonly-t.md)&lt;T&gt; |  |
-
 ## freeze
 
 ```TypeScript
@@ -239,8 +221,6 @@ Prevents the modification of existing property attributes and values, and preven
 
 | Type | Description |
 | --- | --- |
-| [Readonly](arkts-na-readonly-t.md)&lt;T&gt; |  |
-
 ## getOwnPropertyDescriptor
 
 ```TypeScript
@@ -264,8 +244,6 @@ Gets the own property descriptor of the specified object. An own property descri
 
 | Type | Description |
 | --- | --- |
-| [PropertyDescriptor](arkts-na-lib-es5-propertydescriptor-i.md) |  |
-
 ## getOwnPropertyNames
 
 ```TypeScript
@@ -288,8 +266,6 @@ Returns the names of the own properties of an object. The own properties of an o
 
 | Type | Description |
 | --- | --- |
-| string[] |  |
-
 ## getPrototypeOf
 
 ```TypeScript
@@ -312,8 +288,6 @@ Returns the prototype of an object.
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## isExtensible
 
 ```TypeScript
@@ -336,8 +310,6 @@ Returns a value that indicates whether new properties can be added to an object.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## isFrozen
 
 ```TypeScript
@@ -360,8 +332,6 @@ Returns true if existing property attributes and values cannot be modified in an
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## isSealed
 
 ```TypeScript
@@ -384,8 +354,6 @@ Returns true if existing property attributes cannot be modified in an object and
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## keys
 
 ```TypeScript
@@ -408,8 +376,6 @@ Returns the names of the enumerable string properties and methods of an object.
 
 | Type | Description |
 | --- | --- |
-| string[] |  |
-
 ## preventExtensions
 
 ```TypeScript
@@ -432,8 +398,6 @@ Prevents the addition of new properties to an object.
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## seal
 
 ```TypeScript
@@ -456,8 +420,6 @@ Prevents the modification of attributes of existing properties, and prevents the
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## prototype
 
 ```TypeScript

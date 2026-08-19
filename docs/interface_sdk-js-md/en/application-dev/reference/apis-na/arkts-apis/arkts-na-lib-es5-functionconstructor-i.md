@@ -31,8 +31,6 @@ Creates a new function.
 
 | Type | Description |
 | --- | --- |
-| Function |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ Creates a new function.
 
 | Type | Description |
 | --- | --- |
-| Function |  |
-
 ## prototype
 
 ```TypeScript

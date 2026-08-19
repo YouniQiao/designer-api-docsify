@@ -227,7 +227,7 @@ showMode?: ToastShowMode
 
 Determine the show mode of the toast.
 
-**Type:** [ToastShowMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-toastshowmode-e.md)
+**Type:** [ToastShowMode](arkts-na-promptaction-toastshowmode-e.md)
 
 **Default:** ToastShowMode.DEFAULT
 

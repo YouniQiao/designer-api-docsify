@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDevice } from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## setFunctionKeyEnabled

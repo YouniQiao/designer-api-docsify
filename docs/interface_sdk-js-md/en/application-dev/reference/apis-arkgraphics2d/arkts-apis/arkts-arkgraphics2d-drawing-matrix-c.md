@@ -1,6 +1,6 @@
 # Matrix
 
-Implements a matrix. A 3 x 3 matrix is shown as below.  Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:  > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Implements a matrix. A 3 x 3 matrix is shown as below.  Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:  &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ Obtains all element values of this matrix.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;double&gt; | nine scalar values contained by Matrix. |
+| Array&lt;double&gt; \| undefined | nine scalar values contained by Matrix. |
 
 ## getValue
 
@@ -280,7 +280,7 @@ Maps a source point array to a destination point array by means of matrix transf
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Return mapped points array. |
+| Array&lt;common2D.Point&gt; \| undefined | Return mapped points array. |
 
 **Error codes:**
 

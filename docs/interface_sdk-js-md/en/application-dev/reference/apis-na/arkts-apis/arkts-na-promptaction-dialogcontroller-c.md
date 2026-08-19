@@ -2,7 +2,7 @@
 
 The class used to control dialog.
 
-**Inheritance/Implementation:** DialogController extends [CommonController](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-commoncontroller-c.md)
+**Inheritance/Implementation:** DialogController extends [CommonController](arkts-na-promptaction-commoncontroller-c.md)
 
 **Since:** 23
 

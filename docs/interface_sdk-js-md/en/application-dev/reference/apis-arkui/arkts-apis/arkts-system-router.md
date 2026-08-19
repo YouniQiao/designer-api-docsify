@@ -4,7 +4,7 @@ The **Router** module provides APIs to access pages through URIs.
  > **NOTE**
  >
  > - The APIs of this module are no longer maintained since API version 8. You are advised to use
- > [@ohos.router](../../apis-na/arkts-apis/arkts-router.md) instead.
+ > [@ohos.router](arkts-router.md) instead.
 
 
 ## Modules to Import

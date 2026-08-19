@@ -28,5 +28,5 @@ Get the event instance of List node.
 
 | Type | Description |
 | --- | --- |
-| UIListEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIListEvent \| undefined | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

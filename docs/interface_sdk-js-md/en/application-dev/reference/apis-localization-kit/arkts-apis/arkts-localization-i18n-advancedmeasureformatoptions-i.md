@@ -22,7 +22,7 @@ unitUsage?: UnitUsage
 
 Scenarios for MeasureFormat.
 
-**Type:** [UnitUsage](../../apis-na/arkts-apis/arkts-na-i18n-unitusage-e.md)
+**Type:** [UnitUsage](arkts-localization-i18n-unitusage-e.md)
 
 **Since:** 23
 

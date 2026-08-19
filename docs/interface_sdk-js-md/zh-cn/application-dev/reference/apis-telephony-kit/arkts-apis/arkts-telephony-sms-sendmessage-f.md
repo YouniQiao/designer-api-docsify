@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## sendMessage
@@ -11,7 +12,7 @@
 function sendMessage(options: SendMessageOptions): void
 ```
 
-发送短信。 > **说明：** > > 从 API version 6开始支持，从API version 10开始废弃。
+发送短信。 &gt; **说明：** &gt; &gt; 从 API version 6开始支持，从API version 10开始废弃。
 
 **起始版本：** 6
 

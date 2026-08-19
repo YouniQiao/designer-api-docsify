@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
 ```
 
 ## onFoldDisplayModeChange
@@ -23,7 +24,7 @@ Register the callback for fold display mode changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md)&gt; | 是 | Callback used to return the current fold display mode |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md)&gt; | 是 | Callback used to return the current fold display mode |
 
 **错误码：**
 

@@ -20,7 +20,7 @@ import { socket } from '@kit.NetworkKit';
 bind(address: LocalAddress): Promise<void>
 ```
 
-Binds the address of a local socket file. This API uses a promise to return the result. > **NOTE：**> > This API explicitly binds the client to a local socket file based on the specified address. > > It is not mandatory in local socket communication.
+Binds the address of a local socket file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API explicitly binds the client to a local socket file based on the specified address. &gt; &gt; It is not mandatory in local socket communication.
 
 **Since:** 11
 
@@ -116,7 +116,7 @@ client.close().then(() => {
 connect(options: LocalConnectOptions): Promise<void>
 ```
 
-Connects to the specified socket file. This API uses a promise to return the result. > **NOTE：**> > This API allows you to connect to the TCP server without first executing **localsocket.bind**.
+Connects to the specified socket file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API allows you to connect to the TCP server without first executing **localsocket.bind**.
 
 **Since:** 11
 
@@ -177,7 +177,7 @@ client.connect(connectOpt).then(() => {
 getExtraOptions(): Promise<ExtraOptionsBase>
 ```
 
-Obtains the socket properties of the **LocalSocket** object. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **bind** or **connect** is successfully called.
+Obtains the socket properties of the **LocalSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
 
@@ -233,7 +233,7 @@ client.connect(connectOpt).then(() => {
 getLocalAddress(): Promise<string>
 ```
 
-Obtains the local socket address of a **LocalSocket** connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **bind** is successfully called.
+Obtains the local socket address of a **LocalSocket** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
 
 **Since:** 12
 
@@ -288,7 +288,7 @@ client.bind(address).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the file descriptor of the **LocalSocket** object. This API uses a promise to return the result. > **NOTE：**> > - This API can be called only after **bind** or **connect** is successfully called. > > - The file descriptor is allocated by the system kernel to uniquely identify the local socket in use. > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](#close) method to close the socket connection, instead of directly operating > the file descriptor.
+Obtains the file descriptor of the **LocalSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after **bind** or **connect** is successfully called. &gt; &gt; - The file descriptor is allocated by the system kernel to uniquely identify the local socket in use. &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, instead of directly operating &gt; the file descriptor.
 
 **Since:** 11
 
@@ -338,7 +338,7 @@ client.getSocketFd().then((data: number) => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the local socket connection status. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **bind** or **connect** is successfully called.
+Obtains the local socket connection status. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
 
@@ -382,7 +382,7 @@ client.connect(connectOpt).then(() => {
 });
 ```
 
-## off_close('close')
+## off('close')
 
 ```TypeScript
 off(type: 'close', callback?: Callback<void>): void
@@ -401,7 +401,7 @@ Unsubscribes from **close** events of the **LocalSocket** object. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type.<br/> **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -424,7 +424,7 @@ client.off('close', callback);
 client.off('close');
 ```
 
-## off_connect('connect')
+## off('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<void>): void
@@ -443,7 +443,7 @@ Unsubscribes from **connect** events of the **LocalSocket** object. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Event type.<br/> 'connect': connection event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -466,7 +466,7 @@ client.off('connect', callback);
 client.off('connect');
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -485,7 +485,7 @@ Unsubscribes from **error** events of the **LocalSocket** object. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> 'error': error event. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -508,7 +508,7 @@ client.off('error', callback);
 client.off('error');
 ```
 
-## off_message('message')
+## off('message')
 
 ```TypeScript
 off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
@@ -527,7 +527,7 @@ Unsubscribes from **message** events of the **LocalSocket** object. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Error codes:**
 
@@ -555,7 +555,7 @@ client.on('message', callback);
 client.off('message');
 ```
 
-## on_close('close')
+## on('close')
 
 ```TypeScript
 on(type: 'close', callback: Callback<void>): void
@@ -574,7 +574,7 @@ Subscribes to **close** events of the **LocalSocket** object. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -594,7 +594,7 @@ let callback = () => {
 client.on('close', callback);
 ```
 
-## on_connect('connect')
+## on('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<void>): void
@@ -613,7 +613,7 @@ Subscribes to **connect** events of the **LocalSocket** object. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Event type.<br/> |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -632,7 +632,7 @@ client.on('connect', () => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -651,7 +651,7 @@ Subscribes to **error** events of the **LocalSocket** object. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -670,7 +670,7 @@ client.on('error', (err: Object) => {
 });
 ```
 
-## on_message('message')
+## on('message')
 
 ```TypeScript
 on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
@@ -689,7 +689,7 @@ Subscribes to **message** events of the **LocalSocket** object. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -720,7 +720,7 @@ client.on('message', (value: socket.LocalSocketMessageInfo) => {
 send(options: LocalSendOptions): Promise<void>
 ```
 
-Sends data over a local socket connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **connect** is successfully called.
+Sends data over a local socket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **connect** is successfully called.
 
 **Since:** 11
 
@@ -786,7 +786,7 @@ client.send(sendOpt).then(() => {
 setExtraOptions(options: ExtraOptionsBase): Promise<void>
 ```
 
-Sets the properties of the **LocalSocket** object. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **bind** or **connect** is successfully called.
+Sets the properties of the **LocalSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** or **connect** is successfully called.
 
 **Since:** 11
 

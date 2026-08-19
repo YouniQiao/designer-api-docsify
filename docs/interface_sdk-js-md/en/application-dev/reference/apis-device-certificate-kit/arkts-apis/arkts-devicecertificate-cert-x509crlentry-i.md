@@ -22,7 +22,7 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 getCertIssuer(): DataBlob
 ```
 
-Obtains the issuer name of the revoked certificate. > **NOTE：**> > The obtained issuer name of this revoked certificate contains a string terminator.
+Obtains the issuer name of the revoked certificate. &gt; **NOTE：**&gt; &gt; The obtained issuer name of this revoked certificate contains a string terminator.
 
 **Since:** 23
 
@@ -276,7 +276,7 @@ Obtains the serialized data of this revoked certificate entry. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized data of the revoked certificate entry obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized data of the revoked certificate entry obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

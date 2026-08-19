@@ -23,9 +23,9 @@ import { continueManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | Unregister prepareContinue event. |
-| off_prepareContinue | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [off_prepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
 | [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION. |
-| on_prepareContinue | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [on_prepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
 
 ### Interfaces
 

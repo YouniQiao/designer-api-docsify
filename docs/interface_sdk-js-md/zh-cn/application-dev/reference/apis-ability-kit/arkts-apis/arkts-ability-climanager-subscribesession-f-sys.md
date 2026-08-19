@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## subscribeSession
@@ -11,7 +12,7 @@
 function subscribeSession(sessionId: string, callback: ToolEventCallback): Promise<void>
 ```
 
-订阅指定CLI工具会话的事件。会话运行期间，CLI工具产生的标准输出、标准错误、退出或错误事件通过回调返回。 > **说明：** > > 会话仅限创建进程管理：只有调用`execTool`创建该会话的进程可以调用本接口。其他进程即使获取到`sessionId`，调用本接口也会抛出错误码201（Permission denied）。
+订阅指定CLI工具会话的事件。会话运行期间，CLI工具产生的标准输出、标准错误、退出或错误事件通过回调返回。 &gt; **说明：** &gt; &gt; 会话仅限创建进程管理：只有调用`execTool`创建该会话的进程可以调用本接口。其他进程即使获取到`sessionId`，调用本接口也会抛出错误码201（Permission denied）。
 
 **起始版本：** 26.0.0
 

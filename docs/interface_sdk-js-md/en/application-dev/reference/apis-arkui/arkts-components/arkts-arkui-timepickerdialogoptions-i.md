@@ -387,7 +387,7 @@ Triggered when the text picker in the dialog box snaps to the selected item.
 onDidAppear?: () => void
 ```
 
-Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. 4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
+Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. 4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
 
 **Type:** () =&gt; void
 
@@ -407,7 +407,7 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 onDidDisappear?: () => void
 ```
 
-Event callback after the dialog box disappears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear.
+Event callback after the dialog box disappears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear.
 
 **Type:** () =&gt; void
 
@@ -447,7 +447,7 @@ Represents the callback triggered during the scrolling of the text picker when a
 onWillAppear?: () => void
 ```
 
-Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** () =&gt; void
 
@@ -467,7 +467,7 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 onWillDisappear?: () => void
 ```
 
-Event callback when the dialog box is about to disappear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear. 2. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+Event callback when the dialog box is about to disappear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange) &gt; onWillDisappear &gt; onDidDisappear. 2. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
 **Type:** () =&gt; void
 

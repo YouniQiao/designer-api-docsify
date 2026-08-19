@@ -221,7 +221,7 @@ Obtains a cloud enhancement instance.
 
 | Type | Description |
 | --- | --- |
-| [CloudEnhancement](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md) | Returns cloud enhancement instance, if the operation fails, returns null |
+| [CloudEnhancement](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md) \| null | Returns cloud enhancement instance, if the operation fails, returns null |
 
 **Error codes:**
 

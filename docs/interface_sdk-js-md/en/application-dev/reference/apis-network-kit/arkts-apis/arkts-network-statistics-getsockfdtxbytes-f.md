@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getSockfdTxBytes(sockfd: int, callback: AsyncCallback<long>): void
 ```
 
-Obtains the uplink traffic of the specified socket (in bytes). This API uses an asynchronous callback to return the result. > **NOTE：**> > It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot > be queried after the socket is closed.
+Obtains the uplink traffic of the specified socket (in bytes). This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ Obtains the uplink traffic of the specified socket (in bytes). This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sockfd | int | Yes | FD of the socket to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the uplink traffic of the socket is obtained successfully, **error** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the uplink traffic of the socket is obtained successfully, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -56,7 +56,7 @@ statistics.getSockfdTxBytes(sockfd, (error: BusinessError, stats: number) => {
 function getSockfdTxBytes(sockfd: int): Promise<long>
 ```
 
-Obtains the uplink traffic (in bytes) of the specified socket. This API uses a promise to return the result. > **NOTE：**> > It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot > be queried after the socket is closed.
+Obtains the uplink traffic (in bytes) of the specified socket. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; It is recommended to use this API when the socket is connected. Otherwise, the corresponding traffic data cannot &gt; be queried after the socket is closed.
 
 **Since:** 23
 

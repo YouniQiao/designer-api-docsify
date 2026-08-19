@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| CheckboxAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| CheckboxAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

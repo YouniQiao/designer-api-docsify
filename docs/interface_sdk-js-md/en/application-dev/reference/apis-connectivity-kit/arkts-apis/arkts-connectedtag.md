@@ -22,8 +22,8 @@ import { connectedTag } from '@kit.ConnectivityKit';
 | --- | --- |
 | [init](arkts-connectivity-connectedtag-init-f.md) | Initializes Connected Tag. |
 | [initialize](arkts-connectivity-connectedtag-initialize-f.md) | Initializes the connected NFC tag. |
-| [off_notify](arkts-connectivity-connectedtag-offnotify-f.md#off_notifynotify) | Unsubscribes NFC RF status change events. &lt;p&gt;All callback functions will be unregistered If there is no specific callback parameter.&lt;/p&gt; |
-| [on_notify](arkts-connectivity-connectedtag-onnotify-f.md#on_notifynotify) | Subscribes NFC RF status change events. |
+| [off_notify](arkts-connectivity-connectedtag-offnotify-f.md#offnotify) | Unsubscribes NFC RF status change events. &lt;p&gt;All callback functions will be unregistered If there is no specific callback parameter.&lt;/p&gt; |
+| [on_notify](arkts-connectivity-connectedtag-onnotify-f.md#onnotify) | Subscribes NFC RF status change events. |
 | [read](arkts-connectivity-connectedtag-read-f.md) | Reads the NDEF data from the connected NFC tag. |
 | [read](arkts-connectivity-connectedtag-read-f.md) | Reads the NDEF data from the connected NFC tag. |
 | [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md) | Reads the NDEF Data. |

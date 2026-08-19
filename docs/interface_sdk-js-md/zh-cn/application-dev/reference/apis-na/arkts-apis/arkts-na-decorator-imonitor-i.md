@@ -38,7 +38,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [IMonitorValue](arkts-na-decorator-imonitorvalue-i.md)&lt;T&gt; |  |
+| [IMonitorValue](arkts-na-decorator-imonitorvalue-i.md)&lt;T&gt; \| undefined |  |
 
 ## dirty
 

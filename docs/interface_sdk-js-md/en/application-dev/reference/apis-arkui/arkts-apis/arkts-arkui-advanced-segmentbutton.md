@@ -13,7 +13,7 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 
 | Name | Description |
 | --- | --- |
-| [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md) | **SegmentButton** is a versatile component that organizes related options into visually grouped buttons. It supports three variants: tab-style, capsule-style single-select, and capsule-style multi-select. >**NOTE：**> > - The **SegmentButton** component does not support [universal attributes](ts-component-general-attributes.md). The component occupies the maximum available width within its content area and distributes this width evenly among its items. It adapts its height automatically to the content (text and images), the minimum height being 28 vp. > > - Properties decorated with @Prop are optional. They are required during construction only when used together with the @Require decorator. |
+| [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md) | **SegmentButton** is a versatile component that organizes related options into visually grouped buttons. It supports three variants: tab-style, capsule-style single-select, and capsule-style multi-select. &gt;**NOTE：**&gt; &gt; - The **SegmentButton** component does not support [universal attributes](ts-component-general-attributes.md). The component occupies the maximum available width within its content area and distributes this width evenly among its items. It adapts its height automatically to the content (text and images), the minimum height being 28 vp. &gt; &gt; - Properties decorated with @Prop are optional. They are required during construction only when used together with the @Require decorator. |
 
 ### Enums
 
@@ -26,6 +26,6 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 | Name | Description |
 | --- | --- |
 | [DimensionNoPercentage](arkts-arkui-dimensionnopercentage-t.md) | The percentage length union type is not supported. |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md) | Tuple type that stores button information. > **NOTE：**> > A **SegmentButton** component supports two to five buttons. |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) | Tuple type that stores button information. &gt; **NOTE：**&gt; &gt; A **SegmentButton** component supports two to five buttons. |
 | [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md) | Represents the tuple union type used to store button information. |
 

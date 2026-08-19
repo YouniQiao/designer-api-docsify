@@ -34,8 +34,6 @@ Returns a section of an ArrayBuffer.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer |  |
-
 ## byteLength
 
 ```TypeScript

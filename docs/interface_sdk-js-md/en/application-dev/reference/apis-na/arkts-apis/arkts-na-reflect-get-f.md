@@ -33,5 +33,3 @@ Gets the property of target, equivalent to `target[propertyKey]` when `receiver 
 
 | Type | Description |
 | --- | --- |
-| P extends keyof T ? T[P] : any |  |
-

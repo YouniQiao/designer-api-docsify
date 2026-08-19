@@ -40,7 +40,7 @@ Sets the total number of indicator.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## initialIndex
 
@@ -70,7 +70,7 @@ Called when the index value of the displayed subcomponent is set in the containe
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## loop
 
@@ -100,7 +100,7 @@ Called when setting whether to turn on cyclic sliding.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## onChange
 
@@ -130,7 +130,7 @@ Called when the index value changes.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## setIndicatorComponentOptions
 
@@ -154,8 +154,6 @@ setIndicatorComponentOptions(controller?: IndicatorComponentController): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## style
 
 ```TypeScript
@@ -184,7 +182,7 @@ Sets the indicator style.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## vertical
 
@@ -214,7 +212,7 @@ Called when setting whether to slide vertically.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## default
 

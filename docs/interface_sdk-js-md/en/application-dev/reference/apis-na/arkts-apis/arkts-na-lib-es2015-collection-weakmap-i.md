@@ -31,8 +31,6 @@ Removes the specified element from the WeakMap.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## get
 
 ```TypeScript
@@ -53,8 +51,6 @@ get(key: K): V | undefined
 
 | Type | Description |
 | --- | --- |
-| V |  |
-
 ## has
 
 ```TypeScript
@@ -75,8 +71,6 @@ has(key: K): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## set
 
 ```TypeScript
@@ -100,5 +94,3 @@ Adds a new element with a specified key and value.
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

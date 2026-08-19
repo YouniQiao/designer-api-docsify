@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## copy
@@ -115,7 +116,7 @@ function copy(logType: string, logName: string, dest: string, callback: AsyncCal
 | logType | string | 是 | 日志类型字符串，例如“HILOG”, "FAULTLOG", "BETACLUB", "REMOTELOG"等。 |
 | logName | string | 是 | 日志文件名称。 |
 | dest | string | 是 | 目标目录，需填入相对目录名称。传入dest字串后，日志文件将保存到应用缓存路径下的"hiview/*dest*"文件夹，即"../cache/hiview/*dest*"。可填入多 层目录。 <br>如果传入空字串，将保存到根目录下，即应用缓存路径下的hiview文件夹。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。0表示拷贝成功，其它值表示拷贝失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。0表示拷贝成功，其它值表示拷贝失败。 |
 
 **错误码：**
 

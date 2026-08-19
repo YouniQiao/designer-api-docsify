@@ -165,7 +165,7 @@ export default class EntryAbility extends UIAbility {
 on(event: string, callback: Function): void
 ```
 
-Subscribes to an event. > **NOTE：**> > When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of > **this** in **callback**, use an arrow function.
+Subscribes to an event. &gt; **NOTE：**&gt; &gt; When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of &gt; **this** in **callback**, use an arrow function.
 
 **Since:** 23
 

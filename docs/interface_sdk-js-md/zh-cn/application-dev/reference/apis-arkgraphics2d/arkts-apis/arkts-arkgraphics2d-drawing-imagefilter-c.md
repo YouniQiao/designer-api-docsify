@@ -1,6 +1,6 @@
 # ImageFilter
 
-图像滤波器，用于对图像应用各种滤波效果，支持创建模糊、颜色混合、级联组合、偏移、基于着色器等多种图像滤波器。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+图像滤波器，用于对图像应用各种滤波效果，支持创建模糊、颜色混合、级联组合、偏移、基于着色器等多种图像滤波器。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendImageFilter
@@ -73,7 +74,7 @@ static createBlendImageFilter(mode: BlendMode, background: ImageFilter, foregrou
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回按照指定混合模式叠加后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回按照指定混合模式叠加后的图像滤波器。 |
 
 **错误码：**
 
@@ -145,7 +146,7 @@ static createBlurImageFilter(sigmaX: double, sigmaY: double,
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回创建的模糊图像滤波器。创建失败时返回undefined。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回创建的模糊图像滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -205,7 +206,7 @@ static createComposeImageFilter(cOuter: ImageFilter, cInner: ImageFilter): Image
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回级联后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回级联后的图像滤波器。 |
 
 ## createFromColorFilter
 
@@ -265,7 +266,7 @@ static createFromColorFilter(colorFilter: ColorFilter, imageFilter?: ImageFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回颜色滤波器叠加后的图像滤波器。创建失败时返回undefined。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回颜色滤波器叠加后的图像滤波器。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -327,7 +328,7 @@ static createFromImage(pixelmap: image.PixelMap, srcRect?: common2D.Rect | null,
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于图像创建的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回基于图像创建的图像滤波器。 |
 
 ## createFromShaderEffect
 
@@ -379,7 +380,7 @@ static createFromShaderEffect(shader: ShaderEffect): ImageFilter | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回基于着色器创建的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回基于着色器创建的图像滤波器。 |
 
 ## createOffsetImageFilter
 
@@ -435,5 +436,5 @@ static createOffsetImageFilter(dx: double, dy: double, input?: ImageFilter | nul
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | 返回偏移后的图像滤波器。 |
+| [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| undefined | 返回偏移后的图像滤波器。 |
 

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<NavigationAttribute> | AttributeMo
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backButtonIcon
 
 ```TypeScript
@@ -59,8 +57,6 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier | undefi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## configuration
 
 ```TypeScript
@@ -83,8 +79,6 @@ configuration(config: NavigationConfiguration | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## customNavContentTransition
 
 ```TypeScript
@@ -107,8 +101,6 @@ customNavContentTransition(delegate: ((from: NavContentInfo, to: NavContentInfo,
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## divider
 
 ```TypeScript
@@ -131,8 +123,6 @@ divider(style: NavigationDividerStyle | null | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableDragBar
 
 ```TypeScript
@@ -155,8 +145,6 @@ enableDragBar(isEnabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableModeChangeAnimation
 
 ```TypeScript
@@ -179,8 +167,6 @@ enableModeChangeAnimation(isEnabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableToolBarAdaptation
 
 ```TypeScript
@@ -203,8 +189,6 @@ enableToolBarAdaptation(enable: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableVisibilityLifecycleWithContentCover
 
 ```TypeScript
@@ -227,8 +211,6 @@ enableVisibilityLifecycleWithContentCover(isEnabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideBackButton
 
 ```TypeScript
@@ -251,8 +233,6 @@ hideBackButton(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideNavBar
 
 ```TypeScript
@@ -275,8 +255,6 @@ hideNavBar(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -299,8 +277,6 @@ hideTitleBar(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -324,8 +300,6 @@ hideTitleBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideToolBar
 
 ```TypeScript
@@ -348,8 +322,6 @@ hideToolBar(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideToolBar
 
 ```TypeScript
@@ -373,8 +345,6 @@ hideToolBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## ignoreLayoutSafeArea
 
 ```TypeScript
@@ -398,8 +368,6 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menus
 
 ```TypeScript
@@ -423,8 +391,6 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: Na
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## minContentWidth
 
 ```TypeScript
@@ -447,8 +413,6 @@ minContentWidth(value: Dimension | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## mode
 
 ```TypeScript
@@ -471,8 +435,6 @@ mode(value: NavigationMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## navBarPosition
 
 ```TypeScript
@@ -495,8 +457,6 @@ navBarPosition(value: NavBarPosition | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## navBarWidth
 
 ```TypeScript
@@ -519,8 +479,6 @@ navBarWidth(value: Length | Bindable<Length> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## navBarWidthRange
 
 ```TypeScript
@@ -546,8 +504,6 @@ navBarWidthRange(value: [
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## navDestination
 
 ```TypeScript
@@ -570,8 +526,6 @@ navDestination(builder: PageMapBuilder | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onNavBarStateChange
 
 ```TypeScript
@@ -594,8 +548,6 @@ onNavBarStateChange(callback: ((isVisible: boolean) => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onNavigationModeChange
 
 ```TypeScript
@@ -618,8 +570,6 @@ onNavigationModeChange(callback: ((mode: NavigationMode) => void) | undefined): 
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onTitleModeChange
 
 ```TypeScript
@@ -642,8 +592,6 @@ onTitleModeChange(callback: ((titleMode: NavigationTitleMode) => void) | undefin
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## recoverable
 
 ```TypeScript
@@ -666,8 +614,6 @@ recoverable(recoverable: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setNavigationOptions
 
 ```TypeScript
@@ -692,8 +638,6 @@ setNavigationOptions(pathInfos?: NavPathStack, homeDestination?: HomePathInfo, m
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setNavigationOptions
 
 ```TypeScript
@@ -717,8 +661,6 @@ setNavigationOptions(pathInfos?: NavPathStack,  moduleInfo?: NavigationModuleInf
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## splitPlaceholder
 
 ```TypeScript
@@ -741,8 +683,6 @@ splitPlaceholder(placeholder: ComponentContent<Object> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## systemBarStyle
 
 ```TypeScript
@@ -765,8 +705,6 @@ systemBarStyle(style: SystemBarStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## title
 
 ```TypeScript
@@ -790,8 +728,6 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## titleMode
 
 ```TypeScript
@@ -814,8 +750,6 @@ titleMode(value: NavigationTitleMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## toolbarConfiguration
 
 ```TypeScript
@@ -839,8 +773,6 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder | undefined, opti
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

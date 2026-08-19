@@ -60,7 +60,7 @@ Creates a **NumberFormat** object based on the specified locale and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | No | Options for creating the **NumberFormat** object. |
+| options | [NumberOptions](../../apis-na/arkts-apis/arkts-na-intl-numberoptions-i.md) | No | Options for creating the **NumberFormat** object. |
 
 **Examples**
 
@@ -174,7 +174,7 @@ Obtains the options for creating a **NumberFormat** object.
 
 | Type | Description |
 | --- | --- |
-| [NumberOptions](arkts-localization-intl-numberoptions-i.md) | Options for creating the **NumberFormat** object. |
+| [NumberOptions](../../apis-na/arkts-apis/arkts-na-intl-numberoptions-i.md) | Options for creating the **NumberFormat** object. |
 
 **Examples**
 

@@ -1,6 +1,6 @@
 # TextBlob
 
-TextBlob是由一个或多个具有相同字型的字符组成的字块。支持通过文本、字符串、RunBuffer等多种方式创建字形集合，适用于需要批量渲染文本或获取文字边界框的场景。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+TextBlob是由一个或多个具有相同字型的字符组成的字块。支持通过文本、字符串、RunBuffer等多种方式创建字形集合，适用于需要批量渲染文本或获取文字边界框的场景。 &gt; **说明：** &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ TextBlob是由一个或多个具有相同字型的字符组成的字块。支持
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## bounds
@@ -51,7 +52,7 @@ bounds(): common2D.Rect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 文字边界框的矩形区域。创建失败时返回undefined。 |
+| common2D.Rect \| undefined | 文字边界框的矩形区域。创建失败时返回undefined。 |
 
 ## makeFromPosText
 
@@ -115,7 +116,7 @@ static makeFromPosText(text: string, len: int, points: common2D.Point[], font: F
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | 由文本和坐标信息创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) \| undefined | 由文本和坐标信息创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -183,7 +184,7 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | 基于RunBuffer创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) \| undefined | 基于RunBuffer创建的TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -251,7 +252,7 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) \| undefined | TextBlob对象，用于后续绘制字形。创建失败时返回undefined。 |
 
 **错误码：**
 

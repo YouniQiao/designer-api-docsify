@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
 ```
 
 ## 汇总

@@ -32,8 +32,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 | Type | Description |
 | --- | --- |
-| T & U |  |
-
 ## assign
 
 ```TypeScript
@@ -58,8 +56,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 | Type | Description |
 | --- | --- |
-| T & U & V |  |
-
 ## assign
 
 ```TypeScript
@@ -85,8 +81,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 | Type | Description |
 | --- | --- |
-| T & U & V & W |  |
-
 ## assign
 
 ```TypeScript
@@ -110,8 +104,6 @@ Copy the values of all of the enumerable own properties from one or more source 
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## getOwnPropertySymbols
 
 ```TypeScript
@@ -134,8 +126,6 @@ Returns an array of all symbol properties found directly on object o.
 
 | Type | Description |
 | --- | --- |
-| symbol[] |  |
-
 ## is
 
 ```TypeScript
@@ -159,8 +149,6 @@ Returns true if the values are the same value, false otherwise.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## keys
 
 ```TypeScript
@@ -183,8 +171,6 @@ Returns the names of the enumerable string properties and methods of an object.
 
 | Type | Description |
 | --- | --- |
-| string[] |  |
-
 ## setPrototypeOf
 
 ```TypeScript
@@ -208,5 +194,3 @@ Sets the prototype of a specified object o to object proto or null. Returns the 
 
 | Type | Description |
 | --- | --- |
-| any |  |
-

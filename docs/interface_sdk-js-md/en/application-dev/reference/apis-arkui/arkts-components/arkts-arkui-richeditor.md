@@ -76,7 +76,7 @@ Called when create RichEditor.
 | [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | Defines the options for initializing the **RichEditor** component. |
 | [RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md) | Describes the returned paragraph information. |
 | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | Describes the paragraph style. |
-| [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | Defines the paragraph style options. Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md). > **NOTE：**> > Applicable scope of the API: spans involved in the specified range. |
+| [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | Defines the paragraph style options. Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md). &gt; **NOTE：**&gt; &gt; Applicable scope of the API: spans involved in the specified range. |
 | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Defines the range of the **RichEditor**. |
 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | Provides information about the selected content. |
 | [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md) | Provides the span position information. |

@@ -61,15 +61,15 @@ import { avSession } from '@kit.AVSessionKit';
 | [offDistributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) | Unregister distributed session changed callback |
 | [offSessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | Unregister Session service death callback, notifying the application to clean up resources. |
 | [offSystemCommonEvent](arkts-avsession-avsession-offsystemcommonevent-f-sys.md) | Unregister system common event callback |
-| off_deviceAvailable | Unregister device discovery callback |
-| off_deviceLogEvent | UnRegister log event callback. |
-| off_deviceOffline | Unregister device offline callback |
-| off_deviceStateChanged | Unregisters a system callback for the device connection phase. |
-| off_distributedSessionChange | Unregister distributed session changed callback |
-| [off_sessionCreate](arkts-avsession-avsession-offsessioncreate-f-sys.md#off_sessioncreatesessioncreate) | Unregister session create callback |
-| [off_sessionDestroy](arkts-avsession-avsession-offsessiondestroy-f-sys.md#off_sessiondestroysessiondestroy) | Unregister session destroy callback |
-| off_sessionServiceDie | Unregister Session service death callback, notifying the application to clean up resources. |
-| [off_topSessionChange](arkts-avsession-avsession-offtopsessionchange-f-sys.md#off_topsessionchangetopsessionchange) | Unregister top session changed callback |
+| [off_deviceAvailable](arkts-avsession-avsession-offdeviceavailable-f-sys.md) | Unregister device discovery callback |
+| [off_deviceLogEvent](arkts-avsession-avsession-offdevicelogevent-f-sys.md) | UnRegister log event callback. |
+| [off_deviceOffline](arkts-avsession-avsession-offdeviceoffline-f-sys.md) | Unregister device offline callback |
+| [off_deviceStateChanged](arkts-avsession-avsession-offdevicestatechanged-f-sys.md) | Unregisters a system callback for the device connection phase. |
+| [off_distributedSessionChange](arkts-avsession-avsession-offdistributedsessionchange-f-sys.md) | Unregister distributed session changed callback |
+| [off_sessionCreate](arkts-avsession-avsession-offsessioncreate-f-sys.md#offsessioncreate) | Unregister session create callback |
+| [off_sessionDestroy](arkts-avsession-avsession-offsessiondestroy-f-sys.md#offsessiondestroy) | Unregister session destroy callback |
+| [off_sessionServiceDie](arkts-avsession-avsession-offsessionservicedie-f-sys.md) | Unregister Session service death callback, notifying the application to clean up resources. |
+| [off_topSessionChange](arkts-avsession-avsession-offtopsessionchange-f-sys.md#offtopsessionchange) | Unregister top session changed callback |
 | [onActiveSessionChanged](arkts-avsession-avsession-onactivesessionchanged-f-sys.md) | Register active session changed callback. |
 | [onDeviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | Register device discovery callback |
 | [onDeviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) | Register log event callback. |
@@ -78,15 +78,15 @@ import { avSession } from '@kit.AVSessionKit';
 | [onDistributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) | Register distributed session changed callback |
 | [onSessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | Register Session service death callback, notifying the application to clean up resources. |
 | [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md) | Register system common event callback |
-| on_deviceAvailable | Register device discovery callback |
-| on_deviceLogEvent | Register log event callback. |
-| on_deviceOffline | Register device offline callback |
-| on_deviceStateChanged | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
-| on_distributedSessionChange | Register distributed session changed callback |
-| [on_sessionCreate](arkts-avsession-avsession-onsessioncreate-f-sys.md#on_sessioncreatesessioncreate) | Register session create callback |
-| [on_sessionDestroy](arkts-avsession-avsession-onsessiondestroy-f-sys.md#on_sessiondestroysessiondestroy) | Register session destroy callback |
-| on_sessionServiceDie | Register Session service death callback, notifying the application to clean up resources. |
-| [on_topSessionChange](arkts-avsession-avsession-ontopsessionchange-f-sys.md#on_topsessionchangetopsessionchange) | Register top session changed callback |
+| [on_deviceAvailable](arkts-avsession-avsession-ondeviceavailable-f-sys.md) | Register device discovery callback |
+| [on_deviceLogEvent](arkts-avsession-avsession-ondevicelogevent-f-sys.md) | Register log event callback. |
+| [on_deviceOffline](arkts-avsession-avsession-ondeviceoffline-f-sys.md) | Register device offline callback |
+| [on_deviceStateChanged](arkts-avsession-avsession-ondevicestatechanged-f-sys.md) | Registers a system callback for the device connection phase. The callback includes information such as error codes, connection status, radar errors, and user behavior codes. |
+| [on_distributedSessionChange](arkts-avsession-avsession-ondistributedsessionchange-f-sys.md) | Register distributed session changed callback |
+| [on_sessionCreate](arkts-avsession-avsession-onsessioncreate-f-sys.md#onsessioncreate) | Register session create callback |
+| [on_sessionDestroy](arkts-avsession-avsession-onsessiondestroy-f-sys.md#onsessiondestroy) | Register session destroy callback |
+| [on_sessionServiceDie](arkts-avsession-avsession-onsessionservicedie-f-sys.md) | Register Session service death callback, notifying the application to clean up resources. |
+| [on_topSessionChange](arkts-avsession-avsession-ontopsessionchange-f-sys.md#ontopsessionchange) | Register top session changed callback |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | Send system media key event.The system automatically selects the recipient. |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md) | Send system media key event.The system automatically selects the recipient. |
 | [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md) | Send system control command. The system automatically selects the recipient. |

@@ -466,7 +466,7 @@ Callback invoked when the selected item in the picker changes. Anonymous Object 
 onDidAppear?: VoidCallback
 ```
 
-Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. <br>3. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. <br>4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. &lt;/p&gt;
+Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. <br>3. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. <br>4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. &lt;/p&gt;
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -486,7 +486,7 @@ Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/stro
 onDidDisappear?: VoidCallback
 ```
 
-Event callback when the dialog box disappears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > <br>(onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;/p&gt;
+Event callback when the dialog box disappears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; <br>(onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. &lt;/p&gt;
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -506,7 +506,7 @@ Event callback when the dialog box disappears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/s
 onWillAppear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onWillAppear. The settings take effect next time the dialog box appears. &lt;/p&gt;
+Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onWillAppear. The settings take effect next time the dialog box appears. &lt;/p&gt;
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -526,7 +526,7 @@ Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NO
 onWillDisappear?: VoidCallback
 ```
 
-Event callback when the dialog box is about to disappear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. <br>2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. &lt;/p&gt;
+Event callback when the dialog box is about to disappear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onDateAccept/onCancel/onDateChange) &gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. &lt;/p&gt;
 
 **Type:** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 

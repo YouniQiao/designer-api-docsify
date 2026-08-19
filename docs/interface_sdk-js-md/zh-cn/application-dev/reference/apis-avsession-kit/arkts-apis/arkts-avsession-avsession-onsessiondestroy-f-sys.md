@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
-## on_sessionDestroy('sessionDestroy')
+## on('sessionDestroy')
 
 ```TypeScript
 function on(type: 'sessionDestroy', callback: (session: AVSessionDescriptor) => void): void

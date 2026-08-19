@@ -34,7 +34,7 @@ getSelection(): RichEditorRange | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 选中区域范围。<br/>返回undefined时表示controller未与组件绑定。 |
+| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) \| undefined | 选中区域范围。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## getStyledString
 
@@ -58,7 +58,7 @@ getStyledString(): MutableStyledString | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。<br/>返回undefined时表示controller未与组件绑定。 |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) \| undefined | 富文本组件显示的属性字符串。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## onContentChanged
 

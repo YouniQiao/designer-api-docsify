@@ -39,8 +39,6 @@ cancel(index: int): Promise<void> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
-
 ## prefetch
 
 ```TypeScript
@@ -69,7 +67,7 @@ prefetch(index: int): Promise<void> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; \| undefined |  |
 
 ## default
 

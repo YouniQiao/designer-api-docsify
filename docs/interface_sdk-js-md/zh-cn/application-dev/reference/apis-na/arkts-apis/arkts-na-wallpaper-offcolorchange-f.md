@@ -5,7 +5,7 @@
 ```TypeScript
 ```
 
-## off_colorChange('colorChange')
+## off('colorChange')
 
 ```TypeScript
 function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void

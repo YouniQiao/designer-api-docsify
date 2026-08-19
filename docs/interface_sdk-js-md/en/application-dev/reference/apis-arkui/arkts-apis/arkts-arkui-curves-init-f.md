@@ -18,7 +18,7 @@ Implements initialization for the interpolation curve, which is used to create a
 
 **Deprecated since:** 9
 
-**Substitutes:** [initCurve](arkts-arkui-curves-initcurve-f.md)
+**Substitutes:** [initCurve](../../apis-na/arkts-apis/arkts-na-curves-initcurve-f.md)
 
 <!--Device-curves-function init(curve?: Curve): string--><!--Device-curves-function init(curve?: Curve): string-End-->
 

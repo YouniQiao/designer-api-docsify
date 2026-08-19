@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<SliderAttribute> | AttributeModifi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## blockBorderColor
 
 ```TypeScript
@@ -58,8 +56,6 @@ blockBorderColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## blockBorderWidth
 
 ```TypeScript
@@ -82,8 +78,6 @@ blockBorderWidth(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## blockColor
 
 ```TypeScript
@@ -106,8 +100,6 @@ blockColor(value: ResourceColor | LinearGradient | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## blockSize
 
 ```TypeScript
@@ -130,8 +122,6 @@ blockSize(value: SizeOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## blockStyle
 
 ```TypeScript
@@ -154,8 +144,6 @@ blockStyle(value: SliderBlockStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -178,8 +166,6 @@ contentModifier(modifier: ContentModifier<SliderConfiguration> | undefined): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -202,8 +188,6 @@ digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableHapticFeedback
 
 ```TypeScript
@@ -226,8 +210,6 @@ enableHapticFeedback(enabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## minResponsiveDistance
 
 ```TypeScript
@@ -250,8 +232,6 @@ minResponsiveDistance(value: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -274,8 +254,6 @@ onChange(callback: ((value: double, mode: SliderChangeMode) => void) | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## prefix
 
 ```TypeScript
@@ -292,15 +270,13 @@ prefix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| undefined | 是 |  |
+| content | [ComponentContent](arkts-na-componentcontent-c.md)&lt;T&gt; \| undefined | 是 |  |
 | options | [SliderPrefixOptions](arkts-na-slider-sliderprefixoptions-i.md) \| undefined | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedBorderRadius
 
 ```TypeScript
@@ -323,8 +299,6 @@ selectedBorderRadius(value: Dimension | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedColor
 
 ```TypeScript
@@ -347,8 +321,6 @@ selectedColor(selectedColor: ResourceColor | LinearGradient | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showSteps
 
 ```TypeScript
@@ -371,8 +343,6 @@ showSteps(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showSteps
 
 ```TypeScript
@@ -396,8 +366,6 @@ showSteps(value: boolean | undefined, options?: SliderShowStepOptions | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showTips
 
 ```TypeScript
@@ -421,8 +389,6 @@ showTips(value: boolean | undefined, content?: ResourceStr | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## slideRange
 
 ```TypeScript
@@ -445,8 +411,6 @@ slideRange(value: SlideRange | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sliderInteractionMode
 
 ```TypeScript
@@ -469,8 +433,6 @@ sliderInteractionMode(value: SliderInteraction | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## stepColor
 
 ```TypeScript
@@ -493,8 +455,6 @@ stepColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## stepSize
 
 ```TypeScript
@@ -517,8 +477,6 @@ stepSize(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## suffix
 
 ```TypeScript
@@ -535,15 +493,13 @@ suffix<T extends Object>(content: ComponentContent<T> | undefined, options?: Sli
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| undefined | 是 |  |
+| content | [ComponentContent](arkts-na-componentcontent-c.md)&lt;T&gt; \| undefined | 是 |  |
 | options | [SliderSuffixOptions](arkts-na-slider-slidersuffixoptions-i.md) \| undefined | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## trackBorderRadius
 
 ```TypeScript
@@ -566,8 +522,6 @@ trackBorderRadius(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## trackColor
 
 ```TypeScript
@@ -590,8 +544,6 @@ trackColor(value: ResourceColor | LinearGradient | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## trackColorMetrics
 
 ```TypeScript
@@ -614,8 +566,6 @@ trackColorMetrics(color: ColorMetricsLinearGradient | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## trackThickness
 
 ```TypeScript
@@ -638,8 +588,6 @@ trackThickness(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

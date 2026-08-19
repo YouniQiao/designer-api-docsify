@@ -11,6 +11,7 @@ DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建�
 ## 导入模块
 
 ```TypeScript
+import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## onConnect
@@ -39,7 +40,7 @@ Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis
 
 | 类型 | 说明 |
 | --- | --- |
-| rpc.RemoteObject | 一个RemoteObject对象，用于客户端和服务端进行通信；或一个Promise对象，返回用于通信的 RemoteObject对象。 |
+| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | 一个RemoteObject对象，用于客户端和服务端进行通信；或一个Promise对象，返回用于通信的 RemoteObject对象。 |
 
 **示例**
 
@@ -169,7 +170,7 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| undefined | 返回值为空；或一个Promise对象，无返回结果。 |
+| undefined \| Promise&lt;void&gt; | 返回值为空；或一个Promise对象，无返回结果。 |
 
 ## onDump
 

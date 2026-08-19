@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## once_SensorType.SENSOR_TYPE_ID_BAROMETER
@@ -11,7 +12,7 @@
 function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void
 ```
 
-监听气压计传感器数据变化一次。适用于仅需一次性获取当前气压数据的场景。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER] > once > 替代。
+监听气压计传感器数据变化一次。适用于仅需一次性获取当前气压数据的场景。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER] &gt; once &gt; 替代。
 
 **起始版本：** 8
 
@@ -28,5 +29,5 @@ function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Baro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_BAROMETER | 是 | 气压计传感器类型为SENSOR_TYPE_ID_BAROMETER。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BarometerResponse&gt; | 是 | 注册一次气压计传感器的回调函数，上报的数据类型为BarometerResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | 是 | 注册一次气压计传感器的回调函数，上报的数据类型为BarometerResponse。 |
 

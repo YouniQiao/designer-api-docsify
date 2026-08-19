@@ -261,7 +261,7 @@ createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | nu
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasPattern](arkts-na-canvas-canvaspattern-i.md) | 通过指定图像和重复方式创建图片填充的模板对象。 |
+| [CanvasPattern](arkts-na-canvas-canvaspattern-i.md) \| null | 通过指定图像和重复方式创建图片填充的模板对象。 |
 
 ## createRadialGradient
 
@@ -576,7 +576,7 @@ getPixelMap(sx: double, sy: double, sw: double, sh: double): PixelMap | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) | 新的PixelMap对象。 |
+| [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| undefined | 新的PixelMap对象。 |
 
 ## getTransform
 

@@ -23,8 +23,6 @@ resolvedOptions(): ResolvedPluralRulesOptions
 
 | Type | Description |
 | --- | --- |
-| ResolvedPluralRulesOptions |  |
-
 ## select
 
 ```TypeScript
@@ -45,5 +43,3 @@ select(n: number): LDMLPluralRule
 
 | Type | Description |
 | --- | --- |
-| LDMLPluralRule |  |
-

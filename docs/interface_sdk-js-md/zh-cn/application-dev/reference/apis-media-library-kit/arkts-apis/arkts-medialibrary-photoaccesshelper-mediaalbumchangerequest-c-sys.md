@@ -1,6 +1,6 @@
 # MediaAlbumChangeRequest
 
-MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 相册变更请求。 > **说明：** > > - 本Class首批接口从API version 11开始支持。
+MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md). 相册变更请求。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 11开始支持。
 
 **继承/实现关系：** MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)
 
@@ -13,6 +13,7 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAlbumRequest
@@ -97,7 +98,7 @@ static createAlbumRequest(context: Context, name: string): MediaAlbumChangeReque
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) | Returns a MediaAlbumChangeRequest instance. if the operation fails, returns null. |
+| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) \| null | Returns a MediaAlbumChangeRequest instance. if the operation fails, returns null. |
 
 **错误码：**
 
@@ -232,7 +233,7 @@ async function example(context: Context, albumUri: string) {
 deleteAssets(assets: Array<PhotoAsset>): void
 ```
 
-从回收站中彻底删除资产。 > **注意：** > > 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
+从回收站中彻底删除资产。 &gt; **注意：** &gt; &gt; 此操作不可逆，执行此操作后文件资源将彻底删除，请谨慎操作。
 
 **起始版本：** 23
 
@@ -301,7 +302,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 deleteAssetsWithUri(assetUris: Array<string>): void
 ```
 
-从回收站中彻底删除资产。 > **注意：** > > 此操作不可逆，执行此操作后文件资源将被彻底删除，请谨慎操作。
+从回收站中彻底删除资产。 &gt; **注意：** &gt; &gt; 此操作不可逆，执行此操作后文件资源将被彻底删除，请谨慎操作。
 
 **起始版本：** 23
 

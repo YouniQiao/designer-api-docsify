@@ -1,6 +1,6 @@
 # Float32Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+A linear data structure that is implemented on [ArkTS ArrayBuffer](../../apis-na/arkts-apis/arkts-collections.md). &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Type | Description |
 | --- | --- |
-| number | Element obtained. If no element is found, **undefined** is returned. |
+| number \| undefined | Element obtained. If no element is found, **undefined** is returned. |
 
 **Error codes:**
 
@@ -412,7 +412,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Type | Description |
 | --- | --- |
-| number | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
+| number \| undefined | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 

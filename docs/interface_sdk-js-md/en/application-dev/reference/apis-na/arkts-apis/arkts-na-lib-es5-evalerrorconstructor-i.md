@@ -31,8 +31,6 @@ new(message?: string): EvalError
 
 | Type | Description |
 | --- | --- |
-| [EvalError](arkts-na-lib-es5-evalerror-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(message?: string): EvalError
 
 | Type | Description |
 | --- | --- |
-| [EvalError](arkts-na-lib-es5-evalerror-i.md) |  |
-
 ## prototype
 
 ```TypeScript

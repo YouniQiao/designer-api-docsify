@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onRotateChange
@@ -27,7 +28,7 @@ function onRotateChange(callback: Callback<RotateEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md)&gt; | 是 | 回调函数，返回旋转方向。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md)&gt; | 是 | 回调函数，返回旋转方向。 |
 
 **错误码：**
 

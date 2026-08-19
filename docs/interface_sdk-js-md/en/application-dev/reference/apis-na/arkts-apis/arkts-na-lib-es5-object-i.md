@@ -31,8 +31,6 @@ Determines whether an object has a property with the specified name.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## isPrototypeOf
 
 ```TypeScript
@@ -55,8 +53,6 @@ Determines whether an object exists in another object's prototype chain.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## propertyIsEnumerable
 
 ```TypeScript
@@ -79,8 +75,6 @@ Determines whether a specified property is enumerable.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## toLocaleString
 
 ```TypeScript
@@ -97,8 +91,6 @@ Returns a date converted to a string using the current locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toString
 
 ```TypeScript
@@ -115,8 +107,6 @@ Returns a string representation of an object.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## valueOf
 
 ```TypeScript
@@ -133,8 +123,6 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| Object |  |
-
 ## constructor
 
 ```TypeScript

@@ -79,7 +79,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
 
 **Examples**
 
@@ -126,7 +126,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be &gt;= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
 
 
 ## from

@@ -35,7 +35,7 @@ Binds the IP address and port number. The port number can be customized or rando
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | address | NetAddress | Yes | Local address. For details, see NetAddress. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -137,7 +137,7 @@ Closes a UDP socket connection. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -209,7 +209,7 @@ udp.close().then(() => {
 getLocalAddress(): Promise<NetAddress>
 ```
 
-Obtains the local socket address of a **UDPSocket** connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **bind** is successfully called.
+Obtains the local socket address of a **UDPSocket** connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
 
 **Since:** 12
 
@@ -261,7 +261,7 @@ udp.bind(bindAddr).then(() => {
 getSocketFd(): Promise<int>
 ```
 
-Obtains the UDPSocket file descriptor. This API uses a promise to return the result. > **NOTE：**> > - This API can be called only after > [bind](#bind) is successfully called. > > - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close > is called). > > - The lifecycle of the file descriptor is managed by the system. The application can use the > [close](#close) method to close the socket connection, > instead of directly operating the file descriptor.
+Obtains the UDPSocket file descriptor. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - This API can be called only after &gt; [bind](#bind) is successfully called. &gt; &gt; - This API returns **-1** in abnormal cases such as bind exceptions or socket closed (for example, after close &gt; is called). &gt; &gt; - The lifecycle of the file descriptor is managed by the system. The application can use the &gt; [close](#close) method to close the socket connection, &gt; instead of directly operating the file descriptor.
 
 **Since:** 23
 
@@ -313,7 +313,7 @@ udp.bind(bindAddr)
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-Obtains the status of the UDP socket connection. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **bind** is successfully called.
+Obtains the status of the UDP socket connection. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 
@@ -327,7 +327,7 @@ Obtains the status of the UDP socket connection. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the status of the UDP socket connection is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, the status of the UDP socket connection is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -368,7 +368,7 @@ udp.bind(bindAddr, (err: BusinessError) => {
 getState(): Promise<SocketStateBase>
 ```
 
-Obtains the status of the UDP socket connection. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **bind** is successfully called.
+Obtains the status of the UDP socket connection. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 
@@ -415,7 +415,7 @@ udp.bind(bindAddr, (err: BusinessError) => {
 });
 ```
 
-## off_close('listening' | 'close')
+## off('listening' | 'close')
 
 ```TypeScript
 off(type: 'listening' | 'close', callback?: Callback<void>): void
@@ -434,7 +434,7 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Event type. <br>- **listening**: data packet message event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -459,7 +459,7 @@ udp.off('close', callback2);
 udp.off('close');
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -478,7 +478,7 @@ Unsubscribes from **error** events of the **UDPSocket** object. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> **error**: error event. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -496,7 +496,7 @@ udp.off('error', callback);
 udp.off('error');
 ```
 
-## off_listening('listening' | 'close')
+## off('listening' | 'close')
 
 ```TypeScript
 off(type: 'listening' | 'close', callback?: Callback<void>): void
@@ -515,7 +515,7 @@ Unsubscribes from **listening** events or **close** events of the **UDPSocket** 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Event type. <br>- **listening**: data packet message event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
 
@@ -540,7 +540,7 @@ udp.off('close', callback2);
 udp.off('close');
 ```
 
-## off_message('message')
+## off('message')
 
 ```TypeScript
 off(type: 'message', callback?: Callback<SocketMessageInfo>): void
@@ -559,7 +559,7 @@ Unsubscribes from **message** events of the **UDPSocket** object. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
 
@@ -585,7 +585,7 @@ udp.off('message', callback);
 udp.off('message');
 ```
 
-## on_close('listening' | 'close')
+## on('listening' | 'close')
 
 ```TypeScript
 on(type: 'listening' | 'close', callback: Callback<void>): void
@@ -604,7 +604,7 @@ Subscribes to **listening** events or **close** events of the **UDPSocket** obje
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Event type.<br/> <br>- **listening**: data packet message event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -621,7 +621,7 @@ udp.on('close', () => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -640,7 +640,7 @@ Subscribes to **error** events of the **UDPSocket** object. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> **error**: error event. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -654,7 +654,7 @@ udp.on('error', (err: BusinessError) => {
 });
 ```
 
-## on_listening('listening' | 'close')
+## on('listening' | 'close')
 
 ```TypeScript
 on(type: 'listening' | 'close', callback: Callback<void>): void
@@ -673,7 +673,7 @@ Subscribes to **listening** events or **close** events of the **UDPSocket** obje
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'listening' \| 'close' | Yes | Event type.<br/> <br>- **listening**: data packet message event. <br>- **close**: close event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -690,7 +690,7 @@ udp.on('close', () => {
 });
 ```
 
-## on_message('message')
+## on('message')
 
 ```TypeScript
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
@@ -709,7 +709,7 @@ Subscribes to **message** events of the **UDPSocket** object. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: message receiving event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Examples**
 
@@ -753,7 +753,7 @@ Sends data over a UDP socket connection. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md) | Yes | Parameters for sending data over a UDP socket connection. For details, see [UDPSendOptions](arkts-network-socket-udpsendoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -975,7 +975,7 @@ udp.send(sendOptions).then(() => {
 setExtraOptions(options: UDPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets other properties of the **UDPSocket** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after **bind** is successfully called.
+Sets other properties of the **UDPSocket** object. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 
@@ -990,7 +990,7 @@ Sets other properties of the **UDPSocket** object. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md) | Yes | Other properties of the **UDPSocket** object. For details, see [UDPExtraOptions](arkts-network-socket-udpextraoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
 
 **Error codes:**
 
@@ -1040,7 +1040,7 @@ udp.bind(bindAddr, (err: BusinessError) => {
 setExtraOptions(options: UDPExtraOptions): Promise<void>
 ```
 
-Sets other properties of the **UDPSocket** object. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after **bind** is successfully called.
+Sets other properties of the **UDPSocket** object. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after **bind** is successfully called.
 
 **Since:** 7
 

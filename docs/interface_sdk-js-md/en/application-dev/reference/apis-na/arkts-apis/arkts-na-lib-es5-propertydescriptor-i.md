@@ -23,8 +23,6 @@ get?(): any
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## set
 
 ```TypeScript

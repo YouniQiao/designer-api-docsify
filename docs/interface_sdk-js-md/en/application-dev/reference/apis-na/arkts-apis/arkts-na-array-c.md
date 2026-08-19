@@ -547,7 +547,7 @@ Iterates the array and returns the value of the first element that satisfies the
 
 | Type | Description |
 | --- | --- |
-| T | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
+| T \| undefined | The value of the first element that satisfies the provided testing function; otherwise, undefined. |
 
 ## findIndex
 
@@ -607,7 +607,7 @@ Iterates the array in reverse order and returns the value of the first element t
 
 | Type | Description |
 | --- | --- |
-| T | The value of the element if found; otherwise, undefined. |
+| T \| undefined | The value of the element if found; otherwise, undefined. |
 
 ## findLastIndex
 
@@ -1188,7 +1188,7 @@ Removes the last element from an array and returns that element. This method cha
 
 | Type | Description |
 | --- | --- |
-| T | The removed element from the array; undefined if the array is empty. |
+| T \| undefined | The removed element from the array; undefined if the array is empty. |
 
 ## push
 
@@ -1390,7 +1390,7 @@ Removes the first element from an array and returns that removed element. This m
 
 | Type | Description |
 | --- | --- |
-| T | The removed element from the array; undefined if the array is empty. |
+| T \| undefined | The removed element from the array; undefined if the array is empty. |
 
 ## shrinkTo
 

@@ -438,7 +438,7 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 
 | Type | Description |
 | --- | --- |
-| V | value if associated with key presents, undefined otherwise |
+| V \| undefined | value if associated with key presents, undefined otherwise |
 
 ## getFirstKey
 
@@ -551,7 +551,7 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Type | Description |
 | --- | --- |
-| K | key or undefined |
+| K \| undefined | key or undefined |
 
 **Error codes:**
 
@@ -671,7 +671,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Type | Description |
 | --- | --- |
-| K | key or undefined |
+| K \| undefined | key or undefined |
 
 **Error codes:**
 
@@ -915,7 +915,7 @@ Remove a specified element from a Map object
 
 | Type | Description |
 | --- | --- |
-| V | the value of the removed element, undefined otherwise |
+| V \| undefined | the value of the removed element, undefined otherwise |
 
 ## replace
 

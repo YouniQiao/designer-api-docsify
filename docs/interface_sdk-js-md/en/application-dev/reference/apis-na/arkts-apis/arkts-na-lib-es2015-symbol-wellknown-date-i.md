@@ -31,8 +31,6 @@ Converts a Date object to a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -55,8 +53,6 @@ Converts a Date object to a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -79,8 +75,6 @@ Converts a Date object to a number.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## [Symbol.toPrimitive]
 
 ```TypeScript
@@ -103,5 +97,3 @@ Converts a Date object to a string or number.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

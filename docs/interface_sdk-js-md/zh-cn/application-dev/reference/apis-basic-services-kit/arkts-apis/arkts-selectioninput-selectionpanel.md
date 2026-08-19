@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

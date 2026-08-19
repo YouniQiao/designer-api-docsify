@@ -32,8 +32,6 @@ compile(pattern: string, flags?: string): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## exec
 
 ```TypeScript
@@ -56,8 +54,6 @@ Executes a search on a string using a regular expression pattern, and returns an
 
 | Type | Description |
 | --- | --- |
-| [RegExpExecArray](arkts-na-lib-es5-regexpexecarray-i.md) |  |
-
 ## test
 
 ```TypeScript
@@ -80,8 +76,6 @@ Returns a Boolean value that indicates whether or not a pattern exists in a sear
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## global
 
 ```TypeScript

@@ -31,8 +31,6 @@ Creates a finalization registry with an associated cleanup callback
 
 | Type | Description |
 | --- | --- |
-| [FinalizationRegistry](arkts-na-lib-es2021-weakref-finalizationregistry-i.md)&lt;T&gt; |  |
-
 ## prototype
 
 ```TypeScript

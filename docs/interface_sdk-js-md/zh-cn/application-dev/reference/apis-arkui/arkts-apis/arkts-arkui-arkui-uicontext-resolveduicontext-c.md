@@ -1,6 +1,6 @@
 # ResolvedUIContext
 
-ResolvedUIContext实例对象。 > **说明：** > > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - ResolvedUIContext继承自[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)，并新增strategy属性用于记录该UIContext实例的解析策略。
+ResolvedUIContext实例对象。 &gt; **说明：** &gt; &gt; - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 &gt; &gt; - ResolvedUIContext继承自[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)，并新增strategy属性用于记录该UIContext实例的解析策略。
 
 **继承/实现关系：** ResolvedUIContext extends [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)
 
@@ -13,6 +13,10 @@ ResolvedUIContext实例对象。 > **说明：** > > - 示例效果请以真机�
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## strategy

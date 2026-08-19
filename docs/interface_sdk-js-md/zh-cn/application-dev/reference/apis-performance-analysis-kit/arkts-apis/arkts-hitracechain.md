@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

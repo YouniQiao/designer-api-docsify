@@ -1,6 +1,6 @@
 # @ohos.application.formHost
 
-formHost模块提供了卡片使用方相关接口的能力，包括对使用方同一用户下安装的卡片进行删除、释放、请求更新，获取信息、状态等操作。 > **说明：** > > 从API version 9 开始废弃， > > 本模块接口均为系统接口。
+formHost模块提供了卡片使用方相关接口的能力，包括对使用方同一用户下安装的卡片进行删除、释放、请求更新，获取信息、状态等操作。 &gt; **说明：** &gt; &gt; 从API version 9 开始废弃， &gt; &gt; 本模块接口均为系统接口。
 
 **起始版本：** 8
 
@@ -53,8 +53,8 @@ formHost模块提供了卡片使用方相关接口的能力，包括对使用方
 | [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md#notifyinvisibleforms) | 向卡片框架发送通知以使指定的卡片不可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用Promise异步回调。 |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyvisibleforms) | 向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用callback异步回调。 |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyvisibleforms) | 向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用Promise异步回调。 |
-| [off_formUninstall](arkts-form-formhost-offformuninstall-depr-f-sys.md#off_formuninstallformuninstall) | 取消订阅卡片卸载事件。使用callback异步回调。 |
-| [on_formUninstall](arkts-form-formhost-onformuninstall-depr-f-sys.md#on_formuninstallformuninstall) | 订阅卡片卸载事件。使用callback异步回调。 |
+| [off_formUninstall](arkts-form-formhost-offformuninstall-depr-f-sys.md#offformuninstall) | 取消订阅卡片卸载事件。使用callback异步回调。 |
+| [on_formUninstall](arkts-form-formhost-onformuninstall-depr-f-sys.md#onformuninstall) | 订阅卡片卸载事件。使用callback异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseform) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，但卡片管理器服务仍然保留有关该卡片的缓存信息和存储信息。使用callback异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseform) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用callback异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-depr-f-sys.md#releaseform) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用Promise异步回调。 |

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## 汇总

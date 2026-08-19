@@ -110,5 +110,5 @@ public setGridOptions(
 
 | 类型 | 说明 |
 | --- | --- |
-| this | Grid组件实例。 |
+| [ExtendableGrid](arkts-na-grid-extendablegrid-c.md) | Grid组件实例。 |
 

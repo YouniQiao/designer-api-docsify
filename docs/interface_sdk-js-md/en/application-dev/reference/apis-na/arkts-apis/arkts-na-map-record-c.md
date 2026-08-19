@@ -45,7 +45,7 @@ Gets a value from the Record by key
 
 | Type | Description |
 | --- | --- |
-| V | The value associated with the key, or undefined if not found |
+| V \| undefined | The value associated with the key, or undefined if not found |
 
 ## $_set
 

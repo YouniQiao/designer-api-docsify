@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## replyCustomEapData
@@ -11,7 +12,7 @@
 function replyCustomEapData(result: CustomResult, data: EapData): void
 ```
 
-该接口用于通知系统已完成该步定制化处理。 > **说明：**: > > - 若用于处理收EAP数据包(rx)时的callback，传给系统的EAP数据需要剥离服务器添加的定制部分。 > > - 若用于处理发EAP数据包(tx)时的callback，传给系统的EAP数据为经过添加定制部分后的EAP数据。
+该接口用于通知系统已完成该步定制化处理。 &gt; **说明：**: &gt; &gt; - 若用于处理收EAP数据包(rx)时的callback，传给系统的EAP数据需要剥离服务器添加的定制部分。 &gt; &gt; - 若用于处理发EAP数据包(tx)时的callback，传给系统的EAP数据为经过添加定制部分后的EAP数据。
 
 **起始版本：** 20
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## activateOsAccount
@@ -36,7 +37,7 @@ activateOsAccount(localId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当账号激活成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当账号激活成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -391,7 +392,7 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 | --- | --- | --- | --- |
 | localName | string | 是 | 创建的系统账号的名称。 |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -583,7 +584,7 @@ createOsAccountForDomain(
 | --- | --- | --- | --- |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | 是 | 创建的系统账号的类型。 |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -859,7 +860,7 @@ getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | int | 是 | 进程uid。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为与uid对应的bundleId；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数。如果查询成功，err为null，data为与uid对应的bundleId；否则为错误对象。 |
 
 **错误码：**
 
@@ -1338,7 +1339,7 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: As
 | --- | --- | --- | --- |
 | localId | int | 是 | 要查询的系统账号ID。 |
 | constraint | string | 是 | 要查询的约束名称。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定 约束来源信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定 约束来源信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -1505,7 +1506,7 @@ getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的头像信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。如果获取成功，err为null，data为指定系统账号的头像信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -1753,7 +1754,7 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
 
 **错误码：**
 
@@ -2157,7 +2158,7 @@ offActivate(name: string, callback?: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成的事件回调。默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2208,7 +2209,7 @@ offActivating(name: string, callback?: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活中的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活中的事件回调。默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2256,7 +2257,7 @@ offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。<br>默认为undefined，表示清除所有订阅记录。<br>非undefined时，表示清 除与该回调函数关联的订阅记录。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。<br>默认为undefined，表示清除所有订阅记录。<br>非undefined时，表示清 除与该回调函数关联的订阅记录。 |
 
 **错误码：**
 
@@ -2313,7 +2314,7 @@ offSwitched(callback?: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2359,7 +2360,7 @@ offSwitching(callback?: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2383,7 +2384,7 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
   }
 ```
 
-## off_activate('activate' | 'activating')
+## off('activate' | 'activating')
 
 ```TypeScript
 off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
@@ -2407,7 +2408,7 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2439,7 +2440,7 @@ try {
 }
 ```
 
-## off_activating('activate' | 'activating')
+## off('activate' | 'activating')
 
 ```TypeScript
 off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
@@ -2463,7 +2464,7 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2495,7 +2496,7 @@ try {
 }
 ```
 
-## off_switched('switched')
+## off('switched')
 
 ```TypeScript
 off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
@@ -2520,7 +2521,7 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switched' | 是 | 取消订阅类型，switched表示取消订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2545,7 +2546,7 @@ try {
 }
 ```
 
-## off_switching('switching')
+## off('switching')
 
 ```TypeScript
 off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
@@ -2570,7 +2571,7 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switching' | 是 | 取消订阅类型，switching表示取消订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 否 | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
 
 **错误码：**
 
@@ -2618,7 +2619,7 @@ onActivate(name: string, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活完成的事件回调。表示激活完成后的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成的事件回调。表示激活完成后的系统账号ID。 |
 
 **错误码：**
 
@@ -2668,7 +2669,7 @@ onActivating(name: string, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活中的事件回调，表示正在激活中的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活中的事件回调，表示正在激活中的系统账号ID。 |
 
 **错误码：**
 
@@ -2716,7 +2717,7 @@ onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | constraints | string[] | 是 | 表示待订阅的约束列 表。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收约束变更事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收约束变更事件的回调函数。 |
 
 **错误码：**
 
@@ -2767,7 +2768,7 @@ onSwitched(callback: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。 |
 
 **错误码：**
 
@@ -2816,7 +2817,7 @@ onSwitching(callback: Callback<OsAccountSwitchEventData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。 |
 
 **错误码：**
 
@@ -2843,7 +2844,7 @@ try {
 }
 ```
 
-## on_activate('activate' | 'activating')
+## on('activate' | 'activating')
 
 ```TypeScript
 on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
@@ -2867,7 +2868,7 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
@@ -2899,7 +2900,7 @@ try {
 }
 ```
 
-## on_activating('activate' | 'activating')
+## on('activate' | 'activating')
 
 ```TypeScript
 on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
@@ -2923,7 +2924,7 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'activate' \| 'activating' | 是 | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
 | name | string | 是 | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
 
 **错误码：**
 
@@ -2955,7 +2956,7 @@ try {
 }
 ```
 
-## on_switched('switched')
+## on('switched')
 
 ```TypeScript
 on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
@@ -2980,7 +2981,7 @@ on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switched' | 是 | 订阅类型，switched表示订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
@@ -3011,7 +3012,7 @@ try {
 }
 ```
 
-## on_switching('switching')
+## on('switching')
 
 ```TypeScript
 on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
@@ -3036,7 +3037,7 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'switching' | 是 | 订阅类型，switching表示订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | 是 | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。<br/>**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
 
 **错误码：**
 
@@ -3089,7 +3090,7 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为已创建的所有系统账号的信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果查询成功，err为null，data为已创建的所有系统账号的信息列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -3307,7 +3308,7 @@ queryMaxOsAccountNumber(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数，如果查询成功，err为null，data为允许创建的系统账号的最大数量；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，如果查询成功，err为null，data为允许创建的系统账号的最大数量；否则为错误对象。 |
 
 **错误码：**
 
@@ -3527,7 +3528,7 @@ queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 要查询的系统账号的ID。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为查到的系统账号的信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为查到的系统账号的信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -3693,7 +3694,7 @@ removeOsAccount(localId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果删除账号成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果删除账号成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -3990,7 +3991,7 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 | localId | int | 是 | 系统账号ID。 |
 | constraints | Array&lt;string&gt; | 是 | 待设置/删除的 约束列表。 |
 | enable | boolean | 是 | 设置(true)/删除(false) 。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -4163,7 +4164,7 @@ setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
 | localName | string | 是 | 账号名，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -4337,7 +4338,7 @@ setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | localId | int | 是 | 系统账号ID。 |
 | photo | string | 是 | 头像信息。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 

@@ -11,6 +11,7 @@ JsMessageExt是ArkWeb框架中用于封装 [runJavaScriptExt](arkts-arkweb-webvi
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray
@@ -115,7 +116,7 @@ getErrorDescription(): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 若JavaScript脚本执行过程中发生异常，或返回值为object类型，系统会将异常信息或object对象格式化为"Not support type: &lt;{ exception \| object}&gt;"字符串返回，该字符串长度不超过2048个字符，超长部分将被截断；若object对象中包含callback类型的成员，则序列化时将自动忽略该成员；其余情况，接口均返回null。 |
+| string \| null | 若JavaScript脚本执行过程中发生异常，或返回值为object类型，系统会将异常信息或object对象格式化为"Not support type: &lt;{ exception \| object}&gt;"字符串返回，该字符串长度不超过2048个字符，超长部分将被截断；若object对象中包含callback类型的成员，则序列化时将自动忽略该成员；其余情况，接口均返回null。 |
 
 ## getNumber
 

@@ -1,6 +1,6 @@
 # PerfTestStrategy
 
-性能测试执行策略。 > **说明：**> > 属性actionCode和resetCode的入参类型为回调函数"Callback\&lt;boolean&gt;"。 > 在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。 > 其中，回调函数的参数为boolean类型，true代表代码段执行符合预期，false代表代码段执行不符合预期。 > [代码示例](arkts-test-test-perftest-perftest-c.md#create)。
+性能测试执行策略。 &gt; **说明：**&gt; &gt; 属性actionCode和resetCode的入参类型为回调函数"Callback\&lt;boolean&gt;"。 &gt; 在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。 &gt; 其中，回调函数的参数为boolean类型，true代表代码段执行符合预期，false代表代码段执行不符合预期。 &gt; [代码示例](arkts-test-test-perftest-perftest-c.md#create)。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## actionCode
@@ -21,7 +22,7 @@ actionCode: Callback<Callback<boolean>>
 
 测试代码段。入参为回调函数，需在代码段中主动调用以通知框架执行完成，否则会导致执行超时。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 23
 
@@ -93,7 +94,7 @@ resetCode?: Callback<Callback<boolean>>
 
 测试结束环境重置代码段。 当测试代码段修改了全局状态（如全局变量、配置等）需要在每轮测试后重置时传入此参数。 默认为空，框架在执行测试时不执行此代码段。 入参为回调函数，需在代码段中主动调用以通知框架执行完成，否则会导致执行超时。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 23
 

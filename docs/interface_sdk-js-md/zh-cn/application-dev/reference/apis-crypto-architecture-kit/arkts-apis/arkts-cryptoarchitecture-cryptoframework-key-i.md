@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getEncoded
@@ -21,7 +22,7 @@
 getEncoded(): DataBlob
 ```
 
-同步方法，获取密钥数据的字节流。密钥可以是对称密钥、公钥或私钥。公钥格式需符合ASN.1语法、X.509规范和DER编码；私钥格式需符合ASN.1 语法、PKCS#8规范和DER编码。 > **说明：** > > RSA算法使用密钥参数生成私钥时，私钥对象支持getEncoded。
+同步方法，获取密钥数据的字节流。密钥可以是对称密钥、公钥或私钥。公钥格式需符合ASN.1语法、X.509规范和DER编码；私钥格式需符合ASN.1 语法、PKCS#8规范和DER编码。 &gt; **说明：** &gt; &gt; RSA算法使用密钥参数生成私钥时，私钥对象支持getEncoded。
 
 **起始版本：** 23
 

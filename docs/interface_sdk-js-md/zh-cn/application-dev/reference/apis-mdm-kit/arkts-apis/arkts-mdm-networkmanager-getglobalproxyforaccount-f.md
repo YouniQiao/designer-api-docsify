@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## getGlobalProxyForAccount
@@ -11,7 +12,7 @@
 function getGlobalProxyForAccount(admin: Want | null, accountId: number): connection.HttpProxy
 ```
 
-获取指定用户下的网络代理。适用于企业多用户环境下的网络管理场景，例如审计用户级网络代理配置、验证用户网络访问策略、排查用户网络访问问题，帮助企业检查和验证用户级网络管理策略。 > **说明：** > > 本接口用于获取通过setGlobalProxyForAccount设置的、指定用户的代理配置。如果需要获取应用于所有用户的全局代理配置，建议使用 > [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md)接口。
+获取指定用户下的网络代理。适用于企业多用户环境下的网络管理场景，例如审计用户级网络代理配置、验证用户网络访问策略、排查用户网络访问问题，帮助企业检查和验证用户级网络管理策略。 &gt; **说明：** &gt; &gt; 本接口用于获取通过setGlobalProxyForAccount设置的、指定用户的代理配置。如果需要获取应用于所有用户的全局代理配置，建议使用 &gt; [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md)接口。
 
 **起始版本：** 15
 

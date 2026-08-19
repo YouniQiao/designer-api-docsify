@@ -927,13 +927,13 @@ Find the corresponding element according to the index.
 
 | Type | Description |
 | --- | --- |
-| T | the T type, if the index is out of bounds (greater than or equal to length or less than 0), throw an exception |
+| T \| undefined | the T type, if the index is out of bounds (greater than or equal to length or less than 0), throw an exception |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && &lt;= \\${length - 1}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be &gt;= 0 && &lt;= \\${length - 1}. Received value is: \\${index} |
 
 ## replaceAllElements
 
@@ -1075,7 +1075,7 @@ Sorts elements in this List.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | Yes | Callback used to return the result.<br> There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) => number`.<br>**Since:** 23 |
+| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | Yes | Callback used to return the result.<br> There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) =&gt; number`.<br>**Since:** 23 |
 
 **Error codes:**
 

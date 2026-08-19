@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getAdvances
@@ -84,7 +85,7 @@ getAdvances(range: Range): Array<common2D.Point> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中， [common2D.Point]{ |
+| Array&lt;common2D.Point&gt; \| undefined | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中， [common2D.Point]{ |
 
 ## getFont
 
@@ -294,7 +295,7 @@ getGlyphs(range: Range): Array<int> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
+| Array&lt;int&gt; \| undefined | 该排版单元中每个字符对应的字形序号。 |
 
 ## getImageBounds
 
@@ -302,7 +303,7 @@ getGlyphs(range: Range): Array<int> | undefined
 getImageBounds(): common2D.Rect
 ```
 
-获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和 末尾空格的边界。 > **说明：** > > 示意图展示了字符串为" a b "的图像边界。 > >  > > 示意图展示了字符串为"j"或"E"的图像边界。 > > 
+获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和 末尾空格的边界。 &gt; **说明：** &gt; &gt; 示意图展示了字符串为" a b "的图像边界。 &gt; &gt;  &gt; &gt; 示意图展示了字符串为"j"或"E"的图像边界。 &gt; &gt; 
 
 **起始版本：** 23
 
@@ -505,7 +506,7 @@ getPositions(range: Range): Array<common2D.Point> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;common2D.Point&gt; \| undefined | 该排版单元中每个字形相对于每行的字形位置。 |
 
 ## getStringIndices
 
@@ -632,7 +633,7 @@ getStringIndices(range?: Range): Array<int> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;int&gt; | 返回每个字符的索引。 |
+| Array&lt;int&gt; \| undefined | 返回每个字符的索引。 |
 
 ## getStringRange
 
@@ -834,7 +835,7 @@ struct Index {
 getTypographicBounds(): TypographicBounds
 ```
 
-获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。 > **说明：** > > 示意图展示了字符串为" a b "的排版边界。 > >  > > 示意图展示了字符串为"j"或"E"的排版边界。 > > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。 &gt; **说明：** &gt; &gt; 示意图展示了字符串为" a b "的排版边界。 &gt; &gt;  &gt; &gt; 示意图展示了字符串为"j"或"E"的排版边界。 &gt; &gt; ! &gt; [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
 **起始版本：** 23
 

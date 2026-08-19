@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## 汇总

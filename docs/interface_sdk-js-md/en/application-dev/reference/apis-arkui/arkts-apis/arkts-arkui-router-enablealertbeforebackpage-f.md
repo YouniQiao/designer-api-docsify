@@ -18,7 +18,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Deprecated since:** 9
 
-**Substitutes:** [showAlertBeforeBackPage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#showalertbeforebackpage)
+**Substitutes:** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
 
 <!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void--><!--Device-router-function enableAlertBeforeBackPage(options: EnableAlertOptions): void-End-->
 
@@ -28,7 +28,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
+| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
 
 **Examples**
 

@@ -31,7 +31,7 @@ Sets the voice mail information.
 | slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
 | mailName | string | Yes | Indicates the name of voice mail. |
 | mailNumber | string | Yes | Indicates the number of voice mail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setVoiceMailInfo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setVoiceMailInfo. |
 
 **Error codes:**
 

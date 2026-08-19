@@ -1,6 +1,6 @@
 # PathIterator
 
-表示路径操作迭代器，可通过遍历迭代器逐段读取路径的操作指令。 迭代器按顺序遍历路径中的操作指令，便于实现对路径的细粒度分析与自定义处理。 > **说明：** > > - 本Class首批接口从API version 18开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+表示路径操作迭代器，可通过遍历迭代器逐段读取路径的操作指令。 迭代器按顺序遍历路径中的操作指令，便于实现对路径的细粒度分析与自定义处理。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 18开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -111,7 +112,7 @@ next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。创建失败时返回undefined。 |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) \| undefined | 当前路径段的操作类型。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -157,5 +158,5 @@ peek(): PathIteratorVerb | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。创建失败时返回undefined。 |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) \| undefined | 当前路径段的操作类型。创建失败时返回undefined。 |
 

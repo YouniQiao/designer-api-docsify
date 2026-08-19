@@ -706,7 +706,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromImageSource(OH_ImagePackerNat
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针。 |
 | [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | 编码选项参数。 |
-| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *imageSource | 用于编码的image source指针。 |
+| OH_ImageSourceNative *imageSource | 用于编码的image source指针。 |
 | uint8_t *outData | 用于存储打包图像输出数据的缓冲区。 |
 | size_t *size | 用于存储打包图像输出数据的缓冲区大小。 |
 
@@ -734,7 +734,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromPixelmap(OH_ImagePackerNative
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针。 |
 | [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | 编码选项参数。 |
-| OH_PixelmapNative *pixelmap | 用于编码的Pixelmap指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *pixelmap | 用于编码的Pixelmap指针。 |
 | uint8_t *outData | 用于存储打包图像输出数据的缓冲区。 |
 | size_t *size | 用于存储打包图像输出数据的缓冲区大小。 |
 
@@ -762,7 +762,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromPicture(OH_ImagePackerNative 
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针。 |
 | [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | 编码选项参数。 |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 用于编码的Picture指针。 |
+| OH_PictureNative *picture | 用于编码的Picture指针。 |
 | uint8_t *outData | 用于存储打包图像输出数据的缓冲区。 |
 | size_t *size | 用于存储打包图像输出数据的缓冲区大小。 |
 
@@ -790,7 +790,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromPixelmapSequence(OH_ImagePack
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针，不允许为NULL。 |
 | [OH_PackingOptionsForSequence](capi-image-nativemodule-oh-packingoptionsforsequence.md) *options | 编码选项参数，不允许为NULL。frameCount必须大于0，需设置有效的delayTimeList，loopCount取值范围为[0, 65535]。delayTimeList中的每个延迟时间必须大于0且不超过65535，单位为10毫秒（ms）。disposalTypes中的每个取值必须小于等于3。 |
-| OH_PixelmapNative **pixelmapSequence | 用于编码的Pixelmap序列指针，不允许为NULL。数组中用于编码的Pixelmap指针不允许为NULL。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **pixelmapSequence | 用于编码的Pixelmap序列指针，不允许为NULL。数组中用于编码的Pixelmap指针不允许为NULL。 |
 | size_t sequenceLength | 用于编码的Pixelmap序列长度，必须大于0。 |
 | uint8_t *outData | 用于存储编码后图像输出数据的缓冲区，不允许为NULL。 |
 | size_t *outDataSize | 用于存储编码后图像输出数据缓冲区大小的指针，不允许为NULL。调用前，*outDataSize应设置为outData可写缓冲区大小；调用成功后，outDataSize会更新为实际写入的编码数据长度。 |
@@ -819,7 +819,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromImageSource(OH_ImagePackerNat
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针。 |
 | [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | 编码选项参数。 |
-| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *imageSource | 用于编码的image source指针。 |
+| OH_ImageSourceNative *imageSource | 用于编码的image source指针。 |
 | int32_t fd | 可写的文件描述符。 |
 
 **返回：**
@@ -846,7 +846,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromPixelmap(OH_ImagePackerNative
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针。 |
 | [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | 编码选项参数。 |
-| OH_PixelmapNative *pixelmap | 用于编码的pixelmap指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *pixelmap | 用于编码的pixelmap指针。 |
 | int32_t fd | 可写的文件描述符。 |
 
 **返回：**
@@ -873,7 +873,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromPicture(OH_ImagePackerNative 
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针。 |
 | [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | 编码选项参数。 |
-| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 用于编码的picture指针。 |
+| OH_PictureNative *picture | 用于编码的picture指针。 |
 | int32_t fd | 可写的文件描述符。 |
 
 **返回：**
@@ -900,7 +900,7 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromPixelmapSequence(OH_ImagePack
 | -- | -- |
 | [OH_ImagePackerNative](capi-image-nativemodule-oh-imagepackernative.md) *imagePacker | 被操作的OH_ImagePackerNative指针，不允许为NULL。 |
 | [OH_PackingOptionsForSequence](capi-image-nativemodule-oh-packingoptionsforsequence.md) *options | 编码选项参数，不允许为NULL。frameCount必须大于0，需设置有效的delayTimeList，loopCount取值范围为[0, 65535]。delayTimeList中的每个延迟时间必须大于0且不超过65535。disposalTypes中的每个取值必须小于等于3。 |
-| OH_PixelmapNative **pixelmapSequence | 用于编码的Pixelmap序列指针，不允许为NULL。数组中用于编码的Pixelmap指针不允许为NULL。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **pixelmapSequence | 用于编码的Pixelmap序列指针，不允许为NULL。数组中用于编码的Pixelmap指针不允许为NULL。 |
 | size_t sequenceLength | 用于编码的Pixelmap序列长度，必须大于0。 |
 | int32_t fd | 文件描述符，必须为可写文件描述符。 |
 

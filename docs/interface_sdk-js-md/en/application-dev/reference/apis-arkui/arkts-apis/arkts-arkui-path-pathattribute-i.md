@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## commands
 
 ```TypeScript
@@ -58,8 +56,6 @@ commands(value: ResourceStr | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setPathOptions
 
 ```TypeScript
@@ -82,8 +78,6 @@ setPathOptions(options?: PathOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

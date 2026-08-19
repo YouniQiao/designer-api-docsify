@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
-## off_appForegroundState('appForegroundState')
+## off('appForegroundState')
 
 ```TypeScript
 function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void

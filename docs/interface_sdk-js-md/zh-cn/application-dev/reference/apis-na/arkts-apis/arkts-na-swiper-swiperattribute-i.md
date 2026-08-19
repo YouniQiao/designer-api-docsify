@@ -1,6 +1,6 @@
 # SwiperAttribute
 
-除支持通用属性外，还支持以下属性： > **说明：** > > Swiper组件通用属性[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)的默认值为 > true。
+除支持通用属性外，还支持以下属性： &gt; **说明：** &gt; &gt; Swiper组件通用属性[clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)的默认值为 &gt; true。
 
 **继承/实现关系：** SwiperAttribute extends CommonMethod
 
@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<SwiperAttribute> | AttributeModifi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## autoPlay
 
 ```TypeScript
@@ -58,8 +56,6 @@ autoPlay(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## autoPlay
 
 ```TypeScript
@@ -83,8 +79,6 @@ autoPlay(autoPlay: boolean | undefined, options: AutoPlayOptions | undefined): t
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## cachedCount
 
 ```TypeScript
@@ -107,8 +101,6 @@ cachedCount(value: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## cachedCount
 
 ```TypeScript
@@ -132,8 +124,6 @@ cachedCount(count: int | undefined, isShown: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## cachedCount
 
 ```TypeScript
@@ -157,8 +147,6 @@ cachedCount(count: int | undefined, options: CachedCountOptions | undefined): th
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## curve
 
 ```TypeScript
@@ -181,8 +169,6 @@ curve(value: Curve | string | ICurve | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## customContentTransition
 
 ```TypeScript
@@ -205,8 +191,6 @@ customContentTransition(transition: SwiperContentAnimatedTransition | undefined)
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## disableSwipe
 
 ```TypeScript
@@ -229,8 +213,6 @@ disableSwipe(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## displayArrow
 
 ```TypeScript
@@ -254,8 +236,6 @@ displayArrow(value: ArrowStyle | boolean | undefined, isHoverShow?: boolean | un
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## displayCount
 
 ```TypeScript
@@ -279,8 +259,6 @@ displayCount(value: int | string | SwiperAutoFill | ItemFillPolicy| undefined, s
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## displayMode
 
 ```TypeScript
@@ -303,8 +281,6 @@ displayMode(value: SwiperDisplayMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## duration
 
 ```TypeScript
@@ -327,8 +303,6 @@ duration(value: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## effectMode
 
 ```TypeScript
@@ -351,8 +325,6 @@ effectMode(value: EdgeEffect | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## index
 
 ```TypeScript
@@ -375,8 +347,6 @@ index(value: int | Bindable<int> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## indicator
 
 ```TypeScript
@@ -399,8 +369,6 @@ indicator(indicator: IndicatorComponentController | DotIndicator | DigitIndicato
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## indicatorInteractive
 
 ```TypeScript
@@ -423,8 +391,6 @@ indicatorInteractive(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## interval
 
 ```TypeScript
@@ -447,8 +413,6 @@ interval(value: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## itemSpace
 
 ```TypeScript
@@ -471,8 +435,6 @@ itemSpace(value: double | string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## loop
 
 ```TypeScript
@@ -495,8 +457,6 @@ loop(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## maintainVisibleContentPosition
 
 ```TypeScript
@@ -519,8 +479,6 @@ maintainVisibleContentPosition(enabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## nestedScroll
 
 ```TypeScript
@@ -543,8 +501,6 @@ nestedScroll(value: SwiperNestedScrollMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## nextMargin
 
 ```TypeScript
@@ -568,8 +524,6 @@ nextMargin(value: Length | undefined, ignoreBlank?: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAnimationEnd
 
 ```TypeScript
@@ -592,8 +546,6 @@ onAnimationEnd(event: OnSwiperAnimationEndCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onAnimationStart
 
 ```TypeScript
@@ -616,8 +568,6 @@ onAnimationStart(event: OnSwiperAnimationStartCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -640,8 +590,6 @@ onChange(event: Callback<int> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onContentDidScroll
 
 ```TypeScript
@@ -664,8 +612,6 @@ onContentDidScroll(handler: ContentDidScrollCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onContentWillScroll
 
 ```TypeScript
@@ -688,8 +634,6 @@ onContentWillScroll(handler: ContentWillScrollCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onGestureSwipe
 
 ```TypeScript
@@ -712,8 +656,6 @@ onGestureSwipe(event: OnSwiperGestureSwipeCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onScrollStateChanged
 
 ```TypeScript
@@ -736,8 +678,6 @@ onScrollStateChanged(event: Callback<ScrollState> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onSelected
 
 ```TypeScript
@@ -760,8 +700,6 @@ onSelected(event: Callback<int> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onUnselected
 
 ```TypeScript
@@ -784,8 +722,6 @@ onUnselected(event: Callback<int> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## pageFlipMode
 
 ```TypeScript
@@ -808,8 +744,6 @@ pageFlipMode(mode: PageFlipMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## prevMargin
 
 ```TypeScript
@@ -833,8 +767,6 @@ prevMargin(value: Length | undefined, ignoreBlank?: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setSwiperOptions
 
 ```TypeScript
@@ -857,8 +789,6 @@ setSwiperOptions(controller?: SwiperController): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## vertical
 
 ```TypeScript
@@ -881,8 +811,6 @@ vertical(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

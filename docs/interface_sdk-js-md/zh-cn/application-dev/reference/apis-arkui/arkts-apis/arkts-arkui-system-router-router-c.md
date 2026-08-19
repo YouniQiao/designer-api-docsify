@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [router](../../apis-na/arkts-apis/arkts-router.md)
+**替代接口：** [router](arkts-router.md)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## back
@@ -185,7 +186,7 @@ static getState(): RouterState
 static push(options: RouterOptions): void
 ```
 
-跳转到应用内的指定页面。 > **说明：** > > 页面路由栈支持的最大Page数量为32。
+跳转到应用内的指定页面。 &gt; **说明：** &gt; &gt; 页面路由栈支持的最大Page数量为32。
 
 **起始版本：** 3
 

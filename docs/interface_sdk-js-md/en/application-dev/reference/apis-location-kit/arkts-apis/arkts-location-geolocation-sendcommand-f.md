@@ -31,7 +31,7 @@ Send extended commands to location subsystem.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | LocationCommand | Yes | Indicates the extended Command Message Body. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
 
 **Examples**
 

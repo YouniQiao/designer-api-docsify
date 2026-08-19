@@ -6,7 +6,7 @@
 import { errorManager } from '@kit.AbilityKit';
 ```
 
-## on_globalUnhandledRejectionDetected('globalUnhandledRejectionDetected')
+## on('globalUnhandledRejectionDetected')
 
 ```TypeScript
 function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver): void

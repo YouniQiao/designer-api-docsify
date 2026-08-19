@@ -32,7 +32,7 @@ Creates a calendar picker.
 
 | Name | Description |
 | --- | --- |
-| [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | Defines the configuration options of the calendar picker dialog box. Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md). > **NOTE：**> > When the application window is resized, the width of the dialog box is continuously compressed. If the window width > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp. |
+| [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | Defines the configuration options of the calendar picker dialog box. Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md). &gt; **NOTE：**&gt; &gt; When the application window is resized, the width of the dialog box is continuously compressed. If the window width &gt; is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the &gt; content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp. |
 | [CalendarOptions](arkts-arkui-calendaroptions-i.md) | Describes the parameters of the calendar picker. |
 
 ### Enums

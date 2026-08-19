@@ -34,8 +34,6 @@ arrowModifier(modifier: SymbolGlyphModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## arrowPosition
 
 ```TypeScript
@@ -58,8 +56,6 @@ arrowPosition(value: ArrowPosition | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## attributeModifier
 
 ```TypeScript
@@ -83,8 +79,6 @@ attributeModifier(
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## avoidance
 
 ```TypeScript
@@ -107,8 +101,6 @@ avoidance(mode: AvoidanceMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## controlSize
 
 ```TypeScript
@@ -131,8 +123,6 @@ controlSize(value: ControlSize | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## divider
 
 ```TypeScript
@@ -155,8 +145,6 @@ divider(options: DividerOptions | null | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## dividerStyle
 
 ```TypeScript
@@ -179,8 +167,6 @@ dividerStyle(style: DividerStyleOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## font
 
 ```TypeScript
@@ -203,8 +189,6 @@ font(value: Font | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fontColor
 
 ```TypeScript
@@ -227,8 +211,6 @@ fontColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## keyboardAvoidMode
 
 ```TypeScript
@@ -251,8 +233,6 @@ keyboardAvoidMode(mode: MenuKeyboardAvoidMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuAlign
 
 ```TypeScript
@@ -276,8 +256,6 @@ menuAlign(alignType: MenuAlignType | undefined, offset?: Offset | undefined): th
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundBlurStyle
 
 ```TypeScript
@@ -300,8 +278,6 @@ menuBackgroundBlurStyle(value: BlurStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundBlurStyleOptions
 
 ```TypeScript
@@ -324,8 +300,6 @@ menuBackgroundBlurStyleOptions(blurStyle: BackgroundBlurStyleOptions | undefined
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundColor
 
 ```TypeScript
@@ -348,8 +322,6 @@ menuBackgroundColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundEffect
 
 ```TypeScript
@@ -372,8 +344,6 @@ menuBackgroundEffect(effect: BackgroundEffectOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuDistortionMode
 
 ```TypeScript
@@ -396,8 +366,6 @@ menuDistortionMode(mode: DistortionMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuEdgeLightMode
 
 ```TypeScript
@@ -420,8 +388,6 @@ menuEdgeLightMode(mode: EdgeLightMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuItemContentModifier
 
 ```TypeScript
@@ -444,8 +410,6 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration> | undef
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuOutline
 
 ```TypeScript
@@ -468,8 +432,6 @@ menuOutline(outline: MenuOutlineOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menuSystemMaterial
 
 ```TypeScript
@@ -492,8 +454,6 @@ menuSystemMaterial(material: SystemUiMaterial | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## minKeyboardAvoidDistance
 
 ```TypeScript
@@ -516,8 +476,6 @@ minKeyboardAvoidDistance(distance: LengthMetrics | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onSelect
 
 ```TypeScript
@@ -540,8 +498,6 @@ onSelect(callback: OnSelectCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## optionBgColor
 
 ```TypeScript
@@ -564,8 +520,6 @@ optionBgColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## optionFont
 
 ```TypeScript
@@ -588,8 +542,6 @@ optionFont(value: Font | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## optionFontColor
 
 ```TypeScript
@@ -612,8 +564,6 @@ optionFontColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## optionHeight
 
 ```TypeScript
@@ -636,8 +586,6 @@ optionHeight(value: Dimension | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## optionTextModifier
 
 ```TypeScript
@@ -660,8 +608,6 @@ optionTextModifier(modifier: TextModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## optionWidth
 
 ```TypeScript
@@ -684,8 +630,6 @@ optionWidth(value: Dimension | OptionWidthMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selected
 
 ```TypeScript
@@ -708,8 +652,6 @@ selected(numCount: int | Resource | undefined | Bindable<int> | Bindable<Resourc
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedOptionBgColor
 
 ```TypeScript
@@ -732,8 +674,6 @@ selectedOptionBgColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedOptionFont
 
 ```TypeScript
@@ -756,8 +696,6 @@ selectedOptionFont(value: Font | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedOptionFontColor
 
 ```TypeScript
@@ -780,8 +718,6 @@ selectedOptionFontColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedOptionTextModifier
 
 ```TypeScript
@@ -804,8 +740,6 @@ selectedOptionTextModifier(modifier: TextModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setSelectOptions
 
 ```TypeScript
@@ -828,8 +762,6 @@ setSelectOptions(optionArray: Array<SelectOption>): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## showDefaultSelectedIcon
 
 ```TypeScript
@@ -852,8 +784,6 @@ showDefaultSelectedIcon(show:boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## showInSubWindow
 
 ```TypeScript
@@ -876,8 +806,6 @@ showInSubWindow(showInSubWindow: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## space
 
 ```TypeScript
@@ -900,8 +828,6 @@ space(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## textModifier
 
 ```TypeScript
@@ -924,8 +850,6 @@ textModifier(modifier: TextModifier | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## value
 
 ```TypeScript
@@ -948,8 +872,6 @@ value(resStr: ResourceStr | undefined | Bindable<string> | Bindable<Resource>): 
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

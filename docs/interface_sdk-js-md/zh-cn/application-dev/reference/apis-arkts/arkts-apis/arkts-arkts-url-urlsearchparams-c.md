@@ -15,6 +15,7 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 ## 导入模块
 
 ```TypeScript
+import { url } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -250,7 +251,7 @@ get(name: string): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回第一个值，如果没找到，返回 null。 |
+| string \| null | 返回第一个值，如果没找到，返回 null。 |
 
 **示例**
 

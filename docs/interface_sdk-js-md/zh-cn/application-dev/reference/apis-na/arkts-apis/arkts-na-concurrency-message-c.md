@@ -167,7 +167,7 @@ getCallback(): (() => void) | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| (() =&gt; void) | 消息的回调函数，未设置时返回undefined。 |
+| [function](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) \| undefined | 消息的回调函数，未设置时返回undefined。 |
 
 ## getObject
 

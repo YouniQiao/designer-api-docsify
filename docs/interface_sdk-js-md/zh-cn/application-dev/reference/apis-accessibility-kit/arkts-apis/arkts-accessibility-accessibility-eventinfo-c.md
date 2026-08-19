@@ -11,6 +11,11 @@
 ## 导入模块
 
 ```TypeScript
+import { config } from '@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -160,7 +165,7 @@ bundleName: string
 componentType?: string
 ```
 
-应与事件源组件类型对应，默认值为空。 例如： - 按钮Button类型->'Button'。 - 图片Image类型->'Image'。
+应与事件源组件类型对应，默认值为空。 例如： - 按钮Button类型-&gt;'Button'。 - 图片Image类型-&gt;'Image'。
 
 **类型：** string
 

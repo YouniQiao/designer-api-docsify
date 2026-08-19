@@ -29,7 +29,7 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| UIScrollEvent | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIScrollEvent \| undefined | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
 ## getEvent
@@ -61,7 +61,7 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| UIListEvent | List节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIListEvent \| undefined | List节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
 ## getEvent
@@ -93,7 +93,7 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 
 | 类型 | 说明 |
 | --- | --- |
-| UIWaterFlowEvent | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIWaterFlowEvent \| undefined | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
 ## getEvent
@@ -125,5 +125,5 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| UIGridEvent | Grid节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIGridEvent \| undefined | Grid节点类型的滚动事件，若获取失败，则返回undefined。 |
 

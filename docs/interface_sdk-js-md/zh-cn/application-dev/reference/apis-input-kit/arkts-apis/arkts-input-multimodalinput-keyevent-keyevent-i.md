@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Action, Key, KeyEvent } from '@kit.InputKit';
 ```
 
 ## action

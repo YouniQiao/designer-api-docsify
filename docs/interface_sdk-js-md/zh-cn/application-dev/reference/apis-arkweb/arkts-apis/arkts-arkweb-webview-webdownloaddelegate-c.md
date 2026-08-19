@@ -11,6 +11,7 @@ WebDownloadDelegate是ArkWeb框架中用于监听和处理Web组件下载任务�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## onBeforeDownload
@@ -19,7 +20,7 @@ WebDownloadDelegate是ArkWeb框架中用于监听和处理Web组件下载任务�
 onBeforeDownload(callback: Callback<WebDownloadItem>): void
 ```
 
-下载开始前通知给应用，应用需要在此接口中调用WebDownloadItem.start("xxx")并提供下载路径，否则下载会一直处于PENDING状态。 > **说明：** > > 处于PENDING状态的下载任务会首先将文件保存至临时目录。在调用[WebDownloadItem.start](arkts-arkweb-webview-webdownloaditem-c.md#start)并指定目标路径后，临时文件将被重命名 > 为目标文件名，未完成下载的部分将直接下载到目标路径。若希望避免在调用WebDownloadItem.start前生成临时文件，可先通过 > [WebDownloadItem.cancel](arkts-arkweb-webview-webdownloaditem-c.md#cancel)来取消当前的下载任务，之后再使用 > [WebDownloadManager.resumeDownload](arkts-arkweb-webview-webdownloadmanager-c.md#resumedownload)来恢复被取消的下载任务。
+下载开始前通知给应用，应用需要在此接口中调用WebDownloadItem.start("xxx")并提供下载路径，否则下载会一直处于PENDING状态。 &gt; **说明：** &gt; &gt; 处于PENDING状态的下载任务会首先将文件保存至临时目录。在调用[WebDownloadItem.start](arkts-arkweb-webview-webdownloaditem-c.md#start)并指定目标路径后，临时文件将被重命名 &gt; 为目标文件名，未完成下载的部分将直接下载到目标路径。若希望避免在调用WebDownloadItem.start前生成临时文件，可先通过 &gt; [WebDownloadItem.cancel](arkts-arkweb-webview-webdownloaditem-c.md#cancel)来取消当前的下载任务，之后再使用 &gt; [WebDownloadManager.resumeDownload](arkts-arkweb-webview-webdownloadmanager-c.md#resumedownload)来恢复被取消的下载任务。
 
 **起始版本：** 11
 
@@ -33,7 +34,7 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载开始前的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载开始前的回调。 |
 
 ## onDownloadFailed
 
@@ -55,7 +56,7 @@ onDownloadFailed(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载失败的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载失败的回调。 |
 
 ## onDownloadFinish
 
@@ -77,7 +78,7 @@ onDownloadFinish(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载完成的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载完成的回调。 |
 
 ## onDownloadUpdated
 
@@ -99,5 +100,5 @@ onDownloadUpdated(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载更新的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载更新的回调。 |
 

@@ -34,8 +34,6 @@ antiAlias(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## attributeModifier
 
 ```TypeScript
@@ -58,8 +56,6 @@ attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifie
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fill
 
 ```TypeScript
@@ -82,8 +78,6 @@ fill(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fillOpacity
 
 ```TypeScript
@@ -106,8 +100,6 @@ fillOpacity(value: double | string | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## mesh
 
 ```TypeScript
@@ -132,8 +124,6 @@ mesh(value: Array<double> | undefined, column: int | undefined, row: int | undef
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setShapeOptions
 
 ```TypeScript
@@ -156,8 +146,6 @@ setShapeOptions(value?: PixelMap): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stroke
 
 ```TypeScript
@@ -180,8 +168,6 @@ stroke(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## strokeDashArray
 
 ```TypeScript
@@ -204,8 +190,6 @@ strokeDashArray(value: Array<Length> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## strokeDashOffset
 
 ```TypeScript
@@ -228,8 +212,6 @@ strokeDashOffset(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## strokeLineCap
 
 ```TypeScript
@@ -252,8 +234,6 @@ strokeLineCap(value: LineCapStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## strokeLineJoin
 
 ```TypeScript
@@ -276,8 +256,6 @@ strokeLineJoin(value: LineJoinStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## strokeMiterLimit
 
 ```TypeScript
@@ -300,8 +278,6 @@ strokeMiterLimit(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## strokeOpacity
 
 ```TypeScript
@@ -324,8 +300,6 @@ strokeOpacity(value: double | string | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## strokeWidth
 
 ```TypeScript
@@ -348,8 +322,6 @@ strokeWidth(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## viewPort
 
 ```TypeScript
@@ -372,8 +344,6 @@ viewPort(value: ViewportRect | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

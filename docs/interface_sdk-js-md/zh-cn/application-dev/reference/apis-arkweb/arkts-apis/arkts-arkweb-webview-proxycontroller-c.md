@@ -11,6 +11,7 @@ ProxyController是ArkWeb框架中用于管理应用中所有Web组件代理配�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## applyProxyOverride

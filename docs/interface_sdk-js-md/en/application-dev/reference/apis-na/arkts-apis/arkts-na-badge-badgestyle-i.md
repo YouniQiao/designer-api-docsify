@@ -1,6 +1,6 @@
 # BadgeStyle
 
-Describes the badge style. It includes the font color, font size, badge color, badge size, etc. > **NOTE：**> > - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes > the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is > recommended that you use the Text component with its > outline attribute instead of the **Badge** component.
+Describes the badge style. It includes the font color, font size, badge color, badge size, etc. &gt; **NOTE：**&gt; &gt; - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the &gt; badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes &gt; the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is &gt; recommended that you use the Text component with its &gt; outline attribute instead of the **Badge** component.
 
 **Since:** 23
 

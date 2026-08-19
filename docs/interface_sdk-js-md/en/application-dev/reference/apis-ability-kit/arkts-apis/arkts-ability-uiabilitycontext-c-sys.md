@@ -16,7 +16,7 @@ UIAbilityContext provides the context environment for a [UIAbility](arkts-abilit
 connectAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long
 ```
 
-Connects this UIAbility to a ServiceExtensionAbility, with the account ID specified. This API can be called only on the main thread. This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Connects this UIAbility to a ServiceExtensionAbility, with the account ID specified. This API can be called only on the main thread. This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 connectServiceExtensionAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long
 ```
 
-Connects this UIAbility to a ServiceExtensionAbility, with the account ID specified. This API can be called only on the main thread. This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Connects this UIAbility to a ServiceExtensionAbility, with the account ID specified. This API can be called only on the main thread. This API can be properly called on phones and tablets. If it is called on other devices, error code 16000006 is returned. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -189,7 +189,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | long | Yes | ID of the connected ServiceExtensionAbility, that is, **connectionId** returned by [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -247,7 +247,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 ```
 
-Requests the specified foreground application to start the UIExtensionAbility of the corresponding type. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The foreground application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the application specified by **bundleName** is not running in the foreground or does not exist, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. Before starting the UIExtensionAbility, ensure that the foreground application has finished page initialization. Otherwise, the UIExtensionAbility fails to start and the error message "uiContent is nullptr" is displayed. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. After the page initialization is successful, the key log information "UIContentImpl: focus again" is recorded. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Requests the specified foreground application to start the UIExtensionAbility of the corresponding type. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The foreground application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the application specified by **bundleName** is not running in the foreground or does not exist, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. Before starting the UIExtensionAbility, ensure that the foreground application has finished page initialization. Otherwise, the UIExtensionAbility fails to start and the error message "uiContent is nullptr" is displayed. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. After the page initialization is successful, the key log information "UIContentImpl: focus again" is recorded. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -264,7 +264,7 @@ Requests the specified foreground application to start the UIExtensionAbility of
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information used to start the UIExtensionAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -324,7 +324,7 @@ export default class EntryAbility extends UIAbility {
 requestModalUIExtension(pickerWant: Want): Promise<void>
 ```
 
-Requests the specified foreground application to start the UIExtensionAbility of the corresponding type. This API uses a promise to return the result. It can be called only on the main thread. The foreground application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the application specified by **bundleName** is not running in the foreground or does not exist, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. Before starting the UIExtensionAbility, ensure that the foreground application has finished page initialization. Otherwise, the UIExtensionAbility fails to start and the error message "uiContent is nullptr" is displayed. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. After the page initialization is successful, the key log information "UIContentImpl: focus again" is recorded. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Requests the specified foreground application to start the UIExtensionAbility of the corresponding type. This API uses a promise to return the result. It can be called only on the main thread. The foreground application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the application specified by **bundleName** is not running in the foreground or does not exist, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. Before starting the UIExtensionAbility, ensure that the foreground application has finished page initialization. Otherwise, the UIExtensionAbility fails to start and the error message "uiContent is nullptr" is displayed. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. After the page initialization is successful, the key log information "UIContentImpl: focus again" is recorded. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -406,7 +406,7 @@ export default class EntryAbility extends UIAbility {
 requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<void>
 ```
 
-Requests the specified foreground application to start the UIExtensionAbility of the corresponding type for the specified user. This API uses a promise to return the result. It can be called only on the main thread. The foreground application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the application specified by **bundleName** is not running in the foreground or does not exist, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. Before starting the UIExtensionAbility, ensure that the foreground application has finished page initialization. Otherwise, the UIExtensionAbility fails to start and the error message "uiContent is nullptr" is displayed. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. After the page initialization is successful, the key log information "UIContentImpl: focus again" is recorded. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Requests the specified foreground application to start the UIExtensionAbility of the corresponding type for the specified user. This API uses a promise to return the result. It can be called only on the main thread. The foreground application is specified by **bundleName** in **want.parameters**. If **bundleName** is left unspecified, or if the application specified by **bundleName** is not running in the foreground or does not exist, the UIExtensionAbility is directly started on the system UI. The UIExtensionAbility to start is determined by the combination of the **bundleName**, **abilityName**, and **moduleName** fields in **want**, and its type is determined by the **ability.want.params.uiExtensionType** field in **want.parameters**. Before starting the UIExtensionAbility, ensure that the foreground application has finished page initialization. Otherwise, the UIExtensionAbility fails to start and the error message "uiContent is nullptr" is displayed. The application can determine the time to start the UIExtensionAbility by listening for the page loading status. After the page initialization is successful, the key log information "UIContentImpl: focus again" is recorded. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 26.0.0
 
@@ -464,7 +464,7 @@ Sets an icon for this UIAbility in the mission. The maximum size of the icon is 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | icon | image.PixelMap | Yes | Icon of the UIAbility to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -592,7 +592,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a UIAbility with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -609,7 +609,7 @@ Starts a UIAbility with the caller information specified. The caller information
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -673,7 +673,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility with the caller information and start options specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a UIAbility with the caller information and start options specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -691,7 +691,7 @@ Starts a UIAbility with the caller information and start options specified. The 
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -756,7 +756,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts a UIAbility with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a UIAbility with the caller information specified. The caller information is carried in **want** and identified at the system service layer. The UIAbility can obtain the caller information from the **want** parameter in the **onCreate** lifecycle callback. When this API is used to start a UIAbility, the caller information carried in **want** is not overwritten by the current application information. The system service layer can obtain the initial caller information. This API uses a promise to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -948,7 +948,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityForResultWithAccount(want: Want, accountId: int, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts a UIAbility with the account ID specified and returns the result when the UIAbility is terminated. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a UIAbility with the account ID specified and returns the result when the UIAbility is terminated. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -968,7 +968,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility is terminated. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility is terminated. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1049,7 +1049,7 @@ startAbilityForResultWithAccount(
   ): void
 ```
 
-Starts a UIAbility with the account ID and start options specified and returns the result when the UIAbility is terminated. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a UIAbility with the account ID and start options specified and returns the result when the UIAbility is terminated. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -1070,7 +1070,7 @@ Starts a UIAbility with the account ID and start options specified and returns t
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1148,7 +1148,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityForResultWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts a UIAbility with the account ID specified and returns the result when the UIAbility is terminated. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a UIAbility with the account ID specified and returns the result when the UIAbility is terminated. This API uses a promise to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -1252,7 +1252,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility with want and the account ID specified. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a UIAbility with want and the account ID specified. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -1272,7 +1272,7 @@ Starts a UIAbility with want and the account ID specified. This API uses an asyn
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1347,7 +1347,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityWithAccount(want: Want, accountId: int, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility with want, the account ID, and start options specified. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a UIAbility with want, the account ID, and start options specified. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -1368,7 +1368,7 @@ Starts a UIAbility with want, the account ID, and start options specified. This 
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1446,7 +1446,7 @@ export default class EntryAbility extends UIAbility {
 startAbilityWithAccount(want: Want, accountId: int, options?: StartOptions): Promise<void>
 ```
 
-Starts a UIAbility with want, the account ID, and start options specified. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a UIAbility with want, the account ID, and start options specified. This API uses a promise to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -1550,7 +1550,7 @@ export default class EntryAbility extends UIAbility {
 startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility. If the UIAbility has multiple instances, the latest instance is started. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > - For a successful launch in cross-device scenarios, the caller and target must be the same application and the > application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. > > - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the > ohos.permission.START_INVISIBLE_ABILITY permission. > > - If the specified UIAbility has multiple instances, the caller must have the > ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest > instance. > > - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is > required (available only for system applications). > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a UIAbility. If the UIAbility has multiple instances, the latest instance is started. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; - For a successful launch in cross-device scenarios, the caller and target must be the same application and the &gt; application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. &gt; &gt; - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the &gt; ohos.permission.START_INVISIBLE_ABILITY permission. &gt; &gt; - If the specified UIAbility has multiple instances, the caller must have the &gt; ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest &gt; instance. &gt; &gt; - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is &gt; required (available only for system applications). &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1567,7 +1567,7 @@ Starts a UIAbility. If the UIAbility has multiple instances, the latest instance
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1639,7 +1639,7 @@ export default class EntryAbility extends UIAbility {
 startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility with the start options specified. If the UIAbility has multiple instances, the latest instance is started. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > - For a successful launch in cross-device scenarios, the caller and target must be the same application and the > application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. > > - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the > ohos.permission.START_INVISIBLE_ABILITY permission. > > - If the specified UIAbility has multiple instances, the caller must have the > ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest > instance. > > - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is > required (available only for system applications). > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a UIAbility with the start options specified. If the UIAbility has multiple instances, the latest instance is started. This API uses an asynchronous callback to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; - For a successful launch in cross-device scenarios, the caller and target must be the same application and the &gt; application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. &gt; &gt; - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the &gt; ohos.permission.START_INVISIBLE_ABILITY permission. &gt; &gt; - If the specified UIAbility has multiple instances, the caller must have the &gt; ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest &gt; instance. &gt; &gt; - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is &gt; required (available only for system applications). &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1657,7 +1657,7 @@ Starts a UIAbility with the start options specified. If the UIAbility has multip
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the UIAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1733,7 +1733,7 @@ export default class EntryAbility extends UIAbility {
 startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts a UIAbility. If the UIAbility has multiple instances, the latest instance is started. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > - For a successful launch in cross-device scenarios, the caller and target must be the same application and the > application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. > > - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the > ohos.permission.START_INVISIBLE_ABILITY permission. > > - If the specified UIAbility has multiple instances, the caller must have the > ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest > instance. > > - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is > required (available only for system applications). > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Starts a UIAbility. If the UIAbility has multiple instances, the latest instance is started. This API uses a promise to return the result. It can be called only on the main thread. &gt; **NOTE：**&gt; &gt; - For a successful launch in cross-device scenarios, the caller and target must be the same application and the &gt; application must have the ohos.permission.DISTRIBUTED_DATASYNC permission. &gt; &gt; - If **visible** of the target UIAbility is **false** in cross-application scenarios, the caller must have the &gt; ohos.permission.START_INVISIBLE_ABILITY permission. &gt; &gt; - If the specified UIAbility has multiple instances, the caller must have the &gt; ohos.permission.START_RECENT_ABILITY permission (available only for system applications) to start the latest &gt; instance. &gt; &gt; - If the caller is running in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is &gt; required (available only for system applications). &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -1848,7 +1848,7 @@ Starts a ServiceExtensionAbility. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1994,7 +1994,7 @@ export default class EntryAbility extends UIAbility {
 startServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-Starts a ServiceExtensionAbility with the account ID specified. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a ServiceExtensionAbility with the account ID specified. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -2014,7 +2014,7 @@ Starts a ServiceExtensionAbility with the account ID specified. This API uses an
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the ServiceExtensionAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -2077,7 +2077,7 @@ export default class EntryAbility extends UIAbility {
 startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
 ```
 
-Starts a ServiceExtensionAbility with the account ID specified. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > Permission verification is not required when **accountId** specifies the current user.
+Starts a ServiceExtensionAbility with the account ID specified. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the stage model, see &gt; [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). &gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -2182,7 +2182,7 @@ Stops a ServiceExtensionAbility. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -2322,7 +2322,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: int, callback: AsyncCallback<void>): void
 ```
 
-Stops a ServiceExtensionAbility with the account ID specified in the same application. This API uses an asynchronous callback to return the result. > **NOTE：**> > Permission verification is not required when **accountId** specifies the current user.
+Stops a ServiceExtensionAbility with the account ID specified in the same application. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 
@@ -2342,7 +2342,7 @@ Stops a ServiceExtensionAbility with the account ID specified in the same applic
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for stopping the ServiceExtensionAbility. |
 | accountId | int | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0**. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -2401,7 +2401,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<void>
 ```
 
-Stops a ServiceExtensionAbility with the account ID specified in the same application. This API uses a promise to return the result. > **NOTE：**> > Permission verification is not required when **accountId** specifies the current user.
+Stops a ServiceExtensionAbility with the account ID specified in the same application. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Permission verification is not required when **accountId** specifies the current user.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # SelectionExtensionContext（系统接口）
 
-SelectionExtensionContext是 [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)的上下文，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 每个SelectionExtensionAbility组件实例化时，系统都会自动创建对应的SelectionExtensionContext。开发者可以通过SelectionExtensionContext调用 [startAbility](#startability)接口拉起同应用内其他Ability。适用于在划词扩展场景中需要跳转至应用内其他Ability的情况，帮助用户在划词 操作后快速获取与划词内容关联的功能或信息。 > **说明：** > > - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
+SelectionExtensionContext是 [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)的上下文，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。 每个SelectionExtensionAbility组件实例化时，系统都会自动创建对应的SelectionExtensionContext。开发者可以通过SelectionExtensionContext调用 [startAbility](#startability)接口拉起同应用内其他Ability。适用于在划词扩展场景中需要跳转至应用内其他Ability的情况，帮助用户在划词 操作后快速获取与划词内容关联的功能或信息。 &gt; **说明：** &gt; &gt; - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
 
 **继承/实现关系：** SelectionExtensionContext extends ExtensionContext
 
@@ -15,6 +15,7 @@ SelectionExtensionContext是 [SelectionExtensionAbility](arkts-basicservices-sel
 ## 导入模块
 
 ```TypeScript
+import { SelectionExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## startAbility

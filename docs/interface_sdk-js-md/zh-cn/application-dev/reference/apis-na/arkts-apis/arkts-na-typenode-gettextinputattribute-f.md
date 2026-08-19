@@ -28,5 +28,5 @@ export function getTextInputAttribute(node: FrameNode): TextInputAttribute | und
 
 | 类型 | 说明 |
 | --- | --- |
-| TextInputAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| TextInputAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

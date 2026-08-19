@@ -34,8 +34,6 @@ arrowModifier(modifier: SymbolGlyphModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## arrowPosition
 
 ```TypeScript
@@ -58,8 +56,6 @@ arrowPosition(value: ArrowPosition | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## attributeModifier
 
 ```TypeScript
@@ -83,8 +79,6 @@ attributeModifier(
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## avoidance
 
 ```TypeScript
@@ -107,8 +101,6 @@ avoidance(mode: AvoidanceMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## controlSize
 
 ```TypeScript
@@ -131,8 +123,6 @@ controlSize(value: ControlSize | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## divider
 
 ```TypeScript
@@ -155,8 +145,6 @@ divider(options: DividerOptions | null | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## dividerStyle
 
 ```TypeScript
@@ -179,8 +167,6 @@ dividerStyle(style: DividerStyleOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## font
 
 ```TypeScript
@@ -203,8 +189,6 @@ font(value: Font | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fontColor
 
 ```TypeScript
@@ -227,8 +211,6 @@ fontColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## keyboardAvoidMode
 
 ```TypeScript
@@ -251,8 +233,6 @@ keyboardAvoidMode(mode: MenuKeyboardAvoidMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuAlign
 
 ```TypeScript
@@ -276,8 +256,6 @@ menuAlign(alignType: MenuAlignType | undefined, offset?: Offset | undefined): th
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundBlurStyle
 
 ```TypeScript
@@ -300,8 +278,6 @@ menuBackgroundBlurStyle(value: BlurStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundBlurStyleOptions
 
 ```TypeScript
@@ -324,8 +300,6 @@ menuBackgroundBlurStyleOptions(blurStyle: BackgroundBlurStyleOptions | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundColor
 
 ```TypeScript
@@ -348,8 +322,6 @@ menuBackgroundColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuBackgroundEffect
 
 ```TypeScript
@@ -372,8 +344,6 @@ menuBackgroundEffect(effect: BackgroundEffectOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuDistortionMode
 
 ```TypeScript
@@ -396,8 +366,6 @@ menuDistortionMode(mode: DistortionMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuEdgeLightMode
 
 ```TypeScript
@@ -420,8 +388,6 @@ menuEdgeLightMode(mode: EdgeLightMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuItemContentModifier
 
 ```TypeScript
@@ -444,8 +410,6 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration> | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuOutline
 
 ```TypeScript
@@ -468,8 +432,6 @@ menuOutline(outline: MenuOutlineOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menuSystemMaterial
 
 ```TypeScript
@@ -492,8 +454,6 @@ menuSystemMaterial(material: SystemUiMaterial | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## minKeyboardAvoidDistance
 
 ```TypeScript
@@ -516,8 +476,6 @@ minKeyboardAvoidDistance(distance: LengthMetrics | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onSelect
 
 ```TypeScript
@@ -540,8 +498,6 @@ onSelect(callback: OnSelectCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## optionBgColor
 
 ```TypeScript
@@ -564,8 +520,6 @@ optionBgColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## optionFont
 
 ```TypeScript
@@ -588,8 +542,6 @@ optionFont(value: Font | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## optionFontColor
 
 ```TypeScript
@@ -612,8 +564,6 @@ optionFontColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## optionHeight
 
 ```TypeScript
@@ -636,8 +586,6 @@ optionHeight(value: Dimension | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## optionTextModifier
 
 ```TypeScript
@@ -660,8 +608,6 @@ optionTextModifier(modifier: TextModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## optionWidth
 
 ```TypeScript
@@ -684,8 +630,6 @@ optionWidth(value: Dimension | OptionWidthMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selected
 
 ```TypeScript
@@ -708,8 +652,6 @@ selected(numCount: int | Resource | undefined | Bindable<int> | Bindable<Resourc
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedOptionBgColor
 
 ```TypeScript
@@ -732,8 +674,6 @@ selectedOptionBgColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedOptionFont
 
 ```TypeScript
@@ -756,8 +696,6 @@ selectedOptionFont(value: Font | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedOptionFontColor
 
 ```TypeScript
@@ -780,8 +718,6 @@ selectedOptionFontColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedOptionTextModifier
 
 ```TypeScript
@@ -804,8 +740,6 @@ selectedOptionTextModifier(modifier: TextModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showDefaultSelectedIcon
 
 ```TypeScript
@@ -828,8 +762,6 @@ showDefaultSelectedIcon(show:boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## showInSubWindow
 
 ```TypeScript
@@ -852,8 +784,6 @@ showInSubWindow(showInSubWindow: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## space
 
 ```TypeScript
@@ -876,8 +806,6 @@ space(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## textModifier
 
 ```TypeScript
@@ -900,8 +828,6 @@ textModifier(modifier: TextModifier | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## value
 
 ```TypeScript
@@ -924,5 +850,3 @@ value(resStr: ResourceStr | undefined | Bindable<string> | Bindable<Resource>): 
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-

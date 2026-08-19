@@ -13,6 +13,7 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 ## 导入模块
 
 ```TypeScript
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -46,10 +47,10 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 | [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md) | 将指定任务批量切到前台，并将任务ID等于topMission的任务移动到最顶层。使用Promise异步回调。 |
 | [offMission](arkts-ability-missionmanager-offmission-f-sys.md) | 解注册任务状态监听器。使用callback异步回调。 |
 | [offMission](arkts-ability-missionmanager-offmission-f-sys.md) | 解注册任务状态监听。使用Promise异步回调。 |
-| off_mission | 解注册任务状态监听器。使用callback异步回调。 |
-| off_mission | 解注册任务状态监听。使用Promise异步回调。 |
+| [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) | 解注册任务状态监听器。使用callback异步回调。 |
+| [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) | 解注册任务状态监听。使用Promise异步回调。 |
 | [onMission](arkts-ability-missionmanager-onmission-f-sys.md) | 注册系统任务状态监听器。 |
-| on_mission | 注册系统任务状态监听器。 |
+| [on_mission](arkts-ability-missionmanager-onmission-f-sys.md) | 注册系统任务状态监听器。 |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) | 解锁指定任务ID的任务。使用callback异步回调。 |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md) | 解锁指定任务ID的任务。使用Promise异步回调。 |
 <!--DelEnd-->

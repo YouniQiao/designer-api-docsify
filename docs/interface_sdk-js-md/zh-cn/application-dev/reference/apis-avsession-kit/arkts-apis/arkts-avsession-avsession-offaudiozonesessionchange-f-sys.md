@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## offAudioZoneSessionChange
@@ -28,7 +29,7 @@ function offAudioZoneSessionChange(userId: int, callback?: Callback<AVSessionDes
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | int | 是 | 用户id，归属某个音区 <br>用户userId 所归属的音区 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt; | 否 | 返回对应音区的会话列表 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt; | 否 | 返回对应音区的会话列表 |
 
 **错误码：**
 

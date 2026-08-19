@@ -12,7 +12,7 @@ import { netFirewall } from '@kit.NetworkKit';
 function setNetFirewallPolicy(userId: int, policy: NetFirewallPolicy): Promise<void>
 ```
 
-Sets the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). Different firewall policies can be configured for different system user IDs. This API uses a promise to return the result. > **NOTE：**> > If this API is called by multiple applications under the same system user, the latest delivered policy prevails. > **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
+Sets the firewall policy for a system user ID, including the firewall switch status and default inbound or outbound behavior (allow or deny). Different firewall policies can be configured for different system user IDs. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If this API is called by multiple applications under the same system user, the latest delivered policy prevails. &gt; **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15
 

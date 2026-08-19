@@ -1,6 +1,6 @@
 # CustomDialogControllerOptions(CustomDialog)
 
-Defines the style of the custom dialog box. > **NOTE：**> > - Pressing the Back or ESC key closes the dialog box. > > - If the dialog box reaches its maximum allowable height on the screen when avoiding the soft keyboard, it reduces > its height to fit. > > It should be noted that this height adjustment is applied to the outermost container. If a child component > within this container has been assigned a larger fixed height, since the container does not clip its content by > default, parts of the dialog box may still be displayed off-screen. > > - Use the custom dialog box to contain simple alert messages only. Do not use it as a page. When the dialog box > avoids the soft keyboard, there is a 16 vp safe spacing between the two. > > - For optimal visual experience, dialog box display and closing include default animations, though the animation > duration may vary by device. > > Note: During animation playback, the page does not respond to touch, swipe, or click interactions. To disable > default dialog box animations, set **duration** of both **openAnimation** and **closeAnimation** to **0**. > > - In ArkUI, dialog boxes do not close automatically when you switch pages unless you manually call **close**. To > enable a dialog box to be dismissed during page navigation, consider using the > [navigation subpage displayed in dialog mode](../../../ui/arkts-navigation-navdestination.md#page-display-mode) or > [page-level dialog box](../../../ui/arkts-embedded-dialog.md).
+Defines the style of the custom dialog box. &gt; **NOTE：**&gt; &gt; - Pressing the Back or ESC key closes the dialog box. &gt; &gt; - If the dialog box reaches its maximum allowable height on the screen when avoiding the soft keyboard, it reduces &gt; its height to fit. &gt; &gt; It should be noted that this height adjustment is applied to the outermost container. If a child component &gt; within this container has been assigned a larger fixed height, since the container does not clip its content by &gt; default, parts of the dialog box may still be displayed off-screen. &gt; &gt; - Use the custom dialog box to contain simple alert messages only. Do not use it as a page. When the dialog box &gt; avoids the soft keyboard, there is a 16 vp safe spacing between the two. &gt; &gt; - For optimal visual experience, dialog box display and closing include default animations, though the animation &gt; duration may vary by device. &gt; &gt; Note: During animation playback, the page does not respond to touch, swipe, or click interactions. To disable &gt; default dialog box animations, set **duration** of both **openAnimation** and **closeAnimation** to **0**. &gt; &gt; - In ArkUI, dialog boxes do not close automatically when you switch pages unless you manually call **close**. To &gt; enable a dialog box to be dismissed during page navigation, consider using the &gt; [navigation subpage displayed in dialog mode](../../../ui/arkts-navigation-navdestination.md#page-display-mode) or &gt; [page-level dialog box](../../../ui/arkts-embedded-dialog.md).
 
 **Since:** 7
 
@@ -197,7 +197,7 @@ Border width of the dialog box. You can set the width for all four sides or set 
 builder: any
 ```
 
-Builder of the custom dialog box content. **NOTE：**If the builder uses a callback as the input parameter, as in **builder: custombuilder({ callback: ()=> {...}})**, pay attention to the binding of **this**. To listen for data changes in the builder, use the @Link or @Consume decorator; other decorators, such as @Prop and
+Builder of the custom dialog box content. **NOTE：**If the builder uses a callback as the input parameter, as in **builder: custombuilder({ callback: ()=&gt; {...}})**, pay attention to the binding of **this**. To listen for data changes in the builder, use the @Link or @Consume decorator; other decorators, such as @Prop and
 
 **Type:** any
 
@@ -625,7 +625,7 @@ Offset of the dialog box relative to the alignment position. Default value: **{d
 onDidAppear?: Callback<void>
 ```
 
-Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
+Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
 **Type:** Callback&lt;void&gt;
 
@@ -645,7 +645,7 @@ Event callback after the dialog box appears. **NOTE：**1. The normal timing seq
 onDidDisappear?: Callback<void>
 ```
 
-Event callback after the dialog box disappears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Event callback after the dialog box disappears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
 **Type:** Callback&lt;void&gt;
 
@@ -665,7 +665,7 @@ Event callback after the dialog box disappears. **NOTE：**1. The normal timing 
 onWillAppear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** Callback&lt;void&gt;
 
@@ -685,7 +685,7 @@ Event callback when the dialog box is about to appear. **NOTE：**1. The normal 
 onWillDisappear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to disappear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Event callback when the dialog box is about to disappear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
 
 **Type:** Callback&lt;void&gt;
 

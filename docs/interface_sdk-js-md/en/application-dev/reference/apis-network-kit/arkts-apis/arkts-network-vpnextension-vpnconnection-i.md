@@ -20,7 +20,7 @@ import { vpnExtension } from '@kit.NetworkKit';
 create(config: VpnConfig): Promise<int>
 ```
 
-Creates a VPN based on the specified configuration. This API uses a promise to return the result. > **NOTE：**> > You are advised to call [destroy()](#destroy) or > [destroy(vpnId: string)](#destroy) to destroy the VPN and clear > resources when the VPN is not needed.
+Creates a VPN based on the specified configuration. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; You are advised to call [destroy()](#destroy) or &gt; [destroy(vpnId: string)](#destroy) to destroy the VPN and clear &gt; resources when the VPN is not needed.
 
 **Since:** 11
 
@@ -239,7 +239,7 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 generateVpnId(): Promise<string>
 ```
 
-Generates a unique VPN ID. This API uses a promise to return the result. To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**. > **NOTE：**> > Currently, the multi-VPN capability of the system supports only IPv4.
+Generates a unique VPN ID. This API uses a promise to return the result. To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**. &gt; **NOTE：**&gt; &gt; Currently, the multi-VPN capability of the system supports only IPv4.
 
 **Since:** 20
 

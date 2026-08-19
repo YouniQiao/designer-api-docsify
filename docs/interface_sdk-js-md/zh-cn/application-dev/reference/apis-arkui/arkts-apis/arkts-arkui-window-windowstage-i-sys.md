@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { floatingBall } from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## disableWindowDecor
@@ -98,7 +101,7 @@ removeImageForRecent(): Promise<void>
 setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。 > **说明：** > > 调用该接口前，建议先通过loadContent方法或者setUIContent > 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 调用该接口前，建议先通过loadContent方法或者setUIContent &gt; 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
 
 **起始版本：** 23
 
@@ -143,7 +146,7 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 setImageForRecent(imgResourceId: number, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。 > **说明：** > > 调用该接口前，建议先通过loadContent方法或者setUIContent > 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
+设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。 &gt; **说明：** &gt; &gt; 调用该接口前，建议先通过loadContent方法或者setUIContent &gt; 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
 
 **起始版本：** 19
 

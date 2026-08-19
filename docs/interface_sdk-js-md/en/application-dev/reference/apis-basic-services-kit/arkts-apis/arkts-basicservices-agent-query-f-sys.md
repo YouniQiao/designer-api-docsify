@@ -30,7 +30,7 @@ Queries specified task details. Creates a group based on GroupConfig
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | the task id. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | callback function with a `TaskInfo` argument for informations of the current task. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;TaskInfo&gt; | Yes | callback function with a `TaskInfo` argument for informations of the current task. |
 
 **Error codes:**
 

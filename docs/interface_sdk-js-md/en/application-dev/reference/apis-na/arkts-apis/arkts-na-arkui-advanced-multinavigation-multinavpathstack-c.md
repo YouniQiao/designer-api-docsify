@@ -165,7 +165,7 @@ Obtains parameter information of the NavDestination page specified by index.
 
 | Type | Description |
 | --- | --- |
-| Object | Returns the detailed parameter of the NavDestination if it exists in the stack, otherwise returns undefined. |
+| Object \| undefined | Returns the detailed parameter of the NavDestination if it exists in the stack, otherwise returns undefined. |
 
 ## getParamByName
 
@@ -306,7 +306,7 @@ Pop the top NavDestination of the stack. When keepBottomPage sets true, the page
 
 | Type | Description |
 | --- | --- |
-| NavPathInfo | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| NavPathInfo \| undefined | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## popToIndex
 

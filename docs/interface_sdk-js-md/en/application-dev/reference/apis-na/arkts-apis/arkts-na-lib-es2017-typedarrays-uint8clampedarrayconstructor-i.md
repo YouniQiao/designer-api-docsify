@@ -23,5 +23,3 @@ new (): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| Uint8ClampedArray |  |
-

@@ -261,7 +261,7 @@ Creates a template object using the specified image
 
 | Type | Description |
 | --- | --- |
-| [CanvasPattern](arkts-arkui-canvas-canvaspattern-i.md) |  |
+| [CanvasPattern](arkts-arkui-canvas-canvaspattern-i.md) \| null |  |
 
 ## createRadialGradient
 
@@ -576,7 +576,7 @@ Obtains the PixelMap of a specified area on the current canvas.
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) |  |
+| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| undefined |  |
 
 ## getTransform
 

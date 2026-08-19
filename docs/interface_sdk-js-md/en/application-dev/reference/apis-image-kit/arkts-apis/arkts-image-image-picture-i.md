@@ -38,7 +38,7 @@ Obtains an auxiliary picture by type.
 
 | Type | Description |
 | --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | AuxiliaryPicture object. If there is no AuxiliaryPicture object, null is returned. |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) \| null | AuxiliaryPicture object. If there is no AuxiliaryPicture object, null is returned. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ Obtains the PixelMap object of the gain map.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | PixelMap object obtained. If there is no PixelMap object, null is returned. |
+| PixelMap \| null | PixelMap object obtained. If there is no PixelMap object, null is returned. |
 
 ## getHdrComposedPixelmap
 
@@ -192,7 +192,7 @@ Obtains the pixel map of the main image.
 
 | Type | Description |
 | --- | --- |
-| PixelMap | Returns the pixel map. |
+| PixelMap \| undefined | Returns the pixel map. |
 
 ## getMetadata
 

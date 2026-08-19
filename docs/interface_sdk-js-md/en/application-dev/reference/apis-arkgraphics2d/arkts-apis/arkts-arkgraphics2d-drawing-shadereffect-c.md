@@ -1,6 +1,6 @@
 # ShaderEffect
 
-Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Creates a ShaderEffect object with a single color.
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns the shader with single color ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | Returns the shader with single color ShaderEffect object. |
 
 **Error codes:**
 
@@ -140,7 +140,7 @@ Creates an ShaderEffect object that generates a blend ShaderEffect object by two
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns a blend ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | Returns a blend ShaderEffect object. |
 
 **Error codes:**
 
@@ -222,7 +222,7 @@ Creates a ShaderEffect object that generates a conical gradient between two give
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns a conical gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | Returns a conical gradient ShaderEffect object. |
 
 **Error codes:**
 
@@ -296,7 +296,7 @@ Creates an ShaderEffect object that generates a shader with single image.
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns the shader with single image ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | Returns the shader with single image ShaderEffect object. |
 
 **Error codes:**
 
@@ -372,7 +372,7 @@ Creates a ShaderEffect object that generates a linear gradient between two point
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns a linear gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | Returns a linear gradient ShaderEffect object. |
 
 **Error codes:**
 
@@ -448,7 +448,7 @@ Creates a ShaderEffect object that generates a radial gradient based on the cent
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns a radial gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | Returns a radial gradient ShaderEffect object. |
 
 **Error codes:**
 
@@ -528,7 +528,7 @@ Creates a ShaderEffect object that generates a color sweep gradient around a giv
 
 | Type | Description |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Returns a sweep gradient ShaderEffect object. |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | Returns a sweep gradient ShaderEffect object. |
 
 **Error codes:**
 

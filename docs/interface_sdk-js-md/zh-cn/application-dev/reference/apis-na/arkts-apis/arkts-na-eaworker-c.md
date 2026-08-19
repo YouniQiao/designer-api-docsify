@@ -137,7 +137,7 @@ static current(): EAWorker | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [EAWorker](arkts-na-eaworker-c.md) | 当前线程的Worker实例，不在Worker上下文中时返回undefined。 |
+| [EAWorker](arkts-na-eaworker-c.md) \| undefined | 当前线程的Worker实例，不在Worker上下文中时返回undefined。 |
 
 ## getName
 
@@ -209,7 +209,7 @@ getUncaughtExceptionHandler(): ((error: Error) => void) | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ((error: Error) =&gt; void) | 未捕获异常处理函数，未设置时返回undefined。 |
+| [function](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) \| undefined | 未捕获异常处理函数，未设置时返回undefined。 |
 
 ## getWorkerId
 
@@ -233,7 +233,7 @@ getWorkerId(): int | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Worker的ID，未启动时返回undefined。 |
+| int \| undefined | Worker的ID，未启动时返回undefined。 |
 
 ## isAlive
 

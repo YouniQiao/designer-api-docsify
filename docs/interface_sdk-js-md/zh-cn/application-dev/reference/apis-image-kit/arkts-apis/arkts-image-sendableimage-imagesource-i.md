@@ -11,6 +11,7 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 ## 导入模块
 
 ```TypeScript
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMap

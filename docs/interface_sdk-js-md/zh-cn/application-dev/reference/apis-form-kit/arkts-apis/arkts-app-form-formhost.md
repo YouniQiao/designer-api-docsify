@@ -1,6 +1,6 @@
 # @ohos.app.form.formHost
 
-formHost模块提供了卡片使用方相关接口的能力，包括对使用方同一用户下安装的卡片进行删除、释放、请求更新、获取卡片信息、状态等操作。 > **说明：** > > 本模块接口均为系统接口。
+formHost模块提供了卡片使用方相关接口的能力，包括对使用方同一用户下安装的卡片进行删除、释放、请求更新、获取卡片信息、状态等操作。 &gt; **说明：** &gt; &gt; 本模块接口均为系统接口。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@ formHost模块提供了卡片使用方相关接口的能力，包括对使用方
 ## 导入模块
 
 ```TypeScript
+import { formHost } from '@kit.FormKit';
 ```
 
 ## 汇总
@@ -69,11 +70,11 @@ formHost模块提供了卡片使用方相关接口的能力，包括对使用方
 | [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md) | 取消订阅获取卡片参数事件。使用callback异步回调。 |
 | [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) | 取消订阅模板卡片静态配置信息变化。使用callback异步回调。 |
 | [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md) | 取消订阅更新卡片配置事件。使用callback异步回调。 |
-| off_changeSceneAnimationState | 取消订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用 callback异步回调。 |
-| off_formOverflow | 取消订阅互动卡片动效请求事件。使用callback异步回调。 |
-| off_formUninstall | 取消订阅卡片卸载事件。使用callback异步回调。 |
-| [off_getFormRect](arkts-form-formprovider-getformrect-f.md) | 取消订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
-| off_getLiveFormStatus | Cancels Listening to the event of get live form status. |
+| [off_changeSceneAnimationState](arkts-form-formhost-offchangesceneanimationstate-f-sys.md) | 取消订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用 callback异步回调。 |
+| [off_formOverflow](arkts-form-formhost-offformoverflow-f-sys.md) | 取消订阅互动卡片动效请求事件。使用callback异步回调。 |
+| [off_formUninstall](arkts-form-formhost-offformuninstall-f-sys.md) | 取消订阅卡片卸载事件。使用callback异步回调。 |
+| [off_getFormRect](arkts-form-formhost-offgetformrect-f-sys.md) | 取消订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
+| [off_getLiveFormStatus](arkts-form-formhost-offgetliveformstatus-f-sys.md) | Cancels Listening to the event of get live form status. |
 | [onChangeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | Listens to the event of change scene animation state. You can use this method to listen to the event of change scene animation state. |
 | [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md) | 订阅删除卡片事件。使用callback异步回调。 |
 | [onFormOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | Listens to the event of formOverflow. You can use this method to listen to the event of formOverflow. |
@@ -83,11 +84,11 @@ formHost模块提供了卡片使用方相关接口的能力，包括对使用方
 | [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md) | 订阅获取卡片参数事件。使用callback异步回调。 |
 | [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) | 订阅模板卡片静态配置信息变化。使用callback异步回调。 |
 | [onUpdateFormsConfigCallback](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md) | 订阅更新卡片配置事件。使用callback异步回调。 |
-| on_changeSceneAnimationState | 订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用 callback异步回调。 |
-| on_formOverflow | 订阅互动卡片动效请求事件。使用callback异步回调。 |
-| on_formUninstall | 订阅卡片卸载事件。使用callback异步回调。 |
-| [on_getFormRect](arkts-form-formprovider-getformrect-f.md) | 订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
-| on_getLiveFormStatus | Listens to the event of get live form status. |
+| [on_changeSceneAnimationState](arkts-form-formhost-onchangesceneanimationstate-f-sys.md) | 订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用 callback异步回调。 |
+| [on_formOverflow](arkts-form-formhost-onformoverflow-f-sys.md) | 订阅互动卡片动效请求事件。使用callback异步回调。 |
+| [on_formUninstall](arkts-form-formhost-onformuninstall-f-sys.md) | 订阅卡片卸载事件。使用callback异步回调。 |
+| [on_getFormRect](arkts-form-formhost-ongetformrect-f-sys.md) | 订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
+| [on_getLiveFormStatus](arkts-form-formhost-ongetliveformstatus-f-sys.md) | Listens to the event of get live form status. |
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) | 恢复被回收的卡片，并将它的状态更新为不可回收，如果卡片未被回收则只更新状态为不可回收。使用Promise异步回调。 |
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) | 恢复被回收的卡片，并将它的状态更新为不可回收。如果卡片未被回收，则只更新状态为不可回收。使用callback异步回调。 |
 | [recycleForms](arkts-form-formhost-recycleforms-f-sys.md) | 立即回收卡片内存。使用Promise异步回调。 |

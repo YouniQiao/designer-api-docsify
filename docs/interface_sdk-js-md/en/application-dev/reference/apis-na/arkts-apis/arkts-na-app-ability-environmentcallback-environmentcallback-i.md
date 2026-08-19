@@ -21,7 +21,7 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 onConfigurationUpdated(config: Configuration): void
 ```
 
-Called when the system configuration changes, after [a listener has been registered for such events](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle) .
+Called when the system configuration changes, after [a listener has been registered for such events](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#onabilitylifecycle) .
 
 **Since:** 23
 
@@ -45,7 +45,7 @@ Called when the system configuration changes, after [a listener has been registe
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Called when the system memory level changes, after [a listener has been registered for such events](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#on_abilitylifecycleabilitylifecycle) .
+Called when the system memory level changes, after [a listener has been registered for such events](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#onabilitylifecycle) .
 
 **Since:** 23
 

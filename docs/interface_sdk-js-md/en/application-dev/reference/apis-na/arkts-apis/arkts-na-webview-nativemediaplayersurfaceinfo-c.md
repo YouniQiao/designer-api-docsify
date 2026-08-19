@@ -1,6 +1,6 @@
 # NativeMediaPlayerSurfaceInfo
 
-Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page] (../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). > **NOTE：**> > - The sample effect is subject to the actual device.
+Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page] (../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). &gt; **NOTE：**&gt; &gt; - The sample effect is subject to the actual device.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ rect: RectEvent
 
 Position of the surface.
 
-**Type:** [RectEvent](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-rectevent-i.md)
+**Type:** [RectEvent](arkts-na-webview-rectevent-i.md)
 
 **Since:** 23
 

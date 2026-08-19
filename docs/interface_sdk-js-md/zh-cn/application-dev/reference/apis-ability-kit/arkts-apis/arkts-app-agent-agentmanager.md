@@ -15,6 +15,7 @@ agentManager模块提供Agent管理能力，支持AgentExtensionAbility的连接
 ## 导入模块
 
 ```TypeScript
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

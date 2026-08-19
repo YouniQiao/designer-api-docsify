@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.MDMKit';
 function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the current user without retaining the bundle data. This API uses an asynchronous callback to return the result. > **NOTE：**> > Error code **401** will be returned if this API is called to uninstall an application that is either a non- > removable pre-installed application or one configured as non-uninstallable via the > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the current user without retaining the bundle data. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Uninstalls an application of the current user without retaining the bundle data.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Name of the bundle to uninstall. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
 function uninstall(admin: Want, bundleName: string, userId: number, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the specified user without retaining the bundle data This API uses an asynchronous callback to return the result. > **NOTE：**> > Error code **401** will be returned if this API is called to uninstall an application that is either a non- > removable pre-installed application or one configured as non-uninstallable via the > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the specified user without retaining the bundle data This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -101,7 +101,7 @@ Uninstalls an application of the specified user without retaining the bundle dat
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Name of the bundle to uninstall. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
 function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the current user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. > **NOTE：**> > Error code **401** will be returned if this API is called to uninstall an application that is either a non- > removable pre-installed application or one configured as non-uninstallable via the > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the current user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -166,7 +166,7 @@ Uninstalls an application of the current user. The **isKeepData** parameter spec
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | bundleName | string | Yes | Name of the bundle to uninstall. |
 | isKeepData | boolean | Yes | Whether to retain the bundle data. The value **true** means to retain the bundle data; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -206,7 +206,7 @@ bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
 function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: boolean, callback: AsyncCallback<void>): void
 ```
 
-Uninstalls an application of the specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. > **NOTE：**> > Error code **401** will be returned if this API is called to uninstall an application that is either a non- > removable pre-installed application or one configured as non-uninstallable via the > [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
+Uninstalls an application of the specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Error code **401** will be returned if this API is called to uninstall an application that is either a non- &gt; removable pre-installed application or one configured as non-uninstallable via the &gt; [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md) API.
 
 **Since:** 10
 
@@ -232,7 +232,7 @@ Uninstalls an application of the specified user. The **isKeepData** parameter sp
 | bundleName | string | Yes | Name of the bundle to uninstall. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. |
 | isKeepData | boolean | Yes | Whether to retain the bundle data. The value **true** means to retain the bundle data; the value **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -19,7 +19,7 @@ Defines the Bias.
 horizontal?: number
 ```
 
-Horizontal ratio of the Bias, it must be >= 0.
+Horizontal ratio of the Bias, it must be &gt;= 0.
 
 **类型：** number
 
@@ -43,7 +43,7 @@ Horizontal ratio of the Bias, it must be >= 0.
 vertical?: number
 ```
 
-Vertical ratio of the Bias, it must be >= 0.
+Vertical ratio of the Bias, it must be &gt;= 0.
 
 **类型：** number
 

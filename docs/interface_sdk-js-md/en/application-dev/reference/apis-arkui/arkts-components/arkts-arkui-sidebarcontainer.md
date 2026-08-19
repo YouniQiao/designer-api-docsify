@@ -32,7 +32,7 @@ Creates a sidebar container.
 
 | Name | Description |
 | --- | --- |
-| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | Describes the icons of the sidebar control button. > **NOTE：**> To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | Describes the icons of the sidebar control button. &gt; **NOTE：**&gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | Describes the style of the sidebar control button. |
 
 ### Enums

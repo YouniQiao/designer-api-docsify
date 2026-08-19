@@ -11,6 +11,7 @@ SendableLruCache在缓存空间不足时，会用新数据替换近期最少使�
 ## 导入模块
 
 ```TypeScript
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## clear
@@ -127,7 +128,7 @@ get(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V | 如果指定的键存在于缓存中，则返回与键关联的值；否则调用createDefault方法创建值。 若createDefault返回非undefined值，则将该键值对添加到缓存中，并返回该值；若createDefault返回undefined，则最终返回undefined。 当因添加新条目导致缓存中值的数量超过容量时，将淘汰最少使用的键值对。 |
+| V \| undefined | 如果指定的键存在于缓存中，则返回与键关联的值；否则调用createDefault方法创建值。 若createDefault返回非undefined值，则将该键值对添加到缓存中，并返回该值；若createDefault返回undefined，则最终返回undefined。 当因添加新条目导致缓存中值的数量超过容量时，将淘汰最少使用的键值对。 |
 
 ## getCapacity
 
@@ -360,7 +361,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V | 返回与key关联的值；若key不存在，则返回undefined。 |
+| V \| undefined | 返回与key关联的值；若key不存在，则返回undefined。 |
 
 ## toString
 

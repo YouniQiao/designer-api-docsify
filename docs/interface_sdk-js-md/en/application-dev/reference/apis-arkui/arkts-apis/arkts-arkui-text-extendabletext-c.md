@@ -114,5 +114,5 @@ Set the Text Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableText](arkts-arkui-text-extendabletext-c.md) |  |
 

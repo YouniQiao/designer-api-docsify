@@ -31,8 +31,6 @@ Creates a new Generator function.
 
 | Type | Description |
 | --- | --- |
-| [GeneratorFunction](arkts-na-lib-es2015-generator-generatorfunction-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -55,8 +53,6 @@ Creates a new Generator function.
 
 | Type | Description |
 | --- | --- |
-| [GeneratorFunction](arkts-na-lib-es2015-generator-generatorfunction-i.md) |  |
-
 ## length
 
 ```TypeScript

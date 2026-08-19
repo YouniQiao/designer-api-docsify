@@ -1,6 +1,6 @@
 # @ohos.enterprise.wifiManager
 
-This module provides Wi-Fi management capabilities for enterprise devices, including querying the Wi-Fi enabling status, configuring Wi-Fi connections, and managing the Wi-Fi list. **Use cases:** - Configuring Wi-Fi connections for enterprise devices in batches, simplifying the device initialization process - Controlling the Wi-Fi networks that devices can connect to, implementing network access compliance management - Managing the Wi-Fi switch of enterprise devices and unifying network policies **Benefits:** - Improve enterprise network management efficiency and reduces IT O&M costs. - Ensure that devices connect only to secure Wi-Fi networks, reducing security risks. - Implement unified management and control of network policies to meet enterprise compliance requirements. > **NOTE：**> > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../mdm/mdm-kit-guide.md). > > The global restriction policies are provided by **restrictions**. To disable Wi-Fi globally, see > [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
+This module provides Wi-Fi management capabilities for enterprise devices, including querying the Wi-Fi enabling status, configuring Wi-Fi connections, and managing the Wi-Fi list. **Use cases:** - Configuring Wi-Fi connections for enterprise devices in batches, simplifying the device initialization process - Controlling the Wi-Fi networks that devices can connect to, implementing network access compliance management - Managing the Wi-Fi switch of enterprise devices and unifying network policies **Benefits:** - Improve enterprise network management efficiency and reduces IT O&M costs. - Ensure that devices connect only to secure Wi-Fi networks, reducing security risks. - Implement unified management and control of network policies to meet enterprise compliance requirements. &gt; **NOTE：**&gt; &gt; The APIs of this module can be called only by a device administrator application that is enabled. For details, see &gt; [MDM Kit Development](../../../mdm/mdm-kit-guide.md). &gt; &gt; The global restriction policies are provided by **restrictions**. To disable Wi-Fi globally, see &gt; [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
 
 **Since:** 10
 
@@ -63,7 +63,7 @@ import { wifiManager } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [EapMethod](arkts-mdm-wifimanager-eapmethod-e.md) | Enumerates the EAP authentication methods. > **NOTE：**> > Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported. |
+| [EapMethod](arkts-mdm-wifimanager-eapmethod-e.md) | Enumerates the EAP authentication methods. &gt; **NOTE：**&gt; &gt; Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported. |
 | [IpType](arkts-mdm-wifimanager-iptype-e.md) | Enumerates the IP address types. |
 | [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md) | Enumerates the Phase 2 authentication methods. |
 | [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md) | Enumerates the Wi-Fi security types. |

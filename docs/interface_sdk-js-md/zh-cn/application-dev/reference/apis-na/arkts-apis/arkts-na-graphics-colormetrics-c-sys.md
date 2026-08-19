@@ -16,7 +16,7 @@
 static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用默认曝光的HDR颜色创建ColorMetrics类。 使用默认曝光（0.0表示对数，1.0表示线性）创建HDR颜色值。 当没有指定曝光值时，RGB通道值可以超过1.0以实现HDR亮度。 这与iOS UIColor行为匹配，其中RGB值> 1.0启用HDR渲染。
+使用默认曝光的HDR颜色创建ColorMetrics类。 使用默认曝光（0.0表示对数，1.0表示线性）创建HDR颜色值。 当没有指定曝光值时，RGB通道值可以超过1.0以实现HDR亮度。 这与iOS UIColor行为匹配，其中RGB值&gt; 1.0启用HDR渲染。
 
 **起始版本：** 26.0.0
 
@@ -146,7 +146,7 @@ getBlueValue(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 蓝色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | 蓝色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),&gt;1.0表示HDR亮度。 |
 
 ## getColorSpace
 
@@ -198,7 +198,7 @@ getGreenValue(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 绿色的值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | 绿色的值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),&gt;1.0表示HDR亮度。 |
 
 ## getRedValue
 
@@ -224,7 +224,7 @@ getRedValue(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 红色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | 红色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),&gt;1.0表示HDR亮度。 |
 
 ## isHDR
 
@@ -232,7 +232,7 @@ getRedValue(): double
 isHDR(): boolean
 ```
 
-检查ColorMetrics是否代表HDR颜色。 如果颜色是使用createHDRColorWithXx()创建的，或者RGB值> 1.0，则返回true。
+检查ColorMetrics是否代表HDR颜色。 如果颜色是使用createHDRColorWithXx()创建的，或者RGB值&gt; 1.0，则返回true。
 
 **起始版本：** 26.0.0
 

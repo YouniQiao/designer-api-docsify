@@ -44,8 +44,6 @@ attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute> | undefine
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## debugLine
 
 ```TypeScript
@@ -69,8 +67,6 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setContainerSpanOptions
 
 ```TypeScript
@@ -87,8 +83,6 @@ setContainerSpanOptions(): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## textBackgroundStyle
 
 ```TypeScript
@@ -111,8 +105,6 @@ textBackgroundStyle(style: TextBackgroundStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

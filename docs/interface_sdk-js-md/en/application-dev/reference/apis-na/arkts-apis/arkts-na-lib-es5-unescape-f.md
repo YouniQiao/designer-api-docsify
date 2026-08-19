@@ -29,5 +29,3 @@ Computes a new string in which hexadecimal escape sequences are replaced with th
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

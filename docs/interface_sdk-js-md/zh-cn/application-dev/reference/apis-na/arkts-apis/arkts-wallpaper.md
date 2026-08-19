@@ -1,6 +1,6 @@
 # @ohos.wallpaper
 
-壁纸管理服务为OpenHarmony系统服务，提供壁纸切换功能。从API 9开始壁纸管理的接口调整为系统API，壁纸的切换只能通过系统应用来完成。壁纸管理提供壁纸切换通道，使用壁纸的应用（如：桌面）需订阅壁纸变化通知并刷新壁纸显示。 > **说明：** > > 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.wallpaper (壁纸)](#ohoswallpaper)。
+壁纸管理服务为OpenHarmony系统服务，提供壁纸切换功能。从API 9开始壁纸管理的接口调整为系统API，壁纸的切换只能通过系统应用来完成。壁纸管理提供壁纸切换通道，使用壁纸的应用（如：桌面）需订阅壁纸变化通知并刷新壁纸显示。 &gt; **说明：** &gt; &gt; 当前页面仅包含本模块的系统接口，其他公开接口参见[@ohos.wallpaper (壁纸)](#ohoswallpaper)。
 
 **起始版本：** 23
 
@@ -33,8 +33,8 @@
 | [isChangePermitted](arkts-na-wallpaper-ischangepermitted-f.md) | 是否允许应用改变当前用户的壁纸。 |
 | [isOperationAllowed](arkts-na-wallpaper-isoperationallowed-f.md) | 是否允许用户设置壁纸。 |
 | [isOperationAllowed](arkts-na-wallpaper-isoperationallowed-f.md) | 是否允许用户设置壁纸。 |
-| [off_colorChange](arkts-na-wallpaper-offcolorchange-f.md#off_colorchangecolorchange) | 取消订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。 |
-| [on_colorChange](arkts-na-wallpaper-oncolorchange-f.md#on_colorchangecolorchange) | 订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。 |
+| [off_colorChange](arkts-na-wallpaper-offcolorchange-f.md#offcolorchange) | 取消订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。 |
+| [on_colorChange](arkts-na-wallpaper-oncolorchange-f.md#oncolorchange) | 订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。 |
 | [reset](arkts-na-wallpaper-reset-f.md) | 移除指定类型的壁纸，恢复为默认显示的壁纸。 |
 | [reset](arkts-na-wallpaper-reset-f.md) | 移除指定类型的壁纸，恢复为默认显示的壁纸。 |
 | [setWallpaper](arkts-na-wallpaper-setwallpaper-f.md) | 将指定资源设置为指定类型的壁纸。 |
@@ -52,11 +52,11 @@
 | [getMinWidthSync](arkts-na-wallpaper-getminwidthsync-f-sys.md) | 获取壁纸的最小宽度值。 |
 | [getPixelMap](arkts-na-wallpaper-getpixelmap-f-sys.md) | 获取壁纸图片的像素图。 |
 | [getPixelMap](arkts-na-wallpaper-getpixelmap-f-sys.md) | 获取壁纸图片的像素图。 |
-| [getWallpaperByState](arkts-na-wallpaper-getwallpaperbystate-f-sys.md) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -> unfolded-port ->normal-port。使用promise异步回调。 |
+| [getWallpaperByState](arkts-na-wallpaper-getwallpaperbystate-f-sys.md) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -&gt; unfolded-port -&gt;normal-port。使用promise异步回调。 |
 | [offWallpaperChange](arkts-na-wallpaper-offwallpaperchange-f-sys.md) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
-| off_wallpaperChange | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [off_wallpaperChange](arkts-na-wallpaper-offwallpaperchange-f-sys.md) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [onWallpaperChange](arkts-na-wallpaper-onwallpaperchange-f-sys.md) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
-| on_wallpaperChange | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [on_wallpaperChange](arkts-na-wallpaper-onwallpaperchange-f-sys.md) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [restore](arkts-na-wallpaper-restore-f-sys.md) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。 |
 | [restore](arkts-na-wallpaper-restore-f-sys.md) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用promise异步回调。 |
 | [setAllWallpapers](arkts-na-wallpaper-setallwallpapers-f-sys.md) | 设置设备所有形态的壁纸。使用promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选） |

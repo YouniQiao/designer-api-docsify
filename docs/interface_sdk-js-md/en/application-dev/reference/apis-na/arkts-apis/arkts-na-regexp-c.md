@@ -245,7 +245,7 @@ Executes a match search on the string starting from the specified index.
 
 | Type | Description |
 | --- | --- |
-| [RegExpExecArray](arkts-na-regexp-regexpexecarray-c.md) | if match succeeds, returns an array containing match results, otherwise returns null. |
+| [RegExpExecArray](arkts-na-regexp-regexpexecarray-c.md) \| null | if match succeeds, returns an array containing match results, otherwise returns null. |
 
 ## exec
 
@@ -275,7 +275,7 @@ Executes a search for a match in a specified string and returns a result array.
 
 | Type | Description |
 | --- | --- |
-| [RegExpExecArray](arkts-na-regexp-regexpexecarray-c.md) | if match succeeds, returns an array containing match results, otherwise returns null. |
+| [RegExpExecArray](arkts-na-regexp-regexpexecarray-c.md) \| null | if match succeeds, returns an array containing match results, otherwise returns null. |
 
 ## match
 
@@ -305,7 +305,7 @@ Searches the string for matches and returns all matches as an array.
 
 | Type | Description |
 | --- | --- |
-| [RegExpMatchArray](arkts-na-regexp-regexpmatcharray-c.md) | if matches are found, returns an array containing all matches, otherwise returns null. |
+| [RegExpMatchArray](arkts-na-regexp-regexpmatcharray-c.md) \| null | if matches are found, returns an array containing all matches, otherwise returns null. |
 
 ## matchAll
 

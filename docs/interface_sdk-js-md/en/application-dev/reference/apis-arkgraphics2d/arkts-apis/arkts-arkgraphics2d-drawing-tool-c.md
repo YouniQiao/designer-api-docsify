@@ -1,6 +1,6 @@
 # Tool
 
-A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md). &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 15. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Converts a color value of the ResourceColor type to a common2D.Color object.
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | Returns a 32-bit (ARGB) variable that describes the color. |
+| common2D.Color \| undefined | Returns a 32-bit (ARGB) variable that describes the color. |
 
 **Error codes:**
 

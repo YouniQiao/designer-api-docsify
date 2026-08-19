@@ -59,5 +59,5 @@ Changes the file owner based on the file path. This API uses an asynchronous cal
 | path | string | Yes | Application sandbox path of the file. |
 | uid | number | Yes | New UID. |
 | gid | number | Yes | New GID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file owner is changed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file owner is changed asynchronously. |
 

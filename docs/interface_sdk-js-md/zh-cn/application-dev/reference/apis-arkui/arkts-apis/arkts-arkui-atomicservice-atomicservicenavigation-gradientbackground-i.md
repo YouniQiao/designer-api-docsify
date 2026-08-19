@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha, BackgroundTheme, TitleBarType, SideBarOptions, TitleOptions, GradientBackground } from '@kit.ArkUI';
 ```
 
 ## alpha

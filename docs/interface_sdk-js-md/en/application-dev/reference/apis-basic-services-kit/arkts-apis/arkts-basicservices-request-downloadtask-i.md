@@ -21,7 +21,7 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Deletes the download task. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ try {
 delete(): Promise<boolean>
 ```
 
-Deletes the download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Deletes the download task. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ try {
 getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-Obtains the information about this download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Obtains the information about this download task. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ Obtains the information about this download task. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -183,7 +183,7 @@ try {
 getTaskInfo(): Promise<DownloadInfo>
 ```
 
-Obtains the information about this download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Obtains the information about this download task. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -236,7 +236,7 @@ try {
 getTaskMimeType(callback: AsyncCallback<string>): void
 ```
 
-Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -250,7 +250,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -291,7 +291,7 @@ try {
 getTaskMimeType(): Promise<string>
 ```
 
-Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -438,7 +438,7 @@ Called when the current download session remove.
 | --- | --- | --- | --- |
 | callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | No | The callback function for the download remove event. |
 
-## off_complete('complete' | 'pause' | 'remove')
+## off('complete' | 'pause' | 'remove')
 
 ```TypeScript
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
@@ -523,7 +523,7 @@ try {
 }
 ```
 
-## off_fail('fail')
+## off('fail')
 
 ```TypeScript
 off(type: 'fail', callback?: (err: int) => void): void
@@ -582,7 +582,7 @@ try {
 }
 ```
 
-## off_pause('complete' | 'pause' | 'remove')
+## off('complete' | 'pause' | 'remove')
 
 ```TypeScript
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
@@ -667,7 +667,7 @@ try {
 }
 ```
 
-## off_progress('progress')
+## off('progress')
 
 ```TypeScript
 off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void
@@ -726,7 +726,7 @@ try {
 }
 ```
 
-## off_remove('complete' | 'pause' | 'remove')
+## off('complete' | 'pause' | 'remove')
 
 ```TypeScript
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
@@ -911,7 +911,7 @@ Called when the current download session remove.
 | --- | --- | --- | --- |
 | callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | Yes | The callback function for the download remove event. |
 
-## on_complete('complete' | 'pause' | 'remove')
+## on('complete' | 'pause' | 'remove')
 
 ```TypeScript
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
@@ -972,7 +972,7 @@ try {
 }
 ```
 
-## on_fail('fail')
+## on('fail')
 
 ```TypeScript
 on(type: 'fail', callback: (err: int) => void): void
@@ -1023,7 +1023,7 @@ try {
 }
 ```
 
-## on_pause('complete' | 'pause' | 'remove')
+## on('complete' | 'pause' | 'remove')
 
 ```TypeScript
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
@@ -1084,13 +1084,13 @@ try {
 }
 ```
 
-## on_progress('progress')
+## on('progress')
 
 ```TypeScript
 on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void
 ```
 
-Subscribes to download progress events. This API uses an asynchronous callback to return the result. > **NOTE：**> > To maintain a balance between power consumption and performance, this API cannot be called when the application > is running in the background.
+Subscribes to download progress events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To maintain a balance between power consumption and performance, this API cannot be called when the application &gt; is running in the background.
 
 **Since:** 6
 
@@ -1135,7 +1135,7 @@ try {
 }
 ```
 
-## on_remove('complete' | 'pause' | 'remove')
+## on('complete' | 'pause' | 'remove')
 
 ```TypeScript
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
@@ -1220,7 +1220,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1306,7 +1306,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1392,7 +1392,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1478,7 +1478,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1546,7 +1546,7 @@ downloadTask.remove().then((result) => {
 restore(callback: AsyncCallback<boolean>): void
 ```
 
-Restores the download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Restores the download task. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -1560,7 +1560,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1601,7 +1601,7 @@ try {
 restore(): Promise<boolean>
 ```
 
-Restores the download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Restores the download task. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -1672,7 +1672,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1740,7 +1740,7 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-Suspends this download task. You can use [restore](#restore) to restore the download. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Suspends this download task. You can use [restore](#restore) to restore the download. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 
@@ -1754,7 +1754,7 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1795,7 +1795,7 @@ try {
 suspend(): Promise<boolean>
 ```
 
-Suspends this download task. You can use [restore](#restore) to restore the download. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+Suspends this download task. You can use [restore](#restore) to restore the download. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error &gt; code is removed from API version 12.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # OverlayOffset
 
-Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 12. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
+Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 12. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 12
 

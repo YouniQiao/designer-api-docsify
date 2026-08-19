@@ -43,7 +43,7 @@ Generate valid level order.
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) | the order object. |
+| [LevelOrder](arkts-na-promptaction-levelorder-c.md) | the order object. |
 
 ## getOrder
 

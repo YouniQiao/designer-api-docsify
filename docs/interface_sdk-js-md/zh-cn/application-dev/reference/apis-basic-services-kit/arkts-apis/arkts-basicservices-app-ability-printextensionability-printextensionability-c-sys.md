@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onCancelPrintJob

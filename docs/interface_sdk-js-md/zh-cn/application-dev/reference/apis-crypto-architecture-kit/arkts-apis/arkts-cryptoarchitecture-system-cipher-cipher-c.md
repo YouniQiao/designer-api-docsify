@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## aes

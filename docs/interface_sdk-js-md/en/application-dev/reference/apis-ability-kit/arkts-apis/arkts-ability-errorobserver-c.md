@@ -1,6 +1,6 @@
 # ErrorObserver
 
-The ErrorObserver module defines an observer to listen for application errors. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#on_errorerror) to listen for errors that occur in the current application.
+The ErrorObserver module defines an observer to listen for application errors. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#onerror) to listen for errors that occur in the current application.
 
 **Since:** 9
 

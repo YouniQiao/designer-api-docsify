@@ -32,8 +32,6 @@ Interprets the low bits of a BigInt as a 2's-complement signed integer. All high
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## asUintN
 
 ```TypeScript
@@ -57,8 +55,6 @@ Interprets the low bits of a BigInt as an unsigned integer. All higher bits are 
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## constructor
 
 ```TypeScript
@@ -79,8 +75,6 @@ Interprets the low bits of a BigInt as an unsigned integer. All higher bits are 
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## prototype
 
 ```TypeScript

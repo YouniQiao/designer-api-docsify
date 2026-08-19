@@ -28,5 +28,5 @@ export function getSwiperAttribute(node: FrameNode): SwiperAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| SwiperAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| SwiperAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

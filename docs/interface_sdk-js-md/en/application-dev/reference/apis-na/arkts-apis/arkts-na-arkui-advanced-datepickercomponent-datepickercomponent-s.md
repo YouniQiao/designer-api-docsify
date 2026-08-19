@@ -1,6 +1,6 @@
 # DatePickerComponent
 
-DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second). > **Description:** > > - This component interface can only be used in Stage model.
+DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second). &gt; **Description:** &gt; &gt; - This component interface can only be used in Stage model.
 
 **Since:** 26.0.0
 
@@ -43,7 +43,7 @@ The method to build component.
 
 Defines options for the date time picker component.
 
-**Type:** [DatePickerComponentOptions](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
+**Type:** [DatePickerComponentOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **Since:** 26.0.0
 

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<NavDestinationAttribute> | Attribu
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## backButtonIcon
 
 ```TypeScript
@@ -59,8 +57,6 @@ backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier | undefined, a
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindToNestedScrollable
 
 ```TypeScript
@@ -83,8 +79,6 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## bindToScrollable
 
 ```TypeScript
@@ -107,8 +101,6 @@ bindToScrollable(scrollers: Array<Scroller> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## customTransition
 
 ```TypeScript
@@ -131,8 +123,6 @@ customTransition(delegate: NavDestinationTransitionDelegate | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableNavigationIndicator
 
 ```TypeScript
@@ -155,8 +145,6 @@ enableNavigationIndicator(enabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableStatusBar
 
 ```TypeScript
@@ -180,8 +168,6 @@ enableStatusBar(enabled: boolean | undefined, animated?: boolean | undefined): t
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fullScreenOverlay
 
 ```TypeScript
@@ -204,8 +190,6 @@ fullScreenOverlay(fullScreenOverlay: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideBackButton
 
 ```TypeScript
@@ -228,8 +212,6 @@ hideBackButton(hide: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -252,8 +234,6 @@ hideTitleBar(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -277,8 +257,6 @@ hideTitleBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hideToolBar
 
 ```TypeScript
@@ -302,8 +280,6 @@ hideToolBar(hide: boolean | undefined, animated?: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## ignoreLayoutSafeArea
 
 ```TypeScript
@@ -327,8 +303,6 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## menus
 
 ```TypeScript
@@ -352,8 +326,6 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: Na
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## mode
 
 ```TypeScript
@@ -376,8 +348,6 @@ mode(value: NavDestinationMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onActive
 
 ```TypeScript
@@ -400,8 +370,6 @@ onActive(callback: Callback<NavDestinationActiveReason> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onBackPressed
 
 ```TypeScript
@@ -424,8 +392,6 @@ onBackPressed(callback: (() => boolean) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onHidden
 
 ```TypeScript
@@ -448,8 +414,6 @@ onHidden(callback: Callback<VisibilityChangeReason> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onInactive
 
 ```TypeScript
@@ -472,8 +436,6 @@ onInactive(callback: Callback<NavDestinationActiveReason> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onNewParam
 
 ```TypeScript
@@ -496,8 +458,6 @@ onNewParam(callback: Callback<Object | null | undefined> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onReady
 
 ```TypeScript
@@ -520,8 +480,6 @@ onReady(callback: Callback<NavDestinationContext> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onRestoreState
 
 ```TypeScript
@@ -544,8 +502,6 @@ onRestoreState(callback: RestoreStateCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onResult
 
 ```TypeScript
@@ -568,8 +524,6 @@ onResult(callback: Callback<Object | null | undefined> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onSaveState
 
 ```TypeScript
@@ -592,8 +546,6 @@ onSaveState(callback: SaveStateCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onShown
 
 ```TypeScript
@@ -616,8 +568,6 @@ onShown(callback: Callback<VisibilityChangeReason> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onWillAppear
 
 ```TypeScript
@@ -640,8 +590,6 @@ onWillAppear(callback: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onWillDisappear
 
 ```TypeScript
@@ -664,8 +612,6 @@ onWillDisappear(callback: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onWillHide
 
 ```TypeScript
@@ -688,8 +634,6 @@ onWillHide(callback: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onWillShow
 
 ```TypeScript
@@ -712,8 +656,6 @@ onWillShow(callback: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## preferredOrientation
 
 ```TypeScript
@@ -736,8 +678,6 @@ preferredOrientation(orientation: Orientation | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## recoverable
 
 ```TypeScript
@@ -760,8 +700,6 @@ recoverable(recoverable: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setNavDestinationOptions
 
 ```TypeScript
@@ -784,8 +722,6 @@ setNavDestinationOptions(moduleInfo?: NavDestinationModuleInfo): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## systemBarStyle
 
 ```TypeScript
@@ -808,8 +744,6 @@ systemBarStyle(style: SystemBarStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## systemTransition
 
 ```TypeScript
@@ -832,8 +766,6 @@ systemTransition(type: NavigationSystemTransitionType | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## title
 
 ```TypeScript
@@ -857,8 +789,6 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## toolbarConfiguration
 
 ```TypeScript
@@ -882,8 +812,6 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder | undefine
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

@@ -185,7 +185,7 @@ Returns the bit values in a range of indices in a bit vector.
 
 | Type | Description |
 | --- | --- |
-| [BitVector](../../apis-arkts/arkts-apis/arkts-arkts-collections-bitvector-c.md) | The BitVector type, returns the bit values in a range of indices in a bit vector. |
+| [BitVector](arkts-na-collections-bitvector-c.md) | The BitVector type, returns the bit values in a range of indices in a bit vector. |
 
 **Error codes:**
 
@@ -329,7 +329,7 @@ Retrieves and removes the bit element to the end of this bit vector.
 
 | Type | Description |
 | --- | --- |
-| int | The boolean type, if the bit push successfully, return true, else return false. |
+| int \| undefined | The boolean type, if the bit push successfully, return true, else return false. |
 
 ## push
 

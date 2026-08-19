@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drm } from '@kit.DrmKit';
 ```
 
 ## createMediaKeySystem
@@ -77,7 +78,7 @@ Creates a MediaKeySystem instance.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) | The MediaKeySystem instance or undefined. |
+| [MediaKeySystem](arkts-drm-drm-mediakeysystem-i.md) \| undefined | The MediaKeySystem instance or undefined. |
 
 **错误码：**
 

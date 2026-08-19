@@ -29,7 +29,7 @@ Obtains the call waiting status. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | Yes | Callback used to return the result. <br>The value can be: <br>- **0**: Call waiting is disabled. <br>- **1**: Call waiting is enabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | Yes | Callback used to return the result. <br>The value can be: <br>- **0**: Call waiting is disabled. <br>- **1**: Call waiting is enabled. |
 
 **Error codes:**
 

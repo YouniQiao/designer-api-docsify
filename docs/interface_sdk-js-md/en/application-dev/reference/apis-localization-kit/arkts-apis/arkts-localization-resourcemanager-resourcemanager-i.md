@@ -1,6 +1,6 @@
 # ResourceManager
 
-Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. > **NOTE：**> > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. > > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`. > > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). > > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
+Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. &gt; **NOTE：**&gt; &gt; - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative &gt; development paradigm. &gt; &gt; - Resource files are defined in the **resources** directory of the project. You can obtain resource values such &gt; as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. &gt; **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through &gt; `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`. &gt; &gt; - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with &gt; **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are &gt; in different HAPs or HSPs, you first need to use &gt; [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md) to create the context &gt; of the corresponding module and then call the API with **resName** or **resId** specified. For more information, &gt; see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). &gt; &gt; - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code &gt; HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- &gt; code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see &gt; [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 addResource(path: string) : void
 ```
 
-Loads the specified overlay resource during application runtime to implement theme switching or resource overriding. > **NOTE：**> > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
+Loads the specified overlay resource during application runtime to implement theme switching or resource overriding. &gt; **NOTE：**&gt; &gt; Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
 **Since:** 23
 
@@ -1476,7 +1476,7 @@ Obtains an float number based on the specified resource name. This API returns t
 getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). &gt; &gt; - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -1560,7 +1560,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 23
 
@@ -1599,7 +1599,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). &gt; &gt; - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -1683,7 +1683,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). &gt; &gt; - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 23
 
@@ -1722,7 +1722,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 
@@ -2114,7 +2114,7 @@ Obtains an integer number based on the specified resource name. This API returns
 getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). &gt; &gt; - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -2198,7 +2198,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). &gt; &gt; - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 23
 
@@ -2237,7 +2237,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). &gt; &gt; - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for &gt; example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
@@ -2321,7 +2321,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 23
 
@@ -2360,7 +2360,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 
@@ -4932,7 +4932,7 @@ export default class EntryAbility extends UIAbility {
 getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
 
@@ -4974,7 +4974,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralString(resId: number, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
 
@@ -5019,7 +5019,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5094,7 +5094,7 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 getPluralStringByName(resName: string, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5174,7 +5174,7 @@ this.context.resourceManager.getPluralStringByName("test", 1)
 getPluralStringByNameSync(resName: string, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result synchronously. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -5255,7 +5255,7 @@ try {
 getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5339,7 +5339,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
 getPluralStringValue(resource: Resource, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5427,7 +5427,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
 getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5503,7 +5503,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
 getPluralStringValue(resId: number, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5583,7 +5583,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
 getPluralStringValueSync(resId: number, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result synchronously. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -5664,7 +5664,7 @@ try {
 getPluralStringValueSync(resource: Resource, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result synchronously. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; Strings distinguish between singular and plural forms in all languages except Chinese. For details, see &gt; [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -5753,7 +5753,7 @@ try {
 getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 ```
 
-Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or > [closeRawFd](#closerawfd) > to close the fd after use.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or &gt; [closeRawFd](#closerawfd) &gt; to close the fd after use.
 
 **Since:** 23
 
@@ -5812,7 +5812,7 @@ export default class EntryAbility extends UIAbility {
 getRawFd(path: string): Promise<RawFileDescriptor>
 ```
 
-Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or > [closeRawFd](#closerawfd) > to close the fd after use.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or &gt; [closeRawFd](#closerawfd) &gt; to close the fd after use.
 
 **Since:** 23
 
@@ -5874,7 +5874,7 @@ export default class EntryAbility extends UIAbility {
 getRawFdSync(path: string): RawFileDescriptor
 ```
 
-Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located. This API is called in synchronous mode. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or > [closeRawFd](#closerawfd) > to close the fd after use.
+Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located. This API is called in synchronous mode. &gt; **NOTE：**&gt; &gt; To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or &gt; [closeRawFd](#closerawfd) &gt; to close the fd after use.
 
 **Since:** 23
 
@@ -6273,7 +6273,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses an asynchronous callback to return the result. > **NOTE：**> > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the > directory, the list of the folders and files is returned.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the &gt; directory, the list of the folders and files is returned.
 
 **Since:** 23
 
@@ -6325,7 +6325,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileList(path: string): Promise<Array<string>>
 ```
 
-Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses a promise to return the result. > **NOTE：**> > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the > directory, the list of the folders and files is returned.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the &gt; directory, the list of the folders and files is returned.
 
 **Since:** 23
 
@@ -6382,7 +6382,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileListSync(path: string): Array<string>
 ```
 
-Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API returns the result synchronously. > **NOTE：**> > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the > directory, the list of the folders and files is returned.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the &gt; directory, the list of the folders and files is returned.
 
 **Since:** 23
 
@@ -8479,7 +8479,7 @@ try {
 removeResource(path: string) : void
 ```
 
-Removes the specified overlay resource during application runtime and restores the original resource before the override. > **NOTE：**> > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
+Removes the specified overlay resource during application runtime and restores the original resource before the override. &gt; **NOTE：**&gt; &gt; Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
 **Since:** 23
 

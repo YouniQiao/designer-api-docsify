@@ -29,7 +29,7 @@ Obtains the historical data traffic of the specified application. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uidInfo | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Yes | Application information. For details, see [UidInfo](arkts-network-statistics-uidinfo-i-sys.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the application. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **error** is **undefined** and **statsInfo** is the historical traffic statistics of the application. Otherwise, **error** is an error object. |
 
 **Error codes:**
 

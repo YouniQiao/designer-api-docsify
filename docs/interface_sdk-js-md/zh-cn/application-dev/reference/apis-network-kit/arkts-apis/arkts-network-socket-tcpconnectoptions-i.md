@@ -11,6 +11,7 @@ TCPSocket连接的参数。
 ## 导入模块
 
 ```TypeScript
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

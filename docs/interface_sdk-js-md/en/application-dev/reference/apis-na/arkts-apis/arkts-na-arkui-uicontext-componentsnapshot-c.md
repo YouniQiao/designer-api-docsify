@@ -39,7 +39,7 @@ Generate a snapshot from a custom component builder.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | builder | CustomBuilder | Yes | Builder function of a custom component. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback that contains the snapshot in PixelMap format. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback that contains the snapshot in PixelMap format. |
 | delay | int | No | Defines the delay time to render the snapshot. |
 | checkImageStatus | boolean | No | Defines if check the image decoding status before taking snapshot. |
 | options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
@@ -86,7 +86,7 @@ Generate a snapshot from a custom component builder.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **Error codes:**
 
@@ -130,7 +130,7 @@ Generate a snapshot from a custom component content.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ Get a component snapshot by component id.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Target component ID, set by developer through .id attribute. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback that contains the snapshot in PixelMap format. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback that contains the snapshot in PixelMap format. |
 | options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
 
 **Error codes:**
@@ -205,7 +205,7 @@ Get a component snapshot by component id.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **Error codes:**
 
@@ -268,7 +268,7 @@ Take a screenshot of the specified component in synchronous mode, this mode will
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | The snapshot result in PixelMap format. Null will be returned if the parameters' checking failed or some internal errors occur, for example: the runtime environment is broken. |
+| image.PixelMap \| null | The snapshot result in PixelMap format. Null will be returned if the parameters' checking failed or some internal errors occur, for example: the runtime environment is broken. |
 
 **Error codes:**
 
@@ -348,7 +348,7 @@ Get a component snapshot by uniqueId.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **Error codes:**
 

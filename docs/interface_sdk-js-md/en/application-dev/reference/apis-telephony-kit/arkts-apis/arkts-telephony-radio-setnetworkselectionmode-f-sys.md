@@ -29,7 +29,7 @@ Set the current network selection mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [NetworkSelectionModeOptions](arkts-telephony-radio-networkselectionmodeoptions-i-sys.md) | Yes | Indicates the network selection mode option. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setNetworkSelectionMode. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setNetworkSelectionMode. |
 
 **Error codes:**
 

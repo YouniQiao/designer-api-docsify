@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## dataSummary

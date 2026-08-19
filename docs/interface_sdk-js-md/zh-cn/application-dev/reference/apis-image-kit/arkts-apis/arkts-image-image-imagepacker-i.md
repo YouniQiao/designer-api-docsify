@@ -11,6 +11,7 @@ ImagePacker类，用于图片压缩和编码。 在调用ImagePacker的方法前
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## packBinaryImageToTiffData
@@ -135,7 +136,7 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-图片压缩或重新编码。使用Promise异步回调。 > **注意：** > > 接口如果返回401错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
+图片压缩或重新编码。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 接口如果返回401错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **起始版本：** 23
 
@@ -227,7 +228,7 @@ packToFile(source: ImageSource, fd: int, options: PackingOption, callback: Async
 | source | ImageSource | 是 | 编码的ImageSource。 |
 | fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当编码进文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码进文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -291,7 +292,7 @@ packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-指定编码参数，将PixelMap直接编码进文件。使用callback异步回调。 > **注意：** > > 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
+指定编码参数，将PixelMap直接编码进文件。使用callback异步回调。 &gt; **注意：** &gt; &gt; 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **起始版本：** 23
 
@@ -306,7 +307,7 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 | source | PixelMap | 是 | 编码的PixelMap资源。 |
 | fd | int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当编码图片进文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码图片进文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -328,7 +329,7 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 ```
 
-指定编码参数，将PixelMap直接编码进文件。使用Promise异步回调。 > **注意：** > > 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
+指定编码参数，将PixelMap直接编码进文件。使用Promise异步回调。 &gt; **注意：** &gt; &gt; 接口如果返回62980115错误码，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **起始版本：** 23
 
@@ -440,7 +441,7 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, optio
 packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-图片压缩或重新编码。使用callback异步回调。 > **说明：** > > [packToData](#packtodata)代替。
+图片压缩或重新编码。使用callback异步回调。 &gt; **说明：** &gt; &gt; [packToData](#packtodata)代替。
 
 **起始版本：** 6
 
@@ -460,7 +461,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 | --- | --- | --- | --- |
 | source | ImageSource | 是 | 编码的ImageSource。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
 ## packing
 
@@ -468,7 +469,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-图片压缩或重新编码。使用Promise异步回调。 > **说明：** > > [packToData](#packtodata)代替。
+图片压缩或重新编码。使用Promise异步回调。 &gt; **说明：** &gt; &gt; [packToData](#packtodata)代替。
 
 **起始版本：** 6
 
@@ -501,7 +502,7 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-图片压缩或重新编码。使用callback异步回调。 > **说明：** > > [packToData](#packtodata)代替。 > > **注意：** > > 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
+图片压缩或重新编码。使用callback异步回调。 &gt; **说明：** &gt; &gt; [packToData](#packtodata)代替。 &gt; &gt; **注意：** &gt; &gt; 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **起始版本：** 8
 
@@ -521,7 +522,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 | --- | --- | --- | --- |
 | source | PixelMap | 是 | 编码的PixelMap资源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
 ## packing
 
@@ -529,7 +530,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-图片压缩或重新编码。使用Promise异步回调。 > **说明：** > > [packToData](#packtodata)代替。 > > **注意：** > > 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
+图片压缩或重新编码。使用Promise异步回调。 &gt; **说明：** &gt; &gt; [packToData](#packtodata)代替。 &gt; &gt; **注意：** &gt; &gt; 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
 
 **起始版本：** 8
 
@@ -608,7 +609,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当释放图片编码实例成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当释放图片编码实例成功，err为undefined，否则为错误对象。 |
 
 ## release
 

@@ -34,7 +34,7 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 返回克隆节点。克隆失败则返回null。 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回克隆节点。克隆失败则返回null。 |
 
 **示例**
 
@@ -165,7 +165,7 @@ getComponent(node: Node, name: string): SceneComponent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | 返回对应名称的组件对象，若未找到则返回null。 |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null | 返回对应名称的组件对象，若未找到则返回null。 |
 
 **示例**
 
@@ -209,7 +209,7 @@ static getDefaultRenderContext(): RenderContext | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | 返回当前对象关联的渲染上下文，若对象尚未关联任何渲染上下文，则返回null。 |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null | 返回当前对象关联的渲染上下文，若对象尚未关联任何渲染上下文，则返回null。 |
 
 **示例**
 
@@ -252,7 +252,7 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 返回请求节点的实例，如果没有找到或者找到的节点类型与传入的参数不相符则返回空。 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | 返回请求节点的实例，如果没有找到或者找到的节点类型与传入的参数不相符则返回空。 |
 
 **示例**
 

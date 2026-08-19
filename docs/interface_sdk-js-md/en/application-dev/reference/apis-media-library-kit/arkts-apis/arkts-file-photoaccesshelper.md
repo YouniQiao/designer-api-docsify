@@ -97,7 +97,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md) | FetchResult provides APIs to manage the file retrieval result. |
 | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md) | MediaAssetDataHandler is a media asset handler used to customize the media asset processing logic in **onDataPrepared**. |
 | [MediaAssetProgressHandler](arkts-medialibrary-photoaccesshelper-mediaassetprogresshandler-i.md) | **MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**. |
-| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | Media change request, which is the parent class of the asset change request and album change request. > **NOTE：**> > The media change request takes effect only after > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called. |
+| [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) | Media change request, which is the parent class of the asset change request and album change request. &gt; **NOTE：**&gt; &gt; The media change request takes effect only after &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called. |
 | [MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md) | MediaLibrary availability. |
 | [MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md) | MovingPhoto provides APIs for managing a moving photo instance. |
 | [PhotoAccessHelper](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md) | Helper functions to access photos and albums. |

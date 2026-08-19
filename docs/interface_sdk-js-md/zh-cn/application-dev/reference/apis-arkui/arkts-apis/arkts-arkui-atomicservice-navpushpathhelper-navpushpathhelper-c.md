@@ -1,6 +1,6 @@
 # NavPushPathHelper(Defines provides a push method for the target page in the routing table.)
 
-当跳转的目标NavDestination在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用 NavPushPathHelper先下载安装相应hsp分包，再将指定的NavDestination页面信息入栈或替换当前栈顶页面，从 而使Navigation支持动态加载hsp分包后再跳转。 > **说明：** > > 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+当跳转的目标NavDestination在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用 NavPushPathHelper先下载安装相应hsp分包，再将指定的NavDestination页面信息入栈或替换当前栈顶页面，从 而使Navigation支持动态加载hsp分包后再跳转。 &gt; **说明：** &gt; &gt; 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## constructor

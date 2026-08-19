@@ -19,5 +19,5 @@ Implements focus control.
 
 | Name | Description |
 | --- | --- |
-| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md) | Requests focus transfer to the specified component during the next frame rendering. This global API provides asynchronous focus control. For scenarios requiring immediate focus changes, it is recommended that you use the focus synchronization transfer API [requestFocus](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-focuscontroller-c.md#requestfocus) in **FocusController**. |
+| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md) | Requests focus transfer to the specified component during the next frame rendering. This global API provides asynchronous focus control. For scenarios requiring immediate focus changes, it is recommended that you use the focus synchronization transfer API [requestFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#requestfocus) in **FocusController**. |
 

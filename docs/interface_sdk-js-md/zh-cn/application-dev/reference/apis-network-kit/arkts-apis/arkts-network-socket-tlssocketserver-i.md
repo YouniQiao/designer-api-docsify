@@ -11,6 +11,7 @@ TLSSocketServer连接。在调用TLSSocketServer的方法前，需要先通过 [
 ## 导入模块
 
 ```TypeScript
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -19,7 +20,7 @@ TLSSocketServer连接。在调用TLSSocketServer的方法前，需要先通过 [
 close(): Promise<void>
 ```
 
-TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法绑定的端口。使用Promise异步回调。 > **说明：** > > 该方法不会关闭已有连接。如需关闭，请调用[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)的 > [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
+TLSSocketServer停止监听并释放通过[listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法绑定的端口。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 该方法不会关闭已有连接。如需关闭，请调用[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)的 &gt; [close](arkts-network-socket-tcpsocketconnection-i.md#close)方法。
 
 **起始版本：** 20
 
@@ -87,7 +88,7 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 getCertificate(callback: AsyncCallback<X509CertRawData>): void
 ```
 
-在TLSSocketServer通信连接成功之后，获取本地的数字证书，使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接成功之后，获取本地的数字证书，使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -99,7 +100,7 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 | 回调函数，成功返回本地的证书，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | 是 | 回调函数，成功返回本地的证书，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -116,7 +117,7 @@ getCertificate(callback: AsyncCallback<X509CertRawData>): void
 getCertificate(): Promise<X509CertRawData>
 ```
 
-在TLSSocketServer通信连接之后，获取本地的数字证书，使用Promise异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接之后，获取本地的数字证书，使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -144,7 +145,7 @@ getCertificate(): Promise<X509CertRawData>
 getLocalAddress(): Promise<NetAddress>
 ```
 
-获取TLSSocketServer的本地Socket地址。使用Promise异步回调。 > **说明：** > > 在TLSSocketServer通信连接成功之后，才可调用此方法。
+获取TLSSocketServer的本地Socket地址。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 在TLSSocketServer通信连接成功之后，才可调用此方法。
 
 **起始版本：** 12
 
@@ -186,7 +187,7 @@ tlsServer.getLocalAddress().then((localAddress: socket.NetAddress) => {
 getProtocol(callback: AsyncCallback<string>): void
 ```
 
-在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -198,7 +199,7 @@ getProtocol(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回通信的协议。失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回通信的协议。失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -255,7 +256,7 @@ tlsServer.getProtocol((err: BusinessError, data: string) => {
 getProtocol(): Promise<string>
 ```
 
-在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用Promise异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer通信连接成功之后，获取通信的协议版本，使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -321,7 +322,7 @@ tlsServer.getProtocol().then((data: string) => {
 getSocketFd(): Promise<int>
 ```
 
-获取TLSSocketServer监听端口绑定的文件描述符。使用Promise异步回调。 > **说明：** > > - [listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法调用成功后，才可调用此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。 > > - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 > > - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-tcpsocketserver-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
+获取TLSSocketServer监听端口绑定的文件描述符。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - [listen](arkts-network-socket-tcpsocketserver-i.md#listen)方法调用成功后，才可调用此方法。多次调用listen时，会获取最新监听端口绑定的文件描述符。 &gt; &gt; - 监听异常、Socket已关闭（如调用close后）等异常情况下调用本接口会返回-1。 &gt; &gt; - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-tcpsocketserver-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 23
 
@@ -387,7 +388,7 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 getState(callback: AsyncCallback<SocketStateBase>): void
 ```
 
-在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -399,7 +400,7 @@ getState(callback: AsyncCallback<SocketStateBase>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回TLSSocketServer状态，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | 是 | 回调函数。成功返回TLSSocketServer状态，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -455,7 +456,7 @@ tlsServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 getState(): Promise<SocketStateBase>
 ```
 
-在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用Promise异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，获取TLSSocketServer状态。使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -520,7 +521,7 @@ tlsServer.getState().then(() => {
 listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-绑定IP地址和端口，在TLSSocketServer上bind成功之后，监听客户端的连接，创建和初始化TLS会话，实现建立连接过程，加载证书秘钥并验证，使用callback异步回调。 > **注意：** > > IP地址设置为0.0.0.0时，可以监听本机所有地址。
+绑定IP地址和端口，在TLSSocketServer上bind成功之后，监听客户端的连接，创建和初始化TLS会话，实现建立连接过程，加载证书秘钥并验证，使用callback异步回调。 &gt; **注意：** &gt; &gt; IP地址设置为0.0.0.0时，可以监听本机所有地址。
 
 **起始版本：** 10
 
@@ -535,7 +536,7 @@ listen(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | 是 | TLSSocketServer连接所需要的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -665,13 +666,13 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 });
 ```
 
-## off_connect('connect')
+## off('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 ```
 
-取消订阅TLSSocketServer的连接事件。使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。 > > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅TLSSocketServer的连接事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。 &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 10
 
@@ -684,7 +685,7 @@ off(type: 'connect', callback?: Callback<TLSSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 订阅的事件类型。'connect'：连接事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 否 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 否 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -733,13 +734,13 @@ tlsServer.off('connect', callback);
 tlsServer.off('connect');
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-取消订阅TLSSocketServer连接的error事件。使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。 > > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅TLSSocketServer连接的error事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。 &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 10
 
@@ -752,7 +753,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -801,13 +802,13 @@ tlsServer.off('error', callback);
 tlsServer.off('error');
 ```
 
-## on_connect('connect')
+## on('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 ```
 
-订阅TLSSocketServer的连接事件。使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+订阅TLSSocketServer的连接事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -820,7 +821,7 @@ on(type: 'connect', callback: Callback<TLSSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 订阅的事件类型。'connect'：连接事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TLSSocketConnection](arkts-network-socket-tlssocketconnection-i.md)&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -864,13 +865,13 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-订阅TLSSocketServer连接的error事件。使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+订阅TLSSocketServer连接的error事件。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -883,7 +884,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。失败时返回错误码、错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -933,7 +934,7 @@ tlsServer.on('error', (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 ```
 
-在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性。使用callback异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性。使用callback异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 
@@ -946,7 +947,7 @@ setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | 是 | TLSSocketServer连接的其他属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码、错误信息。 |
 
 **错误码：**
 
@@ -1018,7 +1019,7 @@ tlsServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 setExtraOptions(options: TCPExtraOptions): Promise<void>
 ```
 
-在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性，使用Promise异步回调。 > **说明：** > > listen方法调用成功后，才可调用此方法。
+在TLSSocketServer的listen成功之后，设置TLSSocketServer连接的其他属性，使用Promise异步回调。 &gt; **说明：** &gt; &gt; listen方法调用成功后，才可调用此方法。
 
 **起始版本：** 10
 

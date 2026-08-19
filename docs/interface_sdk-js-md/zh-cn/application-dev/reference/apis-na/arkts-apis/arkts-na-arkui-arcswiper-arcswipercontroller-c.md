@@ -55,7 +55,7 @@ finishAnimation(handler?: FinishAnimationHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](../../apis-arkui/arkts-apis/arkts-arkui-finishanimationhandler-t.md) | 否 | 动画结束的回调。<br>默认值：不传入时无回调 |
+| handler | [FinishAnimationHandler](arkts-na-finishanimationhandler-t.md) | 否 | 动画结束的回调。<br>默认值：不传入时无回调 |
 
 ## showNext
 

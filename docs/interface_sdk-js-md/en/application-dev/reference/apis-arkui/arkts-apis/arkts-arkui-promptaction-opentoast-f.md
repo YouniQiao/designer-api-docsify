@@ -12,7 +12,7 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 function openToast(options: ShowToastOptions): Promise<number>
 ```
 
-Shows a toast. This API uses a promise to return the toast ID. > **NOTE：**> > - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input > method type windows. For details, see the constraints in the input method framework > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) > . > > - Directly using **openToast** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the > [openToast](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#opentoast) API through this object.
+Shows a toast. This API uses a promise to return the toast ID. &gt; **NOTE：**&gt; &gt; - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input &gt; method type windows. For details, see the constraints in the input method framework &gt; [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) &gt; . &gt; &gt; - Directly using **openToast** can lead to the issue of &gt; [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the &gt; **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the &gt; [openToast](arkts-arkui-arkui-uicontext-promptaction-c.md#opentoast) API through this object.
 
 **Since:** 18
 

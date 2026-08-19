@@ -25,8 +25,6 @@ Removes the trailing white space and line terminator characters from a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## trimLeft
 
 ```TypeScript
@@ -45,8 +43,6 @@ Removes the leading white space and line terminator characters from a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## trimRight
 
 ```TypeScript
@@ -65,8 +61,6 @@ Removes the trailing white space and line terminator characters from a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## trimStart
 
 ```TypeScript
@@ -83,5 +77,3 @@ Removes the leading white space and line terminator characters from a string.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

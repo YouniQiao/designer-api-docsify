@@ -1,6 +1,6 @@
 # LayoutManager
 
-Implements a layout manager object. > **NOTE：**> > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- > to-date layout information.
+Implements a layout manager object. &gt; **NOTE：**&gt; &gt; After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- &gt; to-date layout information.
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ Obtains the position of the character nearest to the specified coordinate.
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | Character position. Returns **undefined** when [LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined | Character position. Returns **undefined** when [LayoutManager]{ |
 
 ## getCharacterPositionAtCoordinate
 
@@ -75,7 +75,7 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | Character position. Returns **undefined** when [LayoutManager]{ |
+| [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) \| undefined | Character position. Returns **undefined** when [LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -105,7 +105,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -136,7 +136,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -197,7 +197,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -228,7 +228,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; \| undefined | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getLineCount
 

@@ -1,6 +1,6 @@
 # @ohos.dlpPermission
 
-数据防泄漏（Data Loss Prevention，简称为DLP）是系统级的数据防泄漏解决方案，提供跨设备文件的权限管理、加密存储、授权访问等能力。DLP通过加密技术对敏感文件进行保护，生成.dlp格式的加密文件（称为DLP文件）。 当打开DLP文件时，系统会自动创建隔离的DLP沙箱环境，确保文件内容不会泄漏到非授权环境。 > **说明：** > > - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > - @ohos.dlpPermission归属的Kit已由`DataLossPreventionKit`变更为`DataProtectionKit`，建议开发者使用新模块名`@ > kit.DataProtectionKit`完成模块导入。如果使用`@ > kit.DataLossPreventionKit`导入，仅能调用改名前的接口，无法使用新增接口。
+数据防泄漏（Data Loss Prevention，简称为DLP）是系统级的数据防泄漏解决方案，提供跨设备文件的权限管理、加密存储、授权访问等能力。DLP通过加密技术对敏感文件进行保护，生成.dlp格式的加密文件（称为DLP文件）。 当打开DLP文件时，系统会自动创建隔离的DLP沙箱环境，确保文件内容不会泄漏到非授权环境。 &gt; **说明：** &gt; &gt; - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 &gt; - @ohos.dlpPermission归属的Kit已由`DataLossPreventionKit`变更为`DataProtectionKit`，建议开发者使用新模块名`@ &gt; kit.DataProtectionKit`完成模块导入。如果使用`@ &gt; kit.DataLossPreventionKit`导入，仅能调用改名前的接口，无法使用新增接口。
 
 **起始版本：** 10
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## 汇总
@@ -41,8 +42,8 @@
 | [isDLPFile](arkts-dataprotection-dlppermission-isdlpfile-f.md) | 根据文件的fd，查询该文件是否是DLP文件。调用成功后返回查询结果，true表示是DLP文件，false表示非DLP文件。使用callback异步回调。 在文件处理流程中，需要先判断文件是否为DLP文件，再决定后续处理策略（如是否需要通过DLP沙箱打开）。 |
 | [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md) | 查询当前应用是否运行在DLP沙箱环境。使用Promise异步回调。 该接口用于判断当前应用是否处于DLP沙箱环境，以便决定是否执行沙箱相关的操作或调用沙箱专用接口。 |
 | [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md) | 查询当前应用是否运行在DLP沙箱环境。使用callback异步回调。 该接口用于判断当前应用是否处于DLP沙箱环境，以便决定是否执行沙箱相关的操作或调用沙箱专用接口。 |
-| [off_openDLPFile](arkts-dataprotection-dlppermission-offopendlpfile-f.md#off_opendlpfileopendlpfile) | 取消监听打开DLP文件。仅支持在非DLP沙箱应用中调用。调用成功后，将不再接收DLP文件打开事件的通知。 该接口通常在页面销毁或不再需要监听时调用以释放资源。 |
-| [on_openDLPFile](arkts-dataprotection-dlppermission-onopendlpfile-f.md#on_opendlpfileopendlpfile) | 监听打开DLP文件。调用成功后，当DLP文件被打开时会触发回调通知当前应用。仅支持在非DLP沙箱应用中调用。 当应用需要在DLP文件打开后执行特定操作（如记录日志、更新界面）时，可注册该监听。 |
+| [off_openDLPFile](arkts-dataprotection-dlppermission-offopendlpfile-f.md#offopendlpfile) | 取消监听打开DLP文件。仅支持在非DLP沙箱应用中调用。调用成功后，将不再接收DLP文件打开事件的通知。 该接口通常在页面销毁或不再需要监听时调用以释放资源。 |
+| [on_openDLPFile](arkts-dataprotection-dlppermission-onopendlpfile-f.md#onopendlpfile) | 监听打开DLP文件。调用成功后，当DLP文件被打开时会触发回调通知当前应用。仅支持在非DLP沙箱应用中调用。 当应用需要在DLP文件打开后执行特定操作（如记录日志、更新界面）时，可注册该监听。 |
 | [queryOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-queryopenedenterprisedlpfiles-f.md) | 查询已打开且符合指定选项的企业DLP文件的URI列表。使用Promise异步回调。 在需要管理或追踪当前应用已打开的企业DLP文件时调用该接口，可用于文件状态检查、资源管理等场景。 |
 | [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md) | 设置受企业DLP控制的应用程序列表。使用Promise异步回调。 |
 | [setEnterprisePolicy](arkts-dataprotection-dlppermission-setenterprisepolicy-f.md) | 设置企业应用防护策略。调用成功后，企业应用的DLP防护将按照设置的策略执行。 该接口可用于企业管理员配置DLP安全策略，以统一管理企业数据安全防护规则。 |
@@ -64,8 +65,8 @@
 | [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md) | 查询DLP沙箱聚合策略。使用callback异步回调。 应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。 |
 | [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md) | 安装一个应用的DLP沙箱。DLP沙箱为受保护的DLP文件创建独立的运行环境，与原应用进程隔离，确保数据在授权范围内安全流转。沙箱应用继承原应用的功能但仅能访问授权的DLP文件。使用Promise异步回调。 调用installDLPSandbox成功后必须在使用完毕后调用 [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) 卸载沙箱。 DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。 |
 | [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md) | 安装一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统为应用创建DLP沙箱环境并返回沙箱信息。 调用installDLPSandbox成功后必须在使用完毕后调用 [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) 卸载沙箱。 DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。 |
-| [off_uninstallDLPSandbox](arkts-dataprotection-dlppermission-offuninstalldlpsandbox-f-sys.md#off_uninstalldlpsandboxuninstalldlpsandbox) | 取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。 必须在调用[on](arkts-dataprotection-dlppermission-onopendlpfile-f.md#on_opendlpfileopendlpfile)注册监听后才能调用此方法取消 监听。 DLP管理应用退出或不再需要追踪沙箱状态变化时，取消事件订阅以释放监听资源。 |
-| [on_uninstallDLPSandbox](arkts-dataprotection-dlppermission-onuninstalldlpsandbox-f-sys.md#on_uninstalldlpsandboxuninstalldlpsandbox) | 注册监听DLP沙箱卸载事件，用于感知沙箱环境的变化。注册成功后，当DLP沙箱被卸载时，系统会通过回调函数通知应用。 调用on注册监听后，建议在不需要监听时调用 [off](arkts-dataprotection-dlppermission-offopendlpfile-f.md#off_opendlpfileopendlpfile)取消监听释放资源。 DLP管理应用需要追踪沙箱的创建和销毁状态，以便维护沙箱列表或执行相关的清理操作。 |
+| [off_uninstallDLPSandbox](arkts-dataprotection-dlppermission-offuninstalldlpsandbox-f-sys.md#offuninstalldlpsandbox) | 取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。 必须在调用[on](arkts-dataprotection-dlppermission-onopendlpfile-f.md#onopendlpfile)注册监听后才能调用此方法取消 监听。 DLP管理应用退出或不再需要追踪沙箱状态变化时，取消事件订阅以释放监听资源。 |
+| [on_uninstallDLPSandbox](arkts-dataprotection-dlppermission-onuninstalldlpsandbox-f-sys.md#onuninstalldlpsandbox) | 注册监听DLP沙箱卸载事件，用于感知沙箱环境的变化。注册成功后，当DLP沙箱被卸载时，系统会通过回调函数通知应用。 调用on注册监听后，建议在不需要监听时调用 [off](arkts-dataprotection-dlppermission-offopendlpfile-f.md#offopendlpfile)取消监听释放资源。 DLP管理应用需要追踪沙箱的创建和销毁状态，以便维护沙箱列表或执行相关的清理操作。 |
 | [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) | DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。 调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile)释放资源。 DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。 |
 | [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) | DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资 源泄露。 |
 | [queryDlpPolicy](arkts-dataprotection-dlppermission-querydlppolicy-f-sys.md) | 在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)和 [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md)信息。使用Promise异步回调。 该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。 |

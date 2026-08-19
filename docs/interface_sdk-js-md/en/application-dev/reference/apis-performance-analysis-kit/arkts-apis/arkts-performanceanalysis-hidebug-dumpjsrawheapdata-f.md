@@ -12,7 +12,7 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 ```
 
-Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing. > **NOTE：**> > This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to > delete the files immediately after processing them. > > This API is valid only when the **Developer options** is enabled.
+Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing. &gt; **NOTE：**&gt; &gt; This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to &gt; delete the files immediately after processing them. &gt; &gt; This API is valid only when the **Developer options** is enabled.
 
 **Since:** 26.1.0
 

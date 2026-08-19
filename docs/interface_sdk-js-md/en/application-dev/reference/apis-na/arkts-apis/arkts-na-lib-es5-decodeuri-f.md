@@ -27,5 +27,3 @@ Gets the unencoded version of an encoded Uniform Resource Identifier (URI).
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

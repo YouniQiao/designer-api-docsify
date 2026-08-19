@@ -13,7 +13,7 @@ import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance
 ```
 
-Obtains an **AuthInstance** instance for user authentication. > **NOTE：**> > Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new > **AuthInstance**.
+Obtains an **AuthInstance** instance for user authentication. &gt; **NOTE：**&gt; &gt; Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new &gt; **AuthInstance**.
 
 **Since:** 9
 

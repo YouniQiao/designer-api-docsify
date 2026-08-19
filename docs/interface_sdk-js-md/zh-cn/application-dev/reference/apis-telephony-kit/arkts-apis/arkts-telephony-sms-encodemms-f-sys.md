@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## encodeMms
@@ -26,7 +27,7 @@ function encodeMms(mms: MmsInformation, callback: AsyncCallback<Array<int>>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mms | [MmsInformation](arkts-telephony-sms-mmsinformation-i-sys.md) | 是 | 彩信信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | 是 | 指示用于获取MMS编码结果的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | 是 | 指示用于获取MMS编码结果的回调函数。 |
 
 **错误码：**
 

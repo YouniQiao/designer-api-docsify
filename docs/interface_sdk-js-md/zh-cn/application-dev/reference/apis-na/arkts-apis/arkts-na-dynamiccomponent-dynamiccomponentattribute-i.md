@@ -30,14 +30,12 @@ onError(callback: ErrorCallback<BusinessError> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)&lt;[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&gt; \| undefined | 是 |  |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)&lt;[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setDynamicComponentOptions
 
 ```TypeScript
@@ -60,5 +58,3 @@ setDynamicComponentOptions(options: DynamicOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-

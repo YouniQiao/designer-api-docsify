@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 ```
 
 ## icon

@@ -186,7 +186,7 @@ Set the Image Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableImage](arkts-na-image-extendableimage-c.md) |  |
 
 ## setImageOptions
 
@@ -222,7 +222,7 @@ Set the Image Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableImage](arkts-na-image-extendableimage-c.md) |  |
 
 ## setImageOptions
 
@@ -256,5 +256,5 @@ Set the Image Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableImage](arkts-na-image-extendableimage-c.md) |  |
 

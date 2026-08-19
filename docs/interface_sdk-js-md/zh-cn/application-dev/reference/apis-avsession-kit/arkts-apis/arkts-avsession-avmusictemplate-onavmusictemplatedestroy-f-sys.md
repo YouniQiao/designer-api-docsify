@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## onAVMusicTemplateDestroy
@@ -29,7 +30,7 @@ function onAVMusicTemplateDestroy(callback: Callback<AVMusicTemplateDescriptor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)&gt; | 是 | 回调函数，参数为音频模板描述。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)&gt; | 是 | 回调函数，参数为音频模板描述。 |
 
 **错误码：**
 

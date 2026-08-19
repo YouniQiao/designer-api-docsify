@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## generateCsr
@@ -32,7 +35,7 @@ function generateCsr(keyInfo: PrivateKeyInfo, config: CsrGenerationConfig): stri
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 生成的CSR。 |
+| string \| Uint8Array | 生成的CSR。 |
 
 **错误码：**
 

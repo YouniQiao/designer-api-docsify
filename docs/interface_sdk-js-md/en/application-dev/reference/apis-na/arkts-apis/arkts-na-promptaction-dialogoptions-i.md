@@ -2,7 +2,7 @@
 
 Dialog options
 
-**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-basedialogoptions-i.md)
+**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-na-promptaction-basedialogoptions-i.md)
 
 **Since:** 23
 
@@ -67,7 +67,7 @@ borderColor?: DialogOptionsBorderColor
 
 Defines the dialog's border color.
 
-**Type:** [DialogOptionsBorderColor](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dialogoptionsbordercolor-t.md)
+**Type:** [DialogOptionsBorderColor](arkts-na-promptaction-dialogoptionsbordercolor-t.md)
 
 **Since:** 23
 
@@ -87,7 +87,7 @@ borderStyle?: DialogOptionsBorderStyle
 
 Defines the dialog's border style.
 
-**Type:** [DialogOptionsBorderStyle](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dialogoptionsborderstyle-t.md)
+**Type:** [DialogOptionsBorderStyle](arkts-na-promptaction-dialogoptionsborderstyle-t.md)
 
 **Since:** 23
 
@@ -107,7 +107,7 @@ borderWidth?: DialogOptionsBorderWidth
 
 Defines the dialog's border width.
 
-**Type:** [DialogOptionsBorderWidth](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dialogoptionsborderwidth-t.md)
+**Type:** [DialogOptionsBorderWidth](arkts-na-promptaction-dialogoptionsborderwidth-t.md)
 
 **Since:** 23
 
@@ -127,7 +127,7 @@ cornerRadius?: DialogOptionsCornerRadius
 
 Defines the dialog's corner radius.
 
-**Type:** [DialogOptionsCornerRadius](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dialogoptionscornerradius-t.md)
+**Type:** [DialogOptionsCornerRadius](arkts-na-promptaction-dialogoptionscornerradius-t.md)
 
 **Since:** 23
 
@@ -167,7 +167,7 @@ shadow?: DialogOptionsShadow
 
 Defines the dialog's shadow.
 
-**Type:** [DialogOptionsShadow](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-dialogoptionsshadow-t.md)
+**Type:** [DialogOptionsShadow](arkts-na-promptaction-dialogoptionsshadow-t.md)
 
 **Since:** 23
 

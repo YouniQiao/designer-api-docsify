@@ -29,8 +29,6 @@ new(message?: string): Error
 
 | Type | Description |
 | --- | --- |
-| Error |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new(message?: string): Error
 
 | Type | Description |
 | --- | --- |
-| Error |  |
-
 ## prototype
 
 ```TypeScript

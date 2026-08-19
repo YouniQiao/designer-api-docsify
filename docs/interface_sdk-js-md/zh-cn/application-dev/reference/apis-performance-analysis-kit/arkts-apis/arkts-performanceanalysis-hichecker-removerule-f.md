@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## removeRule
@@ -11,7 +12,7 @@
 function removeRule(rule: bigint): void
 ```
 
-> **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[hichecker.removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md)替代。 删除一条或多条规则，删除的规则后续将不再生效。
+> **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃，建议使用[hichecker.removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md)替代。 删除一条或多条规则，删除的规则后续将不再生效。
 
 **起始版本：** 8
 

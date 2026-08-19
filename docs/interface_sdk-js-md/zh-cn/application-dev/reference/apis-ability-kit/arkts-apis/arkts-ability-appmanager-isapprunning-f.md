@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## isAppRunning
@@ -11,7 +12,7 @@
 function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 ```
 
-判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。 > **说明：** > > 如果当前用户未安装该应用，则返回错误码16000073；如果当前用户已安装该应用，则判断所有用户下该指定应用是否正在运行。
+判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 如果当前用户未安装该应用，则返回错误码16000073；如果当前用户已安装该应用，则判断所有用户下该指定应用是否正在运行。
 
 **起始版本：** 23
 

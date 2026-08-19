@@ -29,7 +29,7 @@ Disable the advertising with a specific ID temporarily.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | advertisingDisableParams | [AdvertisingDisableParams](arkts-connectivity-ble-advertisingdisableparams-i.md) | Yes | Indicates the params for disable advertising. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback result. |
 
 **Error codes:**
 

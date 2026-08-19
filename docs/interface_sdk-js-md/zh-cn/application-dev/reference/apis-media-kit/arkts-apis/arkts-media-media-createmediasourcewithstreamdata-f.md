@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithStreamData
@@ -68,5 +69,5 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns null otherwise. |
+| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns null otherwise. |
 

@@ -11,7 +11,7 @@
 function moveFileSync(src: string, dest: string, mode?: int): void
 ```
 
-Moves a file to the destination path. This API returns the result synchronously. > **NOTE：**> > This API is not supported in a distributed directory.
+Moves a file to the destination path. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
 
 **Since:** 23
 

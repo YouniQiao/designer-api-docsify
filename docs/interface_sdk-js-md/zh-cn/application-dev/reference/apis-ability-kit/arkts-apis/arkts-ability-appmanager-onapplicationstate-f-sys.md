@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
-## on_applicationState('applicationState')
+## on('applicationState')
 
 ```TypeScript
 function on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter): int

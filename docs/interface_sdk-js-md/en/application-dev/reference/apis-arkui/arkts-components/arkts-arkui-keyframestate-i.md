@@ -19,7 +19,7 @@ Provides keyframe configuration options.
 curve?: Curve | string | ICurve
 ```
 
-Animation curve used by the keyframe. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md). Default value: **Curve.EaseInOut** **NOTE：**Because the [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md) curves do not have effective duration settings, they are not supported.
+Animation curve used by the keyframe. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md). Default value: **Curve.EaseInOut** **NOTE：**Because the [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md), [responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md), and [interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md) curves do not have effective duration settings, they are not supported.
 
 **Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 

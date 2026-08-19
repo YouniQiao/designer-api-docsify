@@ -78,7 +78,7 @@ Writes the NDEF Data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string | Yes | The Data to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
 
 **Examples**
 

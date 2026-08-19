@@ -4,7 +4,7 @@
 export type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
 ```
 
-type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void 注册应用角标使能状态变化的回调函数类型。
+type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) =&gt; void 注册应用角标使能状态变化的回调函数类型。
 
 **起始版本：** 23
 

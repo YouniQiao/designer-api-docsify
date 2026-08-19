@@ -29,7 +29,7 @@ Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-w
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptor | [WakeupIntelligentVoiceEngineDescriptor](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceenginedescriptor-i-sys.md) | Yes | descriptor indicates wakeup intelligent voice engine descriptor. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md)&gt; | Yes | the callback used to return the WakeupIntelligentVoiceEngine instance. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md)&gt; | Yes | the callback used to return the WakeupIntelligentVoiceEngine instance. |
 
 **Error codes:**
 

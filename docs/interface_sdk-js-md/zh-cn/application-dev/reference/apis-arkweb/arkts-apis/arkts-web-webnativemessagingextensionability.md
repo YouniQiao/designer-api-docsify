@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## 汇总

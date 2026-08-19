@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## renameSync
@@ -11,7 +14,7 @@
 declare function renameSync(oldPath: string, newPath: string): void
 ```
 
-以同步方法重命名文件或目录。 > **说明：** > > 该接口不支持在分布式文件路径下操作。
+以同步方法重命名文件或目录。 &gt; **说明：** &gt; &gt; 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 9
 

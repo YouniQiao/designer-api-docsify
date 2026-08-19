@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## obtainAllWorks
@@ -29,7 +30,7 @@ function obtainAllWorks(callback: AsyncCallback<void>): Array<WorkInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，获取成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，获取成功时，err为undefined，否则为错误对象。 |
 
 **返回值：**
 
@@ -67,7 +68,7 @@ function obtainAllWorks(callback: AsyncCallback<Array<WorkInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md)&gt;&gt; | 是 | 回调函数，获取成功时，返回当前应用所有的延迟任务列表，否则抛出异常。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md)&gt;&gt; | 是 | 回调函数，获取成功时，返回当前应用所有的延迟任务列表，否则抛出异常。 |
 
 **错误码：**
 

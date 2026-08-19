@@ -34,5 +34,5 @@ Creates a media source from file descriptor.
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns undefined otherwise. |
+| [MediaSource](arkts-media-media-mediasource-i.md) \| undefined | MediaSource instance if the operation is successful; returns undefined otherwise. |
 

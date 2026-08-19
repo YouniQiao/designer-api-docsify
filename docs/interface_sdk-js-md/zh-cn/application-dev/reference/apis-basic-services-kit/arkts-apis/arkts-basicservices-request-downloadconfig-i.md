@@ -11,6 +11,8 @@
 ## 导入模块
 
 ```TypeScript
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## background
@@ -51,7 +53,7 @@ description?: string
 enableMetered?: boolean
 ```
 
-表示设置是否允许在按流量计费的连接下下载任务的配置信息。true表示允许，false表示不允许。默认值为false。 > **说明：** > > Wi-Fi为非计费网络，数据流量为计费网络。
+表示设置是否允许在按流量计费的连接下下载任务的配置信息。true表示允许，false表示不允许。默认值为false。 &gt; **说明：** &gt; &gt; Wi-Fi为非计费网络，数据流量为计费网络。
 
 **类型：** boolean
 

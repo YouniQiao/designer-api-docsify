@@ -86,7 +86,7 @@ Obtains a node of a given index. If no node is obtained, null is returned.
 
 | Type | Description |
 | --- | --- |
-| T | Object obtained. If no object is obtained, null is returned. |
+| T \| null | Object obtained. If no object is obtained, null is returned. |
 
 ## insertAfter
 

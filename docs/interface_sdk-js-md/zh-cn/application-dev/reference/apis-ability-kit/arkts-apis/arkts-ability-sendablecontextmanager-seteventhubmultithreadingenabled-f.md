@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## setEventHubMultithreadingEnabled
@@ -11,7 +12,7 @@
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-设置Context中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。 > **说明：** > > - 当多个Context进行通信时，需要调用该接口设置每个Context都支持EventHub跨线程数据传递功能。
+设置Context中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。 &gt; **说明：** &gt; &gt; - 当多个Context进行通信时，需要调用该接口设置每个Context都支持EventHub跨线程数据传递功能。
 
 **起始版本：** 20
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## getPeerInfoById
@@ -31,7 +32,7 @@ function getPeerInfoById(sessionId: int): PeerInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | 若存在对应PeerInfo，则返回接收端的协作应用信息。若sessionId未找到，则查询失败，返回undefined。 |
+| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) \| undefined | 若存在对应PeerInfo，则返回接收端的协作应用信息。若sessionId未找到，则查询失败，返回undefined。 |
 
 **错误码：**
 

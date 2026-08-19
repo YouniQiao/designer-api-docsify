@@ -128,13 +128,13 @@ try {
 }
 ```
 
-## off_destroyed('destroyed')
+## off('destroyed')
 
 ```TypeScript
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel destruction event. This API is used together with [on('destroyed')](#on_destroyeddestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
+Unsubscribes from the word selection panel destruction event. This API is used together with [on('destroyed')](#ondestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
 
 **Since:** 20
 
@@ -149,7 +149,7 @@ Unsubscribes from the word selection panel destruction event. This API is used t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'destroyed' | Yes | Type of the event to unsubscribe from. The value is fixed to **'destroyed'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -163,13 +163,13 @@ try {
 }
 ```
 
-## off_hidden('hidden')
+## off('hidden')
 
 ```TypeScript
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the word selection panel hiding event. This API is used together with [on('hidden')](#on_destroyeddestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
+Unsubscribes from the word selection panel hiding event. This API is used together with [on('hidden')](#ondestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
 
 **Since:** 20
 
@@ -184,7 +184,7 @@ Unsubscribes from the word selection panel hiding event. This API is used togeth
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hidden' | Yes | Type of the event to unsubscribe from. The value is fixed to **'hidden'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to be unregistered, which the callback instance registered using **on**. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -198,13 +198,13 @@ try {
 }
 ```
 
-## on_destroyed('destroyed')
+## on('destroyed')
 
 ```TypeScript
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel destruction event. This API is used together with [off('destroyed')](#off_destroyeddestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
+Subscribes to the word selection panel destruction event. This API is used together with [off('destroyed')](#offdestroyed). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
 
 **Since:** 20
 
@@ -219,7 +219,7 @@ Subscribes to the word selection panel destruction event. This API is used toget
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'destroyed' | Yes | Event type, which is **'destroyed'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md) is called to destroy the panel. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f-sys.md) is called to destroy the panel. |
 
 **Examples**
 
@@ -235,13 +235,13 @@ try {
 }
 ```
 
-## on_hidden('hidden')
+## on('hidden')
 
 ```TypeScript
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-Subscribes to the word selection panel hiding event. This API is used together with [off('hidden')](#off_destroyeddestroyed). This event is triggered when the panel is hidden by calling [hide](#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
+Subscribes to the word selection panel hiding event. This API is used together with [off('hidden')](#offdestroyed). This event is triggered when the panel is hidden by calling [hide](#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f-sys.md).
 
 **Since:** 20
 
@@ -256,7 +256,7 @@ Subscribes to the word selection panel hiding event. This API is used together w
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hidden' | Yes | Event type, which is **'hidden'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when the panel is hidden. The panel can be hidden by calling [hide](#hide) or automatically hidden when it loses focus. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result, which is triggered when the panel is hidden. The panel can be hidden by calling [hide](#hide) or automatically hidden when it loses focus. |
 
 **Examples**
 

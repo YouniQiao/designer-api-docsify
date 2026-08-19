@@ -32,5 +32,3 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
-| [PromiseLike](arkts-na-lib-es5-promiselike-i.md)&lt;TResult1 \| TResult2&gt; |  |
-

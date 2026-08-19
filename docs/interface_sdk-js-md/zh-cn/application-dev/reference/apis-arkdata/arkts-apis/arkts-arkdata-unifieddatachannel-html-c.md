@@ -13,6 +13,7 @@ HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子�
 ## 导入模块
 
 ```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## plainContent

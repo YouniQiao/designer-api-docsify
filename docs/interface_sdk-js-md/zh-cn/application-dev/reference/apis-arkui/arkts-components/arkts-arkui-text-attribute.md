@@ -13,6 +13,13 @@
 ## 导入模块
 
 ```TypeScript
+import { WindowExtensionAbility, WindowExtensionContext } from '@kit.ArkUI';
+import { NodeRenderType, RenderOptions, BuilderNode, ReactiveBuilderNode, BuildOptions, NodeController, FrameNode, DrawContext, Size, Offset, Position, Pivot, Scale, Translation, Matrix4, Rotation, Frame, RenderNode, XComponentNode, LengthMetrics, ColorMetrics, BackgroundBlur, ContentBlur, ForegroundBlur, LengthUnit, LengthMetricsUnit, LayoutConstraint, ComponentContent, ReactiveComponentContent, NodeContent, Content, typeNode, NodeAdapter, ShapeMask, ShapeClip, Rect, RoundRect, edgeColors, edgeWidths, borderStyles, borderRadiuses, ExpandMode, ChildrenCountMode, UIState, InputEventType } from '@kit.ArkUI';
+import { AppStorageV2, PersistenceV2, Type, UIUtils, ConnectOptions, Binding, MutableBinding, CustomComponentLifecycle, CustomComponentLifecycleObserver, CustomComponentLifecycleState, ComponentInit, ComponentAppear, ComponentBuilt, ComponentReuse, ComponentActive, ComponentInactive, ComponentRecycle, ComponentDisappear, CollectionType, ConnectOptionsCollections, CustomComponentContext, IReusePool, IReusableInfo } from '@kit.ArkUI';
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -46,7 +53,7 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
     options?: SelectionMenuOptions)
 ```
 
-设置自定义选择菜单。未通过该接口设置时，默认菜单类型为TextSpanType.TEXT，响应类型为TextResponseType.LONG_PRESS。 bindSelectionMenu的长按响应时长为600ms， bindContextMenu 的长按响应时长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。 自定义菜单超长时，建议内部嵌套使用Scroll组件，避免键盘被遮挡。 从API版本26.0.0开始，文本组件调用该接口时，options中的menuType属性传入MenuType.PREVIEW_MENU，设置图片预览菜单的能力生效。 如果要使用图片预览菜单，需要同时把spanType设置为TextSpanType.IMAGE，responseType设置为TextResponseType.LONG_PRESS，options中的menuType设置为 MenuType.PREVIEW_MENU才会生效。 当[copyOption](#copyoption)为CopyOptions.None时，设置图片预览菜单将不会生效。 > **说明：** > > 该接口不支持在attributeModifier中调用。 > > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
+设置自定义选择菜单。未通过该接口设置时，默认菜单类型为TextSpanType.TEXT，响应类型为TextResponseType.LONG_PRESS。 bindSelectionMenu的长按响应时长为600ms， bindContextMenu 的长按响应时长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。 自定义菜单超长时，建议内部嵌套使用Scroll组件，避免键盘被遮挡。 从API版本26.0.0开始，文本组件调用该接口时，options中的menuType属性传入MenuType.PREVIEW_MENU，设置图片预览菜单的能力生效。 如果要使用图片预览菜单，需要同时把spanType设置为TextSpanType.IMAGE，responseType设置为TextResponseType.LONG_PRESS，options中的menuType设置为 MenuType.PREVIEW_MENU才会生效。 当[copyOption](#copyoption)为CopyOptions.None时，设置图片预览菜单将不会生效。 &gt; **说明：** &gt; &gt; 该接口不支持在attributeModifier中调用。 &gt; &gt; 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 &gt; &gt; 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
 
 **起始版本：** 11
 
@@ -97,7 +104,7 @@ caretColor(color: ResourceColor)
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-设置是否开启行首标点符号压缩。 > **说明：** > > - 行首标点符号默认不压缩。 > > - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
+设置是否开启行首标点符号压缩。 &gt; **说明：** &gt; &gt; - 行首标点符号默认不压缩。 &gt; &gt; - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
 
@@ -193,7 +200,7 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 decoration(value: DecorationStyleInterface)
 ```
 
-设置文本装饰线样式及其颜色。未通过该接口设置时，默认文本装饰线样式为： { &nbsp;type:&nbsp;TextDecorationType.None, &nbsp;color:&nbsp;Color.Black, &nbsp;style:&nbsp;TextDecorationStyle.SOLID&nbsp; } > **说明：** > > 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见"gjyqp"等英文字符。 > > 当装饰线颜色设置为Color.Transparent时，装饰线会显示为每行第一个字的字体颜色。设置为透明色16进制值"#00FFFFFF"时，装饰线会显示为透明色。
+设置文本装饰线样式及其颜色。未通过该接口设置时，默认文本装饰线样式为： { &nbsp;type:&nbsp;TextDecorationType.None, &nbsp;color:&nbsp;Color.Black, &nbsp;style:&nbsp;TextDecorationStyle.SOLID&nbsp; } &gt; **说明：** &gt; &gt; 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见"gjyqp"等英文字符。 &gt; &gt; 当装饰线颜色设置为Color.Transparent时，装饰线会显示为每行第一个字的字体颜色。设置为透明色16进制值"#00FFFFFF"时，装饰线会显示为透明色。
 
 **起始版本：** 7
 
@@ -239,7 +246,7 @@ draggable(value: boolean)
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > **说明：** > > 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
+设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 &gt; **说明：** &gt; &gt; 通过[editMenuOptions](#editmenuoptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 &gt; &gt; 通过[bindSelectionMenu](#bindselectionmenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
 
 **起始版本：** 12
 
@@ -311,7 +318,7 @@ enableAutoSpacing(enabled: Optional<boolean>)
 enableDataDetector(enable: boolean)
 ```
 
-设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当 enableDataDetector设置为true时，识别特殊实体。 所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。 > **说明：** > > - 设备底层需要具备文本识别能力，该接口才能生效。 > > - 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。 <!--RP2--><!--RP2End-->
+设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当 enableDataDetector设置为true时，识别特殊实体。 所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。 &gt; **说明：** &gt; &gt; - 设备底层需要具备文本识别能力，该接口才能生效。 &gt; &gt; - 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。 <!--RP2--><!--RP2End-->
 
 **起始版本：** 11
 
@@ -335,7 +342,7 @@ enableDataDetector(enable: boolean)
 enableHapticFeedback(isEnabled: boolean)
 ```
 
-设置是否开启触控反馈。未通过该接口设置时，默认开启触控反馈。 开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配 置如下： > **说明：** > > 从API version 18开始，该接口支持在attributeModifier中调用。
+设置是否开启触控反馈。未通过该接口设置时，默认开启触控反馈。 开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配 置如下： &gt; **说明：** &gt; &gt; 从API version 18开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 13
 
@@ -482,7 +489,7 @@ fontColor(value: ResourceColor)
 fontFamily(value: string | Resource)
 ```
 
-设置字体族。未通过该接口设置时，默认字体为'HarmonyOS Sans'。Wearable设备上默认字体也为'HarmonyOS Sans'。 > **说明：** > > 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
+设置字体族。未通过该接口设置时，默认字体为'HarmonyOS Sans'。Wearable设备上默认字体也为'HarmonyOS Sans'。 &gt; **说明：** &gt; &gt; 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
 
 **起始版本：** 7
 
@@ -506,7 +513,7 @@ fontFamily(value: string | Resource)
 fontFeature(value: string)
 ```
 
-设置文字特性效果，比如数字等宽的特性。 格式为：normal \| \&lt;feature-tag-value\&gt; \&lt;feature-tag-value\&gt;的格式为：\&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ] \&lt;feature-tag-value\&gt;的个数可以有多个，中间用','隔开。 例如，使用等宽数字的输入格式为："ss01" on。 > **说明：** > > 不支持Text内同时存在文本内容和Span或ImageSpan子组件。如果同时存在，只显示Span或ImageSpan内的内容。 > > 字体排版引擎会对开发者传入的宽度width进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。 > > 当多个Text组件在Row容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置 > layoutWeight或者是以Flex布局来约束子组件的主轴尺寸。 > > 系统默认字体支持的liga连字：Th fb ff fb ffb ffh ffi ffk ffl fh fi fk fl rf rt rv rx ry。常导致Span、属性字符串的效果不符合预期，关闭liga连字特性可以规避。 > > 文字特性效果与使用的字体文件密切相关。例如，8标点挤压功能需要字体文件中字符支持"ss08"特性，否则无法压缩，在当前系统默认字体中右侧标点符号及感叹号、顿号、问号均不生效。
+设置文字特性效果，比如数字等宽的特性。 格式为：normal \| \&lt;feature-tag-value\&gt; \&lt;feature-tag-value\&gt;的格式为：\&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ] \&lt;feature-tag-value\&gt;的个数可以有多个，中间用','隔开。 例如，使用等宽数字的输入格式为："ss01" on。 &gt; **说明：** &gt; &gt; 不支持Text内同时存在文本内容和Span或ImageSpan子组件。如果同时存在，只显示Span或ImageSpan内的内容。 &gt; &gt; 字体排版引擎会对开发者传入的宽度width进行向下取整，保证是整型像素后进行排版。如果向上取整，可能会出现文字右侧被截断。 &gt; &gt; 当多个Text组件在Row容器内布局且没有设置具体的布局分配信息时，Text会以Row的最大尺寸进行布局。如果需要子组件主轴累加的尺寸不超过Row容器主轴的尺寸，可以设置 &gt; layoutWeight或者是以Flex布局来约束子组件的主轴尺寸。 &gt; &gt; 系统默认字体支持的liga连字：Th fb ff fb ffb ffh ffi ffk ffl fh fi fk fl rf rt rv rx ry。常导致Span、属性字符串的效果不符合预期，关闭liga连字特性可以规避。 &gt; &gt; 文字特性效果与使用的字体文件密切相关。例如，8标点挤压功能需要字体文件中字符支持"ss08"特性，否则无法压缩，在当前系统默认字体中右侧标点符号及感叹号、顿号、问号均不生效。
 
 **起始版本：** 12
 
@@ -532,7 +539,7 @@ fontFeature(value: string)
 fontSize(value: number | string | Resource)
 ```
 
-设置字体大小。未通过该接口设置时，默认字体大小为16fp。Wearable设备上默认字体大小为15fp。 > **说明：** > > 自适应字号生效时，fontSize设置不生效。
+设置字体大小。未通过该接口设置时，默认字体大小为16fp。Wearable设备上默认字体大小为15fp。 &gt; **说明：** &gt; &gt; 自适应字号生效时，fontSize设置不生效。
 
 **起始版本：** 7
 
@@ -655,7 +662,7 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 halfLeading(halfLeading: boolean)
 ```
 
-设置文本是否垂直居中。未通过该接口设置时，默认文本不平分至行的顶部与底部。 > **说明：** > > 与[textVerticalAlign](#textverticalalign)同时配置时，halfLeading不生效。
+设置文本是否垂直居中。未通过该接口设置时，默认文本不平分至行的顶部与底部。 &gt; **说明：** &gt; &gt; 与[textVerticalAlign](#textverticalalign)同时配置时，halfLeading不生效。
 
 **起始版本：** 12
 
@@ -799,7 +806,7 @@ lineBreakStrategy(strategy: LineBreakStrategy)
 lineHeight(value: number | string | Resource)
 ```
 
-设置文本行高。 当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineHeight的设置不生效，以 lineHeightMultiple为准。 设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 > **说明：** > > 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
+设置文本行高。 当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineHeight的设置不生效，以 lineHeightMultiple为准。 设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。 &gt; **说明：** &gt; &gt; 特殊字符字体高度远超出同行的其他字符高度时，文本框出现截断、遮挡、内容相对位置发生变化等不符合预期的显示异常，需要开发者调整组件高度、行高等属性，修改对应的页面布局。
 
 **起始版本：** 7
 
@@ -823,7 +830,7 @@ lineHeight(value: number | string | Resource)
 lineHeightMultiple(value: number | undefined)
 ```
 
-使用倍数模式设置文本的行高。 设置行高为入参（value）与字高（fontHeight）的乘积。 > **说明：** > > 当lineHeightMultiple使用有效值和[lineHeight](#lineheight)或 > [lineSpacing](#linespacing)同时设置时，仅lineHeightMultiple生效。 > lineHeightMultiple小于0时，lineHeightMultiple不生效，使用[lineHeight](#lineheight)和 > [lineSpacing](#linespacing)设置行高和行间距。
+使用倍数模式设置文本的行高。 设置行高为入参（value）与字高（fontHeight）的乘积。 &gt; **说明：** &gt; &gt; 当lineHeightMultiple使用有效值和[lineHeight](#lineheight)或 &gt; [lineSpacing](#linespacing)同时设置时，仅lineHeightMultiple生效。 &gt; lineHeightMultiple小于0时，lineHeightMultiple不生效，使用[lineHeight](#lineheight)和 &gt; [lineSpacing](#linespacing)设置行高和行间距。
 
 **起始版本：** 22
 
@@ -1192,7 +1199,7 @@ onTextSelectionChange(callback: (selectionStart: number, selectionEnd: number) =
 onWillCopy(callback: Callback<string, boolean>)
 ```
 
-在进行复制操作前，触发该回调。 > **说明：** > > onWillCopy和onCopy形成will/did时序模式： > > - onWillCopy在复制操作前触发，可通过返回false拦截复制操作；返回true则允许复制，随后触发onCopy。 > > - onCopy在复制操作完成后触发，无法拦截。 > > - 两者可以同时使用，onWillCopy用于拦截控制，onCopy用于获取复制结果。
+在进行复制操作前，触发该回调。 &gt; **说明：** &gt; &gt; onWillCopy和onCopy形成will/did时序模式： &gt; &gt; - onWillCopy在复制操作前触发，可通过返回false拦截复制操作；返回true则允许复制，随后触发onCopy。 &gt; &gt; - onCopy在复制操作完成后触发，无法拦截。 &gt; &gt; - 两者可以同时使用，onWillCopy用于拦截控制，onCopy用于获取复制结果。
 
 **起始版本：** 26.0.0
 
@@ -1433,7 +1440,7 @@ tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 textAlign(value: TextAlign)
 ```
 
-设置文本段落在水平方向的对齐方式。未通过该接口设置时，默认文本段落在水平方向的对齐方式为TextAlign.Start。Wearable设备上默认为TextAlign.Center。 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE且文本可滚动时，textAlign属性不生效。 文本段落宽度占满Text组件宽度。 可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下： - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。 - Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。 当textAlign属性设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 > **说明：** > > textAlign只能调整文本整体的布局，不影响字符的显示顺序。若需要调整字符的显示顺序，请参考[镜像状态字符对齐](../../../ui/arkts-internationalization.md#镜像状态字符对齐)。
+设置文本段落在水平方向的对齐方式。未通过该接口设置时，默认文本段落在水平方向的对齐方式为TextAlign.Start。Wearable设备上默认为TextAlign.Center。 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE且文本可滚动时，textAlign属性不生效。 文本段落宽度占满Text组件宽度。 可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下： - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。 - Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。 当textAlign属性设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 &gt; **说明：** &gt; &gt; textAlign只能调整文本整体的布局，不影响字符的显示顺序。若需要调整字符的显示顺序，请参考[镜像状态字符对齐](../../../ui/arkts-internationalization.md#镜像状态字符对齐)。
 
 **起始版本：** 7
 
@@ -1627,7 +1634,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 ```
 
-设置文本段落在垂直方向的对齐方式。未通过该接口设置时，默认文本段落在垂直方向的对齐方式为TextVerticalAlign.BASELINE。 > **说明：** > > - 与[halfLeading](#halfleading)同时配置时，halfLeading不生效。 > > - 一个段落下使用同一字号必须同时设置行高[lineHeight](#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的 > 排版效果。属性字符串TextStyle中的SuperscriptStyle上下角标样式仅在TextVerticalAlign属性值为 > TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
+设置文本段落在垂直方向的对齐方式。未通过该接口设置时，默认文本段落在垂直方向的对齐方式为TextVerticalAlign.BASELINE。 &gt; **说明：** &gt; &gt; - 与[halfLeading](#halfleading)同时配置时，halfLeading不生效。 &gt; &gt; - 一个段落下使用同一字号必须同时设置行高[lineHeight](#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的 &gt; 排版效果。属性字符串TextStyle中的SuperscriptStyle上下角标样式仅在TextVerticalAlign属性值为 &gt; TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
 
 **起始版本：** 20
 

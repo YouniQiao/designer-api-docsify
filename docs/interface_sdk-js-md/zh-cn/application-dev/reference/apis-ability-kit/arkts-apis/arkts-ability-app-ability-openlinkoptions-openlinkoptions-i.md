@@ -11,6 +11,7 @@ OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#open
 ## 导入模块
 
 ```TypeScript
+import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## appLinkingOnly

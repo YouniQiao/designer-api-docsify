@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## changeAppCloudSwitch
@@ -97,7 +98,7 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 | accountId | string | 是 | 账号Id。 |
 | bundleName | string | 是 | 应用包名 |
 | status | boolean | 是 | 修改的应用云同步开关状态。true为打开；false为关闭。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步修改应用的端云文件同步开关之后。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步修改应用的端云文件同步开关之后。 |
 
 **错误码：**
 

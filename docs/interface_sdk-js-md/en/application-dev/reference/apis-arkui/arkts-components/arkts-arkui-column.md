@@ -8,7 +8,7 @@ The **Column** component lays out child components vertically. > **NOTE** > > If
 Column(options?: ColumnOptions)
 ```
 
-Creates a vertical linear layout container. You can set the spacing between child components. > **NOTE：**> > Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant > performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the > component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control > syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the > best practices, see > [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance) > .
+Creates a vertical linear layout container. You can set the spacing between child components. &gt; **NOTE：**&gt; &gt; Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant &gt; performance overhead. For performance purposes, you are advised to remove redundant nodes to simplify the &gt; component tree, use layout boundaries to reduce redundant layout calculations, properly apply rendering control &gt; syntax and layout component methods to minimize unnecessary re-renders and computations. For details about the &gt; best practices, see &gt; [Layout Optimization](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance) &gt; .
 
 **Since:** 7
 
@@ -58,8 +58,8 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Description |
 | --- | --- |
-| [ColumnOptions](arkts-arkui-columnoptions-i.md) | Sets the spacing between child components of the **Column** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
-| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ColumnOptions](arkts-arkui-columnoptions-i.md) | Sets the spacing between child components of the **Column** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Types
 

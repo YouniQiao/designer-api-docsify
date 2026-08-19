@@ -733,7 +733,7 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-通知无障碍服务可以关闭该辅助功能扩展服务。 此函数需要与注册预关闭接口 [on('preDisconnect')](#on_predisconnectpredisconnect)配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
+通知无障碍服务可以关闭该辅助功能扩展服务。 此函数需要与注册预关闭接口 [on('preDisconnect')](#onpredisconnect)配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
 
 **起始版本：** 23
 
@@ -816,7 +816,7 @@ Unregister accessibilityExtensionAbility disconnect callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | Indicates the callback function. |
 
 **错误码：**
 
@@ -870,7 +870,7 @@ export default class AccessibilityManager {
 }
 ```
 
-## off_preDisconnect('preDisconnect')
+## off('preDisconnect')
 
 ```TypeScript
 off(type: 'preDisconnect', callback?: Callback<void>): void
@@ -893,7 +893,7 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与 [on('preDisconnect')](#on_predisconnectpredisconnect)的 callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与 [on('preDisconnect')](#onpredisconnect)的 callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -966,7 +966,7 @@ Register accessibilityExtensionAbility disconnect callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | Indicates the callback function. |
 
 **错误码：**
 
@@ -1020,7 +1020,7 @@ export default class AccessibilityManager {
 }
 ```
 
-## on_preDisconnect('preDisconnect')
+## on('preDisconnect')
 
 ```TypeScript
 on(type: 'preDisconnect', callback: Callback<void>): void
@@ -1043,7 +1043,7 @@ on(type: 'preDisconnect', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，在辅助功能扩展服务即将关闭时回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在辅助功能扩展服务即将关闭时回调。 |
 
 **错误码：**
 

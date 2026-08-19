@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsTemplate

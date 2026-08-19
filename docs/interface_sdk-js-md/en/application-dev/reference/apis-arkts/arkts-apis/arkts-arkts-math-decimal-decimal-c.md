@@ -2184,7 +2184,7 @@ Configures the 'global' settings for this particular Decimal constructor.
 static sign(n: Value): double
 ```
 
-Return the sign of the passed value to the method. 1 if x > 0, -1 if x &lt; 0, 0 if x is 0, -0 if x is -0, NaN otherwise
+Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0, 0 if x is 0, -0 if x is -0, NaN otherwise
 
 **Since:** 23
 

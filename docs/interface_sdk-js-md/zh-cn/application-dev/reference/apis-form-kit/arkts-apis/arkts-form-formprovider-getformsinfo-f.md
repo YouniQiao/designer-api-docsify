@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getFormsInfo
@@ -26,7 +27,7 @@ function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filter | formInfo.FormInfoFilter | 是 | 卡片信息过滤器。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。返回查询到符合条件的卡片信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。返回查询到符合条件的卡片信息。 |
 
 **错误码：**
 
@@ -109,7 +110,7 @@ function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。返回查询到的卡片信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。返回查询到的卡片信息。 |
 
 **错误码：**
 

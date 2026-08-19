@@ -23,5 +23,3 @@ new (): Uint32Array
 
 | Type | Description |
 | --- | --- |
-| Uint32Array |  |
-

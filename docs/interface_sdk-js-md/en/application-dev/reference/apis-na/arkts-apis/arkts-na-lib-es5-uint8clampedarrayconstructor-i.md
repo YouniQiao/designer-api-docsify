@@ -29,8 +29,6 @@ new(length: number): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -75,8 +71,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Clamped
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md) |  |
-
 ## from
 
 ```TypeScript
@@ -99,8 +93,6 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md) |  |
-
 ## from
 
 ```TypeScript
@@ -125,8 +117,6 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md) |  |
-
 ## of
 
 ```TypeScript
@@ -149,8 +139,6 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-na-lib-es5-uint8clampedarray-i.md) |  |
-
 ## BYTES_PER_ELEMENT
 
 ```TypeScript

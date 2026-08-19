@@ -12,7 +12,7 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<int>): void
 ```
 
-Publishes a reminder. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) > permission is obtained. >
+Publishes a reminder. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt;
 
 **Since:** 23
 
@@ -27,7 +27,7 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reminderReq | ReminderRequest | Yes | Request used for publishing the reminder. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. After the agent-powered reminder is published, **err** is **undefined**, and **data** is the ID of the published reminder. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 function publishReminder(reminderReq: ReminderRequest): Promise<int>
 ```
 
-Publishes a reminder. This API uses a promise to return the result. > **NOTE：**> > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) > permission is obtained. >
+Publishes a reminder. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called only after the &gt; [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md) &gt; permission is obtained. &gt;
 
 **Since:** 23
 

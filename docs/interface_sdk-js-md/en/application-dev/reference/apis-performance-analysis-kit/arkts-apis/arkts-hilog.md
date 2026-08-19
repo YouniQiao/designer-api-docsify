@@ -34,8 +34,8 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 | [info](arkts-performanceanalysis-hilog-info-f.md) | Prints INFO logs. |
 | [info](arkts-performanceanalysis-hilog-info-f.md) | Prints INFO logs. |
 | [isLoggable](arkts-performanceanalysis-hilog-isloggable-f.md) | Checks whether logs are printable based on the specified service domain, log tag, and log level. |
-| [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md) | Sets the minimum log level of the current application process. You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function. > **NOTE：**> > This function does not take effect for debug applications. |
-| [setMinLogLevel](arkts-performanceanalysis-hilog-setminloglevel-f.md) | Sets the minimum log level. > **NOTE：**> > If the set log level is lower than the > [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect. > > This function does not take effect for debug applications. |
+| [setLogLevel](arkts-performanceanalysis-hilog-setloglevel-f.md) | Sets the minimum log level of the current application process. You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function. &gt; **NOTE：**&gt; &gt; This function does not take effect for debug applications. |
+| [setMinLogLevel](arkts-performanceanalysis-hilog-setminloglevel-f.md) | Sets the minimum log level. &gt; **NOTE：**&gt; &gt; If the set log level is lower than the &gt; [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect. &gt; &gt; This function does not take effect for debug applications. |
 | [setOutputType](arkts-performanceanalysis-hilog-setoutputtype-f.md) | Sets the output type of hilog. |
 | [setOutputTypeByDomainID](arkts-performanceanalysis-hilog-setoutputtypebydomainid-f.md) | Sets the output type for hilog for the domainID list. |
 | [warn](arkts-performanceanalysis-hilog-warn-f.md) | Prints WARN logs. |

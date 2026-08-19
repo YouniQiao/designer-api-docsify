@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

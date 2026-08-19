@@ -1,6 +1,6 @@
 # @ohos.bundle.distributedBundleManager
 
-The module provides APIs for managing distributed bundles. > **NOTE：**> > The APIs provided by this module are system APIs.
+The module provides APIs for managing distributed bundles. &gt; **NOTE：**&gt; &gt; The APIs provided by this module are system APIs.
 
 **Since:** 23
 

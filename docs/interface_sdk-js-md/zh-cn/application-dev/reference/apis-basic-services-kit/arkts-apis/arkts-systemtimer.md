@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -22,8 +23,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md) | 创建定时器，使用callback异步回调。 > **注意：** > > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造 > 成内存泄漏 |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md) | 创建定时器，使用Promise异步回调返回定时器的ID。 > **注意：** > > 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造 > 成内存泄漏 |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md) | 创建定时器，使用callback异步回调。 &gt; **注意：** &gt; &gt; 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造 &gt; 成内存泄漏 |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md) | 创建定时器，使用Promise异步回调返回定时器的ID。 &gt; **注意：** &gt; &gt; 需与[systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md)结合使用，否则会造 &gt; 成内存泄漏 |
 | [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md) | 销毁定时器，使用callback异步回调。 |
 | [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md) | 销毁定时器，使用Promise进行异步回调。 |
 | [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md) | 开启定时器，使用callback异步回调。 |

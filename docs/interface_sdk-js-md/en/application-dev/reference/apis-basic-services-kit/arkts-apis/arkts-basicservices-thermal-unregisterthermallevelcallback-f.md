@@ -24,7 +24,7 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | (Optional) Callback that returns no value. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | (Optional) Callback that returns no value. |
 
 **Error codes:**
 

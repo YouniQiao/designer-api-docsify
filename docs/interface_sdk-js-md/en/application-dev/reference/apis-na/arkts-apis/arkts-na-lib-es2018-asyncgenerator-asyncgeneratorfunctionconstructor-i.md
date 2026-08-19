@@ -31,8 +31,6 @@ Creates a new AsyncGenerator function.
 
 | Type | Description |
 | --- | --- |
-| [AsyncGeneratorFunction](arkts-na-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -55,8 +53,6 @@ Creates a new AsyncGenerator function.
 
 | Type | Description |
 | --- | --- |
-| [AsyncGeneratorFunction](arkts-na-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md) |  |
-
 ## length
 
 ```TypeScript

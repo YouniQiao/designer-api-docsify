@@ -29,8 +29,6 @@ new (byteLength: number): SharedArrayBuffer
 
 | Type | Description |
 | --- | --- |
-| [SharedArrayBuffer](arkts-na-lib-es2017-sharedmemory-sharedarraybuffer-i.md) |  |
-
 ## prototype
 
 ```TypeScript

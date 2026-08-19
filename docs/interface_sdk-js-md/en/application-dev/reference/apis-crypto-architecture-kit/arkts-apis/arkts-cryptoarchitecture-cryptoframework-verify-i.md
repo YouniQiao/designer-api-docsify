@@ -44,7 +44,7 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the value of the parameter obtained. |
+| string \| int | Returns the value of the parameter obtained. |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used to initialize the **Verify** instance. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -182,7 +182,7 @@ Initializes the **Verify** instance with a public key. This API returns the resu
 recover(signatureData: DataBlob): Promise<DataBlob | null>
 ```
 
-Recovers the original data from a signature. This API uses a promise to return the result. > **NOTE：**> > - Currently, only RSA is supported.
+Recovers the original data from a signature. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Currently, only RSA is supported.
 
 **Since:** 23
 
@@ -298,7 +298,7 @@ async function recoverByPromise() {
 recoverSync(signatureData: DataBlob): DataBlob | null
 ```
 
-Recovers the original data from a signature. This API returns the result synchronously. > **NOTE：**> > - Currently, only RSA is supported. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Recovers the original data from a signature. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; - Currently, only RSA is supported. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, [recover](#recover). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -318,7 +318,7 @@ Recovers the original data from a signature. This API returns the result synchro
 
 | Type | Description |
 | --- | --- |
-| DataBlob | Data restored. |
+| DataBlob \| null | Data restored. |
 
 **Error codes:**
 
@@ -489,7 +489,7 @@ Sets the specified parameter for the Verify instance. <br>Currently, only ML_DSA
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates the data for signature verification. This API uses an asynchronous callback to return the result. <br>This API can be called only after the [Verify](#verify) instance is initialized using [init](#init) or [initSync](#initsync). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > [verify](#verify) > after [init](#init)), depending on > the data volume. > > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > > For details about the sample code for calling **update()** multiple times in signature verification, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates the data for signature verification. This API uses an asynchronous callback to return the result. <br>This API can be called only after the [Verify](#verify) instance is initialized using [init](#init) or [initSync](#initsync). &gt; **NOTE：**&gt; &gt; You can call **update** multiple times or do not use **update** (call &gt; [verify](#verify) &gt; after [init](#init)), depending on &gt; the data volume. &gt; &gt; The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time. &gt; &gt; For details about the sample code for calling **update()** multiple times in signature verification, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar. &gt; &gt; **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in &gt; data. &gt; &gt; If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is &gt; not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
 
@@ -506,7 +506,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Data to pass in. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -524,7 +524,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 update(data: DataBlob): Promise<void>
 ```
 
-Updates the data for signature verification. This API uses a promise to return the result. <br>This API can be called only after the [Verify](#verify) instance is initialized using [init()](#init). > **NOTE：**> > You can call **update** multiple times or do not use **update** (call > [verify](#verify) after > [init](#init)), depending on the data volume. > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a > large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This > prevents too much memory from being requested at a time. > For details about the sample code for calling **update()** multiple times in signature verification, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in > data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is > not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+Updates the data for signature verification. This API uses a promise to return the result. <br>This API can be called only after the [Verify](#verify) instance is initialized using [init()](#init). &gt; **NOTE：**&gt; &gt; You can call **update** multiple times or do not use **update** (call &gt; [verify](#verify) after &gt; [init](#init)), depending on the data volume. &gt; The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a &gt; large amount of data, you are advised to call **update()** multiple times to pass in the data by segment. This &gt; prevents too much memory from being requested at a time. &gt; For details about the sample code for calling **update()** multiple times in signature verification, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar. &gt; **OnlyVerify** cannot be used with **update()**. If **OnlyVerify** is specified, use **verify()** to pass in &gt; data. &gt; If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is &gt; not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 23
 
@@ -564,7 +564,7 @@ Updates the data for signature verification. This API uses a promise to return t
 updateSync(data: DataBlob): void
 ```
 
-Updates the data for signature verification. This API returns the result synchronously. <br>This API can be called only after the [Verify](#verify) instance is initialized by using [initSync()](#initsync). > **NOTE：**> > You can call **updateSync** multiple times or do not use **updateSync** (call > [verifySync](#verifysync) after [initSync](#initsync)), > depending on the data volume. > The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is > a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. > This prevents too much memory from being requested at a time. > For details about the sample code for calling **updateSync** multiple times in signature verification, see > Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) > . The operations of other algorithms are similar. > **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass > in data. > If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync** > is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+Updates the data for signature verification. This API returns the result synchronously. <br>This API can be called only after the [Verify](#verify) instance is initialized by using [initSync()](#initsync). &gt; **NOTE：**&gt; &gt; You can call **updateSync** multiple times or do not use **updateSync** (call &gt; [verifySync](#verifysync) after [initSync](#initsync)), &gt; depending on the data volume. &gt; The amount of the data to be passed in by **updateSync** (one-time or accumulative) is not limited. If there is &gt; a large amount of data, you are advised to call **updateSync** multiple times to pass in the data by segment. &gt; This prevents too much memory from being requested at a time. &gt; For details about the sample code for calling **updateSync** multiple times in signature verification, see &gt; Signing and Signature Verification by Segment with an RSA Key Pair (PKCS1 Mode) &gt; . The operations of other algorithms are similar. &gt; **OnlyVerify** cannot be used with **updateSync()**. If **OnlyVerify** is specified, use **verifySync()** to pass &gt; in data. &gt; If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **updateSync** &gt; is not supported. If **updateSync** is called in this case, **ERR_CRYPTO_OPERATION** will be returned. <br><br>**NOTE：**<br>It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -614,7 +614,7 @@ Verifies the message, including the update data. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Data to be verified. |
 | signatureData | DataBlob | Yes | The signature data. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -650,7 +650,7 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Data to pass in. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 | signatureData | DataBlob | Yes | Signature data. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the signature verification is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 

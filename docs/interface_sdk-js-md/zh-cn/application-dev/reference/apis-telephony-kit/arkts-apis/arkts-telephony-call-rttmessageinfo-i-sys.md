@@ -13,6 +13,7 @@ rtt通话消息
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## callId

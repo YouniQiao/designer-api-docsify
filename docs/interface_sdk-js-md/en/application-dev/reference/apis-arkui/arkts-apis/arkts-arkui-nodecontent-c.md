@@ -1,6 +1,6 @@
 # NodeContent
 
-**NodeContent** is the ArkUI-provided manager for ContentSlot. > **NOTE：**> > - **NodeContent** objects do not support JSON serialization.
+**NodeContent** is the ArkUI-provided manager for ContentSlot. &gt; **NOTE：**&gt; &gt; - **NodeContent** objects do not support JSON serialization.
 
 **Inheritance/Implementation:** NodeContent extends Content
 

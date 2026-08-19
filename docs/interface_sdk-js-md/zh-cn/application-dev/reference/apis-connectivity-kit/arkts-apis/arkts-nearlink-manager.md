@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { manager } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

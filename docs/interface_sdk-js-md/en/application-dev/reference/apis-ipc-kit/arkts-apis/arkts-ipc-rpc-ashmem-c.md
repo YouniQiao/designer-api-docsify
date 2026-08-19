@@ -20,7 +20,7 @@ import { rpc } from '@kit.IPCKit';
 closeAshmem(): void
 ```
 
-Closes this **Ashmem** object. > **NOTE：**> > Before closing the **Ashmem** object, you need to remove the address mapping.
+Closes this **Ashmem** object. &gt; **NOTE：**&gt; &gt; Before closing the **Ashmem** object, you need to remove the address mapping.
 
 **Since:** 23
 
@@ -520,7 +520,7 @@ try {
 readAshmem(size: number, offset: number): number[]
 ```
 
-Reads data from the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+Reads data from the shared file associated with this **Ashmem** object. &gt; **NOTE：**&gt; &gt; - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 9
 
@@ -579,7 +579,7 @@ try {
 readDataFromAshmem(size: int, offset: int): ArrayBuffer
 ```
 
-Reads data from the shared file associated with this **Ashmem** object. > **NOTE：**> > Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+Reads data from the shared file associated with this **Ashmem** object. &gt; **NOTE：**&gt; &gt; Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 23
 
@@ -640,7 +640,7 @@ try {
 readFromAshmem(size: number, offset: number): number[]
 ```
 
-Reads data from the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+Reads data from the shared file associated with this **Ashmem** object. &gt; **NOTE：**&gt; &gt; - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 8
 
@@ -809,7 +809,7 @@ try {
 writeAshmem(buf: number[], size: number, offset: number): void
 ```
 
-Writes data to the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+Writes data to the shared file associated with this **Ashmem** object. &gt; **NOTE：**&gt; &gt; - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 9
 
@@ -861,7 +861,7 @@ try {
 writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 ```
 
-Writes data to the shared file associated with this **Ashmem** object. > **NOTE：**> > Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+Writes data to the shared file associated with this **Ashmem** object. &gt; **NOTE：**&gt; &gt; Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 23
 
@@ -914,7 +914,7 @@ try {
 writeToAshmem(buf: number[], size: number, offset: number): boolean
 ```
 
-Writes data to the shared file associated with this **Ashmem** object. > **NOTE：**> > - Before writing an **Ashmem** object, you need to call > [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
+Writes data to the shared file associated with this **Ashmem** object. &gt; **NOTE：**&gt; &gt; - Before writing an **Ashmem** object, you need to call &gt; [mapReadWriteAshmem](#mapreadwriteashmem) for mapping.
 
 **Since:** 8
 

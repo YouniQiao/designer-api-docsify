@@ -98,7 +98,7 @@ Creates a MediaAlbumChangeRequest instance.
 
 | Type | Description |
 | --- | --- |
-| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) | Returns a MediaAlbumChangeRequest instance. if the operation fails, returns null. |
+| [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) \| null | Returns a MediaAlbumChangeRequest instance. if the operation fails, returns null. |
 
 **Error codes:**
 
@@ -233,7 +233,7 @@ async function example(context: Context, albumUri: string) {
 deleteAssets(assets: Array<PhotoAsset>): void
 ```
 
-Permanently deletes assets from the trash. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Permanently deletes assets from the trash. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 23
 
@@ -302,7 +302,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 deleteAssetsWithUri(assetUris: Array<string>): void
 ```
 
-Permanently deletes assets from the trash. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
+Permanently deletes assets from the trash. &gt; **NOTE：**&gt; &gt; This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this &gt; operation.
 
 **Since:** 23
 

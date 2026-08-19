@@ -6,7 +6,7 @@
 import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
-## off_cooperation('cooperation')
+## off('cooperation')
 
 ```TypeScript
 function off(type: 'cooperation', callback?: AsyncCallback<void>): void
@@ -18,7 +18,7 @@ Deregisters the listener for screen hopping status changes. This API uses an asy
 
 **Deprecated since:** 23
 
-**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-offcooperate-f-sys.md#off_cooperatecooperate)
+**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-offcooperate-f-sys.md#offcooperate)
 
 <!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void-End-->
 
@@ -31,7 +31,7 @@ Deregisters the listener for screen hopping status changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cooperation' | Yes | Event type. The value is **cooperation**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is undefined. If this parameter is not specified, all callbacks registered by the current application are unregistered. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is undefined. If this parameter is not specified, all callbacks registered by the current application are unregistered. |
 
 **Error codes:**
 

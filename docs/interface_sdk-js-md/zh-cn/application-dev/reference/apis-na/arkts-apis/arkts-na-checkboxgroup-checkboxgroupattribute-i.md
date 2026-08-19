@@ -35,8 +35,6 @@ attributeModifier(
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## checkboxShape
 
 ```TypeScript
@@ -59,8 +57,6 @@ checkboxShape(value: CheckBoxShape | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -83,8 +79,6 @@ contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## mark
 
 ```TypeScript
@@ -107,8 +101,6 @@ mark(value: MarkStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -131,8 +123,6 @@ onChange(callback: OnCheckboxGroupChangeCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectAll
 
 ```TypeScript
@@ -155,8 +145,6 @@ selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedColor
 
 ```TypeScript
@@ -179,8 +167,6 @@ selectedColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## unselectedColor
 
 ```TypeScript
@@ -203,8 +189,6 @@ unselectedColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

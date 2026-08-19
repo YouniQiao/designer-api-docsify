@@ -24,7 +24,7 @@ Subscribe to ambient light sensor data once, {@code SensorId.AMBIENT_LIGHT}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | Yes | callback ambient light data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;LightResponse&gt; | Yes | callback ambient light data. |
 
 **Error codes:**
 

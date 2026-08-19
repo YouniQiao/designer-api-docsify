@@ -1,6 +1,6 @@
 # @ohos.enterprise.deviceInfo
 
-This module provides APIs for enterprise device information management, including obtaining device serial numbers, device names, and SIM card information. Enterprise administrators can use this module to query device details, enabling unified management and tracking of device assets. **Use cases:** - Device asset management and tracking - Enterprise device compliance check - Device information collection and statistics - Fault diagnosis and device identification > **NOTE：**> > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+This module provides APIs for enterprise device information management, including obtaining device serial numbers, device names, and SIM card information. Enterprise administrators can use this module to query device details, enabling unified management and tracking of device assets. **Use cases:** - Device asset management and tracking - Enterprise device compliance check - Device information collection and statistics - Fault diagnosis and device identification &gt; **NOTE：**&gt; &gt; The APIs of this module can be called only by a device administrator application that is enabled. For details, see &gt; [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 10
 

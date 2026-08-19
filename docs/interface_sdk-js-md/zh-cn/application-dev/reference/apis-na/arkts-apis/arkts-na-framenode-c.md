@@ -32,7 +32,7 @@ addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-reactivecomponentcontent-c.md) | 是 | FrameNode节点中显示的组件内容。<br>**起始版本：** 23 |
+| content | [ComponentContent](arkts-na-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-na-componentcontent-reactivecomponentcontent-c.md) | 是 | FrameNode节点中显示的组件内容。<br>**起始版本：** 23 |
 
 **错误码：**
 
@@ -386,7 +386,7 @@ static createFrameNodes(uiContext: UIContext, count: int): FrameNode[]
 dispose(): void
 ```
 
-立即解除当前FrameNode对象对实体FrameNode节点的引用关系。 > **说明：** > > - FrameNode对象调用dispose后，由于不对应任何实体FrameNode节点，在调用部分查询接口([getMeasuredSize](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getmeasuredsize)、 > [getLayoutPosition](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getlayoutposition))的时候会导致应用出现jscrash。 > > - 通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)可以判断当前FrameNode是否对应一个实体FrameNode节点。当UniqueId大于0时表示该对象对应一个实体 > FrameNode节点。
+立即解除当前FrameNode对象对实体FrameNode节点的引用关系。 &gt; **说明：** &gt; &gt; - FrameNode对象调用dispose后，由于不对应任何实体FrameNode节点，在调用部分查询接口([getMeasuredSize](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getmeasuredsize)、 &gt; [getLayoutPosition](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getlayoutposition))的时候会导致应用出现jscrash。 &gt; &gt; - 通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getuniqueid)可以判断当前FrameNode是否对应一个实体FrameNode节点。当UniqueId大于0时表示该对象对应一个实体 &gt; FrameNode节点。
 
 **起始版本：** 23
 
@@ -443,7 +443,7 @@ getChild(index: int, expandMode?: ExpandMode | undefined): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode. When the required node does not exist, returns null. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode. When the required node does not exist, returns null. |
 
 ## getChildrenCount
 
@@ -573,7 +573,7 @@ getFirstChild(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode, which is first child of the current FrameNode. If current FrameNode does not have child node, returns null. If current FrameNode does not have child node, returns null. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode, which is first child of the current FrameNode. If current FrameNode does not have child node, returns null. If current FrameNode does not have child node, returns null. |
 
 ## getFirstChildIndexWithoutExpand
 
@@ -625,7 +625,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | The first child node with the specified ID, or null if not found. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | The first child node with the specified ID, or null if not found. |
 
 ## getFrameNodeByUniqueId
 
@@ -655,7 +655,7 @@ getFrameNodeByUniqueId(id: int): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getGlobalPositionOnDisplay
 
@@ -709,7 +709,7 @@ getId(): string
 getInspectorInfo(): Object
 ```
 
-获取节点的结构信息，该信息和DevEco Studio内置<!--RP1-->ArkUI Inspector<!--RP1End-->工具里面的一致。 > **说明：** > > getInspectorInfo接口用于获取所有节点的信息，作为调试接口使用，频繁调用会导致性能下降。
+获取节点的结构信息，该信息和DevEco Studio内置<!--RP1-->ArkUI Inspector<!--RP1End-->工具里面的一致。 &gt; **说明：** &gt; &gt; getInspectorInfo接口用于获取所有节点的信息，作为调试接口使用，频繁调用会导致性能下降。
 
 **起始版本：** 23
 
@@ -755,7 +755,7 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 
 | 类型 | 说明 |
 | --- | --- |
-| [InteractionEventBindingInfo](../../apis-arkui/arkts-apis/arkts-arkui-framenode-interactioneventbindinginfo-i.md) | Returns one InteractionEventBindingInfo object indicating the event binding details if any interaction events binded on current node, returns undefined if no one binded on. |
+| [InteractionEventBindingInfo](../../apis-arkui/arkts-apis/arkts-arkui-framenode-interactioneventbindinginfo-i.md) \| undefined | Returns one InteractionEventBindingInfo object indicating the event binding details if any interaction events binded on current node, returns undefined if no one binded on. |
 
 ## getLastChildIndexWithoutExpand
 
@@ -847,7 +847,7 @@ getNextSibling(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode. If current FrameNode does not have next sibling node, returns null. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode. If current FrameNode does not have next sibling node, returns null. |
 
 ## getNodePropertyValue
 
@@ -947,7 +947,7 @@ getParent(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode. If current FrameNode does not have parent node, returns null. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode. If current FrameNode does not have parent node, returns null. |
 
 ## getPositionToParent
 
@@ -1107,7 +1107,7 @@ getPreviousSibling(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode. If current FrameNode does not have previous sibling node, returns null. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) \| null | Returns a FrameNode. If current FrameNode does not have previous sibling node, returns null. |
 
 ## getRenderNode
 
@@ -1115,7 +1115,7 @@ getPreviousSibling(): FrameNode | null
 getRenderNode(): RenderNode | null
 ```
 
-获取FrameNode中持有的[RenderNode](arkts-na-rendernode-c.md)。
+获取FrameNode中持有的[RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md)。
 
 **起始版本：** 23
 
@@ -1131,7 +1131,7 @@ getRenderNode(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode inside the FrameNode, or null if not contained. |
+| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) \| null | Returns a RenderNode inside the FrameNode, or null if not contained. |
 
 ## getUniqueId
 
@@ -1517,7 +1517,7 @@ isTransferred(): boolean
 isVisible(): boolean
 ```
 
-获取节点是否可见。 > **说明：** > > 根据组件设置的visibility属性值判断该节点是否可见。
+获取节点是否可见。 &gt; **说明：** &gt; &gt; 根据组件设置的visibility属性值判断该节点是否可见。
 
 **起始版本：** 23
 
@@ -1809,7 +1809,7 @@ reuse(): void
 setCrossLanguageOptions(value: CrossLanguageOptions): void
 ```
 
-设置当前FrameNode的跨ArkTS语言访问选项。例如ArkTS语言创建的节点，设置该节点是否可通过非ArkTS语言进行属性设置，从API版本26.0.0开始支持设置是否可通过非ArkTS语言进行组件树操作。当前 FrameNode如果不可修改或不可设置跨ArkTS语言访问选项，抛出异常信息。 > **说明：** > > 当前仅支持Scroll, > Swiper， > List， > ListItem， > ListItemGroup， > WaterFlow， > FlowItem， > Grid， > GridItem， > TextInput， > TextArea， > Column， > Row， > Stack， > Flex， > RelativeContainer， > Progress， > LoadingProgress， > Image， > Button， > CheckBox， > Radio， > Slider， > Toggle， > XComponent类型的 > [TypedFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md)设置跨ArkTS语言访问选项。
+设置当前FrameNode的跨ArkTS语言访问选项。例如ArkTS语言创建的节点，设置该节点是否可通过非ArkTS语言进行属性设置，从API版本26.0.0开始支持设置是否可通过非ArkTS语言进行组件树操作。当前 FrameNode如果不可修改或不可设置跨ArkTS语言访问选项，抛出异常信息。 &gt; **说明：** &gt; &gt; 当前仅支持Scroll, &gt; Swiper， &gt; List， &gt; ListItem， &gt; ListItemGroup， &gt; WaterFlow， &gt; FlowItem， &gt; Grid， &gt; GridItem， &gt; TextInput， &gt; TextArea， &gt; Column， &gt; Row， &gt; Stack， &gt; Flex， &gt; RelativeContainer， &gt; Progress， &gt; LoadingProgress， &gt; Image， &gt; Button， &gt; CheckBox， &gt; Radio， &gt; Slider， &gt; Toggle， &gt; XComponent类型的 &gt; [TypedFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md)设置跨ArkTS语言访问选项。
 
 **起始版本：** 23
 

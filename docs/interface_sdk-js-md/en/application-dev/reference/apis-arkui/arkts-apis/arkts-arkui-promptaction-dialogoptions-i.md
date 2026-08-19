@@ -1,8 +1,8 @@
 # DialogOptions
 
-Extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) to provide enhanced customization capabilities for the dialog box.
+Extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md) to provide enhanced customization capabilities for the dialog box.
 
-**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
+**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md)
 
 **Since:** 18
 
@@ -66,7 +66,7 @@ borderColor?: DialogOptionsBorderColor
 
 Border color of the dialog box. <br>Default value: **Color.Black**. <br> **borderColor** must be used with **borderWidth** in pairs.
 
-**Type:** [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md)
+**Type:** [DialogOptionsBorderColor](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsbordercolor-t.md)
 
 **Since:** 18
 
@@ -86,7 +86,7 @@ borderStyle?: DialogOptionsBorderStyle
 
 Border style of the dialog box. <br>Default value: **BorderStyle.Solid**. <br> **borderStyle** must be used with **borderWidth** in pairs.
 
-**Type:** [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md)
+**Type:** [DialogOptionsBorderStyle](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsborderstyle-t.md)
 
 **Since:** 18
 
@@ -106,7 +106,7 @@ borderWidth?: DialogOptionsBorderWidth
 
 Border width of the dialog box. <br>You can set the width for all four sides or set separate widths for individual sides. <br>Default value: **0**. <br>Unit: vp. <br> When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. <br>If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
-**Type:** [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md)
+**Type:** [DialogOptionsBorderWidth](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsborderwidth-t.md)
 
 **Since:** 18
 
@@ -126,7 +126,7 @@ cornerRadius?: DialogOptionsCornerRadius
 
 Background corner radius of the dialog box.<br>You can set separate radii for the four corners. <br>Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }** <br> The radius of the rounded corners is subject to the component size. Its maximum value is half of the component width or height. If the value is negative, the default value is used. <br> When set to a percentage, the value defines the radius as a percentage of the parent dialog box's width or height.
 
-**Type:** [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md)
+**Type:** [DialogOptionsCornerRadius](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionscornerradius-t.md)
 
 **Since:** 18
 
@@ -166,7 +166,7 @@ shadow?: DialogOptionsShadow
 
 Shadow of the dialog box. <br>Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
-**Type:** [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md)
+**Type:** [DialogOptionsShadow](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsshadow-t.md)
 
 **Since:** 18
 

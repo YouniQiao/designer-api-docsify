@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## symlinkSync
@@ -11,7 +14,7 @@
 declare function symlinkSync(target: string, srcPath: string): void
 ```
 
-以同步的方法基于文件路径创建符号链接。 > **说明：** > > 从API version 11开始，不支持三方应用使用。
+以同步的方法基于文件路径创建符号链接。 &gt; **说明：** &gt; &gt; 从API version 11开始，不支持三方应用使用。
 
 **起始版本：** 9
 

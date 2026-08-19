@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
-## on_abilityFirstFrameState('abilityFirstFrameState')
+## on('abilityFirstFrameState')
 
 ```TypeScript
 function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string): void

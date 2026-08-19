@@ -80,7 +80,7 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
+| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
 
 **Examples**
 
@@ -274,7 +274,7 @@ Called when a client is disconnected from this ServiceExtensionAbility. This API
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; \| undefined | Promise that returns no value. |
 
 ## onDump
 

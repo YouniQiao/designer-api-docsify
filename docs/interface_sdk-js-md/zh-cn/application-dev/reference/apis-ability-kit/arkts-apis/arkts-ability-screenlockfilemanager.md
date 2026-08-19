@@ -1,6 +1,6 @@
 # @ohos.ability.screenLockFileManager(锁屏敏感数据管理)
 
-本模块提供锁屏下应用敏感数据保护的能力，支持申请和释放锁屏下应用敏感数据访问权限，以及查询敏感数据密钥的状态。当敏感数据密钥的引用计数归零，且屏幕被锁定达到系统配置的时长阈值后，密钥会被销毁，此时无法对该数据进行操作。这些密钥只有在屏 幕解锁后才能恢复。通过调用本模块的[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md)接口，可以防止密钥在屏幕被锁定达到系统配置的时长阈值后被销毁。 > **说明：** > > - 应用开启锁屏下敏感数据保护功能，需在[requestPermissions](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)中配置权限ohos.permission.PROTECT_SCREEN_LOCK_DATA。
+本模块提供锁屏下应用敏感数据保护的能力，支持申请和释放锁屏下应用敏感数据访问权限，以及查询敏感数据密钥的状态。当敏感数据密钥的引用计数归零，且屏幕被锁定达到系统配置的时长阈值后，密钥会被销毁，此时无法对该数据进行操作。这些密钥只有在屏 幕解锁后才能恢复。通过调用本模块的[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md)接口，可以防止密钥在屏幕被锁定达到系统配置的时长阈值后被销毁。 &gt; **说明：** &gt; &gt; - 应用开启锁屏下敏感数据保护功能，需在[requestPermissions](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)中配置权限ohos.permission.PROTECT_SCREEN_LOCK_DATA。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

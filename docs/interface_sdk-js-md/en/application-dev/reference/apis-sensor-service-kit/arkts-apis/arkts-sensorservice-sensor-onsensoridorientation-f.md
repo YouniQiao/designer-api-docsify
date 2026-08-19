@@ -13,7 +13,7 @@ function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,
     options?: Options): void
 ```
 
-Subscribes to data of the orientation sensor. > **NOTE：**> > Applications or services invoking this API can prompt users to use figure-8 calibration to improve the accuracy > of the direction sensor. The sensor has a theoretical error of ±5 degrees, but the specific precision may vary > depending on different driver implementations and algorithmic designs.
+Subscribes to data of the orientation sensor. &gt; **NOTE：**&gt; &gt; Applications or services invoking this API can prompt users to use figure-8 calibration to improve the accuracy &gt; of the direction sensor. The sensor has a theoretical error of ±5 degrees, but the specific precision may vary &gt; depending on different driver implementations and algorithmic designs.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ Subscribes to data of the orientation sensor. > **NOTE：**> > Applications or s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorId.ORIENTATION | Yes | Sensor type. The value is fixed at **SensorId.ORIENTATION**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | Yes | Callback used to report the sensor data, which is a **OrientationResponse** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | Yes | Callback used to report the sensor data, which is a **OrientationResponse** object. |
 | options | Options | No | List of optional parameters. This parameter is used to set the data reporting frequency. The default value is 200,000,000 ns. |
 
 **Error codes:**

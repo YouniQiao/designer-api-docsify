@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## createConnection

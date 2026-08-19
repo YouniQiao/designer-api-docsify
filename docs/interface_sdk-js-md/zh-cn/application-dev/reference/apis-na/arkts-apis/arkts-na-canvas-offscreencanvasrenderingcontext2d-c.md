@@ -92,5 +92,5 @@ transferToImageBitmap(): ImageBitmap | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageBitmap](arkts-na-canvas-imagebitmap-c.md) | 存储离屏画布上渲染的像素数据。 |
+| [ImageBitmap](arkts-na-canvas-imagebitmap-c.md) \| undefined | 存储离屏画布上渲染的像素数据。 |
 

@@ -12,7 +12,7 @@ import { accountManager } from '@kit.MDMKit';
 function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>
 ```
 
-Creates a normal system account. A maximum of two normal system accounts ( [osAccount.OsAccountType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md)) can be created. > **NOTE：**> > The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application > main thread must wait for the asynchronous return of this API. > > Creating a system account has a significant impact on device performance. This API is supported only on phones > and tablets with 12 GB or more of RAM.
+Creates a normal system account. A maximum of two normal system accounts ( [osAccount.OsAccountType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md)) can be created. &gt; **NOTE：**&gt; &gt; The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application &gt; main thread must wait for the asynchronous return of this API. &gt; &gt; Creating a system account has a significant impact on device performance. This API is supported only on phones &gt; and tablets with 12 GB or more of RAM.
 
 **Since:** 26.0.0
 

@@ -32,7 +32,7 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouteMapConfig](arkts-na-navdestination-routemapconfig-i.md) |  |
+| [RouteMapConfig](arkts-na-navdestination-routemapconfig-i.md) \| undefined |  |
 
 ## mode
 

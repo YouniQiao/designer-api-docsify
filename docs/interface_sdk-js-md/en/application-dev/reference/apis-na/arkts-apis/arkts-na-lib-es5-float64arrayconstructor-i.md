@@ -29,8 +29,6 @@ new(length: number): Float64Array
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-
 ## constructor
 
 ```TypeScript
@@ -51,8 +49,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Float64Array
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-
 ## constructor
 
 ```TypeScript
@@ -75,8 +71,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Float64Array
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-
 ## from
 
 ```TypeScript
@@ -99,8 +93,6 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-
 ## from
 
 ```TypeScript
@@ -125,8 +117,6 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-
 ## of
 
 ```TypeScript
@@ -149,8 +139,6 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-
 ## BYTES_PER_ELEMENT
 
 ```TypeScript

@@ -6,7 +6,7 @@
 import { errorManager } from '@kit.AbilityKit';
 ```
 
-## on_loopObserver('loopObserver')
+## on('loopObserver')
 
 ```TypeScript
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void

@@ -76,7 +76,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 onCreate(want: Want): void
 ```
 
-Called when an AppServiceExtensionAbility instance is created. Applications can perform initialization operations, such as registering common event listeners, in this callback. > **NOTE：**> > If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked > again when the instance is started or connected.
+Called when an AppServiceExtensionAbility instance is created. Applications can perform initialization operations, such as registering common event listeners, in this callback. &gt; **NOTE：**&gt; &gt; If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked &gt; again when the instance is started or connected.
 
 **Since:** 23
 

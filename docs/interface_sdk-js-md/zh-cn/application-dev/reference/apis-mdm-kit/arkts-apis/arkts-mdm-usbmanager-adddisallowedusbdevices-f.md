@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## addDisallowedUsbDevices
@@ -11,7 +12,7 @@
 function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void
 ```
 
-添加禁止使用的USB设备类型。 **使用场景**： - 企业安全管理场景，需要禁用特定类型的USB设备 - 防止数据泄露：禁用USB存储设备类型 - 设备管理员需要根据安全策略，禁止使用某些类型的USB设备 - 配合[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md)接口实现USB设备类型的动态管理 > **说明：** > > 推荐使用[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口。 > 以下情况下，调用本接口会报策略冲突： 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备USB能力。 2. 已经通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md)接口添加了USB设备可用名单。 3. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口禁用了某用户USB存储设备写入能力。 4. 已经通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口添加了禁止使用的USB设备类型。
+添加禁止使用的USB设备类型。 **使用场景**： - 企业安全管理场景，需要禁用特定类型的USB设备 - 防止数据泄露：禁用USB存储设备类型 - 设备管理员需要根据安全策略，禁止使用某些类型的USB设备 - 配合[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md)接口实现USB设备类型的动态管理 &gt; **说明：** &gt; &gt; 推荐使用[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口。 &gt; 以下情况下，调用本接口会报策略冲突： 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备USB能力。 2. 已经通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md)接口添加了USB设备可用名单。 3. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口禁用了某用户USB存储设备写入能力。 4. 已经通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口添加了禁止使用的USB设备类型。
 
 **起始版本：** 14
 

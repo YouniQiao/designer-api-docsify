@@ -36,7 +36,7 @@ offAsyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 否 | 监听事件的回调。 |
 
 **错误码：**
 
@@ -68,7 +68,7 @@ offSyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 否 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 否 | 监听事件的回调。 |
 
 **错误码：**
 
@@ -100,7 +100,7 @@ onAsyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 是 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 是 | 监听事件的回调。 |
 
 **错误码：**
 
@@ -132,7 +132,7 @@ onSyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 是 | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | 是 | 监听事件的回调。 |
 
 **错误码：**
 

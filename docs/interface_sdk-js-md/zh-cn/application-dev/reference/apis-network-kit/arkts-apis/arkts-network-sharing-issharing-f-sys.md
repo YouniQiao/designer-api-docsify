@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## isSharing
@@ -27,7 +28,7 @@ function isSharing(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回 true 代表网络共享中。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回 true 代表网络共享中。 |
 
 **错误码：**
 

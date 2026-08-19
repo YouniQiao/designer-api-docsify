@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## dialCall
@@ -29,7 +30,7 @@ function dialCall(phoneNumber: string, options: DialCallOptions, callback: Async
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
 | options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | 是 | 通话参数，携带呼叫的其他配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以callback形式异步返回拨打电话的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以callback形式异步返回拨打电话的结果。 |
 
 **错误码：**
 
@@ -153,7 +154,7 @@ function dialCall(phoneNumber: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以callback形式异步返回拨打电话的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以callback形式异步返回拨打电话的结果。 |
 
 **错误码：**
 

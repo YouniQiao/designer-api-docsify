@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function setNetExtAttributeSync(netHandle: NetHandle, netExtAttribute: string): void
 ```
 
-Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API returns the result synchronously. > **NOTE：**> > Currently, this API is available only for PCs.
+Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; Currently, this API is available only for PCs.
 
 **Since:** 20
 

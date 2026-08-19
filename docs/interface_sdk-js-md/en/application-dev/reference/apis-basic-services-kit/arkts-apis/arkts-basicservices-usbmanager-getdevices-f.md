@@ -13,7 +13,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function getDevices(): Array<Readonly<USBDevice>>
 ```
 
-Obtains the list of USB devices connected to the host. > **NOTE：**> > Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they > request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) > and then initiate a control transfer to obtain it.
+Obtains the list of USB devices connected to the host. &gt; **NOTE：**&gt; &gt; Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they &gt; request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) &gt; and then initiate a control transfer to obtain it.
 
 **Since:** 23
 

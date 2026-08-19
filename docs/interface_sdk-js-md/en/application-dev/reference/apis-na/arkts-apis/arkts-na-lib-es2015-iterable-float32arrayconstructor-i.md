@@ -29,8 +29,6 @@ new (elements: Iterable<number>): Float32Array
 
 | Type | Description |
 | --- | --- |
-| Float32Array |  |
-
 ## from
 
 ```TypeScript
@@ -55,5 +53,3 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| Float32Array |  |
-

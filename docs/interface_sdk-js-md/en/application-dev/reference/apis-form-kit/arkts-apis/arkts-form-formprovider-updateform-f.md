@@ -16,7 +16,7 @@ function updateForm(
   ): void
 ```
 
-Updates a widget. This API uses an asynchronous callback to return the result. > **NOTE：**> > Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the > refreshed data must not exceed 10 MB, and the number of refreshed images must not exceed 20. For API version 19 > and earlier versions, the upper limit for image files is 5, with a per-image memory limit of 2 MB. Any images > that exceed these limits will display abnormally.
+Updates a widget. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the &gt; refreshed data must not exceed 10 MB, and the number of refreshed images must not exceed 20. For API version 19 &gt; and earlier versions, the upper limit for image files is 5, with a per-image memory limit of 2 MB. Any images &gt; that exceed these limits will display abnormally.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Updates a widget. This API uses an asynchronous callback to return the result. >
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget to update. |
 | formBindingData | formBindingData.FormBindingData | Yes | Data to be used for the update. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ try {
 function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>
 ```
 
-Updates a widget. This API uses a promise to return the result. > **NOTE：**> > Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the > refreshed data must not exceed 10 MB, and the number of refreshed images must not exceed 20. For API version 19 > and earlier versions, the upper limit for image files is 5, with a per-image memory limit of 2 MB. Any images > that exceed these limits will display abnormally.
+Updates a widget. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the &gt; refreshed data must not exceed 10 MB, and the number of refreshed images must not exceed 20. For API version 19 &gt; and earlier versions, the upper limit for image files is 5, with a per-image memory limit of 2 MB. Any images &gt; that exceed these limits will display abnormally.
 
 **Since:** 23
 

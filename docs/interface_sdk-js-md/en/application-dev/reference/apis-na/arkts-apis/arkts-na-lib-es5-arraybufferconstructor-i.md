@@ -29,8 +29,6 @@ new(byteLength: number): ArrayBuffer
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer |  |
-
 ## isView
 
 ```TypeScript
@@ -51,8 +49,6 @@ isView(arg: any): arg is ArrayBufferView
 
 | Type | Description |
 | --- | --- |
-| arg is ArrayBufferView |  |
-
 ## prototype
 
 ```TypeScript

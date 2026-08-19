@@ -22,7 +22,7 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 onComplete: (reason: int, total: int) => void
 ```
 
-Callback used to return the query result statistics: (reason: int, total: int) => void
+Callback used to return the query result statistics: (reason: int, total: int) =&gt; void
 
 **Type:** (reason: int, total: int) =&gt; void
 
@@ -40,7 +40,7 @@ Callback used to return the query result statistics: (reason: int, total: int) =
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) => void.
+Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) =&gt; void.
 
 **Type:** (infos: SysEventInfo[]) =&gt; void
 

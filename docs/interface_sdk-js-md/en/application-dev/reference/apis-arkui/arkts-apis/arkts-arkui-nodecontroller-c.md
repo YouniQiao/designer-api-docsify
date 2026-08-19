@@ -1,6 +1,6 @@
 # NodeController
 
-The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component. > **NOTE：**> > - NodeController objects do not support JSON serialization.
+The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component. &gt; **NOTE：**&gt; &gt; - NodeController objects do not support JSON serialization.
 
 **Since:** 11
 
@@ -14,7 +14,7 @@ The **NodeController** module provides APIs for managing custom nodes, such as c
 aboutToAppear?(): void
 ```
 
-Called after the NodeContainer component bound to this **NodeController** instance is attached and about to appear. > **NOTE：**> > For details about the callback timing, see onAppear.
+Called after the NodeContainer component bound to this **NodeController** instance is attached and about to appear. &gt; **NOTE：**&gt; &gt; For details about the callback timing, see onAppear.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Called after the NodeContainer component bound to this **NodeController** instan
 aboutToDisappear?(): void
 ```
 
-Called when the NodeContainer component bound to this **NodeController** instance is destroyed. > **NOTE：**> > For details about the callback timing, see onDisAppear.
+Called when the NodeContainer component bound to this **NodeController** instance is destroyed. &gt; **NOTE：**&gt; &gt; For details about the callback timing, see onDisAppear.
 
 **Since:** 11
 
@@ -74,7 +74,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. > **NOTE：**> > NodeContainer does not support cross-instance reuse. If > NodeContainer is reused across instances and > [NodeController](#nodecontroller) of NodeContainer > triggers the [makeNode](#makenode) callback method, the > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) object in the input parameter may be undefined. In this case, you need > to check whether the [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) object in the input parameter is undefined, which > prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when > the input parameter is used.
+Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. &gt; **NOTE：**&gt; &gt; NodeContainer does not support cross-instance reuse. If &gt; NodeContainer is reused across instances and &gt; [NodeController](#nodecontroller) of NodeContainer &gt; triggers the [makeNode](#makenode) callback method, the &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) object in the input parameter may be undefined. In this case, you need &gt; to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) object in the input parameter is undefined, which &gt; prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when &gt; the input parameter is used.
 
 **Since:** 11
 
@@ -90,13 +90,13 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Yes | UI context of the bound NodeContainer component. |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context of the bound NodeContainer component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer]{ |
+| [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) \| null | FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer]{ |
 
 ## onAttach
 
@@ -104,7 +104,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 onAttach?(): void
 ```
 
-Called when the NodeContainer component bound to this **NodeController** instance is attached to the main node tree. > **NOTE：**> > For details about the callback timing, see onAttach.
+Called when the NodeContainer component bound to this **NodeController** instance is attached to the main node tree. &gt; **NOTE：**&gt; &gt; For details about the callback timing, see onAttach.
 
 **Since:** 18
 
@@ -146,7 +146,7 @@ Called after this **NodeController** instance is bound to a NodeContainer compon
 onDetach?(): void
 ```
 
-Called when the NodeContainer component bound to this **NodeController** instance is detached from the main node tree. > **NOTE：**> > For details about the callback timing, see onDetach.
+Called when the NodeContainer component bound to this **NodeController** instance is detached from the main node tree. &gt; **NOTE：**&gt; &gt; For details about the callback timing, see onDetach.
 
 **Since:** 18
 
@@ -260,7 +260,7 @@ Called when this **NodeController** instance is about to be unbound from a NodeC
 rebuild(): void
 ```
 
-Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makenode) API again to change child nodes. > **NOTE：**> > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound > NodeContainer. > > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for > example, during event callbacks, you can use the > [runScopedTask](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#runscopedtask) method of > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) to explicitly define the UI context at the time of the call.
+Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makenode) API again to change child nodes. &gt; **NOTE：**&gt; &gt; Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that &gt; the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound &gt; NodeContainer. &gt; &gt; In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for &gt; example, during event callbacks, you can use the &gt; [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) method of &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to explicitly define the UI context at the time of the call.
 
 **Since:** 11
 

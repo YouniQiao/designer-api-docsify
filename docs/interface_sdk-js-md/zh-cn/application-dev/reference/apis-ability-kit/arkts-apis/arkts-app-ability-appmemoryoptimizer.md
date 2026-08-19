@@ -13,6 +13,7 @@ appMemoryOptimizer提供应用内存优化的能力，包括释放指定文件�
 ## 导入模块
 
 ```TypeScript
+import { appMemoryOptimizer } from '@kit.AbilityKit';
 ```
 
 ## 汇总

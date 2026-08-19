@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ShowToastOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md)
+**替代接口：** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md)
 
 <!--Device-prompt-interface ShowToastOptions--><!--Device-prompt-interface ShowToastOptions-End-->
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { prompt } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -31,7 +33,7 @@ bottom?: string | number
 
 **废弃版本：** 9
 
-**替代接口：** [bottom](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#bottom)
+**替代接口：** [bottom](arkts-arkui-promptaction-showtoastoptions-i.md#bottom)
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
@@ -51,7 +53,7 @@ duration?: number
 
 **废弃版本：** 9
 
-**替代接口：** [duration](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#duration)
+**替代接口：** [duration](arkts-arkui-promptaction-showtoastoptions-i.md#duration)
 
 <!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
@@ -71,7 +73,7 @@ message: string
 
 **废弃版本：** 9
 
-**替代接口：** [message](../../apis-na/arkts-apis/arkts-na-promptaction-showtoastoptions-i.md#message)
+**替代接口：** [message](arkts-arkui-promptaction-showtoastoptions-i.md#message)
 
 <!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 

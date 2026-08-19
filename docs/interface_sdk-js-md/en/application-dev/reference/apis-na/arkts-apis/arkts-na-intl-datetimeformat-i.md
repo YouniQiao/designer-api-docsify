@@ -29,8 +29,6 @@ format(date?: Date | number): string
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## resolvedOptions
 
 ```TypeScript
@@ -45,5 +43,3 @@ resolvedOptions(): ResolvedDateTimeFormatOptions
 
 | Type | Description |
 | --- | --- |
-| ResolvedDateTimeFormatOptions |  |
-

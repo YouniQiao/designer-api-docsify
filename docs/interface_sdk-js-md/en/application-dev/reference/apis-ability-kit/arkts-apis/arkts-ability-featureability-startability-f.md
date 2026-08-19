@@ -12,7 +12,7 @@ import { featureAbility } from '@kit.AbilityKit';
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<number>): void
 ```
 
-Starts an ability. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+Starts an ability. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 6
 
@@ -27,7 +27,7 @@ Starts an ability. This API uses an asynchronous callback to return the result. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **0**; otherwise, **err** is a non-zero value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **0**; otherwise, **err** is a non-zero value. |
 
 **Examples**
 
@@ -66,7 +66,7 @@ featureAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<number>
 ```
 
-Starts an ability. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+Starts an ability. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; For details about the startup rules for the components in the FA model, see &gt; [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 6
 

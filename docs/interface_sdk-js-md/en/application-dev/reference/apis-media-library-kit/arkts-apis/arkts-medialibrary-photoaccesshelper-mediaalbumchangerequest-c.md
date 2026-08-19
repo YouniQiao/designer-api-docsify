@@ -77,7 +77,7 @@ Constructor used to initialize a new object.
 getAlbum(): Album
 ```
 
-Obtains the album in the current album change request. > **NOTE：**> > For the change request for creating an album, this API returns **null** before > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called > to apply the changes.
+Obtains the album in the current album change request. &gt; **NOTE：**&gt; &gt; For the change request for creating an album, this API returns **null** before &gt; [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called &gt; to apply the changes.
 
 **Since:** 11
 
@@ -116,7 +116,7 @@ Obtains the album in the current album change request.
 
 | Type | Description |
 | --- | --- |
-| Album | Returns the album, if the operation fails, returns null |
+| Album \| null | Returns the album, if the operation fails, returns null |
 
 **Error codes:**
 

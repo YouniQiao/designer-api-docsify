@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor
@@ -3826,7 +3827,7 @@ try {
 writeRawData(rawData: number[], size: number): void
 ```
 
-将原始数据写入MessageSequence对象。 > **说明：** > > 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。 > > 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
+将原始数据写入MessageSequence对象。 &gt; **说明：** &gt; &gt; 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。 &gt; &gt; 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
 
 **起始版本：** 9
 
@@ -3876,7 +3877,7 @@ try {
 writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 ```
 
-将原始数据写入MessageSequence对象。 > **说明：** > > 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。 > > 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
+将原始数据写入MessageSequence对象。 &gt; **说明：** &gt; &gt; 该接口是一次性接口，不允许在一次parcel通信中多次调用该接口。 &gt; &gt; 该接口在传输数据时，当数据量较大时（超过32KB），会使用共享内存传输数据，此时需注意selinux配置。
 
 **起始版本：** 23
 

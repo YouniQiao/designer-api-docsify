@@ -42,7 +42,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer |  |
+| ArrayBuffer \| undefined |  |
 
 ## marshalling
 
@@ -74,7 +74,7 @@ static marshalling(styledString: StyledString): ArrayBuffer | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer |  |
+| ArrayBuffer \| undefined |  |
 
 ## unmarshalling
 

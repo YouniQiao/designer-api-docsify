@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## buttonStyle
 
 ```TypeScript
@@ -58,8 +56,6 @@ buttonStyle(value: ButtonStyleMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -82,8 +78,6 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## controlSize
 
 ```TypeScript
@@ -106,8 +100,6 @@ controlSize(value: ControlSize | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fontColor
 
 ```TypeScript
@@ -130,8 +122,6 @@ fontColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fontFamily
 
 ```TypeScript
@@ -154,8 +144,6 @@ fontFamily(value: string | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fontSize
 
 ```TypeScript
@@ -178,8 +166,6 @@ fontSize(value: Length | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fontStyle
 
 ```TypeScript
@@ -202,8 +188,6 @@ fontStyle(value: FontStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fontWeight
 
 ```TypeScript
@@ -226,8 +210,6 @@ fontWeight(value: int | FontWeight | string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## labelStyle
 
 ```TypeScript
@@ -250,8 +232,6 @@ labelStyle(value: ButtonLabelStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## maxFontScale
 
 ```TypeScript
@@ -274,8 +254,6 @@ maxFontScale(scale: double | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## minFontScale
 
 ```TypeScript
@@ -298,8 +276,6 @@ minFontScale(scale: double | Resource | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## role
 
 ```TypeScript
@@ -322,8 +298,6 @@ role(value: ButtonRole | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setButtonOptions
 
 ```TypeScript
@@ -347,8 +321,6 @@ setButtonOptions(label: ResourceStr, options?: ButtonOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setButtonOptions
 
 ```TypeScript
@@ -371,8 +343,6 @@ setButtonOptions(options?: ButtonOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stateEffect
 
 ```TypeScript
@@ -395,8 +365,6 @@ stateEffect(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## type
 
 ```TypeScript
@@ -419,8 +387,6 @@ type(value: ButtonType | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # @ohos.bundle.distributedBundleManager
 
-本模块提供分布式应用的管理能力。 > **说明：** > > 本模块为系统接口。
+本模块提供分布式应用的管理能力。 &gt; **说明：** &gt; &gt; 本模块为系统接口。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

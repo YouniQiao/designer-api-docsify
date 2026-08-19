@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## overlapRatio

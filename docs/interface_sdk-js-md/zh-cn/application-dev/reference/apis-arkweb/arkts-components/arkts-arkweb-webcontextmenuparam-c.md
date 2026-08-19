@@ -11,6 +11,11 @@ WebContextMenuParam是ArkWeb组件中用于承载长按页面元素或鼠标右�
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## constructor
@@ -121,7 +126,7 @@ getInputFieldType(): ContextMenuInputFieldType
 getLinkUrl(): string
 ```
 
-获取经过安全检查的URL链接地址，可用于构建自定义菜单时提供"打开链接"、"分享链接"、"复制链接"等操作。 > **说明：** > > 与getUnfilteredLinkUrl()相比，该方法会对URL进行安全检查；与getSourceUrl()相比，该方法获取的是长按位置处的链接URL，而getSourceUrl()获取的是选中元素的src属性URL（如图 > 像、媒体等资源）。
+获取经过安全检查的URL链接地址，可用于构建自定义菜单时提供"打开链接"、"分享链接"、"复制链接"等操作。 &gt; **说明：** &gt; &gt; 与getUnfilteredLinkUrl()相比，该方法会对URL进行安全检查；与getSourceUrl()相比，该方法获取的是长按位置处的链接URL，而getSourceUrl()获取的是选中元素的src属性URL（如图 &gt; 像、媒体等资源）。
 
 **起始版本：** 9
 
@@ -143,7 +148,7 @@ getLinkUrl(): string
 getMediaType(): ContextMenuMediaType
 ```
 
-获取网页元素的媒体类型。 > **说明：** > > 从API version 22开始，[getContextMenuMediaType](#getcontextmenumediatype)提供更丰富的媒体类型识别能力。
+获取网页元素的媒体类型。 &gt; **说明：** &gt; &gt; 从API version 22开始，[getContextMenuMediaType](#getcontextmenumediatype)提供更丰富的媒体类型识别能力。
 
 **起始版本：** 9
 

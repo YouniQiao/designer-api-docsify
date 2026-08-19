@@ -53,7 +53,7 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
     options?: SelectionMenuOptions)
 ```
 
-Sets the custom selection menu. The long-press response duration of **bindSelectionMenu** is 600 ms while that of bindContextMenu is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence. When the custom menu is too long, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured. > **NOTE：**> > This API cannot be called within attributeModifier. > > When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the > system's default style and trigger conditions are preserved. > > In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the > trigger conditions are fully customizable.
+Sets the custom selection menu. The long-press response duration of **bindSelectionMenu** is 600 ms while that of bindContextMenu is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence. When the custom menu is too long, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured. &gt; **NOTE：**&gt; &gt; This API cannot be called within attributeModifier. &gt; &gt; When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the &gt; system's default style and trigger conditions are preserved. &gt; &gt; In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the &gt; trigger conditions are fully customizable.
 
 **Since:** 11
 
@@ -104,7 +104,7 @@ Sets the color of the text selection handle, also known as the caret, in the tex
 compressLeadingPunctuation(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable leading punctuation compression. > **NOTE：**> > - Leading punctuation is not compressed by default. > > - For the range of punctuation marks that support leading compression, see > [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+Sets whether to enable leading punctuation compression. &gt; **NOTE：**&gt; &gt; - Leading punctuation is not compressed by default. &gt; &gt; - For the range of punctuation marks that support leading compression, see &gt; [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -200,7 +200,7 @@ Configures text recognition settings, including entity types to detect, display 
 decoration(value: DecorationStyleInterface)
 ```
 
-Style and color of the text decorative line. > **NOTE：**> > When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly > affecting characters like "g", "j", "y", "q", and "p." > > If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in > each line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
+Style and color of the text decorative line. &gt; **NOTE：**&gt; &gt; When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly &gt; affecting characters like "g", "j", "y", "q", and "p." &gt; &gt; If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in &gt; each line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
 
 **Since:** 7
 
@@ -246,7 +246,7 @@ Sets the drag effect of the selected text. This attribute cannot be used togethe
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-Sets the extended options for the custom menu, including the text content, icon, and callback. When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or [disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**. > **NOTE：**> > When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the > system's default style and trigger conditions are preserved. > > In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the > trigger conditions are fully customizable.
+Sets the extended options for the custom menu, including the text content, icon, and callback. When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or [disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**. &gt; **NOTE：**&gt; &gt; When [editMenuOptions](#editmenuoptions) is used for configuring the text selection menu, the &gt; system's default style and trigger conditions are preserved. &gt; &gt; In contrast, when [bindSelectionMenu](#bindselectionmenu) is used, both the menu style and the &gt; trigger conditions are fully customizable.
 
 **Since:** 12
 
@@ -318,7 +318,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 enableDataDetector(enable: boolean)
 ```
 
-Sets whether to enable special entity detection within the text. Special entities are detected when **enableDataDetector** is set to **true**. The style of detected entities is as follows: the font color is changed to blue, and a blue underline is added. > **NOTE：**> > - This API takes effect only when the device has an underlying text detection capability. > > - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity > detection is not performed. <!--RP2--><!--RP2End-->
+Sets whether to enable special entity detection within the text. Special entities are detected when **enableDataDetector** is set to **true**. The style of detected entities is as follows: the font color is changed to blue, and a blue underline is added. &gt; **NOTE：**&gt; &gt; - This API takes effect only when the device has an underlying text detection capability. &gt; &gt; - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity &gt; detection is not performed. <!--RP2--><!--RP2End-->
 
 **Since:** 11
 
@@ -342,7 +342,7 @@ Sets whether to enable special entity detection within the text. Special entitie
 enableHapticFeedback(isEnabled: boolean)
 ```
 
-Sets whether to enable haptic feedback. To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project. > **NOTE：**> > This API can be called within attributeModifier since API version 18.
+Sets whether to enable haptic feedback. To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project. &gt; **NOTE：**&gt; &gt; This API can be called within attributeModifier since API version 18.
 
 **Since:** 13
 
@@ -489,7 +489,7 @@ Sets the font color.
 fontFamily(value: string | Resource)
 ```
 
-Sets the font family. > **NOTE：**> > You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) to register custom fonts.
+Sets the font family. &gt; **NOTE：**&gt; &gt; You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) to register custom fonts.
 
 **Since:** 7
 
@@ -513,7 +513,7 @@ Sets the font family. > **NOTE：**> > You can use [loadFontSync](../../apis-ark
 fontFeature(value: string)
 ```
 
-Sets the font feature, for example, monospaced digits. Format: normal \| \&lt;feature-tag-value\&gt; Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ] There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,). For example, the input format for monospaced clock fonts is "ss01" on. > **NOTE：**> > The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of > them exist, only the content in **Span** or **ImageSpan** is displayed. > > The typesetting engine rounds down the value of width to ensure that > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be > clipped. > > When multiple **Text** components are placed in the Row container with no specific layout or space > allocation settings configured, the components are laid out based on the maximum size of the container. To make > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set > layoutWeight or use the flex layout. > > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk, > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the > ligature feature can avoid this issue. > > Text rendering behavior is closely tied to the font file in use. For instance, the system's default font supports > 8-punctuation compression only for left-side punctuation marks. Right-side punctuation, including exclamation > marks, enumeration commas, and question marks, is not affected by this feature.
+Sets the font feature, for example, monospaced digits. Format: normal \| \&lt;feature-tag-value\&gt; Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ] There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,). For example, the input format for monospaced clock fonts is "ss01" on. &gt; **NOTE：**&gt; &gt; The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of &gt; them exist, only the content in **Span** or **ImageSpan** is displayed. &gt; &gt; The typesetting engine rounds down the value of width to ensure that &gt; the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be &gt; clipped. &gt; &gt; When multiple **Text** components are placed in the Row container with no specific layout or space &gt; allocation settings configured, the components are laid out based on the maximum size of the container. To make &gt; sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set &gt; layoutWeight or use the flex layout. &gt; &gt; The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk, &gt; fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the &gt; ligature feature can avoid this issue. &gt; &gt; Text rendering behavior is closely tied to the font file in use. For instance, the system's default font supports &gt; 8-punctuation compression only for left-side punctuation marks. Right-side punctuation, including exclamation &gt; marks, enumeration commas, and question marks, is not affected by this feature.
 
 **Since:** 12
 
@@ -806,7 +806,7 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 lineHeight(value: number | string | Resource)
 ```
 
-Sets the text line height. If the value is less than or equal to **0**, the line height is unrestricted and adapts to the font size. When the value is a number, the unit is fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported. > **NOTE：**> > If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as > clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and > line height to ensure proper layout rendering.
+Sets the text line height. If the value is less than or equal to **0**, the line height is unrestricted and adapts to the font size. When the value is a number, the unit is fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported. &gt; **NOTE：**&gt; &gt; If certain characters have significantly taller glyphs than others in the same line, layout anomalies such as &gt; clipping, overlapping, or misalignment may occur. In this case, adjust component attributes such as height and &gt; line height to ensure proper layout rendering.
 
 **Since:** 7
 
@@ -830,7 +830,7 @@ Sets the text line height. If the value is less than or equal to **0**, the line
 lineHeightMultiple(value: number | undefined)
 ```
 
-Sets the line height of text in multiple mode. The line height equals the input parameter **value** multiplied by **fontHeight**. > **NOTE：**> > When both this API and [lineHeight](#lineheight) are set, only **lineHeightMultiple** takes > effect.
+Sets the line height of text in multiple mode. The line height equals the input parameter **value** multiplied by **fontHeight**. &gt; **NOTE：**&gt; &gt; When both this API and [lineHeight](#lineheight) are set, only **lineHeightMultiple** takes &gt; effect.
 
 **Since:** 22
 
@@ -1440,7 +1440,7 @@ Specify the tail indentation for each line in a text block. &lt;p&gt;&lt;strong&
 textAlign(value: TextAlign)
 ```
 
-Sets the horizontal alignment of the text. The text takes up the full width of the **Text** component. The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component. The specific effects are as follows: - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top. - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically. - **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom. When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) property must be configured according to the text content. The last line of text aligns to the start horizontally and does not participate in justification. > **NOTE：**> > **textAlign** only adjusts the overall text layout and does not affect character display order. For character > display order adjustment, see > [Bidirectional Text Layout and Alignment](../../../ui/arkts-internationalization.md#bidirectional-text-layout-and-alignment).
+Sets the horizontal alignment of the text. The text takes up the full width of the **Text** component. The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component. The specific effects are as follows: - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top. - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically. - **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom. When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) property must be configured according to the text content. The last line of text aligns to the start horizontally and does not participate in justification. &gt; **NOTE：**&gt; &gt; **textAlign** only adjusts the overall text layout and does not affect character display order. For character &gt; display order adjustment, see &gt; [Bidirectional Text Layout and Alignment](../../../ui/arkts-internationalization.md#bidirectional-text-layout-and-alignment).
 
 **Since:** 7
 
@@ -1634,7 +1634,7 @@ Sets the text shadow. Intelligent color extraction is not supported for the **ty
 textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 ```
 
-Sets the vertical alignment of the text. > **NOTE：**> > - When this API and [halfLeading](#halfleading) are both set, **halfLeading** does not take > effect. > > - The effect of this attribute is noticeable only when the same font size is used in a paragraph and > [lineHeight](#lineheight) is set, or when different font sizes are mixed in a paragraph. > Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The > **SuperscriptStyle** in TextStyle takes effect only when the value of > TextVerticalAlign is set to **TextVerticalAlign.BASELINE**. In other vertical > alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
+Sets the vertical alignment of the text. &gt; **NOTE：**&gt; &gt; - When this API and [halfLeading](#halfleading) are both set, **halfLeading** does not take &gt; effect. &gt; &gt; - The effect of this attribute is noticeable only when the same font size is used in a paragraph and &gt; [lineHeight](#lineheight) is set, or when different font sizes are mixed in a paragraph. &gt; Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The &gt; **SuperscriptStyle** in TextStyle takes effect only when the value of &gt; TextVerticalAlign is set to **TextVerticalAlign.BASELINE**. In other vertical &gt; alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
 **Since:** 20
 

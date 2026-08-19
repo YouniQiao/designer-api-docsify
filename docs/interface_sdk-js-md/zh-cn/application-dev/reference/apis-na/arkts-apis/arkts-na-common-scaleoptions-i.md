@@ -1,6 +1,6 @@
 # ScaleOptions
 
-> **说明：** > > 当组件同时设置了[rotate](arkts-na-common-commonmethod-i.md#rotate)和[scale](arkts-na-common-commonmethod-i.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和 > centerY的值以最后设定的属性的值为准。
+> **说明：** &gt; &gt; 当组件同时设置了[rotate](arkts-na-common-commonmethod-i.md#rotate)和[scale](arkts-na-common-commonmethod-i.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和 &gt; centerY的值以最后设定的属性的值为准。
 
 **起始版本：** 23
 
@@ -56,7 +56,7 @@ centerY?: double | string
 x?: double
 ```
 
-x轴的缩放倍数。x>1时以x轴方向放大，0&lt;x&lt;1时以x轴方向缩小，x&lt;0时沿x轴反向并缩放。
+x轴的缩放倍数。x&gt;1时以x轴方向放大，0&lt;x&lt;1时以x轴方向缩小，x&lt;0时沿x轴反向并缩放。
 
 **类型：** double
 
@@ -76,7 +76,7 @@ x轴的缩放倍数。x>1时以x轴方向放大，0&lt;x&lt;1时以x轴方向缩
 y?: double
 ```
 
-y轴的缩放倍数。y>1时以y轴方向放大，0&lt;y&lt;1时以y轴方向缩小，y&lt;0时沿y轴反向并缩放。
+y轴的缩放倍数。y&gt;1时以y轴方向放大，0&lt;y&lt;1时以y轴方向缩小，y&lt;0时沿y轴反向并缩放。
 
 **类型：** double
 
@@ -96,7 +96,7 @@ y轴的缩放倍数。y>1时以y轴方向放大，0&lt;y&lt;1时以y轴方向缩
 z?: double
 ```
 
-z轴的缩放倍数。z>1时以z轴方向放大，0&lt;z&lt;1时以z轴方向缩小，z&lt;0时沿z轴反向并缩放。
+z轴的缩放倍数。z&gt;1时以z轴方向放大，0&lt;z&lt;1时以z轴方向缩小，z&lt;0时沿z轴反向并缩放。
 
 **类型：** double
 

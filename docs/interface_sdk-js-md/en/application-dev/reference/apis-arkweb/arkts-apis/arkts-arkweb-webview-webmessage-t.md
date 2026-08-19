@@ -4,7 +4,7 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-Defines the data types supported by [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onmessageeventext).
+Defines the data types supported by [onMessageEventExt](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md#onmessageeventext).
 
 **Since:** 9
 

@@ -72,7 +72,7 @@ Unsubscribes audio interrupt event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback used to listen for audio interrupt info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | No | Callback used to listen for audio interrupt info. |
 
 ## offEndOfStream
 
@@ -92,9 +92,9 @@ Unsubscribes end of stream event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for the playback end of stream. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for the playback end of stream. |
 
-## off_audioInterrupt('audioInterrupt')
+## off('audioInterrupt')
 
 ```TypeScript
 off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
@@ -113,7 +113,7 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback used to return the event information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | No | Callback used to return the event information. |
 
 **Examples**
 
@@ -177,7 +177,7 @@ audioHapticPlayerInstance.on('audioInterrupt', audioInterruptCallback);
 audioHapticPlayerInstance.off('audioInterrupt', audioInterruptCallback);
 ```
 
-## off_endOfStream('endOfStream')
+## off('endOfStream')
 
 ```TypeScript
 off(type: 'endOfStream', callback?: Callback<void>): void
@@ -196,7 +196,7 @@ Unsubscribes from the EOS event. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that returns no value. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback that returns no value. |
 
 **Examples**
 
@@ -232,7 +232,7 @@ Subscribes audio interrupt event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for audio interrupt info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to listen for audio interrupt info. |
 
 ## onEndOfStream
 
@@ -252,9 +252,9 @@ Subscribes end of stream event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for the playback end of stream. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to listen for the playback end of stream. |
 
-## on_audioInterrupt('audioInterrupt')
+## on('audioInterrupt')
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
@@ -273,7 +273,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
 
 **Examples**
 
@@ -330,7 +330,7 @@ audioHapticPlayerInstance.on('audioInterrupt', (interruptEvent: audio.InterruptE
 });
 ```
 
-## on_endOfStream('endOfStream')
+## on('endOfStream')
 
 ```TypeScript
 on(type: 'endOfStream', callback: Callback<void>): void
@@ -349,7 +349,7 @@ Subscribes to end of stream (EOS) event, which is triggered when the audio strea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Examples**
 
@@ -403,7 +403,7 @@ audioHapticPlayerInstance.release().then(() => {
 setLoop(loop: boolean): Promise<void>
 ```
 
-Sets this audio-haptic player to play in a loop. This API uses a promise to return the result. > **NOTE：**> > This API must be called before the audio-haptic player is released.
+Sets this audio-haptic player to play in a loop. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API must be called before the audio-haptic player is released.
 
 **Since:** 23
 
@@ -447,7 +447,7 @@ audioHapticPlayerInstance.setLoop(true).then(() => {
 setVolume(volume: double): Promise<void>
 ```
 
-Sets the volume for this audio-haptic player. This API uses a promise to return the result. > **NOTE：**> > This API must be called before the audio-haptic player is released.
+Sets the volume for this audio-haptic player. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API must be called before the audio-haptic player is released.
 
 **Since:** 23
 

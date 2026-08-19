@@ -12,7 +12,7 @@ import { statistics } from '@kit.NetworkKit';
 function getUidRxBytes(uid: int, callback: AsyncCallback<long>): void
 ```
 
-Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. > **NOTE：**> > If the application has not generated any traffic consumption after the restart, error code 2103005 will be > thrown.
+Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Obtains the total downlink traffic (in bytes) of the specified application from 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Application UID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ statistics.getUidRxBytes(20010038, (error: BusinessError, stats: number) => {
 function getUidRxBytes(uid: int): Promise<long>
 ```
 
-Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses a promise to return the result. > **NOTE：**> > If the application has not generated any traffic consumption after the restart, error code 2103005 will be > thrown.
+Obtains the total downlink traffic (in bytes) of the specified application from the last startup to the time when this API is called. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the application has not generated any traffic consumption after the restart, error code 2103005 will be &gt; thrown.
 
 **Since:** 23
 

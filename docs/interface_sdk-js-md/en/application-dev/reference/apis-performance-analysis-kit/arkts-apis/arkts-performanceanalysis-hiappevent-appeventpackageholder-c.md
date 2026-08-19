@@ -180,5 +180,5 @@ Obtains the subscription event. <br>The system obtains the subscription event da
 
 | Type | Description |
 | --- | --- |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | Event package object. If all subscription event data has been retrieved, null is returned. |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) \| null | Event package object. If all subscription event data has been retrieved, null is returned. |
 

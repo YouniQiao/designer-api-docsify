@@ -35,8 +35,6 @@ Returns a new array with all sub-array elements concatenated into it recursively
 
 | Type | Description |
 | --- | --- |
-| [FlatArray](arkts-na-flatarray-t.md)&lt;A, D&gt;[] |  |
-
 ## flatMap
 
 ```TypeScript
@@ -63,5 +61,3 @@ Calls a defined callback function on each element of an array. Then, flattens th
 
 | Type | Description |
 | --- | --- |
-| U[] |  |
-

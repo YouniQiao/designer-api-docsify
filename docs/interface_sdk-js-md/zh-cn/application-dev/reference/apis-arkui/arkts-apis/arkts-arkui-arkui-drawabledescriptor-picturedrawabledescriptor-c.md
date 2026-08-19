@@ -1,8 +1,8 @@
 # PictureDrawableDescriptor
 
-支持通过传入Picture对象创建PictureDrawableDescriptor对象。 继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
+支持通过传入Picture对象创建PictureDrawableDescriptor对象。 继承自[DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
 
-**继承/实现关系：** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**继承/实现关系：** PictureDrawableDescriptor extends [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescriptor, AnimationOptions, AnimatedDrawableDescriptor, AnimationController, DrawableDescriptorLoadedResult, AnimationStopMode, PictureDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -61,7 +62,7 @@ setHdrComposition(config: HdrCompositionConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [HdrCompositionConfig](arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | 是 | HDR合成配置。 |
+| config | [HdrCompositionConfig](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | 是 | HDR合成配置。 |
 
 **示例**
 

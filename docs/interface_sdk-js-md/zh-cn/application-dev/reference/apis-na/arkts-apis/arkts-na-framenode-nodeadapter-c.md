@@ -1,6 +1,6 @@
 # NodeAdapter
 
-NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接口功能。 > **说明：** > > 入参不能为负数，入参为负数时不做处理。
+NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接口功能。 &gt; **说明：** &gt; &gt; 入参不能为负数，入参为负数时不做处理。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@ NodeAdapter提供FrameNode的数据懒加载能力，通过LazyForEach实现接�
 static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 ```
 
-给FrameNode绑定一个NodeAdapter。一个节点只能绑定一个NodeAdapter。已经绑定NodeAdapter的再次绑定会失败并返回false。 > **说明：** > > 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
+给FrameNode绑定一个NodeAdapter。一个节点只能绑定一个NodeAdapter。已经绑定NodeAdapter的再次绑定会失败并返回false。 &gt; **说明：** &gt; &gt; 支持绑定的组件：Column、Row、Stack、GridRow、Flex、Swiper、RelativeContainer、List、ListItemGroup、WaterFlow、Grid。
 
 **起始版本：** 23
 

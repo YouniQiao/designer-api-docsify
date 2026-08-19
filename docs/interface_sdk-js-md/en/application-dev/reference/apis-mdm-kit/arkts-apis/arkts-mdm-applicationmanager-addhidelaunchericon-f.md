@@ -12,7 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 ```
 
-Adds applications to the home screen icon hide list. > **NOTE：**> > 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are > not supported. > > 2. If a hidden application has clones, the clones are hidden synchronously. > > 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will > still be displayed on the home screen.
+Adds applications to the home screen icon hide list. &gt; **NOTE：**&gt; &gt; 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are &gt; not supported. &gt; &gt; 2. If a hidden application has clones, the clones are hidden synchronously. &gt; &gt; 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will &gt; still be displayed on the home screen.
 
 **Since:** 26.0.0
 

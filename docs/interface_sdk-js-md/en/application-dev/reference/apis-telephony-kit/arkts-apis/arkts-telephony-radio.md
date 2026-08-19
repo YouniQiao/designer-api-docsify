@@ -83,9 +83,9 @@ import { radio } from '@kit.TelephonyKit';
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned. |
 | [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md) | Determine whether the current manual network scan is in progress. |
 | [offImsRegStateChange](arkts-telephony-radio-offimsregstatechange-f-sys.md) | Unsubscribe from imsRegStateChange event. |
-| off_imsRegStateChange | Unsubscribe from imsRegStateChange event. |
+| [off_imsRegStateChange](arkts-telephony-radio-offimsregstatechange-f-sys.md) | Unsubscribe from imsRegStateChange event. |
 | [onImsRegStateChange](arkts-telephony-radio-onimsregstatechange-f-sys.md) | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
-| on_imsRegStateChange | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
+| [on_imsRegStateChange](arkts-telephony-radio-onimsregstatechange-f-sys.md) | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) | Actively requests to update location information. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) | Actively requests to update location information. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) | Actively requests to update location information. |

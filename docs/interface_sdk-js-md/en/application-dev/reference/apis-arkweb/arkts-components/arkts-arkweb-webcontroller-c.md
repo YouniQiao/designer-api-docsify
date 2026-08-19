@@ -106,7 +106,7 @@ Checks whether the current page can move forward or backward by the given step.
 backward()
 ```
 
-Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
+Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
 
 **Since:** 8
 
@@ -184,7 +184,7 @@ Deletes a specific application JavaScript object that is registered with the win
 forward()
 ```
 
-Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
+Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
 
 **Since:** 8
 
@@ -208,7 +208,7 @@ Obtains the cookie management object of the **Web** component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md)
+**Substitutes:** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 
@@ -442,7 +442,7 @@ Sets a zoom factor for the current web page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [zoom](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoom)
+**Substitutes:** [zoom](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#zoom)
 
 <!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 

@@ -1,6 +1,6 @@
 # AbilityStateData
 
-AbilityStateData是Ability状态信息的数据结构。使用 [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationstateapplicationstate) 注册生命周期变化监听后，可以通过ApplicationStateObserver的onAbilityStateChanged回调的入参获取该数据结构。
+AbilityStateData是Ability状态信息的数据结构。使用 [on](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) 注册生命周期变化监听后，可以通过ApplicationStateObserver的onAbilityStateChanged回调的入参获取该数据结构。
 
 **起始版本：** 23
 

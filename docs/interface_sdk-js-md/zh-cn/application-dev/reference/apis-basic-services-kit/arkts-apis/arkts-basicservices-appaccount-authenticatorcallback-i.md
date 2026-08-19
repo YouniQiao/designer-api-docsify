@@ -1,6 +1,6 @@
 # AuthenticatorCallback
 
-OAuth认证器回调接口。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)替代。
+OAuth认证器回调接口。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)替代。
 
 **起始版本：** 8
 
@@ -15,6 +15,7 @@ OAuth认证器回调接口。 > **说明：** > > 从API version 8开始支持�
 ## 导入模块
 
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestRedirected
@@ -23,7 +24,7 @@ OAuth认证器回调接口。 > **说明：** > > 从API version 8开始支持�
 onRequestRedirected: (request: Want) => void
 ```
 
-通知请求被跳转。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用[onRequestRedirected](#onrequestredirected)替代。
+通知请求被跳转。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃。建议使用[onRequestRedirected](#onrequestredirected)替代。
 
 **类型：** (request: Want) =&gt; void
 
@@ -43,7 +44,7 @@ onRequestRedirected: (request: Want) => void
 onResult: (code: number, result: { [key: string]: any }) => void
 ```
 
-通知请求结果。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用[onResult](#onresult)替代。
+通知请求结果。 &gt; **说明：** &gt; &gt; 从API version 8开始支持，从API version 9开始废弃。建议使用[onResult](#onresult)替代。
 
 **类型：** (code: number, result: { [key: string]: any }) =&gt; void
 

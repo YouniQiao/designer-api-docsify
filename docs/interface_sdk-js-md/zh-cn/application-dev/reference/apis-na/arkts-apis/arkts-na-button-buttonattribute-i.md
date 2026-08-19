@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<ButtonAttribute> | AttributeModifi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## buttonStyle
 
 ```TypeScript
@@ -58,8 +56,6 @@ buttonStyle(value: ButtonStyleMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -82,8 +78,6 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefined): thi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## controlSize
 
 ```TypeScript
@@ -106,8 +100,6 @@ controlSize(value: ControlSize | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fontColor
 
 ```TypeScript
@@ -130,8 +122,6 @@ fontColor(value: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fontFamily
 
 ```TypeScript
@@ -154,8 +144,6 @@ fontFamily(value: string | Resource | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fontSize
 
 ```TypeScript
@@ -178,8 +166,6 @@ fontSize(value: Length | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fontStyle
 
 ```TypeScript
@@ -202,8 +188,6 @@ fontStyle(value: FontStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fontWeight
 
 ```TypeScript
@@ -226,8 +210,6 @@ fontWeight(value: int | FontWeight | string | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## labelStyle
 
 ```TypeScript
@@ -250,8 +232,6 @@ labelStyle(value: ButtonLabelStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## maxFontScale
 
 ```TypeScript
@@ -274,8 +254,6 @@ maxFontScale(scale: double | Resource | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## minFontScale
 
 ```TypeScript
@@ -298,8 +276,6 @@ minFontScale(scale: double | Resource | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## role
 
 ```TypeScript
@@ -322,8 +298,6 @@ role(value: ButtonRole | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## stateEffect
 
 ```TypeScript
@@ -346,8 +320,6 @@ stateEffect(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## type
 
 ```TypeScript
@@ -370,8 +342,6 @@ type(value: ButtonType | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

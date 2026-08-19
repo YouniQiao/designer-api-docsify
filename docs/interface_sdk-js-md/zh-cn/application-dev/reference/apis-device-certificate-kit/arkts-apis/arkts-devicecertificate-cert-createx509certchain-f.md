@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## createX509CertChain
@@ -243,7 +246,7 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X.509证书序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md)&gt; | 是 | 回调函数。当创建X.509证书链对象成功时，err为undefined，data为获取到的 X509CertChain实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md)&gt; | 是 | 回调函数。当创建X.509证书链对象成功时，err为undefined，data为获取到的 X509CertChain实例；否则为错误对象。 |
 
 **错误码：**
 

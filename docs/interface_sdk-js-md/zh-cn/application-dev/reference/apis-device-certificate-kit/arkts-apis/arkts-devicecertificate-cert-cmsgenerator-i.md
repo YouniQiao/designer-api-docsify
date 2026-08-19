@@ -1,6 +1,6 @@
 # CmsGenerator
 
-提供生成CMS（Cryptographic Message Syntax）消息的API。 > **说明：** > > PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 > 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
+提供生成CMS（Cryptographic Message Syntax）消息的API。 &gt; **说明：** &gt; &gt; PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 &gt; 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
 **起始版本：** 23
 
@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## addCert
@@ -288,7 +291,7 @@ async function testAddRecipientInfo() {
 addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void
 ```
 
-用于为内容类型为SIGNED_DATA的CMS添加签名者信息。 > **说明：** > > 自签名证书不能作为签名者。
+用于为内容类型为SIGNED_DATA的CMS添加签名者信息。 &gt; **说明：** &gt; &gt; 自签名证书不能作为签名者。
 
 **起始版本：** 23
 
@@ -751,7 +754,7 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 生成的CMS消息。 |
+| Uint8Array \| string | 生成的CMS消息。 |
 
 **错误码：**
 

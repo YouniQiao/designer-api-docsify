@@ -9,7 +9,7 @@
 | [AlternateIconInfo](arkts-ability-bundleinfo-alternateiconinfo-i.md) | Describes the app backup icon information. |
 | [AppCloneIdentity](arkts-ability-bundleinfo-appcloneidentity-i.md) | Describes the identity information of an application clone. |
 | [BundleInfo](arkts-ability-bundleinfo-i.md) | The module defines the bundle information. |
-| [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md) | Provides the detailed information of the permissions to request from the system. > **NOTE：**> > - If multiple packages of an application have requested the same permission but with different reasons, the system > returns only one reason based on a descending priority order: entry HAP > feature HAP > in-app HSP. |
+| [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md) | Provides the detailed information of the permissions to request from the system. &gt; **NOTE：**&gt; &gt; - If multiple packages of an application have requested the same permission but with different reasons, the system &gt; returns only one reason based on a descending priority order: entry HAP &gt; feature HAP &gt; in-app HSP. |
 | [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md) | Describes the signature information of the app package,which can identifythe app source, ensure app integrity, and be used for app security verification and identification. |
 | [UsedScene](arkts-ability-bundleinfo-usedscene-i.md) | Describes the use scenario and timing of the permission, helping developers request and use permissions properly. |
 

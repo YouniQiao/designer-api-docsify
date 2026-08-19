@@ -27,5 +27,3 @@ Determines whether a supplied number is finite.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

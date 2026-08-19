@@ -29,7 +29,7 @@ Obtains the network capability set of the data network specified by **NetHandle*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | Yes | Network handle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Yes | Callback used to return the result. If the capability set of the network specified by **NetHandle** is successfully obtained, **error** is **undefined**, and **data** is the obtained network capability set. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Yes | Callback used to return the result. If the capability set of the network specified by **NetHandle** is successfully obtained, **error** is **undefined**, and **data** is the obtained network capability set. Otherwise, **error** is an error object. |
 
 **Error codes:**
 

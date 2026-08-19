@@ -1,6 +1,6 @@
 # DigitIndicator
 
-A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md). > **NOTE：**> > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count > placeholder nodes. > > The maximum value of maxFontScale for the digit-style navigation indicator is > **2**. > > The mirror display of the page number depends on the RTL status of the system.
+A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md). &gt; **NOTE：**&gt; &gt; When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count &gt; placeholder nodes. &gt; &gt; The maximum value of maxFontScale for the digit-style navigation indicator is &gt; **2**. &gt; &gt; The mirror display of the page number depends on the RTL status of the system.
 
 **Inheritance/Implementation:** DigitIndicator extends Indicator<DigitIndicator>
 
@@ -21,7 +21,7 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 constructor()
 ```
 
-A constructor used to create a **DotIndicator** object. > **NOTE：**> > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain > distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state. > The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and > **selectedItemHeight**. > > - If there are too many pages and dot-style indicators exceed the page, you are advised to use the > **maxDisplayCount** parameter to set the number of dots to be displayed.
+A constructor used to create a **DotIndicator** object. &gt; **NOTE：**&gt; &gt; - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain &gt; distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state. &gt; The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and &gt; **selectedItemHeight**. &gt; &gt; - If there are too many pages and dot-style indicators exceed the page, you are advised to use the &gt; **maxDisplayCount** parameter to set the number of dots to be displayed.
 
 **Since:** 10
 

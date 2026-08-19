@@ -32,9 +32,9 @@ Creates a **PluginComponent** to display the UI provided by an external applicat
 
 | Name | Description |
 | --- | --- |
-| [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Defines options for constructing a **PluginComponent**. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Defines options for constructing a **PluginComponent**. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 | [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i-sys.md) | PluginComponentTemplate |
-| [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | Data provided when the error occurs. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | Data provided when the error occurs. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Types
 

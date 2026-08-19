@@ -1,6 +1,6 @@
 # NodeAdapter
 
-Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality. > **NOTE：**> > Negative input parameters are ignored and trigger no processing.
+Provides lazy loading capabilities for FrameNode data, implementing LazyForEach API functionality. &gt; **NOTE：**&gt; &gt; Negative input parameters are ignored and trigger no processing.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Provides lazy loading capabilities for FrameNode data, implementing LazyForEach 
 static attachNodeAdapter(adapter: NodeAdapter, node: FrameNode): boolean
 ```
 
-Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAdapter. Attempts to re-attach to a NodeAdapter that has already been attached to will fail and return **false**. > **NOTE：**> > The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**, > **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
+Attaches a FrameNode to a NodeAdapter. Each node can be bound to only one NodeAdapter. Attempts to re-attach to a NodeAdapter that has already been attached to will fail and return **false**. &gt; **NOTE：**&gt; &gt; The following components can be bound: **Column**, **Row**, **Stack**, **GridRow**, **Flex**, **Swiper**, &gt; **RelativeContainer**, **List**, **ListItemGroup**, **WaterFlow**, and **Grid**.
 
 **Since:** 12
 
@@ -207,7 +207,7 @@ Moves items from the starting index to the ending index.
 onAttachToNode?(target: FrameNode): void
 ```
 
-Called when a FrameNode is attached to the NodeAdapter. > **NOTE：**> > In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the > main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling > [attachNodeAdapter](../../apis-na/arkts-apis/arkts-na-framenode-nodeadapter-c.md#attachnodeadapter) and before the host node is attached to the main tree. > In this case, you will receive this callback when the host node is attached to the main tree. > > In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host > node, instead of when the host node is attached to the main tree. In this case, the host node may not have been > attached to the main tree. If the node on which the callback logic depends has been mounted (for example, > accessing layout information or executing animation), you are advised to register > onAppear in the callback and place the related logic in **onAppear** for > execution. If you set this callback by dynamically assigning a value, complete the setting before calling > [attachNodeAdapter](../../apis-na/arkts-apis/arkts-na-framenode-nodeadapter-c.md#attachnodeadapter). Otherwise, the callback may fail to be triggered.
+Called when a FrameNode is attached to the NodeAdapter. &gt; **NOTE：**&gt; &gt; In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the &gt; main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling &gt; [attachNodeAdapter](../../apis-na/arkts-apis/arkts-na-framenode-nodeadapter-c.md#attachnodeadapter) and before the host node is attached to the main tree. &gt; In this case, you will receive this callback when the host node is attached to the main tree. &gt; &gt; In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host &gt; node, instead of when the host node is attached to the main tree. In this case, the host node may not have been &gt; attached to the main tree. If the node on which the callback logic depends has been mounted (for example, &gt; accessing layout information or executing animation), you are advised to register &gt; onAppear in the callback and place the related logic in **onAppear** for &gt; execution. If you set this callback by dynamically assigning a value, complete the setting before calling &gt; [attachNodeAdapter](../../apis-na/arkts-apis/arkts-na-framenode-nodeadapter-c.md#attachnodeadapter). Otherwise, the callback may fail to be triggered.
 
 **Since:** 12
 

@@ -40,8 +40,8 @@ Get a component snapshot by component range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | [NodeIdentity](arkts-na-nodeidentity-t.md) | Yes | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
-| end | [NodeIdentity](arkts-na-nodeidentity-t.md) | Yes | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
+| start | [NodeIdentity](../../apis-arkui/arkts-apis/arkts-arkui-nodeidentity-t.md) | Yes | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
+| end | [NodeIdentity](../../apis-arkui/arkts-apis/arkts-arkui-nodeidentity-t.md) | Yes | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
 | isStartRect | boolean | Yes | indicating the snapshot rect to use, true for using the rect of the start component, false for using the rect of the end component. |
 | options | componentSnapshot.SnapshotOptions | No | Define the snapshot options. |
 

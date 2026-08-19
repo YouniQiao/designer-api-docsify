@@ -28,5 +28,5 @@ export function getScrollEvent(node: FrameNode): UIScrollEvent | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| UIScrollEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIScrollEvent \| undefined | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

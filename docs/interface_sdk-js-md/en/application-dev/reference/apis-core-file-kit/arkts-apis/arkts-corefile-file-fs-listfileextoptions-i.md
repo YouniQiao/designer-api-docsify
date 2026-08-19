@@ -24,7 +24,7 @@ fileFilter?: FileFilter
 
 File name filtering interface. This parameter is optional. Filtering rules can be defined based on file names.
 
-**Type:** [FileFilter](../../apis-na/arkts-apis/arkts-na-file-fs-filefilter-i.md)
+**Type:** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
 
 **Since:** 26.0.0
 

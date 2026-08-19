@@ -35,8 +35,6 @@ Calls the function, substituting the specified object for the this value of the 
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## bind
 
 ```TypeScript
@@ -61,8 +59,6 @@ For a given function, creates a bound function that has the same body as the ori
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## call
 
 ```TypeScript
@@ -87,8 +83,6 @@ Calls a method of an object, substituting another object for the current object.
 
 | Type | Description |
 | --- | --- |
-| any |  |
-
 ## toString
 
 ```TypeScript
@@ -105,8 +99,6 @@ Returns a string representation of a function.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## arguments
 
 ```TypeScript

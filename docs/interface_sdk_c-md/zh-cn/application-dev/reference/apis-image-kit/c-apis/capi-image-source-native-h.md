@@ -64,12 +64,12 @@
 | [Image_ErrorCode OH_DecodingOptions_Release(OH_DecodingOptions *options)](#oh_decodingoptions_release) | 释放OH_DecodingOptions指针。 |
 | [Image_ErrorCode OH_ImageSourceNative_CreateFromUri(char *uri, size_t uriSize, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromuri) | 通过uri创建OH_ImageSourceNative指针。 |
 | [Image_ErrorCode OH_ImageSourceNative_CreateFromFd(int32_t fd, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromfd) | 通过fd创建OH_ImageSourceNative指针。 |
-| [Image_ErrorCode OH_ImageSourceNative_CreateFromData(uint8_t *data, size_t dataSize, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromdata) | 通过缓冲区数据创建OH_ImageSourceNative指针。<br>data数据应该是未解码的数据，不要传入类似于RGBA，YUV的像素buffer数据。<br>如果想通过像素buffer数据创建pixelMap，可以调用{@link OH_PixelmapNative_CreatePixelmap}这一类接口。<br>使用场景：适用于应用已经通过网络、文件或其他模块获取到完整编码图片数据的场景，例如JPEG、PNG、WebP等格式的二进制数据。该接口创建的是图片源对象，后续可继续调用[OH_ImageSourceNative_GetImageInfo](capi-image-source-native-h.md#oh_imagesourcenative_getimageinfo)读取图片信息，或调用[OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap)解码为PixelMap。<br>资源管理：成功创建的OH_ImageSourceNative对象由调用方持有，使用完成后必须调用[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。传入的data仍由调用方管理，不应传入已经解码后的像素数据。 |
+| [Image_ErrorCode OH_ImageSourceNative_CreateFromData(uint8_t *data, size_t dataSize, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromdata) | 通过缓冲区数据创建OH_ImageSourceNative指针。<br>data数据应该是未解码的数据，不要传入类似于RGBA，YUV的像素buffer数据。<br>如果想通过像素buffer数据创建pixelMap，可以调用[OH_PixelmapNative_CreatePixelmap](capi-pixelmap-native-h.md#oh_pixelmapnative_createpixelmap)这一类接口。<br>使用场景：适用于应用已经通过网络、文件或其他模块获取到完整编码图片数据的场景，例如JPEG、PNG、WebP等格式的二进制数据。该接口创建的是图片源对象，后续可继续调用[OH_ImageSourceNative_GetImageInfo](capi-image-source-native-h.md#oh_imagesourcenative_getimageinfo)读取图片信息，或调用[OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap)解码为PixelMap。<br>资源管理：成功创建的OH_ImageSourceNative对象由调用方持有，使用完成后必须调用[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。传入的data仍由调用方管理，不应传入已经解码后的像素数据。 |
 | [Image_ErrorCode OH_ImageSourceNative_CreateFromDataWithUserBuffer(uint8_t *data, size_t datalength, OH_ImageSourceNative **imageSource)](#oh_imagesourcenative_createfromdatawithuserbuffer) | 由数据缓存创建图片源。传入的数据缓存将在图片源对象中直接访问，在图片源对象的生命周期内，数据缓存需要保持可用。<br>使用场景：适用于希望减少图片源创建过程中的数据拷贝，并且调用方能够保证输入缓冲区生命周期的场景。<br>资源管理：在调用[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放图片源对象之前，data指向的缓冲区不能被释放、复用或修改为其他图片数据。否则后续读取图片信息、解码或读取元数据时可能访问无效数据。 |
 | [Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFile, OH_ImageSourceNative **res)](#oh_imagesourcenative_createfromrawfile) | 通过图像资源文件的RawFileDescriptor创建OH_ImageSourceNative指针。 |
-| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmap(OH_ImageSourceNative *source, OH_DecodingOptions *options, OH_PixelmapNative **pixelmap)](#oh_imagesourcenative_createpixelmap) | 通过图片解码参数创建OH_PixelmapNative指针。<br>使用场景：适用于将JPEG、PNG、WebP、GIF单帧等编码图片解码为可读取、处理或再编码的PixelMap。解码前可通过OH_DecodingOptions设置帧序号、目标像素格式、目标尺寸、裁剪区域、期望动态范围等参数。<br>使用约束：source、options和pixelmap均不能为空指针。调用前需先创建OH_ImageSourceNative对象；如需自定义解码参数，需先创建并设置OH_DecodingOptions对象。接口执行成功后，pixelmap指向新创建的OH_PixelmapNative对象；接口执行失败时，不应使用pixelmap指向的对象。<br>资源管理：成功创建的OH_PixelmapNative对象由调用方持有，使用完成后应调用{@link OH_PixelmapNative_Destroy}释放。OH_DecodingOptions和OH_ImageSourceNative对象不会因为创建PixelMap而自动释放，需要分别调用[OH_DecodingOptions_Release](capi-image-source-native-h.md#oh_decodingoptions_release)和[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。 |
-| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSourceNative *source, OH_DecodingOptions *options, IMAGE_ALLOCATOR_TYPE allocator, OH_PixelmapNative **pixelmap)](#oh_imagesourcenative_createpixelmapusingallocator) | 根据解码参数创建一个PixelMap，PixelMap使用的内存类型可以通过allocatorType来指定。<br>默认情况下，系统会根据图像类型、图像大小、平台能力等选择内存类型。在处理通过此接口返回的PixelMap时，请始终考虑步幅（stride）的影响。<br>使用场景：适用于调用方需要明确指定PixelMap内存类型的场景。例如，后续图像处理链路要求DMA内存时，可指定IMAGE_ALLOCATOR_TYPE_DMA。<br>使用约束：source、options和pixelmap均不能为空指针。allocator需为[IMAGE_ALLOCATOR_TYPE](capi-image-source-native-h.md#image_allocator_type)中定义的有效枚举值。指定的内存类型可能受图片类型、图片大小、系统版本和设备能力限制，接口可能返回IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE。<br>资源管理：成功创建的PixelMap需要调用{@link OH_PixelmapNative_Destroy}释放。读取或写入像素数据时，不能假设每行字节数等于宽度乘以每像素字节数，应通过{@link OH_PixelmapImageInfo_GetRowStride}获取行跨距。 |
-| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *source, OH_DecodingOptions *options, OH_PixelmapNative *resVecPixMap[], size_t size)](#oh_imagesourcenative_createpixelmaplist) | 通过图片解码参数创建OH_PixelmapNative数组。<br>注意，此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。<br>使用场景：适用于需要一次性获取动图所有帧并自行处理的场景，例如生成缩略图序列、分析每帧内容或重新编码动图。仅播放动图时，不建议优先使用该接口。<br>使用约束：source、options和resVecPixMap均不能为空指针。调用方需根据帧数准备足够长度的resVecPixMap数组，size应与数组可写入元素数量一致。调用前可通过[OH_ImageSourceNative_GetFrameCount](capi-image-source-native-h.md#oh_imagesourcenative_getframecount)查询帧数。<br>资源管理：resVecPixMap数组由调用方提供，数组中的每个OH_PixelmapNative对象创建成功后都由调用方持有。使用完成后，需要逐个调用{@link OH_PixelmapNative_Destroy}释放。如果接口返回失败，也应检查数组中已写入的非空PixelMap指针并释放。 |
+| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmap(OH_ImageSourceNative *source, OH_DecodingOptions *options, OH_PixelmapNative **pixelmap)](#oh_imagesourcenative_createpixelmap) | 通过图片解码参数创建OH_PixelmapNative指针。<br>使用场景：适用于将JPEG、PNG、WebP、GIF单帧等编码图片解码为可读取、处理或再编码的PixelMap。解码前可通过OH_DecodingOptions设置帧序号、目标像素格式、目标尺寸、裁剪区域、期望动态范围等参数。<br>使用约束：source、options和pixelmap均不能为空指针。调用前需先创建OH_ImageSourceNative对象；如需自定义解码参数，需先创建并设置OH_DecodingOptions对象。接口执行成功后，pixelmap指向新创建的OH_PixelmapNative对象；接口执行失败时，不应使用pixelmap指向的对象。<br>资源管理：成功创建的OH_PixelmapNative对象由调用方持有，使用完成后应调用[OH_PixelmapNative_Destroy](capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)释放。OH_DecodingOptions和OH_ImageSourceNative对象不会因为创建PixelMap而自动释放，需要分别调用[OH_DecodingOptions_Release](capi-image-source-native-h.md#oh_decodingoptions_release)和[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。 |
+| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSourceNative *source, OH_DecodingOptions *options, IMAGE_ALLOCATOR_TYPE allocator, OH_PixelmapNative **pixelmap)](#oh_imagesourcenative_createpixelmapusingallocator) | 根据解码参数创建一个PixelMap，PixelMap使用的内存类型可以通过allocatorType来指定。<br>默认情况下，系统会根据图像类型、图像大小、平台能力等选择内存类型。在处理通过此接口返回的PixelMap时，请始终考虑步幅（stride）的影响。<br>使用场景：适用于调用方需要明确指定PixelMap内存类型的场景。例如，后续图像处理链路要求DMA内存时，可指定IMAGE_ALLOCATOR_TYPE_DMA。<br>使用约束：source、options和pixelmap均不能为空指针。allocator需为[IMAGE_ALLOCATOR_TYPE](capi-image-source-native-h.md#image_allocator_type)中定义的有效枚举值。指定的内存类型可能受图片类型、图片大小、系统版本和设备能力限制，接口可能返回IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE。<br>资源管理：成功创建的PixelMap需要调用[OH_PixelmapNative_Destroy](capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)释放。读取或写入像素数据时，不能假设每行字节数等于宽度乘以每像素字节数，应通过[OH_PixelmapImageInfo_GetRowStride](capi-pixelmap-native-h.md#oh_pixelmapimageinfo_getrowstride)获取行跨距。 |
+| [Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *source, OH_DecodingOptions *options, OH_PixelmapNative *resVecPixMap[], size_t size)](#oh_imagesourcenative_createpixelmaplist) | 通过图片解码参数创建OH_PixelmapNative数组。<br>注意，此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。<br>使用场景：适用于需要一次性获取动图所有帧并自行处理的场景，例如生成缩略图序列、分析每帧内容或重新编码动图。仅播放动图时，不建议优先使用该接口。<br>使用约束：source、options和resVecPixMap均不能为空指针。调用方需根据帧数准备足够长度的resVecPixMap数组，size应与数组可写入元素数量一致。调用前可通过[OH_ImageSourceNative_GetFrameCount](capi-image-source-native-h.md#oh_imagesourcenative_getframecount)查询帧数。<br>资源管理：resVecPixMap数组由调用方提供，数组中的每个OH_PixelmapNative对象创建成功后都由调用方持有。使用完成后，需要逐个调用[OH_PixelmapNative_Destroy](capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)释放。如果接口返回失败，也应检查数组中已写入的非空PixelMap指针并释放。 |
 | [Image_ErrorCode OH_ImageSourceNative_CreatePicture(OH_ImageSourceNative *source, OH_DecodingOptionsForPicture *options, OH_PictureNative **picture)](#oh_imagesourcenative_createpicture) | 通过图片解码创建OH_PictureNative指针。<br>使用约束：source、options和picture均不能为空指针。 |
 | [Image_ErrorCode OH_ImageSourceNative_CreatePictureAtIndex(OH_ImageSourceNative *source, uint32_t index, OH_PictureNative **picture)](#oh_imagesourcenative_createpictureatindex) | 通过指定序号的图片解码创建OH_PictureNative指针。 |
 | [Image_ErrorCode OH_ImageSourceNative_GetDelayTimeList(OH_ImageSourceNative *source, int32_t *delayTimeList, size_t size)](#oh_imagesourcenative_getdelaytimelist) | 获取图像延迟时间数组。 |
@@ -357,7 +357,7 @@ Image_ErrorCode OH_DecodingOptions_GetPixelFormat(OH_DecodingOptions *options, i
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | 被操作的OH_DecodingOptions指针。 |
-| int32_t *pixelFormat | pixel格式{@link PIXEL_FORMAT}，默认值为RGBA_8888。 |
+| int32_t *pixelFormat | pixel格式[PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format)，默认值为RGBA_8888。 |
 
 **返回：**
 
@@ -382,7 +382,7 @@ Image_ErrorCode OH_DecodingOptions_SetPixelFormat(OH_DecodingOptions *options, i
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | 被操作的OH_DecodingOptions指针。 |
-| int32_t pixelFormat | pixel格式{@link PIXEL_FORMAT}，默认值为RGBA_8888。 |
+| int32_t pixelFormat | pixel格式[PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format)，默认值为RGBA_8888。 |
 
 **返回：**
 
@@ -873,7 +873,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromData(uint8_t *data, size_t dataSi
 
 **描述**
 
-通过缓冲区数据创建OH_ImageSourceNative指针。<br>data数据应该是未解码的数据，不要传入类似于RGBA，YUV的像素buffer数据。<br>如果想通过像素buffer数据创建pixelMap，可以调用{@link OH_PixelmapNative_CreatePixelmap}这一类接口。<br>使用场景：适用于应用已经通过网络、文件或其他模块获取到完整编码图片数据的场景，例如JPEG、PNG、WebP等格式的二进制数据。该接口创建的是图片源对象，后续可继续调用[OH_ImageSourceNative_GetImageInfo](capi-image-source-native-h.md#oh_imagesourcenative_getimageinfo)读取图片信息，或调用[OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap)解码为PixelMap。<br>资源管理：成功创建的OH_ImageSourceNative对象由调用方持有，使用完成后必须调用[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。传入的data仍由调用方管理，不应传入已经解码后的像素数据。
+通过缓冲区数据创建OH_ImageSourceNative指针。<br>data数据应该是未解码的数据，不要传入类似于RGBA，YUV的像素buffer数据。<br>如果想通过像素buffer数据创建pixelMap，可以调用[OH_PixelmapNative_CreatePixelmap](capi-pixelmap-native-h.md#oh_pixelmapnative_createpixelmap)这一类接口。<br>使用场景：适用于应用已经通过网络、文件或其他模块获取到完整编码图片数据的场景，例如JPEG、PNG、WebP等格式的二进制数据。该接口创建的是图片源对象，后续可继续调用[OH_ImageSourceNative_GetImageInfo](capi-image-source-native-h.md#oh_imagesourcenative_getimageinfo)读取图片信息，或调用[OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap)解码为PixelMap。<br>资源管理：成功创建的OH_ImageSourceNative对象由调用方持有，使用完成后必须调用[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。传入的data仍由调用方管理，不应传入已经解码后的像素数据。
 
 **起始版本：** 12
 
@@ -933,7 +933,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFil
 
 | 参数项 | 描述 |
 | -- | -- |
-| [RawFileDescriptor](../LocalizationKit/capi-rawfile-rawfiledescriptor.md) *rawFile | 指示raw文件的文件描述符。 |
+| RawFileDescriptor *rawFile | 指示raw文件的文件描述符。 |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) **res | 指向c++本地层创建的OH_ImageSourceNative对象的指针。 |
 
 **返回：**
@@ -950,7 +950,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmap(OH_ImageSourceNative *source
 
 **描述**
 
-通过图片解码参数创建OH_PixelmapNative指针。<br>使用场景：适用于将JPEG、PNG、WebP、GIF单帧等编码图片解码为可读取、处理或再编码的PixelMap。解码前可通过OH_DecodingOptions设置帧序号、目标像素格式、目标尺寸、裁剪区域、期望动态范围等参数。<br>使用约束：source、options和pixelmap均不能为空指针。调用前需先创建OH_ImageSourceNative对象；如需自定义解码参数，需先创建并设置OH_DecodingOptions对象。接口执行成功后，pixelmap指向新创建的OH_PixelmapNative对象；接口执行失败时，不应使用pixelmap指向的对象。<br>资源管理：成功创建的OH_PixelmapNative对象由调用方持有，使用完成后应调用{@link OH_PixelmapNative_Destroy}释放。OH_DecodingOptions和OH_ImageSourceNative对象不会因为创建PixelMap而自动释放，需要分别调用[OH_DecodingOptions_Release](capi-image-source-native-h.md#oh_decodingoptions_release)和[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。
+通过图片解码参数创建OH_PixelmapNative指针。<br>使用场景：适用于将JPEG、PNG、WebP、GIF单帧等编码图片解码为可读取、处理或再编码的PixelMap。解码前可通过OH_DecodingOptions设置帧序号、目标像素格式、目标尺寸、裁剪区域、期望动态范围等参数。<br>使用约束：source、options和pixelmap均不能为空指针。调用前需先创建OH_ImageSourceNative对象；如需自定义解码参数，需先创建并设置OH_DecodingOptions对象。接口执行成功后，pixelmap指向新创建的OH_PixelmapNative对象；接口执行失败时，不应使用pixelmap指向的对象。<br>资源管理：成功创建的OH_PixelmapNative对象由调用方持有，使用完成后应调用[OH_PixelmapNative_Destroy](capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)释放。OH_DecodingOptions和OH_ImageSourceNative对象不会因为创建PixelMap而自动释放，需要分别调用[OH_DecodingOptions_Release](capi-image-source-native-h.md#oh_decodingoptions_release)和[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放。
 
 **起始版本：** 12
 
@@ -960,7 +960,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmap(OH_ImageSourceNative *source
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | 被操作的OH_ImageSourceNative指针。 |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | 解码参数。 |
-| OH_PixelmapNative **pixelmap | 指向c++本地层创建的OH_PixelmapNative对象的指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **pixelmap | 指向c++本地层创建的OH_PixelmapNative对象的指针。 |
 
 **返回：**
 
@@ -976,7 +976,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSource
 
 **描述**
 
-根据解码参数创建一个PixelMap，PixelMap使用的内存类型可以通过allocatorType来指定。<br>默认情况下，系统会根据图像类型、图像大小、平台能力等选择内存类型。在处理通过此接口返回的PixelMap时，请始终考虑步幅（stride）的影响。<br>使用场景：适用于调用方需要明确指定PixelMap内存类型的场景。例如，后续图像处理链路要求DMA内存时，可指定IMAGE_ALLOCATOR_TYPE_DMA。<br>使用约束：source、options和pixelmap均不能为空指针。allocator需为[IMAGE_ALLOCATOR_TYPE](capi-image-source-native-h.md#image_allocator_type)中定义的有效枚举值。指定的内存类型可能受图片类型、图片大小、系统版本和设备能力限制，接口可能返回IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE。<br>资源管理：成功创建的PixelMap需要调用{@link OH_PixelmapNative_Destroy}释放。读取或写入像素数据时，不能假设每行字节数等于宽度乘以每像素字节数，应通过{@link OH_PixelmapImageInfo_GetRowStride}获取行跨距。
+根据解码参数创建一个PixelMap，PixelMap使用的内存类型可以通过allocatorType来指定。<br>默认情况下，系统会根据图像类型、图像大小、平台能力等选择内存类型。在处理通过此接口返回的PixelMap时，请始终考虑步幅（stride）的影响。<br>使用场景：适用于调用方需要明确指定PixelMap内存类型的场景。例如，后续图像处理链路要求DMA内存时，可指定IMAGE_ALLOCATOR_TYPE_DMA。<br>使用约束：source、options和pixelmap均不能为空指针。allocator需为[IMAGE_ALLOCATOR_TYPE](capi-image-source-native-h.md#image_allocator_type)中定义的有效枚举值。指定的内存类型可能受图片类型、图片大小、系统版本和设备能力限制，接口可能返回IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE。<br>资源管理：成功创建的PixelMap需要调用[OH_PixelmapNative_Destroy](capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)释放。读取或写入像素数据时，不能假设每行字节数等于宽度乘以每像素字节数，应通过[OH_PixelmapImageInfo_GetRowStride](capi-pixelmap-native-h.md#oh_pixelmapimageinfo_getrowstride)获取行跨距。
 
 **起始版本：** 15
 
@@ -987,7 +987,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapUsingAllocator(OH_ImageSource
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | 被操作的OH_ImageSourceNative指针。 |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | 解码参数。 |
 | [IMAGE_ALLOCATOR_TYPE](capi-image-source-native-h.md#image_allocator_type) allocator | 指示返回的PixelMap将使用哪种内存类型。 |
-| OH_PixelmapNative **pixelmap | 指向c++本地层创建的OH_PixelmapNative对象的指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) **pixelmap | 指向c++本地层创建的OH_PixelmapNative对象的指针。 |
 
 **返回：**
 
@@ -1003,7 +1003,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *so
 
 **描述**
 
-通过图片解码参数创建OH_PixelmapNative数组。<br>注意，此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。<br>使用场景：适用于需要一次性获取动图所有帧并自行处理的场景，例如生成缩略图序列、分析每帧内容或重新编码动图。仅播放动图时，不建议优先使用该接口。<br>使用约束：source、options和resVecPixMap均不能为空指针。调用方需根据帧数准备足够长度的resVecPixMap数组，size应与数组可写入元素数量一致。调用前可通过[OH_ImageSourceNative_GetFrameCount](capi-image-source-native-h.md#oh_imagesourcenative_getframecount)查询帧数。<br>资源管理：resVecPixMap数组由调用方提供，数组中的每个OH_PixelmapNative对象创建成功后都由调用方持有。使用完成后，需要逐个调用{@link OH_PixelmapNative_Destroy}释放。如果接口返回失败，也应检查数组中已写入的非空PixelMap指针并释放。
+通过图片解码参数创建OH_PixelmapNative数组。<br>注意，此接口会一次性解码全部帧，当帧数过多或单帧图像过大时，会占用较大内存，造成系统内存紧张，此种情况推荐使用Image组件显示动图，Image组件采用逐帧解码，占用内存比此接口少。<br>使用场景：适用于需要一次性获取动图所有帧并自行处理的场景，例如生成缩略图序列、分析每帧内容或重新编码动图。仅播放动图时，不建议优先使用该接口。<br>使用约束：source、options和resVecPixMap均不能为空指针。调用方需根据帧数准备足够长度的resVecPixMap数组，size应与数组可写入元素数量一致。调用前可通过[OH_ImageSourceNative_GetFrameCount](capi-image-source-native-h.md#oh_imagesourcenative_getframecount)查询帧数。<br>资源管理：resVecPixMap数组由调用方提供，数组中的每个OH_PixelmapNative对象创建成功后都由调用方持有。使用完成后，需要逐个调用[OH_PixelmapNative_Destroy](capi-pixelmap-native-h.md#oh_pixelmapnative_destroy)释放。如果接口返回失败，也应检查数组中已写入的非空PixelMap指针并释放。
 
 **起始版本：** 12
 
@@ -1013,7 +1013,7 @@ Image_ErrorCode OH_ImageSourceNative_CreatePixelmapList(OH_ImageSourceNative *so
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | 被操作的OH_ImageSourceNative指针。 |
 | [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) *options | 解码参数。 |
-| OH_PixelmapNative *resVecPixMap[] | Indicates a pointer array to the <b>Pixelmap</b> objects obtained at the C++ native layer.It cannot be a null pointer. |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *resVecPixMap[] | Indicates a pointer array to the <b>Pixelmap</b> objects obtained at the C++ native layer.It cannot be a null pointer. |
 | size_t size | 数组长度。 用户可以使用[OH_ImageSourceNative_GetFrameCount](capi-image-source-native-h.md#oh_imagesourcenative_getframecount)获取。 |
 
 **返回：**
@@ -1446,7 +1446,7 @@ Image_ErrorCode OH_DecodingOptionsForPicture_GetDesiredPixelFormat(OH_DecodingOp
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | 指向OH_DecodingOptionsForPicture结构体的指针。 |
-| PIXEL_FORMAT *desiredPixelFormat | 解码选项中的像素格式。 |
+| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) *desiredPixelFormat | 解码选项中的像素格式。 |
 
 **返回：**
 
@@ -1471,7 +1471,7 @@ Image_ErrorCode OH_DecodingOptionsForPicture_SetDesiredPixelFormat(OH_DecodingOp
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) *options | 指向OH_DecodingOptionsForPicture结构体的指针。 |
-| PIXEL_FORMAT desiredPixelFormat | 解码选项中的像素格式。 |
+| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) desiredPixelFormat | 解码选项中的像素格式。 |
 
 **返回：**
 

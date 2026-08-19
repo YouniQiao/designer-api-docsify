@@ -1,6 +1,6 @@
 # Task
 
-Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md). > **NOTE：**> > The **Task** object and its mounting callback function are released and automatically reclaimed by the system > after the **remove** method is called.
+Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md). &gt; **NOTE：**&gt; &gt; The **Task** object and its mounting callback function are released and automatically reclaimed by the system &gt; after the **remove** method is called.
 
 **Since:** 23
 
@@ -73,7 +73,7 @@ Disables the 'faultOccur' callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | callback function with a `Faults` argument. |
 
 ## offPause
 
@@ -153,7 +153,7 @@ Disables the response callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | No | callback function with an `HttpResponse` argument. |
 
 ## offResume
 
@@ -193,7 +193,7 @@ Disables the wait callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | callback function with an `WaitingReason` argument. |
 
 ## off_completed
 
@@ -201,7 +201,7 @@ Disables the wait callback.
 off(event: 'completed', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from task completion events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from task completion events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -231,7 +231,7 @@ Unsubscribes from task completion events. > **NOTE：**> > For details about how
 off(event: 'failed', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from task failure events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from task failure events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -261,7 +261,7 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 off(event: 'faultOccur', callback?: Callback<Faults>): void
 ```
 
-Unsubscribes from task failure events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from task failure events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -274,7 +274,7 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -288,7 +288,7 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 off(event: 'pause', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from the foreground task pause event. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from the foreground task pause event. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -315,7 +315,7 @@ Unsubscribes from the foreground task pause event. > **NOTE：**> > For details 
 off(event: 'progress', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from task progress events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from task progress events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -345,7 +345,7 @@ Unsubscribes from task progress events. > **NOTE：**> > For details about how t
 off(event: 'remove', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from the task removal event. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from the task removal event. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -372,7 +372,7 @@ Unsubscribes from the task removal event. > **NOTE：**> > For details about how
 off(event: 'response', callback?: Callback<HttpResponse>): void
 ```
 
-Unsubscribes from task response headers. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from task response headers. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 12
 
@@ -387,7 +387,7 @@ Unsubscribes from task response headers. > **NOTE：**> > For details about how 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **response**: task response. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -401,7 +401,7 @@ Unsubscribes from task response headers. > **NOTE：**> > For details about how 
 off(event: 'resume', callback?: (progress: Progress) => void): void
 ```
 
-Unsubscribes from foreground task resume events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from foreground task resume events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -428,7 +428,7 @@ Unsubscribes from foreground task resume events. > **NOTE：**> > For details ab
 off(event: 'wait', callback?: Callback<WaitingReason>): void
 ```
 
-Unsubscribes from task waiting events. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Unsubscribes from task waiting events. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -441,7 +441,7 @@ Unsubscribes from task waiting events. > **NOTE：**> > For details about how to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -507,7 +507,7 @@ Enables the 'faultOccur' callback. This callback is triggered when the task fail
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | callback function with a `Faults` argument. |
 
 ## onPause
 
@@ -587,7 +587,7 @@ Enables the response callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | Yes | callback function with an `HttpResponse` argument. |
 
 ## onResume
 
@@ -627,7 +627,7 @@ Enables the wait callback. This callback is triggered when the task changes from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | callback function with an `WaitingReason` argument. |
 
 ## on_completed
 
@@ -635,7 +635,7 @@ Enables the wait callback. This callback is triggered when the task changes from
 on(event: 'completed', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task completion events. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task completion events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -665,7 +665,7 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call [request.agent.show](arkts-basicservices-agent-show-f.md) to view the error cause. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -695,7 +695,7 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 on(event: 'faultOccur', callback: Callback<Faults>): void
 ```
 
-Subscribes to task failure events. This API uses a callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task failure events. This API uses a callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -708,7 +708,7 @@ Subscribes to task failure events. This API uses a callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
@@ -722,7 +722,7 @@ Subscribes to task failure events. This API uses a callback to return the result
 on(event: 'pause', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task pause events. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task pause events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -749,7 +749,7 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 on(event: 'progress', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task progress changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task progress changes. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 10
 
@@ -779,7 +779,7 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 on(event: 'remove', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task removal events. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task removal events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -806,7 +806,7 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 on(event: 'response', callback: Callback<HttpResponse>): void
 ```
 
-Subscribes to task response headers. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task response headers. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 12
 
@@ -821,7 +821,7 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **'response'**: task response. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
@@ -835,7 +835,7 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 on(event: 'resume', callback: (progress: Progress) => void): void
 ```
 
-Subscribes to task resume events. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task resume events. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 11
 
@@ -862,7 +862,7 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 on(event: 'wait', callback: Callback<WaitingReason>): void
 ```
 
-Subscribes to task wait events. This API uses a callback to return the result. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Subscribes to task wait events. This API uses a callback to return the result. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 20
 
@@ -875,7 +875,7 @@ Subscribes to task wait events. This API uses a callback to return the result. >
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
@@ -901,7 +901,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -959,7 +959,7 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1040,7 +1040,7 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts a task. This API uses an asynchronous callback to return the result. Tasks in the following states can be started: 1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Starts a task. This API uses an asynchronous callback to return the result. Tasks in the following states can be started: 1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 23
 
@@ -1056,7 +1056,7 @@ Starts a task. This API uses an asynchronous callback to return the result. Task
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1072,7 +1072,7 @@ Starts a task. This API uses an asynchronous callback to return the result. Task
 start(): Promise<void>
 ```
 
-Starts a task. This API uses a promise to return the result. Tasks in the following states can be started: 1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused. > **NOTE：**> > For details about how to obtain the context in the example, see > [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) > .
+Starts a task. This API uses a promise to return the result. Tasks in the following states can be started: 1. Task created by **request.agent.create**. 2. Download tasks that are created by **request.agent.create** but have failed or paused. &gt; **NOTE：**&gt; &gt; For details about how to obtain the context in the example, see &gt; [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability) &gt; .
 
 **Since:** 23
 
@@ -1118,7 +1118,7 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

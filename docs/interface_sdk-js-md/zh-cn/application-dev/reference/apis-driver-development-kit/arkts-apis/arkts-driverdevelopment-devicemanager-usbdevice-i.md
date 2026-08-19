@@ -13,6 +13,7 @@ USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-device
 ## 导入模块
 
 ```TypeScript
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## productId

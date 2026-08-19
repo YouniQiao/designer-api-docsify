@@ -1,6 +1,6 @@
 # @ohos.net.statistics
 
-流量管理模块提供获取设备网络流量数据的能力。该模块支持从多个维度查询数据包的流量使用情况，例如： - 支持获取指定网卡的上/下行流量数据； - 支持获取所有网卡的总流量数据，便于查看设备整体网络使用情况； - 支持根据应用uid获取指定应用的流量数据，帮助开发者监控应用的网络资源消耗； - 支持获取指定socket的流量统计，为细粒度的网络性能分析提供数据基础； - 支持获取应用在指定时间段内的历史流量使用情况，便于分析应用的长期网络使用趋势。 > **说明：** > > 本模块首批接口从 API version 10 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+流量管理模块提供获取设备网络流量数据的能力。该模块支持从多个维度查询数据包的流量使用情况，例如： - 支持获取指定网卡的上/下行流量数据； - 支持获取所有网卡的总流量数据，便于查看设备整体网络使用情况； - 支持根据应用uid获取指定应用的流量数据，帮助开发者监控应用的网络资源消耗； - 支持获取指定socket的流量统计，为细粒度的网络性能分析提供数据基础； - 支持获取应用在指定时间段内的历史流量使用情况，便于分析应用的长期网络使用趋势。 &gt; **说明：** &gt; &gt; 本模块首批接口从 API version 10 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## 汇总
@@ -55,9 +56,9 @@
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md) | 获取指定应用历史流量信息，使用 Promise 异步回调。 |
 | [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) | 获取指定时间段内，应用在指定网络中的流量使用详情，使用 Promise 异步回调。 |
 | [offNetStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) | 取消注册网络流量更新通知。 |
-| off_netStatsChange | 取消订阅流量改变事件通知。使用callback异步回调。 |
+| [off_netStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) | 取消订阅流量改变事件通知。使用callback异步回调。 |
 | [onNetStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) | 注册网络流量更新通知。 |
-| on_netStatsChange | 订阅流量改变事件通知。使用callback异步回调。 |
+| [on_netStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) | 订阅流量改变事件通知。使用callback异步回调。 |
 | [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md) | 设置流量校准数据。在做流量校准时，可通过本接口设置相关流量数据。使用Promise异步回调。 |
 | [setTrafficPlanInfo](arkts-network-statistics-settrafficplaninfo-f-sys.md) | 设置流量计划信息。 |
 | [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md) | 更新网络接口统计数据。 |

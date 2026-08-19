@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | 类型 | 说明 |
 | --- | --- |
-| FlowItemAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| FlowItemAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
-## off_navDestinationSwitch('navDestinationSwitch')
+## off('navDestinationSwitch')
 
 ```TypeScript
 export function off(
@@ -33,10 +34,10 @@ export function off(
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 | 监听事件，固定为'navDestinationSwitch'，即Navigation的页面切换事件。 |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 | 需要被注销的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 | 需要被注销的回调函数。 |
 
 
-## off_navDestinationSwitch('navDestinationSwitch')
+## off('navDestinationSwitch')
 
 ```TypeScript
 export function off(
@@ -47,7 +48,7 @@ export function off(
   ): void
 ```
 
-取消监听Navigation的页面切换事件。与[uiObserver.off](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#off_navdestinationupdatenavdestinationupdate)相比，新增了observerOptions参数，即支持设置监听选项。
+取消监听Navigation的页面切换事件。与[uiObserver.off](arkts-arkui-uiobserver-offnavdestinationupdate-f.md#offnavdestinationupdate)相比，新增了observerOptions参数，即支持设置监听选项。
 
 **起始版本：** 12
 
@@ -65,6 +66,6 @@ export function off(
 | --- | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 | 监听事件，固定为'navDestinationSwitch'，即Navigation的页面切换事件。 |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
-| observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 | 监听选项。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 | 需要被注销的回调函数。 |
+| observerOptions | [NavDestinationSwitchObserverOptions](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 | 监听选项。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationswitchinfo-i.md)&gt; | 否 | 需要被注销的回调函数。 |
 

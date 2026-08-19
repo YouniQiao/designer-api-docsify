@@ -615,7 +615,7 @@ taskpool.execute(task3).then(() => {
 static sendData(...args: Object[]): void
 ```
 
-Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object. > **NOTE：**> > - The API should be called in the TaskPool thread. > > - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread. > > - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host > thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function > is executed synchronously in the task. > > - Before calling this API, ensure that the callback function for processing data has been registered in the > host thread.
+Sends data to the host thread and triggers the registered callback. Before calling this method, you need to construct a **Task** object. &gt; **NOTE：**&gt; &gt; - The API should be called in the TaskPool thread. &gt; &gt; - Do not use this API in a callback function. Otherwise, messages may fail to be passed to the host thread. &gt; &gt; - Do not use this API in an asynchronous function. Otherwise, messages may fail to be passed to the host &gt; thread. If this API is used in an asynchronous function, use **await** to ensure that the asynchronous function &gt; is executed synchronously in the task. &gt; &gt; - Before calling this API, ensure that the callback function for processing data has been registered in the &gt; host thread.
 
 **Since:** 11
 
@@ -703,7 +703,7 @@ taskpoolTest();
 setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 ```
 
-Sets the task clone list. Before using this method, you need to construct a **Task** object. > **NOTE：**> > This API must be used together with the > [@Sendable decorator](../../../arkts-utils/arkts-sendable.md#sendable-decorator). Otherwise, an exception is > thrown. You are advised to use this decorator to avoid exceptions.
+Sets the task clone list. Before using this method, you need to construct a **Task** object. &gt; **NOTE：**&gt; &gt; This API must be used together with the &gt; [@Sendable decorator](../../../arkts-utils/arkts-sendable.md#sendable-decorator). Otherwise, an exception is &gt; thrown. You are advised to use this decorator to avoid exceptions.
 
 **Since:** 11
 
@@ -860,7 +860,7 @@ struct Index {
 setTransferList(transfer?: ArrayBuffer[]): void
 ```
 
-Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default. > **NOTE：**> > This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The > **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead, > it transfers the buffer control right to the worker thread. After the transfer, the **ArrayBuffer** instance > becomes invalid. An empty **ArrayBuffer** will not be transferred.
+Sets the task transfer list. Before using this API, you must create a **Task** instance. If this API is not called, the ArrayBuffer in the data is transferred by default. &gt; **NOTE：**&gt; &gt; This API is used to set the task transfer list in the form of **ArrayBuffer** in the task pool. The &gt; **ArrayBuffer** instance does not copy the content in the task to the worker thread during transfer. Instead, &gt; it transfers the buffer control right to the worker thread. After the transfer, the **ArrayBuffer** instance &gt; becomes invalid. An empty **ArrayBuffer** will not be transferred.
 
 **Since:** 10
 

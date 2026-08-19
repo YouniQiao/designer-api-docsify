@@ -1,6 +1,6 @@
 # VideoControllerAsync
 
-VideoControllerAsync是VideoController的异步版本，可以通过Promise获取部分播控命令的结果。不支持同时控制多个Video。 > **说明：** > > VideoControllerAsync提供命令执行结果。与VideoController相比，[start](arkts-arkui-videocontroller-c.md#start)、 > [pause](arkts-arkui-videocontroller-c.md#pause)、[stop](arkts-arkui-videocontroller-c.md#stop)、[reset](#reset)等播 > 放控制命令为异步执行，请求后立即返回不阻塞当前线程，可通过Promise的then和catch方法处理命令执行结果。
+VideoControllerAsync是VideoController的异步版本，可以通过Promise获取部分播控命令的结果。不支持同时控制多个Video。 &gt; **说明：** &gt; &gt; VideoControllerAsync提供命令执行结果。与VideoController相比，[start](arkts-arkui-videocontroller-c.md#start)、 &gt; [pause](arkts-arkui-videocontroller-c.md#pause)、[stop](arkts-arkui-videocontroller-c.md#stop)、[reset](#reset)等播 &gt; 放控制命令为异步执行，请求后立即返回不阻塞当前线程，可通过Promise的then和catch方法处理命令执行结果。
 
 ## 导入对象 ```ts let controllerAsync: VideoControllerAsync = new VideoControllerAsync(); ```
 
@@ -81,7 +81,7 @@ pause(): Promise<void>
 requestFullscreen(value: boolean)
 ```
 
-请求全屏播放。未通过该接口设置时，默认不请求全屏播放。 > **说明：** > > Video组件自带的全屏功能仅将视频内容设为全屏，显示默认控制器，无法显示自定义标题或控制器。如需其他功能，用户需自行实现全屏功能。
+请求全屏播放。未通过该接口设置时，默认不请求全屏播放。 &gt; **说明：** &gt; &gt; Video组件自带的全屏功能仅将视频内容设为全屏，显示默认控制器，无法显示自定义标题或控制器。如需其他功能，用户需自行实现全屏功能。
 
 **起始版本：** 26.0.0
 
@@ -129,7 +129,7 @@ reset(): Promise<void>
 setCurrentTime(value: double, seekMode?: SeekMode)
 ```
 
-指定视频播放的进度位置，可以指定跳转模式。 > **说明：** > > 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
+指定视频播放的进度位置，可以指定跳转模式。 &gt; **说明：** &gt; &gt; 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
 
 **起始版本：** 26.0.0
 

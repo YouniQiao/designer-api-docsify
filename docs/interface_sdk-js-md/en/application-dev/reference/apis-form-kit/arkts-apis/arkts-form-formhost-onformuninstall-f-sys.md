@@ -26,7 +26,7 @@ Listens to the event of uninstall form. You can use this method to listen to the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | The callback of formUninstall. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | The callback of formUninstall. |
 
 **Error codes:**
 

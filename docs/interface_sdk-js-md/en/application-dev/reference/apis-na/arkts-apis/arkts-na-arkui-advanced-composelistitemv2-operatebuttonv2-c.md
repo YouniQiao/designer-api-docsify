@@ -37,7 +37,7 @@ The constructor of OperateButtonV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OperateButtonV2Options](arkts-na-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | No | The options of OperateButtonV2 |
+| options | [OperateButtonV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | No | The options of OperateButtonV2 |
 
 ## accessibilityDescription
 

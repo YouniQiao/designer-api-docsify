@@ -35,7 +35,7 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) | Routing configuration of the current page. <br> **undefined** is returned when the page is not configured through the route table. |
+| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) \| undefined | Routing configuration of the current page. <br> **undefined** is returned when the page is not configured through the route table. |
 
 ## mode
 

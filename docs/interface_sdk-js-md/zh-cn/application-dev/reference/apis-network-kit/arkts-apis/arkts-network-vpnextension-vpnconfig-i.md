@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## addresses

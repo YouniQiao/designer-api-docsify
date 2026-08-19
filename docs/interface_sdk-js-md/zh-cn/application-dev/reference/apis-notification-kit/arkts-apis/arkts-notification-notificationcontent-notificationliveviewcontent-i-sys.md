@@ -108,7 +108,7 @@ status: LiveViewStatus
 version?: int
 ```
 
-通知版本号（如果数据库存储版本号为0xffffffff，则本次更新和结束不校验版本号大小，否则需要校验本次版本号>数据库存储版本号）。不填默认为0xffffffff。
+通知版本号（如果数据库存储版本号为0xffffffff，则本次更新和结束不校验版本号大小，否则需要校验本次版本号&gt;数据库存储版本号）。不填默认为0xffffffff。
 
 **类型：** int
 

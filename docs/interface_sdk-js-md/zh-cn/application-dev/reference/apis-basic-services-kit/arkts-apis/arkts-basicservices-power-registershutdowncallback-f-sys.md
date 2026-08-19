@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## registerShutdownCallback
@@ -27,7 +28,7 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示重启；返回false表示关机。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回true表示重启；返回false表示关机。 |
 
 **错误码：**
 

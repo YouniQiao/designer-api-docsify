@@ -15,5 +15,6 @@
 ## 导入模块
 
 ```TypeScript
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 

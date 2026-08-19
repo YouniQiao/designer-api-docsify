@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { WithEnv, WithEnvAttribute} from '@kit.ArkUI';
 ```
 
 ## customEnv

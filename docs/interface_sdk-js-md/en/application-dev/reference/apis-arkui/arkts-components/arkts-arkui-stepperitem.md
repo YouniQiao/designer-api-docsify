@@ -10,7 +10,7 @@ The **StepperItem** component represents a page component used within a Stepper 
 StepperItem()
 ```
 
-Creates a page component for the Stepper container. > **NOTE：**
+Creates a page component for the Stepper container. &gt; **NOTE：**
 
 **Since:** 8
 

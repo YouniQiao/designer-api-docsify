@@ -18,6 +18,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InputMethodExtraConfig } from '@kit.IMEKit';
 ```
 
 ## 汇总

@@ -11,6 +11,11 @@ WebContextMenuResult是ArkWeb组件中用于处理上下文菜单（长按页面
 ## 导入模块
 
 ```TypeScript
+import { WebNetErrorList } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## closeContextMenu
@@ -19,7 +24,7 @@ WebContextMenuResult是ArkWeb组件中用于处理上下文菜单（长按页面
 closeContextMenu(): void
 ```
 
-不执行WebContextMenuResult其他接口操作时，需要调用此接口关闭菜单。 > **说明：** > > 调用说明： > > - 调用WebContextMenuResult的其他方法（如copy、paste、cut等）完成操作后，应调用此方法关闭菜单。 > > - 如果不再需要执行其他菜单操作，也应及时调用此方法关闭菜单。 > > - 未调用此方法可能导致菜单资源未正确释放。
+不执行WebContextMenuResult其他接口操作时，需要调用此接口关闭菜单。 &gt; **说明：** &gt; &gt; 调用说明： &gt; &gt; - 调用WebContextMenuResult的其他方法（如copy、paste、cut等）完成操作后，应调用此方法关闭菜单。 &gt; &gt; - 如果不再需要执行其他菜单操作，也应及时调用此方法关闭菜单。 &gt; &gt; - 未调用此方法可能导致菜单资源未正确释放。
 
 **起始版本：** 9
 
@@ -51,7 +56,7 @@ WebContextMenuResult的构造函数。
 copy(): void
 ```
 
-执行复制文本操作。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+执行复制文本操作。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 9
 
@@ -67,7 +72,7 @@ copy(): void
 copyImage(): void
 ```
 
-当WebContextMenuParam包含图片内容时，用于复制该图片到剪贴板，从API version 24开始支持对canvas图片进行复制。若需保存图片到本地文件，应使用saveImage()方法。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+当WebContextMenuParam包含图片内容时，用于复制该图片到剪贴板，从API version 24开始支持对canvas图片进行复制。若需保存图片到本地文件，应使用saveImage()方法。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 9
 
@@ -83,7 +88,7 @@ copyImage(): void
 cut(): void
 ```
 
-执行剪切操作。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+执行剪切操作。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 9
 
@@ -99,7 +104,7 @@ cut(): void
 paste(): void
 ```
 
-执行粘贴操作，保留原始格式。若需粘贴纯文本并匹配目标格式，应使用pasteAndMatchStyle()方法。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。 > > 需要配置权限： > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)。
+执行粘贴操作，保留原始格式。若需粘贴纯文本并匹配目标格式，应使用pasteAndMatchStyle()方法。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。 &gt; &gt; 需要配置权限： &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)。
 
 **起始版本：** 9
 
@@ -115,7 +120,7 @@ paste(): void
 pasteAndMatchStyle(): void
 ```
 
-执行与此上下文菜单相关的粘贴操作，粘贴的内容会匹配目标格式，以纯文本形式呈现。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。 > > 需要配置权限： > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)。
+执行与此上下文菜单相关的粘贴操作，粘贴的内容会匹配目标格式，以纯文本形式呈现。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。 &gt; &gt; 需要配置权限： &gt; [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)。
 
 **起始版本：** 20
 
@@ -129,7 +134,7 @@ pasteAndMatchStyle(): void
 redo(): void
 ```
 
-执行重做操作，重新执行被撤销的操作。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+执行重做操作，重新执行被撤销的操作。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 20
 
@@ -143,7 +148,7 @@ redo(): void
 requestPasswordAutoFill(): void
 ```
 
-请求密码保险箱中的用户名或密码数据自动填充到当前获得焦点的输入框中。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+请求密码保险箱中的用户名或密码数据自动填充到当前获得焦点的输入框中。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 23
 
@@ -157,7 +162,7 @@ requestPasswordAutoFill(): void
 saveImage(): void
 ```
 
-保存上下文菜单相关的图片，调用后将触发下载流程。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+保存上下文菜单相关的图片，调用后将触发下载流程。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 24
 
@@ -173,7 +178,7 @@ saveImage(): void
 selectAll(): void
 ```
 
-执行全选操作。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+执行全选操作。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 9
 
@@ -189,7 +194,7 @@ selectAll(): void
 undo(): void
 ```
 
-执行撤销操作，撤销上一次的编辑操作。 > **说明：** > > 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
+执行撤销操作，撤销上一次的编辑操作。 &gt; **说明：** &gt; &gt; 完成操作后，应调用[closeContextMenu](#closecontextmenu)关闭菜单，未调用可能导致菜单资源未正确释放。
 
 **起始版本：** 20
 

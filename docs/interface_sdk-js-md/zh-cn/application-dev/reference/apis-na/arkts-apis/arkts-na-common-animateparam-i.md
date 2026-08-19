@@ -38,7 +38,7 @@ curve?: Curve | string | ICurve
 delay?: int
 ```
 
-动画延迟播放时间，单位为ms(毫秒)，默认不延时播放。 默认值：0 取值范围：(-∞, +∞) **说明：**1.delay>=0为延迟播放，delay&lt;0表示提前播放。对于delay&lt;0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于 实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数。 2. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
+动画延迟播放时间，单位为ms(毫秒)，默认不延时播放。 默认值：0 取值范围：(-∞, +∞) **说明：**1.delay&gt;=0为延迟播放，delay&lt;0表示提前播放。对于delay&lt;0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于 实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数。 2. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
 
 **类型：** int
 
@@ -164,7 +164,7 @@ onFinish?: () => void
 playMode?: PlayMode
 ```
 
-动画播放模式，默认播放完成后从头开始播放。 默认值：PlayMode.Normal 相关使用约束请参考PlayMode说明。 > **PlayMode说明：** > > - PlayMode推荐使用PlayMode.Normal和PlayMode.Alternate，此场景下动画的第一轮是正向播放的。如使用PlayMode.Reverse和PlayMode.AlternateReverse，则动画 > 的第一轮是逆向播放的，在动画刚开始时会跳变到终止状态，然后逆向播放动画。 > > - 使用PlayMode.Alternate或PlayMode.AlternateReverse时，开发者应保证动画最终状态和状态变量的取值一致，即应保证动画的最后一轮是正向播放的。使用PlayMode.Alternate时， > iterations应为奇数。使用PlayMode.AlternateReverse时，iterations应为偶数。 > > - 不推荐使用PlayMode.Reverse，此场景下不仅会导致动画刚开始就跳变到终止状态，也会导致动画最终状态和状态变量的取值不同。
+动画播放模式，默认播放完成后从头开始播放。 默认值：PlayMode.Normal 相关使用约束请参考PlayMode说明。 &gt; **PlayMode说明：** &gt; &gt; - PlayMode推荐使用PlayMode.Normal和PlayMode.Alternate，此场景下动画的第一轮是正向播放的。如使用PlayMode.Reverse和PlayMode.AlternateReverse，则动画 &gt; 的第一轮是逆向播放的，在动画刚开始时会跳变到终止状态，然后逆向播放动画。 &gt; &gt; - 使用PlayMode.Alternate或PlayMode.AlternateReverse时，开发者应保证动画最终状态和状态变量的取值一致，即应保证动画的最后一轮是正向播放的。使用PlayMode.Alternate时， &gt; iterations应为奇数。使用PlayMode.AlternateReverse时，iterations应为偶数。 &gt; &gt; - 不推荐使用PlayMode.Reverse，此场景下不仅会导致动画刚开始就跳变到终止状态，也会导致动画最终状态和状态变量的取值不同。
 
 **类型：** [PlayMode](../../apis-arkui/arkts-apis/arkts-arkui-playmode-e.md)
 

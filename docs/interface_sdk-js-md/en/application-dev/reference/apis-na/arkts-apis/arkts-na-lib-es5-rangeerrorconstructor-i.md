@@ -31,8 +31,6 @@ new(message?: string): RangeError
 
 | Type | Description |
 | --- | --- |
-| RangeError |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(message?: string): RangeError
 
 | Type | Description |
 | --- | --- |
-| RangeError |  |
-
 ## prototype
 
 ```TypeScript

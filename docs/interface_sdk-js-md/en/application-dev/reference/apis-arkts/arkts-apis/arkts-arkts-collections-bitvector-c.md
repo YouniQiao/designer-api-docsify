@@ -1,6 +1,6 @@
 # BitVector
 
-A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing. > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
+A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -190,7 +190,7 @@ Obtains bit values within a given range of this bit vector.
 
 | Type | Description |
 | --- | --- |
-| [BitVector](arkts-arkts-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [BitVector](../../apis-na/arkts-apis/arkts-na-collections-bitvector-c.md) | Bit vector containing the bit values obtained. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 

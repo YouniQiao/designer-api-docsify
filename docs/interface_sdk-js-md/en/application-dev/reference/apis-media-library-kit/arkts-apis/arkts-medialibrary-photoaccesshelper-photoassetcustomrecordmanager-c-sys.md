@@ -220,7 +220,7 @@ Get media asset custom record manager instance.
 
 | Type | Description |
 | --- | --- |
-| [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) | Returns media asset custom record manager instance if operation fails, return null. |
+| [PhotoAssetCustomRecordManager](arkts-medialibrary-photoaccesshelper-photoassetcustomrecordmanager-c-sys.md) \| null | Returns media asset custom record manager instance if operation fails, return null. |
 
 **Error codes:**
 

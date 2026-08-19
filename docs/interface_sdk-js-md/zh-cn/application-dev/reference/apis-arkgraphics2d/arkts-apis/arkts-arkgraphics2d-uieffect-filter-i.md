@@ -11,6 +11,7 @@ Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添�
 ## 导入模块
 
 ```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## blur

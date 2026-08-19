@@ -108,5 +108,5 @@ public setListItemOptions(value?: ListItemOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableListItem](arkts-na-listitem-extendablelistitem-c.md) |  |
 

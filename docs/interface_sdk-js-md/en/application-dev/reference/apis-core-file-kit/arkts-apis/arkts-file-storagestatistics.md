@@ -53,7 +53,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 | [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md) | Obtains the storage statistics of the specified user, in bytes. This API uses a promise to return the result. |
 | [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md) | Obtains the storage statistics of the specified user, in bytes. This API uses an asynchronous callback to return the result. |
 | [listUserdataDirInfo](arkts-corefile-storagestatistics-listuserdatadirinfo-f-sys.md) | Queries the space usage of the **\/data** directory on the user device. This API uses a promise to return the result. |
-| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md) | Reports the space usage of system applications or system services. This API uses a promise to return the result. > **NOTE：**> > If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an > application. |
+| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md) | Reports the space usage of system applications or system services. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; If the value of **flag** in **stats** is **false**, the value of **businessName** must be the bundle name of an &gt; application. |
 <!--DelEnd-->
 
 ### Interfaces

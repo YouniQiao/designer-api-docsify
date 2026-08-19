@@ -11,6 +11,7 @@ UserAgentBrandVersion是ArkWeb框架中用于配置User-Agent客户端提示信�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getBrand

@@ -23,5 +23,3 @@ new (): Int16Array
 
 | Type | Description |
 | --- | --- |
-| Int16Array |  |
-

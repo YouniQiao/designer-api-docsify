@@ -40,7 +40,7 @@ constructor(lineHeight: LengthMetrics)
 constructor(lineHeight: LengthMetrics, lineHeightMultiple: double)
 ```
 
-文本行高及倍数的构造函数。 > **说明：** > > - lineHeightMultiple与lineHeight或 > [LineSpacingStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#linespacingstyle)同时设置 > 时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积。 > > - lineHeightMultiple小于0或undefined时不生效，使用lineHeight和 > [LineSpacingStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#linespacingstyle)设置行高和 > 行间距。 > > - lineHeightMultiple等于0时等效于设置为1。
+文本行高及倍数的构造函数。 &gt; **说明：** &gt; &gt; - lineHeightMultiple与lineHeight或 &gt; [LineSpacingStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#linespacingstyle)同时设置 &gt; 时，仅lineHeightMultiple生效，行高为该行最高字体高度与倍数的乘积。 &gt; &gt; - lineHeightMultiple小于0或undefined时不生效，使用lineHeight和 &gt; [LineSpacingStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#linespacingstyle)设置行高和 &gt; 行间距。 &gt; &gt; - lineHeightMultiple等于0时等效于设置为1。
 
 **起始版本：** 26.0.0
 

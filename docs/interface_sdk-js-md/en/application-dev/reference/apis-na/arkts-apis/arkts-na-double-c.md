@@ -220,7 +220,7 @@ Compares this instance to other Double object The result is less than 0 if this 
 
 | Type | Description |
 | --- | --- |
-| int | if the cur value > the other reutrn 0,otherwise return -1 |
+| int | if the cur value &gt; the other reutrn 0,otherwise return -1 |
 
 ## constructor
 
@@ -744,7 +744,7 @@ Performs floating point multiplication of this instance with provided one, retur
 static parseFloat(s: string): double
 ```
 
-parseFloat(String) converts std.core.String to double If arg is '+Infinity', 'Infinity' or '-Infinity', return value is `inf` or `-inf` respectively. If arg is '+0' or '-0', return value is 0 or -0. If arg has leading zeroes, it's ignored: '0001.5' -> 1.5, '-0001.5' -> -1.5 If arg starts from '.', leading zero is implied: '.5' -> 0.5, '-.5' -> -0.5 If arg successfully parsed, trailing non-digits ignored: '-.6ffg' -> -0.6 If arg can not be parsed into a number, NaN is returned
+parseFloat(String) converts std.core.String to double If arg is '+Infinity', 'Infinity' or '-Infinity', return value is `inf` or `-inf` respectively. If arg is '+0' or '-0', return value is 0 or -0. If arg has leading zeroes, it's ignored: '0001.5' -&gt; 1.5, '-0001.5' -&gt; -1.5 If arg starts from '.', leading zero is implied: '.5' -&gt; 0.5, '-.5' -&gt; -0.5 If arg successfully parsed, trailing non-digits ignored: '-.6ffg' -&gt; -0.6 If arg can not be parsed into a number, NaN is returned
 
 **Since:** 24
 
@@ -804,7 +804,7 @@ parseInt(String) parses from String an integer of radix 10
 static parseInt(s: string, r: int): double
 ```
 
-parseInt(String, int) parses from String an integer of specified radix If args ('10', 1) -> thrown ArgumentOutOfRangeError, ('10', 37) -> thrown ArgumentOutOfRangeError If args ('10', 2) -> 2 If args ('10', 10) -> 10, ('10', 0) -> 10 If args ('ff', 16) -> 255 etc.
+parseInt(String, int) parses from String an integer of specified radix If args ('10', 1) -&gt; thrown ArgumentOutOfRangeError, ('10', 37) -&gt; thrown ArgumentOutOfRangeError If args ('10', 2) -&gt; 2 If args ('10', 10) -&gt; 10, ('10', 0) -&gt; 10 If args ('ff', 16) -&gt; 255 etc.
 
 **Since:** 24
 
@@ -835,7 +835,7 @@ parseInt(String, int) parses from String an integer of specified radix If args (
 static parseInt(s: string, r: double): double
 ```
 
-parseInt(String, double) parses from String an integer of specified radix If args ('10', 1) -> thrown ArgumentOutOfRangeError, ('10', 37) -> thrown ArgumentOutOfRangeError If args ('10', 2) -> 2 If args ('10', 10) -> 10, ('10', 0) -> 10 If args ('ff', 16) -> 255 etc.
+parseInt(String, double) parses from String an integer of specified radix If args ('10', 1) -&gt; thrown ArgumentOutOfRangeError, ('10', 37) -&gt; thrown ArgumentOutOfRangeError If args ('10', 2) -&gt; 2 If args ('10', 10) -&gt; 10, ('10', 0) -&gt; 10 If args ('ff', 16) -&gt; 255 etc.
 
 **Since:** 24
 
@@ -1058,7 +1058,7 @@ toExponential() returns std.core.String representing the underlying double in ex
 public toExponentialWithNoDigit(): string
 ```
 
-toExponential(double) returns std.core.string representing the underlying double in exponential notation If d = new Double(0.25); d.toExponential(2) -> '2.50e-1' If d = new Double(0.25); d.toExponential(2.5) -> '2.50e-1' If d = new Double(0.25); d.toExponential(1) -> '2.5e-1' If d = new Double(12345.01); d.toExponential(10) -> '1.2345010000e+4' If d = new Double(NaN); d.toExponential(10) -> 'NaN'; If d = new Double(Double.POSITIVE_INFINITY); d.toExponential(10) -> 'Infinity'; '-Infinity' for negative
+toExponential(double) returns std.core.string representing the underlying double in exponential notation If d = new Double(0.25); d.toExponential(2) -&gt; '2.50e-1' If d = new Double(0.25); d.toExponential(2.5) -&gt; '2.50e-1' If d = new Double(0.25); d.toExponential(1) -&gt; '2.5e-1' If d = new Double(12345.01); d.toExponential(10) -&gt; '1.2345010000e+4' If d = new Double(NaN); d.toExponential(10) -&gt; 'NaN'; If d = new Double(Double.POSITIVE_INFINITY); d.toExponential(10) -&gt; 'Infinity'; '-Infinity' for negative
 
 **Since:** 26.0.0
 
@@ -1136,7 +1136,7 @@ toFixed(double) returns std.core.string representing the underlying double using
 public toFixedImpl(d: double): string
 ```
 
-toFixed(double) returns std.core.string representing the underlying double using fixed-point notation If d = new Double(0.1); d.toFixed(0) -> '0' If d = new Double(0.7); d.toFixed(0) -> '1' If d = new Double(0.12345); d.toFixed(1) -> '0.1' If d = new Double(0.12345); d.toFixed(3) -> '0.123' If d = new Double(Double.POSITIVE_INFINITY); d.toFixed(3) -> 'Infinity' If d = new Double(Double.NaN); d.toFixed(3) -> 'NaN' If d = new Double(0.25); d.toFixed(200) -> thrown ArgumentOutOfRangeError
+toFixed(double) returns std.core.string representing the underlying double using fixed-point notation If d = new Double(0.1); d.toFixed(0) -&gt; '0' If d = new Double(0.7); d.toFixed(0) -&gt; '1' If d = new Double(0.12345); d.toFixed(1) -&gt; '0.1' If d = new Double(0.12345); d.toFixed(3) -&gt; '0.123' If d = new Double(Double.POSITIVE_INFINITY); d.toFixed(3) -&gt; 'Infinity' If d = new Double(Double.NaN); d.toFixed(3) -&gt; 'NaN' If d = new Double(0.25); d.toFixed(200) -&gt; thrown ArgumentOutOfRangeError
 
 **Since:** 26.0.0
 
@@ -1390,7 +1390,7 @@ Returns the primitive as long value
 public toPrecision(d: double): string
 ```
 
-toPrecision(double) returns std.core.string representing the underlying double on the specified precision If d = new Double(0.25); d.toPrecision(4) -> '0.2500' If d = new Double(1.01); d.toPrecision(4.7) -> '1.010' If d = new Double(0.25); d.toPrecision(0) -> thrown ArgumentOutOfRangeError If d = new Double(12345.123455); d.toPrecision(10) -> '12345.12346'
+toPrecision(double) returns std.core.string representing the underlying double on the specified precision If d = new Double(0.25); d.toPrecision(4) -&gt; '0.2500' If d = new Double(1.01); d.toPrecision(4.7) -&gt; '1.010' If d = new Double(0.25); d.toPrecision(0) -&gt; thrown ArgumentOutOfRangeError If d = new Double(12345.123455); d.toPrecision(10) -&gt; '12345.12346'
 
 **Since:** 26.0.0
 

@@ -485,7 +485,7 @@ Unsubscribe input window hide event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method hides, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method hides, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
 ## offImeShow
 
@@ -509,9 +509,9 @@ Unsubscribe input window show event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method shows, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method shows, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
-## off_imeHide('imeHide')
+## off('imeHide')
 
 ```TypeScript
 off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
@@ -540,7 +540,7 @@ Unsubscribes from the soft keyboard hide event of the [input method panel](arkts
 inputMethod.getSetting().off('imeHide');
 ```
 
-## off_imeShow('imeShow')
+## off('imeShow')
 
 ```TypeScript
 off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
@@ -619,7 +619,7 @@ Subscribes to input window hidden events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method hides. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method hides. |
 
 **Error codes:**
 
@@ -649,7 +649,7 @@ Subscribes to input window show events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method shows. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method shows. |
 
 **Error codes:**
 
@@ -657,7 +657,7 @@ Subscribes to input window show events.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
-## on_imeHide('imeHide')
+## on('imeHide')
 
 ```TypeScript
 on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
@@ -694,7 +694,7 @@ inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>
 });
 ```
 
-## on_imeShow('imeShow')
+## on('imeShow')
 
 ```TypeScript
 on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void

@@ -29,5 +29,3 @@ new <K extends object, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>
 
 | Type | Description |
 | --- | --- |
-| WeakMap&lt;K, V&gt; |  |
-

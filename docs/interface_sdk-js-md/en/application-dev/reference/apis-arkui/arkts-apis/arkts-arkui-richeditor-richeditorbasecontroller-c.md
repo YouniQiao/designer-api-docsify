@@ -70,7 +70,7 @@ Get caret offset from controller.
 
 | Type | Description |
 | --- | --- |
-| int |  |
+| int \| undefined |  |
 
 ## getCaretRect
 
@@ -94,7 +94,7 @@ Get CaretRect.
 
 | Type | Description |
 | --- | --- |
-| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) | Return the caret rect or undefined value. |
+| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) \| undefined | Return the caret rect or undefined value. |
 
 ## getLayoutManager
 
@@ -118,7 +118,7 @@ Get LayoutManager.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | Return the LayoutManager. |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined | Return the LayoutManager. |
 
 ## getPreviewText
 
@@ -142,7 +142,7 @@ Get PreviewText.
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | Return the PreviewText. |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) \| undefined | Return the PreviewText. |
 
 ## getTypingStyle
 
@@ -166,7 +166,7 @@ Get the typing text style.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) |  |
+| [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) \| undefined |  |
 
 ## isEditing
 
@@ -190,7 +190,7 @@ Judge whether is in editing state
 
 | Type | Description |
 | --- | --- |
-| boolean | true is editing state, false is non editing status |
+| boolean \| undefined | true is editing state, false is non editing status |
 
 ## scrollToVisible
 
@@ -242,7 +242,7 @@ Set caret offset.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean \| undefined |  |
 
 ## setSelection
 

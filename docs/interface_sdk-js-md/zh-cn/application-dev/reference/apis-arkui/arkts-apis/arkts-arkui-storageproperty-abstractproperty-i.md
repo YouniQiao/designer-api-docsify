@@ -50,8 +50,6 @@ info(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  |
-
 ## onChange
 
 ```TypeScript

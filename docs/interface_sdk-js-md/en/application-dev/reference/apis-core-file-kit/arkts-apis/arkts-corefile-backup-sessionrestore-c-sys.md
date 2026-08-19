@@ -177,7 +177,7 @@ Append new bundles to be restore up during the restore.
 | --- | --- | --- | --- |
 | remoteCapabilitiesFd | int | Yes | Opened JSON file that stores remote device capabilities. You can use the getLocalCapabilities method to obtain the value. |
 | bundlesToBackup | string[] | Yes | Bundles to restore. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
 
 **Error codes:**
 
@@ -808,7 +808,7 @@ Request to get a shared file from the service. This interface is part of the zer
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when getFileHandle has finished. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback to be called when getFileHandle has finished. |
 
 **Error codes:**
 
@@ -1261,7 +1261,7 @@ Publish the file handle to the backup service to make the service aware that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Make sure that the backup framework holds this file by calling getFileHandle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when publishFile has finished. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback to be called when publishFile has finished. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function deleteVlanIp(ifName: string, vlanId: int, address: LinkAddress): Promise<void>
 ```
 
-Deletes the configured IP address and subnet mask from the VLAN specified by **vlanId** on an Ethernet NIC. This API uses a promise to return the result. > **NOTE：**> > - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this > API is called.
+Deletes the configured IP address and subnet mask from the VLAN specified by **vlanId** on an Ethernet NIC. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this &gt; API is called.
 
 **Since:** 23
 

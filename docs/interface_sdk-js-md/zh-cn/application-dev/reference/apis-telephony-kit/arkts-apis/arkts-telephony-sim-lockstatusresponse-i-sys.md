@@ -13,6 +13,7 @@ Defines the personalized lock information.
 ## 导入模块
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## remain

@@ -19,7 +19,7 @@ Defines TextPickerDialog which uses show method to show TextPicker dialog.
 static show(options?: TextPickerDialogOptions)
 ```
 
-定义文本滑动选择器弹窗并弹出。 > **说明：** > > 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [showTextPickerDialog](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#showtextpickerdialog)来明确UI的执行上下文。
+定义文本滑动选择器弹窗并弹出。 &gt; **说明：** &gt; &gt; 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [showTextPickerDialog](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#showtextpickerdialog)来明确UI的执行上下文。
 
 **起始版本：** 8
 

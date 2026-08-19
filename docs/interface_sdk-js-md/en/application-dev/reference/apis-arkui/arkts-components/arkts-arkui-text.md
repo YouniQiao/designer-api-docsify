@@ -37,7 +37,7 @@ Defines the constructor of Text.
 | --- | --- |
 | [TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md) | Describes the initialization options of the **Marquee** component. |
 | [TextOptions](arkts-arkui-textoptions-i.md) | Describes the initialization options of the **Text** component. |
-| [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Defines the configuration object for text overflow behavior. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Defines the configuration object for text overflow behavior. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Enums
 
@@ -46,6 +46,6 @@ Defines the constructor of Text.
 | [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md) | Enumerates the marquee scrolling modes. |
 | [MarqueeState](arkts-arkui-marqueestate-e.md) | Enumerates the return values of the marquee state callback. |
 | [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md) | Sets the scrolling policy of the marquee after its attributes are updated. |
-| [TextResponseType](arkts-arkui-textresponsetype-e.md) | Response type of the menu. > **NOTE：**> > The system follows the priority order below when determining the menu type to display during text interactions: > |
-| [TextSpanType](arkts-arkui-textspantype-e.md) | Provides the span type information. > **NOTE：**> > The system follows the priority order below when determining the menu type to display during text interactions: > |
+| [TextResponseType](arkts-arkui-textresponsetype-e.md) | Response type of the menu. &gt; **NOTE：**&gt; &gt; The system follows the priority order below when determining the menu type to display during text interactions: &gt; |
+| [TextSpanType](arkts-arkui-textspantype-e.md) | Provides the span type information. &gt; **NOTE：**&gt; &gt; The system follows the priority order below when determining the menu type to display during text interactions: &gt; |
 

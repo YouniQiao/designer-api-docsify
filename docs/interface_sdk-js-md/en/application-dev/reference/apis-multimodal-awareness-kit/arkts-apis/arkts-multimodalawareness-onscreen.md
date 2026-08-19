@@ -1,6 +1,6 @@
 # @ohos.multimodalAwareness.onScreen
 
-This module provides the onscreen awareness capability. > **NOTE：**>
+This module provides the onscreen awareness capability. &gt; **NOTE：**&gt;
 
 **Since:** 23
 

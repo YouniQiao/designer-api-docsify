@@ -251,7 +251,7 @@ Returns the first value associated to the given search parameter.
 
 | Type | Description |
 | --- | --- |
-| string | Returns the first value found by name. If no value is found, null is returned. |
+| string \| null | Returns the first value found by name. If no value is found, null is returned. |
 
 **Examples**
 

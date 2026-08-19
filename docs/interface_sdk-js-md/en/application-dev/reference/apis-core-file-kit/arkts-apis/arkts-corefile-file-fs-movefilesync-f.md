@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function moveFileSync(src: string, dest: string, mode?: number): void
 ```
 
-Moves a file. This API returns the result synchronously. > **NOTE：**> > This API is not supported in a distributed directory.
+Moves a file. This API returns the result synchronously. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
 
 **Since:** 9
 

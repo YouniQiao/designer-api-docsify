@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总
@@ -23,7 +24,7 @@
 | [dump](arkts-performanceanalysis-jsleakwatcher-dump-f.md) | 导出泄漏列表和虚拟机内存快照。 |
 | [enable](arkts-performanceanalysis-jsleakwatcher-enable-f.md) | 使能ArkTS对象泄漏检测，默认关闭。开启后会收集泄漏信息，可能增加性能开销。 |
 | [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md) | 使能ArkTS对象泄漏检测。 此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁。 |
-| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md) | 使能ArkTS对象泄漏检测。 此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁；通过configs可配置项参数，自定义设置监测项各属性，相比较之前极大提升了泄漏检测性能。 > **注意** > > 当前jsLeakWatcher泄漏检测性能开销较大，会导致应用卡顿，建议增大检测间隔时间，减少卡顿频率。 |
+| [enableLeakWatcher](arkts-performanceanalysis-jsleakwatcher-enableleakwatcher-f.md) | 使能ArkTS对象泄漏检测。 此接口通过一次调用即可检测ArkTS对象的内存泄漏，比之前需要调用四个函数（enable、watch、check、dump）的方法更加简洁；通过configs可配置项参数，自定义设置监测项各属性，相比较之前极大提升了泄漏检测性能。 &gt; **注意** &gt; &gt; 当前jsLeakWatcher泄漏检测性能开销较大，会导致应用卡顿，建议增大检测间隔时间，减少卡顿频率。 |
 | [watch](arkts-performanceanalysis-jsleakwatcher-watch-f.md) | 注册待检测泄漏的对象。 |
 
 ### 接口

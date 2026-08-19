@@ -37,13 +37,13 @@ Obtains a Normalizer object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](arkts-na-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
+| mode | [NormalizerMode](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Normalizer](arkts-na-i18n-normalizer-c.md) | Normalizer object for text normalization. |
+| [Normalizer](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizer-c.md) | Normalizer object for text normalization. |
 
 **Error codes:**
 

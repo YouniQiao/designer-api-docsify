@@ -1,6 +1,6 @@
 # PathIterator
 
-Implements a path operation iterator. You can read path operation instructions by traversing the iterator. > **NOTE：**> > - The initial APIs of this class are supported since API version 18. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Implements a path operation iterator. You can read path operation instructions by traversing the iterator. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 18. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ Retrieves the next operation in this path and moves the iterator to that operati
 
 | Type | Description |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | Returns the next verb in this iterator's path. |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) \| undefined | Returns the next verb in this iterator's path. |
 
 **Error codes:**
 
@@ -158,5 +158,5 @@ Retrieves the next operation in this path, without moving the iterator.
 
 | Type | Description |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | Returns the next verb in the iteration. |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) \| undefined | Returns the next verb in the iteration. |
 

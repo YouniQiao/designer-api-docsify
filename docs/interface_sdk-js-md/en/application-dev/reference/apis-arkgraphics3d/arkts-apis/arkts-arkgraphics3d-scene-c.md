@@ -34,7 +34,7 @@ Clones a node in the current scene. Cross-scene node cloning is not supported.
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the cloned node. If the operation fails, null is returned. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the cloned node. If the operation fails, null is returned. |
 
 **Examples**
 
@@ -167,7 +167,7 @@ Obtains the component instance from a node based on the component name.
 
 | Type | Description |
 | --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | SceneComponent object corresponding to the given name, or null if not found. |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) \| null | SceneComponent object corresponding to the given name, or null if not found. |
 
 **Examples**
 
@@ -211,7 +211,7 @@ Obtains the rendering context associated with the current graphics object.
 
 | Type | Description |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | Rendering context associated with the current object, or null if no rendering context is associated. |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) \| null | Rendering context associated with the current object, or null if no rendering context is associated. |
 
 **Examples**
 
@@ -254,7 +254,7 @@ Obtains a node by path.
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
 
 **Examples**
 

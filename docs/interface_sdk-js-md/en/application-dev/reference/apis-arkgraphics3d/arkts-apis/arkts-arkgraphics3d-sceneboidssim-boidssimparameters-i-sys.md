@@ -1,6 +1,6 @@
 # BoidsSimParameters (System API)
 
-Boids simulation parameters used to configure the behavioral attributes of each individual. > **NOTE：**> > A simulation frame refers to the update cycle executed at a fixed time step in the Boids simulation, similar to FixedUpdate in Unity. > The default time step is 16 ms (approximately 62.5 FPS). The simulation is driven by accumulating real time and consuming it in fixed steps. > The default values of some parameters below are calculated based on this time step: > - maxVelocityMag: 0.01 / 0.016 ≈ 0.625 (m/s). > - maxAccelerationMag: maxVelocityMag / 0.016 ≈ 39.06 (m/s²). > - maxTurnRate: π × 0.75 × 0.016 ≈ 0.0377 (rad/simulation frame).
+Boids simulation parameters used to configure the behavioral attributes of each individual. &gt; **NOTE：**&gt; &gt; A simulation frame refers to the update cycle executed at a fixed time step in the Boids simulation, similar to FixedUpdate in Unity. &gt; The default time step is 16 ms (approximately 62.5 FPS). The simulation is driven by accumulating real time and consuming it in fixed steps. &gt; The default values of some parameters below are calculated based on this time step: &gt; - maxVelocityMag: 0.01 / 0.016 ≈ 0.625 (m/s). &gt; - maxAccelerationMag: maxVelocityMag / 0.016 ≈ 39.06 (m/s²). &gt; - maxTurnRate: π × 0.75 × 0.016 ≈ 0.0377 (rad/simulation frame).
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Boids simulation parameters used to configure the behavioral attributes of each 
 alignmentDistance?: double
 ```
 
-Perception radius of the alignment rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the alignment force. Value >= 0. Default value: 0.0.
+Perception radius of the alignment rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the alignment force. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ Perception radius of the alignment rule. Unit is m. Neighboring individuals with
 alignmentWeight?: double
 ```
 
-Weight of the alignment rule. The intensity with which the individual steers toward the average heading of neighboring individuals within the alignmentDistance. Value >= 0. Default value: 0.0.
+Weight of the alignment rule. The intensity with which the individual steers toward the average heading of neighboring individuals within the alignmentDistance. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -56,7 +56,7 @@ Weight of the alignment rule. The intensity with which the individual steers tow
 boundaryDistance?: double
 ```
 
-Effective distance of the boundary constraint force. Unit is m. The individual is subject to a repulsive force when its distance to the boundary wall is within this distance. Value >= 0. Default value: 0.0.
+Effective distance of the boundary constraint force. Unit is m. The individual is subject to a repulsive force when its distance to the boundary wall is within this distance. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -116,7 +116,7 @@ Minimum corner of the axis-aligned bounding box that constrains the individual's
 boundaryWeight?: double
 ```
 
-Weight of the boundary constraint force. The intensity with which the individual is pushed back by the boundary wall within the boundaryDistance. Value >= 0. Default value: 0.0.
+Weight of the boundary constraint force. The intensity with which the individual is pushed back by the boundary wall within the boundaryDistance. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -136,7 +136,7 @@ Weight of the boundary constraint force. The intensity with which the individual
 cohesionDistance?: double
 ```
 
-Perception radius of the cohesion rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the cohesion force. Value >= 0. Default value: 0.0.
+Perception radius of the cohesion rule. Unit is m. Neighboring individuals within this distance (inclusive) contribute to the cohesion force. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -156,7 +156,7 @@ Perception radius of the cohesion rule. Unit is m. Neighboring individuals withi
 cohesionWeight?: double
 ```
 
-Weight of the cohesion rule. The intensity with which the individual is attracted toward the average position of neighboring individuals within the cohesionDistance. Value >= 0. Default value: 0.0.
+Weight of the cohesion rule. The intensity with which the individual is attracted toward the average position of neighboring individuals within the cohesionDistance. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -176,7 +176,7 @@ Weight of the cohesion rule. The intensity with which the individual is attracte
 gravityWeight?: double
 ```
 
-Attraction intensity of the attraction field on this individual. Value >= 0. Default value: 0.0.
+Attraction intensity of the attraction field on this individual. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -256,7 +256,7 @@ Initial velocity vector of each individual. Each component unit is m/s. Default 
 maxAccelerationMag?: double
 ```
 
-Maximum acceleration that the individual can reach per simulation frame. Unit is m/s². Value >= 0. Default value is approximately 39.06.
+Maximum acceleration that the individual can reach per simulation frame. Unit is m/s². Value &gt;= 0. Default value is approximately 39.06.
 
 **Type:** double
 
@@ -276,7 +276,7 @@ Maximum acceleration that the individual can reach per simulation frame. Unit is
 maxTurnRate?: Vec3
 ```
 
-Maximum turn rate per axis per simulation frame. Each component unit is rad/simulation frame. Each component value >= 0. Default value for each component is approximately 0.0377.
+Maximum turn rate per axis per simulation frame. Each component unit is rad/simulation frame. Each component value &gt;= 0. Default value for each component is approximately 0.0377.
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
@@ -296,7 +296,7 @@ Maximum turn rate per axis per simulation frame. Each component unit is rad/simu
 maxVelocityMag?: double
 ```
 
-Maximum velocity that the individual can reach per simulation frame. Unit is m/s. Value >= 0. Default value is approximately 0.625.
+Maximum velocity that the individual can reach per simulation frame. Unit is m/s. Value &gt;= 0. Default value is approximately 0.625.
 
 **Type:** double
 
@@ -316,7 +316,7 @@ Maximum velocity that the individual can reach per simulation frame. Unit is m/s
 repulsionWeight?: double
 ```
 
-Repulsion intensity of the repulsion field on this individual. Value >= 0. Default value: 0.0.
+Repulsion intensity of the repulsion field on this individual. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -336,7 +336,7 @@ Repulsion intensity of the repulsion field on this individual. Value >= 0. Defau
 separationDistance?: double
 ```
 
-Perception radius of the separation rule. Unit is m. Only neighboring individuals strictly within this distance contribute to the separation force (boundary force is 0). Value >= 0. Default value: 0.0.
+Perception radius of the separation rule. Unit is m. Only neighboring individuals strictly within this distance contribute to the separation force (boundary force is 0). Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 
@@ -356,7 +356,7 @@ Perception radius of the separation rule. Unit is m. Only neighboring individual
 separationWeight?: double
 ```
 
-Weight of the separation rule. The intensity with which the individual is repelled by neighboring individuals within the separationDistance. Value >= 0. Default value: 0.0.
+Weight of the separation rule. The intensity with which the individual is repelled by neighboring individuals within the separationDistance. Value &gt;= 0. Default value: 0.0.
 
 **Type:** double
 

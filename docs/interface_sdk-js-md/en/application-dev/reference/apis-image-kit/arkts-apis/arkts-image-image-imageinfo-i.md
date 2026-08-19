@@ -132,7 +132,7 @@ Image size.
 stride: int
 ```
 
-Number of bytes from one row of pixels in memory to the next row of pixels in memory.stride >= region.size.width* 4
+Number of bytes from one row of pixels in memory to the next row of pixels in memory.stride &gt;= region.size.width* 4
 
 **Type:** int
 

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<SwiperAttribute> | AttributeModifi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## autoPlay
 
 ```TypeScript
@@ -58,8 +56,6 @@ autoPlay(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## autoPlay
 
 ```TypeScript
@@ -83,8 +79,6 @@ autoPlay(autoPlay: boolean | undefined, options: AutoPlayOptions | undefined): t
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## cachedCount
 
 ```TypeScript
@@ -107,8 +101,6 @@ cachedCount(value: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## cachedCount
 
 ```TypeScript
@@ -132,8 +124,6 @@ cachedCount(count: int | undefined, isShown: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## cachedCount
 
 ```TypeScript
@@ -157,8 +147,6 @@ cachedCount(count: int | undefined, options: CachedCountOptions | undefined): th
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## curve
 
 ```TypeScript
@@ -181,8 +169,6 @@ curve(value: Curve | string | ICurve | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## customContentTransition
 
 ```TypeScript
@@ -205,8 +191,6 @@ customContentTransition(transition: SwiperContentAnimatedTransition | undefined)
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## disableSwipe
 
 ```TypeScript
@@ -229,8 +213,6 @@ disableSwipe(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## displayArrow
 
 ```TypeScript
@@ -254,8 +236,6 @@ displayArrow(value: ArrowStyle | boolean | undefined, isHoverShow?: boolean | un
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## displayCount
 
 ```TypeScript
@@ -279,8 +259,6 @@ displayCount(value: int | string | SwiperAutoFill | ItemFillPolicy | undefined, 
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## displayMode
 
 ```TypeScript
@@ -303,8 +281,6 @@ displayMode(value: SwiperDisplayMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## duration
 
 ```TypeScript
@@ -327,8 +303,6 @@ duration(value: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## effectMode
 
 ```TypeScript
@@ -351,8 +325,6 @@ effectMode(value: EdgeEffect | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## ignoreHiddenItem
 
 ```TypeScript
@@ -375,8 +347,6 @@ ignoreHiddenItem(enabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## index
 
 ```TypeScript
@@ -399,8 +369,6 @@ index(value: int | Bindable<int> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## indicator
 
 ```TypeScript
@@ -423,8 +391,6 @@ indicator(indicator: IndicatorComponentController | DotIndicator | DigitIndicato
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## indicatorInteractive
 
 ```TypeScript
@@ -447,8 +413,6 @@ indicatorInteractive(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## interval
 
 ```TypeScript
@@ -471,8 +435,6 @@ interval(value: int | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## itemSpace
 
 ```TypeScript
@@ -495,8 +457,6 @@ itemSpace(value: double | string | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## loop
 
 ```TypeScript
@@ -519,8 +479,6 @@ loop(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## maintainVisibleContentPosition
 
 ```TypeScript
@@ -543,8 +501,6 @@ maintainVisibleContentPosition(enabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## nestedScroll
 
 ```TypeScript
@@ -567,8 +523,6 @@ nestedScroll(value: SwiperNestedScrollMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## nextMargin
 
 ```TypeScript
@@ -592,8 +546,6 @@ nextMargin(value: Length | undefined, ignoreBlank?: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAnimationEnd
 
 ```TypeScript
@@ -616,8 +568,6 @@ onAnimationEnd(event: OnSwiperAnimationEndCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onAnimationStart
 
 ```TypeScript
@@ -640,8 +590,6 @@ onAnimationStart(event: OnSwiperAnimationStartCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -664,8 +612,6 @@ onChange(event: Callback<int> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onContentDidScroll
 
 ```TypeScript
@@ -688,8 +634,6 @@ onContentDidScroll(handler: ContentDidScrollCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onContentWillScroll
 
 ```TypeScript
@@ -712,8 +656,6 @@ onContentWillScroll(handler: ContentWillScrollCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onGestureSwipe
 
 ```TypeScript
@@ -736,8 +678,6 @@ onGestureSwipe(event: OnSwiperGestureSwipeCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onScrollStateChanged
 
 ```TypeScript
@@ -760,8 +700,6 @@ onScrollStateChanged(event: Callback<ScrollState> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onSelected
 
 ```TypeScript
@@ -784,8 +722,6 @@ onSelected(event: Callback<int> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onUnselected
 
 ```TypeScript
@@ -808,8 +744,6 @@ onUnselected(event: Callback<int> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## pageFlipMode
 
 ```TypeScript
@@ -832,8 +766,6 @@ pageFlipMode(mode: PageFlipMode | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## prevMargin
 
 ```TypeScript
@@ -857,8 +789,6 @@ prevMargin(value: Length | undefined, ignoreBlank?: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setSwiperOptions
 
 ```TypeScript
@@ -881,8 +811,6 @@ setSwiperOptions(controller?: SwiperController): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## vertical
 
 ```TypeScript
@@ -905,5 +833,3 @@ vertical(value: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>
 ```
 
-Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API uses a promise to return the result. > **NOTE：**> > Currently, this API is available only for PCs.
+Sets extended attributes of the network specified by **netHandle** to indicate its security level. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Currently, this API is available only for PCs.
 
 **Since:** 20
 

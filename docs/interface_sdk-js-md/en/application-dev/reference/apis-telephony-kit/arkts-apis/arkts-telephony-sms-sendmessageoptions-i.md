@@ -38,7 +38,7 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 Callback used to return the SMS message delivery report. For details, see [IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md). This parameter is mandatory for sending an SMS message.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 Callback used to return the SMS message sending result. For details, see [ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md). This parameter is mandatory for sending an SMS message.
 
-**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
+**Type:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
 
 **Since:** 23
 

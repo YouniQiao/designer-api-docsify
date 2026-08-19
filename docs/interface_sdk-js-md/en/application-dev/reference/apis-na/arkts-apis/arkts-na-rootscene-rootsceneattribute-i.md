@@ -37,5 +37,3 @@ attributeModifier(modifier:
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

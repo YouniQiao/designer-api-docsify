@@ -97,7 +97,7 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 
 | Type | Description |
 | --- | --- |
-| RectResult | Relative position of the caret in the **RichEditor** component. |
+| RectResult \| undefined | Relative position of the caret in the **RichEditor** component. |
 
 ## getLayoutManager
 

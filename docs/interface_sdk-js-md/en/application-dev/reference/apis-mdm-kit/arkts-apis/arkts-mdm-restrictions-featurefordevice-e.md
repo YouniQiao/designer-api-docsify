@@ -398,7 +398,7 @@ Samba server capability, currently supported only on PC/2-in-1 devices.
 BACKUP_AND_RESTORE = 24
 ```
 
-Backup and restore capability. If this feature is disabled, the **Settings** > **System** > **Backup & Restore** and **Settings** > **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call [applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md) to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
+Backup and restore capability. If this feature is disabled, the **Settings** &gt; **System** &gt; **Backup & Restore** and **Settings** &gt; **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call [applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md) to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
 
 **Since:** 26.0.0
 

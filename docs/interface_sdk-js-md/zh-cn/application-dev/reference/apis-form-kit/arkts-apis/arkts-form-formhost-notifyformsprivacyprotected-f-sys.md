@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { formHost } from '@kit.FormKit';
 ```
 
 ## notifyFormsPrivacyProtected
@@ -33,7 +34,7 @@ function notifyFormsPrivacyProtected(
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 需要修改隐私保护的卡片标识列表。 |
 | isProtected | boolean | 是 | 表示卡片是否进行隐私保护状态。 <br>true: 表示卡片要进行隐私保护状态。 <br>false: 表示卡片不需要进行隐私保护状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当指定卡片设置隐私保护属性成功，error为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当指定卡片设置隐私保护属性成功，error为undefined，否则为错误对象。 |
 
 **错误码：**
 

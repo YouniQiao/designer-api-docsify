@@ -357,7 +357,7 @@ struct Index {
 popStyle(): void
 ```
 
-Restores the previous text style. > **NOTE：**> > This method must be called after [pushStyle()](#pushstyle). After it is called, > subsequently added text will use the text style before the pop operation. If the style stack is empty, the > textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) will be used as the default style.
+Restores the previous text style. &gt; **NOTE：**&gt; &gt; This method must be called after [pushStyle()](#pushstyle). After it is called, &gt; subsequently added text will use the text style before the pop operation. If the style stack is empty, the &gt; textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) will be used as the default style.
 
 **Since:** 23
 
@@ -410,7 +410,7 @@ struct Index {
 pushStyle(textStyle: TextStyle): void
 ```
 
-Applies a new style to the current text blob. > **NOTE：**> > When you update the style of the current text blob, all text added afterward will use this new style.
+Applies a new style to the current text blob. &gt; **NOTE：**&gt; &gt; When you update the style of the current text blob, all text added afterward will use this new style.
 
 **Since:** 23
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## vibrate
@@ -11,7 +12,7 @@
 function vibrate(duration: number, callback?: AsyncCallback<void>): void
 ```
 
-按照指定持续时间触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md) > 替代。
+按照指定持续时间触发马达振动。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md) &gt; 替代。
 
 **起始版本：** 8
 
@@ -30,7 +31,7 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | duration | number | 是 | 马达振动时长。单位：ms（毫秒）。取值范围：(0,1800000]区间的所有整数。由于实际产品厂商驱动对器件保护设计规格不同，不同设备实际最大振动时长会有差异。建议值：单次触发长振动一般建议 不超过10000（10秒），以最大化用户体验。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | 回调函数，当马达振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅触发振动不获取回调结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，当马达振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅触发振动不获取回调结果。 |
 
 **示例**
 
@@ -54,7 +55,7 @@ vibrator.vibrate(1000, (error: BusinessError) => {
 function vibrate(duration: number): Promise<void>
 ```
 
-按照指定持续时间触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
+按照指定持续时间触发马达振动。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
 
 **起始版本：** 8
 
@@ -100,7 +101,7 @@ vibrator.vibrate(1000).then(() => {
 function vibrate(effectId: EffectId): Promise<void>
 ```
 
-按照预置振动效果触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
+按照预置振动效果触发马达振动。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md)替代。
 
 **起始版本：** 8
 
@@ -146,7 +147,7 @@ vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
 function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 ```
 
-按照指定振动效果触发马达振动。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md) > 替代。
+按照指定振动效果触发马达振动。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md) &gt; 替代。
 
 **起始版本：** 8
 
@@ -165,7 +166,7 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | 是 | 预置的振动效果ID。字符串最大长度64，超出部分截取前64个字符。建议先通过 [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md)或 [vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md)查询是否支持。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | 回调函数，当马达振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅触发振动不获取回调结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，当马达振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅触发振动不获取回调结果。 |
 
 **示例**
 

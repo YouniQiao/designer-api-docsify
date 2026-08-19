@@ -48,7 +48,7 @@ Stores key-value pair data in the application memory. If the given key already e
 
 | Type | Description |
 | --- | --- |
-| T | Returns data if the creation or data acquisition from AppStorageV2 is successful; returns **undefined** otherwise. |
+| T \| undefined | Returns data if the creation or data acquisition from AppStorageV2 is successful; returns **undefined** otherwise. |
 
 **Examples**
 

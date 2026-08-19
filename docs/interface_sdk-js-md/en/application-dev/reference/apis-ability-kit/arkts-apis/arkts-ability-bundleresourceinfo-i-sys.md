@@ -1,6 +1,6 @@
 # BundleResourceInfo (System API)
 
-The module provides resource information of an application, such as the icon and label. The information can be obtained by calling getBundleResourceInfo . > **NOTE：**> > The APIs provided by this module are system APIs.
+The module provides resource information of an application, such as the icon and label. The information can be obtained by calling getBundleResourceInfo . &gt; **NOTE：**&gt; &gt; The APIs provided by this module are system APIs.
 
 **Since:** 23
 

@@ -13,6 +13,7 @@ KioskManager模块提供Kiosk模式管理能力，包括系统进入/退出Kiosk
 ## 导入模块
 
 ```TypeScript
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModi
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## points
 
 ```TypeScript
@@ -58,8 +56,6 @@ points(value: Array<ShapePoint> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setPolylineOptions
 
 ```TypeScript
@@ -82,8 +78,6 @@ setPolylineOptions(options?: PolylineOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

@@ -28,5 +28,3 @@ Equivalent to `propertyKey in target`.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

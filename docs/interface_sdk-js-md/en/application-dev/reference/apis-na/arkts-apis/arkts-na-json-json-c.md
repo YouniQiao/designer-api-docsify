@@ -38,13 +38,13 @@ Parses a JSON string to the specified Type
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | JSON string to parse |
-| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Target type for parsing |
+| type | [Type](arkts-na-util-type-e.md) | Yes | Target type for parsing |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Parsed object |
+| T \| null \| undefined | Parsed object |
 
 ## parse
 
@@ -71,14 +71,14 @@ Parses a JSON string to the specified Type with reviver function
 | --- | --- | --- | --- |
 | text | string | Yes | JSON string to parse |
 | reviver | ((key: string, value: Any) =&gt; Any) \| undefined | Yes | Function to transform values |
-| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Target type for parsing |
+| type | [Type](arkts-na-util-type-e.md) | Yes | Target type for parsing |
 | options | jsonx.ParseOptions | No | Parse options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | Parsed object |
+| T \| null \| undefined | Parsed object |
 
 ## parse
 
@@ -109,7 +109,7 @@ Parses a JSON string to the specified Class
 
 | Type | Description |
 | --- | --- |
-| T | Parsed object |
+| T \| null \| undefined | Parsed object |
 
 ## parse
 
@@ -143,7 +143,7 @@ Parses a JSON string to the specified Class with reviver function
 
 | Type | Description |
 | --- | --- |
-| T | Parsed object |
+| T \| null \| undefined | Parsed object |
 
 ## parseJsonArray
 

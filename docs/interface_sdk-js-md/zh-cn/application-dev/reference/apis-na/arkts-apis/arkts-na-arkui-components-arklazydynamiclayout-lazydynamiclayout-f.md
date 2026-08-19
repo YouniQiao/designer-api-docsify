@@ -31,7 +31,7 @@ export declare function LazyDynamicLayout (
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md) | 是 | 懒布局算法。 |
+| algorithm | [LazyLayoutAlgorithm](arkts-na-lazylayoutalgorithm-i.md) | 是 | 懒布局算法。 |
 | content_ | CustomBuilder | 是 |  |
 
 **返回值：**

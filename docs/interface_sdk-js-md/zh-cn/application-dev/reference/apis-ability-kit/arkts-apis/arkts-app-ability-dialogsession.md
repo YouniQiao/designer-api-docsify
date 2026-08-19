@@ -15,6 +15,7 @@ dialogSession模块用于支持系统应用弹框功能。
 ## 导入模块
 
 ```TypeScript
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## 汇总

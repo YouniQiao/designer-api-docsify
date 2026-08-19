@@ -145,17 +145,20 @@
 </div>
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">C API <span class="tree-count">(58)</span></summary>
+    <summary class="tree-section-label">C API <span class="tree-count">(74)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>头文件</summary>
 <ul class="tree-l2">
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-pixel-map-napi-h.md">image_pixel_map_napi.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-packer-mdk-h.md">image_packer_mdk.h</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-pixel-map-mdk-h.md">image_pixel_map_mdk.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-mdk-h.md">image_mdk.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-source-mdk-h.md">image_source_mdk.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-mdk-common-h.md">image_mdk_common.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-receiver-mdk-h.md">image_receiver_mdk.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-receiver-native-h.md">image_receiver_native.h</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-pixelmap-native-h.md">pixelmap_native.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-packer-native-h.md">image_packer_native.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-picture-native-h.md">picture_native.h</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-native-h.md">image_native.h</a></li>
@@ -173,8 +176,12 @@
 <li class="has-children"><details>
 <summary>结构体</summary>
 <ul class="tree-l2">
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-ohospixelmapinfo.md">OhosPixelMapInfo</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-imagepacker-opts-.md">ImagePacker_Opts_</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-imagepacker-native-.md">ImagePacker_Native_</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-ohospixelmapinfos.md">OhosPixelMapInfos</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-ohospixelmapcreateops.md">OhosPixelMapCreateOps</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativepixelmap-.md">NativePixelMap_</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-ohosimagerect.md">OhosImageRect</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-ohosimagecomponent.md">OhosImageComponent</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-imagenative-.md">ImageNative_</a></li>
@@ -194,6 +201,15 @@
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-imagereceivernative-.md">ImageReceiverNative_</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-imagereceivernative.md">OH_ImageReceiverNative</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-imagereceiveroptions.md">OH_ImageReceiverOptions</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmap-hdrstaticmetadata.md">OH_Pixelmap_HdrStaticMetadata</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmap-hdrdynamicmetadata.md">OH_Pixelmap_HdrDynamicMetadata</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmap-hdrgainmapmetadata.md">OH_Pixelmap_HdrGainmapMetadata</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmap-hdrmetadatavalue.md">OH_Pixelmap_HdrMetadataValue</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmapnative.md">OH_PixelmapNative</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-nativebuffer.md">OH_NativeBuffer</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-nativecolorspacemanager.md">OH_NativeColorSpaceManager</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmap-initializationoptions.md">OH_Pixelmap_InitializationOptions</a></li>
+<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-pixelmap-imageinfo.md">OH_Pixelmap_ImageInfo</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-imagepackernative.md">OH_ImagePackerNative</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-packingoptions.md">OH_PackingOptions</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-image-kit/c-apis/capi-image-nativemodule-oh-packingoptionsforsequence.md">OH_PackingOptionsForSequence</a></li>

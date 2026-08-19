@@ -1,6 +1,6 @@
 # @ohos.app.form.formInfo
 
-formInfo模块提供了卡片信息和状态等相关类型和枚举。 > **说明：** > > 当前页面仅包含本模块的系统接口，其他公共接口参见[@ohos.app.form.formInfo (formInfo)](#ohosappformforminfo)。
+formInfo模块提供了卡片信息和状态等相关类型和枚举。 &gt; **说明：** &gt; &gt; 当前页面仅包含本模块的系统接口，其他公共接口参见[@ohos.app.form.formInfo (formInfo)](#ohosappformforminfo)。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ formInfo模块提供了卡片信息和状态等相关类型和枚举。 > **说�
 ## 导入模块
 
 ```TypeScript
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## 汇总

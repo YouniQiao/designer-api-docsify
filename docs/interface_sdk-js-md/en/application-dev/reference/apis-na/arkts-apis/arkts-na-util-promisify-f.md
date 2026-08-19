@@ -11,7 +11,7 @@
 function promisify(original: Function): PromisifiedFunc
 ```
 
-Takes a function following the common error-first callback style, i.e taking an (err, value) => callback as the last argument, and return a function that returns promises.
+Takes a function following the common error-first callback style, i.e taking an (err, value) =&gt; callback as the last argument, and return a function that returns promises.
 
 **Since:** 23
 

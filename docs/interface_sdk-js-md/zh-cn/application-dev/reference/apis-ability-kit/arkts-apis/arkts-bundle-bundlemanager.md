@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -39,8 +40,8 @@
 | [getInstalledBundleList](arkts-ability-bundlemanager-getinstalledbundlelist-f.md) | 根据给定的bundleFlags获取系统中所有的BundleInfo。使用Promise异步回调。 |
 | [getLaunchWant](arkts-ability-bundlemanager-getlaunchwant-f.md) | 获取本应用[入口UIAbility](../../../quick-start/application-package-glossary.md#uiability)的Want参数。 |
 | [getPluginBundlePathForSelf](arkts-ability-bundlemanager-getpluginbundlepathforself-f.md) | 获取指定插件在当前[应用沙箱](../../../file-management/app-sandbox-directory.md)内的安装路径。 |
-| [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md) | 根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用callback异步回调。 > 说明： > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \\$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 > 关接口，来获取引用的资源。 |
-| [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md) | 根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用Promise异步回调。 > 说明： > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \\$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 > 关接口，来获取引用的资源。 |
+| [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md) | 根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用callback异步回调。 &gt; 说明： &gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \\$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。 |
+| [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md) | 根据给定的moduleName、abilityName和metadataName（module.json5中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串 。使用Promise异步回调。 &gt; 说明： &gt; &gt; 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \\$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相 &gt; 关接口，来获取引用的资源。 |
 | [getProfileByAbilitySync](arkts-ability-bundlemanager-getprofilebyabilitysync-f.md) | 以同步方法根据给定的moduleName、abilityName和metadataName（module.json5中 [metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串，返回对象为string数 组。 |
 | [getProfileByExtensionAbility](arkts-ability-bundlemanager-getprofilebyextensionability-f.md) | 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中 [metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用callback异步 回调。 |
 | [getProfileByExtensionAbility](arkts-ability-bundlemanager-getprofilebyextensionability-f.md) | 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中 [metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用Promise异步回 调。 |

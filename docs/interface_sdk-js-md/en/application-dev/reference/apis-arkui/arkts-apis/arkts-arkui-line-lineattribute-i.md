@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<LineAttribute> | AttributeModifier
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## endPoint
 
 ```TypeScript
@@ -58,8 +56,6 @@ endPoint(value: ShapePoint | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setLineOptions
 
 ```TypeScript
@@ -82,8 +78,6 @@ setLineOptions(options?: LineOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## startPoint
 
 ```TypeScript
@@ -106,8 +100,6 @@ startPoint(value: ShapePoint | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

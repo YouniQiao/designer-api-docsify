@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| ListItemAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ListItemAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

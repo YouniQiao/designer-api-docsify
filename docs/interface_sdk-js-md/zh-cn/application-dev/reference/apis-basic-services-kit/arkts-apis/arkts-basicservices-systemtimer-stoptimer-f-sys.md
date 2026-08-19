@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## stopTimer
@@ -26,7 +27,7 @@ function stopTimer(timer: long, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timer | long | 是 | 定时器的ID。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 

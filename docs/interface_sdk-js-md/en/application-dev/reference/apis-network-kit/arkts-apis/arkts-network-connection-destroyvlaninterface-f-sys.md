@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function destroyVlanInterface(ifName: string, vlanId: int): Promise<void>
 ```
 
-Deletes a VLAN specified by **vlanId** from a specified Ethernet NIC. This API uses a promise to return the result. > **NOTE：**> > - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this > API is called.
+Deletes a VLAN specified by **vlanId** from a specified Ethernet NIC. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; - Currently, this API supports only the PC. For other device types, the error code 2100002 is returned when this &gt; API is called.
 
 **Since:** 23
 

@@ -11,6 +11,7 @@ ContentItemV2构造函数的参数选项。
 ## 导入模块
 
 ```TypeScript
+import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
 ```
 
 ## description
@@ -61,7 +62,7 @@ iconStyle?: IconTypeV2
 
 左侧元素的图标类型。 默认不设置或设置为undefined时，不显示左侧图标资源。
 
-**类型：** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
+**类型：** [IconTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
 

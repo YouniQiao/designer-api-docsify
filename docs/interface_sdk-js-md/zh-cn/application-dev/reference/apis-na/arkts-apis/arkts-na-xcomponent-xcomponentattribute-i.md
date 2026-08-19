@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<XComponentAttribute> | AttributeMo
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableAnalyzer
 
 ```TypeScript
@@ -58,8 +56,6 @@ enableAnalyzer(enable: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableSecure
 
 ```TypeScript
@@ -82,8 +78,6 @@ enableSecure(isSecure: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableTransparentLayer
 
 ```TypeScript
@@ -106,8 +100,6 @@ enableTransparentLayer(enabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hdrBrightness
 
 ```TypeScript
@@ -130,8 +122,6 @@ hdrBrightness(brightness: double | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hdrBrightness
 
 ```TypeScript
@@ -155,8 +145,6 @@ hdrBrightness(brightness: double | undefined, type?: HdrType): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onDestroy
 
 ```TypeScript
@@ -179,8 +167,6 @@ onDestroy(event: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onLoad
 
 ```TypeScript
@@ -203,8 +189,6 @@ onLoad(callback: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setXComponentOptions
 
 ```TypeScript

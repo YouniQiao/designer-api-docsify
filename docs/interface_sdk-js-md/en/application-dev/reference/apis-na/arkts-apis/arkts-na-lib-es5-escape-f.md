@@ -29,5 +29,3 @@ Computes a new string in which certain characters have been replaced by a hexade
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

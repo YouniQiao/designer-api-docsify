@@ -26,7 +26,7 @@ Subscribes to the carrier call state changes and obtains the call number. This m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. <br>The application can obtain CCallState. <br> |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. <br>The application can obtain CCallState. <br> |
 | options | ObserverOptions | No | Event subscription parameters. |
 
 **Error codes:**

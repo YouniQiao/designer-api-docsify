@@ -69,7 +69,7 @@ Get DrawableDescriptor for the background.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of background. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| undefined | Return the DrawableDescriptor object of background. |
 
 ## getForeground
 
@@ -93,7 +93,7 @@ Get DrawableDescriptor for the foreground.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of foreground. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| undefined | Return the DrawableDescriptor object of foreground. |
 
 ## getMask
 
@@ -117,7 +117,7 @@ Get DrawableDescriptor for the mask.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of mask. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| undefined | Return the DrawableDescriptor object of mask. |
 
 ## getMaskClipPath
 

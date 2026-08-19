@@ -56,7 +56,7 @@ Get dragData from DragEvent.
 
 | Type | Description |
 | --- | --- |
-| [UnifiedData](arkts-na-unifieddata-t.md) | get dragData, undefined will be returned if the internal runtime environment is broken. |
+| [UnifiedData](arkts-na-unifieddata-t.md) \| undefined | get dragData, undefined will be returned if the internal runtime environment is broken. |
 
 **Error codes:**
 
@@ -279,7 +279,7 @@ Get dragData summary from DragEvent.
 
 | Type | Description |
 | --- | --- |
-| [Summary](arkts-na-summary-t.md) | get Summary Data, undefined will be returned if the internal runtime environment is broken. |
+| [Summary](arkts-na-summary-t.md) \| undefined | get Summary Data, undefined will be returned if the internal runtime environment is broken. |
 
 ## getVelocity
 
@@ -525,7 +525,7 @@ Request the drag data to be synchronized to caller, can be notified with the syn
 
 | Type | Description |
 | --- | --- |
-| string | The data key returned by system, which can be used as the identify of the request. |
+| string \| undefined | The data key returned by system, which can be used as the identify of the request. |
 
 **Error codes:**
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## constructTLSSocketInstance
@@ -40,7 +41,7 @@ let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 ```
 
-将TCPSocket升级为TLSSocket，创建并返回一个TLSSocket对象。 > **说明：** > > 需要确保TCPSocket已连接，并且当前已经没有传输数据，再调用constructTLSSocketInstance升级TLSSocket。当升级成功后，无需对TCPSocket对象调用close方法。
+将TCPSocket升级为TLSSocket，创建并返回一个TLSSocket对象。 &gt; **说明：** &gt; &gt; 需要确保TCPSocket已连接，并且当前已经没有传输数据，再调用constructTLSSocketInstance升级TLSSocket。当升级成功后，无需对TCPSocket对象调用close方法。
 
 **起始版本：** 12
 

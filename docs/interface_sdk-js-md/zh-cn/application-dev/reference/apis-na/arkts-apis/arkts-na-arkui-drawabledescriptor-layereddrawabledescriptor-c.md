@@ -1,8 +1,8 @@
 # LayeredDrawableDescriptor
 
-当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自 [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
+当传入资源id或name为包含前景和背景资源的json文件时，生成LayeredDrawableDescriptor对象。继承自 [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。 drawable.json位于项目工程entry/src/main/resources/base/media目录下。定义请参考：
 
-**继承/实现关系：** LayeredDrawableDescriptor extends [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**继承/实现关系：** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 23
 
@@ -43,9 +43,9 @@ LayeredDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| foreground | [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的前景图片选项。 |
-| background | [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的背景图片选项。 |
-| mask | [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的遮罩选项。 |
+| foreground | [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的前景图片选项。 |
+| background | [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的背景图片选项。 |
+| mask | [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 否 | 分层图标的遮罩选项。 |
 
 ## constructor
 
@@ -69,7 +69,7 @@ Creates a new LayeredDrawableDescriptor.
 getBackground(): DrawableDescriptor | undefined
 ```
 
-获取背景的DrawableDescriptor对象。 > **说明：** > > DrawableDescriptor对象通过[release](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
+获取背景的DrawableDescriptor对象。 &gt; **说明：** &gt; &gt; DrawableDescriptor对象通过[release](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
 
 **起始版本：** 23
 
@@ -85,7 +85,7 @@ getBackground(): DrawableDescriptor | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of background. |
+| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| undefined | Return the DrawableDescriptor object of background. |
 
 ## getForeground
 
@@ -93,7 +93,7 @@ getBackground(): DrawableDescriptor | undefined
 getForeground(): DrawableDescriptor | undefined
 ```
 
-获取前景的DrawableDescriptor对象。 > **说明：** > > DrawableDescriptor对象通过[release](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
+获取前景的DrawableDescriptor对象。 &gt; **说明：** &gt; &gt; DrawableDescriptor对象通过[release](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
 
 **起始版本：** 23
 
@@ -109,7 +109,7 @@ getForeground(): DrawableDescriptor | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of foreground. |
+| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| undefined | Return the DrawableDescriptor object of foreground. |
 
 ## getMask
 
@@ -117,7 +117,7 @@ getForeground(): DrawableDescriptor | undefined
 getMask(): DrawableDescriptor | undefined
 ```
 
-获取蒙版的DrawableDescriptor对象。 > **说明：** > > DrawableDescriptor对象通过[release](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
+获取蒙版的DrawableDescriptor对象。 &gt; **说明：** &gt; &gt; DrawableDescriptor对象通过[release](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
 
 **起始版本：** 23
 
@@ -133,7 +133,7 @@ getMask(): DrawableDescriptor | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of mask. |
+| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| undefined | Return the DrawableDescriptor object of mask. |
 
 ## getMaskClipPath
 

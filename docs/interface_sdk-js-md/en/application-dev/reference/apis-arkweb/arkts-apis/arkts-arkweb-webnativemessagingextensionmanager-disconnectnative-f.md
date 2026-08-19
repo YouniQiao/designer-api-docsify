@@ -28,7 +28,7 @@ Disconnects the connection of a specified web native message extension.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connectionId | number | Yes | Connection identifier, used to identify a Web native message extension connection, returned by the [connectNative](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectnative-f.md) method. After establishing the connection, it must be released through disconnectNative. A valid connection ID returned by connectNative must be used. |
+| connectionId | number | Yes | Connection identifier, used to identify a Web native message extension connection, returned by the [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md) method. After establishing the connection, it must be released through disconnectNative. A valid connection ID returned by connectNative must be used. |
 
 **Return value:**
 

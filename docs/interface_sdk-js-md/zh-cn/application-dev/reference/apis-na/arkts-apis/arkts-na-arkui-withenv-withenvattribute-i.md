@@ -62,7 +62,7 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this | WithEnvAttribute对象。 |
+| [WithEnvAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
 
 ## env
 
@@ -93,7 +93,7 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this | WithEnvAttribute对象。 |
+| [WithEnvAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
 
 ## setWithEnvOptions
 

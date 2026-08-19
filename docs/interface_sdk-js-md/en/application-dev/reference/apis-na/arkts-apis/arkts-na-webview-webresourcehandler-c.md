@@ -146,7 +146,7 @@ Pass response headers to intercepted requests.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | [WebSchemeHandlerResponse](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md) | Yes | Set response header to intercept. |
+| response | [WebSchemeHandlerResponse](arkts-na-webview-webschemehandlerresponse-c.md) | Yes | Set response header to intercept. |
 
 **Error codes:**
 

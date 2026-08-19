@@ -23,8 +23,6 @@ new(): Map<any, any>
 
 | Type | Description |
 | --- | --- |
-| Map&lt;any, any&gt; |  |
-
 ## constructor
 
 ```TypeScript
@@ -45,8 +43,6 @@ new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>
 
 | Type | Description |
 | --- | --- |
-| Map&lt;K, V&gt; |  |
-
 ## prototype
 
 ```TypeScript

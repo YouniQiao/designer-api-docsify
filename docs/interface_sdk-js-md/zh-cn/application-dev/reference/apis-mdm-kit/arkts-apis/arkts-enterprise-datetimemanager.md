@@ -1,6 +1,6 @@
 # @ohos.enterprise.dateTimeManager
 
-本模块提供系统时间管理能力。 > **说明：** > > 本模块接口仅对[MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)开放，需通过 > [enableAdmin](arkts-mdm-adminmanager-enableadmin-f-sys.md)接口将设备管理应用激活后调用。 > > 本模块接口均为系统接口。
+本模块提供系统时间管理能力。 &gt; **说明：** &gt; &gt; 本模块接口仅对[MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)开放，需通过 &gt; [enableAdmin](arkts-mdm-adminmanager-enableadmin-f-sys.md)接口将设备管理应用激活后调用。 &gt; &gt; 本模块接口均为系统接口。
 
 **起始版本：** 9
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## 汇总

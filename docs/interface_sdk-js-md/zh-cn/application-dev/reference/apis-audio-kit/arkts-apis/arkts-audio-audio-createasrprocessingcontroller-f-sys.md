@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createAsrProcessingController
@@ -103,7 +105,7 @@ Create ASR processing controller on one audio capturer.
 
 | 类型 | 说明 |
 | --- | --- |
-| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) | ASR Processing Controller, or null when an error happens. |
+| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) \| null | ASR Processing Controller, or null when an error happens. |
 
 **错误码：**
 

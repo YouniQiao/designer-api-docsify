@@ -13,6 +13,8 @@ Describes audio capturer configuration options that can capture microphone input
 ## 导入模块
 
 ```TypeScript
+import { audio } from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## capturerInfo

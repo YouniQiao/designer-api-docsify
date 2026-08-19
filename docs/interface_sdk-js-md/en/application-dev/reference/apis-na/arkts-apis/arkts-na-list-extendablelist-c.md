@@ -108,5 +108,5 @@ Set the List Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableList](arkts-na-list-extendablelist-c.md) |  |
 

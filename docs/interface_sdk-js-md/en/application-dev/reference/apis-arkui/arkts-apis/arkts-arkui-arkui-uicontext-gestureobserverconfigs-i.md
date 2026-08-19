@@ -25,7 +25,7 @@ actionPhases: Array<GestureActionPhase>
 
 Gesture event object.
 
-**Type:** Array&lt;[GestureActionPhase](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-gestureactionphase-e.md)&gt;
+**Type:** Array&lt;[GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
 
 **Since:** 20
 

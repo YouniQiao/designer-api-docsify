@@ -12,7 +12,7 @@ import { connection } from '@kit.NetworkKit';
 function reportNetConnected(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Reports the network availability to the network management module. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is used by the browser to connect to the portal network. After the network authentication is successful, > the browser reports the network connection success to the network management module. The network management > module then triggers network detection and updates the network status. > **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
+Reports the network availability to the network management module. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is used by the browser to connect to the portal network. After the network authentication is successful, &gt; the browser reports the network connection success to the network management module. The network management &gt; module then triggers network detection and updates the network status. &gt; **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
 
@@ -27,7 +27,7 @@ Reports the network availability to the network management module. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 

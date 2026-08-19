@@ -108,5 +108,5 @@ public setListOptions(options?: ListOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [ExtendableList](arkts-na-list-extendablelist-c.md) |  |
 

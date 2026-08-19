@@ -267,7 +267,7 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) \| undefined | object UIContext, or undefined when failed. |
 
 **错误码：**
 
@@ -480,7 +480,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode | The instance of FrameNode. |
+| FrameNode \| null | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -504,7 +504,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
 
 ## getComponentSnapshot
 
@@ -801,7 +801,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode | The instance of FrameNode. |
+| FrameNode \| null | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -831,7 +831,7 @@ getFrameNodeByUniqueId(id: int): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| FrameNode \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -855,7 +855,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](arkts-na-context-t.md) |  |
+| [Context](arkts-na-context-t.md) \| undefined |  |
 
 ## getId
 
@@ -927,7 +927,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext of the last focused UI instance or undefined if no one exists. |
 
 ## getLastForegroundUIContext
 
@@ -951,7 +951,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) \| undefined | The UIContext of the last foregrounded UI instance or undefined if no one exists |
 
 ## getMagnifier
 
@@ -1077,7 +1077,7 @@ getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| observer.NavigationInfo | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| observer.NavigationInfo \| undefined | The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1179,7 +1179,7 @@ getPageRootNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode | The root node of the corresponding page of the UIContext, or null if no root node exists. |
+| FrameNode \| null | The root node of the corresponding page of the UIContext, or null if no root node exists. |
 
 **错误码：**
 
@@ -1281,7 +1281,7 @@ getSharedLocalStorage(): LocalStorage | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LocalStorage](arkts-na-localstorage-localstorage-c.md) |  |
+| [LocalStorage](arkts-na-localstorage-localstorage-c.md) \| undefined |  |
 
 ## getSmartGestureController
 
@@ -1425,7 +1425,7 @@ getWindowId(): int | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Window id. If the current UIContext is unavailable, return undefined. |
+| int \| undefined | Window id. If the current UIContext is unavailable, return undefined. |
 
 ## getWindowName
 
@@ -1449,7 +1449,7 @@ getWindowName(): string | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string | The name of current window, or undefined if the window doesn't exist. |
+| string \| undefined | The name of current window, or undefined if the window doesn't exist. |
 
 ## getWindowWidthBreakpoint
 

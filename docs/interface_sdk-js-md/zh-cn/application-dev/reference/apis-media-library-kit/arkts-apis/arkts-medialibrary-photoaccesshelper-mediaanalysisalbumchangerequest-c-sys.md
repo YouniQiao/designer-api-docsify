@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -105,7 +106,7 @@ static createAnalysisAlbumRequest(
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) | 返回一个智慧相册变更句柄 |
+| [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md) \| null | 返回一个智慧相册变更句柄 |
 
 **错误码：**
 
@@ -125,7 +126,7 @@ static createAnalysisAlbumRequest(
     ): MediaAnalysisAlbumChangeRequest
 ```
 
-创建智慧相册的变更请求。 > **说明：**> > 相册名的参数规格如下： > > - 相册名字符串长度的取值范围为[1, 255]。 > > - 不允许出现非法英文字符，包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+创建智慧相册的变更请求。 &gt; **说明：**&gt; &gt; 相册名的参数规格如下： &gt; &gt; - 相册名字符串长度的取值范围为[1, 255]。 &gt; &gt; - 不允许出现非法英文字符，包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 23
 

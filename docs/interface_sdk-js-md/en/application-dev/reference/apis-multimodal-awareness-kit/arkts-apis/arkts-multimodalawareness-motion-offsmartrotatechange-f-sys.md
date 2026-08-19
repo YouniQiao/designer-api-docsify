@@ -28,7 +28,7 @@ Unsubscribe to smart rotate sensor event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SmartRotateEvent](arkts-multimodalawareness-motion-smartrotateevent-i-sys.md)&gt; | No | Callback used for smart rotate event unsubscription. <br> If this parameter is not specified, all callbacks of the smart rotate event are unsubscribed from. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SmartRotateEvent](arkts-multimodalawareness-motion-smartrotateevent-i-sys.md)&gt; | No | Callback used for smart rotate event unsubscription. <br> If this parameter is not specified, all callbacks of the smart rotate event are unsubscribed from. |
 
 **Error codes:**
 

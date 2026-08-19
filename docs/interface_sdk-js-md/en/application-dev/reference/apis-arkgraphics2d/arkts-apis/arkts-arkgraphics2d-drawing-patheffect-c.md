@@ -1,6 +1,6 @@
 # PathEffect
 
-Implements a path effect. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Implements a path effect. &gt; **NOTE：**&gt; &gt; - The initial APIs of this class are supported since API version 12. &gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ Creates a path effect by sequentially applying the inner effect and then the out
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect object. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
 
 ## createCornerPathEffect
 
@@ -124,7 +124,7 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect object. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
 
 **Error codes:**
 
@@ -190,7 +190,7 @@ Creates a PathEffect object that converts a path into a dotted line.
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect object. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
 
 **Error codes:**
 
@@ -252,7 +252,7 @@ Creates an effect that segments the path and scatters the segments in an irregul
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect object. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
 
 ## createPathDashEffect
 
@@ -316,7 +316,7 @@ Creates a dashed path effect based on the shape described by a path.
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect object. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
 
 **Error codes:**
 
@@ -376,5 +376,5 @@ Creates an overlay path effect based on two distinct path effects. Different fro
 
 | Type | Description |
 | --- | --- |
-| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | PathEffect object. |
+| [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| undefined | PathEffect object. |
 

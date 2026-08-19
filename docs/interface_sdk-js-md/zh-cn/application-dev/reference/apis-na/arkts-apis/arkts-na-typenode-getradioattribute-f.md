@@ -28,5 +28,5 @@ export function getRadioAttribute(node: FrameNode): RadioAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| RadioAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| RadioAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

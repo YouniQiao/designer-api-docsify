@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## getInputMethodAbility
@@ -51,5 +52,5 @@ function getInputMethodAbility(): InputMethodAbility | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法应用客户端。 |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) \| null | 输入法应用客户端。 |
 

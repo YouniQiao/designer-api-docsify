@@ -32,5 +32,3 @@ Determines whether an array includes a certain element, returning true or false 
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

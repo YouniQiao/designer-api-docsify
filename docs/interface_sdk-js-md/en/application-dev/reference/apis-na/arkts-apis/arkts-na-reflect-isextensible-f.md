@@ -27,5 +27,3 @@ Returns a value that indicates whether new properties can be added to an object.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-

@@ -11,6 +11,7 @@ CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onat
 ## 导入模块
 
 ```TypeScript
+import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
 ```
 
 ## onAtomicServiceRequestFailure

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -130,7 +131,7 @@ localServer.onConnect((connection: webSocket.WebSocketConnection) => {
 listAllConnections(): WebSocketConnection[]
 ```
 
-获取与服务端连接的所有客户端信息。 > **说明：** > > 该接口为异步调用，返回结果需通过await关键字等待异步操作完成，以确保正确获取到所有客户端连接信息。
+获取与服务端连接的所有客户端信息。 &gt; **说明：** &gt; &gt; 该接口为异步调用，返回结果需通过await关键字等待异步操作完成，以确保正确获取到所有客户端连接信息。
 
 **起始版本：** 23
 
@@ -254,7 +255,7 @@ offConnect(callback?: Callback<WebSocketConnection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -288,7 +289,7 @@ offMessageReceive(callback?: Callback<WebSocketMessage>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -355,7 +356,7 @@ offWebSocketServerError(callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -371,13 +372,13 @@ localServer.offWebSocketServerError(callback);
 localServer.offWebSocketServerError();
 ```
 
-## off_close('close')
+## off('close')
 
 ```TypeScript
 off(type: 'close', callback?: ClientConnectionCloseCallback): void
 ```
 
-取消订阅WebSocketServer的关闭事件，使用callback异步回调。 > **说明：** > > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅WebSocketServer的关闭事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
 
@@ -401,13 +402,13 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('close');
 ```
 
-## off_connect('connect')
+## off('connect')
 
 ```TypeScript
 off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 ```
 
-取消订阅WebSocketServer的连接事件（客户端与服务端建链成功），使用callback异步回调。 > **说明：** > > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅WebSocketServer的连接事件（客户端与服务端建链成功），使用callback异步回调。 &gt; **说明：** &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
 
@@ -420,7 +421,7 @@ off(type: 'connect', callback?: Callback<WebSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，当offconnect()调用完成，取消监听连接事件成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | 回调函数。连接的客户端信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 否 | 回调函数。连接的客户端信息。 |
 
 **示例**
 
@@ -431,13 +432,13 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('connect');
 ```
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-取消订阅WebSocketServer的Error事件，使用callback异步回调。 > **说明：** > > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅WebSocketServer的Error事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
 
@@ -450,7 +451,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当offerror()调用完成，取消订阅error事件成功。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。默认值：200。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。默认值：200。 |
 
 **示例**
 
@@ -461,13 +462,13 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('error');
 ```
 
-## off_messageReceive('messageReceive')
+## off('messageReceive')
 
 ```TypeScript
 off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 ```
 
-取消订阅WebSocketServer的接收到客户端消息事件，使用callback异步回调。 > **说明：** > > 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
+取消订阅WebSocketServer的接收到客户端消息事件，使用callback异步回调。 &gt; **说明：** &gt; &gt; 可以指定传入on中的callback取消一个订阅，也可以不指定callback清空所有订阅。
 
 **起始版本：** 19
 
@@ -480,7 +481,7 @@ off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当offmessageReceive()调用完成，取消订阅接收客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | 从指定客户端接收到的消息，包括客户端的信息和数据。 <br>- clientconnection：客户端信息。 <br>- data：客户端发送的消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 否 | 从指定客户端接收到的消息，包括客户端的信息和数据。 <br>- clientconnection：客户端信息。 <br>- data：客户端发送的消息。 |
 
 **示例**
 
@@ -510,7 +511,7 @@ onConnect(callback: Callback<WebSocketConnection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -543,7 +544,7 @@ onMessageReceive(callback: Callback<WebSocketMessage>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -606,7 +607,7 @@ onWebSocketServerError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -620,7 +621,7 @@ localServer.onWebSocketServerError((err: BusinessError) => {
 });
 ```
 
-## on_close('close')
+## on('close')
 
 ```TypeScript
 on(type: 'close', callback: ClientConnectionCloseCallback): void
@@ -652,7 +653,7 @@ localServer.on('close', (clientConnection: webSocket.WebSocketConnection, closeR
 });
 ```
 
-## on_connect('connect')
+## on('connect')
 
 ```TypeScript
 on(type: 'connect', callback: Callback<WebSocketConnection>): void
@@ -671,7 +672,7 @@ on(type: 'connect', callback: Callback<WebSocketConnection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，当onconnect()调用完成，客户端与服务端建链成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | 回调函数。连接的客户端信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | 是 | 回调函数。连接的客户端信息。 |
 
 **示例**
 
@@ -685,7 +686,7 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 });
 ```
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -704,7 +705,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当onerror()调用完成，error事件发生。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。 |
 
 **示例**
 
@@ -718,7 +719,7 @@ localServer.on('error', (err: BusinessError) => {
 });
 ```
 
-## on_messageReceive('messageReceive')
+## on('messageReceive')
 
 ```TypeScript
 on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
@@ -737,7 +738,7 @@ on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | 是 | 事件回调类型，支持的事件为'messageReceive'，当onmessageReceive()调用完成，接收到客户端消息成功。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | 回调函数。 <br>clientconnection:客户端信息，data:客户端发送的数据消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | 是 | 回调函数。 <br>clientconnection:客户端信息，data:客户端发送的数据消息。 |
 
 **示例**
 
@@ -756,7 +757,7 @@ localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
 send(data: string | ArrayBuffer, connection: WebSocketConnection): Promise<boolean>
 ```
 
-通过WebSocket连接发送数据。使用Promise异步回调。 > **说明：** > > send接口必须在监听到connect事件后才可以调用。
+通过WebSocket连接发送数据。使用Promise异步回调。 &gt; **说明：** &gt; &gt; send接口必须在监听到connect事件后才可以调用。
 
 **起始版本：** 23
 
@@ -874,7 +875,7 @@ localServer.onConnect((connection: webSocket.WebSocketConnection) => {
 start(config: WebSocketServerConfig): Promise<boolean>
 ```
 
-配置config参数，启动服务端service。使用Promise异步回调。 > **说明：** > > 在多次调用该接口时，应避免监听同一端口。
+配置config参数，启动服务端service。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 在多次调用该接口时，应避免监听同一端口。
 
 **起始版本：** 24
 

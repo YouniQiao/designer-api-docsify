@@ -13,6 +13,7 @@ AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchRea
 ## 导入模块
 
 ```TypeScript
+import { AbilityConstant } from '@kit.AbilityKit';
 ```
 
 ## 汇总

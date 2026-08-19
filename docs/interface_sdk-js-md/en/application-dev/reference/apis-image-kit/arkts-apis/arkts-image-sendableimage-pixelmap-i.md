@@ -456,7 +456,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.ImageInfo&gt; | A Promise instance used to return the image pixelmap information. If the operation fails, an error message is returned. |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | A Promise instance used to return the image pixelmap information. If the operation fails, an error message is returned. |
 
 **Examples**
 
@@ -498,7 +498,7 @@ Get image information from image source.
 
 | Type | Description |
 | --- | --- |
-| image.ImageInfo | the image information. |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) | the image information. |
 
 **Error codes:**
 

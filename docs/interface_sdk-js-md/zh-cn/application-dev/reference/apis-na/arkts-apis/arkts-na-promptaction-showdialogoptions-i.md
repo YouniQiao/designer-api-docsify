@@ -191,7 +191,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内对话框蒙层效果。 **说明：** - 默认值：ImmersiveMode.DEFAULT - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-na-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -235,7 +235,7 @@ levelMode?: LevelMode
 
 设置对话框显示层级。 **说明：** - 默认值：LevelMode.OVERLAY - 当且仅当showInSubWindow属性设置为false时生效。
 
-**类型：** [LevelMode](arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -257,7 +257,7 @@ levelOrder?: LevelOrder
 
 设置对话框显示的顺序。 **说明：** - 默认值：LevelOrder.clamp(0) - 不支持动态刷新顺序。
 
-**类型：** [LevelOrder](arkts-na-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md)
 
 **默认值：** The value returned by LevelOrder.clamp(0)
 
@@ -357,7 +357,7 @@ offset?: Offset
 onDidAppear?: VoidCallback
 ```
 
-对话框弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭对话框时，onWillDisappear在onDidAppear前生效。 4.对话框入场动效未完成时彻底关闭对话框，动效打断，onDidAppear不会触发。
+对话框弹出后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3.快速点击弹出，关闭对话框时，onWillDisappear在onDidAppear前生效。 4.对话框入场动效未完成时彻底关闭对话框，动效打断，onDidAppear不会触发。
 
 **类型：** VoidCallback
 
@@ -377,7 +377,7 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-对话框消失后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
+对话框消失后的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** VoidCallback
 
@@ -397,7 +397,7 @@ onDidDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-对话框显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。 2.在onWillAppear内设置改变对话框显示效果的回调事件，二次弹出生效。
+对话框显示动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2.在onWillAppear内设置改变对话框显示效果的回调事件，二次弹出生效。
 
 **类型：** VoidCallback
 
@@ -417,7 +417,7 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-对话框退出动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
+对话框退出动效前的事件回调。 **说明：** 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** VoidCallback
 

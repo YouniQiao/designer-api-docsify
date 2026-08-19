@@ -1,6 +1,6 @@
 # Map
 
-一种基于键值对存储的非线性数据结构，能够高效地通过唯一键来存取对应的值。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > 本节使用以下标识符来表示泛型的使用： - K：Key，键。 - V：Value，值。 K和V类型都需为 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器类型**：\@Sendable
+一种基于键值对存储的非线性数据结构，能够高效地通过唯一键来存取对应的值。 &gt; **说明：**&gt; &gt; - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 &gt; 本节使用以下标识符来表示泛型的使用： - K：Key，键。 - V：Value，值。 K和V类型都需为 [Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。 **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -239,7 +240,7 @@ get(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V | 与指定键相关联的元素，如果键在Map对象中找不到，则返回**undefined**。 |
+| V \| undefined | 与指定键相关联的元素，如果键在Map对象中找不到，则返回**undefined**。 |
 
 **错误码：**
 

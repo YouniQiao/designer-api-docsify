@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## installDLPSandbox
@@ -89,7 +90,7 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 | access | [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md) | 是 | DLP文件授权类型。设置不同的授权类型将决定用户对DLP文件的访问权限范围。 |
 | userId | number | 是 | 当前的用户ID，通过账号子系统获取的系统账号ID，默认主用户ID：100。<br>取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]，超出范围将被截断。当传入参数值小于0 时，输出错误日志。 |
 | uri | string | 是 | DLP文件的URI。不超过4095字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DLPSandboxInfo](arkts-dataprotection-dlppermission-dlpsandboxinfo-i-sys.md)&gt; | 是 | 回调函数。当安装DLP沙箱成功，err为undefined，data为获取到的沙箱信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPSandboxInfo](arkts-dataprotection-dlppermission-dlpsandboxinfo-i-sys.md)&gt; | 是 | 回调函数。当安装DLP沙箱成功，err为undefined，data为获取到的沙箱信息；否则为错误对象。 |
 
 **错误码：**
 

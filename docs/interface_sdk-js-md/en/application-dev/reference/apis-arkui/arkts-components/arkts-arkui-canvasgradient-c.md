@@ -77,7 +77,7 @@ struct AddColorStop {
 addColorStop(offset: number, color: string | ColorMetrics): void
 ```
 
-Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the ColorMetrics type, which can achieve richer color reproduction on devices that support high color gamut. > **NOTE：**> > Only the > fillStyle > and > strokeStyle > attributes of the > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) > object support the **CanvasGradient** object with the P3 wide color gamut. In addition, > the color gamut mode of the window where the **Canvas** component is located must be set > to wide color gamut mode **WIDE_GAMUT** via the > [setWindowColorSpace](../arkts-apis/arkts-arkui-window-window-i.md#setwindowcolorspace) > method.
+Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the ColorMetrics type, which can achieve richer color reproduction on devices that support high color gamut. &gt; **NOTE：**&gt; &gt; Only the &gt; fillStyle &gt; and &gt; strokeStyle &gt; attributes of the &gt; [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) &gt; object support the **CanvasGradient** object with the P3 wide color gamut. In addition, &gt; the color gamut mode of the window where the **Canvas** component is located must be set &gt; to wide color gamut mode **WIDE_GAMUT** via the &gt; [setWindowColorSpace](../arkts-apis/arkts-arkui-window-window-i.md#setwindowcolorspace) &gt; method.
 
 **Since:** 20
 

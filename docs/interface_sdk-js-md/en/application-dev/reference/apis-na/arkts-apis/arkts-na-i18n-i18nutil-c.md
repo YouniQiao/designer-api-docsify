@@ -320,8 +320,8 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
-| toUnit | [UnitInfo](arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | double | Yes | Value of the measurement unit to be converted. |
 | locale | string | Yes | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". |
 | style | string | No | Style used for formatting. The value can be long, short, or narrow. The default value is short. For details about the meaning or display effect of different values, see Number and Unit of Measurement Formatting. |

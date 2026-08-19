@@ -11,6 +11,7 @@ Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## alternateHeadroom

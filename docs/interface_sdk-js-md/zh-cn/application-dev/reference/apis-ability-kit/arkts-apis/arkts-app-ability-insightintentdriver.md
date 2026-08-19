@@ -1,6 +1,6 @@
 # @ohos.app.ability.insightIntentDriver
 
-本模块提供执行意图调用的能力，系统根据用户交互等信息执行意图调用。 > **说明：** > > 本模块从API version 20开始支持通过 > @InsightIntentLink > 装饰器定义的意图来实现应用跳转。
+本模块提供执行意图调用的能力，系统根据用户交互等信息执行意图调用。 &gt; **说明：** &gt; &gt; 本模块从API version 20开始支持通过 &gt; @InsightIntentLink &gt; 装饰器定义的意图来实现应用跳转。
 
 **起始版本：** 23
 
@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## 汇总

@@ -1,6 +1,6 @@
 # @ohos.multimedia.avMusicTemplate
 
-> **说明：** > > - 本模块仅适用于API version 23及以上版本的Car设备。
+> **说明：** &gt; &gt; - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **起始版本：** 23
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## 汇总

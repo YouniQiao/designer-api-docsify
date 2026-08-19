@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## call
@@ -451,13 +452,13 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off_release('release')
+## off('release')
 
 ```TypeScript
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[on('release')](#on_releaserelease)是反向操作，当前暂未支持。
+取消注册Callee UIAbility断开通知的监听，与[on('release')](#onrelease)是反向操作，当前暂未支持。
 
 **起始版本：** 9
 
@@ -512,13 +513,13 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off_release('release')
+## off('release')
 
 ```TypeScript
 off(type: 'release'): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[Caller.on('release')](#on_releaserelease)是反向操作，当前暂未支持。
+取消注册Callee UIAbility断开通知的监听，与[Caller.on('release')](#onrelease)是反向操作，当前暂未支持。
 
 **起始版本：** 9
 
@@ -694,7 +695,7 @@ export default class MainAbility extends UIAbility {
 }
 ```
 
-## on_release('release')
+## on('release')
 
 ```TypeScript
 on(type: 'release', callback: OnReleaseCallback): void

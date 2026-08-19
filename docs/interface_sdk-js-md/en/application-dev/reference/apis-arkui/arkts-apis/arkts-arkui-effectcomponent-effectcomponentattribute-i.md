@@ -37,8 +37,6 @@ attributeModifier(modifier: AttributeModifier<EffectComponentAttribute>
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setEffectComponentOptions
 
 ```TypeScript
@@ -61,5 +59,3 @@ setEffectComponentOptions(options?: EffectComponentOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-

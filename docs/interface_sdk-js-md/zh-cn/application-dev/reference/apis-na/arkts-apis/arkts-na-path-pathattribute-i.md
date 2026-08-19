@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<PathAttribute> | AttributeModifier
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## commands
 
 ```TypeScript
@@ -58,8 +56,6 @@ commands(value: ResourceStr | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setPathOptions
 
 ```TypeScript
@@ -82,8 +78,6 @@ setPathOptions(options?: PathOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## getTypeDescriptor
@@ -121,7 +122,7 @@ function getTypeDescriptor(typeId: string): TypeDescriptor | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) \| null | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
 
 **错误码：**
 

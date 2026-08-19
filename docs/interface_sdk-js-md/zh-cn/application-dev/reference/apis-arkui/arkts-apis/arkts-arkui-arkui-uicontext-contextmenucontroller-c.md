@@ -1,6 +1,6 @@
 # ContextMenuController
 
-class ContextMenuController 提供控制菜单关闭的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > - 以下API需先使用UIContext中的[getContextMenuController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方法获取 > ContextMenuController实例，再通过此实例调用对应方法。
+class ContextMenuController 提供控制菜单关闭的能力。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; - 以下API需先使用UIContext中的[getContextMenuController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方法获取 &gt; ContextMenuController实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -11,6 +11,10 @@ class ContextMenuController 提供控制菜单关闭的能力。 > **说明：**
 ## 导入模块
 
 ```TypeScript
+import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
+import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
+import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
+import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## close

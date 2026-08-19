@@ -37,8 +37,6 @@ Obtains a **TreeListenerManager** singleton object.
 
 | Type | Description |
 | --- | --- |
-| [TreeListenerManager](arkts-arkui-arkui-advanced-treeview-treelistenermanager-c.md) |  |
-
 ## getTreeListener
 
 ```TypeScript
@@ -61,5 +59,3 @@ Obtains a listener.
 
 | Type | Description |
 | --- | --- |
-| [TreeListener](arkts-arkui-arkui-advanced-treeview-treelistener-c.md) |  |
-

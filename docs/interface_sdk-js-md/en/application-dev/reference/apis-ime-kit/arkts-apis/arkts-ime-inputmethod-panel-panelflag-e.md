@@ -1,6 +1,6 @@
 # PanelFlag
 
-Enumerates the state types of the input method panel. > **NOTE：**> > Currently, only the **SOFT_KEYBOARD** panel is supported.
+Enumerates the state types of the input method panel. &gt; **NOTE：**&gt; &gt; Currently, only the **SOFT_KEYBOARD** panel is supported.
 
 **Since:** 23
 

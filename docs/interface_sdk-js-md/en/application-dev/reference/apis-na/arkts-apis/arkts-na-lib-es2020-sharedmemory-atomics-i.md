@@ -33,8 +33,6 @@ Adds a value to the value at the given position in the array, returning the orig
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## and
 
 ```TypeScript
@@ -59,8 +57,6 @@ Stores the bitwise AND of a value with the value at the given position in the ar
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## compareExchange
 
 ```TypeScript
@@ -86,8 +82,6 @@ Replaces the value at the given position in the array if the original value equa
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## exchange
 
 ```TypeScript
@@ -112,8 +106,6 @@ Replaces the value at the given position in the array, returning the original va
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## load
 
 ```TypeScript
@@ -137,8 +129,6 @@ Returns the value at the given position in the array. Until this atomic operatio
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## notify
 
 ```TypeScript
@@ -163,8 +153,6 @@ Wakes up sleeping agents that are waiting on the given index of the array, retur
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## or
 
 ```TypeScript
@@ -189,8 +177,6 @@ Stores the bitwise OR of a value with the value at the given position in the arr
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## store
 
 ```TypeScript
@@ -215,8 +201,6 @@ Stores a value at the given position in the array, returning the new value. Unti
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## sub
 
 ```TypeScript
@@ -241,8 +225,6 @@ Subtracts a value from the value at the given position in the array, returning t
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-
 ## wait
 
 ```TypeScript
@@ -268,8 +250,6 @@ If the value at the given position in the array is equal to the provided value, 
 
 | Type | Description |
 | --- | --- |
-| "ok" |  |
-
 ## xor
 
 ```TypeScript
@@ -294,5 +274,3 @@ Stores the bitwise XOR of a value with the value at the given position in the ar
 
 | Type | Description |
 | --- | --- |
-| bigint |  |
-

@@ -119,7 +119,7 @@ Get the exception or object of the the JavaScript code execution result and seri
 
 | Type | Description |
 | --- | --- |
-| string | if an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of 2048 will be truncated; otherwise, return null. |
+| string \| null | if an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of 2048 will be truncated; otherwise, return null. |
 
 ## getNumber
 
@@ -141,7 +141,7 @@ Get the number value of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| double | Returns data of number type |
+| double \| long | Returns data of number type |
 
 **Error codes:**
 
@@ -197,5 +197,5 @@ Get the type of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| [JsMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
+| [JsMessageType](arkts-na-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
 

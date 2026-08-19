@@ -13,7 +13,7 @@ import { serialManager } from '@kit.BasicServicesKit';
 function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
-Resets a USB peripheral. > **NOTE：**> > Previous configurations and APIs will be reset. Ensure that the related services have been completed before > calling this API.
+Resets a USB peripheral. &gt; **NOTE：**&gt; &gt; Previous configurations and APIs will be reset. Ensure that the related services have been completed before &gt; calling this API.
 
 **Since:** 23
 

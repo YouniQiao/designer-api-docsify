@@ -6,7 +6,7 @@
 import { missionManager } from '@kit.AbilityKit';
 ```
 
-## on_missionEvent('missionEvent')
+## on('missionEvent')
 
 ```TypeScript
 function on(type: 'missionEvent', listener: MissionListener): long
@@ -18,7 +18,7 @@ Registers a listener to observe the mission status.
 
 **Deprecated since:** 10
 
-**Substitutes:** on(type: 'mission', listener: MissionListener)
+**Substitutes:** [on](arkts-ability-missionmanager-onmission-f-sys.md)(type: 'mission', listener: MissionListener)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

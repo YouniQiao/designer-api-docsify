@@ -26,8 +26,6 @@ getCurrentLocalPosition(): Coordinate2D
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) |  |
-
 ## default
 
 ```TypeScript

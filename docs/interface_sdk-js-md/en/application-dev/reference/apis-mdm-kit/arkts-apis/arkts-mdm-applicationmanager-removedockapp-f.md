@@ -12,7 +12,7 @@ import { applicationManager } from '@kit.MDMKit';
 function removeDockApp(admin: Want, bundleName: string, abilityName: string): void
 ```
 
-Removes an application from the shortcut bar. > **NOTE：**> > The following applications cannot be removed from the shortcut bar using this API: Application Center, Task > Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
+Removes an application from the shortcut bar. &gt; **NOTE：**&gt; &gt; The following applications cannot be removed from the shortcut bar using this API: Application Center, Task &gt; Center, Files, and Recycle Bin. Otherwise, error code 9201018 will be reported.
 
 **Since:** 24
 

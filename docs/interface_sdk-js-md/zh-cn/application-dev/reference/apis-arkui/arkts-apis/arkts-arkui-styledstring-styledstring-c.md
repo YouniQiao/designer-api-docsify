@@ -153,7 +153,7 @@ getStyles(start: int, length: int, styledKey?: StyledStringKey): Array<SpanStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[SpanStyle](arkts-arkui-styledstring-spanstyle-i.md)&gt; | 各样式对象的数组。<br/>**说明：** <br/>当指定范围属性字符串未设置任何样式，则返回空数组。<br/>当start和length越 界或者必填传入undefined时，会抛出异常；<br/>当styledKey传入异常值或undefined时，会抛出异常。<br/>当styledKey为CustomSpan时，返回的是创建CustomSpan时传入 的样式对象，即修改该样式对象也会影响实际的显示效果。 |
+| Array&lt;[SpanStyle](arkts-arkui-styledstring-spanstyle-i.md)&gt; \| undefined | 各样式对象的数组。<br/>**说明：** <br/>当指定范围属性字符串未设置任何样式，则返回空数组。<br/>当start和length越 界或者必填传入undefined时，会抛出异常；<br/>当styledKey传入异常值或undefined时，会抛出异常。<br/>当styledKey为CustomSpan时，返回的是创建CustomSpan时传入 的样式对象，即修改该样式对象也会影响实际的显示效果。 |
 
 ## subStyledString
 
@@ -184,7 +184,7 @@ subStyledString(start: int, length?: int): StyledString | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 子属性字符串。<br/>**说明：** <br/>当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined | 子属性字符串。<br/>**说明：** <br/>当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
 
 ## toHtml
 

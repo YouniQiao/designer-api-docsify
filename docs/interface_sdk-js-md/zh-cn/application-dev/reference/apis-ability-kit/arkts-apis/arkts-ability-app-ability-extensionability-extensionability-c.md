@@ -17,5 +17,6 @@ ExtensionAbility是特定场景扩展能力的基类，继承自[Ability](arkts-
 ## 导入模块
 
 ```TypeScript
+import { ExtensionAbility } from '@kit.AbilityKit';
 ```
 

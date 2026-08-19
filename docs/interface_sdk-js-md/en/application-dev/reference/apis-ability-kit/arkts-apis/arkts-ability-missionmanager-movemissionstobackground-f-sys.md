@@ -29,7 +29,7 @@ Switches a batch of missions to the background. The mission IDs returned are sor
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | missionIds | Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

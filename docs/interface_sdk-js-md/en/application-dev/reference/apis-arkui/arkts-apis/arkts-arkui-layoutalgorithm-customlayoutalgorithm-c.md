@@ -1,8 +1,8 @@
 # CustomLayoutAlgorithm
 
-Custom layout algorithm class. > **NOTE：**> > The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as > the input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
+Custom layout algorithm class. &gt; **NOTE：**&gt; &gt; The object of the **CustomLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as &gt; the input parameter of the &gt; [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the &gt; layout algorithm.
 
-**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md)
+**Inheritance/Implementation:** CustomLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Custom layout algorithm class. > **NOTE：**> > The object of the **CustomLayout
 onLayout(self: FrameNode, position: Position): void
 ```
 
-Customizes the position of the child component to be arranged. When the position of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout position of the component to you through **onLayout**. State variables should not be changed in this callback. > **NOTE：**> > In this callback, you can call > getChild() of > FrameNode to obtain the child > component **FrameNode** and call > layout() of > FrameNode to set the position of the > child component. For details, see > [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
+Customizes the position of the child component to be arranged. When the position of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout position of the component to you through **onLayout**. State variables should not be changed in this callback. &gt; **NOTE：**&gt; &gt; In this callback, you can call &gt; getChild() of &gt; FrameNode to obtain the child &gt; component **FrameNode** and call &gt; layout() of &gt; FrameNode to set the position of the &gt; child component. For details, see &gt; [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
 
@@ -43,7 +43,7 @@ Customizes the position of the child component to be arranged. When the position
 onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 ```
 
-Customizes the size of the child component to be measured. When the size of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout constraint of the component to you through **onMeasure**. State variables should not be changed in this callback. > **NOTE：**> > In this callback, you can call > getChild() of > FrameNode to obtain the child > component **FrameNode** and call > measure() of > FrameNode to measure the size of the > child component. For details, see > [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
+Customizes the size of the child component to be measured. When the size of the dynamic layout component is determined, the ArkUI framework will transfer the FrameNode and layout constraint of the component to you through **onMeasure**. State variables should not be changed in this callback. &gt; **NOTE：**&gt; &gt; In this callback, you can call &gt; getChild() of &gt; FrameNode to obtain the child &gt; component **FrameNode** and call &gt; measure() of &gt; FrameNode to measure the size of the &gt; child component. For details, see &gt; [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md#example-1-implementing-waterfall-layout-using-a-custom-layout-algorithm).
 
 **Since:** 24
 

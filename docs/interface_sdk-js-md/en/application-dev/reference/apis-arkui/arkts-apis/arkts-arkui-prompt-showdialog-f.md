@@ -30,7 +30,7 @@ Displays the dialog box.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ShowDialogOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
 
 **Examples**
 

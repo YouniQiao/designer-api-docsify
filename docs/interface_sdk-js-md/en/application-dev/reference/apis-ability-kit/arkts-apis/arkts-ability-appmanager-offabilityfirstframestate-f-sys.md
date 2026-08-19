@@ -6,7 +6,7 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-## off_abilityFirstFrameState('abilityFirstFrameState')
+## off('abilityFirstFrameState')
 
 ```TypeScript
 function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateObserver): void

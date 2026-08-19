@@ -1,6 +1,6 @@
 # PhotoViewPicker
 
-图库选择器对象用于支持选择图片、视频等用户场景。使用前，需先创建PhotoViewPicker实例。 > **说明：** > > - 如果需要重复拉起PhotoViewPicker，需要先通过NavDestination或跟随进程销毁前一个photoViewPicker。
+图库选择器对象用于支持选择图片、视频等用户场景。使用前，需先创建PhotoViewPicker实例。 &gt; **说明：** &gt; &gt; - 如果需要重复拉起PhotoViewPicker，需要先通过NavDestination或跟随进程销毁前一个photoViewPicker。
 
 **起始版本：** 26.0.0
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## select
@@ -19,7 +20,7 @@
 select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 ```
 
-通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。使用Promise异步回调。传入可选参数PhotoSelectOptions对象，返回PhotoSelectResult对象。 > **注意：** > > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口 > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
+通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。使用Promise异步回调。传入可选参数PhotoSelectOptions对象，返回PhotoSelectResult对象。 &gt; **注意：** &gt; &gt; 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口 &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 26.0.0
 
@@ -55,7 +56,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，传入参数PhotoSelectOptions对象，返回PhotoSelectResult对象。 > **注意：** > > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口 > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
+通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，传入参数PhotoSelectOptions对象，返回PhotoSelectResult对象。 &gt; **注意：** &gt; &gt; 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口 &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 26.0.0
 
@@ -70,7 +71,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | PhotoSelectOptions | 是 | photoPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
 
 **错误码：**
 
@@ -86,7 +87,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 select(callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，返回PhotoSelectResult对象。 > **注意：** > > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口 > [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
+通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，返回PhotoSelectResult对象。 &gt; **注意：** &gt; &gt; 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口 &gt; [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets) &gt; 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 26.0.0
 
@@ -100,7 +101,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback 返回photoPicker选择后的结果集。 |
 
 **错误码：**
 

@@ -13,6 +13,7 @@ FileUri表示文件的URI，继承自uri.URI。
 ## 导入模块
 
 ```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## constructor

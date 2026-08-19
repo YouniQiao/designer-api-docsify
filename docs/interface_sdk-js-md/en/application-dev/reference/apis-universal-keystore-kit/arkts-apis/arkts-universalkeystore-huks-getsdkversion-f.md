@@ -13,7 +13,7 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function getSdkVersion(options: HuksOptions): string
 ```
 
-Obtains the SDK version of the current system. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 11.
+Obtains the SDK version of the current system. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 11.
 
 **Since:** 8
 

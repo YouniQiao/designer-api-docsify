@@ -1,6 +1,6 @@
 # VibrateOptions
 
-定义触发设备振动的配置参数，包括振动模式及接口调用的回调函数。开发者调用 Vibrator.vibrate()时，通过 VibrateOptions指定振动模式（短振动或长振动）以及监听振动触发成功、失败和完成的回调函数。传入VibrateOptions后，设备将按指定的mode执行相应振动模式，并在振动触发成功时回调success函数，失败时回调 fail函数，接口调用结束时回调complete函数。 > **说明：** > > 从API version 3开始支持，从API version 8开始废弃。建议使用替代类型[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)。
+定义触发设备振动的配置参数，包括振动模式及接口调用的回调函数。开发者调用 Vibrator.vibrate()时，通过 VibrateOptions指定振动模式（短振动或长振动）以及监听振动触发成功、失败和完成的回调函数。传入VibrateOptions后，设备将按指定的mode执行相应振动模式，并在振动触发成功时回调success函数，失败时回调 fail函数，接口调用结束时回调complete函数。 &gt; **说明：** &gt; &gt; 从API version 3开始支持，从API version 8开始废弃。建议使用替代类型[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)。
 
 **起始版本：** 3
 
@@ -17,6 +17,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## complete
@@ -49,7 +50,7 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-振动触发失败时的回调函数。使用场景：开发者需要处理振动触发失败的情况（如权限未授予、设备不支持振动等）时，通过此回调获取错误信息。不填写此参数时，振动触发失败将不会有回调通知。使用后效果：振动触发失败时，系统将调用此回调函数，传入 错误信息data和错误码code。回调函数签名：(data: string, code: number) => void，其中data为错误信息字符串描述，code为错误码数字，标识具体的错误类型。
+振动触发失败时的回调函数。使用场景：开发者需要处理振动触发失败的情况（如权限未授予、设备不支持振动等）时，通过此回调获取错误信息。不填写此参数时，振动触发失败将不会有回调通知。使用后效果：振动触发失败时，系统将调用此回调函数，传入 错误信息data和错误码code。回调函数签名：(data: string, code: number) =&gt; void，其中data为错误信息字符串描述，code为错误码数字，标识具体的错误类型。
 
 **类型：** (data: string, code: number) =&gt; void
 

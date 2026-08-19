@@ -41,7 +41,7 @@ LazyForEach(
   )
 ```
 
-LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程中创建相应的组件。当在滚动容器中使用了LazyForEach，框架会根据滚动容器可视区域按需创建组件，当组件滑出可视区域外时，框架会进行组件销毁回收以降低内存占 用。 > **说明：**> > 从API版本26.0.0开始，LazyForEach支持传入[LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)，用于使能自定义组件冻结和配置内存优化策略、资源释放策略。
+LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程中创建相应的组件。当在滚动容器中使用了LazyForEach，框架会根据滚动容器可视区域按需创建组件，当组件滑出可视区域外时，框架会进行组件销毁回收以降低内存占 用。 &gt; **说明：**&gt; &gt; 从API版本26.0.0开始，LazyForEach支持传入[LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)，用于使能自定义组件冻结和配置内存优化策略、资源释放策略。
 
 **起始版本：** 26.0.0
 

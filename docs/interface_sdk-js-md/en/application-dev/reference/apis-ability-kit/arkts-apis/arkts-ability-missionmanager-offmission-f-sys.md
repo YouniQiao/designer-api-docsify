@@ -29,7 +29,7 @@ Unregister the missionListener to ams.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | listenerId | long | Yes | Indicates the listener id to be unregistered. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of off. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of off. |
 
 **Error codes:**
 

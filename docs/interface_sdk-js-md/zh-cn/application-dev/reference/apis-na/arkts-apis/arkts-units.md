@@ -22,7 +22,7 @@
 | [BorderRadiuses](arkts-na-units-borderradiuses-i.md) | type BorderRadiuses = { topLeft: Length; topRight: Length; bottomLeft: Length; bottomRight: Length; } 圆角类型，用于描述组件边框圆角半径。 引用该对象时，至少传入一个参数。 |
 | [CacheCountInfo](arkts-na-units-cachecountinfo-i.md) | 缓存数量信息。 |
 | [ChainWeightOptions](arkts-na-units-chainweightoptions-i.md) | 链中组件的布局权重。 |
-| [ConstraintSizeOptions](arkts-na-units-constraintsizeoptions-i.md) | 约束尺寸类型，用于描述组件布局时对尺寸大小的范围限制。 @internal/component/ets/row}、Column、 > RelativeContainer组件中，width、height设置auto表示自适应子组件。在 > TextInput组件中，width设置auto表示自适应文本宽度。 |
+| [ConstraintSizeOptions](arkts-na-units-constraintsizeoptions-i.md) | 约束尺寸类型，用于描述组件布局时对尺寸大小的范围限制。 @internal/component/ets/row}、Column、 &gt; RelativeContainer组件中，width、height设置auto表示自适应子组件。在 &gt; TextInput组件中，width设置auto表示自适应文本宽度。 |
 | [Coordinate2D](arkts-na-units-coordinate2d-i.md) | 描述一个二维坐标系。 |
 | [DirectionalEdgesT](arkts-na-units-directionaledgest-i.md) | 边缘宽度类型，用于描述组件边缘不同方向的宽度。支持全球化。 |
 | [DividerStyleOptions](arkts-na-units-dividerstyleoptions-i.md) | 分割线样式属性集合, 用于描述分割线相关信息。 |

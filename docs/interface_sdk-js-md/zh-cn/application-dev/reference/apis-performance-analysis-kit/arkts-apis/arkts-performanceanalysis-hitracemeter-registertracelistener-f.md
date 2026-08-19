@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## registerTraceListener
@@ -31,7 +32,7 @@ function registerTraceListener(callback: TraceEventListener): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 回调注册状态。 >= 0：注册成功，返回用于注销的回调索引，索引范围[0, 9]； -1：已达到最大回调函数注册数量； -2：无效参数，参数非TraceEventListener类型。 |
+| int | 回调注册状态。 &gt;= 0：注册成功，返回用于注销的回调索引，索引范围[0, 9]； -1：已达到最大回调函数注册数量； -2：无效参数，参数非TraceEventListener类型。 |
 
 **示例**
 

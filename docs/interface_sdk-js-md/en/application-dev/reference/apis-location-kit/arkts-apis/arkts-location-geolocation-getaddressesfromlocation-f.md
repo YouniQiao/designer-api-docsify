@@ -31,7 +31,7 @@ Obtain address info from location
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
 
 **Examples**
 

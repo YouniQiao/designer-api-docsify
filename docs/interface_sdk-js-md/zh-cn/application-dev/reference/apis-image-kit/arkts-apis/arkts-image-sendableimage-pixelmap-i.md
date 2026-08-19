@@ -13,6 +13,7 @@ Sendable PixelMap instance.
 ## 导入模块
 
 ```TypeScript
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace
@@ -460,7 +461,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.ImageInfo&gt; | A Promise instance used to return the image pixelmap information. If the operation fails, an error message is returned. |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | A Promise instance used to return the image pixelmap information. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -497,7 +498,7 @@ Get image information from image source.
 
 | 类型 | 说明 |
 | --- | --- |
-| image.ImageInfo | the image information. |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) | the image information. |
 
 **错误码：**
 

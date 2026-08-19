@@ -310,7 +310,7 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 ```
 
-表示设备上已安装新应用包的公共事件的动作。 在设备上指定用户下安装了新的应用程序，将会触发事件通知服务发布该系统公共事件。 > **说明：** > > 三方应用只能监听自身应用的安装事件。
+表示设备上已安装新应用包的公共事件的动作。 在设备上指定用户下安装了新的应用程序，将会触发事件通知服务发布该系统公共事件。 &gt; **说明：** &gt; &gt; 三方应用只能监听自身应用的安装事件。
 
 **起始版本：** 23
 
@@ -394,7 +394,7 @@ COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 ```
 
-表示应用包已更改的公共事件的动作（例如，包中的组件已启用或禁用）。 在设备上安装的应用程序包更新或者包的组件被启用/禁用，将会触发事件通知服务发布该系统公共事件。 > **说明：** > > 三方应用只能监听自身应用的更改事件。
+表示应用包已更改的公共事件的动作（例如，包中的组件已启用或禁用）。 在设备上安装的应用程序包更新或者包的组件被启用/禁用，将会触发事件通知服务发布该系统公共事件。 &gt; **说明：** &gt; &gt; 三方应用只能监听自身应用的更改事件。
 
 **起始版本：** 23
 
@@ -408,7 +408,7 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 ```
 
-表示用户重启应用包并终止其所有进程。 在设备上指定用户重启应用包并终止其所有进程，将会触发事件通知服务发布该系统公共事件。 > **说明：** > > 三方应用只能监听自身应用的重启事件。
+表示用户重启应用包并终止其所有进程。 在设备上指定用户重启应用包并终止其所有进程，将会触发事件通知服务发布该系统公共事件。 &gt; **说明：** &gt; &gt; 三方应用只能监听自身应用的重启事件。
 
 **起始版本：** 23
 
@@ -422,7 +422,7 @@ COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 ```
 
-表示用户清除应用包数据。 在设备上指定用户清除应用包数据，将会触发事件通知服务发布该系统公共事件。 > **说明：** > > 三方应用只能监听自身应用的数据清理事件。
+表示用户清除应用包数据。 在设备上指定用户清除应用包数据，将会触发事件通知服务发布该系统公共事件。 &gt; **说明：** &gt; &gt; 三方应用只能监听自身应用的数据清理事件。
 
 **起始版本：** 23
 
@@ -436,7 +436,7 @@ COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'
 ```
 
-表示用户清除应用包缓存数据的公共事件的动作。 对设备上安装的应用程序包清除缓存时，将会触发事件通知服务发布该系统公共事件。 > **说明：** > > 三方应用只能监听自身应用的缓存清理事件。
+表示用户清除应用包缓存数据的公共事件的动作。 对设备上安装的应用程序包清除缓存时，将会触发事件通知服务发布该系统公共事件。 &gt; **说明：** &gt; &gt; 三方应用只能监听自身应用的缓存清理事件。
 
 **起始版本：** 23
 
@@ -2391,7 +2391,7 @@ COMMON_EVENT_SPN_INFO_CHANGED = 'usual.event.SPN_INFO_CHANGED'
 COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'
 ```
 
-表示快速修复应用。 在设备上指定用户快速修复应用，将会触发事件通知服务发布该系统公共事件。 > **说明：** > > 三方应用只能监听自身应用的快速修复事件。
+表示快速修复应用。 在设备上指定用户快速修复应用，将会触发事件通知服务发布该系统公共事件。 &gt; **说明：** &gt; &gt; 三方应用只能监听自身应用的快速修复事件。
 
 **起始版本：** 23
 
@@ -2535,7 +2535,7 @@ COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'
 COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 ```
 
-表示网络连接状态变化。 各类网络（以太网、Wi-Fi、蜂窝等）在连接状态变化时（断开、断开中、连接中、已连接等），将会触发事件通知服务发布该系统公共事件。 具体枚举值及其对应的连接状态如下表所示： > **说明：**> 具体枚举值及其对应的连接状态如下表所示： > > | 枚举值 | 连接状态 | > | ------ | ---------- | > | 2 | 连接中 | > | 3 | 已连接 | > | 4 | 正在断开 | > | 5 | 已断开 |。
+表示网络连接状态变化。 各类网络（以太网、Wi-Fi、蜂窝等）在连接状态变化时（断开、断开中、连接中、已连接等），将会触发事件通知服务发布该系统公共事件。 具体枚举值及其对应的连接状态如下表所示： &gt; **说明：**&gt; 具体枚举值及其对应的连接状态如下表所示： &gt; &gt; | 枚举值 | 连接状态 | &gt; | ------ | ---------- | &gt; | 2 | 连接中 | &gt; | 3 | 已连接 | &gt; | 4 | 正在断开 | &gt; | 5 | 已断开 |。
 
 **起始版本：** 23
 

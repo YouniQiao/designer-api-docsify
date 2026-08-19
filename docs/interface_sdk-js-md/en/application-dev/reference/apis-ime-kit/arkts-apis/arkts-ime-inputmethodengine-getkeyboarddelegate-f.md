@@ -51,5 +51,5 @@ Get KeyboardDelegate object to subscribe key event or events about editor.
 
 | Type | Description |
 | --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | the object of KeyboardDelegate. |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) \| null | the object of KeyboardDelegate. |
 

@@ -28,5 +28,5 @@ export function getSliderAttribute(node: FrameNode): SliderAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| SliderAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| SliderAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

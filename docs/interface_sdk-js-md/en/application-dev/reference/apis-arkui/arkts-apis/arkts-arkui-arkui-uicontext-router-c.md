@@ -1,6 +1,6 @@
 # Router
 
-Provides APIs to access pages through URLs. You can use the APIs to navigate to a specified page in an application, replace the current page with another one in the same application, and return to the previous page or a specified page. > **NOTE：**> In the following API examples, you must first use > [getRouter()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) in **UIContext** to > obtain a **Router** instance, and then call the APIs using the obtained instance.
+Provides APIs to access pages through URLs. You can use the APIs to navigate to a specified page in an application, replace the current page with another one in the same application, and return to the previous page or a specified page. &gt; **NOTE：**&gt; In the following API examples, you must first use &gt; [getRouter()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) in **UIContext** to &gt; obtain a **Router** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -90,13 +90,13 @@ Clears all historical pages in the stack and retains only the current page at th
 getLength(): string
 ```
 
-Obtains the number of pages in the current stack. > **NOTE：**
+Obtains the number of pages in the current stack. &gt; **NOTE：**
 
 **Since:** 10
 
 **Deprecated since:** 23
 
-**Substitutes:** [getStackSize](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#getstacksize)
+**Substitutes:** [getStackSize](#getstacksize)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,7 +212,7 @@ Obtains the status information about a page by its index.
 
 | Type | Description |
 | --- | --- |
-| router.RouterState | State information about the target page. **undefined** if the specified index does not exist. |
+| router.RouterState \| undefined | State information about the target page. **undefined** if the specified index does not exist. |
 
 ## getStateByUrl
 
@@ -285,7 +285,7 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -341,7 +341,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a page using the named route. This API uses an asynchronous callback to return the result. Compared with [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushnamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
+Navigates to a page using the named route. This API uses an asynchronous callback to return the result. Compared with [pushNamedRoute](#pushnamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -359,7 +359,7 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Page routing parameters. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -376,7 +376,7 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result. Compared with [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushnamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
+Navigates to a page using the named route. This API uses a promise to return the result. Compared with [pushNamedRoute](#pushnamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -433,7 +433,7 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -489,7 +489,7 @@ Navigates to a specified page in the application. This API uses a promise to ret
 pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application. This API uses an asynchronous callback to return the result. Compared with [pushUrl](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushurl), this API supports the **mode** parameter, which enables you to set the routing mode.
+Navigates to a specified page in the application. This API uses an asynchronous callback to return the result. Compared with [pushUrl](#pushurl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -507,7 +507,7 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Page routing parameters. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -524,7 +524,7 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Navigates to a specified page in the application. This API uses a promise to return the result. Compared with [pushUrl](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushurl), this API supports the **mode** parameter, which enables you to set the routing mode.
+Navigates to a specified page in the application. This API uses a promise to return the result. Compared with [pushUrl](#pushurl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -581,7 +581,7 @@ Replaces the current page with another one using the named route and destroys th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Description of the new page. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -635,7 +635,7 @@ Replaces the current page with another one using the named route and destroys th
 replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one using the named route and destroys the current page. This API uses an asynchronous callback to return the result. Compared with [replaceNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#replacenamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
+Replaces the current page with another one using the named route and destroys the current page. This API uses an asynchronous callback to return the result. Compared with [replaceNamedRoute](#replacenamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -653,7 +653,7 @@ Replaces the current page with another one using the named route and destroys th
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Description of the new page. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -669,7 +669,7 @@ Replaces the current page with another one using the named route and destroys th
 replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Replaces the current page with another one using the named route and destroys the current page. This API uses a promise to return the result. Compared with [replaceNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#replacenamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
+Replaces the current page with another one using the named route and destroys the current page. This API uses a promise to return the result. Compared with [replaceNamedRoute](#replacenamedroute), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -725,7 +725,7 @@ Replaces the current page with another one in the application and destroys the c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Description of the new page. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -779,7 +779,7 @@ Replaces the current page with another one in the application and destroys the c
 replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Replaces the current page with another one in the application and destroys the current page. This API uses an asynchronous callback to return the result. Compared with [replaceUrl](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#replaceurl), this API supports the **mode** parameter, which enables you to set the routing mode.
+Replaces the current page with another one in the application and destroys the current page. This API uses an asynchronous callback to return the result. Compared with [replaceUrl](#replaceurl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -797,7 +797,7 @@ Replaces the current page with another one in the application and destroys the c
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Description of the new page. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback for the router navigation result.<br>If the navigation succeeds, **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -813,7 +813,7 @@ Replaces the current page with another one in the application and destroys the c
 replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Replaces the current page with another one in the application and destroys the current page. This API uses a promise to return the result. Compared with [replaceUrl](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#replaceurl), this API supports the **mode** parameter, which enables you to set the routing mode.
+Replaces the current page with another one in the application and destroys the current page. This API uses a promise to return the result. Compared with [replaceUrl](#replaceurl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 

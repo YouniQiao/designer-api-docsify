@@ -43,7 +43,7 @@ init(context: AbilityStageContext): Promise<Any> | Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Any&gt; | Promise对象，返回启动任务执行结果对象。 |
+| Promise&lt;Any&gt; \| Promise&lt;void&gt; | Promise对象，返回启动任务执行结果对象。 |
 
 ## onDependencyCompleted
 

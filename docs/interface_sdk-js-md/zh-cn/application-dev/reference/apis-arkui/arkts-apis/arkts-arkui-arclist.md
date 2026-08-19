@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { ArcList, ArcListItem, ArcListAttribute, ArcListItemAttribute } from '@kit.ArkUI';
 ```
 
 ## 汇总

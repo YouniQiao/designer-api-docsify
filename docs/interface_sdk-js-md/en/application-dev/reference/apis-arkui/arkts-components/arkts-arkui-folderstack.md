@@ -32,9 +32,9 @@ Defines the constructor of FolderStack component.
 
 | Name | Description |
 | --- | --- |
-| [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) | > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) | > **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer &gt; element's @since version number is higher than inner elements'. This does not affect interface usability. |
 | [HoverEventParam](arkts-arkui-hovereventparam-i.md) | The param of hover event. |
-| [OnFoldStatusChangeInfo](arkts-arkui-onfoldstatuschangeinfo-i.md) | Called when the folding state changes. This API takes effect only in landscape mode. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [OnFoldStatusChangeInfo](arkts-arkui-onfoldstatuschangeinfo-i.md) | Called when the folding state changes. This API takes effect only in landscape mode. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer &gt; element's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Types
 

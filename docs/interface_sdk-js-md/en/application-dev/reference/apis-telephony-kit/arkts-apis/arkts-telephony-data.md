@@ -37,7 +37,7 @@ import { data } from '@kit.TelephonyKit';
 | [isCellularDataRoamingEnabledSync](arkts-telephony-data-iscellulardataroamingenabledsync-f.md) | Checks whether roaming is enabled for the cellular data service. This API returns the result synchronously. **Required permission**: ohos.permission.GET_NETWORK_INFO |
 | [queryAllApns](arkts-telephony-data-queryallapns-f.md) | Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously. |
 | [queryApnIds](arkts-telephony-data-queryapnids-f.md) | Obtains the APN ID corresponding to the specified **ApnInfo**. This API returns the result asynchronously. |
-| [setPreferredApn](arkts-telephony-data-setpreferredapn-f.md) | Sets the APN corresponding to the specified **apnId** as the preferred APN. This API returns the result asynchronously. > **NOTE：**> > If the input APN ID is invalid, the default preferred APN configured by the carrier is used. |
+| [setPreferredApn](arkts-telephony-data-setpreferredapn-f.md) | Sets the APN corresponding to the specified **apnId** as the preferred APN. This API returns the result asynchronously. &gt; **NOTE：**&gt; &gt; If the input APN ID is invalid, the default preferred APN configured by the carrier is used. |
 | [showSystemApnSettings](arkts-telephony-data-showsystemapnsettings-f.md) | Open the system APN selection menu, which is presented in a semi-modal form and can be used to select a specific APN. This API uses a promise to return the result. If there is no SIM card or the device does not support the APN menu, the menu cannot be displayed. |
 
 <!--Del-->

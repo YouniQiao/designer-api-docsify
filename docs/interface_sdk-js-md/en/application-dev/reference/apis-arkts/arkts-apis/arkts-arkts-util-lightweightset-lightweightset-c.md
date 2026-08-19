@@ -310,7 +310,7 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-Checks whether the elements of this LightWeightSet are the same as those of **obj**. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
+Checks whether the elements of this LightWeightSet are the same as those of **obj**. &gt; **NOTE：**&gt; &gt; This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
 **Since:** 8
 
@@ -528,7 +528,7 @@ Obtains the object at the location identified by index in an LightWeightSet cont
 
 | Type | Description |
 | --- | --- |
-| T | the value at the specified index, or undefined if the index out of range |
+| T \| undefined | the value at the specified index, or undefined if the index out of range |
 
 ## has
 
@@ -761,7 +761,7 @@ Deletes an object of a specified Object type from an LightWeightSet container
 
 | Type | Description |
 | --- | --- |
-| T | the removed value if it was present, undefined otherwise |
+| T \| undefined | the removed value if it was present, undefined otherwise |
 
 ## removeAt
 

@@ -11,6 +11,7 @@ VPN连接对象。在调用VpnConnection的方法前，需要先通过vpnExt.cre
 ## 导入模块
 
 ```TypeScript
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## addRoute
@@ -56,7 +57,7 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 create(config: VpnConfig): Promise<int>
 ```
 
-使用config创建一个VPN网络。使用Promise异步回调。 > **说明：** > > 建议在不需要VPN网络的时候配对调用[destroy()](#destroy)或 > [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
+使用config创建一个VPN网络。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 建议在不需要VPN网络的时候配对调用[destroy()](#destroy)或 &gt; [destroy(vpnId: string)](#destroy)接口销毁启动的VPN网络，并执行资源清理等操作。
 
 **起始版本：** 11
 
@@ -312,7 +313,7 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 generateVpnId(): Promise<string>
 ```
 
-生成VPN唯一标识。使用Promise异步回调。 如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。 > **注意** > > 当前系统多VPN能力仅支持IPv4。
+生成VPN唯一标识。使用Promise异步回调。 如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。 &gt; **注意** &gt; &gt; 当前系统多VPN能力仅支持IPv4。
 
 **起始版本：** 20
 

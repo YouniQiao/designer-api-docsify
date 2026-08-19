@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { browser } from '@kit.MDMKit';
 ```
 
 ## setPolicies
@@ -36,7 +37,7 @@ function setPolicies(admin: Want, appId: string, policies: string, callback: Asy
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | appId | string | 是 | 应用ID，用于指定浏览器。 |
 | policies | string | 是 | 浏览器策略，当参数policies为空字符串时，表示取消指定浏览器的策略。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
 

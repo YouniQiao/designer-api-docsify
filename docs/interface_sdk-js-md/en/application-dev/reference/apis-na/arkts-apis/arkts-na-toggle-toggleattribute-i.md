@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<ToggleAttribute> | AttributeModifi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -58,8 +56,6 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefined): thi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -82,8 +78,6 @@ onChange(callback: ((isOn: boolean) => void) | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedColor
 
 ```TypeScript
@@ -106,8 +100,6 @@ selectedColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setToggleOptions
 
 ```TypeScript
@@ -130,8 +122,6 @@ setToggleOptions(options: ToggleOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## switchPointColor
 
 ```TypeScript
@@ -154,8 +144,6 @@ switchPointColor(color: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## switchStyle
 
 ```TypeScript
@@ -178,8 +166,6 @@ switchStyle(value: SwitchStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

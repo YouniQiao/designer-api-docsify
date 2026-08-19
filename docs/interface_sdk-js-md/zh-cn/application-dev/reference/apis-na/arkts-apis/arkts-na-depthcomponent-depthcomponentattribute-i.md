@@ -36,8 +36,6 @@ camera(camera: DepthCameraParams): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## depthMap
 
 ```TypeScript
@@ -61,8 +59,6 @@ depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## light
 
 ```TypeScript
@@ -85,8 +81,6 @@ light(light: DepthLightParams): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onComplete
 
 ```TypeScript
@@ -109,8 +103,6 @@ onComplete(callback: DepthComponentCompleteCallback): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onError
 
 ```TypeScript
@@ -133,8 +125,6 @@ onError(callback: DepthComponentErrorCallback): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setDepthComponentOptions
 
 ```TypeScript
@@ -158,5 +148,3 @@ setDepthComponentOptions(background: ResourceStr | PixelMap, options?: DepthComp
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-

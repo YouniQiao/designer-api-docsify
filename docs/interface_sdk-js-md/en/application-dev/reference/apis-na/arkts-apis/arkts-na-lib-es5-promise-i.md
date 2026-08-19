@@ -33,8 +33,6 @@ Attaches a callback for only the rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T \| TResult&gt; |  |
-
 ## then
 
 ```TypeScript
@@ -58,5 +56,3 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TResult1 \| TResult2&gt; |  |
-

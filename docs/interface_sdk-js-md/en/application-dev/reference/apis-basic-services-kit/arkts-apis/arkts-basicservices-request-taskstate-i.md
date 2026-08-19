@@ -1,6 +1,6 @@
 # TaskState
 
-Upload task information, which is the callback parameter of the [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progressprogress) and [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#off_progressprogress) APIs.
+Upload task information, which is the callback parameter of the [on('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#onprogress) and [off('complete' | 'fail')](arkts-basicservices-request-uploadtask-i.md#offprogress) APIs.
 
 **Since:** 23
 

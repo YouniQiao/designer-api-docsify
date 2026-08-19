@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onEvent
@@ -21,7 +22,7 @@
 onEvent: (info: SysEventInfo) => void
 ```
 
-订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void。
+订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) =&gt; void。
 
 **类型：** (info: SysEventInfo) =&gt; void
 
@@ -39,7 +40,7 @@ onEvent: (info: SysEventInfo) => void
 onServiceDied: () => void
 ```
 
-系统事件服务关闭的回调方法() => void。
+系统事件服务关闭的回调方法() =&gt; void。
 
 **类型：** () =&gt; void
 

@@ -1,6 +1,6 @@
 # Canvas
 
-承载绘制内容与绘制状态的载体。Canvas提供矩形、圆形、椭圆、弧线、路径、文字、图片等多种图形的绘制能力，支持通过画笔和画刷设置绘制样式，支持画布裁剪、矩阵变换、画布状态保存与恢复等功能。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 > > **说明：** > > 画布自带一个默认画刷，该画刷为黑色，具备抗锯齿，不具备其他任何样式效果。当画布中没有主动设置画刷和画笔时，该默认画刷生效。
+承载绘制内容与绘制状态的载体。Canvas提供矩形、圆形、椭圆、弧线、路径、文字、图片等多种图形的绘制能力，支持通过画笔和画刷设置绘制样式，支持画布裁剪、矩阵变换、画布状态保存与恢复等功能。 &gt; **说明：** &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 &gt; &gt; **说明：** &gt; &gt; 画布自带一个默认画刷，该画刷为黑色，具备抗锯齿，不具备其他任何样式效果。当画布中没有主动设置画刷和画笔时，该默认画刷生效。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## attachBrush
@@ -19,7 +20,7 @@
 attachBrush(brush: Brush): void
 ```
 
-绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。调用本方法后，画刷将持续生效于后续所有绘制操作，直至调用 [detachBrush](#detachbrush)解除绑定。 > **说明：** > > 执行该方法后，若brush的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
+绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。调用本方法后，画刷将持续生效于后续所有绘制操作，直至调用 [detachBrush](#detachbrush)解除绑定。 &gt; **说明：** &gt; &gt; 执行该方法后，若brush的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
 
 **起始版本：** 23
 
@@ -45,7 +46,7 @@ attachBrush(brush: Brush): void
 attachPen(pen: Pen): void
 ```
 
-绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作， 直至调用[detachPen](#detachpen)解除绑定。 > **说明：** > > 执行该方法后，若pen的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
+绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作， 直至调用[detachPen](#detachpen)解除绑定。 &gt; **说明：** &gt; &gt; 执行该方法后，若pen的效果发生改变并且开发者希望该变化在接下来的绘制动作中生效，需要再次调用本方法。
 
 **起始版本：** 23
 
@@ -999,7 +1000,7 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 | path | Path | 是 | 路径对象，可生成阴影。 |
 | planeParams | common2D.Point3d | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
 | devLightPos | common2D.Point3d | 是 | 光线相对于画布的位置。 |
-| lightRadius | double | 是 | 圆形灯半径，取值范围>0，该参数为浮点数。单位为物理像素px。 |
+| lightRadius | double | 是 | 圆形灯半径，取值范围&gt;0，该参数为浮点数。单位为物理像素px。 |
 | ambientColor | common2D.Color | 是 | 环境阴影颜色。 |
 | spotColor | common2D.Color | 是 | 点阴影颜色。 |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | 是 | 阴影标志，用于控制阴影的绘制方式。 |
@@ -1223,7 +1224,7 @@ getLocalClipBounds(): common2D.Rect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 返回画布裁剪区域的矩形边界。获取失败时返回undefined。 |
+| common2D.Rect \| undefined | 返回画布裁剪区域的矩形边界。获取失败时返回undefined。 |
 
 ## getSaveCount
 
@@ -1283,7 +1284,7 @@ getTotalMatrix(): Matrix | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。获取失败时返回undefined。 |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| undefined | 返回当前画布的变换矩阵，该矩阵累积了已应用的平移、缩放、旋转和倾斜等变换效果。获取失败时返回undefined。 |
 
 ## getWidth
 

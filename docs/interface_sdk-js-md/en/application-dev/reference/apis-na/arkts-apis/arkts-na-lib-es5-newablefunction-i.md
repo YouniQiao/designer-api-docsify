@@ -71,8 +71,6 @@ For a given function, creates a bound function that has the same body as the ori
 
 | Type | Description |
 | --- | --- |
-| T |  |
-
 ## bind
 
 ```TypeScript
@@ -95,8 +93,6 @@ bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any
 
 | Type | Description |
 | --- | --- |
-| new (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -120,8 +116,6 @@ bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R
 
 | Type | Description |
 | --- | --- |
-| new (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -146,8 +140,6 @@ bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ..
 
 | Type | Description |
 | --- | --- |
-| new (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -173,8 +165,6 @@ bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2
 
 | Type | Description |
 | --- | --- |
-| new (...args: A) =&gt; R |  |
-
 ## bind
 
 ```TypeScript
@@ -197,8 +187,6 @@ bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (.
 
 | Type | Description |
 | --- | --- |
-| new (...args: AX[]) =&gt; R |  |
-
 ## call
 
 ```TypeScript

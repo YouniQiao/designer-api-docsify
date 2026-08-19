@@ -32,7 +32,7 @@ Starts to obtain the print file. This API uses an asynchronous callback to retur
 | jobId | string | Yes | ID of the print job. |
 | printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Print attributes. |
 | fd | int | Yes | File descriptor. |
-| onFileStateChanged | [Callback](arkts-basicservices-base-callback-i.md)&lt;[PrintFileCreationState](arkts-basicservices-print-printfilecreationstate-e.md)&gt; | Yes | Callback for updating the file state. |
+| onFileStateChanged | [Callback](arkts-basicservices-callback-t.md)&lt;[PrintFileCreationState](arkts-basicservices-print-printfilecreationstate-e.md)&gt; | Yes | Callback for updating the file state. |
 
 **Error codes:**
 

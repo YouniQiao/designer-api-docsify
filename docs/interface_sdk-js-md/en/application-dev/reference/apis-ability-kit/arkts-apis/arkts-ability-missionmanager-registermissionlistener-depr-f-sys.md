@@ -17,7 +17,7 @@ Registers a listener to observe the mission status.
 
 **Deprecated since:** 9
 
-**Substitutes:** on
+**Substitutes:** [on](arkts-ability-missionmanager-onmission-f-sys.md)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

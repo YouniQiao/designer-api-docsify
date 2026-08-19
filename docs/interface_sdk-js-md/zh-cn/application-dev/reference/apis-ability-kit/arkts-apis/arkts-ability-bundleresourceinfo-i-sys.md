@@ -1,6 +1,6 @@
 # BundleResourceInfo（系统接口）
 
-应用配置的图标和名称信息，可以通过 [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md) 获取。 > **说明：** > > 本模块为系统接口。
+应用配置的图标和名称信息，可以通过 [getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md) 获取。 &gt; **说明：** &gt; &gt; 本模块为系统接口。
 
 **起始版本：** 23
 
@@ -54,7 +54,7 @@ readonly drawableDescriptor: DrawableDescriptor | null
 
 Indicates the drawable descriptor of this bundle icon
 
-**类型：** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
+**类型：** [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
 
 **起始版本：** 23
 

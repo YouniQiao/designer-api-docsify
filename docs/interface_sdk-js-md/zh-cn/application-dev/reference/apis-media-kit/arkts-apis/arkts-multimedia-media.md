@@ -5,6 +5,7 @@
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## 汇总
@@ -112,9 +113,9 @@
 | [OnAVRecorderStateChangeHandler](arkts-media-onavrecorderstatechangehandler-t.md) | 录制状态机切换事件回调方法。 |
 | [PlaybackInfo](arkts-media-playbackinfo-t.md) | Provides the container definition for media description key-value pairs. |
 | [PlaybackMetrics](arkts-media-playbackmetrics-t.md) | 提供播放器指标信息键值对的容器定义。 |
-| [SourceCloseCallback](arkts-media-sourceclosecallback-t.md) | 由应用实现此回调函数，应用应释放相关资源。 > **注意：** > > 客户端在处理完请求后应立刻返回。 |
-| [SourceOpenCallback](arkts-media-sourceopencallback-t.md) | 由应用实现此回调函数，应用需处理传入的资源打开请求，并返回所打开资源对应的唯一句柄。 > **注意：** > > 客户端在处理完请求后应立刻返回。 |
-| [SourceReadCallback](arkts-media-sourcereadcallback-t.md) | 由应用实现此回调函数，应用需记录读取请求，并在数据充足时通过对应的MediaSourceLoadingRequest对象的 respondData 方法推送数据。 > **注意：** > > 客户端在处理完请求后应立刻返回。 |
+| [SourceCloseCallback](arkts-media-sourceclosecallback-t.md) | 由应用实现此回调函数，应用应释放相关资源。 &gt; **注意：** &gt; &gt; 客户端在处理完请求后应立刻返回。 |
+| [SourceOpenCallback](arkts-media-sourceopencallback-t.md) | 由应用实现此回调函数，应用需处理传入的资源打开请求，并返回所打开资源对应的唯一句柄。 &gt; **注意：** &gt; &gt; 客户端在处理完请求后应立刻返回。 |
+| [SourceReadCallback](arkts-media-sourcereadcallback-t.md) | 由应用实现此回调函数，应用需记录读取请求，并在数据充足时通过对应的MediaSourceLoadingRequest对象的 respondData 方法推送数据。 &gt; **注意：** &gt; &gt; 客户端在处理完请求后应立刻返回。 |
 | [VideoPlayState](arkts-media-videoplaystate-t.md) | 视频播放的状态机，可通过state属性获取当前状态。 |
 
 <!--Del-->

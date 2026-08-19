@@ -41,7 +41,7 @@ let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
 function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 ```
 
-Upgrades a **TCPSocket** connection to a **TLSSocket** connection. > **NOTE：**> > Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no > data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket** > object.
+Upgrades a **TCPSocket** connection to a **TLSSocket** connection. &gt; **NOTE：**&gt; &gt; Before calling **constructTLSSocketInstance**, ensure that a **TCPSocket** connection has been established and no &gt; data is transmitted. After a successful upgrade, you do not need to call the **close** API for the **TCPSocket** &gt; object.
 
 **Since:** 12
 

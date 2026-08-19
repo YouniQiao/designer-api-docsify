@@ -1,6 +1,6 @@
 # @ohos.usb(USB Manager)
 
-The **usb** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control. > **NOTE：**> > The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with > a superscript to indicate their earliest API version. > The APIs provided by this module are no longer maintained since API version 9. You are advised to use > [@ohos.usbManager](arkts-usbmanager.md).
+The **usb** module provides USB device management functions, including USB device list query, bulk data transfer, control transfer, and permission control. &gt; **NOTE：**&gt; &gt; The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with &gt; a superscript to indicate their earliest API version. &gt; The APIs provided by this module are no longer maintained since API version 9. You are advised to use &gt; [@ohos.usbManager](arkts-usbmanager.md).
 
 **Since:** 8
 

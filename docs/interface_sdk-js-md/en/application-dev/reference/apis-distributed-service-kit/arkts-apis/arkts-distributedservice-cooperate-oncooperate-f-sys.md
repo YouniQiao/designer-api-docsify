@@ -6,7 +6,7 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
-## on_cooperate('cooperate')
+## on('cooperate')
 
 ```TypeScript
 function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void
@@ -18,7 +18,7 @@ Enables listening for screen hopping status change events.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](#on_cooperatecooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
+**Substitutes:** [on](#oncooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
 
 <!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void--><!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void-End-->
 
@@ -31,7 +31,7 @@ Enables listening for screen hopping status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cooperate' | Yes | Event type. The value is **cooperate**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | Yes |  |
 
 **Error codes:**
 

@@ -28,7 +28,7 @@ Unregister event callback for the state change of printer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | The callback function for state change of printer. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | The callback function for state change of printer. |
 
 **Error codes:**
 

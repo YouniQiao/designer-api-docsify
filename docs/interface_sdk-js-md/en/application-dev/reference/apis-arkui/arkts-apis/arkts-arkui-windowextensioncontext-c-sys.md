@@ -1,6 +1,6 @@
 # WindowExtensionContext (System API)
 
-The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability. > **NOTE：**> > - This module is deprecated since API version 21. You are advised to use > [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead. > > - The APIs provided by this module are system APIs. > > - The APIs of this module can be used only in the stage model.
+The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md). The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md), including starting the ability. &gt; **NOTE：**&gt; &gt; - This module is deprecated since API version 21. You are advised to use &gt; [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md) instead. &gt; &gt; - The APIs provided by this module are system APIs. &gt; &gt; - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** WindowExtensionContext extends ExtensionContext
 
@@ -40,7 +40,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want information about the target ability. |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

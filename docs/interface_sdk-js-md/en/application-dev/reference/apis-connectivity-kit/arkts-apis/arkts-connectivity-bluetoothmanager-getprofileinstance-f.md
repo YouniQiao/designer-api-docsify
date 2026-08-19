@@ -34,7 +34,7 @@ Obtains the instance of profile.
 
 | Type | Description |
 | --- | --- |
-| A2dpSourceProfile | Returns the instance of profile. |
+| A2dpSourceProfile \| HandsFreeAudioGatewayProfile \| HidHostProfile \| PanProfile | Returns the instance of profile. |
 
 **Error codes:**
 

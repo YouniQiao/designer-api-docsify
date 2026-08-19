@@ -11,6 +11,7 @@ ArcButton内进度条的参数配置。
 ## 导入模块
 
 ```TypeScript
+import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition, ArcButtonStyleMode, ArcButtonStatus } from '@kit.ArkUI';
 ```
 
 ## color
@@ -19,7 +20,7 @@ ArcButton内进度条的参数配置。
 color?: ResourceColor
 ```
 
-进度条前景色。如果组件设置了背景色（[backgroundColor](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。 默认值："#1F71FF"，显示为蓝色。
+进度条前景色。如果组件设置了背景色（[backgroundColor](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（ [ArcButtonStyleMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。 默认值："#1F71FF"，显示为蓝色。
 
 **类型：** ResourceColor
 

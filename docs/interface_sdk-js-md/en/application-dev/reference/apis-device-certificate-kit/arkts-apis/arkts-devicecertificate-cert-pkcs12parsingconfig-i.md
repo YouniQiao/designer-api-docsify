@@ -100,7 +100,7 @@ Password.
 privateKeyFormat?: EncodingBaseFormat
 ```
 
-Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default. > **NOTE：**> > This parameter is valid only when **needsPrivateKey** is set to **true**.
+Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default. &gt; **NOTE：**&gt; &gt; This parameter is valid only when **needsPrivateKey** is set to **true**.
 
 **Type:** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)
 

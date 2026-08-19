@@ -437,7 +437,7 @@ Callback invoked when the text picker in the dialog box snaps to the selected it
 onDidAppear?: () => void
 ```
 
-Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. <br>3. If the user closes the dialog box immediately after it appears, onWillDisappearis invoked before onDidAppear. <br>4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. &lt;/p&gt;
+Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. <br>3. If the user closes the dialog box immediately after it appears, onWillDisappearis invoked before onDidAppear. <br>4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. &lt;/p&gt;
 
 **Type:** () =&gt; void
 
@@ -457,7 +457,7 @@ Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/stro
 onDidDisappear?: () => void
 ```
 
-Event callback when the dialog box disappears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The normal timing sequence is as follows: <br>onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. &lt;/p&gt;
+Event callback when the dialog box disappears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The normal timing sequence is as follows: <br>onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. &lt;/p&gt;
 
 **Type:** () =&gt; void
 
@@ -517,7 +517,7 @@ Callback invoked when the scrolling in the text picker of the dialog box stops.
 onWillAppear?: () => void
 ```
 
-Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: <br>onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onWillAppear. <br>the settings take effect next time the dialog box appears. &lt;/p&gt;
+Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: <br>onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in onWillAppear. <br>the settings take effect next time the dialog box appears. &lt;/p&gt;
 
 **Type:** () =&gt; void
 
@@ -537,7 +537,7 @@ Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NO
 onWillDisappear?: () => void
 ```
 
-Event callback when the dialog box is about to disappear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. <br>2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. &lt;/p&gt;
+Event callback when the dialog box is about to disappear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; (onAccept/onCancel/onChange/onScrollStop) &gt; onWillDisappear &gt; onDidDisappear. <br>2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. &lt;/p&gt;
 
 **Type:** () =&gt; void
 

@@ -23,5 +23,3 @@
 
 | Type | Description |
 | --- | --- |
-| Iterator&lt;T&gt; |  |
-

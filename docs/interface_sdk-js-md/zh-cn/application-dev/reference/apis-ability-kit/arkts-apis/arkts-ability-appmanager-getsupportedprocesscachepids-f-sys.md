@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getSupportedProcessCachePids
@@ -11,7 +12,7 @@
 function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>
 ```
 
-查询当前应用中支持缓存后快速启动的进程PID。使用Promise异步回调。 > **说明：** > > 本接口仅支持获取调用者所在系统账号下的进程PID。
+查询当前应用中支持缓存后快速启动的进程PID。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 本接口仅支持获取调用者所在系统账号下的进程PID。
 
 **起始版本：** 23
 

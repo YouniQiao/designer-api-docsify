@@ -27,5 +27,3 @@ Encodes a text string as a valid Uniform Resource Identifier (URI)
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

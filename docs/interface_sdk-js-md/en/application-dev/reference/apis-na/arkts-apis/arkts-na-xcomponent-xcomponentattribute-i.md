@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<XComponentAttribute> | AttributeMo
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableAnalyzer
 
 ```TypeScript
@@ -58,8 +56,6 @@ enableAnalyzer(enable: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableSecure
 
 ```TypeScript
@@ -82,8 +78,6 @@ enableSecure(isSecure: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## enableTransparentLayer
 
 ```TypeScript
@@ -106,8 +100,6 @@ enableTransparentLayer(enabled: boolean | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hdrBrightness
 
 ```TypeScript
@@ -130,8 +122,6 @@ hdrBrightness(brightness: double | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## hdrBrightness
 
 ```TypeScript
@@ -155,8 +145,6 @@ hdrBrightness(brightness: double | undefined, type?: HdrType): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onDestroy
 
 ```TypeScript
@@ -179,8 +167,6 @@ onDestroy(event: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onLoad
 
 ```TypeScript
@@ -203,8 +189,6 @@ onLoad(callback: VoidCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setXComponentOptions
 
 ```TypeScript

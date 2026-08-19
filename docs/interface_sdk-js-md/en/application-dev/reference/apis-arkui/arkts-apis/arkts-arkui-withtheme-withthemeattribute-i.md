@@ -45,8 +45,6 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setWithThemeOptions
 
 ```TypeScript
@@ -69,8 +67,6 @@ setWithThemeOptions(options: WithThemeOptions | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

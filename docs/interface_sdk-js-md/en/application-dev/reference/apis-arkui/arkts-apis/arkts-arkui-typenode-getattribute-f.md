@@ -29,7 +29,7 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 
 | Type | Description |
 | --- | --- |
-| TextAttribute | Attributes of the **Text** node, or **undefined** if they fail to be obtained. |
+| TextAttribute \| undefined | Attributes of the **Text** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -102,7 +102,7 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| ColumnAttribute | Attributes of the **Column** node, or **undefined** if they fail to be obtained. |
+| ColumnAttribute \| undefined | Attributes of the **Column** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -174,7 +174,7 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 
 | Type | Description |
 | --- | --- |
-| RowAttribute | Attributes of the **Row** node, or **undefined** if they fail to be obtained. |
+| RowAttribute \| undefined | Attributes of the **Row** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -246,7 +246,7 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 
 | Type | Description |
 | --- | --- |
-| StackAttribute | Attributes of the **Stack** node, or **undefined** if they fail to be obtained. |
+| StackAttribute \| undefined | Attributes of the **Stack** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -318,7 +318,7 @@ Obtains the Flex node attributes. If the node is not created using ArkTS, cross-
 
 | Type | Description |
 | --- | --- |
-| FlexAttribute | Flex node type. If the operation fails, undefined is returned. |
+| FlexAttribute \| undefined | Flex node type. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -390,7 +390,7 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| SwiperAttribute | Properties of the **Swiper** node, or **undefined** if they fail to be obtained. |
+| SwiperAttribute \| undefined | Properties of the **Swiper** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -426,7 +426,7 @@ Obtains the attributes of a **Progress** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| ProgressAttribute | Properties of the **Progress** node, or **undefined** if they fail to be obtained. |
+| ProgressAttribute \| undefined | Properties of the **Progress** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -497,7 +497,7 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| ScrollAttribute | Attributes of the **Scroll** node, or **undefined** if they fail to be obtained. |
+| ScrollAttribute \| undefined | Attributes of the **Scroll** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -533,7 +533,7 @@ Obtains the attributes of a **RelativeContainer** node. If the node is not creat
 
 | Type | Description |
 | --- | --- |
-| RelativeContainerAttribute | Attributes of the **RelativeContainer** node, or **undefined** if they fail to be obtained. |
+| RelativeContainerAttribute \| undefined | Attributes of the **RelativeContainer** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -605,7 +605,7 @@ Obtains the attributes of a LoadingProgress node. If the node is not created usi
 
 | Type | Description |
 | --- | --- |
-| LoadingProgressAttribute | Properties of the **LoadingProgress** node, or **undefined** if they fail to be obtained. |
+| LoadingProgressAttribute \| undefined | Properties of the **LoadingProgress** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -674,7 +674,7 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| ImageAttribute | Properties of the **Image** node, or **undefined** if they fail to be obtained. |
+| ImageAttribute \| undefined | Properties of the **Image** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -752,7 +752,7 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 | Type | Description |
 | --- | --- |
-| ListAttribute | Attributes of the **List** node, or **undefined** if they fail to be obtained. |
+| ListAttribute \| undefined | Attributes of the **List** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -788,7 +788,7 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| ListItemAttribute | Attributes of the **ListItem** node, or **undefined** if they fail to be obtained. |
+| ListItemAttribute \| undefined | Attributes of the **ListItem** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -824,7 +824,7 @@ Obtains the attributes of a **TextInput** node. If the node is not created using
 
 | Type | Description |
 | --- | --- |
-| TextInputAttribute | Properties of the **TextInput** node, or **undefined** if they fail to be obtained. |
+| TextInputAttribute \| undefined | Properties of the **TextInput** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -893,7 +893,7 @@ Obtains the attributes of a **Button** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| ButtonAttribute | Attributes of the **Button** node, or **undefined** if they fail to be obtained. |
+| ButtonAttribute \| undefined | Attributes of the **Button** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -968,7 +968,7 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 
 | Type | Description |
 | --- | --- |
-| ListItemGroupAttribute | Attributes of the **ListItemGroup** node, or **undefined** if they fail to be obtained. |
+| ListItemGroupAttribute \| undefined | Attributes of the **ListItemGroup** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1006,7 +1006,7 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 
 | Type | Description |
 | --- | --- |
-| WaterFlowAttribute | Properties of the **WaterFlow** node, or **undefined** if they fail to be obtained. |
+| WaterFlowAttribute \| undefined | Properties of the **WaterFlow** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1042,7 +1042,7 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| FlowItemAttribute | Properties of the **FlowItem** node, or **undefined** if they fail to be obtained. |
+| FlowItemAttribute \| undefined | Properties of the **FlowItem** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1078,7 +1078,7 @@ Obtain the attributes of an **XComponent** node. If the node is not created usin
 
 | Type | Description |
 | --- | --- |
-| XComponentAttribute | Properties of the **XComponent** node, or **undefined** if they fail to be obtained. |
+| XComponentAttribute \| undefined | Properties of the **XComponent** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1116,7 +1116,7 @@ Obtains the attributes of a **Checkbox** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| CheckboxAttribute | Attributes of the **Checkbox** node, or **undefined** if they fail to be obtained. |
+| CheckboxAttribute \| undefined | Attributes of the **Checkbox** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1193,7 +1193,7 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 
 | Type | Description |
 | --- | --- |
-| RadioAttribute | Properties of the **Radio** node, or **undefined** if they fail to be obtained. |
+| RadioAttribute \| undefined | Properties of the **Radio** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1269,7 +1269,7 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| SliderAttribute | Properties of the **Slider** node, or **undefined** if they fail to be obtained. |
+| SliderAttribute \| undefined | Properties of the **Slider** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1340,7 +1340,7 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 
 | Type | Description |
 | --- | --- |
-| ToggleAttribute | Properties of the **Toggle** node, or **undefined** if they fail to be obtained. |
+| ToggleAttribute \| undefined | Properties of the **Toggle** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1411,7 +1411,7 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| TextAreaAttribute | Properties of the **TextArea** node, or **undefined** if they fail to be obtained. |
+| TextAreaAttribute \| undefined | Properties of the **TextArea** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1480,7 +1480,7 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 | Type | Description |
 | --- | --- |
-| GridAttribute | Properties of the **Grid** node, or **undefined** if they fail to be obtained. |
+| GridAttribute \| undefined | Properties of the **Grid** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 
@@ -1516,7 +1516,7 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 
 | Type | Description |
 | --- | --- |
-| GridItemAttribute | Properties of the **GridItem** node, or **undefined** if they fail to be obtained. |
+| GridItemAttribute \| undefined | Properties of the **GridItem** node, or **undefined** if they fail to be obtained. |
 
 **Examples**
 

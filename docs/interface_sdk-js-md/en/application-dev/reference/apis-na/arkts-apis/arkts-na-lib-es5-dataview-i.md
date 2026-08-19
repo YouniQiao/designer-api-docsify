@@ -32,8 +32,6 @@ Gets the Float32 value at the specified byte offset from the start of the view. 
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getFloat64
 
 ```TypeScript
@@ -57,8 +55,6 @@ Gets the Float64 value at the specified byte offset from the start of the view. 
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getInt16
 
 ```TypeScript
@@ -82,8 +78,6 @@ Gets the Int16 value at the specified byte offset from the start of the view. Th
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getInt32
 
 ```TypeScript
@@ -107,8 +101,6 @@ Gets the Int32 value at the specified byte offset from the start of the view. Th
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getInt8
 
 ```TypeScript
@@ -131,8 +123,6 @@ Gets the Int8 value at the specified byte offset from the start of the view. The
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getUint16
 
 ```TypeScript
@@ -156,8 +146,6 @@ Gets the Uint16 value at the specified byte offset from the start of the view. T
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getUint32
 
 ```TypeScript
@@ -181,8 +169,6 @@ Gets the Uint32 value at the specified byte offset from the start of the view. T
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## getUint8
 
 ```TypeScript
@@ -205,8 +191,6 @@ Gets the Uint8 value at the specified byte offset from the start of the view. Th
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## setFloat32
 
 ```TypeScript

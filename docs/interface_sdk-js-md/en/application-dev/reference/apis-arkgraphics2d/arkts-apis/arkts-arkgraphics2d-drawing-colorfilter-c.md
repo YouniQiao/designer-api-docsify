@@ -1,6 +1,6 @@
 # ColorFilter
 
-Defines a color filter. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Defines a color filter. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - This module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ Creates a ColorFilter object with a given color and blend mode.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter object. |
+| ColorFilter \| undefined | Colorfilter object. |
 
 **Error codes:**
 
@@ -138,7 +138,7 @@ Creates a ColorFilter object with a given color and blend mode.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter object. |
+| ColorFilter \| undefined | Colorfilter object. |
 
 **Error codes:**
 
@@ -204,7 +204,7 @@ Creates a ColorFilter object by combining another two color filters.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter object. |
+| ColorFilter \| undefined | Colorfilter object. |
 
 **Error codes:**
 
@@ -264,7 +264,7 @@ Makes a color filter with the given mutColor and addColor.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter object. |
+| ColorFilter \| undefined | Colorfilter object. |
 
 ## createLinearToSRGBGamma
 
@@ -304,7 +304,7 @@ Creates a ColorFilter object that applies the sRGB gamma curve to the RGB channe
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter object. |
+| ColorFilter \| undefined | Colorfilter object. |
 
 ## createLumaColorFilter
 
@@ -344,7 +344,7 @@ Creates a ColorFilter object that multiplies the luma into the alpha channel and
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter. |
+| ColorFilter \| undefined | Colorfilter. |
 
 ## createMatrixColorFilter
 
@@ -402,7 +402,7 @@ Creates a color filter object with a 4*5 color matrix.
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter object. |
+| ColorFilter \| undefined | Colorfilter object. |
 
 **Error codes:**
 
@@ -448,5 +448,5 @@ Creates a ColorFilter object that applies the RGB channels to the sRGB gamma cur
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | Colorfilter object. |
+| ColorFilter \| undefined | Colorfilter object. |
 

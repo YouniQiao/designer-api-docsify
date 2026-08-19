@@ -114,5 +114,5 @@ Set the Grid Options.
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| [ExtendableGrid](arkts-na-grid-extendablegrid-c.md) |  |
 

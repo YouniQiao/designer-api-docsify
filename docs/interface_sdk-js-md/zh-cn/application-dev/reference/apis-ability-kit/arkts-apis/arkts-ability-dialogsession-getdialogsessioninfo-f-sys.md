@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## getDialogSessionInfo
@@ -74,7 +75,7 @@ function getDialogSessionInfo(dialogSessionId: string): DialogSessionInfo | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [DialogSessionInfo](arkts-ability-dialogsession-dialogsessioninfo-i-sys.md) | Returns the session info when the target DialogSessionInfo of dialogSessionId exists. Returns null if the target DialogSessionInfo of dialogSessionId not exist. |
+| [DialogSessionInfo](arkts-ability-dialogsession-dialogsessioninfo-i-sys.md) \| null | Returns the session info when the target DialogSessionInfo of dialogSessionId exists. Returns null if the target DialogSessionInfo of dialogSessionId not exist. |
 
 **错误码：**
 

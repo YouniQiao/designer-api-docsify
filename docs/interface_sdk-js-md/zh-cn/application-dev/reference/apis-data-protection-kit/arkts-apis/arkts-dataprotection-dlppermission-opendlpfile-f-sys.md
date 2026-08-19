@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## openDLPFile
@@ -111,7 +112,7 @@ DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。
 | --- | --- | --- | --- |
 | ciphertextFd | number | 是 | 加密文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时， fd的值被截断。 |
 | appId | string | 是 | 调用方身份。最小8字节，最大1024字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | 是 | 回调函数。用于接收打开DLP文件的结果。回调参数包括：err（错误对象，成功时为undefined）和res（DLPFile对象，表示打 开的DLP文件）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | 是 | 回调函数。用于接收打开DLP文件的结果。回调参数包括：err（错误对象，成功时为undefined）和res（DLPFile对象，表示打 开的DLP文件）。 |
 
 **错误码：**
 

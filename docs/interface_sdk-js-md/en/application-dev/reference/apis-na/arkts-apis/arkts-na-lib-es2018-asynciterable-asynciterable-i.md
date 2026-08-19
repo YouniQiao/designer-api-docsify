@@ -23,5 +23,3 @@
 
 | Type | Description |
 | --- | --- |
-| [AsyncIterator](arkts-na-lib-es2018-asynciterable-asynciterator-i.md)&lt;T&gt; |  |
-

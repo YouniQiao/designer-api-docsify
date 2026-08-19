@@ -6,13 +6,13 @@
 
 | Name | Description |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. > **NOTE：**> > The APIs of this module can be used only in the stage model. |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. &gt; **NOTE：**&gt; &gt; The APIs of this module can be used only in the stage model. |
 
 <!--Del-->
 ### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c-sys.md) | ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. > **NOTE：**> > The APIs of this module can be used only in the stage model. |
+| [ApplicationContext](arkts-ability-applicationcontext-c-sys.md) | ApplicationContext inherits from Context and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting. &gt; **NOTE：**&gt; &gt; The APIs of this module can be used only in the stage model. |
 <!--DelEnd-->
 

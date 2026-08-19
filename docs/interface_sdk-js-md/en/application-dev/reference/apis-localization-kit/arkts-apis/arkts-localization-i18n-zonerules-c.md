@@ -40,5 +40,5 @@ Obtains the **nextTransition** object for the specified time.
 
 | Type | Description |
 | --- | --- |
-| [ZoneOffsetTransition](../../apis-na/arkts-apis/arkts-na-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
+| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
 

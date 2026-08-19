@@ -1,6 +1,6 @@
 # NotificationTime
 
-Describes the notification timing information. > **NOTE：**> > The actual display effect depends on the device capabilities and the notification center UI style.
+Describes the notification timing information. &gt; **NOTE：**&gt; &gt; The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 23
 

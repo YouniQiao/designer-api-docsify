@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -117,7 +118,7 @@ constructor()
 deviceId(deviceId: string): Query
 ```
 
-添加设备ID作为Key的前缀。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+添加设备ID作为Key的前缀。 &gt; **说明：** &gt; &gt; 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的 &gt; networkId，通过调用 &gt; [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) &gt; 方法得到。 &gt; &gt; deviceId具体获取方式请参考 &gt; [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
 **起始版本：** 23
 
@@ -209,7 +210,7 @@ try {
 equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。 > **说明：** > > 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。 &gt; **说明：** &gt; &gt; 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -282,7 +283,7 @@ try {
 greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有大于指定值的指定字段的条目。 > **说明：** > > 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有大于指定值的指定字段的条目。 &gt; **说明：** &gt; &gt; 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -317,7 +318,7 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。 > **说明：** > > 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。 &gt; **说明：** &gt; &gt; 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -352,7 +353,7 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。 > **说明：** > > 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。 &gt; **说明：** &gt; &gt; 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -387,7 +388,7 @@ inNumber(field: string, valueList: long[] | double[]): Query
 inString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。 > **说明：** > > 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。 &gt; **说明：** &gt; &gt; 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -440,7 +441,7 @@ try {
 isNotNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值不为null的指定字段的条目。 > **说明：** > > 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有值不为null的指定字段的条目。 &gt; **说明：** &gt; &gt; 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -492,7 +493,7 @@ try {
 isNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值为null的指定字段的条目。 > **说明：** > > 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有值为null的指定字段的条目。 &gt; **说明：** &gt; &gt; 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -544,7 +545,7 @@ try {
 lessThan(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有小于指定值的指定字段的条目。 > **说明：** > > 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有小于指定值的指定字段的条目。 &gt; **说明：** &gt; &gt; 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -579,7 +580,7 @@ lessThan(field: string, value: long | double | string): Query
 lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。 > **说明：** > > 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。 &gt; **说明：** &gt; &gt; 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -614,7 +615,7 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 like(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。 > **说明：** > > 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。 &gt; **说明：** &gt; &gt; 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -723,7 +724,7 @@ try {
 notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不等于指定值的条目。 > **说明：** > > 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值不等于指定值的条目。 &gt; **说明：** &gt; &gt; 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -758,7 +759,7 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。 > **说明：** > > 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。 &gt; **说明：** &gt; &gt; 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -793,7 +794,7 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 notInString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。 > **说明：** > > 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。 &gt; **说明：** &gt; &gt; 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -887,7 +888,7 @@ try {
 orderByAsc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按升序排序。 > **说明：** > > 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象，将查询结果按升序排序。 &gt; **说明：** &gt; &gt; 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -940,7 +941,7 @@ try {
 orderByDesc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按降序排序。 > **说明：** > > 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象，将查询结果按降序排序。 &gt; **说明：** &gt; &gt; 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 
@@ -1140,7 +1141,7 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。 > **说明：** > > 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
+构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。 &gt; **说明：** &gt; &gt; 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。 &gt; &gt; 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 &gt; 取键值数据库示例。
 
 **起始版本：** 23
 

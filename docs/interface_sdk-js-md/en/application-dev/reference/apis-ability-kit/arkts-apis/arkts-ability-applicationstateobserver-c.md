@@ -1,6 +1,6 @@
 # ApplicationStateObserver
 
-The module defines an observer to listen for application state changes. It can be used as an input parameter in [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationstateapplicationstate) to listen for lifecycle changes of the application.
+The module defines an observer to listen for application state changes. It can be used as an input parameter in [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#onapplicationstate) to listen for lifecycle changes of the application.
 
 **Since:** 14
 
@@ -106,7 +106,7 @@ Called when a process is created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
+| processData | [ProcessData](../../apis-na/arkts-apis/arkts-na-processdata-t.md) | Yes | Process data. |
 
 ## onProcessDied
 
@@ -126,7 +126,7 @@ Called when a process is destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
+| processData | [ProcessData](../../apis-na/arkts-apis/arkts-na-processdata-t.md) | Yes | Process data. |
 
 ## onProcessStateChanged
 
@@ -146,5 +146,5 @@ Called when the process state is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes | Process data. |
+| processData | [ProcessData](../../apis-na/arkts-apis/arkts-na-processdata-t.md) | Yes | Process data. |
 

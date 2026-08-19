@@ -6497,7 +6497,7 @@ Create a image frame from the drawable descriptor.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md)* drawable | Indicates the pointer to the drawable descriptor. |
+| ArkUI_DrawableDescriptor* drawable | Indicates the pointer to the drawable descriptor. |
 
 **返回：**
 
@@ -10261,7 +10261,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginPixelMap(OH_Ar
 | 参数项 | 描述 |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | 指向[OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md)对象的指针。 |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | 段落缩进的像素图。 |
+| struct OH_PixelmapNative* pixelmap | 段落缩进的像素图。 |
 
 **返回：**
 
@@ -10286,7 +10286,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginPixelMap(OH_Ar
 | 参数项 | 描述 |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | 指向[OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md)对象的指针。 |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | 段落缩进的像素图。 |
+| struct OH_PixelmapNative** pixelmap | 段落缩进的像素图。 |
 
 **返回：**
 

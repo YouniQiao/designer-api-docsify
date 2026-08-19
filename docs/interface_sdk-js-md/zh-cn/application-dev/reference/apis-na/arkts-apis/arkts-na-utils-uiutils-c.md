@@ -299,7 +299,7 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 static makeObserved<T extends object | null | undefined>(source: T): T
 ```
 
-将不可观察数据转化为可观察数据。支持built-in类型（Array、Map、Set、Date）以及interface字面量。 > **说明：** > 默认情况下，返回对象支持深度观察，可观察嵌套属性变化。 > 如果传入了undefined或null，则直接返回传入值。
+将不可观察数据转化为可观察数据。支持built-in类型（Array、Map、Set、Date）以及interface字面量。 &gt; **说明：** &gt; 默认情况下，返回对象支持深度观察，可观察嵌套属性变化。 &gt; 如果传入了undefined或null，则直接返回传入值。
 
 **起始版本：** 23
 
@@ -329,7 +329,7 @@ static makeObserved<T extends object | null | undefined>(source: T): T
 static makeObserved<T extends object | null | undefined>(source: T, allowDeep: boolean): T
 ```
 
-将不可观察数据转化为可观察数据，并通过`allowDeep`控制观察深度。支持built-in类型（Array、Map、Set、Date）以及interface字面量。 > **说明：** > 如果传入了undefined或null，则直接返回传入值。
+将不可观察数据转化为可观察数据，并通过`allowDeep`控制观察深度。支持built-in类型（Array、Map、Set、Date）以及interface字面量。 &gt; **说明：** &gt; 如果传入了undefined或null，则直接返回传入值。
 
 **起始版本：** 26.0.0
 

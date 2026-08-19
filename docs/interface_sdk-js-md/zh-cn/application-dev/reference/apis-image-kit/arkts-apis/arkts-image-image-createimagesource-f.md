@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageSource
@@ -92,7 +93,7 @@ Creates an ImageSource instance based on the URI.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -188,7 +189,7 @@ Creates an ImageSource instance based on the URI.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -283,7 +284,7 @@ Creates an ImageSource instance based on the file descriptor.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -384,7 +385,7 @@ Creates an ImageSource instance based on the file descriptor.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -472,7 +473,7 @@ Creates an ImageSource instance based on the buffer.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -564,7 +565,7 @@ Creates an ImageSource instance based on the buffer.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -668,5 +669,5 @@ Creates an ImageSource instance based on the raw file descriptor.
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

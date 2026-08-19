@@ -28,7 +28,7 @@ Unsubscribe the event of acl state changed from a remote device. If the applicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AclStateResult](arkts-connectivity-connection-aclstateresult-i.md)&gt; | No | Callback used to listen. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AclStateResult](arkts-connectivity-connection-aclstateresult-i.md)&gt; | No | Callback used to listen. |
 
 **Error codes:**
 

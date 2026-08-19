@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## checkValidityWithDate
@@ -553,7 +556,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书序列化数据成功时，err为undefined，data为 获取到的X.509证书序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书序列化数据成功时，err为undefined，data为 获取到的X.509证书序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -1100,7 +1103,7 @@ async function certGetExtensionsObject() {
 getIssuerAltNames(): DataArray
 ```
 
-表示获取X.509证书颁发者可选名称。 > **说明：** > > 获取到的X.509证书颁发者可选名称数据带字符串结束符。
+表示获取X.509证书颁发者可选名称。 &gt; **说明：** &gt; &gt; 获取到的X.509证书颁发者可选名称数据带字符串结束符。
 
 **起始版本：** 23
 
@@ -1251,7 +1254,7 @@ function TestGetIssuerAltNames() {
 getIssuerName(): DataBlob
 ```
 
-表示获取X.509证书颁发者名称。 > **说明：** > > - 获取的X.509证书颁发者名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。 > - 获取的证书颁发者名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的可分辨名称字符串。
+表示获取X.509证书颁发者名称。 &gt; **说明：** &gt; &gt; - 获取的X.509证书颁发者名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。 &gt; - 获取的证书颁发者名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的可分辨名称字符串。
 
 **起始版本：** 23
 
@@ -2388,7 +2391,7 @@ function TestGetPublicKey() {
 getSerialNumber(): number
 ```
 
-表示获取X.509证书序列号。 > **说明：** > > 从API version 9开始支持，从API version 10开始废弃，建议使用 > [X509Cert.getCertSerialNumber()](#getcertserialnumber)替代。
+表示获取X.509证书序列号。 &gt; **说明：** &gt; &gt; 从API version 9开始支持，从API version 10开始废弃，建议使用 &gt; [X509Cert.getCertSerialNumber()](#getcertserialnumber)替代。
 
 **起始版本：** 9
 
@@ -3017,7 +3020,7 @@ function TestGetSignatureAlgParams() {
 getSubjectAltNames(): DataArray
 ```
 
-表示获取X.509证书主体可选名称。 > **说明：** > > 获取到的X.509证书主体可选名称数据带字符串结束符。
+表示获取X.509证书主体可选名称。 &gt; **说明：** &gt; &gt; 获取到的X.509证书主体可选名称数据带字符串结束符。
 
 **起始版本：** 23
 
@@ -3172,7 +3175,7 @@ function TestGetSubjectAltNames() {
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-表示获取X.509证书主体名称。 > **说明：** > > - 若不设置encodingType参数，获取的证书主体名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。 > - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的 > 可分辨名称字符串。 > - 建议设置encodingType参数为EncodingType.ENCODING_UTF8，获取的证书主体名称是以逗号（,）分隔相对可分辨名称的可分辨名称字符串。
+表示获取X.509证书主体名称。 &gt; **说明：** &gt; &gt; - 若不设置encodingType参数，获取的证书主体名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。 &gt; - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的 &gt; 可分辨名称字符串。 &gt; - 建议设置encodingType参数为EncodingType.ENCODING_UTF8，获取的证书主体名称是以逗号（,）分隔相对可分辨名称的可分辨名称字符串。
 
 **起始版本：** 23
 
@@ -4244,7 +4247,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | 是 | 用于验签的公钥对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

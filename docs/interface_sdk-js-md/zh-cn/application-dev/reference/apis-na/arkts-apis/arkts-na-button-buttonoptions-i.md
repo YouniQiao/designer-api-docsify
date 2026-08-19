@@ -16,7 +16,7 @@
 buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式和重要程度，根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过 backgroundColor、[fontColor](arkts-na-button-buttonattribute-i.md#fontcolor)和 role接口设置，实际显示效果以最后一次设置为准。 默认值：ButtonStyleMode.EMPHASIZED **说明：** 按钮重要程度：强调按钮>普通按钮>文字按钮。 **卡片能力（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在ArkTS卡片中使用。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+按钮的样式和重要程度，根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过 backgroundColor、[fontColor](arkts-na-button-buttonattribute-i.md#fontcolor)和 role接口设置，实际显示效果以最后一次设置为准。 默认值：ButtonStyleMode.EMPHASIZED **说明：** 按钮重要程度：强调按钮&gt;普通按钮&gt;文字按钮。 **卡片能力（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在ArkTS卡片中使用。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** [ButtonStyleMode](arkts-na-button-buttonstylemode-e.md)
 

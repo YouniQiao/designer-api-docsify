@@ -39,8 +39,6 @@ attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | Attrib
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## breakpointConfig
 
 ```TypeScript
@@ -63,8 +61,6 @@ breakpointConfig(value?: BreakpointOptions): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setContainerReaderOptions
 
 ```TypeScript
@@ -87,8 +83,6 @@ setContainerReaderOptions(value: ContainerReaderInfo): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

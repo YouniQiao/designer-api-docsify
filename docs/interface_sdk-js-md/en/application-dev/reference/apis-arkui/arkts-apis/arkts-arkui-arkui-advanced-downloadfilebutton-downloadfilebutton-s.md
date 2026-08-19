@@ -22,7 +22,7 @@ import { DownloadFileButton, DownloadLayoutDirection, DownloadIconStyle, Downloa
 
 Set DownloadFileButton Content.
 
-**Type:** [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md)
+**Type:** [DownloadContentOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md)
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ Set DownloadFileButton Content.
 
 Set DownloadFileButton Style.
 
-**Type:** [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
+**Type:** [DownloadStyleOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
 
 **Since:** 12
 

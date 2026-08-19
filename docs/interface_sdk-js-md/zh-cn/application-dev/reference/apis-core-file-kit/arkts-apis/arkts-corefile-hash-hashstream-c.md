@@ -13,6 +13,7 @@ HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHa
 ## 导入模块
 
 ```TypeScript
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## digest

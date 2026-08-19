@@ -118,7 +118,7 @@ Obtains resource response data, supporting multiple data types. Compared with ge
 
 | Type | Description |
 | --- | --- |
-| string | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **\\$rawfile** resource when the type is resource; or **undefined** if no data is available. |
+| string \| number \| ArrayBuffer \| Resource \| undefined | An HTML string when the type is string; a file descriptor when the type is number; binary data when the type is ArrayBuffer; a **\\$rawfile** resource when the type is resource; or **undefined** if no data is available. |
 
 ## getResponseEncoding
 
@@ -322,7 +322,7 @@ Sets the resource response header.
 setResponseIsReady(IsReady: boolean): void
 ```
 
-Sets whether the resource response data is ready. > **NOTE：**> > - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType( > ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response > attributes. Finally, call setResponseIsReady(true) to trigger resource return. > > - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData > () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return. > > - If the calling sequence is incorrect, XMLHttpRequest synchronous requests may be blocked.
+Sets whether the resource response data is ready. &gt; **NOTE：**&gt; &gt; - In resource request interception scenarios, call setResponseData(), setResponseEncoding(), setResponseMimeType( &gt; ), setResponseHeader(), setResponseCode(), setReasonMessage(), and other methods first to set the response &gt; attributes. Finally, call setResponseIsReady(true) to trigger resource return. &gt; &gt; - Asynchronous data scenario: Call setResponseIsReady(false) first. After the data is ready, call setResponseData &gt; () and other setting methods, and finally call setResponseIsReady(true) to trigger resource return. &gt; &gt; - If the calling sequence is incorrect, XMLHttpRequest synchronous requests may be blocked.
 
 **Since:** 9
 

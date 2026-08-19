@@ -44,7 +44,7 @@ Obtains the next-level root directory.
 
 | Type | Description |
 | --- | --- |
-| { value: RootInfo, done: boolean } | Returns RootInfo Object and boolean flag. |
+| object | Returns RootInfo Object and boolean flag. |
 
 **Error codes:**
 

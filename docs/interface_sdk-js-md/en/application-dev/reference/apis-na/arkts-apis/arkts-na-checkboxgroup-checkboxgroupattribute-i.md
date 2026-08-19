@@ -35,8 +35,6 @@ attributeModifier(
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## checkboxShape
 
 ```TypeScript
@@ -59,8 +57,6 @@ checkboxShape(value: CheckBoxShape | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -83,8 +79,6 @@ contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | undefine
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## mark
 
 ```TypeScript
@@ -107,8 +101,6 @@ mark(value: MarkStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -131,8 +123,6 @@ onChange(callback: OnCheckboxGroupChangeCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectAll
 
 ```TypeScript
@@ -155,8 +145,6 @@ selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## selectedColor
 
 ```TypeScript
@@ -179,8 +167,6 @@ selectedColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setCheckboxGroupOptions
 
 ```TypeScript
@@ -203,8 +189,6 @@ setCheckboxGroupOptions(options?: CheckboxGroupOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## unselectedColor
 
 ```TypeScript
@@ -227,8 +211,6 @@ unselectedColor(value: ResourceColor | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

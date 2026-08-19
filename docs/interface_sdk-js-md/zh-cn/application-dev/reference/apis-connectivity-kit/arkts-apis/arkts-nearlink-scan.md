@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

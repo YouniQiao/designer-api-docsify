@@ -1,6 +1,6 @@
 # HitTestMode
 
-Sets the response logic and node blocking rules for the hit test. > **NOTE：**> > When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child > component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch > testing for lower-layer nodes can only be triggered by setting the > hitTestBehavior of the topmost node to **HitTestMode.Transparent**.
+Sets the response logic and node blocking rules for the hit test. &gt; **NOTE：**&gt; &gt; When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child &gt; component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch &gt; testing for lower-layer nodes can only be triggered by setting the &gt; hitTestBehavior of the topmost node to **HitTestMode.Transparent**.
 
 **Since:** 9
 

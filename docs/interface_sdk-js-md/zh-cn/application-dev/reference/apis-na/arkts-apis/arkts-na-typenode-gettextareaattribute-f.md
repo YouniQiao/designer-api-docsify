@@ -28,5 +28,5 @@ export function getTextAreaAttribute(node: FrameNode): TextAreaAttribute | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| TextAreaAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| TextAreaAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

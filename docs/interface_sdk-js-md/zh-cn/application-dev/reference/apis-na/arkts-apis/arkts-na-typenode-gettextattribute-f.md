@@ -28,5 +28,5 @@ export function getTextAttribute(node: FrameNode): TextAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| TextAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| TextAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

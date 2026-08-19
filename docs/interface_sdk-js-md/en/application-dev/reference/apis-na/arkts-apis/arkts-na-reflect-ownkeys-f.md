@@ -27,5 +27,3 @@ Returns the string and symbol keys of the own properties of an object. The own p
 
 | Type | Description |
 | --- | --- |
-| (string \| symbol)[] |  |
-

@@ -14,7 +14,7 @@ import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, Watch
 declare function moveFile(src: string, dest: string, mode?: number): Promise<void>
 ```
 
-Moves a file. This API uses a promise to return the result. > **NOTE：**> > This API is not supported in a distributed directory.
+Moves a file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -67,7 +67,7 @@ Moves a file. This API uses a promise to return the result. > **NOTE：**> > Thi
 declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is not supported in a distributed directory.
+Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -81,7 +81,7 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -114,7 +114,7 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void
 ```
 
-Moves a file with the specified mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is not supported in a distributed directory.
+Moves a file with the specified mode. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -129,7 +129,7 @@ Moves a file with the specified mode. This API uses an asynchronous callback to 
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
 | mode | number | Yes | Move mode.<br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

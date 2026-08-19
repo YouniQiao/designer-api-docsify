@@ -1,6 +1,6 @@
 # Map
 
-A non-linear data structure. > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > This section uses the following to identify the use of generics: - K: key. - V: value. The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
+A non-linear data structure. &gt; **NOTE：**&gt; &gt; - This module can be imported only to ArkTS files (with the file name extension .ets). &gt; This section uses the following to identify the use of generics: - K: key. - V: value. The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -240,7 +240,7 @@ Obtains the value of the specified key in this ArkTS map.
 
 | Type | Description |
 | --- | --- |
-| V | Value obtained. If the key is not found, **undefined** is returned. |
+| V \| undefined | Value obtained. If the key is not found, **undefined** is returned. |
 
 **Error codes:**
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## 汇总

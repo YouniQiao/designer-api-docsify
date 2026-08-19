@@ -95,5 +95,5 @@ Get the animation controller of the component based on the component id.
 
 | Type | Description |
 | --- | --- |
-| [AnimationController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationcontroller-i.md) | Return the component of animation controller. |
+| [AnimationController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationcontroller-i.md) \| undefined | Return the component of animation controller. |
 

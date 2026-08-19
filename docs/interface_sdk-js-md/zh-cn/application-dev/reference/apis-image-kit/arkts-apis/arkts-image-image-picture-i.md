@@ -1,6 +1,6 @@
 # Picture
 
-Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富 的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-image-createpicture-f.md)创建一个 Picture实例。 由于图片占用内存较大，所以当Picture实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > - 本Interface首批接口从API version 13开始支持。
+Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富 的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-image-createpicture-f.md)创建一个 Picture实例。 由于图片占用内存较大，所以当Picture实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 &gt; **说明：** &gt; &gt; - 本Interface首批接口从API version 13开始支持。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ Picture类，一些包含特殊信息的图片可以解码为Picture（也可以
 ## 导入模块
 
 ```TypeScript
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPicture
@@ -37,7 +38,7 @@ getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | 返回AuxiliaryPicture对象，如果没有则返回null。 |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) \| null | 返回AuxiliaryPicture对象，如果没有则返回null。 |
 
 **错误码：**
 
@@ -63,7 +64,7 @@ getGainmapPixelmap(): PixelMap | null
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | 返回Pixelmap对象，如果没有则返回null。 |
+| PixelMap \| null | 返回Pixelmap对象，如果没有则返回null。 |
 
 ## getHdrComposedPixelmap
 
@@ -191,7 +192,7 @@ Obtains the pixel map of the main image.
 
 | 类型 | 说明 |
 | --- | --- |
-| PixelMap | Returns the pixel map. |
+| PixelMap \| undefined | Returns the pixel map. |
 
 ## getMetadata
 

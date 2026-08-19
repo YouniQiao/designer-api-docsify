@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## getDownloadInfo
@@ -31,7 +32,7 @@ function getDownloadInfo(url: string): DownloadInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| DownloadInfo | 返回对应url的下载信息，url未记录时返回undefined。 |
+| DownloadInfo \| undefined | 返回对应url的下载信息，url未记录时返回undefined。 |
 
 **错误码：**
 

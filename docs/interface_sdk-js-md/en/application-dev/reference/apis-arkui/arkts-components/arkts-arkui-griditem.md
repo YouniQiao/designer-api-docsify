@@ -38,5 +38,5 @@ Creates a **GridItem** component.
 
 | Name | Description |
 | --- | --- |
-| [GridItemStyle](arkts-arkui-griditemstyle-e.md) | Enumerates styles of grid items. > **NOTE：**> > To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for > accommodating the focus frame of the grid item. |
+| [GridItemStyle](arkts-arkui-griditemstyle-e.md) | Enumerates styles of grid items. &gt; **NOTE：**&gt; &gt; To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for &gt; accommodating the focus frame of the grid item. |
 

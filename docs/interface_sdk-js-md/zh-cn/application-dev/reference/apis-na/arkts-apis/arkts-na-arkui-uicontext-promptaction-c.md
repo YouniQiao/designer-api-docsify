@@ -1,6 +1,6 @@
 # PromptAction
 
-创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 > **说明：** > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getPromptAction()](arkts-na-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到PromptAction对 > 象，再通过该对象调用对应方法。
+创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 10开始支持。 &gt; &gt; - 以下API需先使用UIContext中的[getPromptAction()](arkts-na-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到PromptAction对 &gt; 象，再通过该对象调用对应方法。
 
 **起始版本：** 23
 
@@ -214,7 +214,7 @@ getBottomOrder(): LevelOrder | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-na-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) \| undefined | 返回弹窗层级信息。 |
 
 ## getTopOrder
 
@@ -238,7 +238,7 @@ getTopOrder(): LevelOrder | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-na-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) \| undefined | 返回弹窗层级信息。 |
 
 ## openCustomDialog
 
@@ -363,7 +363,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 > > - 由于[updateMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#updatemenu)和 > [closeMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#closemenu)依赖content去更新或者关闭指定 > 的menu弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-chip-f.md)组件），则 > [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ > nestingBuilderSupported: true }。 > > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#openmenu)设 > 置了showInSubWindow为true时，则不能再弹出另一个设置了showInSubWindow为true的弹窗。
+创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 &gt; &gt; - 由于[updateMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#updatemenu)和 &gt; [closeMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#closemenu)依赖content去更新或者关闭指定 &gt; 的menu弹窗，开发者需自行维护传入的content。 &gt; &gt; - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-chip-chip-f.md)组件），则 &gt; [ComponentContent](arkts-na-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ &gt; nestingBuilderSupported: true }。 &gt; &gt; - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#openmenu)设 &gt; 置了showInSubWindow为true时，则不能再弹出另一个设置了showInSubWindow为true的弹窗。
 
 **起始版本：** 23
 
@@ -540,7 +540,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 回调函数。 弹出操作菜单成功，err为undefined，data为获取到的操作菜单响应结果，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 回调函数。 弹出操作菜单成功，err为undefined，data为获取到的操作菜单响应结果，否则为错误对象。 |
 
 **错误码：**
 
@@ -609,7 +609,7 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。 弹出对话框成功，err为undefined，data为获取到的对话框响应结果，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | 是 | 回调函数。 弹出对话框成功，err为undefined，data为获取到的对话框响应结果，否则为错误对象。 |
 
 **错误码：**
 

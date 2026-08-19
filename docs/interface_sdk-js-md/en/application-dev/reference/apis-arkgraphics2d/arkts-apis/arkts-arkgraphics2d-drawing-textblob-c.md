@@ -1,6 +1,6 @@
 # TextBlob
 
-Defines a block consisting of one or more characters with the same font. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
+Defines a block consisting of one or more characters with the same font. &gt; **NOTE：**&gt; &gt; - This module uses the physical pixel unit, px. &gt; &gt; - The module operates under a single-threaded model. The caller needs to manage thread safety and context state &gt; transitions.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Obtains the rectangular bounding box of the text blob.
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | Rect object. |
+| common2D.Rect \| undefined | Rect object. |
 
 ## makeFromPosText
 
@@ -116,7 +116,7 @@ Creates a TextBlob object from the text. The coordinates of each font in the Tex
 
 | Type | Description |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) \| undefined | TextBlob object. |
 
 **Error codes:**
 
@@ -184,7 +184,7 @@ Creates a Textblob object based on the RunBuffer information.
 
 | Type | Description |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) \| undefined | TextBlob object. |
 
 **Error codes:**
 
@@ -252,7 +252,7 @@ Converts a value of the string type into a TextBlob object.
 
 | Type | Description |
 | --- | --- |
-| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) | TextBlob object. |
+| [TextBlob](arkts-arkgraphics2d-drawing-textblob-c.md) \| undefined | TextBlob object. |
 
 **Error codes:**
 

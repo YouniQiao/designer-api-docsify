@@ -1,6 +1,6 @@
 # SelectionContainerAttribute
 
-支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。 > **说明：** > > - 不支持[隐私遮罩](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-obscured.md)。 > > - 不支持[图形变换](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md)，跨节点场景中Text子组件不支持图形变 > 换。
+支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。 &gt; **说明：** &gt; &gt; - 不支持[隐私遮罩](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-obscured.md)。 &gt; &gt; - 不支持[图形变换](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md)，跨节点场景中Text子组件不支持图形变 &gt; 换。
 
 **继承/实现关系：** SelectionContainerAttribute extends CommonMethod
 
@@ -34,14 +34,12 @@ attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | Att
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindSelectionMenu
 
 ```TypeScript
@@ -62,14 +60,12 @@ bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | u
 | spanType | TextSpanType \| undefined | 是 |  |
 | content | CustomBuilder \| undefined | 是 |  |
 | responseType | TextResponseType \| undefined | 是 |  |
-| options | [SelectionContainerMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | 否 |  |
+| options | [SelectionContainerMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## caretColor
 
 ```TypeScript
@@ -92,8 +88,6 @@ caretColor(color: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## copyOption
 
 ```TypeScript
@@ -116,8 +110,6 @@ copyOption(value: CopyOptions | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## editMenuOptions
 
 ```TypeScript
@@ -134,14 +126,12 @@ editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | [SelectionContainerEditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | 是 |  |
+| editMenu | [SelectionContainerEditMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableHapticFeedback
 
 ```TypeScript
@@ -164,8 +154,6 @@ enableHapticFeedback(isEnabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onCopy
 
 ```TypeScript
@@ -188,8 +176,6 @@ onCopy(callback: Callback<string> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onTextSelectionChange
 
 ```TypeScript
@@ -212,8 +198,6 @@ onTextSelectionChange(callback: Callback<Array<string>> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onWillCopy
 
 ```TypeScript
@@ -236,8 +220,6 @@ onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## selectedBackgroundColor
 
 ```TypeScript
@@ -260,8 +242,6 @@ selectedBackgroundColor(color: ResourceColor | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setSelectionContainerOptions
 
 ```TypeScript
@@ -278,8 +258,6 @@ setSelectionContainerOptions(): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## textJoinStyle
 
 ```TypeScript
@@ -296,14 +274,12 @@ textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [SelectionContainerTextJoinStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | 是 |  |
+| style | [SelectionContainerTextJoinStyle](arkts-na-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

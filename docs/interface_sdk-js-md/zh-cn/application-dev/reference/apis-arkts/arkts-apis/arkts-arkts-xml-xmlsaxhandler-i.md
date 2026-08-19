@@ -11,6 +11,7 @@ XmlSAXHandler定义了SAX解析xml文本时的回调方法。开发者需要实�
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## characters
@@ -185,7 +186,7 @@ readableStream.push(null);
 endDocument(): void
 ```
 
-当解析器在XML文本结束解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](#characters)。 > **说明：** > > 当可读流结束时触发此回调。在stream中调用push()，传入null值，从而触发该回调。
+当解析器在XML文本结束解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](#characters)。 &gt; **说明：** &gt; &gt; 当可读流结束时触发此回调。在stream中调用push()，传入null值，从而触发该回调。
 
 **起始版本：** 24
 

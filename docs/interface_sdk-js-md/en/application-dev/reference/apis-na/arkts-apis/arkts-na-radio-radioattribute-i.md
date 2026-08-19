@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<RadioAttribute> | AttributeModifie
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## checked
 
 ```TypeScript
@@ -58,8 +56,6 @@ checked(isChecked: boolean | undefined | Bindable<boolean>): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## contentModifier
 
 ```TypeScript
@@ -82,8 +78,6 @@ contentModifier(modifier: ContentModifier<RadioConfiguration> | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## onChange
 
 ```TypeScript
@@ -106,8 +100,6 @@ onChange(callback: OnRadioChangeCallback | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## radioStyle
 
 ```TypeScript
@@ -130,8 +122,6 @@ radioStyle(value?: RadioStyle | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setRadioOptions
 
 ```TypeScript
@@ -154,8 +144,6 @@ setRadioOptions(options: RadioOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

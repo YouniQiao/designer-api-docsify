@@ -61,7 +61,7 @@ Unsubscribes from download progress event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
 
 **Error codes:**
 
@@ -213,7 +213,7 @@ Subscribes to download progress change event. This method uses a callback to get
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DownloadProgress&gt; | Yes | callback function with a `DownloadProgress` argument. |
 
 **Error codes:**
 
@@ -350,7 +350,7 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the target file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to start downloading a cloud file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to start downloading a cloud file. |
 
 **Error codes:**
 
@@ -385,7 +385,7 @@ download.start(uri, (err: BusinessError) => {
 stop(uri: string): Promise<void>
 ```
 
-Stops downloading a cloud file. This API uses a promise to return the result. > **NOTE：**> > Calling **stop** will terminate the download of the current file and clear the cache file. You can use > **start** to start the download again.
+Stops downloading a cloud file. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; Calling **stop** will terminate the download of the current file and clear the cache file. You can use &gt; **start** to start the download again.
 
 **Since:** 23
 
@@ -438,7 +438,7 @@ download.stop(uri).then(() => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Stops downloading a cloud file. This API uses an asynchronous callback to return the result. > **NOTE：**> > Calling **stop** will terminate the download of the current file and clear the cache file. You can use > **start** to start the download again.
+Stops downloading a cloud file. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; Calling **stop** will terminate the download of the current file and clear the cache file. You can use &gt; **start** to start the download again.
 
 **Since:** 23
 
@@ -455,7 +455,7 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the target file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to stop downloading a cloud file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to stop downloading a cloud file. |
 
 **Error codes:**
 

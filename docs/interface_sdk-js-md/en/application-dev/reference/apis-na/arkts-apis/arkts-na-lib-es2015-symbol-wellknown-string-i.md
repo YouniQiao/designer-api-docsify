@@ -31,8 +31,6 @@ Matches a string or an object that supports being matched against, and returns a
 
 | Type | Description |
 | --- | --- |
-| RegExpMatchArray |  |
-
 ## replace
 
 ```TypeScript
@@ -56,8 +54,6 @@ Passes a string and {@linkcode replaceValue} to the `[Symbol.replace]` method on
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## replace
 
 ```TypeScript
@@ -81,8 +77,6 @@ Replaces text in a string, using an object that supports replacement within a st
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## search
 
 ```TypeScript
@@ -105,8 +99,6 @@ Finds the first substring match in a regular expression search.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-
 ## split
 
 ```TypeScript
@@ -130,5 +122,3 @@ Split a string into substrings using the specified separator and return them as 
 
 | Type | Description |
 | --- | --- |
-| string[] |  |
-

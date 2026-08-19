@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -72,7 +73,7 @@ let readableStream = new stream.Readable(option);
 doInitialize(callback: Function): void
 ```
 
-需要由开发者实现此API。在可读流首次调用[on](arkts-arkts-stream-writable-c.md#on_string)时调用此API。使用异步回调返回结果。
+需要由开发者实现此API。在可读流首次调用[on](#on_string)时调用此API。使用异步回调返回结果。
 
 **起始版本：** 23
 
@@ -267,7 +268,7 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。 - 'close'：完成push()调用，传入null值，触发该事件。 - 'data'：当流传递给消费者一个数据块时触发该事件。 - 'end'：完成push()调用，传入null值，触发该事件。 - 'error'：流发生异常时触发。 - 'readable'：当有可从流中读取的数据时触发该事件。 - 'pause'：完成pause()调用，触发该事件。 - 'resume'：完成resume()调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 否 | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
 
 **示例**
 
@@ -365,7 +366,7 @@ on(event: string, callback: Callback<emitter.EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。 - 'close'：完成push()调用，传入null值，触发该事件。 - 'data'：当流传递给消费者一个数据块时触发该事件。 - 'end'：完成push()调用，传入null值，触发该事件。 - 'error'：流发生异常时触发。 - 'readable'：当有可从流中读取的数据时触发该事件。 - 'pause'：完成pause()调用，触发该事件。 - 'resume'：完成resume()调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件数据。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | 是 | 回调函数，返回事件数据。 |
 
 **示例**
 
@@ -674,7 +675,7 @@ read(size?: number): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 从可读流缓冲区读取出的数据。如果未读取到数据，则返回null。 |
+| string \| null | 从可读流缓冲区读取出的数据。如果未读取到数据，则返回null。 |
 
 **错误码：**
 
@@ -748,7 +749,7 @@ read(size?: int): buffer.Buffer | string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| buffer.Buffer | 如果没有可读取的数据，则返回null。 |
+| buffer.Buffer \| string \| null | 如果没有可读取的数据，则返回null。 |
 
 **错误码：**
 

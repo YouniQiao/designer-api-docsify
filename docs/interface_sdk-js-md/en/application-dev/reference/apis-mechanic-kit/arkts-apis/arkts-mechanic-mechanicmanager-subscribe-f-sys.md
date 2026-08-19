@@ -27,7 +27,7 @@ Subscribe to the specified events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | events | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md)[] | Yes | Events to subscribe to. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MechEvent](arkts-mechanic-mechanicmanager-mechevent-i-sys.md)&gt; | Yes | Callback of event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MechEvent](arkts-mechanic-mechanicmanager-mechevent-i-sys.md)&gt; | Yes | Callback of event. |
 
 **Error codes:**
 

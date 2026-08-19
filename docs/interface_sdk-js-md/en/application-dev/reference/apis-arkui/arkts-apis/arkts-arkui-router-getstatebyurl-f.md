@@ -12,13 +12,13 @@ import { router } from '@kit.ArkUI';
 function getStateByUrl(url: string): Array<RouterState>
 ```
 
-Obtains the status information about a page by its URL. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) to obtain the [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) object associated > with the current UI context.
+Obtains the status information about a page by its URL. &gt; **NOTE：**&gt; &gt; - Since API version 12, you can use the &gt; [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in &gt; [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md) object associated &gt; with the current UI context.
 
 **Since:** 12
 
 **Deprecated since:** 18
 
-**Substitutes:** [getStateByUrl](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#getstatebyurl)
+**Substitutes:** [getStateByUrl](arkts-arkui-arkui-uicontext-router-c.md#getstatebyurl)
 
 **Model restriction:** This API can be used only in the stage model.
 

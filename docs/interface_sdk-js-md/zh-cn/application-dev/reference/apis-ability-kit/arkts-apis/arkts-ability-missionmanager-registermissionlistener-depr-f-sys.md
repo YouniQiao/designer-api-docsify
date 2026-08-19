@@ -17,7 +17,7 @@ function registerMissionListener(listener: MissionListener): number
 
 **废弃版本：** 9
 
-**替代接口：** on
+**替代接口：** [on](arkts-ability-missionmanager-onmission-f-sys.md)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

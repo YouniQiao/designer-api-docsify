@@ -31,8 +31,6 @@ Creates a new Generator object.
 
 | Type | Description |
 | --- | --- |
-| Generator |  |
-
 ## constructor
 
 ```TypeScript
@@ -55,8 +53,6 @@ Creates a new Generator object.
 
 | Type | Description |
 | --- | --- |
-| Generator |  |
-
 ## length
 
 ```TypeScript

@@ -31,7 +31,7 @@ Defines DynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](arkts-na-layoutalgorithm-i.md) | Yes |  |
+| algorithm | [LayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-layoutalgorithm-i.md) | Yes |  |
 | content_ | CustomBuilder | Yes |  |
 
 **Return value:**

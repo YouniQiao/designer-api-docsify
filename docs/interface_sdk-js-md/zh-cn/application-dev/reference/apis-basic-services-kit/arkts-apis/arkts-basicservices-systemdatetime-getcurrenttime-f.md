@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime
@@ -28,7 +29,7 @@ function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isNano | boolean | 是 | 返回结果是否为纳秒数。<br>- true：表示返回结果为纳秒数（ns）。 <br>- false：表示返回结果为毫秒数（ms）。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回自Unix纪元以来经过的时间戳。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回自Unix纪元以来经过的时间戳。 |
 
 **错误码：**
 
@@ -78,7 +79,7 @@ function getCurrentTime(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回自Unix纪元以来经过的时间戳（ms）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回自Unix纪元以来经过的时间戳（ms）。 |
 
 **错误码：**
 

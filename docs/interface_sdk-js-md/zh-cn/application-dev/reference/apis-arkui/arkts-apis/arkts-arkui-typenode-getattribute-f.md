@@ -29,7 +29,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| TextAttribute | Text节点类型的属性，若获取失败，则返回undefined。 |
+| TextAttribute \| undefined | Text节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -61,7 +61,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| ColumnAttribute | Column节点类型的属性，若获取失败，则返回undefined。 |
+| ColumnAttribute \| undefined | Column节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -93,7 +93,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 | 类型 | 说明 |
 | --- | --- |
-| RowAttribute | Row节点类型的属性，若获取失败，则返回undefined。 |
+| RowAttribute \| undefined | Row节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -125,7 +125,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| StackAttribute | Stack节点类型的属性，若获取失败，则返回undefined。 |
+| StackAttribute \| undefined | Stack节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -157,7 +157,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| FlexAttribute | Flex节点类型的属性，若获取失败，则返回undefined。 |
+| FlexAttribute \| undefined | Flex节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -189,7 +189,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| SwiperAttribute | Swiper节点类型的属性，若获取失败，则返回undefined。 |
+| SwiperAttribute \| undefined | Swiper节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -221,7 +221,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| ProgressAttribute | Progress节点类型的属性，若获取失败，则返回undefined。 |
+| ProgressAttribute \| undefined | Progress节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -253,7 +253,7 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 | 类型 | 说明 |
 | --- | --- |
-| ScrollAttribute | Scroll节点类型的属性，若获取失败，则返回undefined。 |
+| ScrollAttribute \| undefined | Scroll节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -285,7 +285,7 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 
 | 类型 | 说明 |
 | --- | --- |
-| RelativeContainerAttribute | RelativeContainer节点类型的属性，若获取失败，则返回undefined。 |
+| RelativeContainerAttribute \| undefined | RelativeContainer节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -317,7 +317,7 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 
 | 类型 | 说明 |
 | --- | --- |
-| LoadingProgressAttribute | LoadingProgress节点类型的属性，若获取失败，则返回undefined。 |
+| LoadingProgressAttribute \| undefined | LoadingProgress节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -349,7 +349,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| ImageAttribute | Image节点类型的属性，若获取失败，则返回undefined。 |
+| ImageAttribute \| undefined | Image节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -381,7 +381,7 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| ListAttribute | List节点类型的属性，若获取失败，则返回undefined。 |
+| ListAttribute \| undefined | List节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -413,7 +413,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| ListItemAttribute | ListItem节点类型的属性，若获取失败，则返回undefined。 |
+| ListItemAttribute \| undefined | ListItem节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -445,7 +445,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 
 | 类型 | 说明 |
 | --- | --- |
-| TextInputAttribute | TextInput节点类型的属性，若获取失败，则返回undefined。 |
+| TextInputAttribute \| undefined | TextInput节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -477,7 +477,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| ButtonAttribute | Button节点类型的属性，若获取失败，则返回undefined。 |
+| ButtonAttribute \| undefined | Button节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -509,7 +509,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 | 类型 | 说明 |
 | --- | --- |
-| ListItemGroupAttribute | ListItemGroup节点类型的属性，若获取失败，则返回undefined。 |
+| ListItemGroupAttribute \| undefined | ListItemGroup节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -541,7 +541,7 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 
 | 类型 | 说明 |
 | --- | --- |
-| WaterFlowAttribute | WaterFlow节点类型的属性，若获取失败，则返回undefined。 |
+| WaterFlowAttribute \| undefined | WaterFlow节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -573,7 +573,7 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| FlowItemAttribute | FlowItem节点类型的属性，若获取失败，则返回undefined。 |
+| FlowItemAttribute \| undefined | FlowItem节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -605,7 +605,7 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 
 | 类型 | 说明 |
 | --- | --- |
-| XComponentAttribute | XComponent节点类型的属性，若获取失败，则返回undefined。 |
+| XComponentAttribute \| undefined | XComponent节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -637,7 +637,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| CheckboxAttribute | Checkbox节点类型的属性，若获取失败，则返回undefined。 |
+| CheckboxAttribute \| undefined | Checkbox节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -669,7 +669,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| RadioAttribute | Radio节点类型的属性，若获取失败，则返回undefined。 |
+| RadioAttribute \| undefined | Radio节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -701,7 +701,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| SliderAttribute | Slider节点类型的属性，若获取失败，则返回undefined。 |
+| SliderAttribute \| undefined | Slider节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -733,7 +733,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| ToggleAttribute | Toggle节点类型的属性，若获取失败，则返回undefined。 |
+| ToggleAttribute \| undefined | Toggle节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -765,7 +765,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| TextAreaAttribute | TextArea节点类型的属性，若获取失败，则返回undefined。 |
+| TextAreaAttribute \| undefined | TextArea节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -797,7 +797,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 | 类型 | 说明 |
 | --- | --- |
-| GridAttribute | Grid节点类型的属性，若获取失败，则返回undefined。 |
+| GridAttribute \| undefined | Grid节点类型的属性，若获取失败，则返回undefined。 |
 
 
 ## getAttribute
@@ -829,5 +829,5 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 
 | 类型 | 说明 |
 | --- | --- |
-| GridItemAttribute | GridItem节点类型的属性，若获取失败，则返回undefined。 |
+| GridItemAttribute \| undefined | GridItem节点类型的属性，若获取失败，则返回undefined。 |
 

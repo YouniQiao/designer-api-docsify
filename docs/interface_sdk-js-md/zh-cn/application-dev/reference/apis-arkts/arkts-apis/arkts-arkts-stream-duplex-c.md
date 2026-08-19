@@ -1,6 +1,6 @@
 # Duplex
 
-既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md)，支持**Readable**中的所有API。
+既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readable-c.md)，支持**Readable**中的所有API。
 
 **继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md)
 
@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -73,7 +74,7 @@ console.info("duplexStream cork result", result); // duplexStream cork result tr
 doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 ```
 
-数据写入API。需要由开发者实现此API，但不要直接调用。此API在写入数据时自动调用。使用异步回调返回结果。
+数据写出接口是一个由开发者实现的函数，在数据被写出时自动调用，而不需要开发者手动调用。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -141,7 +142,7 @@ duplexStream.write("data", "utf8");
 doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 ```
 
-批量数据写入API。需要由开发者实现此API，但不要直接调用。此API在写入数据时自动调用。使用异步回调返回结果。
+数据分批写出接口是一个由开发者实现的函数，在数据被写出时自动调用，而不需要开发者手动调用。使用callback异步回调。
 
 **起始版本：** 23
 

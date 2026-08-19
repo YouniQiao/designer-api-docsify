@@ -21,7 +21,7 @@
 analyzerConfig(config: ImageAnalyzerConfig)
 ```
 
-设置AI分析识别类型，包括主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。 > **说明：** > > 从API version 20开始，该接口支持在attributeModifier中调用。
+设置AI分析识别类型，包括主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。 &gt; **说明：** &gt; &gt; 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
 
@@ -89,7 +89,7 @@ controls(value: boolean)
 enableAnalyzer(enable: boolean)
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。 启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。 不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。 > **说明：** > > 从API version 20开始，该接口支持在attributeModifier中调用。
+设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。 启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。 不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。 &gt; **说明：** &gt; &gt; 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 12
 
@@ -203,7 +203,7 @@ objectFit(value: ImageFit)
 onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 ```
 
-播放失败时触发该事件，支持attributeModifier动态设置属性方法。 > **说明：** > > 从API version 20开始，该接口支持在attributeModifier中调用。
+播放失败时触发该事件，支持attributeModifier动态设置属性方法。 &gt; **说明：** &gt; &gt; 从API version 20开始，该接口支持在attributeModifier中调用。
 
 **起始版本：** 7
 
@@ -217,7 +217,7 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中 [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见 [Video组件错误码](../errorcode-video.md)和 [Media错误码](../../apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
+| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中 [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见 [Video组件错误码](../errorcode-video.md)和 [Media错误码](../../apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
 
 ## onFinish
 

@@ -1,6 +1,6 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相 机功能(录像，拍照)。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## addInput
@@ -23,7 +25,7 @@
 addInput(cameraInput: CameraInput): void
 ```
 
-把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -54,7 +56,7 @@ addInput(cameraInput: CameraInput): void
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -85,7 +87,7 @@ addOutput(cameraOutput: CameraOutput): void
 beginConfig(): void
 ```
 
-开始配置会话。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+开始配置会话。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -109,7 +111,7 @@ beginConfig(): void
 commitConfig(callback: AsyncCallback<void>): void
 ```
 
-提交配置信息，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+提交配置信息，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -125,7 +127,7 @@ commitConfig(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) |
 
 **错误码：**
 
@@ -140,7 +142,7 @@ commitConfig(callback: AsyncCallback<void>): void
 commitConfig(): Promise<void>
 ```
 
-提交配置信息。使用Promise异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+提交配置信息。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -171,7 +173,7 @@ commitConfig(): Promise<void>
 getActiveVideoStabilizationMode(): VideoStabilizationMode
 ```
 
-查询当前正在使用的视频防抖模式。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询当前正在使用的视频防抖模式。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -201,7 +203,7 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 getExposureBiasRange(): Array<number>
 ```
 
-查询曝光补偿范围。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询曝光补偿范围。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -231,7 +233,7 @@ getExposureBiasRange(): Array<number>
 getExposureMode(): ExposureMode
 ```
 
-获取当前曝光模式。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+获取当前曝光模式。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -261,7 +263,7 @@ getExposureMode(): ExposureMode
 getExposureValue(): number
 ```
 
-查询当前的曝光值。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询当前的曝光值。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -291,7 +293,7 @@ getExposureValue(): number
 getFlashMode(): FlashMode
 ```
 
-获取当前设备的闪光灯模式。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+获取当前设备的闪光灯模式。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -321,7 +323,7 @@ getFlashMode(): FlashMode
 getFocalLength(): number
 ```
 
-查询焦距值。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询焦距值。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -351,7 +353,7 @@ getFocalLength(): number
 getFocusMode(): FocusMode
 ```
 
-获取当前的对焦模式。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+获取当前的对焦模式。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -381,7 +383,7 @@ getFocusMode(): FocusMode
 getFocusPoint(): Point
 ```
 
-查询焦点。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询焦点。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -411,7 +413,7 @@ getFocusPoint(): Point
 getMeteringPoint(): Point
 ```
 
-查询曝光区域中心点。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询曝光区域中心点。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -441,7 +443,7 @@ getMeteringPoint(): Point
 getZoomRatio(): number
 ```
 
-获取当前的变焦比。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+获取当前的变焦比。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -471,7 +473,7 @@ getZoomRatio(): number
 getZoomRatioRange(): Array<number>
 ```
 
-获取支持的变焦范围。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+获取支持的变焦范围。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -501,7 +503,7 @@ getZoomRatioRange(): Array<number>
 hasFlash(): boolean
 ```
 
-检测是否有闪光灯。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+检测是否有闪光灯。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -531,7 +533,7 @@ hasFlash(): boolean
 isExposureModeSupported(aeMode: ExposureMode): boolean
 ```
 
-查询曝光模式是否支持。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询曝光模式是否支持。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -567,7 +569,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 isFlashModeSupported(flashMode: FlashMode): boolean
 ```
 
-检测闪光灯模式是否支持。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+检测闪光灯模式是否支持。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -603,7 +605,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 isFocusModeSupported(afMode: FocusMode): boolean
 ```
 
-查询对焦模式是否支持。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询对焦模式是否支持。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -639,7 +641,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 ```
 
-查询是否支持指定的视频防抖模式。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+查询是否支持指定的视频防抖模式。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -669,19 +671,19 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
-## off_error('error')
+## off('error')
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-注销监听拍照会话的错误事件，通过注册回调函数获取结果。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+注销监听拍照会话的错误事件，通过注册回调函数获取结果。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [off](arkts-camera-camera-videosession-i.md#off_errorerror)(type: 'error', callback?: ErrorCallback)
+**替代接口：** [off](arkts-camera-camera-videosession-i.md#offerror)(type: 'error', callback?: ErrorCallback)
 
 <!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -692,21 +694,21 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off_focusStateChange('focusStateChange')
+## off('focusStateChange')
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 ```
 
-注销监听相机聚焦的状态变化。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+注销监听相机聚焦的状态变化。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [off](arkts-camera-camera-videosession-i.md#off_errorerror)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
+**替代接口：** [off](arkts-camera-camera-videosession-i.md#offerror)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
 
 <!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -717,21 +719,21 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## on_error('error')
+## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。 > > 从 API version 10开始支持，从API version 11开始废弃。
+监听拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。 &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [on](arkts-camera-camera-videosession-i.md#on_errorerror)(type: 'error', callback: ErrorCallback)
+**替代接口：** [on](arkts-camera-camera-videosession-i.md#onerror)(type: 'error', callback: ErrorCallback)
 
 <!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -742,21 +744,21 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](#beginconfig)， [commitConfig](#commitconfig)，[addInput](#addinput)等接 口发生错误时返回错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
-## on_focusStateChange('focusStateChange')
+## on('focusStateChange')
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 ```
 
-监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。 > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。 &gt; &gt; 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [on](arkts-camera-camera-videosession-i.md#on_errorerror)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
+**替代接口：** [on](arkts-camera-camera-videosession-i.md#onerror)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
 
 <!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -767,7 +769,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。仅当自动对焦模式时,且相机对焦状态发生改变时可触发该事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
 
 ## release
 
@@ -775,7 +777,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 release(callback: AsyncCallback<void>): void
 ```
 
-释放会话资源，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+释放会话资源，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -791,7 +793,7 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -805,7 +807,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放会话资源。使用Promise异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+释放会话资源。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -835,7 +837,7 @@ release(): Promise<void>
 removeInput(cameraInput: CameraInput): void
 ```
 
-移除[CameraInput](arkts-camera-camera-camerainput-i.md)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+移除[CameraInput](arkts-camera-camera-camerainput-i.md)。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -866,7 +868,7 @@ removeInput(cameraInput: CameraInput): void
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -897,7 +899,7 @@ removeOutput(cameraOutput: CameraOutput): void
 setExposureBias(exposureBias: number): void
 ```
 
-设置曝光补偿，曝光补偿值（EV）。 进行设置之前，建议先通过方法[getExposureBiasRange](#getexposurebiasrange)查询支持的范围。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置曝光补偿，曝光补偿值（EV）。 进行设置之前，建议先通过方法[getExposureBiasRange](#getexposurebiasrange)查询支持的范围。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -927,7 +929,7 @@ setExposureBias(exposureBias: number): void
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法 [isExposureModeSupported](#isexposuremodesupported)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法 [isExposureModeSupported](#isexposuremodesupported)。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -957,7 +959,7 @@ setExposureMode(aeMode: ExposureMode): void
 setFlashMode(flashMode: FlashMode): void
 ```
 
-设置闪光灯模式。 进行设置之前，需要先检查： 1. 设备是否支持闪光灯，可使用方法[hasFlash](#hasflash)。 2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](#isflashmodesupported)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置闪光灯模式。 进行设置之前，需要先检查： 1. 设备是否支持闪光灯，可使用方法[hasFlash](#hasflash)。 2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](#isflashmodesupported)。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -987,7 +989,7 @@ setFlashMode(flashMode: FlashMode): void
 setFocusMode(afMode: FocusMode): void
 ```
 
-设置对焦模式。 进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](#isfocusmodesupported)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置对焦模式。 进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](#isfocusmodesupported)。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1017,7 +1019,7 @@ setFocusMode(afMode: FocusMode): void
 setFocusPoint(point: Point): void
 ```
 
-设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1047,7 +1049,7 @@ setFocusPoint(point: Point): void
 setMeteringPoint(point: Point): void
 ```
 
-设置曝光区域中心点，曝光点应位于0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置曝光区域中心点，曝光点应位于0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1077,7 +1079,7 @@ setMeteringPoint(point: Point): void
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过 [isVideoStabilizationModeSupported](#isvideostabilizationmodesupported)方法判断所设置的模式是否支持。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过 [isVideoStabilizationModeSupported](#isvideostabilizationmodesupported)方法判断所设置的模式是否支持。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1107,7 +1109,7 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 setZoomRatio(zoomRatio: number): void
 ```
 
-设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1137,7 +1139,7 @@ setZoomRatio(zoomRatio: number): void
 start(callback: AsyncCallback<void>): void
 ```
 
-开始会话工作，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+开始会话工作，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1153,7 +1155,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -1168,7 +1170,7 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-开始会话工作。使用Promise异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+开始会话工作。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1199,7 +1201,7 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止会话工作，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+停止会话工作，通过注册回调函数获取结果。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -1215,7 +1217,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -1229,7 +1231,7 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-停止会话工作。使用Promise异步回调。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
+停止会话工作。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 

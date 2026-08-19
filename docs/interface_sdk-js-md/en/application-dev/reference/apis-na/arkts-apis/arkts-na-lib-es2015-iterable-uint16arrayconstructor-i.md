@@ -29,8 +29,6 @@ new (elements: Iterable<number>): Uint16Array
 
 | Type | Description |
 | --- | --- |
-| Uint16Array |  |
-
 ## from
 
 ```TypeScript
@@ -55,5 +53,3 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| Uint16Array |  |
-

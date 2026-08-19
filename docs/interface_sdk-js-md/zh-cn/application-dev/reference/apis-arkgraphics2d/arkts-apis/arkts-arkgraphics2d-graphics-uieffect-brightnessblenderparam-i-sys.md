@@ -13,6 +13,7 @@ BrightnessBlender的参数列表，用于配置提亮效果的各项属性，包
 ## 导入模块
 
 ```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## cubicRate

@@ -29,7 +29,7 @@ Initiates ranging with a specified device. If the link to the target device is a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | params | [RangingParams](arkts-connectivity-ranging-rangingparams-i.md) | Yes | Parameters for ranging. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[RangingResult](arkts-connectivity-ranging-rangingresult-i.md)&gt; | Yes | Indicates the callback for reporting the ranging result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RangingResult](arkts-connectivity-ranging-rangingresult-i.md)&gt; | Yes | Indicates the callback for reporting the ranging result. |
 
 **Error codes:**
 

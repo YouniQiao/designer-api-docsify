@@ -38,7 +38,7 @@ direction?: Axis
 max?: double
 ```
 
-设置最大值。 默认值：100 **说明：** min >= max异常情况，min取默认值0，max取默认值100。 value不在[min, max]范围之内，取min或者max，靠近min取min，靠近max取max。 **ArkTS-Dyn起始版本：** 7 **ArkTS-Sta起始版本：** 23
+设置最大值。 默认值：100 **说明：** min &gt;= max异常情况，min取默认值0，max取默认值100。 value不在[min, max]范围之内，取min或者max，靠近min取min，靠近max取max。 **ArkTS-Dyn起始版本：** 7 **ArkTS-Sta起始版本：** 23
 
 **类型：** double
 

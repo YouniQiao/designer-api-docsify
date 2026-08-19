@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## isRunningInStabilityTest
@@ -11,7 +12,7 @@
 function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 ```
 
-查询当前系统是否处于稳定性测试场景。使用callback异步回调。 > **说明：** > > 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
+查询当前系统是否处于稳定性测试场景。使用callback异步回调。 &gt; **说明：** &gt; &gt; 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **起始版本：** 23
 
@@ -25,7 +26,7 @@ function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为当前系统是否处于稳定性测试场景的结果；否则为错误对象。可进行错误处理或其他自定义处理。 <br>返回true表示系统处于稳定性测试场景；返回false表示系统不处于稳定性测试场景。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为当前系统是否处于稳定性测试场景的结果；否则为错误对象。可进行错误处理或其他自定义处理。 <br>返回true表示系统处于稳定性测试场景；返回false表示系统不处于稳定性测试场景。 |
 
 **错误码：**
 
@@ -55,7 +56,7 @@ appManager.isRunningInStabilityTest((err, flag) => {
 function isRunningInStabilityTest(): Promise<boolean>
 ```
 
-查询当前系统是否处于稳定性测试场景。使用Promise异步回调。 > **说明：** > > 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
+查询当前系统是否处于稳定性测试场景。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **起始版本：** 23
 

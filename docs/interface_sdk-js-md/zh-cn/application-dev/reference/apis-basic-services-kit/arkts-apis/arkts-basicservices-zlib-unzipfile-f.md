@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## unzipFile
@@ -11,7 +12,7 @@
 function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-解压文件，解压完成后返回执行结果。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md) > 替代。 > > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回-1错误码。
+解压文件，解压完成后返回执行结果。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 7开始支持，从API version 9开始废弃。建议使用 &gt; [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md) &gt; 替代。 &gt; &gt; 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回-1错误码。
 
 **起始版本：** 7
 

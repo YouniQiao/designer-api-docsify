@@ -28,5 +28,3 @@ Converts a string to an integer.
 
 | Type | Description |
 | --- | --- |
-| number |  |
-

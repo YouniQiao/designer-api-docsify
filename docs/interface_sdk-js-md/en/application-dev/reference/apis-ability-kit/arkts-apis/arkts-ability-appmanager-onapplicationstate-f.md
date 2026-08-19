@@ -6,7 +6,7 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-## on_applicationState('applicationState')
+## on('applicationState')
 
 ```TypeScript
 function on(type: 'applicationState', observer: ApplicationStateObserver): int
@@ -84,7 +84,7 @@ try {
 ```
 
 
-## on_applicationState('applicationState')
+## on('applicationState')
 
 ```TypeScript
 function on(type: 'applicationState', observer: ApplicationStateObserver, bundleNameList: Array<string>): int

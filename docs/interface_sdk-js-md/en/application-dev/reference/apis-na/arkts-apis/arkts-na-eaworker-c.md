@@ -137,7 +137,7 @@ Returns the current worker instance
 
 | Type | Description |
 | --- | --- |
-| [EAWorker](arkts-na-eaworker-c.md) | the current worker instance, or undefined if not in a worker context |
+| [EAWorker](arkts-na-eaworker-c.md) \| undefined | the current worker instance, or undefined if not in a worker context |
 
 ## getName
 
@@ -209,7 +209,7 @@ Returns the uncaught exception handler for the worker
 
 | Type | Description |
 | --- | --- |
-| ((error: Error) =&gt; void) | the uncaught exception handler, or undefined if not set |
+| [function](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) \| undefined | the uncaught exception handler, or undefined if not set |
 
 ## getWorkerId
 
@@ -233,7 +233,7 @@ Returns the worker ID
 
 | Type | Description |
 | --- | --- |
-| int | the worker ID, or undefined if not started |
+| int \| undefined | the worker ID, or undefined if not started |
 
 ## isAlive
 

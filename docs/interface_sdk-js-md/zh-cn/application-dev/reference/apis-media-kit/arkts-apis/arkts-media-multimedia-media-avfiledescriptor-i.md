@@ -11,6 +11,7 @@ Media file descriptor. The caller needs to ensure that the fd is valid and the o
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## fd

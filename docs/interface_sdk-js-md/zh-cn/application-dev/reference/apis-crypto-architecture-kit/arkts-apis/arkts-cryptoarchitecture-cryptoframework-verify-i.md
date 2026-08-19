@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getVerifySpec
@@ -43,7 +44,7 @@ getVerifySpec(itemType: SignSpecItem): string | int
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回获取的参数值。 |
+| string \| int | 返回获取的参数值。 |
 
 **错误码：**
 
@@ -91,7 +92,7 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | 是 | 公钥对象，用于Verify的初始化。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当验签初始化成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签初始化成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -181,7 +182,7 @@ initSync(pubKey: PubKey): void
 recover(signatureData: DataBlob): Promise<DataBlob | null>
 ```
 
-对数据进行签名恢复原始数据。使用Promise异步回调。 > **说明：** > > - 目前仅RSA支持。
+对数据进行签名恢复原始数据。使用Promise异步回调。 &gt; **说明：** &gt; &gt; - 目前仅RSA支持。
 
 **起始版本：** 23
 
@@ -297,7 +298,7 @@ async function recoverByPromise() {
 recoverSync(signatureData: DataBlob): DataBlob | null
 ```
 
-对数据进行签名恢复原始数据。 > **说明：** > > - 目前仅RSA支持。 <br><br>**说明：** <br>建议优先使用异步API，[recover](#recover)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+对数据进行签名恢复原始数据。 &gt; **说明：** &gt; &gt; - 目前仅RSA支持。 <br><br>**说明：** <br>建议优先使用异步API，[recover](#recover)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -317,7 +318,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 | 类型 | 说明 |
 | --- | --- |
-| DataBlob | 恢复的数据。 |
+| DataBlob \| null | 恢复的数据。 |
 
 **错误码：**
 
@@ -522,7 +523,7 @@ function testSetVerifySpec() {
 update(data: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-追加待验签数据，使用callback异步回调完成更新。 <br>必须在对[Verify](#verify)实例使用[init](#init)或 [initSync](#initsync)初始化后，才能使用本函数。 > **说明：** > > 根据数据量，可以不调用update（即[init](#init) > 完成后直接调用 > [verify](#verify) > ）或多次调用update。 > > 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 > 过大内存。 > > 验签使用多次update操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md) > ，其余算法操作类似。 > > OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
+追加待验签数据，使用callback异步回调完成更新。 <br>必须在对[Verify](#verify)实例使用[init](#init)或 [initSync](#initsync)初始化后，才能使用本函数。 &gt; **说明：** &gt; &gt; 根据数据量，可以不调用update（即[init](#init) &gt; 完成后直接调用 &gt; [verify](#verify) &gt; ）或多次调用update。 &gt; &gt; 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 &gt; 过大内存。 &gt; &gt; 验签使用多次update操作的示例代码详见 &gt; [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md) &gt; ，其余算法操作类似。 &gt; &gt; OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 &gt; &gt; 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 23
 
@@ -539,7 +540,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 传入的消息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -557,7 +558,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 update(data: DataBlob): Promise<void>
 ```
 
-追加待验签数据，使用Promise异步回调完成更新。 <br>必须在对[Verify](#verify)实例使用[init()](#init)初始化后，才能使 用本函数。 > **说明：** > > 根据数据量，可以不调用update（即[init](#init)完成后直接调用 > [verify](#verify)）或多次调用update。 > > 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 > 过大内存。 > > 验签使用多次update操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md) > ，其余算法操作类似。 > > OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
+追加待验签数据，使用Promise异步回调完成更新。 <br>必须在对[Verify](#verify)实例使用[init()](#init)初始化后，才能使 用本函数。 &gt; **说明：** &gt; &gt; 根据数据量，可以不调用update（即[init](#init)完成后直接调用 &gt; [verify](#verify)）或多次调用update。 &gt; &gt; 算法库目前没有对update（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次update的方式传入数据，避免一次性申请 &gt; 过大内存。 &gt; &gt; 验签使用多次update操作的示例代码详见 &gt; [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md) &gt; ，其余算法操作类似。 &gt; &gt; OnlyVerify模式下，不支持update操作，直接使用verify传入数据即可。 &gt; &gt; 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 23
 
@@ -597,7 +598,7 @@ update(data: DataBlob): Promise<void>
 updateSync(data: DataBlob): void
 ```
 
-追加待验签数据，通过同步方式完成更新。 <br>必须在对[Verify](#verify)实例使用[initSync()](#initsync)初始化后，才 能使用本函数。 > **说明：** > > 根据数据量，可以不调用updateSync（即[initSync](#initsync)完成后直接调用 > [verifySync](#verifysync)）或多次调用updateSync。 > > 算法库目前没有对updateSync（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次updateSync的方式传入数据，避免 > 一次性申请过大内存。 > > 验签使用多次updateSync操作的示例代码详见 > [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)， > 其余算法操作类似。 > > OnlyVerify模式下，不支持updateSync操作，需要直接使用verifySync传入数据。 > > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持updateSync操作，updateSync接口会返回错误码ERR_CRYPTO_OPERATION。 <br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+追加待验签数据，通过同步方式完成更新。 <br>必须在对[Verify](#verify)实例使用[initSync()](#initsync)初始化后，才 能使用本函数。 &gt; **说明：** &gt; &gt; 根据数据量，可以不调用updateSync（即[initSync](#initsync)完成后直接调用 &gt; [verifySync](#verifysync)）或多次调用updateSync。 &gt; &gt; 算法库目前没有对updateSync（单次或累计）的数据量设置大小限制，建议对于大数据量的验签操作，采用多次updateSync的方式传入数据，避免 &gt; 一次性申请过大内存。 &gt; &gt; 验签使用多次updateSync操作的示例代码详见 &gt; [使用RSA密钥对分段签名验签](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)， &gt; 其余算法操作类似。 &gt; &gt; OnlyVerify模式下，不支持updateSync操作，需要直接使用verifySync传入数据。 &gt; &gt; 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持updateSync操作，updateSync接口会返回错误码ERR_CRYPTO_OPERATION。 <br><br>**说明：** <br>建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -647,7 +648,7 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 待验签的数据。 |
 | signatureData | DataBlob | 是 | 签名数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
 
 **错误码：**
 
@@ -683,7 +684,7 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
 | signatureData | DataBlob | 是 | 签名数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
 
 **错误码：**
 

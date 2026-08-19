@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## execute
@@ -30,7 +31,7 @@ function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.Exec
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | param | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | 是 | 执行意图调用的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;insightIntent.ExecuteResult&gt; | 是 | 回调函数，返回意图调用执行结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;insightIntent.ExecuteResult&gt; | 是 | 回调函数，返回意图调用执行结果。 |
 
 **错误码：**
 

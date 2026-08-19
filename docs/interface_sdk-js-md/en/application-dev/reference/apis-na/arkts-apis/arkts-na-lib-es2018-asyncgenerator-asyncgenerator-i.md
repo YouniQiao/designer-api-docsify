@@ -25,8 +25,6 @@
 
 | Type | Description |
 | --- | --- |
-| [AsyncGenerator](arkts-na-lib-es2018-asyncgenerator-asyncgenerator-i.md)&lt;T, TReturn, TNext&gt; |  |
-
 ## next
 
 ```TypeScript
@@ -47,8 +45,6 @@ next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;IteratorResult&lt;T, TReturn&gt;&gt; |  |
-
 ## return
 
 ```TypeScript
@@ -69,8 +65,6 @@ return(value: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;IteratorResult&lt;T, TReturn&gt;&gt; |  |
-
 ## throw
 
 ```TypeScript
@@ -91,5 +85,3 @@ throw(e: any): Promise<IteratorResult<T, TReturn>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;IteratorResult&lt;T, TReturn&gt;&gt; |  |
-

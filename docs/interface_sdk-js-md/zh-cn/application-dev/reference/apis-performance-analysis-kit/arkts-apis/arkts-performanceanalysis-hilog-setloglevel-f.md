@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setLogLevel
@@ -11,7 +12,7 @@
 function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 ```
 
-设置当前应用程序进程的最低日志级别。 可通过prefer参数配置不同的偏好策略。如果选择策略PREFER_CLOSE_LOG，等同于调用setMinLogLevel函数。 > **注意：** > > debug版本应用下，此函数不生效。
+设置当前应用程序进程的最低日志级别。 可通过prefer参数配置不同的偏好策略。如果选择策略PREFER_CLOSE_LOG，等同于调用setMinLogLevel函数。 &gt; **注意：** &gt; &gt; debug版本应用下，此函数不生效。
 
 **起始版本：** 23
 

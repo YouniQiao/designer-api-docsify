@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName

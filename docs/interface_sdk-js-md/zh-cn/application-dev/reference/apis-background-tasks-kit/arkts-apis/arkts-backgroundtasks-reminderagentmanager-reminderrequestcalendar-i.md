@@ -13,6 +13,7 @@ ReminderRequestCalendar extends ReminderRequest 日历实例对象，用于设�
 ## 导入模块
 
 ```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## dateTime

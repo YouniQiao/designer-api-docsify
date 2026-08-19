@@ -31,8 +31,6 @@ new(message?: string): URIError
 
 | Type | Description |
 | --- | --- |
-| [URIError](arkts-na-lib-es5-urierror-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(message?: string): URIError
 
 | Type | Description |
 | --- | --- |
-| [URIError](arkts-na-lib-es5-urierror-i.md) |  |
-
 ## prototype
 
 ```TypeScript

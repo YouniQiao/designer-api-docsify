@@ -28,5 +28,5 @@ Callback function called when querying one or more data records in the database.
 | uri | string | Yes | Indicates the database table storing the data to query. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be queried by default. |
 | columns | Array&lt;string&gt; | Yes | Indicates the columns to be queried, in array, for example, {"name","age"}. You should define the processing logic when this parameter is null. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Returns the queried data, only support result set of rdb or kvstore. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | Returns the queried data, only support result set of rdb or kvstore. |
 

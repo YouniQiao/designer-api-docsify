@@ -55,7 +55,7 @@ async function Demo() {
 }
 ```
 
-## on_imageArrival('imageArrival')
+## on('imageArrival')
 
 ```TypeScript
 on(type: 'imageArrival', callback: AsyncCallback<void>): void
@@ -74,7 +74,7 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked for the event. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked for the event. |
 
 **Examples**
 
@@ -100,7 +100,7 @@ async function Demo() {
 readLatestImage(): Promise<Image>
 ```
 
-Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the [on](#on_imagearrivalimagearrival) callback is > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed, > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after > the release.
+Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called to receive data only after the [on](#onimagearrival) callback is &gt; triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed, &gt; call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after &gt; the release.
 
 **Since:** 12
 
@@ -141,7 +141,7 @@ async function Demo() {
 readNextImage(): Promise<Image>
 ```
 
-Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. > **NOTE：**> > This API can be called to receive data only after the [on](#on_imagearrivalimagearrival) callback is > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed, > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after > the release.
+Reads the next image from the ImageReceiver instance. This API uses a promise to return the result. &gt; **NOTE：**&gt; &gt; This API can be called to receive data only after the [on](#onimagearrival) callback is &gt; triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed, &gt; call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after &gt; the release.
 
 **Since:** 12
 

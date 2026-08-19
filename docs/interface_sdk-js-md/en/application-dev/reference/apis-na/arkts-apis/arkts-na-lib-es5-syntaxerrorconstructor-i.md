@@ -31,8 +31,6 @@ new(message?: string): SyntaxError
 
 | Type | Description |
 | --- | --- |
-| SyntaxError |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(message?: string): SyntaxError
 
 | Type | Description |
 | --- | --- |
-| SyntaxError |  |
-
 ## prototype
 
 ```TypeScript

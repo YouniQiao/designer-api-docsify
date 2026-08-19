@@ -3,6 +3,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## copyDir
@@ -77,7 +80,7 @@ declare function copyDir(src: string, dest: string, callback: AsyncCallback<void
 | --- | --- | --- | --- |
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当复制目录成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当复制目录成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -122,7 +125,7 @@ declare function copyDir(src: string, dest: string, callback: AsyncCallback<void
 | --- | --- | --- | --- |
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void, Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | 是 | 异步复制目录之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | 是 | 异步复制目录之后的回调。 |
 
 **错误码：**
 
@@ -152,7 +155,7 @@ declare function copyDir(src: string, dest: string, mode: number, callback: Asyn
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
 | mode | number | 是 | 复制模式。<br/>- mode为0，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录下， 目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;形式提供。<br/>- mode为1，文件级别强制覆盖。目标目 录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件，未冲突文件将继续保留。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当复制目录成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当复制目录成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -198,7 +201,7 @@ declare function copyDir(src: string, dest: string, mode: number, callback: Asyn
 | src | string | 是 | 源目录的应用沙箱路径。 |
 | dest | string | 是 | 目标目录的应用沙箱路径。 |
 | mode | number | 是 | 复制模式。<br/>- mode为0，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录下， 目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;形式提供。<br/>- mode为1，文件级别强制覆盖。目标目 录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件，未冲突文件将继续保留。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void, Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | 是 | 回调函数。当复制目录成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | 是 | 回调函数。当复制目录成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

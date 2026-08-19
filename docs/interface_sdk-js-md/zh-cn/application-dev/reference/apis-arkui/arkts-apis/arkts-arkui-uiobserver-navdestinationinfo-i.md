@@ -11,6 +11,7 @@ NavDestination组件信息，由系统返回给开发者。
 ## 导入模块
 
 ```TypeScript
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## index
@@ -161,7 +162,7 @@ state: NavDestinationState
 
 NavDestination组件的状态。
 
-**类型：** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
+**类型：** [NavDestinationState](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationstate-e.md)
 
 **起始版本：** 11
 

@@ -63,7 +63,7 @@ When size and position of the bar changed, callback will be called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | Yes | Callback that param contains the Frame. The parameters of the callback function cannot be undefined or null. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | Yes | Callback that param contains the Frame. The parameters of the callback function cannot be undefined or null. |
 
 ## setBackgroundColor
 

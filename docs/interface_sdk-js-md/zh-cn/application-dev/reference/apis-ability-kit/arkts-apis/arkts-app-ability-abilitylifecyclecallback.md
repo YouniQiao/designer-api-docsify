@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AbilityLifecycleCallback } from '@kit.AbilityKit';
 ```
 
 ## 汇总

@@ -39,7 +39,7 @@ Generate a snapshot from a custom component builder.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | builder | CustomBuilder | 是 | Builder function of a custom component. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
 | delay | int | 否 | Defines the delay time to render the snapshot. |
 | checkImageStatus | boolean | 否 | Defines if check the image decoding status before taking snapshot. |
 | options | componentSnapshot.SnapshotOptions | 否 | Define the snapshot options. |
@@ -86,7 +86,7 @@ Generate a snapshot from a custom component builder.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **错误码：**
 
@@ -130,7 +130,7 @@ Generate a snapshot from a custom component content.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **错误码：**
 
@@ -165,7 +165,7 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string | 是 | Target component ID, set by developer through .id attribute. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback that contains the snapshot in PixelMap format. |
 | options | componentSnapshot.SnapshotOptions | 否 | Define the snapshot options. |
 
 **错误码：**
@@ -205,7 +205,7 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **错误码：**
 
@@ -268,7 +268,7 @@ Take a screenshot of the specified component in synchronous mode, this mode will
 
 | 类型 | 说明 |
 | --- | --- |
-| image.PixelMap | The snapshot result in PixelMap format. Null will be returned if the parameters' checking failed or some internal errors occur, for example: the runtime environment is broken. |
+| image.PixelMap \| null | The snapshot result in PixelMap format. Null will be returned if the parameters' checking failed or some internal errors occur, for example: the runtime environment is broken. |
 
 **错误码：**
 
@@ -348,7 +348,7 @@ getWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): Pro
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | A Promise with the snapshot in PixelMap format. |
+| Promise&lt;image.PixelMap&gt; \| null | A Promise with the snapshot in PixelMap format. |
 
 **错误码：**
 

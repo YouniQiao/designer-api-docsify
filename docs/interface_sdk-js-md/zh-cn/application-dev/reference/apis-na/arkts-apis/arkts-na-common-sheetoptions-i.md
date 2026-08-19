@@ -124,7 +124,7 @@ detentSelection?: SheetSize | Length
 detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents
 ```
 
-半模态页面的切换高度挡位。 **说明：** 从API version 12开始，底部弹窗横屏时该属性设置生效。 底部弹窗竖屏生效，元组中第一个高度为初始高度。 面板可跟手滑动切换挡位，松手后是否滑动至目标挡位有两个判断条件：速度和距离。速度超过阈值，则执行滑动至与手速方向一致的目标挡位；速度小于阈值，则引入距离判断条件，当位移距离>当前位置与目标位置的1/2，滑动至与手速方向一致的目 标挡位，位移距离当前位置与目标位置的1/2，返回至当前挡位。速度阈值：1000，距离阈值：50%。
+半模态页面的切换高度挡位。 **说明：** 从API version 12开始，底部弹窗横屏时该属性设置生效。 底部弹窗竖屏生效，元组中第一个高度为初始高度。 面板可跟手滑动切换挡位，松手后是否滑动至目标挡位有两个判断条件：速度和距离。速度超过阈值，则执行滑动至与手速方向一致的目标挡位；速度小于阈值，则引入距离判断条件，当位移距离&gt;当前位置与目标位置的1/2，滑动至与手速方向一致的目 标挡位，位移距离当前位置与目标位置的1/2，返回至当前挡位。速度阈值：1000，距离阈值：50%。
 
 **类型：** [SingleLengthDetent](arkts-na-singlelengthdetent-t.md) \| [DoubleLengthDetents](arkts-na-doublelengthdetents-t.md) \| [TripleLengthDetents](arkts-na-triplelengthdetents-t.md)
 

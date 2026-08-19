@@ -1,6 +1,6 @@
 # ShaderEffect
 
-着色器，用于在绘图中填充颜色和渐变效果。画刷和画笔设置着色器后，会使用着色器效果而不是颜色属性去绘制，但此时画刷和画笔的透明度属性仍然生效。 着色器支持创建单色着色器、线性渐变、径向渐变、扇形渐变、锥形渐变、图片着色器及混合着色器等多种类型。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+着色器，用于在绘图中填充颜色和渐变效果。画刷和画笔设置着色器后，会使用着色器效果而不是颜色属性去绘制，但此时画刷和画笔的透明度属性仍然生效。 着色器支持创建单色着色器、线性渐变、径向渐变、扇形渐变、锥形渐变、图片着色器及混合着色器等多种类型。 &gt; **说明：** &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createColorShader
@@ -69,7 +70,7 @@ static createColorShader(color: int): ShaderEffect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回具有单一颜色的着色器对象。创建失败时返回undefined。 |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | 返回具有单一颜色的着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -139,7 +140,7 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回叠加后的着色器对象。 |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | 返回叠加后的着色器对象。 |
 
 **错误码：**
 
@@ -221,7 +222,7 @@ static createConicalGradient(startPt: common2D.Point, startRadius: double, endPt
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回锥形渐变着色器对象。创建失败时返回undefined。 |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | 返回锥形渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -295,7 +296,7 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回基于图片的着色器对象。 |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | 返回基于图片的着色器对象。 |
 
 **错误码：**
 
@@ -371,7 +372,7 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回线性渐变着色器对象。创建失败时返回undefined。 |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | 返回线性渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -447,7 +448,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Ar
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回径向渐变着色器对象。创建失败时返回undefined。 |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | 返回径向渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 
@@ -527,7 +528,7 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<int>,
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | 返回扇形渐变着色器对象。创建失败时返回undefined。 |
+| [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| undefined | 返回扇形渐变着色器对象。创建失败时返回undefined。 |
 
 **错误码：**
 

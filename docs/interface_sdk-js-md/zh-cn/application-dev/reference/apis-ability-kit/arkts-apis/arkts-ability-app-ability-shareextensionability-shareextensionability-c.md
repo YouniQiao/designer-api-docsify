@@ -15,5 +15,6 @@ ShareExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-uie
 ## 导入模块
 
 ```TypeScript
+import { ShareExtensionAbility } from '@kit.AbilityKit';
 ```
 

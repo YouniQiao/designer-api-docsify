@@ -1,6 +1,6 @@
 # MetadataBasicFaceObject（系统接口）
 
-相机检测到的基础人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#on_metadataobjectsavailablemetadataobjectsavailable) 接口获取。
+相机检测到的基础人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源， 通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable) 接口获取。
 
 **继承/实现关系：** MetadataBasicFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -15,6 +15,8 @@
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## leftEyeBoundingBox

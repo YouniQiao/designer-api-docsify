@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## addAllowedNotificationBundles
@@ -11,7 +12,7 @@
 function addAllowedNotificationBundles(admin: Want, bundleNames: Array<string>, accountId: number): void
 ```
 
-添加允许发送通知的应用名单。设置通知允许名单后，不在此名单内的应用无法发送通知。 > **说明：** > > 1.如果Kiosk模式与通知允许名单策略同时设置，那么设置Kiosk模式的应用与通知允许名单中的应用都可以发送通知。 > 2.当已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)设置了禁用设备通知能力时，再通 > 过本接口设置通知允许名单，会抛出错误码9200010。 > 3.通知允许名单对系统服务不生效，系统服务始终可以发送通知。系统应用受通知允许名单管控。 > 4.支持跨用户设置，设置后跨用户立即生效。
+添加允许发送通知的应用名单。设置通知允许名单后，不在此名单内的应用无法发送通知。 &gt; **说明：** &gt; &gt; 1.如果Kiosk模式与通知允许名单策略同时设置，那么设置Kiosk模式的应用与通知允许名单中的应用都可以发送通知。 &gt; 2.当已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)设置了禁用设备通知能力时，再通 &gt; 过本接口设置通知允许名单，会抛出错误码9200010。 &gt; 3.通知允许名单对系统服务不生效，系统服务始终可以发送通知。系统应用受通知允许名单管控。 &gt; 4.支持跨用户设置，设置后跨用户立即生效。
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # SubHeaderV2
 
-子标题，用于列表项或内容项顶部，将该列表或内容划分为一个区块，子标题名称用来概括该区块内容。 该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于 [状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组 件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制子标题的数据和状态，实现更高效的用户界面刷新。 > **说明：** > > - 该组件仅可在Stage模型下使用。 > > - 如果SubHeaderV2设置通用属性和通用事件，编译工具 > 链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到SubHeaderV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议SubHeaderV2设 > 置通用属性和通用事件。
+子标题，用于列表项或内容项顶部，将该列表或内容划分为一个区块，子标题名称用来概括该区块内容。 该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于 [状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组 件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制子标题的数据和状态，实现更高效的用户界面刷新。 &gt; **说明：** &gt; &gt; - 该组件仅可在Stage模型下使用。 &gt; &gt; - 如果SubHeaderV2设置通用属性和通用事件，编译工具 &gt; 链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到SubHeaderV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议SubHeaderV2设 &gt; 置通用属性和通用事件。
 
 **起始版本：** 18
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUI';
 ```
 
 ## icon
@@ -125,7 +126,7 @@
   titleBuilder?: SubHeaderV2TitleBuilder
 ```
 
-自定义标题区内容。当设置此参数时，title参数将不生效。 默认值：() => void
+自定义标题区内容。当设置此参数时，title参数将不生效。 默认值：() =&gt; void
 
 **类型：** [SubHeaderV2TitleBuilder](arkts-arkui-subheaderv2titlebuilder-t.md)
 

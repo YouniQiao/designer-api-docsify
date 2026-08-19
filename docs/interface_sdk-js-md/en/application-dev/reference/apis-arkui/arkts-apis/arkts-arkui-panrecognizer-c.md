@@ -69,7 +69,7 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 getDistanceMap(): Map<SourceTool, number>
 ```
 
-Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer. > **NOTE：**> > This API only returns thresholds for input sources that have been explicitly configured during pan gesture > initialization. The default threshold can be queried using the SourceTool.Unknown type. > Thresholds for unconfigured device types are not available.
+Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer. &gt; **NOTE：**&gt; &gt; This API only returns thresholds for input sources that have been explicitly configured during pan gesture &gt; initialization. The default threshold can be queried using the SourceTool.Unknown type. &gt; Thresholds for unconfigured device types are not available.
 
 **Since:** 19
 

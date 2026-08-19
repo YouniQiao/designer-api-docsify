@@ -12,7 +12,7 @@ import { systemTimer } from '@kit.BasicServicesKit';
 function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void
 ```
 
-Creates a timer. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise > , memory leakage occurs.
+Creates a timer. This API uses an asynchronous callback to return the result. &gt; **NOTE：**&gt; &gt; This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
 
 **Since:** 23
 
@@ -27,7 +27,7 @@ Creates a timer. This API uses an asynchronous callback to return the result. > 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | Yes | Timer initialization options, including the timer type, whether the timer is a repeating timer, interval, and **WantAgent** options. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the timer ID. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the timer ID. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ try {
 function createTimer(options: TimerOptions): Promise<long>
 ```
 
-Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise > , memory leakage occurs.
+Creates a timer. This API uses a promise to return the timer ID. &gt; **NOTE：**&gt; &gt; This API must be used together with &gt; [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md). Otherwise &gt; , memory leakage occurs.
 
 **Since:** 23
 

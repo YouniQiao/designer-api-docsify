@@ -17,11 +17,11 @@
 
 | Name | Description |
 | --- | --- |
-| [AlertDialogButtonBaseOptions(AlertDialog)](arkts-arkui-alertdialogbuttonbaseoptions-i.md) | Defines the button style of the alert dialog box. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
+| [AlertDialogButtonBaseOptions(AlertDialog)](arkts-arkui-alertdialogbuttonbaseoptions-i.md) | Defines the button style of the alert dialog box. &gt; **NOTE：**&gt; &gt; To standardize anonymous object definitions, the element definitions here have been revised in API version 18. &gt; While historical version information is preserved for anonymous objects, there may be cases where the outer element &gt; 's @since version number is higher than inner elements'. This does not affect interface usability. |
 | [AlertDialogButtonOptions(AlertDialog)](arkts-arkui-alertdialogbuttonoptions-i.md) | Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md). |
 | [AlertDialogParam(AlertDialog)](arkts-arkui-alertdialogparam-i.md) | Enumerates the alert dialog box styles. |
 | [AlertDialogParamWithButtons(AlertDialog)](arkts-arkui-alertdialogparamwithbuttons-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
-| [AlertDialogParamWithConfirm(AlertDialog)](arkts-arkui-alertdialogparamwithconfirm-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** > **style** > **defaultFocus** |
+| [AlertDialogParamWithConfirm(AlertDialog)](arkts-arkui-alertdialogparamwithconfirm-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** &gt; **style** &gt; **defaultFocus** |
 | [AlertDialogParamWithOptions(AlertDialog)](arkts-arkui-alertdialogparamwithoptions-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |
 | [DismissDialogAction(AlertDialog)](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
 | [TextStyle(AlertDialog)](arkts-arkui-textstyle-i.md) | Describes the word break rule of the message in the dialog box. |

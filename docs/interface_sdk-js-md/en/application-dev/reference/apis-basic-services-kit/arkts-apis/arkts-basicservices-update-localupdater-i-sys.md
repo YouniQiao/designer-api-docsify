@@ -39,7 +39,7 @@ Installs the upgrade package. During the upgrade, the device automatically resta
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | Yes | An array of upgrade files, which is used to specify the local upgrade files to be installed. You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before using this parameter to install the upgrade package. The parameter contains the **fileType** and **filePath** fields. The value of **filePath** is a string of 1 to 255 characters. If the value is out of range, an exception is thrown, and you need to provide the path of the upgrade package. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function used to receive the result of installing the upgrade package. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function used to receive the result of installing the upgrade package. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -201,7 +201,7 @@ Verifies the upgrade package, including its digital signature, file integrity, a
 | --- | --- | --- | --- |
 | upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | Upgrade file, including the file type and file path, which are used to specify the local upgrade package to be verified. |
 | certsFile | string | Yes | Certificate file path, which is used to verify the upgrade package signature. The certificate file must be downloaded from the official website of the vendor to ensure that the source is trusted. The value can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. Only letters, digits, underscores (_), hyphens (-), dots (.), and slashes (/) are allowed. An exception is thrown if the value is out of range or contains invalid characters. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the verification result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the verification result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 

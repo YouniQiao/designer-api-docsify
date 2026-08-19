@@ -50,7 +50,7 @@ ArkTS-Sta: getLayoutManager(): LayoutManager | undefined 获取布局管理器�
 
 | 类型 | 说明 |
 | --- | --- |
-| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | 布局管理器对象。 |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined | 布局管理器对象。 |
 
 ## setSelection
 

@@ -24,5 +24,5 @@ Creates a vertical split layout container with dividers between child components
 
 | Name | Description |
 | --- | --- |
-| [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) | Sets the distance between the child component and the upper and lower dividers. > **NOTE：**> > Similar to RowSplit, the dividers of **ColumnSplit** adjust the height of adjacent child > components. However, this adjustment is only applied to the extent that the resulting height stays within the > height limits of the child components. > > Universal attributes such as clip and margin are supported. > If **clip** is not set, the default value **true** is used. |
+| [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) | Sets the distance between the child component and the upper and lower dividers. &gt; **NOTE：**&gt; &gt; Similar to RowSplit, the dividers of **ColumnSplit** adjust the height of adjacent child &gt; components. However, this adjustment is only applied to the extent that the resulting height stays within the &gt; height limits of the child components. &gt; &gt; Universal attributes such as clip and margin are supported. &gt; If **clip** is not set, the default value **true** is used. |
 

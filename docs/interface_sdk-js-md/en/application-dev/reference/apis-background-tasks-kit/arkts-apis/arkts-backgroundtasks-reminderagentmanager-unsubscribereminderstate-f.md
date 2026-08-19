@@ -26,7 +26,7 @@ Unsubscribes from agent-powered reminder state changes. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | No | Callback used to return the result. If the **callback** parameter is not passed, all subscriptions are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | No | Callback used to return the result. If the **callback** parameter is not passed, all subscriptions are canceled. |
 
 **Return value:**
 

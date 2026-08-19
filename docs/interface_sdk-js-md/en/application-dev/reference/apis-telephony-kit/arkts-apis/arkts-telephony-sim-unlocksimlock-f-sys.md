@@ -30,7 +30,7 @@ Unlock SIM card.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | lockInfo | [PersoLockInfo](arkts-telephony-sim-persolockinfo-i-sys.md) | Yes | Indicates customized lock type information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback used to obtain a response to obtain the SIM card lock status for the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | Yes | Indicates the callback used to obtain a response to obtain the SIM card lock status for the specified card slot. |
 
 **Error codes:**
 

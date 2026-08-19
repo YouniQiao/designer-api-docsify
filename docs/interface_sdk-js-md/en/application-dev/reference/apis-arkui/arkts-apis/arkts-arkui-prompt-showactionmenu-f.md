@@ -30,7 +30,7 @@ Displays the menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ActionMenuOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
 
 **Examples**
 

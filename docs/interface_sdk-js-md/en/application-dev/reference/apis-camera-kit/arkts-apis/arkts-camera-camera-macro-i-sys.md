@@ -25,7 +25,7 @@ import { cameraPicker } from '@kit.CameraKit';
 enableMacro(enabled: boolean): void
 ```
 
-Enables or disables macro photography. > **NOTE：**> > Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported) to check whether the > current device supports macro photography.
+Enables or disables macro photography. &gt; **NOTE：**&gt; &gt; Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported) to check whether the &gt; current device supports macro photography.
 
 **Since:** 23
 

@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## removeAllowedPermissionBundle
@@ -11,7 +12,7 @@
 function removeAllowedPermissionBundle(admin: Want, permission: string, applicationInstance: common.ApplicationInstance): void
 ```
 
-从权限使用例外名单中移除指定应用，移除后该应用不能继续使用对应的权限。 > **说明：** > > 必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能从权限使用例外名单移除应用，否则返回错误码92010 > 44。
+从权限使用例外名单中移除指定应用，移除后该应用不能继续使用对应的权限。 &gt; **说明：** &gt; &gt; 必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)接口禁用权限后，才能从权限使用例外名单移除应用，否则返回错误码92010 &gt; 44。
 
 **起始版本：** 26.0.0
 

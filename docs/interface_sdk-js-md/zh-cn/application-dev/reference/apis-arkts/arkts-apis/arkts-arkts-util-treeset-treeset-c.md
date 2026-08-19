@@ -11,6 +11,9 @@ TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md)实现，在TreeSet
 ## 导入模块
 
 ```TypeScript
+import { TreeSet } from '@kit.ArkTS';
+import { TreeSetForEachCb } from '@kit.ArkTS';
+import { TreeSetComparator } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -613,7 +616,7 @@ getHigherValue(key: T): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 如果存在则返回指定key元素的后一位值，否则返回undefined。 |
+| T \| undefined | 如果存在则返回指定key元素的后一位值，否则返回undefined。 |
 
 **错误码：**
 
@@ -741,7 +744,7 @@ getLowerValue(key: T): T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 如果存在则返回指定key元素的前一位值，否则返回undefined。 |
+| T \| undefined | 如果存在则返回指定key元素的前一位值，否则返回undefined。 |
 
 **错误码：**
 

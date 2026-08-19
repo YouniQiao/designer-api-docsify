@@ -323,7 +323,7 @@ Unregister vendorDefined event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off_expirationUpdate('expirationUpdate')
+## off('expirationUpdate')
 
 ```TypeScript
 off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
@@ -353,7 +353,7 @@ Unsubscribes from events indicating that a media key is updated upon expiry. Thi
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off_keyExpired('keyExpired')
+## off('keyExpired')
 
 ```TypeScript
 off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
@@ -383,7 +383,7 @@ Unsubscribes from events indicating that a media key expires. This API uses an a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off_keyRequired('keyRequired')
+## off('keyRequired')
 
 ```TypeScript
 off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -413,7 +413,7 @@ Unsubscribes from events indicating that the application requests a media key. T
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off_keysChange('keysChange')
+## off('keysChange')
 
 ```TypeScript
 off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -443,7 +443,7 @@ Unsubscribes from events indicating that a media key changes. This API uses an a
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off_vendorDefined('vendorDefined')
+## off('vendorDefined')
 
 ```TypeScript
 off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
@@ -603,7 +603,7 @@ Register vendorDefined event.
 | --- | --- |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on_expirationUpdate('expirationUpdate')
+## on('expirationUpdate')
 
 ```TypeScript
 on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
@@ -633,7 +633,7 @@ Subscribes to events indicating that a media key is updated upon expiry. This AP
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on_keyExpired('keyExpired')
+## on('keyExpired')
 
 ```TypeScript
 on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
@@ -663,7 +663,7 @@ Subscribes to events indicating that a media key expires. This API uses an async
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on_keyRequired('keyRequired')
+## on('keyRequired')
 
 ```TypeScript
 on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
@@ -693,7 +693,7 @@ Subscribes to events indicating that the application requests a media key. This 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on_keysChange('keysChange')
+## on('keysChange')
 
 ```TypeScript
 on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -723,7 +723,7 @@ Subscribes to events indicating that a media key changes. This API uses an async
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on_vendorDefined('vendorDefined')
+## on('vendorDefined')
 
 ```TypeScript
 on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void

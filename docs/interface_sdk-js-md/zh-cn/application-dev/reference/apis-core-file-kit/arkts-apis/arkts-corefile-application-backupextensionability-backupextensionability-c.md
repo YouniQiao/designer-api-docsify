@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility } from '@kit.CoreFileKit';
+import { BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## onBackup
@@ -65,7 +68,7 @@ onBackupEx(backupInfo: string): string | Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 应用执行自定义备份操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
+| string \| Promise&lt;string&gt; | 应用执行自定义备份操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
 
 **示例**
 
@@ -369,7 +372,7 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者实�
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 应用执行自定义恢复操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
+| string \| Promise&lt;string&gt; | 应用执行自定义恢复操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
 
 **示例**
 

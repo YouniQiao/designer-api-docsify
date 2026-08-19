@@ -15,6 +15,7 @@ RectShape 的构造函数参数。 继承自[ShapeSize](arkts-arkui-arkui-shape-
 ## 导入模块
 
 ```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## radius

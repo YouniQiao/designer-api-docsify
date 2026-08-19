@@ -142,12 +142,12 @@ import { notificationManager } from '@kit.NotificationKit';
 | [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md) | 查询是否支持免打扰功能。使用Promise异步回调。 |
 | [offBadgeNumberQuery](arkts-notification-notificationmanager-offbadgenumberquery-f-sys.md) | 取消应用角标数量查询回调。 |
 | [offCheckNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) | 通知监听回调。 |
-| off_checkNotification | 取消通知监听回调。 |
+| [off_checkNotification](arkts-notification-notificationmanager-offchecknotification-f-sys.md) | 取消通知监听回调。 |
 | [onBadgeNumberQuery](arkts-notification-notificationmanager-onbadgenumberquery-f-sys.md) | 注册应用角标数量查询回调。 |
 | [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | 通知监听回调。 |
 | [onCheckNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | 通知监听回调。 |
-| on_checkNotification | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。 系统中每个SlotType只允许存在一个注册者。 |
-| on_checkNotification | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。使用Promise异步回调。 系统中每个SlotType只允许存在一个注册者。 |
+| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。 系统中每个SlotType只允许存在一个注册者。 |
+| [on_checkNotification](arkts-notification-notificationmanager-onchecknotification-f-sys.md) | 注册通知监听回调。通知服务将通知信息回调给校验程序，校验程序返回校验结果决定该通知是否发布，如营销类通知发布频率控制等。使用Promise异步回调。 系统中每个SlotType只允许存在一个注册者。 |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | 发布通知给指定的用户。使用callback异步回调。 |
 | [publish](arkts-notification-notificationmanager-publish-f-sys.md) | 发布通知给指定的用户。使用Promise异步回调。 |
 | [publishAsBundle](arkts-notification-notificationmanager-publishasbundle-f-sys.md) | 发布代理通知。使用callback异步回调。 |

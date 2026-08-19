@@ -1,6 +1,6 @@
 # UIServiceProxy
 
-UIServiceProxy提供代理能力，可以从UIServiceExtension客户端发送数据到服务端。 > **说明：** > > - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
+UIServiceProxy提供代理能力，可以从UIServiceExtension客户端发送数据到服务端。 &gt; **说明：** &gt; &gt; - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@ UIServiceProxy提供代理能力，可以从UIServiceExtension客户端发送数
 sendData(data: Record<string, Object>): void
 ```
 
-给UIServiceExtension服务端发送数据。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+给UIServiceExtension服务端发送数据。 &gt; **说明：** &gt; &gt; 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 14
 
@@ -132,7 +132,7 @@ struct UIServiceExtensionAbility {
 sendData(data: Record<string, RecordData>): void
 ```
 
-给UIServiceExtension服务端发送数据。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+给UIServiceExtension服务端发送数据。 &gt; **说明：** &gt; &gt; 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 23
 

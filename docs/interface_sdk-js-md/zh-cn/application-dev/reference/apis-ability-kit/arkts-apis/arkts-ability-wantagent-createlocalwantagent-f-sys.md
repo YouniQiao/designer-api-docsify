@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## createLocalWantAgent
@@ -11,7 +12,7 @@
 function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 ```
 
-创建本地WantAgent实例。 > **说明：** > 本接口创建的本地WantAgent实例仅存储于WantAgent客户端，不受WantAgent服务端管理。使用该本地实例时，需要校验实例，以保证安全性。 > 本地WantAgent实例创建后，触发方法参见[wantAgent.triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md)接口说明。
+创建本地WantAgent实例。 &gt; **说明：** &gt; 本接口创建的本地WantAgent实例仅存储于WantAgent客户端，不受WantAgent服务端管理。使用该本地实例时，需要校验实例，以保证安全性。 &gt; 本地WantAgent实例创建后，触发方法参见[wantAgent.triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md)接口说明。
 
 **起始版本：** 23
 

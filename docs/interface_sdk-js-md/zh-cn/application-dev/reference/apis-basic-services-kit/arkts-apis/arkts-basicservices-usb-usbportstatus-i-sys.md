@@ -17,6 +17,9 @@ USB设备端口角色信息。
 ## 导入模块
 
 ```TypeScript
+import { usb } from '@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## currentDataRole

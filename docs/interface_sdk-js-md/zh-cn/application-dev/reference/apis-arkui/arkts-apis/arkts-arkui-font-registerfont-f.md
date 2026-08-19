@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { font } from '@kit.ArkUI';
 ```
 
 ## registerFont
@@ -11,7 +12,7 @@
 function registerFont(options: FontOptions): void
 ```
 
-在字体管理中注册自定义字体。 该接口为异步接口，不支持并发调用。 > **说明：** > > -registerFont需要先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取 > [Font](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用registerFont可能导致 > [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。 > > - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的 > [Font](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象。
+在字体管理中注册自定义字体。 该接口为异步接口，不支持并发调用。 &gt; **说明：** &gt; &gt; -registerFont需要先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取 &gt; [Font](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象，然后通过该对象进行调用。且直接使用registerFont可能导致 &gt; [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。 &gt; &gt; - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 &gt; [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的 &gt; [Font](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 9
 

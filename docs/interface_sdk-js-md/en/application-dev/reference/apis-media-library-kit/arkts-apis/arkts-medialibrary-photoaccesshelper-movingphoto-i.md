@@ -63,7 +63,7 @@ Obtains the URI of this moving photo.
 
 | Type | Description |
 | --- | --- |
-| string | Returns uri of the moving photo, if the operation fails, returns null |
+| string \| null | Returns uri of the moving photo, if the operation fails, returns null |
 
 **Error codes:**
 

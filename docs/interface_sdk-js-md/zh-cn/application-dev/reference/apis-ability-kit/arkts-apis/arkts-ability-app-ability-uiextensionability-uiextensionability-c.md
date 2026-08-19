@@ -13,6 +13,7 @@ UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自 [Exten
 ## 导入模块
 
 ```TypeScript
+import { UIExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -163,7 +164,7 @@ UIExtensionAbility生命周期回调，在销毁时回调，执行资源清理�
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回或返回未定义。 |
+| Promise&lt;void&gt; \| undefined | 以Promise形式返回或返回未定义。 |
 
 **示例**
 

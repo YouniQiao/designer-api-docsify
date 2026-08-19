@@ -21,7 +21,7 @@ In addition to the universal attributes, the following attributes are supported.
 analyzerConfig(config: ImageAnalyzerConfig)
 ```
 
-Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier. > **NOTE：**> > This API can be called within attributeModifier since API version 20.
+Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier. &gt; **NOTE：**&gt; &gt; This API can be called within attributeModifier since API version 20.
 
 **Since:** 12
 
@@ -89,7 +89,7 @@ Sets whether to display the video playback control bar. This attribute can be dy
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed. Note that if this attribute and the overlay attribute are both set, CustomBuilder specified in overlay has no effect. > **NOTE：**> > This API can be called within attributeModifier since API version 20. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using attributeModifier. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed. Note that if this attribute and the overlay attribute are both set, CustomBuilder specified in overlay has no effect. &gt; **NOTE：**&gt; &gt; This API can be called within attributeModifier since API version 20. After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
 **Since:** 12
 

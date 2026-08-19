@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## 汇总

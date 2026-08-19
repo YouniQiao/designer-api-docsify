@@ -40,5 +40,5 @@ Gets the text content of the selected range.
 
 | Type | Description |
 | --- | --- |
-| string | text content of the selected range. |
+| string \| undefined | text content of the selected range. |
 

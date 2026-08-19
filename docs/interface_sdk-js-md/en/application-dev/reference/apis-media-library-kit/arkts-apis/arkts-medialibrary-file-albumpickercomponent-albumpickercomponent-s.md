@@ -1,6 +1,6 @@
 # AlbumPickerComponent
 
-AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (albumInfo: AlbumInfo) => boolean, onEmptyAreaClick?: EmptyAreaClickCallback, albumPickerController?: AlbumPickerController }) The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the user directory without any permission.
+AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (albumInfo: AlbumInfo) =&gt; boolean, onEmptyAreaClick?: EmptyAreaClickCallback, albumPickerController?: AlbumPickerController }) The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the user directory without any permission.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ albumPickerController?: AlbumPickerController
 
 AlbumPickerController
 
-**Type:** [AlbumPickerController](arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
+**Type:** [AlbumPickerController](../../apis-na/arkts-apis/arkts-na-file-albumpickercomponent-albumpickercontroller-c.md)
 
 **Since:** 20
 
@@ -40,7 +40,7 @@ albumPickerOptions?: AlbumPickerOptions
 
 AlbumPickerOptions
 
-**Type:** [AlbumPickerOptions](arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
+**Type:** [AlbumPickerOptions](../../apis-na/arkts-apis/arkts-na-file-albumpickercomponent-albumpickeroptions-c.md)
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ onEmptyAreaClick?: EmptyAreaClickCallback
 
 Callback when click the empty area of the album component
 
-**Type:** [EmptyAreaClickCallback](arkts-medialibrary-emptyareaclickcallback-t.md)
+**Type:** [EmptyAreaClickCallback](../../apis-na/arkts-apis/arkts-na-emptyareaclickcallback-t.md)
 
 **Since:** 13
 

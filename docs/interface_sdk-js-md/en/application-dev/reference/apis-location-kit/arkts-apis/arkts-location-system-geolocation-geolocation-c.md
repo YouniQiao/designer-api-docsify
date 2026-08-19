@@ -90,8 +90,6 @@ Obtains the supported coordinate system types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; |  |
-
 ## subscribe
 
 ```TypeScript

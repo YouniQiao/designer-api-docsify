@@ -29,8 +29,6 @@ new (elements: Iterable<number>): Float64Array
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-
 ## from
 
 ```TypeScript
@@ -55,5 +53,3 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| Float64Array |  |
-

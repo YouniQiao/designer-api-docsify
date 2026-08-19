@@ -39,8 +39,6 @@ alignItems(value: HorizontalAlign | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## attributeModifier
 
 ```TypeScript
@@ -57,14 +55,12 @@ attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | Attri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; \| [AttributeModifier](arkts-na-common-attributemodifier-i.md)&lt;[CommonMethod](arkts-na-common-commonmethod-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## footer
 
 ```TypeScript
@@ -87,8 +83,6 @@ footer(builder: CustomBuilder | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## header
 
 ```TypeScript
@@ -111,8 +105,6 @@ header(builder: CustomBuilder | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -135,8 +127,6 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): th
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setLazyColumnLayoutOptions
 
 ```TypeScript
@@ -153,8 +143,6 @@ setLazyColumnLayoutOptions(): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## space
 
 ```TypeScript
@@ -177,8 +165,6 @@ space(space: LengthMetrics | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## sticky
 
 ```TypeScript
@@ -201,8 +187,6 @@ sticky(sticky: StickyStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

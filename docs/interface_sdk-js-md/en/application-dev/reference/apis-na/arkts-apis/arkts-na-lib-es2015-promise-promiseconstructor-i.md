@@ -31,8 +31,6 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{ -readonly [P in keyof T]: Awaited&lt;T[P]&gt; }&gt; |  |
-
 ## constructor
 
 ```TypeScript
@@ -55,8 +53,6 @@ Creates a new Promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; |  |
-
 ## race
 
 ```TypeScript
@@ -79,8 +75,6 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Awaited](arkts-na-awaited-t.md)&lt;T[number]&gt;&gt; |  |
-
 ## reject
 
 ```TypeScript
@@ -103,8 +97,6 @@ Creates a new rejected promise for the provided reason.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; |  |
-
 ## resolve
 
 ```TypeScript
@@ -121,8 +113,6 @@ Creates a new resolved promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
-
 ## resolve
 
 ```TypeScript
@@ -145,8 +135,6 @@ Creates a new resolved promise for the provided value.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Awaited](arkts-na-awaited-t.md)&lt;T&gt;&gt; |  |
-
 ## resolve
 
 ```TypeScript
@@ -169,8 +157,6 @@ Creates a new resolved promise for the provided value.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Awaited](arkts-na-awaited-t.md)&lt;T&gt;&gt; |  |
-
 ## prototype
 
 ```TypeScript

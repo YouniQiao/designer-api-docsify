@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## createQuaternion
@@ -11,7 +12,7 @@
 function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-将旋转矢量转换为四元数。使用callback异步回调。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md) > 替代。
+将旋转矢量转换为四元数。使用callback异步回调。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md) &gt; 替代。
 
 **起始版本：** 8
 
@@ -28,7 +29,7 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | 是 | 表示旋转矢量。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回四元数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回四元数。 |
 
 **示例**
 
@@ -55,7 +56,7 @@ sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877],
 function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>
 ```
 
-将旋转矢量转换为四元数。使用Promise异步回调。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)替代。
+将旋转矢量转换为四元数。使用Promise异步回调。 &gt; **说明：** &gt; &gt; 从API version 8 开始支持，从API version 9 开始废弃，建议使用 &gt; [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md)替代。
 
 **起始版本：** 8
 

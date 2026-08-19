@@ -13,6 +13,7 @@ Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的M
 ## 导入模块
 
 ```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createPixelMapMask

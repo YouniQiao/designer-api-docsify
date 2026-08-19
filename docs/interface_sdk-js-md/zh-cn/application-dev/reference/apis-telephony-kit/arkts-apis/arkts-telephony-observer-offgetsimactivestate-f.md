@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## offGetSimActiveState
@@ -25,7 +26,7 @@ function offGetSimActiveState(callback?: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 回调函数，返回SIM卡是否激活。<br/>- true：激活。<br/>- false：未激活。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数，返回SIM卡是否激活。<br/>- true：激活。<br/>- false：未激活。 |
 
 **错误码：**
 

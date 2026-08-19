@@ -75,7 +75,7 @@ Gets the glyph width array within the range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | Array holding the advance width and height of each glyph. |
+| Array&lt;common2D.Point&gt; \| undefined | Array holding the advance width and height of each glyph. |
 
 ## getFont
 
@@ -241,7 +241,7 @@ Gets the range glyph identifier for each character.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | Glyph identifier or undefined. |
+| Array&lt;int&gt; \| undefined | Glyph identifier or undefined. |
 
 ## getImageBounds
 
@@ -249,7 +249,7 @@ Gets the range glyph identifier for each character.
 getImageBounds(): common2D.Rect
 ```
 
-Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. > **NOTE：**> > The figure shows the image boundaries for the string " a b ". > >  > > The figure shows the image boundaries for the string "j" or "E". > > 
+Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. &gt; **NOTE：**&gt; &gt; The figure shows the image boundaries for the string " a b ". &gt; &gt;  &gt; &gt; The figure shows the image boundaries for the string "j" or "E". &gt; &gt; 
 
 **Since:** 23
 
@@ -407,7 +407,7 @@ Gets the range font position offset.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | The position of the font in the layout or undefined. |
+| Array&lt;common2D.Point&gt; \| undefined | The position of the font in the layout or undefined. |
 
 ## getStringIndices
 
@@ -489,7 +489,7 @@ Gets the range of run glyph indices, the offset of the indices relative to the e
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | The glyph indices or undefined. |
+| Array&lt;int&gt; \| undefined | The glyph indices or undefined. |
 
 ## getStringRange
 
@@ -579,7 +579,7 @@ Obtains the text style of this typesetting unit.
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a " and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. > **NOTE：**> > The figure shows the typesetting boundaries for the string " a b ". > >  > > The figure shows the typesetting boundaries for the string "j" or "E". > > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a " and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. &gt; **NOTE：**&gt; &gt; The figure shows the typesetting boundaries for the string " a b ". &gt; &gt;  &gt; &gt; The figure shows the typesetting boundaries for the string "j" or "E". &gt; &gt; ! &gt; [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
 **Since:** 23
 

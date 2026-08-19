@@ -28,8 +28,6 @@ getCurrentLocalPosition(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Coordinate2D](../../apis-arkui/arkts-apis/arkts-arkui-coordinate2d-i.md) |  |
-
 ## getHistoricalPoints
 
 ```TypeScript
@@ -46,8 +44,6 @@ getHistoricalPoints(): MouseHistoricalPoint[] | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [MouseHistoricalPoint](arkts-na-common-mousehistoricalpoint-i.md)[] |  |
-
 ## stopPropagation
 
 ```TypeScript

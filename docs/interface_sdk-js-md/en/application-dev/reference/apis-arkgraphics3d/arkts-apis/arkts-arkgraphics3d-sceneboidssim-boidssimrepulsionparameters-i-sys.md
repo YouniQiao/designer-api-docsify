@@ -16,7 +16,7 @@ Repulsion field parameters, used to configure the repulsion field in the scene.
 accelerationMag?: double
 ```
 
-The magnitude of the repulsion acceleration applied to the individual, whose direction points away from the repulsion field entity. Value >= 0. Default value is 0.0.
+The magnitude of the repulsion acceleration applied to the individual, whose direction points away from the repulsion field entity. Value &gt;= 0. Default value is 0.0.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ The magnitude of the repulsion acceleration applied to the individual, whose dir
 radius?: double
 ```
 
-The radius of the repulsion field. Only individuals strictly within this distance are repelled (boundary force is 0). Value >= 0. Default value is 0.0.
+The radius of the repulsion field. Only individuals strictly within this distance are repelled (boundary force is 0). Value &gt;= 0. Default value is 0.0.
 
 **Type:** double
 

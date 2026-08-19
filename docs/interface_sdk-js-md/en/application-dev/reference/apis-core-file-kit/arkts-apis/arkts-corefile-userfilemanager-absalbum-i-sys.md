@@ -47,7 +47,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | FetchOptions | Yes | Retrieval options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;FetchResult&lt;[FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md)&gt;&gt; | Yes | Callback used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 albumName: string
 ```
 
-Name of the album. > **NOTE：**> > The user album is writable, but the system album is not writable.
+Name of the album. &gt; **NOTE：**&gt; &gt; The user album is writable, but the system album is not writable.
 
 **Type:** string
 
@@ -211,7 +211,7 @@ Number of files in the album.
 coverUri: string
 ```
 
-URI of the cover file of the album. > **NOTE：**> > The user album is writable, but the system album is not writable.
+URI of the cover file of the album. &gt; **NOTE：**&gt; &gt; The user album is writable, but the system album is not writable.
 
 **Type:** string
 

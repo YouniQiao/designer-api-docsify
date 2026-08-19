@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Action as MouseAction, Axis, AxisValue, Button, MouseEvent, ToolType as MouseToolType } from '@kit.InputKit';
 ```
 
 ## action

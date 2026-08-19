@@ -3,6 +3,8 @@
 ## 导入模块
 
 ```TypeScript
+import { request } from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## touch
@@ -25,7 +27,7 @@ function touch(id: string, token: string, callback: AsyncCallback<TaskInfo>): vo
 | --- | --- | --- | --- |
 | id | string | 是 | 任务id。 |
 | token | string | 是 | 任务查询token。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;TaskInfo&gt; | 是 | 回调函数。当查询任务操作成功，err为undefined，data为查询到的任务TaskInfo信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | 是 | 回调函数。当查询任务操作成功，err为undefined，data为查询到的任务TaskInfo信息；否则为错误对象。 |
 
 **错误码：**
 

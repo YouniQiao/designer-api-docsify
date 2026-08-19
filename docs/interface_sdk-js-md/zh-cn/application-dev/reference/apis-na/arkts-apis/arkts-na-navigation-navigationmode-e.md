@@ -1,6 +1,6 @@
 # NavigationMode
 
-导航页显示模式。Navigation处于分栏显示状态时，导航页和内容区之间会显示分割线。 > **说明：** > > 为了简化表示，可以将`组件宽度 - minContentWidth - 分割线宽度 (1px)`称为calcNavBarWidth。
+导航页显示模式。Navigation处于分栏显示状态时，导航页和内容区之间会显示分割线。 &gt; **说明：** &gt; &gt; 为了简化表示，可以将`组件宽度 - minContentWidth - 分割线宽度 (1px)`称为calcNavBarWidth。
 
 **起始版本：** 23
 

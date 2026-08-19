@@ -30,7 +30,7 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createIncrementalSource
@@ -59,5 +59,5 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | Type | Description |
 | --- | --- |
-| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource \| undefined | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

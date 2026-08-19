@@ -29,7 +29,7 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | filename | string | Yes | Application sandbox path of the file. |
 | events | number | Yes | 1**: The file or directory is renamed.<br>- **2**: The file or directory is modified.&lt; br&gt;- **3**: The file or directory is modified and renamed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Called each time a change is detected. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Called each time a change is detected. |
 
 **Return value:**
 

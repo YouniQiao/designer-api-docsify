@@ -11,6 +11,9 @@
 ## 导入模块
 
 ```TypeScript
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit'
+import { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## cancel
@@ -122,7 +125,7 @@ try {
 onCancel(): Promise<string>
 ```
 
-> **说明：** > > 从API version 12开始支持，从API version 24开始废弃。 取消拷贝事件监听。
+> **说明：** &gt; &gt; 从API version 12开始支持，从API version 24开始废弃。 取消拷贝事件监听。
 
 **起始版本：** 12
 

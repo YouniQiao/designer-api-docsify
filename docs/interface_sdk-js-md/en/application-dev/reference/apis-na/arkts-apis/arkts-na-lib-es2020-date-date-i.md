@@ -32,8 +32,6 @@ Converts a date to a string by using the current or specified locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toLocaleString
 
 ```TypeScript
@@ -57,8 +55,6 @@ Converts a date and time to a string by using the current or specified locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-
 ## toLocaleTimeString
 
 ```TypeScript
@@ -82,5 +78,3 @@ Converts a time to a string by using the current or specified locale.
 
 | Type | Description |
 | --- | --- |
-| string |  |
-

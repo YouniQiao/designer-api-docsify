@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Colors, CustomColors, Theme, ThemeControl, CustomTheme, CustomDarkColors } from '@kit.ArkUI';
 ```
 
 ## colors
@@ -21,7 +22,7 @@ colors: Colors
 
 主题颜色资源。
 
-**类型：** [Colors](arkts-arkui-arkui-theme-colors-i.md)
+**类型：** [Colors](../../apis-na/arkts-apis/arkts-na-arkui-theme-colors-i.md)
 
 **起始版本：** 12
 

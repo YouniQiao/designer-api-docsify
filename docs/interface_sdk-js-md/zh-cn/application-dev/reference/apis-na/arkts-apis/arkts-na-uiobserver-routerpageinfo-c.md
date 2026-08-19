@@ -143,7 +143,7 @@ state: RouterPageState
 
 触发生命周期的routerPage页面的状态。
 
-**类型：** [RouterPageState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-routerpagestate-e.md)
+**类型：** [RouterPageState](arkts-na-uiobserver-routerpagestate-e.md)
 
 **起始版本：** 23
 

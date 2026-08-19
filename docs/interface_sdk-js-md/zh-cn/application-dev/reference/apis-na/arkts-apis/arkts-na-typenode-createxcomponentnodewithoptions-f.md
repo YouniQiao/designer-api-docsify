@@ -31,5 +31,5 @@ export function createXComponentNodeWithOptions(
 
 | 类型 | 说明 |
 | --- | --- |
-| XComponent | Return XComponent type FrameNode. |
+| XComponent | Return XComponent type FrameNode.<br>**适用版本：** 23+ |
 

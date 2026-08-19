@@ -34,7 +34,7 @@ Updates the print job state. This API uses an asynchronous callback to return th
 | jobId | string | Yes | ID of the print job. |
 | state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | Yes | Print job state. |
 | subState | [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md) | Yes | Substate of the print job. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when the print job state is updated. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback to be invoked when the print job state is updated. |
 
 **Error codes:**
 

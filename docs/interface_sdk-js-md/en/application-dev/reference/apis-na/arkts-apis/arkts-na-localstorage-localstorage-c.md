@@ -116,7 +116,7 @@ Returns value of given property return undefined if no property with this name
 
 | Type | Description |
 | --- | --- |
-| T | property value if found or undefined |
+| T \| undefined | property value if found or undefined |
 
 ## has
 
@@ -200,7 +200,7 @@ Create and return a two-way sync "(link") to named property
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | instance of SubscribedAbstractProperty&lt;T&gt;, return undefined if named property does not already exist in LocalStorage. |
+| [SubscribedAbstractProperty](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; \| undefined | instance of SubscribedAbstractProperty&lt;T&gt;, return undefined if named property does not already exist in LocalStorage. |
 
 ## ref
 
@@ -230,7 +230,7 @@ Obtain a handler or an alias to LocalStorage property with given name.
 
 | Type | Description |
 | --- | --- |
-| [AbstractProperty](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-abstractproperty-i.md)&lt;T&gt; | AbstractProperty object if property with given name exists return undefined otherwise. |
+| [AbstractProperty](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-abstractproperty-i.md)&lt;T&gt; \| undefined | AbstractProperty object if property with given name exists return undefined otherwise. |
 
 ## set
 

@@ -11,6 +11,7 @@ This interface is used to define the output image size.
 ## 导入模块
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 ```
 
 ## height

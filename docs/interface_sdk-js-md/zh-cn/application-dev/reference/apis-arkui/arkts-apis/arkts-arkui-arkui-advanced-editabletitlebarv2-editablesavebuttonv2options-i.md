@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUI';
 ```
 
 ## defaultFocus
@@ -65,7 +66,7 @@ onAction?: OnActionCallback
 
 点击保存按钮的回调函数。未设置时点击按钮无响应。
 
-**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总
@@ -64,7 +65,7 @@
 | [AppEventReportConfig](arkts-performanceanalysis-hiappevent-appeventreportconfig-i.md) | 数据处理者可以上报事件的描述配置。 |
 | [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) | 可以上报事件的数据处理者对象。用于事件的上报和管理，开发者可自定义数据处理配置，满足不同的数据处理需求。 |
 | [MainThreadJankPolicy](arkts-performanceanalysis-hiappevent-mainthreadjankpolicy-i.md) | 提供主线程超时事件配置策略的定义。 |
-| [CpuUsageHighPolicy](arkts-performanceanalysis-hiappevent-cpuusagehighpolicy-i.md) | 提供CPU高负载事件配置策略的定义。 > **注意：** > > 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。 |
+| [CpuUsageHighPolicy](arkts-performanceanalysis-hiappevent-cpuusagehighpolicy-i.md) | 提供CPU高负载事件配置策略的定义。 &gt; **注意：** &gt; &gt; 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。 |
 | [AppCrashPolicy](arkts-performanceanalysis-hiappevent-appcrashpolicy-i.md) | 提供崩溃事件配置策略的定义。 |
 | [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md) | 提供应用冻屏事件配置策略的定义。 |
 | [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md) | 提供资源泄漏事件配置策略的定义。 |

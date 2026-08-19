@@ -50,7 +50,7 @@ getLayoutManager(): LayoutManager | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | 布局管理器对象。 |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) \| undefined | 布局管理器对象。 |
 
 ## setStyledString
 
@@ -82,7 +82,7 @@ setStyledString(value: StyledString): void
 setTextSelection(selectionStart: int | undefined, selectionEnd: int | undefined, options?: SelectionOptions): void
 ```
 
-设置文本选择区域并高亮显示。 > **说明：** > > 当copyOption设置为CopyOptions.None时，设置setTextSelection不生效。 > > 当textOverflow设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。 > > 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。 > > 当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。截断为false时，超出父组件的文本选中区域生效。 > > 如果设备为PC/2in1，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。 > > 当emoji表情被选中区域截断时，若表情的起始位置包含在设置的文本选中区域内，该表情就会被选中。
+设置文本选择区域并高亮显示。 &gt; **说明：** &gt; &gt; 当copyOption设置为CopyOptions.None时，设置setTextSelection不生效。 &gt; &gt; 当textOverflow设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。 &gt; &gt; 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。 &gt; &gt; 当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。截断为false时，超出父组件的文本选中区域生效。 &gt; &gt; 如果设备为PC/2in1，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。 &gt; &gt; 当emoji表情被选中区域截断时，若表情的起始位置包含在设置的文本选中区域内，该表情就会被选中。
 
 **起始版本：** 23
 

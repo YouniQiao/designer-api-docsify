@@ -13,6 +13,8 @@ metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## addMetadataObjectTypes

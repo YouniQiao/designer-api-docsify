@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
 ```
 
 ## 汇总

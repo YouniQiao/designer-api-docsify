@@ -29,8 +29,6 @@ new(pattern: RegExp | string): RegExp
 
 | Type | Description |
 | --- | --- |
-| RegExp |  |
-
 ## constructor
 
 ```TypeScript
@@ -52,8 +50,6 @@ new(pattern: string, flags?: string): RegExp
 
 | Type | Description |
 | --- | --- |
-| RegExp |  |
-
 ## constructor
 
 ```TypeScript
@@ -74,8 +70,6 @@ new(pattern: string, flags?: string): RegExp
 
 | Type | Description |
 | --- | --- |
-| RegExp |  |
-
 ## constructor
 
 ```TypeScript
@@ -97,8 +91,6 @@ new(pattern: string, flags?: string): RegExp
 
 | Type | Description |
 | --- | --- |
-| RegExp |  |
-
 ## "$&"
 
 ```TypeScript

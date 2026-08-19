@@ -21,7 +21,7 @@ frameNode中 [getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。 > **说明：** > > setOnWillScroll用于设置每帧滚动开始前的回调，setOnDidScroll用于设置每帧滚动完成后的回调。两者可同时使用，setOnWillScroll的回调先于setOnDidScroll触发。 > 方法入参为undefined时，会重置事件回调。
+设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。 &gt; **说明：** &gt; &gt; setOnWillScroll用于设置每帧滚动开始前的回调，setOnDidScroll用于设置每帧滚动完成后的回调。两者可同时使用，setOnWillScroll的回调先于setOnDidScroll触发。 &gt; 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 

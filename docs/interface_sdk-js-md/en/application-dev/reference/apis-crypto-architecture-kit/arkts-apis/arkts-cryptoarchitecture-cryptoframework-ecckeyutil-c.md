@@ -22,7 +22,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 ```
 
-Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported. > **NOTE：**> > According to section 2.2 in RFC 5480: > 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate. > 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented > as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the > coordinate y is an even number).
+Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported. &gt; **NOTE：**&gt; &gt; According to section 2.2 in RFC 5480: &gt; 1. The uncompressed point data is represented as **0x04**|x coordinate|y coordinate. &gt; 2. The compressed point data in the **Fp** field (the **F2m** field is not supported currently) is represented &gt; as follows: **0x03**|x coordinate (when the coordinate y is an odd number); **0x02**|x coordinate (when the &gt; coordinate y is an even number).
 
 **Since:** 23
 

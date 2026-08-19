@@ -27,5 +27,3 @@ Returns the prototype of an object.
 
 | Type | Description |
 | --- | --- |
-| object |  |
-

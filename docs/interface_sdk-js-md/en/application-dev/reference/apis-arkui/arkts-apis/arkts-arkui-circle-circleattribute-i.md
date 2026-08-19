@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<CircleAttribute> | AttributeModifi
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## fill
 
 ```TypeScript
@@ -58,8 +56,6 @@ fill(value: ResourceColor | ColorMetrics | undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## setCircleOptions
 
 ```TypeScript
@@ -82,8 +78,6 @@ setCircleOptions(options?: CircleOptions): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## stroke
 
 ```TypeScript
@@ -106,8 +100,6 @@ stroke(value: ResourceColor | ColorMetrics| undefined): this
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

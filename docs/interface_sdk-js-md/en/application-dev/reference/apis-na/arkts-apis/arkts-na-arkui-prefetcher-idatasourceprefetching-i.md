@@ -39,8 +39,6 @@ cancel(index: int): Promise<void> | undefined
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
-
 ## prefetch
 
 ```TypeScript
@@ -69,7 +67,7 @@ Prefetches data for the specified element in the data collection. This method ca
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; \| undefined |  |
 
 ## default
 

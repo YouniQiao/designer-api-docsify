@@ -1,6 +1,6 @@
 # ResourceManager
 
-提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。 > **说明：** > > - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。 > > - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式 > 获取，例如`\$r('app.string.test').id`。 > > - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源， > **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md)创建对应module的context**， > 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。 > > - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源， > 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
+提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。 &gt; **说明：** &gt; &gt; - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。 &gt; &gt; - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式 &gt; 获取，例如`\$r('app.string.test').id`。 &gt; &gt; - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源， &gt; **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md)创建对应module的context**， &gt; 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。 &gt; &gt; - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源， &gt; 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## addResource
@@ -19,7 +20,7 @@
 addResource(path: string) : void
 ```
 
-应用运行时加载指定的overlay资源，实现主题切换或资源覆盖。 > **说明：**> > rawfile和resfile目录不支持资源覆盖。
+应用运行时加载指定的overlay资源，实现主题切换或资源覆盖。 &gt; **说明：**&gt; &gt; rawfile和resfile目录不支持资源覆盖。
 
 **起始版本：** 23
 
@@ -1989,7 +1990,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
@@ -2073,7 +2074,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string | double)[]): string
 ```
 
-获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 23
 
@@ -2112,7 +2113,7 @@ getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string |
 getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
@@ -2223,7 +2224,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | double)[]): string
 ```
 
-获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 23
 
@@ -2262,7 +2263,7 @@ getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | doub
 getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式 返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式 返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
 
@@ -2375,7 +2376,7 @@ getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescripto
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2495,7 +2496,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2568,7 +2569,7 @@ getDrawableDescriptorByName(resName: string, density?: int, type?: int): Drawabl
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源名称对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源名称对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2764,7 +2765,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
@@ -2848,7 +2849,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | double)[]): string
 ```
 
-获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 23
 
@@ -2887,7 +2888,7 @@ getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | doubl
 getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string
 ```
 
-获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
 
@@ -2998,7 +2999,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]): string
 ```
 
-获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 &gt; &gt; - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 23
 
@@ -3037,7 +3038,7 @@ getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]):
 getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式 返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式 返回。 &gt; **说明：**&gt; &gt; - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
 
@@ -6116,7 +6117,7 @@ export default class EntryAbility extends UIAbility {
 getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
 
@@ -6158,7 +6159,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralString(resId: number, num: number): Promise<string>
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
 
@@ -6203,7 +6204,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void
 ```
 
-获取指定资源名称，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源名称，指定资源数量的单复数字符串。使用callback异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6278,7 +6279,7 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 getPluralStringByName(resName: string, num: number): Promise<string>
 ```
 
-获取指定资源名称，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源名称，指定资源数量的单复数字符串。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6358,7 +6359,7 @@ this.context.resourceManager.getPluralStringByName("test", 1)
 getPluralStringByNameSync(resName: string, num: number): string
 ```
 
-获取指定资源名称，指定资源数量的单复数字符串，使用同步方式返回。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源名称，指定资源数量的单复数字符串，使用同步方式返回。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
@@ -6439,7 +6440,7 @@ try {
 getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void
 ```
 
-获取指定资源信息，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源信息，指定资源数量的单复数字符串。使用callback异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6523,7 +6524,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
 getPluralStringValue(resource: Resource, num: number): Promise<string>
 ```
 
-获取指定资源信息，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源信息，指定资源数量的单复数字符串。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6611,7 +6612,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
 getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6687,7 +6688,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
 getPluralStringValue(resId: number, num: number): Promise<string>
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
@@ -6767,7 +6768,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
 getPluralStringValueSync(resId: number, num: number): string
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串，使用同步方式返回。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串，使用同步方式返回。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
@@ -6848,7 +6849,7 @@ try {
 getPluralStringValueSync(resource: Resource, num: number): string
 ```
 
-获取指定资源信息，指定资源数量的单复数字符串，使用同步方式返回。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源信息，指定资源数量的单复数字符串，使用同步方式返回。 &gt; **说明：**&gt; &gt; 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 &gt; [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
@@ -6937,7 +6938,7 @@ try {
 getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 ```
 
-获取resources/rawfile目录下对应rawfile文件所在HAP的文件描述符（fd）。使用callback异步回调。 > **说明：**> > 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 > [closeRawFd](#closerawfd)关闭 > fd，避免资源泄露。
+获取resources/rawfile目录下对应rawfile文件所在HAP的文件描述符（fd）。使用callback异步回调。 &gt; **说明：**&gt; &gt; 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 &gt; [closeRawFd](#closerawfd)关闭 &gt; fd，避免资源泄露。
 
 **起始版本：** 23
 
@@ -7029,7 +7030,7 @@ export default class EntryAbility extends UIAbility {
 getRawFd(path: string): Promise<RawFileDescriptor>
 ```
 
-获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用Promise异步回调。 > **说明：**> > 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 > [closeRawFd](#closerawfd)关闭 > fd，避免资源泄露。
+获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 &gt; [closeRawFd](#closerawfd)关闭 &gt; fd，避免资源泄露。
 
 **起始版本：** 23
 
@@ -7120,7 +7121,7 @@ export default class EntryAbility extends UIAbility {
 getRawFdSync(path: string): RawFileDescriptor
 ```
 
-获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。 > **说明：**> > 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 > [closeRawFd](#closerawfd)关闭 > fd，避免资源泄露。
+获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。 &gt; **说明：**&gt; &gt; 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closerawfdsync)或 &gt; [closeRawFd](#closerawfd)关闭 &gt; fd，避免资源泄露。
 
 **起始版本：** 23
 
@@ -7573,7 +7574,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-获取resources/rawfile下指定子目录中的文件夹及文件列表。使用callback异步回调。 > **说明：**> > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+获取resources/rawfile下指定子目录中的文件夹及文件列表。使用callback异步回调。 &gt; **说明：**&gt; &gt; 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
 **起始版本：** 23
 
@@ -7661,7 +7662,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileList(path: string): Promise<Array<string>>
 ```
 
-获取resources/rawfile下指定子目录中的文件夹及文件列表。使用Promise异步回调。 > **说明：**> > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+获取resources/rawfile下指定子目录中的文件夹及文件列表。使用Promise异步回调。 &gt; **说明：**&gt; &gt; 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
 **起始版本：** 23
 
@@ -7754,7 +7755,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileListSync(path: string): Array<string>
 ```
 
-获取resources/rawfile下指定子目录中的文件夹及文件列表，使用同步形式返回。 > **说明：**> > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+获取resources/rawfile下指定子目录中的文件夹及文件列表，使用同步形式返回。 &gt; **说明：**&gt; &gt; 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
 **起始版本：** 23
 
@@ -10304,7 +10305,7 @@ try {
 removeResource(path: string) : void
 ```
 
-应用运行时移除指定的overlay资源，还原被覆盖前的资源。 > **说明：**> > rawfile和resfile目录不支持资源覆盖。
+应用运行时移除指定的overlay资源，还原被覆盖前的资源。 &gt; **说明：**&gt; &gt; rawfile和resfile目录不支持资源覆盖。
 
 **起始版本：** 23
 

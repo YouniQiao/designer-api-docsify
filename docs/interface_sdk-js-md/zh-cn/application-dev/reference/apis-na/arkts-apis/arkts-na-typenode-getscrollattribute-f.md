@@ -28,5 +28,5 @@ export function getScrollAttribute(node: FrameNode): ScrollAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ScrollAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ScrollAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

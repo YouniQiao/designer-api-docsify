@@ -68,7 +68,7 @@ Delay interval for executing dump. This parameter ensures that GC can be schedul
 exclusionList?: Array<string>
 ```
 
-Class name of the object to be excluded from monitoring. This parameter applies only to custom components and does not affect the filtering of other component types. If obfuscation occurs, filtering cannot be performed. This parameter takes effect only in the development state. Configuration item conflict priority: ID list > trustlist. The default value is an empty array.
+Class name of the object to be excluded from monitoring. This parameter applies only to custom components and does not affect the filtering of other component types. If obfuscation occurs, filtering cannot be performed. This parameter takes effect only in the development state. Configuration item conflict priority: ID list &gt; trustlist. The default value is an empty array.
 
 **Type:** Array&lt;string&gt;
 

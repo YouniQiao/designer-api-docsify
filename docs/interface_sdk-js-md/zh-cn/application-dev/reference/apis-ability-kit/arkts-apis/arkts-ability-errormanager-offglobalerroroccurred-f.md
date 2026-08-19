@@ -3,9 +3,10 @@
 ## 导入模块
 
 ```TypeScript
+import { errorManager } from '@kit.AbilityKit';
 ```
 
-## off_globalErrorOccurred('globalErrorOccurred')
+## off('globalErrorOccurred')
 
 ```TypeScript
 function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void

@@ -50,7 +50,7 @@ static collapse(node: FrameNode): void
 static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 ```
 
-展开指定ListItem的划出菜单。 > **说明：** > > - 如果List组件cachedCount属性show参数设置为true，List显示区域外已预加载完成的ListItem支持展开，否则List显示区域外节点不支持展开。
+展开指定ListItem的划出菜单。 &gt; **说明：** &gt; &gt; - 如果List组件cachedCount属性show参数设置为true，List显示区域外已预加载完成的ListItem支持展开，否则List显示区域外节点不支持展开。
 
 **起始版本：** 21
 

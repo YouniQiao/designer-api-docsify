@@ -15,6 +15,7 @@ Image options setted when need to get the image objects.
 ## 导入模块
 
 ```TypeScript
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## images

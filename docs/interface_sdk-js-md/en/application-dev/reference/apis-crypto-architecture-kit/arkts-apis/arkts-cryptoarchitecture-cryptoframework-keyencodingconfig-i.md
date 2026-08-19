@@ -1,6 +1,6 @@
 # KeyEncodingConfig
 
-Represents the RSA private key encoding parameters. You can use it to generate an encoded private key string with the specified algorithm and password. > **NOTE：**> > - **password** specifies the password used for encoding the private key. It is mandatory. > > - **cipherName** specifies the algorithm used for encoding. It is mandatory. Currently, only **AES-128-CBC**, > **AES-192-CBC**, **AES-256-CBC**, and **DES-EDE3-CBC** are supported.
+Represents the RSA private key encoding parameters. You can use it to generate an encoded private key string with the specified algorithm and password. &gt; **NOTE：**&gt; &gt; - **password** specifies the password used for encoding the private key. It is mandatory. &gt; &gt; - **cipherName** specifies the algorithm used for encoding. It is mandatory. Currently, only **AES-128-CBC**, &gt; **AES-192-CBC**, **AES-256-CBC**, and **DES-EDE3-CBC** are supported.
 
 **Since:** 23
 

@@ -59,7 +59,7 @@ type: OfflineResourceType
 
 Resource type
 
-**Type:** [OfflineResourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-offlineresourcetype-e.md)
+**Type:** [OfflineResourceType](arkts-na-webview-offlineresourcetype-e.md)
 
 **Since:** 23
 

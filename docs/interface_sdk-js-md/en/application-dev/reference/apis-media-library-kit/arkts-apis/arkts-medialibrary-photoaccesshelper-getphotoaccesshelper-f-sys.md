@@ -102,7 +102,7 @@ Obtains a PhotoAccessHelper instance for accessing and modifying media files in 
 
 | Type | Description |
 | --- | --- |
-| PhotoAccessHelper | Instance of PhotoAccessHelper. if the operation fails, returns null. |
+| PhotoAccessHelper \| null | Instance of PhotoAccessHelper. if the operation fails, returns null. |
 
 **Error codes:**
 

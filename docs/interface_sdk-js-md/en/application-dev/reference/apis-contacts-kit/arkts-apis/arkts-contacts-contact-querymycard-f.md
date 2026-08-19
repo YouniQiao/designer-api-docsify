@@ -30,7 +30,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Examples**
 
@@ -68,7 +68,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -122,7 +122,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Examples**
 
@@ -163,7 +163,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 

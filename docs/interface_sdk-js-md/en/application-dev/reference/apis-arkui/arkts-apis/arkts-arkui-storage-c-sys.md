@@ -102,7 +102,7 @@ Called when data is obtained.
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string \| undefined |  |
 
 ## set
 

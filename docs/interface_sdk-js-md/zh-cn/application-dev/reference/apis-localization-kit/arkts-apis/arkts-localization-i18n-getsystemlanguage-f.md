@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getSystemLanguage
@@ -17,7 +18,7 @@ export function getSystemLanguage(): string
 
 **废弃版本：** 9
 
-**替代接口：** [getSystemLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getsystemlanguage)
+**替代接口：** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
 
 <!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
 

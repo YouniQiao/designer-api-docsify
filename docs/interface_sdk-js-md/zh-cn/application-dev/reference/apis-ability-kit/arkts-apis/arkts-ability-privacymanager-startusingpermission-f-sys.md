@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## startUsingPermission
@@ -11,7 +12,7 @@
 function startUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考on）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)停止使用权限。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考[on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md)停止使用权限。
 
 **起始版本：** 9
 
@@ -77,7 +78,7 @@ function startUsingPermission(
   ): Promise<void>
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 on）。 使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md)）。 使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
 
 **起始版本：** 23
 
@@ -206,7 +207,7 @@ function startUsingPermission(
    ): Promise<void>
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 on ）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 当传入pid时，pid需要与 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 传入的pid相同，不满足配套关系返回错误码12100004。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用Promise异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。 当传入pid时，pid需要与 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 传入的pid相同，不满足配套关系返回错误码12100004。
 
 **起始版本：** 26.0.0
 
@@ -347,7 +348,7 @@ function startUsingPermission(
   ): void
 ```
 
-系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 on ）。使用callback异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
+系统应用调用此接口，能够向系统上报应用在前后台的权限使用状态。隐私服务将此状态通知所有该权限使用状态变更事件的订阅者（订阅方法参考 [on](arkts-ability-privacymanager-onactivestatechange-f-sys.md) ）。使用callback异步回调。 开始使用权限后，需要在权限使用结束时调用 [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md) 停止使用权限。
 
 **起始版本：** 23
 
@@ -365,7 +366,7 @@ function startUsingPermission(
 | --- | --- | --- | --- |
 | tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)。 |
 | permissionName | Permissions | 是 | 需要使用的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开始使用权限成功时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始使用权限成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 

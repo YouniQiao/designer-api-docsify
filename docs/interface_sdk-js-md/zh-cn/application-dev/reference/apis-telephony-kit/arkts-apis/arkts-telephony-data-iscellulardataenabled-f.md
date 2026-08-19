@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## isCellularDataEnabled
@@ -25,7 +26,7 @@ function isCellularDataEnabled(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 以callback形式异步返回结果。&lt;br /&gt;true：蜂窝数据业务已启用。&lt;br /&gt;false：蜂窝数据业务已禁用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以callback形式异步返回结果。&lt;br /&gt;true：蜂窝数据业务已启用。&lt;br /&gt;false：蜂窝数据业务已禁用。 |
 
 **错误码：**
 

@@ -42,7 +42,7 @@ Sets the border radius of the icon.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## iconSize
 
@@ -72,7 +72,7 @@ Sets the size of the icon.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## onClick
 
@@ -102,7 +102,7 @@ Called when the save button is clicked.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attribute of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attribute of the save button. |
 
 ## setIcon
 
@@ -134,7 +134,7 @@ Sets the icon of the save button.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## setText
 
@@ -166,7 +166,7 @@ Sets the text of the save button.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## stateEffect
 
@@ -198,7 +198,7 @@ Enables the press effect of the button.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## symbolFontWeight
 
@@ -230,7 +230,7 @@ Sets the font weight of the symbol icon.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## symbolIconColor
 
@@ -262,7 +262,7 @@ Sets the color of the symbol icon.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## symbolRenderingStrategy
 
@@ -294,7 +294,7 @@ Sets the rendering policy of the symbol icon.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 
 ## userCancelEvent
 
@@ -324,5 +324,5 @@ Receives the event when the user clicks cancel.
 
 | Type | Description |
 | --- | --- |
-| this | Returns the attributes of the save button. |
+| [SaveButtonAttribute](arkts-arkui-savebutton-savebuttonattribute-i.md) | Returns the attributes of the save button. |
 

@@ -29,7 +29,7 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
 
 **Examples**
 
@@ -74,7 +74,7 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
 
 **Examples**
 

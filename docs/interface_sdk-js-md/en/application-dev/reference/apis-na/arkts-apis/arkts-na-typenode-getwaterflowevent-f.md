@@ -28,5 +28,5 @@ Get the event instance of WaterFlow node.
 
 | Type | Description |
 | --- | --- |
-| UIWaterFlowEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIWaterFlowEvent \| undefined | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

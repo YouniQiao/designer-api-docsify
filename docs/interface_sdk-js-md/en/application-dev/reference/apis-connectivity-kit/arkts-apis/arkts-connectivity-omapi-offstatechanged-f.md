@@ -6,7 +6,7 @@
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-## off_stateChanged('stateChanged')
+## off('stateChanged')
 
 ```TypeScript
 function off(type: 'stateChanged', callback?: Callback<ServiceState>): void
@@ -25,7 +25,7 @@ Unsubscribe the service state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChanged' | Yes | The type to unregister. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | No | The callback used to listen for the state change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | No | The callback used to listen for the state change event. |
 
 **Error codes:**
 

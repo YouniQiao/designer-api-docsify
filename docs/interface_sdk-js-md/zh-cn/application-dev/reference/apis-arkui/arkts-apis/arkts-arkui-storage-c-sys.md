@@ -100,7 +100,7 @@ get(key: string): string | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| string | key对应的值；key不存在时返回undefined。 |
+| string \| undefined | key对应的值；key不存在时返回undefined。 |
 
 ## set
 

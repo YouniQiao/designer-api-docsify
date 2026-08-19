@@ -28,8 +28,6 @@ getCurrentLocalPosition(): Coordinate2D
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](../../apis-arkui/arkts-apis/arkts-arkui-coordinate2d-i.md) |  |
-
 ## preventDefault
 
 ```TypeScript

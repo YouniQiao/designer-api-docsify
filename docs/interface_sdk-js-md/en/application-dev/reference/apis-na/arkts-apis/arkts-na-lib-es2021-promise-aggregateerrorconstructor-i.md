@@ -30,8 +30,6 @@ new(errors: Iterable<any>, message?: string): AggregateError
 
 | Type | Description |
 | --- | --- |
-| [AggregateError](arkts-na-lib-es2021-promise-aggregateerror-i.md) |  |
-
 ## constructor
 
 ```TypeScript
@@ -53,8 +51,6 @@ new(errors: Iterable<any>, message?: string): AggregateError
 
 | Type | Description |
 | --- | --- |
-| [AggregateError](arkts-na-lib-es2021-promise-aggregateerror-i.md) |  |
-
 ## prototype
 
 ```TypeScript

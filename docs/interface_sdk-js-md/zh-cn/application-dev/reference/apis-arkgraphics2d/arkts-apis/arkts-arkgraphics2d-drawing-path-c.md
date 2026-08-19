@@ -1,6 +1,6 @@
 # Path
 
-Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成， 支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。 未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](#setfilltype)修改。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成， 支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。 未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](#setfilltype)修改。 &gt; **说明：** &gt; &gt; - 本模块使用屏幕物理像素单位px。 &gt; &gt; - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 23
 
@@ -11,6 +11,7 @@ Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥
 ## 导入模块
 
 ```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addArc
@@ -61,7 +62,7 @@ addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): 
 | --- | --- | --- | --- |
 | x | double | 是 | 表示圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
 | y | double | 是 | 表示圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| radius | double | 是 | 表示圆形的半径，取值范围>0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
+| radius | double | 是 | 表示圆形的半径，取值范围&gt;0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
@@ -212,7 +213,7 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 approximate(acceptableError: number): Array<number>
 ```
 
-将当前路径转化为由连续直线段构成的近似路径。 > **说明：** > > - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。 > > - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。 > > - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
+将当前路径转化为由连续直线段构成的近似路径。 &gt; **说明：** &gt; &gt; - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。 &gt; &gt; - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。 &gt; &gt; - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
 **起始版本：** 20
 
@@ -244,7 +245,7 @@ approximate(acceptableError: number): Array<number>
 approximate(acceptableError: double): Array<double> | undefined
 ```
 
-将当前路径转化为由连续直线段构成的近似路径。 > **说明：** > > - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。 > > - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。 > > - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
+将当前路径转化为由连续直线段构成的近似路径。 &gt; **说明：** &gt; &gt; - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。 &gt; &gt; - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。 &gt; &gt; - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
 
 **起始版本：** 24
 
@@ -262,7 +263,7 @@ approximate(acceptableError: double): Array<double> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;double&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： <br>1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 <br>2. 点的x坐标。 <br>3. 点的y坐标。 |
+| Array&lt;double&gt; \| undefined | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： <br>1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 <br>2. 点的x坐标。 <br>3. 点的y坐标。 |
 
 **错误码：**
 
@@ -545,7 +546,7 @@ getBounds(): common2D.Rect | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Rect | 包含路径的最小矩形区域。创建失败时返回undefined。 |
+| common2D.Rect \| undefined | 包含路径的最小矩形区域。创建失败时返回undefined。 |
 
 ## getConicWeightData
 
@@ -607,7 +608,7 @@ getFillType(): PathFillType | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 路径的填充类型，决定路径内部区域的定义方式。 |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) \| undefined | 路径的填充类型，决定路径内部区域的定义方式。 |
 
 ## getLastPoint
 
@@ -651,7 +652,7 @@ getLastPoint(): common2D.Point | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| common2D.Point | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
+| common2D.Point \| undefined | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
 
 ## getLength
 
@@ -752,7 +753,7 @@ getPathIterator(): PathIterator | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。创建失败时返回undefined。 |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) \| undefined | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。创建失败时返回undefined。 |
 
 ## getPointData
 
@@ -1153,7 +1154,7 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 | 类型 | 说明 |
 | --- | --- |
-| Path | New path generated. |
+| Path \| undefined | New path generated. |
 
 **错误码：**
 

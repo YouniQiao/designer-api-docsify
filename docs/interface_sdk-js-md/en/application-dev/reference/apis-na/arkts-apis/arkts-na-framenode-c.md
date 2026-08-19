@@ -205,7 +205,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | options | [FrameNodeOptions](arkts-na-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation<br>**Since:** 26.0.0 |
 
 ## convertPosition
@@ -375,7 +375,7 @@ Create a specified number of FrameNode objects and return them.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | count | int | Yes | the number of FrameNode objects to create. Returns an empty array if count &lt;= 0 or is not an integer. |
 
 **Return value:**
@@ -449,7 +449,7 @@ Get a child of the current FrameNode by index.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode. When the required node does not exist, returns null. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | Returns a FrameNode. When the required node does not exist, returns null. |
 
 ## getChildrenCount
 
@@ -581,7 +581,7 @@ Get the first child of the current FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode, which is first child of the current FrameNode. If current FrameNode does not have child node, returns null. If current FrameNode does not have child node, returns null. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | Returns a FrameNode, which is first child of the current FrameNode. If current FrameNode does not have child node, returns null. If current FrameNode does not have child node, returns null. |
 
 ## getFirstChildIndexWithoutExpand
 
@@ -635,7 +635,7 @@ Get FrameNode by id.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | The first child node with the specified ID, or null if not found. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | The first child node with the specified ID, or null if not found. |
 
 ## getFrameNodeByUniqueId
 
@@ -665,7 +665,7 @@ Get FrameNode by uniqueId. Obtains the entity node, FrameNode, of a component on
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getGlobalPositionOnDisplay
 
@@ -767,7 +767,7 @@ Gets event binding information of the target node.
 
 | Type | Description |
 | --- | --- |
-| [InteractionEventBindingInfo](arkts-na-framenode-interactioneventbindinginfo-i.md) | Returns one InteractionEventBindingInfo object indicating the event binding details if any interaction events binded on current node, returns undefined if no one binded on. |
+| [InteractionEventBindingInfo](arkts-na-framenode-interactioneventbindinginfo-i.md) \| undefined | Returns one InteractionEventBindingInfo object indicating the event binding details if any interaction events binded on current node, returns undefined if no one binded on. |
 
 ## getLastChildIndexWithoutExpand
 
@@ -863,7 +863,7 @@ Get the next sibling node of the current FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode. If current FrameNode does not have next sibling node, returns null. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | Returns a FrameNode. If current FrameNode does not have next sibling node, returns null. |
 
 ## getNodePropertyValue
 
@@ -965,7 +965,7 @@ Get the parent node of the current FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode. If current FrameNode does not have parent node, returns null. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | Returns a FrameNode. If current FrameNode does not have parent node, returns null. |
 
 ## getPositionToParent
 
@@ -1133,7 +1133,7 @@ Get the previous sibling node of the current FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode. If current FrameNode does not have previous sibling node, returns null. |
+| [FrameNode](arkts-na-framenode-c.md) \| null | Returns a FrameNode. If current FrameNode does not have previous sibling node, returns null. |
 
 ## getRenderNode
 
@@ -1157,7 +1157,7 @@ Get the RenderNode in FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode inside the FrameNode, or null if not contained. |
+| [RenderNode](arkts-na-rendernode-c.md) \| null | Returns a RenderNode inside the FrameNode, or null if not contained. |
 
 ## getUniqueId
 

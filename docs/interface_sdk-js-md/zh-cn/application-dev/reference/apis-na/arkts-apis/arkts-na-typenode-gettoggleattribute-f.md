@@ -28,5 +28,5 @@ export function getToggleAttribute(node: FrameNode): ToggleAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| ToggleAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ToggleAttribute \| undefined | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

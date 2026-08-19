@@ -1,6 +1,6 @@
 # MediaSourceInfo
 
-表示媒体源的信息。 > **说明：** > > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。 > > - 本Class首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
+表示媒体源的信息。 &gt; **说明：** &gt; &gt; - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。 &gt; &gt; - 本Class首批接口从API version 12开始支持。 &gt; &gt; - 示例效果请以真机运行为准。
 
 **起始版本：** 23
 

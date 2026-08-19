@@ -370,7 +370,7 @@ Obtains the value of the specified key in this container. If nothing is obtained
 
 | Type | Description |
 | --- | --- |
-| V | value or undefined |
+| V \| undefined | value or undefined |
 
 ## hasKey
 
@@ -606,7 +606,7 @@ Removes an element with the specified key from this container.
 
 | Type | Description |
 | --- | --- |
-| V | Tthe value associated with the key if it was removed, undefined otherwise |
+| V \| undefined | Tthe value associated with the key if it was removed, undefined otherwise |
 
 ## replace
 

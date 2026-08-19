@@ -16,7 +16,7 @@ Set the edge blur effect distance of the corresponding defense line of the compo
 bottom?: Length
 ```
 
-bottom property. value range (-∞, ∞) If value > 0, expand outward elements. Else first shrink by value and then expand outward pixels.
+bottom property. value range (-∞, ∞) If value &gt; 0, expand outward elements. Else first shrink by value and then expand outward pixels.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -38,7 +38,7 @@ bottom property. value range (-∞, ∞) If value > 0, expand outward elements. 
 left?: Length
 ```
 
-left property. value range (-∞, ∞) If value > 0, expand outward elements. Else first shrink by value and then expand outward pixels.
+left property. value range (-∞, ∞) If value &gt; 0, expand outward elements. Else first shrink by value and then expand outward pixels.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -60,7 +60,7 @@ left property. value range (-∞, ∞) If value > 0, expand outward elements. El
 right?: Length
 ```
 
-right property. value range (-∞, ∞) If value > 0, expand outward elements. Else first shrink by value and then expand outward pixels.
+right property. value range (-∞, ∞) If value &gt; 0, expand outward elements. Else first shrink by value and then expand outward pixels.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -82,7 +82,7 @@ right property. value range (-∞, ∞) If value > 0, expand outward elements. E
 top?: Length
 ```
 
-top property. value range (-∞, ∞) If value > 0, expand outward elements. Else first shrink by value and then expand outward pixels.
+top property. value range (-∞, ∞) If value &gt; 0, expand outward elements. Else first shrink by value and then expand outward pixels.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 

@@ -1,6 +1,6 @@
 # AdComponent
 
-本模块提供展示广告的能力，覆盖了原生、贴片、开屏等广告样式。 > **说明：** > > 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。效果和使用方法可参考 > [原生广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-native)、 > [贴片广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-roll)、 > [开屏广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-splash) > 接入和展示。
+本模块提供展示广告的能力，覆盖了原生、贴片、开屏等广告样式。 &gt; **说明：** &gt; &gt; 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。效果和使用方法可参考 &gt; [原生广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-native)、 &gt; [贴片广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-roll)、 &gt; [开屏广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-splash) &gt; 接入和展示。
 
 **起始版本：** 11
 
@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { AdComponent } from '@kit.AdsKit';
 ```
 
 ## build

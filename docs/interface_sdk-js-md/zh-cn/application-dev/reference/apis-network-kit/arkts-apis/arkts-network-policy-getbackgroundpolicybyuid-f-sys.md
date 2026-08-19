@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getBackgroundPolicyByUid
@@ -28,7 +29,7 @@ function getBackgroundPolicyByUid(uid: int, callback: AsyncCallback<NetBackgroun
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | int | 是 | app 唯一标识符，取值范围为int32_t范围内的正整数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | 是 | 回调函数。返回获取结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | 是 | 回调函数。返回获取结果。 |
 
 **错误码：**
 

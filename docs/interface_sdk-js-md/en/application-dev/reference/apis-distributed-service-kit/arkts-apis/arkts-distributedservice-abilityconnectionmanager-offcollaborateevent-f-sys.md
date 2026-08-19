@@ -30,7 +30,7 @@ Unregisters collaborateEvent event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | int | Yes | Ability connection Session id. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CollaborateEventInfo](arkts-distributedservice-abilityconnectionmanager-collaborateeventinfo-i.md)&gt; | No | Called when an error event comes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CollaborateEventInfo](arkts-distributedservice-abilityconnectionmanager-collaborateeventinfo-i.md)&gt; | No | Called when an error event comes. |
 
 **Error codes:**
 

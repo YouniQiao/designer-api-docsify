@@ -30,9 +30,9 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | Continues a mission on a remote device, with the bundle name specified. This API uses an asynchronous callback to return the result. |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md) | Continues a mission on a remote device, with the bundle name specified. This API uses a promise to return the result. |
 | [offContinueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) | Unregister continuable info listener to ams. |
-| off_continueStateChange | Unsubscribes from continuation state change events of the current mission. |
+| [off_continueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) | Unsubscribes from continuation state change events of the current mission. |
 | [onContinueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) | Register continuable info listener to ams. |
-| on_continueStateChange | Subscribes to continuation state change events of the current mission. |
+| [on_continueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) | Subscribes to continuation state change events of the current mission. |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) | Registers a mission status listener. This API uses an asynchronous callback to return the result. |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md) | Registers a mission status listener. This API uses a promise to return the result. |
 | [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md) | Starts to synchronize the remote mission list. This API uses an asynchronous callback to return the result. |

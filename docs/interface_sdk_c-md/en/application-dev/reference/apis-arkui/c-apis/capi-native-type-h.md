@@ -1066,7 +1066,7 @@ Sets the font weight of total count in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
+| ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
 | ArkUI_FontWeight fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetFontWeight()
@@ -1085,7 +1085,7 @@ Gets the font weight of total count in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md)* indicator | The pointer to the digital indicator. |
+| ArkUI_SwiperDigitIndicator* indicator | The pointer to the digital indicator. |
 
 **Returns**:
 
@@ -1109,7 +1109,7 @@ Sets the font weight of selected index in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
+| ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
 | ArkUI_FontWeight selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetSelectedFontWeight()
@@ -1128,7 +1128,7 @@ Gets the font weight of selected index in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md)* indicator | The pointer to the digital indicator. |
+| ArkUI_SwiperDigitIndicator* indicator | The pointer to the digital indicator. |
 
 **Returns**:
 

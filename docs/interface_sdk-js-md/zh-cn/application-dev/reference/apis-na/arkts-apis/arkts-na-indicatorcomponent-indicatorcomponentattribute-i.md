@@ -40,7 +40,7 @@ count(totalCount: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## initialIndex
 
@@ -70,7 +70,7 @@ initialIndex(index: int | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## loop
 
@@ -100,7 +100,7 @@ loop(isLoop: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## onChange
 
@@ -130,7 +130,7 @@ onChange(event: Callback<int> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## setIndicatorComponentOptions
 
@@ -154,8 +154,6 @@ setIndicatorComponentOptions(controller?: IndicatorComponentController): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## style
 
 ```TypeScript
@@ -184,7 +182,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## vertical
 
@@ -214,7 +212,7 @@ vertical(isVertical: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
+| [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 ## default
 

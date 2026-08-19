@@ -390,7 +390,7 @@ onChange?: (value: TimePickerResult) => void
 onDidAppear?: VoidCallback
 ```
 
-弹窗弹出后的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。 2. 在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。 4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
+弹窗弹出后的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2. 在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。 3. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。 4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -410,7 +410,7 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-弹窗消失后的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。
+弹窗消失后的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -450,7 +450,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 onWillAppear?: VoidCallback
 ```
 
-弹窗显示动效前的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。 2. 在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+弹窗显示动效前的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2. 在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 
@@ -470,7 +470,7 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-弹窗退出动效前的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。 2. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
+弹窗退出动效前的事件回调。 **说明：** 1. 正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;(onAccept/onCancel/onChange)&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 2. 快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
 
 **类型：** [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md)
 

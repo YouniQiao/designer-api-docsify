@@ -39,7 +39,7 @@ A constructor used to create a ISO8601DateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ISO8601DateTimeFormatOptions](arkts-na-i18n-iso8601datetimeformatoptions-i.md) | No | Options for creating a date formatting object that complies with ISO 8601. Default format is yyyy-MM-ddThh:mm:ssZZZZZ. |
+| options | [ISO8601DateTimeFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | No | Options for creating a date formatting object that complies with ISO 8601. Default format is yyyy-MM-ddThh:mm:ssZZZZZ. |
 
 ## format
 

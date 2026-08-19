@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## 汇总
@@ -28,8 +29,8 @@
 | [enable](arkts-input-inputdevicecooperate-enable-f-sys.md) | 开启、关闭键鼠穿越，使用Promise异步回调。 |
 | [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用callback异步回调。 |
 | [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用Promise异步回调。 |
-| [off_cooperation](arkts-input-inputdevicecooperate-offcooperation-f-sys.md#off_cooperationcooperation) | 关闭监听键鼠穿越状态，使用callback异步回调。 |
-| [on_cooperation](arkts-input-inputdevicecooperate-oncooperation-f-sys.md#on_cooperationcooperation) | 注册监听键鼠穿越状态，使用callback异步回调。 |
+| [off_cooperation](arkts-input-inputdevicecooperate-offcooperation-f-sys.md#offcooperation) | 关闭监听键鼠穿越状态，使用callback异步回调。 |
+| [on_cooperation](arkts-input-inputdevicecooperate-oncooperation-f-sys.md#oncooperation) | 注册监听键鼠穿越状态，使用callback异步回调。 |
 | [start](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用callback异步回调。 |
 | [start](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用Promise异步回调。 |
 | [stop](arkts-input-inputdevicecooperate-stop-f-sys.md) | 停止键鼠穿越，使用callback异步回调。 |

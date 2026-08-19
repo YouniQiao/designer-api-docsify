@@ -77,7 +77,7 @@ function truncate(file: string | int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | file | string \| int | 是 | 文件的应用沙箱路径或已打开的文件描述符fd。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当截断文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当截断文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -123,7 +123,7 @@ function truncate(file: string | int, len: long, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | file | string \| int | 是 | 文件的应用沙箱路径或已打开的文件描述符fd。 |
 | len | long | 是 | 文件截断后的长度，单位为Byte。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当截断文件成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当截断文件成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

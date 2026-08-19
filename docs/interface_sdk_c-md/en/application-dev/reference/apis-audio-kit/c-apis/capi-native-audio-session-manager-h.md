@@ -306,7 +306,7 @@ Activate the audio session for the current pid application.If [OH_AudioSessionMa
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | the [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md)returned by the [OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager) |
-| const OH_AudioSession_Strategy *strategy | pointer of [OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)which is used for setting audio session strategy |
+| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md) *strategy | pointer of [OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)which is used for setting audio session strategy |
 
 **Returns**:
 

@@ -64,7 +64,7 @@ fenceTransitionCallback: Callback<FusionFenceTransition>
 
 Indicates the callback for reporting the fence transition status.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md)&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md)&gt;
 
 **Since:** 26.1.0
 

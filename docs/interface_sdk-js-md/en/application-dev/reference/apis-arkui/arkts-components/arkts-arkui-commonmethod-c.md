@@ -940,7 +940,7 @@ Set whether the component enables the ability to invert colors. This interface n
 animation(value: AnimateParam): T
 ```
 
-Sets a property animation for the component. > **NOTE：**> > - When a single page contains a large number of components with animations, use > [renderGroup](#rendergroup) to minimize frame freezing and improve animation > performance. For best practices, see > [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415). > > > - This API cannot be called within [attributeModifier](#attributemodifier).
+Sets a property animation for the component. &gt; **NOTE：**&gt; &gt; - When a single page contains a large number of components with animations, use &gt; [renderGroup](#rendergroup) to minimize frame freezing and improve animation &gt; performance. For best practices, see &gt; [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415). &gt; &gt; &gt; - This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 7
 
@@ -1471,7 +1471,7 @@ Sets the background effect of the component, including the blur radius, brightne
 backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared with [backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundeffect), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments. > **NOTE：**> > **backgroundEffect** performs real-time rendering per frame, resulting in high performance overhead. When the > background blur effect remains unchanged, it is recommended that you use the static blur API > [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur). For best practices, see > [Image Blurring Optimization – When to Use](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519).
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared with [backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundeffect), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments. &gt; **NOTE：**&gt; &gt; **backgroundEffect** performs real-time rendering per frame, resulting in high performance overhead. When the &gt; background blur effect remains unchanged, it is recommended that you use the static blur API &gt; [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur). For best practices, see &gt; [Image Blurring Optimization – When to Use](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519).
 
 **Since:** 19
 
@@ -1502,7 +1502,7 @@ Sets the background effect of the component, including the blur radius, brightne
 backgroundFilter(filter: Filter): T
 ```
 
-Sets the visual effect of the background filter. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets the visual effect of the background filter. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -1686,7 +1686,7 @@ Background image size
 bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition): T
 ```
 
-Binds a full-screen modal to the component, which can be displayed when the component is touched. The content of the modal is customizable. The transition type can be set to none, slide-up and slide-down animation, and opacity gradient animation. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Binds a full-screen modal to the component, which can be displayed when the component is touched. The content of the modal is customizable. The transition type can be set to none, slide-up and slide-down animation, and opacity gradient animation. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 10
 
@@ -2030,7 +2030,7 @@ Popup control &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup can be d
 bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 ```
 
-Binds a sheet to the component, which is displayed when the component is touched. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Binds a sheet to the component, which is displayed when the component is touched. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 10
 
@@ -2751,7 +2751,7 @@ Sets whether to clip this component based on the given shape.
 clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 ```
 
-Clips this component according to the specified shape (which may include position information). > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
+Clips this component according to the specified shape (which may include position information). &gt; **NOTE：**&gt; &gt; Different shapes support different ranges of attributes. A path is one type of shape, along with others like &gt; ellipses and rectangles. &gt; &gt; Path shapes do not support setting width and height attributes. For details about the supported attributes, see &gt; the specific shape documentation. &gt; &gt; The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** &gt; API.
 
 **Since:** 12
 
@@ -2783,7 +2783,7 @@ Clips this component according to the specified shape (which may include positio
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape), this API supports the **undefined** type. > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
+Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape), this API supports the **undefined** type. &gt; **NOTE：**&gt; &gt; Different shapes support different ranges of attributes. A path is one type of shape, along with others like &gt; ellipses and rectangles. &gt; &gt; Path shapes do not support setting width and height attributes. For details about the supported attributes, see &gt; the specific shape documentation. &gt; &gt; The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** &gt; API.
 
 **Since:** 18
 
@@ -2877,7 +2877,7 @@ Applies a color blend effect to the component. Compared with [colorBlend](#color
 compositingFilter(filter: Filter): T
 ```
 
-Sets the visual effect of the compositing filter. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets the visual effect of the compositing filter. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -3030,7 +3030,7 @@ Sets a custom property for this component. In versions earlier than API 26.0.0, 
 defaultFocus(value: boolean): T
 ```
 
-Specifies whether to set this component as the default focus of the current [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts). If **defaultFocus** is not set, the component will not receive initial focus on the current page. > **NOTE：**> > This setting applies to pages that support routing or modal-type container components, such as **Page**, > **NaviDestination**, **NavBar**, **PopUp**, and **Dialog**.
+Specifies whether to set this component as the default focus of the current [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts). If **defaultFocus** is not set, the component will not receive initial focus on the current page. &gt; **NOTE：**&gt; &gt; This setting applies to pages that support routing or modal-type container components, such as **Page**, &gt; **NaviDestination**, **NavBar**, **PopUp**, and **Dialog**.
 
 **Since:** 9
 
@@ -3180,7 +3180,7 @@ Sets the preview image displayed during component drag operations.
 dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConfiguration): T
 ```
 
-Sets the drag preview for the component. This API specifically configures or disables the lift animation effect. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Sets the drag preview for the component. This API specifically configures or disables the lift animation effect. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 15
 
@@ -3211,7 +3211,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions): T
 ```
 
-Sets the preview image processing mode, badge count, and interaction behavior during drag operations. The **onItemDragStart** drag mode is not supported. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets the preview image processing mode, badge count, and interaction behavior during drag operations. The **onItemDragStart** drag mode is not supported. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -3362,7 +3362,7 @@ If the value is true, the component is available and can respond to operations s
 expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 ```
 
-Expands the safe area. > **NOTE：**> > - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values > (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the > safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged > after safe area expansion. > > - The safe area does not restrict the layout or size of components inside, nor does it clip the components. > > - If the parent container is a scrollable container, the component does not extend after the **expandSafeArea** > attribute is set, but it can still trigger updates to the extension range of its child nodes that have > **expandSafeArea** set. > > - When **expandSafeArea()** is set without parameters, default values are applied. When **expandSafeArea([],[])** > is used with empty arrays, the setting has no effect. > > - Prerequisites for the **expandSafeArea** attribute to take effect: > 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the > component not avoiding the virtual keyboard. > 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the > safe area. For example, if the height of the status bar is 100, the absolute position of the component on the > screen must be 0 &lt;= y <= 100 for the settings to take effect. > &gt; - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be > intercepted by the system. Built-in components like the status bar will be given priority to respond to these > events. > > - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it, > you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable > ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may > become ineffective after scrolling. > > - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child > components. Therefore, all relevant components must be configured individually. > > - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first, > followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other > rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if > their boundaries do not overlap with the non-safe area. > > - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the > safe area, you will need to manually adjust the component's coordinates.
+Expands the safe area. &gt; **NOTE：**&gt; &gt; - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values &gt; (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the &gt; safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged &gt; after safe area expansion. &gt; &gt; - The safe area does not restrict the layout or size of components inside, nor does it clip the components. &gt; &gt; - If the parent container is a scrollable container, the component does not extend after the **expandSafeArea** &gt; attribute is set, but it can still trigger updates to the extension range of its child nodes that have &gt; **expandSafeArea** set. &gt; &gt; - When **expandSafeArea()** is set without parameters, default values are applied. When **expandSafeArea([],[])** &gt; is used with empty arrays, the setting has no effect. &gt; &gt; - Prerequisites for the **expandSafeArea** attribute to take effect: &gt; 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the &gt; component not avoiding the virtual keyboard. &gt; 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the &gt; safe area. For example, if the height of the status bar is 100, the absolute position of the component on the &gt; screen must be 0 &lt;= y <= 100 for the settings to take effect. > &gt; - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be &gt; intercepted by the system. Built-in components like the status bar will be given priority to respond to these &gt; events. &gt; &gt; - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it, &gt; you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable &gt; ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may &gt; become ineffective after scrolling. &gt; &gt; - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child &gt; components. Therefore, all relevant components must be configured individually. &gt; &gt; - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first, &gt; followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other &gt; rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if &gt; their boundaries do not overlap with the non-safe area. &gt; &gt; - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the &gt; safe area, you will need to manually adjust the component's coordinates.
 
 **Since:** 10
 
@@ -3663,7 +3663,7 @@ Sets whether the component is focusable.
 foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 ```
 
-Applies a foreground blur style to the component. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 18.
+Applies a foreground blur style to the component. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 18.
 
 **Since:** 10
 
@@ -3847,7 +3847,7 @@ Sets the foreground effect of the component.
 foregroundFilter(filter: Filter): T
 ```
 
-Sets the visual effect of the foreground (content) filter. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets the visual effect of the foreground (content) filter. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -3877,7 +3877,7 @@ Sets the visual effect of the foreground (content) filter. > **NOTE：**> > This
 freeze(value: boolean): T
 ```
 
-Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -3907,7 +3907,7 @@ Sets whether to freeze the component. When frozen, the component and its childre
 freeze(freeze: Optional<boolean>): T
 ```
 
-Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. Compared with [freeze](#freeze), this API supports the **undefined** type for the **freeze** parameter. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. Compared with [freeze](#freeze), this API supports the **undefined** type for the **freeze** parameter. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 18
 
@@ -3996,7 +3996,7 @@ Implements an implicit shared element transition.
 gesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-Gesture to bind. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Gesture to bind. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 7
 
@@ -4025,7 +4025,7 @@ Gesture to bind. > **NOTE：**> > This API cannot be called within [attributeMod
 gestureModifier(modifier: GestureModifier): T
 ```
 
-Creates a gesture modifier. > **NOTE：**> > **gestureModifier** does not support custom components. > > This API cannot be called within [attributeModifier](#attributemodifier).
+Creates a gesture modifier. &gt; **NOTE：**&gt; &gt; **gestureModifier** does not support custom components. &gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 12
 
@@ -4225,7 +4225,7 @@ Sets the height of the component. By default, the height required to fully hold 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Height of the component to set.<br>Unit: vp > **NOTE：**> > In the Row, Column, and RelativeContainer components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
+| value | Length | Yes | Height of the component to set.<br>Unit: vp &gt; **NOTE：**&gt; &gt; In the Row, Column, and RelativeContainer components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
 
 **Return value:**
 
@@ -4421,7 +4421,7 @@ Id. User can set an id to the component to identify it.
 ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafeAreaEdge>): T
 ```
 
-Ignores the safe area for component layout. > **NOTE：**> > - For a component that ignores layout safe area edges: If its width or height is set to > [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position > will change; otherwise, only its position will change. > > - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all > detectable continuous safe areas. > > - When child elements of scrollable components ignore layout safe area edges, the safe areas of the scrollable > component itself and its parent components are not considered in the scrolling direction. Scrollable components > include **List**, **ArcListItem**, **Grid**, **WaterFlow**, **Swiper**, and **Tabs**. > > - When both the layout safe area ignore attribute (**.ignoreLayoutSafeArea**) and the rendering safe area ignore > attribute (**.expandSafeArea**) are set: **.ignoreLayoutSafeArea** takes effect first, and **.expandSafeArea** > takes effect on the basis of the former.
+Ignores the safe area for component layout. &gt; **NOTE：**&gt; &gt; - For a component that ignores layout safe area edges: If its width or height is set to &gt; [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position &gt; will change; otherwise, only its position will change. &gt; &gt; - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all &gt; detectable continuous safe areas. &gt; &gt; - When child elements of scrollable components ignore layout safe area edges, the safe areas of the scrollable &gt; component itself and its parent components are not considered in the scrolling direction. Scrollable components &gt; include **List**, **ArcListItem**, **Grid**, **WaterFlow**, **Swiper**, and **Tabs**. &gt; &gt; - When both the layout safe area ignore attribute (**.ignoreLayoutSafeArea**) and the rendering safe area ignore &gt; attribute (**.expandSafeArea**) are set: **.ignoreLayoutSafeArea** takes effect first, and **.expandSafeArea** &gt; takes effect on the basis of the former.
 
 **Since:** 20
 
@@ -5130,7 +5130,7 @@ Sets whether the component exclusively handles events.
 motionBlur(value: MotionBlurOptions):T
 ```
 
-Applies a motion blur effect to the component being scaled or moved. > **NOTE：**> > - Do not use this API in intra-component transitions, shared element transitions, implicit element transitions, > or particle animations. Doing so may cause unexpected results. > > - The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be > unexpected results during a cold start. > > - This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter > must be set to **0** when the animation ends; otherwise, there may be unexpected results. > > - When using this API, do not frequently change the blur radius of the same component; otherwise, there may be > unexpected results. For example, if you frequently click the image in the example, the blur effect may not work > sometimes. > > - To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of > the animation scaling anchor point. > > - To avoid unexpected results, set the blur radius to a value less than 1.
+Applies a motion blur effect to the component being scaled or moved. &gt; **NOTE：**&gt; &gt; - Do not use this API in intra-component transitions, shared element transitions, implicit element transitions, &gt; or particle animations. Doing so may cause unexpected results. &gt; &gt; - The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be &gt; unexpected results during a cold start. &gt; &gt; - This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter &gt; must be set to **0** when the animation ends; otherwise, there may be unexpected results. &gt; &gt; - When using this API, do not frequently change the blur radius of the same component; otherwise, there may be &gt; unexpected results. For example, if you frequently click the image in the example, the blur effect may not work &gt; sometimes. &gt; &gt; - To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of &gt; the animation scaling anchor point. &gt; &gt; - To avoid unexpected results, set the blur radius to a value less than 1.
 
 **Since:** 12
 
@@ -5462,7 +5462,7 @@ prompt for current component and descendants unable to handle accessibility hove
 onAppear(event: () => void): T
 ```
 
-Triggered when this component appears. > **NOTE：**> > This callback may be called after the component layout and rendering process.
+Triggered when this component appears. &gt; **NOTE：**&gt; &gt; This callback may be called after the component layout and rendering process.
 
 **Since:** 7
 
@@ -5492,7 +5492,7 @@ Triggered when this component appears. > **NOTE：**> > This callback may be cal
 onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 ```
 
-Triggered when the component area changes in size or position due to layout updates. This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](#translate), [offset](#offset), [markAnchor](#markanchor), [scale](#scale), or [transform](#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](#bindsheet), this event is also not triggered. > **NOTE：**> > When a component is bound to both the **onAreaChange** event and the [position](#position) > attribute, the **onAreaChange** event responds to changes in the **position** attribute of type > Position, but does not respond to changes in the **position** attribute of type > Edges or LocalizedEdges.
+Triggered when the component area changes in size or position due to layout updates. This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](#translate), [offset](#offset), [markAnchor](#markanchor), [scale](#scale), or [transform](#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](#bindsheet), this event is also not triggered. &gt; **NOTE：**&gt; &gt; When a component is bound to both the **onAreaChange** event and the [position](#position) &gt; attribute, the **onAreaChange** event responds to changes in the **position** attribute of type &gt; Position, but does not respond to changes in the **position** attribute of type &gt; Edges or LocalizedEdges.
 
 **Since:** 8
 
@@ -5551,7 +5551,7 @@ Triggered when the component area changes. The interval at which the callback is
 onAttach(callback: Callback<void>): T
 ```
 
-Triggered when this component is mounted to the component tree. Due to the following limitations, it is recommended that you use [onAppear](#onappear) instead of this callback. > **NOTE：**> > - This callback is triggered before the component layout and rendering process. > > - Modifying the component tree within the callback is prohibited, including initiating animations or altering the > component structure through conditional statements like **if-else**.
+Triggered when this component is mounted to the component tree. Due to the following limitations, it is recommended that you use [onAppear](#onappear) instead of this callback. &gt; **NOTE：**&gt; &gt; - This callback is triggered before the component layout and rendering process. &gt; &gt; - Modifying the component tree within the callback is prohibited, including initiating animations or altering the &gt; component structure through conditional statements like **if-else**.
 
 **Since:** 12
 
@@ -5639,7 +5639,7 @@ Triggered when the current component loses focus.
 onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 ```
 
-Allows the current component to customize the hit test and control child component behavior during the test by setting a callback. > **NOTE：**> > - The array of child node information only includes information about named nodes, that is, nodes for which the > **id** attribute is explicitly set. > > - This API can be called in [attributeModifier](#attributemodifier) since API version 20.
+Allows the current component to customize the hit test and control child component behavior during the test by setting a callback. &gt; **NOTE：**&gt; &gt; - The array of child node information only includes information about named nodes, that is, nodes for which the &gt; **id** attribute is explicitly set. &gt; &gt; - This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -5669,7 +5669,7 @@ Allows the current component to customize the hit test and control child compone
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-Called when a click event occurs. When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. > **NOTE：**> > Since API version 9, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
+Called when a click event occurs. When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. &gt; **NOTE：**&gt; &gt; Since API version 9, the following constraints apply when this API is used in service widgets: &gt; &gt; 1. Click events will not be triggered if the finger is pressed for more than 800 ms. &gt; &gt; 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 
 **Since:** 7
 
@@ -5699,7 +5699,7 @@ Called when a click event occurs. When triggered by keyboard or gamepad input, t
 onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 ```
 
-Called when a click event occurs. When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold. For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API. > **NOTE：**> > - Since API version 12, the following constraints apply when this API is used in service widgets: > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms. > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down. > > - This API cannot be called within [attributeModifier](#attributemodifier).
+Called when a click event occurs. When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**. Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold. For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API. &gt; **NOTE：**&gt; &gt; - Since API version 12, the following constraints apply when this API is used in service widgets: &gt; &gt; 1. Click events will not be triggered if the finger is pressed for more than 800 ms. &gt; &gt; 2. Click events will not be triggered if the finger moves more than 20 px after pressing down. &gt; &gt; - This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 12
 
@@ -5762,7 +5762,7 @@ Triggered when this component is unmounted from the component tree. You are advi
 onDigitalCrown(handler: Optional<Callback<CrownEvent>>): T
 ```
 
-Called when the crown is rotated while the component has focus. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Called when the crown is rotated while the component has focus. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 18
 
@@ -5967,7 +5967,7 @@ The component bound to this event can be used as a drag-response target with hov
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-In a gesture-based drag scenario, this callback is triggered when a user long-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp. For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and: - If a custom drag preview is returned, it is used in place of the default drag preview. - If drag data is set, it is used in place of the default drag data. The custom drag preview is not supported for dragging selected text in the following components: Text, Search, TextInput, TextArea, RichEditor When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged. > **NOTE：**> > This API can be called in [attributeModifier](#attributemodifier) since API version 13.
+In a gesture-based drag scenario, this callback is triggered when a user long-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp. For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and: - If a custom drag preview is returned, it is used in place of the default drag preview. - If drag data is set, it is used in place of the default drag data. The custom drag preview is not supported for dragging selected text in the following components: Text, Search, TextInput, TextArea, RichEditor When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged. &gt; **NOTE：**&gt; &gt; This API can be called in [attributeModifier](#attributemodifier) since API version 13.
 
 **Since:** 8
 
@@ -6467,7 +6467,7 @@ Called when component is focused, the return value indicates whether keyboard is
 onPreDrag(callback: Callback<PreDragStatus>): T
 ```
 
-Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md). This API cannot be triggered in mouse-based drag scenarios. > **NOTE：**> > This API can be called in [attributeModifier](#attributemodifier) since API version 20.
+Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md). This API cannot be triggered in mouse-based drag scenarios. &gt; **NOTE：**&gt; &gt; This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -6497,7 +6497,7 @@ Triggered when the component enters a state prior to a gesture-based drag operat
 onSizeChange(event: SizeChangeCallback): T
 ```
 
-Triggered when the component size changes due to layout updates. > **NOTE：**> > 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may > deviate slightly from the actual physical size. > > 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state > variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically, > animations compare the layout state before the animation starts with the state after the animation closure is > executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the > changes made in this callback will be processed as part of the animation, along with the changes in the animation > closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or > [postFrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside > **onSizeChange** to defer the UI processing logic to asynchronous execution.
+Triggered when the component size changes due to layout updates. &gt; **NOTE：**&gt; &gt; 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may &gt; deviate slightly from the actual physical size. &gt; &gt; 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state &gt; variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically, &gt; animations compare the layout state before the animation starts with the state after the animation closure is &gt; executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the &gt; changes made in this callback will be processed as part of the animation, along with the changes in the animation &gt; closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or &gt; [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside &gt; **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
 
@@ -6617,7 +6617,7 @@ Specifies whether gesture recognizers participate in subsequent processing after
 onVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): T
 ```
 
-Configures a callback for the **onVisibleAreaApproximateChange** event, with options to limit the callback execution interval. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 23.
+Configures a callback for the **onVisibleAreaApproximateChange** event, with options to limit the callback execution interval. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 23.
 
 **Since:** 17
 
@@ -6648,7 +6648,7 @@ Configures a callback for the **onVisibleAreaApproximateChange** event, with opt
 onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 ```
 
-Called when the visible area of the component changes. For details about the development guidelines and FAQs, see [Detecting Component Visibility](../../../ui/arkts-manage-components-visibility.md). > **NOTE：**> > - This API can be called in [attributeModifier](#attributemodifier) since API version 20. > > - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor > nodes (up to the window boundary) and its own area. > > - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any > ancestor node, window-level occlusion, and component rotation. Examples include layouts using > [Stack](../../apis-na/arkts-apis/arkts-na-lib-es5-error-i.md#stack), [z-order control](#zindex), and > [rotate](#rotate) transformations. > > - It does not support visibility change calculations for nodes that are not in the component tree. For example, > preloaded nodes or custom nodes mounted using the > [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability. > > - This API does not support the [scale](#scale) attribute. To enable > support for the [scale](#scale) attribute, use > [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange) > and set **measureFromViewport** to **true**.
+Called when the visible area of the component changes. For details about the development guidelines and FAQs, see [Detecting Component Visibility](../../../ui/arkts-manage-components-visibility.md). &gt; **NOTE：**&gt; &gt; - This API can be called in [attributeModifier](#attributemodifier) since API version 20. &gt; &gt; - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor &gt; nodes (up to the window boundary) and its own area. &gt; &gt; - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any &gt; ancestor node, window-level occlusion, and component rotation. Examples include layouts using &gt; [Stack](../../apis-na/arkts-apis/arkts-na-lib-es5-error-i.md#stack), [z-order control](#zindex), and &gt; [rotate](#rotate) transformations. &gt; &gt; - It does not support visibility change calculations for nodes that are not in the component tree. For example, &gt; preloaded nodes or custom nodes mounted using the &gt; [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability. &gt; &gt; - This API does not support the [scale](#scale) attribute. To enable &gt; support for the [scale](#scale) attribute, use &gt; [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange) &gt; and set **measureFromViewport** to **true**.
 
 **Since:** 9
 
@@ -7091,7 +7091,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptions): T
 ```
 
-Adds an overlay to this component, which can be text, a custom component, or [ComponentContent](arkts-arkui-componentcontent-t.md). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example, [getRectangleById](../arkts-apis/arkts-arkui-componentutils-getrectanglebyid-f.md)) cannot access components within the overlay. > **NOTE：**> > The overlay places the floating layer component above the bound component, blocking all user interactions with > components beneath it. To enable interaction with underlying components, refer to > [Example 2: Setting an Overlay Using a Custom Builder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder) > and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This > configuration is particularly crucial for watermark implementations, where the overlay must not interfere with > user interaction with the underlying content.
+Adds an overlay to this component, which can be text, a custom component, or [ComponentContent](arkts-arkui-componentcontent-t.md). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example, [getRectangleById](../arkts-apis/arkts-arkui-componentutils-getrectanglebyid-f.md)) cannot access components within the overlay. &gt; **NOTE：**&gt; &gt; The overlay places the floating layer component above the bound component, blocking all user interactions with &gt; components beneath it. To enable interaction with underlying components, refer to &gt; [Example 2: Setting an Overlay Using a Custom Builder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder) &gt; and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This &gt; configuration is particularly crucial for watermark implementations, where the overlay must not interfere with &gt; user interaction with the underlying content.
 
 **Since:** 7
 
@@ -7152,7 +7152,7 @@ Sets the padding of the component. <br>Since API version 10, this API supports t
 parallelGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-Gesture that can be recognized at once by the component and its child component. The gesture event is not a bubbling event. When **parallelGesture** is set for a component, both it and its child component can respond to the same gesture events, thereby implementing a quasi-bubbling effect. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Gesture that can be recognized at once by the component and its child component. The gesture event is not a bubbling event. When **parallelGesture** is set for a component, both it and its child component can respond to the same gesture events, thereby implementing a quasi-bubbling effect. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 7
 
@@ -7181,7 +7181,7 @@ Gesture that can be recognized at once by the component and its child component.
 pixelRound(value: PixelRoundPolicy): T
 ```
 
-Sets the pixel rounding policy for the current component in the specified direction. If a direction is not set, the pixels are rounded to the nearest whole number in that direction. > **NOTE：**> > - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5, > 0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to > disable pixel rounding for individual components. > > - This API can be called within > [attributeModifier](#attributemodifier) > since API version 12. In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right. - Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the parent container. - Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the parent container plus the size of the component itself. - Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner rounded value.
+Sets the pixel rounding policy for the current component in the specified direction. If a direction is not set, the pixels are rounded to the nearest whole number in that direction. &gt; **NOTE：**&gt; &gt; - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5, &gt; 0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to &gt; disable pixel rounding for individual components. &gt; &gt; - This API can be called within &gt; [attributeModifier](#attributemodifier) &gt; since API version 12. In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right. - Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the parent container. - Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the parent container plus the size of the component itself. - Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner rounded value.
 
 **Since:** 11
 
@@ -7303,7 +7303,7 @@ Sets the absolute positioning, which determines the position of a child componen
 priorityGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-Gesture to preferentially recognize. 1. By default, the child component preferentially recognizes the gesture specified by **gesture**, and the parent component preferentially recognizes the gesture specified by **priorityGesture** (if set). 2. For long press gestures, the component with the shortest minimum hold-down time responds first, ignoring the **priorityGesture** settings. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Gesture to preferentially recognize. 1. By default, the child component preferentially recognizes the gesture specified by **gesture**, and the parent component preferentially recognizes the gesture specified by **priorityGesture** (if set). 2. For long press gestures, the component with the shortest minimum hold-down time responds first, ignoring the **priorityGesture** settings. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 7
 
@@ -7764,7 +7764,7 @@ Sets the component rotation effect. Compared with [rotate](#rotate), this API su
 safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 ```
 
-Sets the safe area padding. This allows the container to add a component-level safe area for its child components to extend into. This attribute can be dynamically set using [attributeModifier](#attributemodifier). > **NOTE：**> In API version 18, this API can be invoked in attributeModifier. > When parent and ancestor containers define component-level safe areas, child components can detect and utilize > these areas, referred to as Accumulated Safe Area Expansion (SAE), which represents the maximum extendable length > in each direction. > When ancestor containers have contiguous safeAreaPadding (undivided by margin, border, or padding), > SAE accumulates recursively outward until no adjacent outer safeAreaPadding exists or the recursion extends > beyond the page container. > System-level avoid areas (status bar, navigation bar, notch areas, and more) are treated as the page container's > inherent safeAreaPadding and participate in SAE calculations. > For details about the avoid areas, see Safe Area. These component-level safe areas can be leveraged by combining > with other attributes. > For example, setting the ignoreLayoutSafeArea attribute on a child component allows it to extend its layout into > the SAE region.
+Sets the safe area padding. This allows the container to add a component-level safe area for its child components to extend into. This attribute can be dynamically set using [attributeModifier](#attributemodifier). &gt; **NOTE：**&gt; In API version 18, this API can be invoked in attributeModifier. &gt; When parent and ancestor containers define component-level safe areas, child components can detect and utilize &gt; these areas, referred to as Accumulated Safe Area Expansion (SAE), which represents the maximum extendable length &gt; in each direction. &gt; When ancestor containers have contiguous safeAreaPadding (undivided by margin, border, or padding), &gt; SAE accumulates recursively outward until no adjacent outer safeAreaPadding exists or the recursion extends &gt; beyond the page container. &gt; System-level avoid areas (status bar, navigation bar, notch areas, and more) are treated as the page container's &gt; inherent safeAreaPadding and participate in SAE calculations. &gt; For details about the avoid areas, see Safe Area. These component-level safe areas can be leveraged by combining &gt; with other attributes. &gt; For example, setting the ignoreLayoutSafeArea attribute on a child component allows it to extend its layout into &gt; the SAE region.
 
 **Since:** 14
 
@@ -8253,7 +8253,7 @@ Applies a spherical effect to the component. Compared to [sphericalEffect&lt;sup
 stateStyles(value: StateStyles): T
 ```
 
-Sets the state-specific styles for the component. > **NOTE：**> > This API cannot be called within [attributeModifier](#attributemodifier).
+Sets the state-specific styles for the component. &gt; **NOTE：**&gt; &gt; This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 8
 
@@ -8369,7 +8369,7 @@ Applies a system bar effect to the component, which means to invert colors based
 tabIndex(index: number): T
 ```
 
-Sets the tab navigation order of the component in sequential focus navigation with the **Tab** key. Components without explicit **tabIndex** settings follow default focus navigation rules. > **NOTE：**> > - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use > [nextFocus](#nextfocus).
+Sets the tab navigation order of the component in sequential focus navigation with the **Tab** key. Components without explicit **tabIndex** settings follow default focus navigation rules. &gt; **NOTE：**&gt; &gt; - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use &gt; [nextFocus](#nextfocus).
 
 **Since:** 9
 
@@ -8383,7 +8383,7 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Tab navigation order of the component in sequential focus navigation with the **Tab** key. When components with positive **tabIndex** values are present, only these components are reachable through sequential focus navigation, and they are navigated cyclically in ascending order based on the **tabIndex** value. When components with positive **tabIndex** values are not present, those components with a **tabIndex** value of **0** are navigated based on the preset focus navigation rule.<br>The [UiExtension](../arkts-apis/arkts-arkui-uiextension.md) component does not support **tabIndex**. As such, using **tabIndex** on [hierarchical pages](../../../ui/arkts-common-events-focus-event.md#basic-concepts) that contain **UiExtension** components may lead to disordered focus navigation.<br>- **tabIndex** >= 0: The component is focusable and can be reached through sequential keyboard navigation.<br>- **tabIndex** &lt; 0 ( usually **tabIndex** = -1): The component is focusable, but cannot be reached through sequential keyboard navigation.<br> **NOTE：**<br> **tabIndex** and **focusScopeId** cannot be used together. |
+| index | number | Yes | Tab navigation order of the component in sequential focus navigation with the **Tab** key. When components with positive **tabIndex** values are present, only these components are reachable through sequential focus navigation, and they are navigated cyclically in ascending order based on the **tabIndex** value. When components with positive **tabIndex** values are not present, those components with a **tabIndex** value of **0** are navigated based on the preset focus navigation rule.<br>The [UiExtension](../arkts-apis/arkts-arkui-uiextension.md) component does not support **tabIndex**. As such, using **tabIndex** on [hierarchical pages](../../../ui/arkts-common-events-focus-event.md#basic-concepts) that contain **UiExtension** components may lead to disordered focus navigation.<br>- **tabIndex** &gt;= 0: The component is focusable and can be reached through sequential keyboard navigation.<br>- **tabIndex** &lt; 0 ( usually **tabIndex** = -1): The component is focusable, but cannot be reached through sequential keyboard navigation.<br> **NOTE：**<br> **tabIndex** and **focusScopeId** cannot be used together. |
 
 **Return value:**
 
@@ -8603,7 +8603,7 @@ Sets the transition effects used when a component is inserted or removed.
 transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback>): T
 ```
 
-Sets the transition effects used when a component is inserted or removed. Compared with [transition](#transition), this API provides the callback when the transition animation ends. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets the transition effects used when a component is inserted or removed. Compared with [transition](#transition), this API provides the callback when the transition animation ends. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -8919,7 +8919,7 @@ Sets the visibility of the component. If **visibility** is not set, the componen
 visualEffect(effect: VisualEffect): T
 ```
 
-Sets a visual effect that is not a filter effect. > **NOTE：**> > This API can be called within [attributeModifier](#attributemodifier) since API version 20.
+Sets a visual effect that is not a filter effect. &gt; **NOTE：**&gt; &gt; This API can be called within [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -8965,7 +8965,7 @@ Sets the width of the component. By default, the width required to fully hold th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Width of the component to set.<br>Unit: vp > **NOTE：**> > - In the TextInput component, setting **width** to **auto** means that > the width adapts to the width of the text content. > > - In the AlphabetIndexer component, setting **width** to **auto** > means that the width adapts to the maximum width of index entries. |
+| value | Length | Yes | Width of the component to set.<br>Unit: vp &gt; **NOTE：**&gt; &gt; - In the TextInput component, setting **width** to **auto** means that &gt; the width adapts to the width of the text content. &gt; &gt; - In the AlphabetIndexer component, setting **width** to **auto** &gt; means that the width adapts to the maximum width of index entries. |
 
 **Return value:**
 

@@ -31,8 +31,6 @@ Appends a new element with a specified value to the end of the Set.
 
 | Type | Description |
 | --- | --- |
-| this |  |
-
 ## clear
 
 ```TypeScript
@@ -65,8 +63,6 @@ Removes a specified value from the Set.
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## forEach
 
 ```TypeScript
@@ -106,8 +102,6 @@ has(value: T): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
-
 ## size
 
 ```TypeScript

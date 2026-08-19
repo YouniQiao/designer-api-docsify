@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## latitude

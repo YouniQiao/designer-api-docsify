@@ -34,8 +34,6 @@ attributeModifier(modifier: AttributeModifier<NavDestinationAttribute> | Attribu
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## backButtonIcon
 
 ```TypeScript
@@ -59,8 +57,6 @@ backButtonIcon(icon: ResourceStr | PixelMap | SymbolGlyphModifier | undefined, a
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindToNestedScrollable
 
 ```TypeScript
@@ -83,8 +79,6 @@ bindToNestedScrollable(scrollInfos: Array<NestedScrollInfo> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## bindToScrollable
 
 ```TypeScript
@@ -107,8 +101,6 @@ bindToScrollable(scrollers: Array<Scroller> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## customTransition
 
 ```TypeScript
@@ -131,8 +123,6 @@ customTransition(delegate: NavDestinationTransitionDelegate | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableNavigationIndicator
 
 ```TypeScript
@@ -155,8 +145,6 @@ enableNavigationIndicator(enabled: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## enableStatusBar
 
 ```TypeScript
@@ -180,8 +168,6 @@ enableStatusBar(enabled: boolean | undefined, animated?: boolean | undefined): t
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## fullScreenOverlay
 
 ```TypeScript
@@ -204,8 +190,6 @@ fullScreenOverlay(fullScreenOverlay: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideBackButton
 
 ```TypeScript
@@ -228,8 +212,6 @@ hideBackButton(hide: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -252,8 +234,6 @@ hideTitleBar(value: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideTitleBar
 
 ```TypeScript
@@ -277,8 +257,6 @@ hideTitleBar(hide: boolean | undefined, animated: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## hideToolBar
 
 ```TypeScript
@@ -302,8 +280,6 @@ hideToolBar(hide: boolean | undefined, animated?: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## ignoreLayoutSafeArea
 
 ```TypeScript
@@ -327,8 +303,6 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edges?: Arra
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## menus
 
 ```TypeScript
@@ -352,8 +326,6 @@ menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: Na
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## mode
 
 ```TypeScript
@@ -376,8 +348,6 @@ mode(value: NavDestinationMode | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onActive
 
 ```TypeScript
@@ -400,8 +370,6 @@ onActive(callback: Callback<NavDestinationActiveReason> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onBackPressed
 
 ```TypeScript
@@ -424,8 +392,6 @@ onBackPressed(callback: (() => boolean) | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onHidden
 
 ```TypeScript
@@ -448,8 +414,6 @@ onHidden(callback: Callback<VisibilityChangeReason> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onInactive
 
 ```TypeScript
@@ -472,8 +436,6 @@ onInactive(callback: Callback<NavDestinationActiveReason> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onNewParam
 
 ```TypeScript
@@ -496,8 +458,6 @@ onNewParam(callback: Callback<Object | null | undefined> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onReady
 
 ```TypeScript
@@ -520,8 +480,6 @@ onReady(callback: Callback<NavDestinationContext> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onResult
 
 ```TypeScript
@@ -544,8 +502,6 @@ onResult(callback: Callback<Object | null | undefined> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onShown
 
 ```TypeScript
@@ -568,8 +524,6 @@ onShown(callback: Callback<VisibilityChangeReason> | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onWillAppear
 
 ```TypeScript
@@ -592,8 +546,6 @@ onWillAppear(callback: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onWillDisappear
 
 ```TypeScript
@@ -616,8 +568,6 @@ onWillDisappear(callback: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onWillHide
 
 ```TypeScript
@@ -640,8 +590,6 @@ onWillHide(callback: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## onWillShow
 
 ```TypeScript
@@ -664,8 +612,6 @@ onWillShow(callback: VoidCallback | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## preferredOrientation
 
 ```TypeScript
@@ -688,8 +634,6 @@ preferredOrientation(orientation: Orientation | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## recoverable
 
 ```TypeScript
@@ -712,8 +656,6 @@ recoverable(recoverable: boolean | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## setNavDestinationOptions
 
 ```TypeScript
@@ -736,8 +678,6 @@ setNavDestinationOptions(moduleInfo?: NavDestinationModuleInfo): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## systemBarStyle
 
 ```TypeScript
@@ -760,8 +700,6 @@ systemBarStyle(style: SystemBarStyle | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## systemTransition
 
 ```TypeScript
@@ -784,8 +722,6 @@ systemTransition(type: NavigationSystemTransitionType | undefined): this
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## title
 
 ```TypeScript
@@ -809,8 +745,6 @@ title(value: string | CustomBuilder | NavDestinationCommonTitle | NavDestination
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## toolbarConfiguration
 
 ```TypeScript
@@ -834,8 +768,6 @@ toolbarConfiguration(toolbarParam: Array<ToolbarItem> | CustomBuilder | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| this |  |
-
 ## default
 
 ```TypeScript

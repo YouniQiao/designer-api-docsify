@@ -31,8 +31,6 @@ Converts a Symbol object to a symbol.
 
 | Type | Description |
 | --- | --- |
-| symbol |  |
-
 ## [Symbol.toStringTag]
 
 ```TypeScript
