@@ -26,7 +26,7 @@ Listens to the event of change scene animation state. You can use this method to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | Yes | The callback of change scene animation state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.ChangeSceneAnimationStateRequest&gt; | Yes | The callback of change scene animation state. |
 
 **Error codes:**
 

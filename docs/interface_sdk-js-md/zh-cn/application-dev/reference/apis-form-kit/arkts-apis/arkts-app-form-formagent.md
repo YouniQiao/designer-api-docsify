@@ -13,7 +13,6 @@ FormAgent模块提供了卡片代理相关接口的能力，目前仅包括请�
 ## 导入模块
 
 ```TypeScript
-import { formAgent } from '@kit.FormKit';
 ```
 
 ## 汇总

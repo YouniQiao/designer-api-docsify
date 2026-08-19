@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## close
@@ -183,7 +182,7 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 否 | 回调函数。传入callback时，取消指定的串口数据接收监听；不传入callback时，清除所有串口数据接收监听。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | 否 | 回调函数。传入callback时，取消指定的串口数据接收监听；不传入callback时，清除所有串口数据接收监听。 |
 
 **错误码：**
 
@@ -212,7 +211,7 @@ offDisconnect(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，需先通过onDisconnect()注册回调后才能取消。传入callback时，取消指定的串口断开事件监听； 不传入callback时，清除所有串口断开事件监听。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，需先通过onDisconnect()注册回调后才能取消。传入callback时，取消指定的串口断开事件监听； 不传入callback时，清除所有串口断开事件监听。 |
 
 **错误码：**
 
@@ -241,7 +240,7 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回串口接收到的数据。用于监听串口数据接收事件，注册回调后，串口接收到数据时会触发该回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回串口接收到的数据。用于监听串口数据接收事件，注册回调后，串口接收到数据时会触发该回调函数。 |
 
 **错误码：**
 
@@ -271,7 +270,7 @@ onDisconnect(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，串口断开时触发。用于监听串口断开事件，注册回调后，串口设备断开连接时会触发该回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数，串口断开时触发。用于监听串口断开事件，注册回调后，串口设备断开连接时会触发该回调函数。 |
 
 **错误码：**
 

@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## onWorkStart

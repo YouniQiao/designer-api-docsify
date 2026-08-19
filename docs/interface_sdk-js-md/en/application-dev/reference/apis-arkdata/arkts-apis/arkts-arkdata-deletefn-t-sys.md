@@ -26,5 +26,5 @@ Callback function called when deleting one or more data records in the database.
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the database table storing the data to delete. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be deleted by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Returns the number of data records deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the number of data records deleted. |
 

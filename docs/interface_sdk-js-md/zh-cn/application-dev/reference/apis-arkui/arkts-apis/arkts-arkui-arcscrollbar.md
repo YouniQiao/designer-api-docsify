@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ArcScrollBar, ArcScrollBarAttribute } from '@kit.ArkUI';
 ```
 
 ## 汇总

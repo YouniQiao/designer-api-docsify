@@ -31,7 +31,7 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
 | config | Config | Yes | Task configuration. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Task&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Task** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Task** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -28,7 +28,7 @@ Unsubscribe from the callDisconnectedCause event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | No | Indicates the callback used to cancel the registration monitoring for obtaining the call end reason. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DisconnectedDetails](arkts-telephony-call-disconnecteddetails-i-sys.md)&gt; | No | Indicates the callback used to cancel the registration monitoring for obtaining the call end reason. |
 
 **Error codes:**
 

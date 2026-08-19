@@ -6354,7 +6354,7 @@ onMouse(event: (event: MouseEvent) => void): T
 onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | undefined): T
 ```
 
-设置组件判断是否需要键盘时触发的回调。主要用于键盘接续场景，当焦点从输入框切换到其他组件时，如果切换后的组件回调函数[OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md)的返回值设置为`true`，则表示该组件需要键盘，此时键盘将不会收起，如果返回值设置为`false`，则表示该组件不需要键盘，此时键盘将收起。 对于不能获焦的组件，本接口不生效。 输入框组件使用该接口并将返回值设置为`false`时，点击输入框将不会拉起键盘。 Web组件使用该方法时，如果返回值为`true`，Web组件会判断组件中是否有可编辑节点，如果有可编辑节点才会保留键盘，如果返回值为`false`，无论是否有可编辑节点，键盘都不会保留。 XComponent组件使用该方法时，如果返回值为`true`且XComponent组件使用 [OH_ArkUI_XComponent_SetNeedSoftKeyboard()](../../../reference/apis-arkui/capi-native-interface-xcomponent-h.md#oh_arkui_xcomponent_setneedsoftkeyboard)设置了需要键盘，才会保留键盘，如果返回值为`false`，无论组件如何设置，键盘都不会保留。 当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。 该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)。
+设置组件判断是否需要键盘时触发的回调。主要用于键盘接续场景，当焦点从输入框切换到其他组件时，如果切换后的组件回调函数[OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md)的返回值设置为`true`，则表示该组件需要键盘，此时键盘将不会收起，如果返回值设置为`false`，则表示该组件不需要键盘，此时键盘将收起。 对于不能获焦的组件，本接口不生效。 输入框组件使用该接口并将返回值设置为`false`时，点击输入框将不会拉起键盘。 Web组件使用该方法时，如果返回值为`true`，Web组件会判断组件中是否有可编辑节点，如果有可编辑节点才会保留键盘，如果返回值为`false`，无论是否有可编辑节点，键盘都不会保留。 XComponent组件使用该方法时，如果返回值为`true`且XComponent组件使用 [OH_ArkUI_XComponent_SetNeedSoftKeyboard()](../../../reference/apis-arkui/capi-native-interface-xcomponent-h.md#oh_arkui_xcomponent_setneedsoftkeyboard)设置了需要键盘，才会保留键盘，如果返回值为`false`，无论组件如何设置，键盘都不会保留。 当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。 该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)。
 
 **起始版本：** 24
 
@@ -6414,7 +6414,7 @@ onPreDrag(callback: Callback<PreDragStatus>): T
 onSizeChange(event: SizeChangeCallback): T
 ```
 
-组件区域变化时触发该回调。仅会响应由布局变化所导致的组件尺寸发生变化时的回调。 > **说明：** > > 1. 该接口在布局发生变化时触发，由于计算精度的关系，其返回值可能与真实物理尺寸存在细微的差异。 > > 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么 > onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的 > [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md)或 > [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)，将UI处理逻辑 > 延后至异步执行。
+组件区域变化时触发该回调。仅会响应由布局变化所导致的组件尺寸发生变化时的回调。 > **说明：** > > 1. 该接口在布局发生变化时触发，由于计算精度的关系，其返回值可能与真实物理尺寸存在细微的差异。 > > 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么 > onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的 > [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md)或 > [postFrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#postframecallback)，将UI处理逻辑 > 延后至异步执行。
 
 **起始版本：** 12
 
@@ -7419,7 +7419,7 @@ renderGroup(isGroup: Optional<boolean>): T
 responseRegion(value: Array<Rectangle> | Rectangle): T
 ```
 
-设置一个或多个触摸热区。从API版本26.0.0开始，未主动设置时[Button](arkts-arkui-mouseevent-i.md#button)、Button模式的Toggle、Select、 [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md)和ChipGroup组件的触摸热区默认最小高度从28vp变更为32vp。 该变更仅影响触摸命中范围，不影响组件实际显示高度。
+设置一个或多个触摸热区。从API版本26.0.0开始，未主动设置时[Button](arkts-arkui-mouseevent-i.md#button)、Button模式的Toggle、Select、 [Chip](../arkts-apis/arkts-arkui-arkui-advanced-chip-chip-f.md)和ChipGroup组件的触摸热区默认最小高度从28vp变更为32vp。 该变更仅影响触摸命中范围，不影响组件实际显示高度。
 
 **起始版本：** 8
 
@@ -8324,7 +8324,7 @@ tabStop(isTabStop: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTabStop | boolean | 是 | 设置当前容器组件是否为走焦可停留容器，true表示当前容器组件为走焦可停留容器，false表示当前容器组件不是走焦可停留容器。<br/>**说明：**<br/>1.配 置tabStop需要确保是容器组件且有可获焦的孩子组件，默认容器组件不能直接获焦。<br/>2.通过[requestFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#requestfocus)请求焦 点，如果是容器组件且配置tabStop，焦点能够停留在容器组件，如果未配置tabStop，即使整条焦点链上有配置了tabStop的组件，该组件依然能获取到焦点。<br/>3.配置tabStop的容器不允许嵌 套超过2层。<br/>tabStop走焦规则：<br/>1.通过tab键和方向键走焦，焦点会停留在配置了tabStop的组件上，如果焦点停留在配置了tabStop的容器内部时，可以走焦到容器内部的下一个可获焦 组件，如果焦点停留在配置了tabStop的容器外部是，可以走焦到容器外的下一个可获焦组件。<br/>2.当焦点停留在tabStop上时，按Enter键可以走焦到内部第一个可获焦组件，按Esc能够将焦点 退回到不超过当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)根容器的上一个配置了tabStop的组件，按空格键可以响应该容器的onClick事件。<br/>3.不建 议根容器配置tabStop。如果根容器配置了tabStop，通过[clearFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#clearfocus)将焦点清理到根容器，再按Enter键会重新走回内部上 一次获焦组件，通过Esc键将焦点清理到根容器，再按Enter键会走焦到内部第一个可获焦组件。 |
+| isTabStop | boolean | 是 | 设置当前容器组件是否为走焦可停留容器，true表示当前容器组件为走焦可停留容器，false表示当前容器组件不是走焦可停留容器。<br/>**说明：**<br/>1.配 置tabStop需要确保是容器组件且有可获焦的孩子组件，默认容器组件不能直接获焦。<br/>2.通过[requestFocus](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-focuscontroller-c.md#requestfocus)请求焦 点，如果是容器组件且配置tabStop，焦点能够停留在容器组件，如果未配置tabStop，即使整条焦点链上有配置了tabStop的组件，该组件依然能获取到焦点。<br/>3.配置tabStop的容器不允许嵌 套超过2层。<br/>tabStop走焦规则：<br/>1.通过tab键和方向键走焦，焦点会停留在配置了tabStop的组件上，如果焦点停留在配置了tabStop的容器内部时，可以走焦到容器内部的下一个可获焦 组件，如果焦点停留在配置了tabStop的容器外部是，可以走焦到容器外的下一个可获焦组件。<br/>2.当焦点停留在tabStop上时，按Enter键可以走焦到内部第一个可获焦组件，按Esc能够将焦点 退回到不超过当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)根容器的上一个配置了tabStop的组件，按空格键可以响应该容器的onClick事件。<br/>3.不建 议根容器配置tabStop。如果根容器配置了tabStop，通过[clearFocus](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-focuscontroller-c.md#clearfocus)将焦点清理到根容器，再按Enter键会重新走回内部上 一次获焦组件，通过Esc键将焦点清理到根容器，再按Enter键会走焦到内部第一个可获焦组件。 |
 
 **返回值：**
 

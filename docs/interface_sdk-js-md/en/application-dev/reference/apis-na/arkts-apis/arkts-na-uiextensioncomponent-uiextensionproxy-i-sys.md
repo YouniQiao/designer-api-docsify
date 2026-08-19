@@ -36,7 +36,7 @@ Deregisters the listener that watches for async data receiver callback being reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 **Error codes:**
 
@@ -68,7 +68,7 @@ Deregisters the listener that watches for sync data receiver callback being regi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 **Error codes:**
 
@@ -100,7 +100,7 @@ Register the listener that watches for async data receiver callback being regist
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 **Error codes:**
 
@@ -132,7 +132,7 @@ Register the listener that watches for sync data receiver callback being registe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-na-uiextensioncomponent-uiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 **Error codes:**
 

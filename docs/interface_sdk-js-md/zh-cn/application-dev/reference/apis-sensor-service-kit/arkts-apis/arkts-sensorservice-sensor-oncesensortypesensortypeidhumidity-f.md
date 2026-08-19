@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## once_SensorType.SENSOR_TYPE_ID_HUMIDITY
@@ -29,5 +28,5 @@ function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humid
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_HUMIDITY | 是 | 湿度传感器类型为SENSOR_TYPE_ID_HUMIDITY。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | 是 | 注册一次湿度传感器的回调函数，上报的数据类型为HumidityResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md)&gt; | 是 | 注册一次湿度传感器的回调函数，上报的数据类型为HumidityResponse。 |
 

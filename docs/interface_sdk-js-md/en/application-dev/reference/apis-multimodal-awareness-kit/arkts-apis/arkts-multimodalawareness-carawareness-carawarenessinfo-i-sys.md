@@ -1,0 +1,78 @@
+# CarAwarenessInfo (System API)
+
+Interface for car awareness response info.
+
+**Since:** 26.1.0
+
+<!--Device-carAwareness-export interface CarAwarenessInfo--><!--Device-carAwareness-export interface CarAwarenessInfo-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.CarAwareness
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
+```
+
+## awarenessEvent
+
+```TypeScript
+awarenessEvent?:Record<string, Object>
+```
+
+Interface for car awareness data items list information.
+
+**Type:** Record&lt;string, Object&gt;
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CarAwarenessInfo-awarenessEvent?:Record<string, Object>--><!--Device-CarAwarenessInfo-awarenessEvent?:Record<string, Object>-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.CarAwareness
+
+**System API:** This is a system API.
+
+## capability
+
+```TypeScript
+capability: Capability
+```
+
+Indicates specific capability.
+
+**Type:** Capability
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CarAwarenessInfo-capability: Capability--><!--Device-CarAwarenessInfo-capability: Capability-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.CarAwareness
+
+**System API:** This is a system API.
+
+## timestamp
+
+```TypeScript
+timestamp: number
+```
+
+Indicates timestamp . Unit: milliseconds.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CarAwarenessInfo-timestamp: number--><!--Device-CarAwarenessInfo-timestamp: number-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.CarAwareness
+
+**System API:** This is a system API.
+

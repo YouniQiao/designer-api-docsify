@@ -146,7 +146,7 @@ Backs up a database in a specified name.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | destName | string | Yes | Indicates the name that saves the database backup. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of backup. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of backup. |
 
 **Error codes:**
 
@@ -243,7 +243,7 @@ Inserts a batch of data into the target table. The data insertion fails if the A
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) to be inserted into the table. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The number of values that were inserted if the operation is successful. returns -1 otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of values that were inserted if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
@@ -691,7 +691,7 @@ Cleans the dirty data, which is the data deleted in the cloud. Data with a curso
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the name of the table to check. |
 | cursor | long | Yes | Indicates the position of the data to be cleaned up. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback invoked to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback invoked to return the result. |
 
 **Error codes:**
 
@@ -737,7 +737,7 @@ Cleans all dirty data deleted in the cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the name of the table to check. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of clean. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of clean. |
 
 **Error codes:**
 
@@ -862,8 +862,8 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of cloudSync. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
 
@@ -892,7 +892,7 @@ Sync data to cloud.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 
 **Return value:**
 
@@ -933,8 +933,8 @@ Sync data to cloud.
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
 | tables | string[] | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of cloudSync. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
 
@@ -964,7 +964,7 @@ Sync data to cloud.
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | indicates the database synchronization mode. |
 | tables | string[] | Yes | indicates the database synchronization mode. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 
 **Return value:**
 
@@ -1001,7 +1001,7 @@ Synchronizes data to the cloud. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | Yes | indicates the cloud synchronization config. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the sync progress. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
@@ -1163,7 +1163,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | Yes | The specified delete condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The number of affected rows. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 
@@ -1591,7 +1591,7 @@ Executes a SQL statement that contains specified parameters but returns no value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of executeSql. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of executeSql. |
 
 **Error codes:**
 
@@ -1639,7 +1639,7 @@ Executes a SQL statement that contains specified parameters but returns no value
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
 | bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) values of the parameters in the SQL statement. The values are strings. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of executeSql. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of executeSql. |
 
 **Error codes:**
 
@@ -1851,7 +1851,7 @@ Obtains the modify time of rows corresponding to the primary keys.
 | table | string | Yes | Indicates the name of the table to check. |
 | columnName | string | Yes | Indicates the name of the column to check. |
 | primaryKeys | [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md)[] | Yes | Indicates the primary keys of the rows to check. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md)&gt; | Yes | The callback of getModifyTime. ModifyTime indicates the modify time of current row. If this table does not support cloud, the [ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md) will be empty. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md)&gt; | Yes | The callback of getModifyTime. ModifyTime indicates the modify time of current row. If this table does not support cloud, the [ModifyTime](arkts-arkdata-relationalstore-modifytime-t.md) will be empty. |
 
 **Error codes:**
 
@@ -1898,7 +1898,7 @@ Inserts a row of data into the target table.
 | --- | --- | --- | --- |
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) to be inserted into the table. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
@@ -1946,7 +1946,7 @@ Inserts a row of data into the target table.
 | table | string | Yes | Indicates the target table. |
 | values | ValuesBucket | Yes | Indicates the row of data [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md) to be inserted into the table. |
 | conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md) to insert data into the table. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
@@ -2257,7 +2257,7 @@ Obtain distributed table name of specified remote device according to local tabl
 | --- | --- | --- | --- |
 | device | string | Yes | Indicates the remote device. |
 | table | string | Yes | {string}: the distributed table name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
 **Error codes:**
 
@@ -2324,7 +2324,7 @@ Unregister the database auto synchronization callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | the specified sync condition by the instance object of [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md). |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | the specified sync condition by the instance object of [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md). |
 
 **Error codes:**
 
@@ -2352,7 +2352,7 @@ Remove specified observer of specified type from the database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SubscribeType | Yes | indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
 
 **Error codes:**
 
@@ -2380,7 +2380,7 @@ Unsubscribes from the SQL performance statistics.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Callback to unregister. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -2407,7 +2407,7 @@ Unsubscribes from the SQL execution error logs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | No | Callback to unregister. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -2436,7 +2436,7 @@ Unsubscribes from the SQL statistics.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Indicates the callback to unregister. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Indicates the callback to unregister. |
 
 **Error codes:**
 
@@ -2464,7 +2464,7 @@ Unregister the database auto synchronization callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'autoSyncProgress' | Yes | indicates the event must be string 'autoSyncProgress'. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | No | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 
 **Error codes:**
 
@@ -2494,7 +2494,7 @@ Remove specified observer of specified type from the database.
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
 | type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the data change observer already registered. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the data change observer already registered. |
 
 **Error codes:**
 
@@ -2528,7 +2528,7 @@ Remove specified observer of specified type from the database.
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | indicates the event must be string 'dataChange'. |
 | type | SubscribeType | Yes | indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
 
 **Error codes:**
 
@@ -2558,7 +2558,7 @@ Unsubscribes from the SQL performance statistics.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'perfStat' | Yes | Event type, which must be 'perfStat'. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Callback to unregister. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -2586,7 +2586,7 @@ Unsubscribes from the SQL execution error logs.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'sqliteErrorOccurred' | Yes | Indicates the event type, which must be 'sqliteErrorOccurred'. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | No | Callback to unregister. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
@@ -2614,7 +2614,7 @@ Unsubscribes from the SQL statistics.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'statistics' | Yes | Indicates the event type, which must be 'statistics'. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Indicates the callback to unregister. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | No | Indicates the callback to unregister. |
 
 **Error codes:**
 
@@ -2645,7 +2645,7 @@ Remove specified observer of specified type from the database.
 | --- | --- | --- | --- |
 | event | string | Yes | Indicates the subscription event. |
 | interProcess | boolean | Yes | Indicates whether it is an interprocess subscription or an in-process subscription. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | The data change observer already registered.<br>**Since:** 12 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The data change observer already registered.<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -2675,7 +2675,7 @@ Register an automatic synchronization callback to the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 
 **Error codes:**
 
@@ -2706,7 +2706,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: The observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: The observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
 
 **Error codes:**
 
@@ -2734,7 +2734,7 @@ Subscribes to the SQL performance statistics.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md). |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md). |
 
 **Error codes:**
 
@@ -2761,7 +2761,7 @@ Subscribes to the SQL execution error logs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md). |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md). |
 
 **Error codes:**
 
@@ -2790,7 +2790,7 @@ Subscribes to the SQL statistics.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Indicates the callback used to return the SQL execution statistics SqlExeInfo in the database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Indicates the callback used to return the SQL execution statistics SqlExeInfo in the database. |
 
 **Error codes:**
 
@@ -2820,7 +2820,7 @@ Register an automatic synchronization callback to the database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'autoSyncProgress' | Yes | Indicates the event must be string 'autoSyncProgress'. |
-| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
+| progress | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)&gt; | Yes | Callback used to return the [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) result. |
 
 **Error codes:**
 
@@ -2850,7 +2850,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
 | type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. |
 
 **Error codes:**
 
@@ -2880,7 +2880,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
 | type | SubscribeType | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
 
 **Error codes:**
 
@@ -2910,7 +2910,7 @@ Subscribes to the SQL performance statistics.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'perfStat' | Yes | Event type, which must be 'perfStat'. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md). |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Callback used to return the SQL execution statistics [SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md). |
 
 **Error codes:**
 
@@ -2938,7 +2938,7 @@ Subscribes to the SQL execution error logs.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'sqliteErrorOccurred' | Yes | Event type, which must be 'sqliteErrorOccurred'. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md). |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md)&gt; | Yes | Callback used to return the SQL execution errorlog [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md). |
 
 **Error codes:**
 
@@ -2966,7 +2966,7 @@ Subscribes to the SQL statistics.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'statistics' | Yes | Indicates the event type, which must be 'statistics'. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Indicates the callback used to return the SQL execution statistics SqlExeInfo in the database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SqlExecutionInfo](arkts-arkdata-relationalstore-sqlexecutioninfo-i.md)&gt; | Yes | Indicates the callback used to return the SQL execution statistics SqlExeInfo in the database. |
 
 **Error codes:**
 
@@ -2997,7 +2997,7 @@ Registers an observer for the database.
 | --- | --- | --- | --- |
 | event | string | Yes | Event type, which must match the event type in emit. |
 | interProcess | boolean | Yes | Indicates whether it is an interprocess subscription or an in-process subscription. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The observer of data change events in the database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The observer of data change events in the database. |
 
 **Error codes:**
 
@@ -3028,7 +3028,7 @@ Queries data in the database based on specified conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3059,7 +3059,7 @@ Queries data in the database based on specified conditions.
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | Yes | The specified query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3246,7 +3246,7 @@ Queries data in the database based on SQL statement.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3277,7 +3277,7 @@ Queries data in the database based on SQL statement.
 | --- | --- | --- | --- |
 | sql | string | Yes | Indicates the SQL statement to execute. |
 | bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) values of the parameters in the SQL statement. The values are strings. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3651,7 +3651,7 @@ Queries remote data in the database based on specified conditions before Synchro
 | table | string | Yes | Indicates the target table. |
 | predicates | RdbPredicates | Yes | The specified remote remote query condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | columns | Array&lt;string&gt; | Yes | The columns to remote query. If the value is empty array, the remote query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) object if the operation is successful. |
 
 **Error codes:**
 
@@ -3719,7 +3719,7 @@ Restores a database from a specified database file.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | srcName | string | Yes | Indicates the name that saves the database file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of restore. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of restore. |
 
 **Error codes:**
 
@@ -3904,7 +3904,7 @@ Set table to be distributed table.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
 
@@ -3974,7 +3974,7 @@ Set table to be distributed table.
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
 | type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
 
@@ -4014,7 +4014,7 @@ Set table to be distributed table.
 | tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
 | type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md). ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
 | config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | Yes | Indicates the distributed config of the tables. For details, see [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
 
@@ -4154,7 +4154,7 @@ Sync data between devices.
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | Indicates the database synchronization mode. |
 | predicates | RdbPredicates | Yes | The specified sync condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | {Array&lt;[string, int]&gt;}: devices sync status array, {string}: device id, {int}: device sync status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | {Array&lt;[string, int]&gt;}: devices sync status array, {string}: device id, {int}: device sync status. |
 
 **Error codes:**
 
@@ -4313,7 +4313,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
 | predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The number of affected rows. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 
@@ -4366,7 +4366,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | values | ValuesBucket | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
 | predicates | RdbPredicates | Yes | Indicates the specified update condition by the instance object of [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md). |
 | conflict | ConflictResolution | Yes | Indicates the [ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md) to insert data into the table. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | The number of affected rows. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## finishTrace

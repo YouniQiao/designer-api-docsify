@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
 ```
 
 ## 汇总

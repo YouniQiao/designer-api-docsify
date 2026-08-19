@@ -42,7 +42,7 @@
 - [Media Kit (245)](interface_sdk-js-md/en/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
 - [Media Library Kit (309)](interface_sdk-js-md/en/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-albumpickercomponent.md)
 - [Mind Spore Lite Kit (39)](interface_sdk-js-md/en/application-dev/reference/apis-mind-spore-lite-kit/arkts-apis/arkts-ai-mindsporelite.md)
-- [Multimodal Awareness Kit (111)](interface_sdk-js-md/en/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-devicestatus.md)
+- [Multimodal Awareness Kit (131)](interface_sdk-js-md/en/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-carawareness.md)
 - [Na (3210)](interface_sdk-js-md/en/application-dev/reference/apis-na/arkts-apis/arkts-animator.md)
 - [Network Kit (503)](interface_sdk-js-md/en/application-dev/reference/apis-network-kit/arkts-apis/arkts-app-ability-vpnextensionability.md)
 - [Neural Network Runtime Kit (17)](interface_sdk_c-md/en/application-dev/reference/apis-neural-network-runtime-kit/c-apis/capi-neural-network-runtime-type-h.md)

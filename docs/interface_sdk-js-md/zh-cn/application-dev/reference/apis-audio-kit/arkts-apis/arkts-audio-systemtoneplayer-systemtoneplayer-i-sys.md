@@ -195,7 +195,7 @@ offError(callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Error callback while receiving the error event. |
 
 **错误码：**
 
@@ -242,7 +242,7 @@ offPlayFinished(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | Callback used to obtain the finished event. |
 
 **错误码：**
 
@@ -288,7 +288,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当取消监听铃音播放过程中的错误事件时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，返回错误码和错误信息。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
@@ -336,7 +336,7 @@ off(type: 'playFinished', callback?: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当取消监听铃音播放完成事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 回调函数，返回结束事件的音频流的streamId。不填入此参数时，会取消该事件的所有监听。 |
 
 **错误码：**
 
@@ -381,7 +381,7 @@ onError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | Error callback while receiving the error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Error callback while receiving the error event. |
 
 **错误码：**
 
@@ -421,7 +421,7 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | streamId | int | 是 | Stream id, received from start(). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Callback used to obtain the finished event. The callback info is the stream id that is finished. |
 
 **错误码：**
 
@@ -471,7 +471,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当铃音播放过程中发生错误时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的 on('error')。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的 on('error')。 |
 
 **错误码：**
 
@@ -512,7 +512,7 @@ on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当铃音播放完成时，触发该事件。 |
 | streamId | int | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](#start)获取。 当streamId传入0时，可监听当前播放器对应的所有音频流。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
 
 **错误码：**
 

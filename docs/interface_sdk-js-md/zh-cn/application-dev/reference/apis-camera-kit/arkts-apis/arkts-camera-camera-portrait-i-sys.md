@@ -15,8 +15,6 @@ Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getPortraitEffect

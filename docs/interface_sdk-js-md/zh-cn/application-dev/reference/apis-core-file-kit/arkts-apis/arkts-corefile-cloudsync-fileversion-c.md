@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## clearFileConflict
@@ -149,7 +147,7 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 | --- | --- | --- | --- |
 | uri | string | 是 | 文件的URI。 |
 | versionId | string | 是 | 文件某一版本的版本号，格式以接口 [gethistoryversionlist](#gethistoryversionlist)返回为准。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | 是 | 回调函数，返回下载进度。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md)&gt; | 是 | 回调函数，返回下载进度。 |
 
 **返回值：**
 

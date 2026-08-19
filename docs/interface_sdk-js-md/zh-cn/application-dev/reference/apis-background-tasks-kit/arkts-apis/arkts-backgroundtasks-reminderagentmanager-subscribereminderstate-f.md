@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## subscribeReminderState
@@ -28,7 +27,7 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 是 | 回调函数，返回代理提醒状态信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 是 | 回调函数，返回代理提醒状态信息。 |
 
 **返回值：**
 

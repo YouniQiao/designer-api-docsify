@@ -1,6 +1,6 @@
 # PromptAction
 
-Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups. > **NOTE：**> > - The initial APIs of this class are supported since API version 10. > > - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) in > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
+Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups. > **NOTE：**> > - The initial APIs of this class are supported since API version 10. > > - In the following API examples, you must first use [getPromptAction()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getpromptaction) in > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -365,7 +365,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](#updatemenu) and > [closeMenu](#closemenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openmenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
+Opens a menu with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the menu will not be displayed. > > - You must maintain the provided **content**, on which [updateMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#updatemenu) and > [closeMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#closemenu) rely to identify the target menu. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**. > > - Nested subwindow dialog boxes are not supported. For example, when [openMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#openmenu) has > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
 
@@ -382,7 +382,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Content displayed in the menu. |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | MenuOptions | No | Style of the menu.<br>**NOTE：**<br>The **title** property is not effective.<br> The **preview** parameter supports only the **MenuPreviewMode** type. |
 
 **Return value:**
@@ -407,7 +407,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](#updatepopup) and > [closePopup](#closepopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
+Creates and displays a popup with the specified content. This API uses a promise to return the result. > **NOTE：**> > - If an invalid **target** is provided, the popup will not be displayed. > > - You must maintain the provided **content**, on which [updatePopup](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#updatepopup) and > [closePopup](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#closepopup) rely to identify the target popup. > > - If your **wrapBuilder** includes other components (such as Popup or > [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md) > constructor must include four parameters, and the **options** parameter must be > **{ nestingBuilderSupported: true }**.
 
 **Since:** 18
 
@@ -424,7 +424,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | Content displayed in the popup. |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
+| target | [TargetInfo](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | PopupCommonOptions | No | Style of the popup. |
 
 **Return value:**
@@ -503,7 +503,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
+| builder | CustomBuilder \| [CustomBuilderWithId](../../apis-na/arkts-apis/arkts-na-custombuilderwithid-t.md) | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | No | Controller of the custom dialog box. |
 | options | promptAction.DialogOptions | No | Style of the custom dialog box.<br> Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
@@ -532,7 +532,7 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [showActionMenu](#showactionmenu)
+**Substitutes:** [showActionMenu](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#showactionmenu)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -577,7 +577,7 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | Yes | Action menu options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 
@@ -646,7 +646,7 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | Yes | Dialog box configuration options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the dialog box response. On failure, **err** provides error details. |
 
 **Error codes:**
 

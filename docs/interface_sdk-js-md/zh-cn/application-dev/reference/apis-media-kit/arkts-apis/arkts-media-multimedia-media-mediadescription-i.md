@@ -13,6 +13,5 @@ Provides the container definition for media description key-value pairs.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 

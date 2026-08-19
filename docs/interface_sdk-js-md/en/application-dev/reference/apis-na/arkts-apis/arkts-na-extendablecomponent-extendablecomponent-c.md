@@ -58,7 +58,7 @@ Get current UIContext.
 
 | Type | Description |
 | --- | --- |
-| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext that the custom component belongs to. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext that the custom component belongs to. |
 
 ## getUniqueId
 

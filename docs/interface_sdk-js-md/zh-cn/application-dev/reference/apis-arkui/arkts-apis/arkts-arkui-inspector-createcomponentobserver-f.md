@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inspector } from '@kit.ArkUI';
 ```
 
 ## createComponentObserver
@@ -38,7 +37,7 @@ function createComponentObserver(id: string): ComponentObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentObserver](../../apis-na/arkts-apis/arkts-na-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 **示例**
 

@@ -1,6 +1,6 @@
 # BasicPrefetcher
 
-Basic implementation of [IPrefetcher](arkts-na-arkui-prefetcher-iprefetcher-i.md). It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
+Basic implementation of [IPrefetcher](../../apis-arkui/arkts-apis/arkts-arkui-arkui-prefetcher-iprefetcher-i.md). It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
 
 **Inheritance/Implementation:** BasicPrefetcher implements IPrefetcher<T>
 
@@ -39,7 +39,7 @@ Constructs a basic prefetcher instance and optionally sets the data source.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-na-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | No | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](../../apis-arkui/arkts-apis/arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | No | Data source that supports prefetching. |
 
 ## setDataSource
 
@@ -63,7 +63,7 @@ Sets the data source to bind to this prefetcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-na-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](../../apis-arkui/arkts-apis/arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | Data source that supports prefetching. |
 
 ## visibleAreaChanged
 

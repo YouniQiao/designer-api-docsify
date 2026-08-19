@@ -32,7 +32,7 @@ Get the playback status of the current player
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Get the current playing item
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | The triggered asyncCallback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | The triggered asyncCallback. |
 
 **Error codes:**
 
@@ -258,7 +258,7 @@ Get commands supported by the current cast controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
 
 **Error codes:**
 
@@ -310,7 +310,7 @@ Unregister listeners for cast control audio renderer error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 ## offCastControlDecodingError
 
@@ -330,7 +330,7 @@ Unregister listeners for cast control decoding error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 ## offCastControlDrmError
 
@@ -350,7 +350,7 @@ Unregister listeners for cast control drm error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 ## offCastControlGenericError
 
@@ -370,7 +370,7 @@ Unregister listeners for cast control generic error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 ## offCastControlIoError
 
@@ -390,7 +390,7 @@ Unregister listeners for cast control input/output error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 ## offCastControlParsingError
 
@@ -410,7 +410,7 @@ Unregister listeners for cast control parsing error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 ## offCustomDataChange
 
@@ -430,7 +430,7 @@ Unregister listener for custom data sent from remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -594,7 +594,7 @@ Unregister playback state changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -620,7 +620,7 @@ Unregister requested playback command callback sent by remote side or media cent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
@@ -666,7 +666,7 @@ Unregister the valid commands of the casted session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
@@ -716,7 +716,7 @@ Unregister listeners for cast control audio renderer error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -745,7 +745,7 @@ Unregister listeners for cast control decoding error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -774,7 +774,7 @@ Unregister listeners for cast control drm error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -803,7 +803,7 @@ Unregister listeners for cast control generic error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -832,7 +832,7 @@ Unregister listeners for cast control input/output error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -861,7 +861,7 @@ Unregister listeners for cast control parsing error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -890,7 +890,7 @@ Unregister listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -917,7 +917,7 @@ Unregister endOfStream state callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle 'endOfStream' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle 'endOfStream' command |
 
 **Error codes:**
 
@@ -1127,7 +1127,7 @@ Unregister requested playback command callback sent by remote side or media cent
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
@@ -1184,7 +1184,7 @@ Unregister the valid commands of the casted session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | Yes | 'validCommandChange' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
@@ -1245,7 +1245,7 @@ Register listeners for cast control audio renderer error error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1273,7 +1273,7 @@ Register listeners for cast control decoding error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1304,7 +1304,7 @@ Register listeners for cast control drm error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1339,7 +1339,7 @@ Register listeners for cast control generic error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1378,7 +1378,7 @@ Register listeners for cast control input/output error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1420,7 +1420,7 @@ Register listeners for cast control parsing error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1450,7 +1450,7 @@ Register listener for custom data sent from remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -1502,7 +1502,7 @@ Register listeners for playback error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the playback error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the playback error event. |
 
 **Error codes:**
 
@@ -1560,7 +1560,7 @@ Register listener for current media item playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
 
 **Error codes:**
 
@@ -1639,7 +1639,7 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | Array&lt;string&gt; | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1665,7 +1665,7 @@ Registers a callback to be invoked whenever the playback state changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1691,7 +1691,7 @@ Register requested playback command callback sent by remote side or media center
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
@@ -1717,7 +1717,7 @@ Register listens for playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
 
 **Error codes:**
 
@@ -1743,7 +1743,7 @@ Register the valid commands of the casted session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
@@ -1799,7 +1799,7 @@ Register listeners for cast control audio renderer error error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1831,7 +1831,7 @@ Register listeners for cast control decoding error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1866,7 +1866,7 @@ Register listeners for cast control drm error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1905,7 +1905,7 @@ Register listeners for cast control generic error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1948,7 +1948,7 @@ Register listeners for cast control input/output error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -1994,7 +1994,7 @@ Register listeners for cast control parsing error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the cast control error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
@@ -2028,7 +2028,7 @@ Register listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2055,7 +2055,7 @@ Register endOfStream state callback. Application needs update the new media reso
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle 'endOfStream' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'endOfStream' command |
 
 **Error codes:**
 
@@ -2085,7 +2085,7 @@ Register listeners for playback error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Type of the 'error' to listen for. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to listen for the playback error event. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the playback error event. |
 
 **Error codes:**
 
@@ -2151,7 +2151,7 @@ Register listener for current media item playback events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Callback used to listen for current item changed. |
 
 **Error codes:**
 
@@ -2181,7 +2181,7 @@ Register playback command callback sent by remote side or media center. Applicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle 'playNext' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'playNext' command |
 
 **Error codes:**
 
@@ -2211,7 +2211,7 @@ Register playback command callback sent by remote side or media center. Applicat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle 'playPrevious' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'playPrevious' command |
 
 **Error codes:**
 
@@ -2270,7 +2270,7 @@ Register requested playback command callback sent by remote side or media center
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
@@ -2300,7 +2300,7 @@ Register listens for playback events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Type of the 'seekDone' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
 
 **Error codes:**
 
@@ -2328,7 +2328,7 @@ Register the valid commands of the casted session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | Yes | 'validCommandChange' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
@@ -2394,7 +2394,7 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -2494,7 +2494,7 @@ Destroy the controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -2549,7 +2549,7 @@ Send control commands to remote player
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | Yes | The command to be send. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -2650,7 +2650,7 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 

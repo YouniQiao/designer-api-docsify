@@ -30,7 +30,7 @@ Sets the metered network access policy for the application specified by a given 
 | --- | --- | --- | --- |
 | uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
 | policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | Network access policy for the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

@@ -22,5 +22,5 @@ Callback function called when inserting a data record into the database.
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the position where the data is to insert. |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Indicates the data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Returns the index of the newly inserted data record. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Returns the index of the newly inserted data record. |
 

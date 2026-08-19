@@ -28,7 +28,7 @@ Obtains the bundle information based on the given bundle name and bundle flags. 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | int | Yes | Type of the bundle information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BundleInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is the bundle information. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is the bundle information. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -113,7 +113,7 @@ Obtains the BundleInfo based on the given bundle name, bundle flags, and user ID
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | int | Yes | Type of the bundle information to obtain. |
 | userId | int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BundleInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is the bundle information. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is the bundle information. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

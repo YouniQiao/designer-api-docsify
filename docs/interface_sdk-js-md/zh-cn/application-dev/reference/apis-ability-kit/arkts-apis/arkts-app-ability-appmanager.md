@@ -11,7 +11,6 @@ appManager模块提供App管理的能力，包括查询当前是否处于稳定�
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

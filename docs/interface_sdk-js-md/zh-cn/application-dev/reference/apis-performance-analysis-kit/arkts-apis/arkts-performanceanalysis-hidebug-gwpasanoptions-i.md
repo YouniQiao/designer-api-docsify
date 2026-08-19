@@ -11,7 +11,6 @@ GWP-ASan配置项。可用于配置是否使能、采样频率，以及最大分
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## alwaysEnabled

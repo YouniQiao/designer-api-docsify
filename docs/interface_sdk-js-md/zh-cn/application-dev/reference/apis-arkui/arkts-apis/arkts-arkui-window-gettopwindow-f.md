@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
-import { floatView } from '@kit.ArkUI';
-import { window } from '@kit.ArkUI';
 ```
 
 ## getTopWindow
@@ -32,7 +29,7 @@ function getTopWindow(callback: AsyncCallback<Window>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前应用内最后显示的窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前应用内最后显示的窗口对象。 |
 
 **示例**
 
@@ -170,7 +167,7 @@ function getTopWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用上下文信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前应用内最后显示的窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前应用内最后显示的窗口对象。 |
 
 **示例**
 

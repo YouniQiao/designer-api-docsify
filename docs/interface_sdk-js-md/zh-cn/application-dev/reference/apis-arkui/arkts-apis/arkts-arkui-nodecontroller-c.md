@@ -74,7 +74,7 @@ aboutToResize?(size: Size): void
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-当NodeController绑定的NodeContainer创建时触发此回调。回调方法将返回一个节点，该节点将被挂载至 NodeContainer。 或者可以通过NodeController的rebuild()方法触发回调。 > **说明：** > > NodeContainer不支持跨实例复用。如果出现跨实例复用 > NodeContainer，传入 > NodeContainer的[NodeController](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md)触发 > [makeNode](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者 > 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
+当NodeController绑定的NodeContainer创建时触发此回调。回调方法将返回一个节点，该节点将被挂载至 NodeContainer。 或者可以通过NodeController的rebuild()方法触发回调。 > **说明：** > > NodeContainer不支持跨实例复用。如果出现跨实例复用 > NodeContainer，传入 > NodeContainer的[NodeController](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md)触发 > [makeNode](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象可能为undefined，此时需要开发者 > 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 11
 
@@ -90,13 +90,13 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 回调该方法时，绑定NodeContainer的UI上下文。跨实 例复用NodeContainer时，该参数可能为undefined，需要开发者自行判断。 |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 回调该方法时，绑定NodeContainer的UI上下文。跨实 例复用NodeContainer时，该参数可能为undefined，需要开发者自行判断。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 一个FrameNode对象，返回的节点将被挂载至 [NodeContainer]{ |
+| [FrameNode](arkts-arkui-framenode-c.md) | 一个FrameNode对象，返回的节点将被挂载至 [NodeContainer]{ |
 
 ## onAttach
 
@@ -260,7 +260,7 @@ onWillUnbind?(containerId: number): void
 rebuild(): void
 ```
 
-调用此接口通知NodeContainer组件重新回调 [makeNode](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。 > **说明：** > > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关，需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。 > > 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)的 > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask)方法明确调用时的UI上下文。
+调用此接口通知NodeContainer组件重新回调 [makeNode](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。 > **说明：** > > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关，需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。 > > 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)的 > [runScopedTask](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#runscopedtask)方法明确调用时的UI上下文。
 
 **起始版本：** 11
 

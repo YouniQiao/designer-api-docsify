@@ -79,7 +79,7 @@ Unsubscribes from event notifications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | No | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | Callback used to listen for the event notified event. |
 
 ## onEventNotify
 
@@ -103,7 +103,7 @@ Subscribes to event notifications. This event is accessible only to system appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
 
 ## readDescriptor
 

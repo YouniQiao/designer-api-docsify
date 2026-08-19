@@ -30,7 +30,7 @@ Subscribe the security event.
 | --- | --- | --- | --- |
 | type | 'securityEventOccur' | Yes |  |
 | securityEventInfo | [SecurityEventInfo](arkts-securityguard-securityguard-securityeventinfo-i-sys.md) | Yes | Indicates the subscribed event information. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | Yes | Indicates the listener when the security event occurs. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | Yes | Indicates the listener when the security event occurs. |
 
 **Error codes:**
 

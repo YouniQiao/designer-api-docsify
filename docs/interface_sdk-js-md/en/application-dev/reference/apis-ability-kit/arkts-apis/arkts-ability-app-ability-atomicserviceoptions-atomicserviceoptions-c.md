@@ -24,7 +24,7 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 
 Operation class for receiving the result of opening an atomic service.
 
-**Type:** [CompletionHandlerForAtomicService](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
+**Type:** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 
 **Since:** 23
 

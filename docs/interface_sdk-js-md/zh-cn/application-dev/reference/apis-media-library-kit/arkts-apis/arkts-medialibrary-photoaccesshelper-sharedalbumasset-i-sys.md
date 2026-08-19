@@ -13,7 +13,6 @@ Defines the shared album asset
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumId

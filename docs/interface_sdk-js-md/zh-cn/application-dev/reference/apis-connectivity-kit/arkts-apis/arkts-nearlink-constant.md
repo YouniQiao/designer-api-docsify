@@ -13,7 +13,6 @@ nearlinkConstant的定义。
 ## 导入模块
 
 ```TypeScript
-import { nearlinkConstant } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

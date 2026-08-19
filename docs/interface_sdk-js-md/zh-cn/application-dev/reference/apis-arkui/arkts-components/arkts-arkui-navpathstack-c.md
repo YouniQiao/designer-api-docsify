@@ -804,7 +804,7 @@ removeByName(name: string): number
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的 onReady回调中获取，也可以在 [NavDestinationInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-navdestinationinfo-i.md)中获取。
+将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的 onReady回调中获取，也可以在 [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md)中获取。
 
 **起始版本：** 12
 

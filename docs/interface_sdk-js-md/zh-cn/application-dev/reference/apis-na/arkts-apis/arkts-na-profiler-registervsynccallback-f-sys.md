@@ -24,5 +24,5 @@ function registerVsyncCallback(callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调信息为带有ui更新信息的json字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | 回调信息为带有ui更新信息的json字符串。 |
 

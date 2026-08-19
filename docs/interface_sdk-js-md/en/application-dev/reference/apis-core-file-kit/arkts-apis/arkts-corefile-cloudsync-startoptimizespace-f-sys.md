@@ -30,7 +30,7 @@ Optimizes local resources that have been synced to the cloud and optimizes local
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | optimizePara | [OptimizeSpaceParam](arkts-corefile-cloudsync-optimizespaceparam-i-sys.md) | Yes | Optimizes parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OptimizeSpaceProgress](arkts-corefile-cloudsync-optimizespaceprogress-i-sys.md)&gt; | No | Callback used to return the optimization progress. By default , error code 401 is returned and no clearing task is executed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OptimizeSpaceProgress](arkts-corefile-cloudsync-optimizespaceprogress-i-sys.md)&gt; | No | Callback used to return the optimization progress. By default , error code 401 is returned and no clearing task is executed. |
 
 **Return value:**
 

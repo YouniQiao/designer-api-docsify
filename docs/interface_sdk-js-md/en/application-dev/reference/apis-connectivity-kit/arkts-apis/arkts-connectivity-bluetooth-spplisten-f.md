@@ -49,7 +49,7 @@ Creates a Bluetooth server listening socket.
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
 | option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
 
 **Examples**
 

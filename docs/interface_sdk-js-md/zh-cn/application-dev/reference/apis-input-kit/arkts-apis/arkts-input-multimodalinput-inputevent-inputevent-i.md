@@ -1,6 +1,6 @@
-# InputEvent(Input Event)
+# InputEvent(输入事件)
 
-设备上报的基本事件。
+输入事件。
 
 **起始版本：** 23
 
@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { InputEvent } from '@kit.InputKit';
-import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## actionTime

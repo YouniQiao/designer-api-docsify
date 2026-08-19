@@ -6,7 +6,7 @@ Asynchronous callback interface.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)
+**Substitutes:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)
 
 <!--Device-resourceManager-export interface AsyncCallback--><!--Device-resourceManager-export interface AsyncCallback-End-->
 
@@ -30,7 +30,7 @@ Defines an asynchronous callback that carries an error parameter and asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)
+**Substitutes:** [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)
 
 <!--Device-AsyncCallback-(err: Error, data: T): void--><!--Device-AsyncCallback-(err: Error, data: T): void-End-->
 

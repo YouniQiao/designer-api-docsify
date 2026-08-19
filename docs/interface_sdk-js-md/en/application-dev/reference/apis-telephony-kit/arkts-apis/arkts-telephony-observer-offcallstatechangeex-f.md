@@ -24,7 +24,7 @@ Cancel callback when the telCall state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TelCallState&gt; | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | No | Indicates the callback to unsubscribe from the callStateChangeEx event. |
 
 **Error codes:**
 

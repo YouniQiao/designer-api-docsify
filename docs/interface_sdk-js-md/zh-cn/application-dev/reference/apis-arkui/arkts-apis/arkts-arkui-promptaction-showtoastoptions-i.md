@@ -11,7 +11,6 @@ Toast的选项。
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## alignment
@@ -240,7 +239,7 @@ showMode?: ToastShowMode
 systemMaterial?: SystemUiMaterial
 ```
 
-设置组件的系统材质。 <br/>默认值：如果主动设置了backgroundBlurStyle或backgroundColor接口，默认值是无系统材质效果，否则默认值 是style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。 <br/>**说明：** &lt;br /&gt;不同系统材质对应不同的属性影响效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
+设置组件的系统材质。 <br/>默认值：如果主动设置了backgroundBlurStyle或backgroundColor接口，默认值是无系统材质效果，否则默认值 是style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。 <br/>**说明：** &lt;br /&gt;不同系统材质对应不同的属性影响效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** SystemUiMaterial
 

@@ -901,7 +901,7 @@ Gets the ringtone player.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | type | RingtoneType | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
 
 **Examples**
 
@@ -1004,7 +1004,7 @@ Gets the ringtone uri.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | type | RingtoneType | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
 
 **Examples**
 
@@ -1808,7 +1808,7 @@ Sets the ringtone uri to system.
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
 | type | RingtoneType | Yes | Ringtone type to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
 
 **Examples**
 

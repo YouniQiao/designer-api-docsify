@@ -26,7 +26,7 @@ Checks whether the called number is an emergency number based on the phone numbe
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
 | options | [EmergencyNumberOptions](arkts-telephony-call-emergencynumberoptions-i.md) | Yes | Emergency number options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the called number is an emergency number, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the called number is an emergency number, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -124,7 +124,7 @@ Checks whether the called number is an emergency number. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the called number is an emergency number, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the called number is an emergency number, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

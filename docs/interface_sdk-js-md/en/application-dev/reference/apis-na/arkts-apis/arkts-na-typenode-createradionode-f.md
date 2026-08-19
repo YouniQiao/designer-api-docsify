@@ -22,7 +22,7 @@ Create a FrameNode of Radio type. On API 26.0.0 and above, It can also create a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
 | options | [FrameNodeOptions](arkts-na-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**

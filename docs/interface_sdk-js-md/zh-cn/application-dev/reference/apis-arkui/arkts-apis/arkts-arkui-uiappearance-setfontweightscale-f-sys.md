@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## setFontWeightScale

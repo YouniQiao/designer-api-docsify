@@ -13,7 +13,6 @@ aautoStartupManager模块提供获取自身应用的开机自启状态以及检�
 ## 导入模块
 
 ```TypeScript
-import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

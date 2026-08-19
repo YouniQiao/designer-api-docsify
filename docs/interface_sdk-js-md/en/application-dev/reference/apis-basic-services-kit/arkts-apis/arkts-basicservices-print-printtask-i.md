@@ -34,7 +34,7 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -63,7 +63,7 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -121,7 +121,7 @@ Unregister event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The callback function for print task change event |
 
 **Error codes:**
 
@@ -151,7 +151,7 @@ Unsubscribes from the block events of a print job. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job is blocked. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the block events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the block events of a specified print job. |
 
 **Error codes:**
 
@@ -216,7 +216,7 @@ Unsubscribes from the cancellation events of a print job. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print job is canceled. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the cancellation events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the cancellation events of a specified print job. |
 
 **Error codes:**
 
@@ -281,7 +281,7 @@ Unsubscribes from the failure events of a print job. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job is failed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the failure events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the failure events of a specified print job. |
 
 **Error codes:**
 
@@ -346,7 +346,7 @@ Unsubscribes from the success events of a print job. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the print job is successful. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to unsubscribe from the success events of a specified print job. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the success events of a specified print job. |
 
 **Error codes:**
 
@@ -410,7 +410,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
@@ -439,7 +439,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
@@ -468,7 +468,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
@@ -497,7 +497,7 @@ Register event callback when the current print task is in process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function for print task change event |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The callback function for print task change event |
 
 **Error codes:**
 
@@ -527,7 +527,7 @@ Subscribes to the block events of a print job. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'block' | Yes | Listening type.<br>The value is fixed at **'block'**.<br>It means that the print job is blocked. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is blocked. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is blocked. |
 
 **Error codes:**
 
@@ -592,7 +592,7 @@ Subscribes to the cancellation events of a print job. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cancel' | Yes | Listening type.<br>The value is fixed at **'cancel'**.<br>It means that the print job is canceled. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is canceled. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is canceled. |
 
 **Error codes:**
 
@@ -657,7 +657,7 @@ Subscribes to the failure events of a print job. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Listening type.<br>The value is fixed at **'fail'**.<br>It means that the print job is failed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is failed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is failed. |
 
 **Error codes:**
 
@@ -722,7 +722,7 @@ Subscribes to the success events of a print job. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'succeed' | Yes | Listening type.<br>The value is fixed at **'succeed'**.<br>It means that the print job is successful. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is successful. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is successful. |
 
 **Error codes:**
 

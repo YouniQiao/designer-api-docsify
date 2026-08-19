@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getAllLauncherAbilityInfos
@@ -33,7 +32,7 @@ function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Arra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。取值范围：大于等于0。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回程序信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回程序信息。 |
 
 
 ## getAllLauncherAbilityInfos

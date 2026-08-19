@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## createX509CRL
@@ -29,7 +26,7 @@ function createX509CRL(inStream: EncodingBlob, callback: AsyncCallback<X509CRL>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | 表示证书吊销列表序列化数据。当前支持的数据长度不超过8192字节。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | 是 | 回调函数。当创建X.509证书吊销列表对象成功时，err为undefined，data为获取到的 X509CRL实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | 是 | 回调函数。当创建X.509证书吊销列表对象成功时，err为undefined，data为获取到的 X509CRL实例；否则为错误对象。 |
 
 **错误码：**
 

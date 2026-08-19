@@ -37,7 +37,7 @@ Constructor of EditableLeftIconV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableLeftIconV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | No | The options of the left icon |
+| options | [EditableLeftIconV2Options](arkts-na-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | No | The options of the left icon |
 
 ## defaultFocus
 
@@ -71,7 +71,7 @@ Whether to get focus by default.
 
 Icon type, Back or Cancel.
 
-**Type:** [EditableLeftIconTypeV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
+**Type:** [EditableLeftIconTypeV2](arkts-na-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **Default:** EditableLeftIconTypeV2.Back
 
@@ -94,7 +94,7 @@ Icon type, Back or Cancel.
 
 Callback function when click on the left icon.
 
-**Type:** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

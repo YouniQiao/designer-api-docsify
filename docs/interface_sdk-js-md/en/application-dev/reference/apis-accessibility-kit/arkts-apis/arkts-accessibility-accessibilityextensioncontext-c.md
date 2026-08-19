@@ -31,7 +31,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isAccessibilityFocus | boolean | Yes | Whether the element obtained is an accessibility focus element. The value **true** indicates that it is an accessibility focus element, and **false** indicates the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the focus element is obtained successfully, **err** is **undefined** and **data** is the corresponding focus element; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the focus element is obtained successfully, **err** is **undefined** and **data** is the corresponding focus element; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -130,7 +130,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the focus element. If the operation is successful, **err** is **undefined** and **data** is the current focus element; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the focus element. If the operation is successful, **err** is **undefined** and **data** is the current focus element; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -178,7 +178,7 @@ Obtains the root element of the specified window. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | int | Yes | Number of the specified window. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. If the root node element is obtained successfully, **err** is **undefined** and **data** is the root node element of the specified window; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. If the root node element is obtained successfully, **err** is **undefined** and **data** is the root node element of the specified window; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -277,7 +277,7 @@ Obtains the root element of the currently active window. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the root node element is obtained successfully, err is undefined and data is the root node element of the currently active window; otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the root node element is obtained successfully, err is undefined and data is the root node element of the currently active window; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -325,7 +325,7 @@ Obtains all windows on the specified display. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayId | long | Yes | ID of the specified screen, used to identify the screen for which to obtain windows. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. If the windows are obtained successfully, **err** is **undefined** and **data** is all windows on the specified screen; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. If the windows are obtained successfully, **err** is **undefined** and **data** is all windows on the specified screen; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -418,7 +418,7 @@ Obtains all windows on the default main display. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback invoked to return the result. If the window is obtained successfully, **err** is **undefined** and **data** is all windows of the default home screen; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback invoked to return the result. If the window is obtained successfully, **err** is **undefined** and **data** is all windows of the default home screen; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -465,7 +465,7 @@ Injects a gesture, applicable to scenarios where an accessibility app performs t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the gesture injection is successful, **err** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the gesture injection is successful, **err** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -613,7 +613,7 @@ Sets the bundle name of the concerned app. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetNames | Array&lt;string&gt; | Yes | Package name of the app to focus on. After setting, the service receives accessibility events only from the focused app. If not set, accessibility events from all apps are received by default. To cancel the focus on an app, pass an empty array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the target package name is set successfully, **err** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the target package name is set successfully, **err** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 

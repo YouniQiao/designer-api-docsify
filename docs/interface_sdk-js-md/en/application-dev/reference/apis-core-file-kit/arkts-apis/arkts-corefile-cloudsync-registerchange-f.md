@@ -27,7 +27,7 @@ Subscribes to the change of a file. The callback returns the changed data.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to download. |
 | recursion | boolean | Yes | Whether to listen for the change of the URI, subfiles, and subdirectories. The value **true** means to listen for the change of the URI, subfiles, and subdirectories; the value **false** means to only listen for the change of the URI. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeData&gt; | Yes | Callback used to return the changed data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | Yes | Callback used to return the changed data. |
 
 **Error codes:**
 

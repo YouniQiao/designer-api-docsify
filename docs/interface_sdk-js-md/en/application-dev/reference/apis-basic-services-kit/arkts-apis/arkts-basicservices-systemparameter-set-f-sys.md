@@ -32,7 +32,7 @@ Sets a value for the specified key. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | key | string | Yes | Target key. |
 | value | string | Yes | Value to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## set

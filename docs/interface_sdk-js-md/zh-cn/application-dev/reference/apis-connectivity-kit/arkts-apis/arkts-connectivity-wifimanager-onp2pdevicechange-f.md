@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## onP2pDeviceChange
@@ -27,7 +25,7 @@ function onP2pDeviceChange(callback: Callback<WifiP2pDevice>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | 是 | 状态改变回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pDevice&gt; | 是 | 状态改变回调函数。 |
 
 **错误码：**
 

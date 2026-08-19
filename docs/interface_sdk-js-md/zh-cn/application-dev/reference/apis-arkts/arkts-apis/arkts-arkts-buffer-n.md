@@ -11,7 +11,6 @@ Buffer对象用于表示固定长度的字节序列，是专门存放二进制�
 ## 导入模块
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
 ```
 
 ## 汇总

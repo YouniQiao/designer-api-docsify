@@ -1,6 +1,6 @@
 # @ohos.multimodalInput.inputDevice
 
-本模块提供输入设备管理能力，包括监听输入设备的连接和断开状态，查询设备名称等输入设备信息。 > **说明：**
+本模块提供输入设备管理能力，包括查询输入设备信息，设置/获取键盘按键重复时延，设置输入设备的开关状态等。
 
 **起始版本：** 23
 
@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## 汇总
@@ -35,9 +33,9 @@ import { inputDeviceCooperate } from '@kit.InputKit';
 | [getKeyboardType](arkts-input-inputdevice-getkeyboardtype-f.md) | 获取输入设备的键盘类型，使用Promise异步回调。 |
 | [getKeyboardTypeSync](arkts-input-inputdevice-getkeyboardtypesync-f.md) | 获取输入设备的键盘类型。 |
 | [isFunctionKeyEnabled](arkts-input-inputdevice-isfunctionkeyenabled-f.md) | 检查功能键（如：CapsLock键）是否使能。使用Promise异步回调。 |
-| [offChange](arkts-input-inputdevice-offchange-f.md) | Stops listening for an input device event. |
+| [offChange](arkts-input-inputdevice-offchange-f.md) | 取消监听输入设备的热插拔事件。在应用退出前调用，取消监听。 |
 | [off_change](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md#change) | 取消监听输入设备的热插拔事件。在应用退出前调用，取消监听。使用callback异步回调。 |
-| [onChange](arkts-input-inputdevice-onchange-f.md) | Starts listening for an input device event. |
+| [onChange](arkts-input-inputdevice-onchange-f.md) | 注册监听输入设备的热插拔事件，使用时需连接鼠标、键盘、触摸屏等外部设备。 |
 | [on_change](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md#change) | 注册监听输入设备的热插拔事件，使用时需连接鼠标、键盘、触摸屏等外部设备。使用callback异步回调。 |
 | [setFunctionKeyEnabled](arkts-input-inputdevice-setfunctionkeyenabled-f.md) | 设置功能键（如：CapsLock键）使能状态。使用Promise异步回调。 |
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md) | 查询指定输入设备是否支持指定按键，使用callback异步回调。 |

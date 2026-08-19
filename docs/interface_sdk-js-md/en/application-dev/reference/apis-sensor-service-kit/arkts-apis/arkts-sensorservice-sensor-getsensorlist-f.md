@@ -24,7 +24,7 @@ Obtains information about all sensors on the device. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;Sensor&gt;&gt; | Yes | Callback used to return the sensor list. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Sensor&gt;&gt; | Yes | Callback used to return the sensor list. |
 
 **Error codes:**
 

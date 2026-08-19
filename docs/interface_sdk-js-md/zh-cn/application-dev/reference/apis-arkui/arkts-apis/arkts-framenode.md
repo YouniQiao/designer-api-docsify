@@ -1,6 +1,6 @@
 # FrameNode
 
-typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础接口进行自定义的挂载，使用占位容器进行显示。适用于需要通过代码动态创建具体类型组件节点并进行自定义挂载的场景。 使用typeNode创建Text、Image、 Select、Toggle节点时，当传入的 [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
+typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础接口进行自定义的挂载，使用占位容器进行显示。适用于需要通过代码动态创建具体类型组件节点并进行自定义挂载的场景。 使用typeNode创建Text、Image、 Select、Toggle节点时，当传入的 [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 ## 汇总
 
@@ -18,7 +18,7 @@ typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础
 | [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | 该接口用于配置或查询FrameNode的跨语言访问权限。例如，针对ArkTS语言创建的节点，可通过该接口控制是否允许通过非ArkTS语言进行属性访问或修改。 |
 | [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) | 组件的交互事件绑定状态信息。如果当前节点上绑定了所要查询的交互事件，调用查询接口时返回一个InteractionEventBindingInfo对象，指示事件绑定详细信息。 |
 | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 描述组件的布局约束。 |
-| [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) | TypedFrameNode继承自[FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md)，用于声明具体类型的FrameNode，支持Text、Image、Button、Column等多种组件类型，适用于通过代码动态创建具体类型组件节 点的场景。 |
+| [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) | TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-c.md)，用于声明具体类型的FrameNode，支持Text、Image、Button、Column等多种组件类型，适用于通过代码动态创建具体类型组件节 点的场景。 |
 
 ### 枚举
 
@@ -32,5 +32,5 @@ typeNode提供创建具体类型的FrameNode能力，可通过FrameNode的基础
 
 | 名称 | 说明 |
 | --- | --- |
-| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | 当UI状态发生变化时触发的回调。接收回调触发时的[UIState](../../apis-na/arkts-apis/arkts-na-framenode-uistate-e.md)状态，该参数的取值为UIState状态枚举值或其运算结果。 |
+| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | 当UI状态发生变化时触发的回调。接收回调触发时的[UIState](arkts-arkui-framenode-uistate-e.md)状态，该参数的取值为UIState状态枚举值或其运算结果。 |
 

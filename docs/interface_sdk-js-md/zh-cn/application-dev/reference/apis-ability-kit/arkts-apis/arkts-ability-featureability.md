@@ -13,7 +13,6 @@ FeatureAbility模块提供与用户进行交互的Ability的能力，包括启�
 ## 导入模块
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## 汇总

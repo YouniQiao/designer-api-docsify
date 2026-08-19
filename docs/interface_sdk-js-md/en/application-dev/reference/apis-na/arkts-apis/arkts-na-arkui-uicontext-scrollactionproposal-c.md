@@ -2,7 +2,7 @@
 
 Class ScrollActionProposal. The default scroll direction is forward.
 
-**Inheritance/Implementation:** ScrollActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**Inheritance/Implementation:** ScrollActionProposal extends [TargetedGestureProposal](arkts-na-arkui-uicontext-targetedgestureproposal-c.md)
 
 **Since:** 26.0.0
 

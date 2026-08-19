@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Vector } from '@kit.ArkTS';
 ```
 
 ## 汇总

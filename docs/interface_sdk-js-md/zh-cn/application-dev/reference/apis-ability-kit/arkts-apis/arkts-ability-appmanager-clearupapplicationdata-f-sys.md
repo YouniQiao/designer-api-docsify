@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { appManager } from '@kit.AbilityKit';
 ```
 
 ## clearUpApplicationData
@@ -91,7 +90,7 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调方式返回接口运行结果，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

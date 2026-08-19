@@ -219,7 +219,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -259,7 +259,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
 | options | [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -463,7 +463,7 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -506,7 +506,7 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
 | options | [WriteOptions](../../apis-na/arkts-apis/arkts-na-file-fs-writeoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
 
 **Error codes:**
 

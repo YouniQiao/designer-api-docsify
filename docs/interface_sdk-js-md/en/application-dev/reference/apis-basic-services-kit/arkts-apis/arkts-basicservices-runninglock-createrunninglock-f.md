@@ -32,7 +32,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) name. A recommended name consists of the package or class name and a suffix. |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
 **Examples**
 

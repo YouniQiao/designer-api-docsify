@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createMicInAudioCapturer

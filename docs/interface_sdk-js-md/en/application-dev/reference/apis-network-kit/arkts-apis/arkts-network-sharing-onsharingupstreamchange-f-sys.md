@@ -29,7 +29,7 @@ Subscribes to upstream network changes. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sharingUpstreamChange' | Yes | Event type.<br/> The value **sharingUpstreamChange** indicates an upstream network change event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | Yes | Callback invoked when the upstream network changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | Callback invoked when the upstream network changes. |
 
 **Error codes:**
 

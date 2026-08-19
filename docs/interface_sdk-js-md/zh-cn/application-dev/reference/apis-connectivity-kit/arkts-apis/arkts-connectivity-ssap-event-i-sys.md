@@ -13,7 +13,6 @@ SSAP事件。
 ## 导入模块
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## eventUuid

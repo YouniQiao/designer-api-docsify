@@ -32,7 +32,7 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | observerId | number | 是 | 表示观察者的编号代码。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的callback回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示指定的callback回调方法。 |
 
 **示例**
 

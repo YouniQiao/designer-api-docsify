@@ -11,7 +11,6 @@ PromptOptionsV2用于定义异常提示组件的配置信息。
 ## 导入模块
 
 ```TypeScript
-import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2 } from '@kit.ArkUI';
 ```
 
 ## constructor

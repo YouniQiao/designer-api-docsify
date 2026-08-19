@@ -37,7 +37,7 @@ Sets the data source to bind to this prefetcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-na-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](../../apis-arkui/arkts-apis/arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | Data source that supports prefetching. |
 
 ## visibleAreaChanged
 

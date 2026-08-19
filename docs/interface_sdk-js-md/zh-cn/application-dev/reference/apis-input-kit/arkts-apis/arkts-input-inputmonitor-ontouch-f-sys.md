@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## onTouch
@@ -28,7 +27,7 @@ function onTouch(receiver: TouchEventReceiver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receiver | [TouchEventReceiver](arkts-input-inputmonitor-toucheventreceiver-t-sys.md) | 是 | 回调函数，异步上报触摸屏输入事件。 |
+| receiver | [TouchEventReceiver](arkts-input-inputmonitor-toucheventreceiver-t-sys.md) | 是 | 回调函数，返回触摸屏输入事件。 |
 
 **错误码：**
 

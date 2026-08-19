@@ -23,7 +23,7 @@ actionPhases: Array<GestureActionPhase>
 
 The gesture callback phases want to monitor. Only the specific action phases can be notified when the gesture is triggered. If empty array provided, the register will has no any effect.
 
-**Type:** Array&lt;[GestureActionPhase](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
+**Type:** Array&lt;[GestureActionPhase](arkts-na-arkui-uicontext-gestureactionphase-e.md)&gt;
 
 **Since:** 26.0.0
 

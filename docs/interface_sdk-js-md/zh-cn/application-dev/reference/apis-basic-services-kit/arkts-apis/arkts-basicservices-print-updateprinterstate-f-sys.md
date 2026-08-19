@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
 ```
 
 ## updatePrinterState
@@ -30,7 +29,7 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 | --- | --- | --- | --- |
 | printerId | string | 是 | 表示打印机ID。 |
 | state | [PrinterState](arkts-basicservices-print-printerstate-e.md) | 是 | 表示打印机状态。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步更新打印机状态之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步更新打印机状态之后的回调。 |
 
 **错误码：**
 

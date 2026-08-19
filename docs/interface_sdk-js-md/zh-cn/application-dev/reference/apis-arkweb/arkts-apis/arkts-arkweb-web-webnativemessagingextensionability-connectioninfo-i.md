@@ -11,7 +11,6 @@ Web原生消息连接的信息对象。
 ## 导入模块
 
 ```TypeScript
-import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## bundleName

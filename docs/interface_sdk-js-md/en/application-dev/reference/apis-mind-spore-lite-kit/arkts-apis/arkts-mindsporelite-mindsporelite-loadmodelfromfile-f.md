@@ -83,7 +83,7 @@ Create a Model instance from file path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | string | Yes | model indicates model path to be loaded |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -133,7 +133,7 @@ Create a Model instance from file path.
 | --- | --- | --- | --- |
 | model | string | Yes | model indicates model path to be loaded |
 | context | Context | Yes | context indicates model context information |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 

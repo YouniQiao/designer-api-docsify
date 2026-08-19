@@ -29,7 +29,7 @@ Obtains the information about a specified network interface. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Network interface. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes | Callback used to return the result. Returns information about the specified network interface. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md)&gt; | Yes | Callback used to return the result. Returns information about the specified network interface. |
 
 **Error codes:**
 

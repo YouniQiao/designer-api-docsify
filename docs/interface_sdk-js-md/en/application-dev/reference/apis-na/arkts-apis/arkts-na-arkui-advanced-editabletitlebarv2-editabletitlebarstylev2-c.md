@@ -37,7 +37,7 @@ Constructor of EditableTitleBarStyleV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableTitleBarStyleV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | No | The style options of the title bar |
+| options | [EditableTitleBarStyleV2Options](arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | No | The style options of the title bar |
 
 ## backgroundBlurStyle
 

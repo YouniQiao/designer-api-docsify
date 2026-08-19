@@ -36,7 +36,7 @@ offAsyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability异步注册后触发回调。非空代表取消订阅异步对应回调。 ArkTS-Sta模式下，可传入undefined，表示取消所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability异步注册后触发回调。非空代表取消订阅异步对应回调。 ArkTS-Sta模式下，可传入undefined，表示取消所有回调。 |
 
 ## offSyncReceiverRegister
 
@@ -62,7 +62,7 @@ offSyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability同步注册后触发回调。非空代表取消订阅同步对应回调。 ArkTS-Sta模式下，可传入undefined，表示取消所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空代表取消订阅所有扩展Ability同步注册后触发回调。非空代表取消订阅同步对应回调。 ArkTS-Sta模式下，可传入undefined，表示取消所有回调。 |
 
 ## onAsyncReceiverRegister
 
@@ -88,7 +88,7 @@ onAsyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅扩展Ability注册setReceiveDataCallback后触发的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅扩展Ability注册setReceiveDataCallback后触发的回调。 |
 
 ## onSyncReceiverRegister
 
@@ -114,7 +114,7 @@ onSyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。扩展Ability注册setReceiveDataForResultCallback后触发的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。扩展Ability注册setReceiveDataForResultCallback后触发的回调。 |
 
 ## send
 

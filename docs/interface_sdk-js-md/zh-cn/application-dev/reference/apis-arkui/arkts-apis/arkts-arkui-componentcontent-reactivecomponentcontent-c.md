@@ -1,6 +1,6 @@
 # ReactiveComponentContent
 
-ReactiveComponentContent继承自Content，是一个用于动态承载和复用 UI内容的容器组件。它通过@Builder函数构建UI，并利用[ReactiveBuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-reactivebuildernode-c.md)生成和管理组件树。该组件的核心价值在于为动态内容 提供完整的生命周期管理，使其能够融入ArkUI的组件复用体系，特别适用于长列表等需要高性能渲染的场景。
+ReactiveComponentContent继承自Content，是一个用于动态承载和复用 UI内容的容器组件。它通过@Builder函数构建UI，并利用[ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md)生成和管理组件树。该组件的核心价值在于为动态内容 提供完整的生命周期管理，使其能够融入ArkUI的组件复用体系，特别适用于长列表等需要高性能渲染的场景。
 
 **继承/实现关系：** ReactiveComponentContent extends Content
 
@@ -32,9 +32,9 @@ ReactiveComponentContent的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | builder | WrappedBuilder&lt;T&gt; | 是 | 封装带参builder函数的WrappedBuilder对象。 |
-| config | [BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md) | 是 | 配置Builder的构建行为，BuildOptions中所有属性均为可选。 |
+| config | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | 配置Builder的构建行为，BuildOptions中所有属性均为可选。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数。负责将外部数据传递给构造函数中指定的WrappedBuilder&lt;T&gt;的builder函数。类型T需与 WrappedBuilder&lt;T&gt;中指定的参数类型保持一致。支持多个入参。不传入参数时默认为空数组[]。 |
 
 **示例**

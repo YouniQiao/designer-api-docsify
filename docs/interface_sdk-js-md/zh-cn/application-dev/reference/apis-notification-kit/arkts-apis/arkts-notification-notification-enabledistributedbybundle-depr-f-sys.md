@@ -36,7 +36,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | enable | boolean | 是 | 是否支持。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 应用程序是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 应用程序是否支持分布式通知的回调函数。 |
 
 
 ## enableDistributedByBundle

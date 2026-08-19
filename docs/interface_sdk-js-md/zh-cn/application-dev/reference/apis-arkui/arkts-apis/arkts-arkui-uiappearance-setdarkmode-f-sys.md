@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## setDarkMode
@@ -29,7 +28,7 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [DarkMode](../../apis-na/arkts-apis/arkts-na-uiappearance-darkmode-e.md) | 是 | indicates the dark-mode to set |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | the callback of setDarkMode |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | the callback of setDarkMode |
 
 **错误码：**
 

@@ -205,7 +205,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | options | [FrameNodeOptions](arkts-na-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation<br>**Since:** 26.0.0 |
 
 ## convertPosition
@@ -375,7 +375,7 @@ Create a specified number of FrameNode objects and return them.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
 | count | int | Yes | the number of FrameNode objects to create. Returns an empty array if count &lt;= 0 or is not an integer. |
 
 **Return value:**

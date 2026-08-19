@@ -78,7 +78,7 @@ type?: NodeRenderType
 
 节点的渲染类型。 默认值：NodeRenderType.RENDER_TYPE_DISPLAY
 
-**类型：** [NodeRenderType](arkts-na-buildernode-noderendertype-e.md)
+**类型：** [NodeRenderType](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-noderendertype-e.md)
 
 **起始版本：** 23
 

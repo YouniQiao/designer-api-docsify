@@ -29,7 +29,7 @@ Get the preferred network for the specified SIM card slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md)&gt; | Yes | Indicates the callback for getting the preferred network mode to obtain. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md)&gt; | Yes | Indicates the callback for getting the preferred network mode to obtain. |
 
 **Error codes:**
 

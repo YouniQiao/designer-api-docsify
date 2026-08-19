@@ -36,7 +36,7 @@ export declare function LazyColumnLayout(
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | 懒加载列布局的属性 |
+| [LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | 懒加载列布局的属性 |
 
 
 ## LazyColumnLayout
@@ -65,12 +65,12 @@ export declare function LazyColumnLayout(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | CustomBuilderT&lt;[LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md)&gt; | 是 | The style to create a LazyColumnLayout. |
+| style_ | CustomBuilderT&lt;[LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md)&gt; | 是 | The style to create a LazyColumnLayout. |
 | content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-na-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | LazyColumnLayout的属性。 |
+| [LazyColumnLayoutAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | LazyColumnLayout的属性。 |
 

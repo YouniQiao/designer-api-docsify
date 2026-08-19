@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

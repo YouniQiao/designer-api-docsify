@@ -91,7 +91,7 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | candidate config. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates call back of addCandidateConfig. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates call back of addCandidateConfig. |
 
 **Error codes:**
 

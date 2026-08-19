@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## 汇总

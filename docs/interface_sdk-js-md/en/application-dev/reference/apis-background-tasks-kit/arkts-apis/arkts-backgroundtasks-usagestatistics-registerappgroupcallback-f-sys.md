@@ -28,8 +28,8 @@ Register appGroup change callback to service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Register appGroup change callback to service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
+| groupCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppGroupCallbackInfo](arkts-backgroundtasks-usagestatistics-appgroupcallbackinfo-i-sys.md)&gt; | Yes | callback of AppGroupCallbackInfo when the group of app changed. |
 
 **Return value:**
 

@@ -196,13 +196,13 @@ let value: number = storage.get('PropA') as number; // 47
 static getShared(): LocalStorage
 ```
 
-Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage. > **NOTE：**> Since API version 12, you can use the > [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage) > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
+Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) instance shared across the current stage. > **NOTE：**> Since API version 12, you can use the > [getSharedLocalStorage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getsharedlocalstorage) > API in [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) to specify the UI execution context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
+**Substitutes:** [getSharedLocalStorage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getsharedlocalstorage)
 
 **Model restriction:** This API can be used only in the stage model.
 

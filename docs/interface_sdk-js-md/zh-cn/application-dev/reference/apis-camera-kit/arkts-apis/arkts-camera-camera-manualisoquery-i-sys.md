@@ -13,8 +13,6 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getIsoRange

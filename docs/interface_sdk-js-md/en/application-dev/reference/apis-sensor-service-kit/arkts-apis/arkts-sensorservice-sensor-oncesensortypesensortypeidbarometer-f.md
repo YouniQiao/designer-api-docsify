@@ -29,5 +29,5 @@ Subscribes to only one data change of the barometer sensor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_BAROMETER | Yes | Type of the sensor to subscribe to, which is **SENSOR_TYPE_ID_BAROMETER**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BarometerResponse&gt; | Yes | One-shot callback used to return the barometer sensor data. The reported data type in the callback is **BarometerResponse**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | Yes | One-shot callback used to return the barometer sensor data. The reported data type in the callback is **BarometerResponse**. |
 

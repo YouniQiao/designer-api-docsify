@@ -165,7 +165,7 @@ Kills a process by bundle name and account ID. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | accountId | int | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the API call result. You can perform error handling or custom processing in this callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the API call result. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

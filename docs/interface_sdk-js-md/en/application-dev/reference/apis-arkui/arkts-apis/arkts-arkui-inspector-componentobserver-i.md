@@ -36,7 +36,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | No | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | No | callback of the listened event. |
 
 ## offLayoutChildren
 
@@ -60,7 +60,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | callback of the listened event. |
 
 ## off_draw('draw')
 
@@ -110,7 +110,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | callback of the listened event. |
 
 ## off_layout('layout')
 
@@ -159,7 +159,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | Yes | callback of the listened event. |
 
 ## onLayoutChildren
 
@@ -183,7 +183,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback of the listened event. |
 
 ## on_draw('draw')
 
@@ -233,7 +233,7 @@ Registers a callback with the corresponding query condition by using the handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback of the listened event. |
 
 ## on_layout('layout')
 

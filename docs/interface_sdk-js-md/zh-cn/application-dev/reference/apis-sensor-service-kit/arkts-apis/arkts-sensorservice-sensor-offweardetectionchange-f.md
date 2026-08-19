@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## offWearDetectionChange
@@ -25,7 +24,7 @@ Unsubscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 否 | Parameters of sensor on the device. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | 否 | callback wear detection data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)&gt; | 否 | callback wear detection data. |
 
 **错误码：**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
 ```
 
 ## getNetCapabilities
@@ -29,7 +28,7 @@ function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCap
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | netHandle | NetHandle | 是 | 网络的句柄。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | 是 | 回调函数。当成功获取netHandle对应网络的能力集时，error为undefined，data为获取到的网络能力集；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | 是 | 回调函数。当成功获取netHandle对应网络的能力集时，error为undefined，data为获取到的网络能力集；否则 为错误对象。 |
 
 **错误码：**
 

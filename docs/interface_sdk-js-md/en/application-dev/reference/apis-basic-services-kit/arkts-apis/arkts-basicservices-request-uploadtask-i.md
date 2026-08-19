@@ -35,7 +35,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -111,7 +111,7 @@ Called when the current upload session complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload complete event. |
 
 ## offFail
 
@@ -131,7 +131,7 @@ Called when the current upload session fail.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload fail change event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | The callback function for the upload fail change event. |
 
 ## offHeaderReceive
 
@@ -192,7 +192,7 @@ Unsubscribes from upload completion or failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**: upload task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -261,7 +261,7 @@ Unsubscribes from upload completion or failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Event type.<br>- **'complete'**: upload task completion.<br>- **'fail'**: upload task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -417,7 +417,7 @@ Called when the current upload session complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload complete event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload complete event. |
 
 ## onFail
 
@@ -437,7 +437,7 @@ Called when the current upload session fail.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload fail event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | The callback function for the upload fail event. |
 
 ## onHeaderReceive
 
@@ -498,7 +498,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
@@ -543,7 +543,7 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
@@ -665,7 +665,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 

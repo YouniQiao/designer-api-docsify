@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
 ```
 
 ## autoHideComponentUniqueIds
@@ -22,7 +21,7 @@ import { dragController } from '@kit.ArkUI';
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-设置在主动拖拽过程中由系统自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 主动拖拽成功发起后，系统会在显示拖拽预览窗口前自动隐藏目标组件。 若主动拖拽源本身也需要被隐藏，需要同时传入其uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid)配合 [FrameNode.getUniqueId()](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getuniqueid)获取。 开发者需要在拖拽结束回调中按需恢复组件显示状态。
+设置在主动拖拽过程中由系统自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 主动拖拽成功发起后，系统会在显示拖拽预览窗口前自动隐藏目标组件。 若主动拖拽源本身也需要被隐藏，需要同时传入其uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getframenodebyid)配合 [FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getuniqueid)获取。 开发者需要在拖拽结束回调中按需恢复组件显示状态。
 
 **类型：** int \| int[]
 

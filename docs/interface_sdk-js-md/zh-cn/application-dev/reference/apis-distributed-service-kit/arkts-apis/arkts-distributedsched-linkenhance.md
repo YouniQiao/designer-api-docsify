@@ -13,7 +13,6 @@ linkEnhance模块提供高效的蓝牙连接和数据传输功能，增强设备
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## 汇总

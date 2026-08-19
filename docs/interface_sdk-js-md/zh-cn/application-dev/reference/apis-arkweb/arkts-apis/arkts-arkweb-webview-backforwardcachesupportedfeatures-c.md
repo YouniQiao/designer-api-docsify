@@ -11,7 +11,6 @@ BackForwardCacheSupportedFeatures是ArkWeb框架中用于选择性控制允许�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

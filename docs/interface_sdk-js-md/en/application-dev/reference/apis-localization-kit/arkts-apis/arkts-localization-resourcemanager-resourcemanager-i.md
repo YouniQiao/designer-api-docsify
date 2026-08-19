@@ -1835,7 +1835,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1916,7 +1916,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1989,7 +1989,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
 
 **Error codes:**
 

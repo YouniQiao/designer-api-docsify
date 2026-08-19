@@ -28,7 +28,7 @@ Obtains the network handle used by the system by default, including the network 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetHandle&gt; | Yes | Callback used to return the result. When the network handle of the default activated network is successfully obtained, **error** is **undefined** and **data** is the network handle of the default network; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the result. When the network handle of the default activated network is successfully obtained, **error** is **undefined** and **data** is the network handle of the default network; otherwise, **error** is an error object. |
 
 **Error codes:**
 

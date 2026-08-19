@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## setExecFrequency
@@ -36,7 +35,7 @@ function setExecFrequency(info: FrequencyInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9700006 | 执行频率参数检查失败。 |
+| [9700006](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700006-执行频率参数校验失败) | 执行频率参数检查失败。 |
 | [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. The work scheduler service is unavailable. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 没有权限。 |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | 非系统应用。 |

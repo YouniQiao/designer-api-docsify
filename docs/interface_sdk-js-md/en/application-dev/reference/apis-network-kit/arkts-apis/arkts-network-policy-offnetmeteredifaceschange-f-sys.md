@@ -29,7 +29,7 @@ Unsubscribes from the changes of the metering interface. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netMeteredIfacesChange' | Yes | Event type. The value **netMeteredIfacesChange** indicates a metered **iface** change event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to return the result. It is called when the registered metered **iface** changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to return the result. It is called when the registered metered **iface** changes. |
 
 **Error codes:**
 

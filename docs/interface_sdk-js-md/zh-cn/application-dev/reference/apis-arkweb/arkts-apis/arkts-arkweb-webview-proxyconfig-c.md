@@ -11,7 +11,6 @@ ProxyConfig是ArkWeb框架中用于配置网络代理规则的类，配合[Proxy
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## bypassHostnamesWithoutPeriod

@@ -13,7 +13,6 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 ## 导入模块
 
 ```TypeScript
-import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect

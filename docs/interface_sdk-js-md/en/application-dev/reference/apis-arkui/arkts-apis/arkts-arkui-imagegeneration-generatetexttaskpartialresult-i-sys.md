@@ -48,7 +48,7 @@ partialFail?: BusinessError
 
 Information of the partial error corresponding to AI-generated text task, available in partial error result.
 
-**Type:** [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)
+**Type:** [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)
 
 **Since:** 23
 

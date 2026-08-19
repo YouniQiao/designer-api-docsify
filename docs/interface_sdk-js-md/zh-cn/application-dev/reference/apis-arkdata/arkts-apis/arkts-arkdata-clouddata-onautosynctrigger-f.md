@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## onAutoSyncTrigger
@@ -26,7 +25,7 @@ function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md)&gt; | 是 | 回调函数。 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AutoSyncTriggerInfo](arkts-arkdata-clouddata-autosynctriggerinfo-i.md)&gt; | 是 | 回调函数。 |
 
 **错误码：**
 

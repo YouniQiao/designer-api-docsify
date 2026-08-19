@@ -17,5 +17,5 @@
 
 | Name | Description |
 | --- | --- |
-| [LinkParamCategory](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md) | Enum definition of the paramCategory [paramCategory](arkts-na-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramcategory), paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink InsightIntentLink. |
+| [LinkParamCategory](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md) | Enum definition of the paramCategory [paramCategory](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramcategory), paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink InsightIntentLink. |
 

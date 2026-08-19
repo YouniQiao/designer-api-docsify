@@ -29,7 +29,7 @@ Obtains the fault information about the current application. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes | Fault type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes | Callback used to return the fault information array.<br> **value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes | Callback used to return the fault information array.<br> **value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
 
 **Examples**
 

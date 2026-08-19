@@ -11,7 +11,6 @@ XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取�
 ## 导入模块
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
 ```
 
 ## constructor

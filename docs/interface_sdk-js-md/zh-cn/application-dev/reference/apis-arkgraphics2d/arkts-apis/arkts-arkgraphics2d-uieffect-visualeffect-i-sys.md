@@ -11,7 +11,6 @@ VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐�
 ## 导入模块
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundColorBlender

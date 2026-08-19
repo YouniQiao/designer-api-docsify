@@ -11,7 +11,6 @@ Provides the geographical location definitions for media resources.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## latitude

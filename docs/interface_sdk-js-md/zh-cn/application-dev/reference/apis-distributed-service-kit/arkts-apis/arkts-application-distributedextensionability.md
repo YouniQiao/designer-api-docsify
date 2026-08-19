@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
 ```
 
 ## 汇总

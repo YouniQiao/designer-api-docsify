@@ -11,7 +11,6 @@ DatePickerComponentResult定义日期时间选择器的选择结果，包含用�
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## day

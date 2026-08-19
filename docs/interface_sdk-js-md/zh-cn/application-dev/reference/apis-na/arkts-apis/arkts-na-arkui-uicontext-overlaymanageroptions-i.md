@@ -1,6 +1,6 @@
 # OverlayManagerOptions
 
-初始化[OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)时所用参数。
+初始化[OverlayManager](arkts-na-arkui-uicontext-uicontext-c.md)时所用参数。
 
 **起始版本：** 23
 

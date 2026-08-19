@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## 汇总

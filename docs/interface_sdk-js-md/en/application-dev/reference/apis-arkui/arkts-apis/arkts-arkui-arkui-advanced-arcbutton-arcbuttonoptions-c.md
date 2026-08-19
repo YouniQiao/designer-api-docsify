@@ -188,7 +188,7 @@ onClick?: Callback<ClickEvent>
 
 Callback triggered by click actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
 
 **Since:** 18
 
@@ -206,7 +206,7 @@ onTouch?: Callback<TouchEvent>
 
 Callback triggered by touch actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
 
 **Since:** 18
 

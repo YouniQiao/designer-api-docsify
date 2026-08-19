@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationQuickFixInfo
@@ -29,7 +28,7 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md)&gt; | 是 | 回调函数。返回应用的快速修复信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md)&gt; | 是 | 回调函数。返回应用的快速修复信息。 |
 
 **错误码：**
 

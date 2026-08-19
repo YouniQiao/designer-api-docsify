@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## onApplicationBackground

@@ -11,7 +11,6 @@ VpnExtensionContext是VpnExtensionAbility的上下文环境，继承自 [Extensi
 ## 导入模块
 
 ```TypeScript
-import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 ```
 
 ## onCreate

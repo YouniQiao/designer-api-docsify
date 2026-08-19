@@ -267,7 +267,7 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
 
 **错误码：**
 
@@ -426,7 +426,7 @@ static getAllUIContexts(): UIContext[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
 
 ## getAtomicServiceBar
 
@@ -450,7 +450,7 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Nullable](arkts-na-nullable-t.md)&lt;[AtomicServiceBar](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| [Nullable](arkts-na-nullable-t.md)&lt;[AtomicServiceBar](arkts-na-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -504,7 +504,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
 
 ## getComponentSnapshot
 
@@ -528,7 +528,7 @@ getComponentSnapshot(): ComponentSnapshot
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentSnapshot](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
+| [ComponentSnapshot](arkts-na-arkui-uicontext-componentsnapshot-c.md) | the ComponentSnapshot |
 
 ## getComponentUtils
 
@@ -552,7 +552,7 @@ get object ComponentUtils.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentUtils](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
+| [ComponentUtils](arkts-na-arkui-uicontext-componentutils-c.md) | object ComponentUtils. |
 
 ## getContextMenuController
 
@@ -576,7 +576,7 @@ getContextMenuController(): ContextMenuController
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContextMenuController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
+| [ContextMenuController](arkts-na-arkui-uicontext-contextmenucontroller-c.md) | object context menu controller. |
 
 ## getCursorController
 
@@ -600,7 +600,7 @@ getCursorController(): CursorController
 
 | 类型 | 说明 |
 | --- | --- |
-| [CursorController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
+| [CursorController](arkts-na-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
 ## getDialogPresenter
 
@@ -624,7 +624,7 @@ getDialogPresenter(): DialogPresenter
 
 | 类型 | 说明 |
 | --- | --- |
-| [DialogPresenter](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Dialog object. |
+| [DialogPresenter](arkts-na-arkui-uicontext-dialogpresenter-c.md) | Dialog object. |
 
 ## getDragController
 
@@ -648,7 +648,7 @@ getDragController(): DragController
 
 | 类型 | 说明 |
 | --- | --- |
-| [DragController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md) | the DragController |
+| [DragController](arkts-na-arkui-uicontext-dragcontroller-c.md) | the DragController |
 
 ## getFilteredInspectorTree
 
@@ -747,7 +747,7 @@ getFocusController(): FocusController
 
 | 类型 | 说明 |
 | --- | --- |
-| [FocusController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md) | the FocusController |
+| [FocusController](arkts-na-arkui-uicontext-focuscontroller-c.md) | the FocusController |
 
 ## getFont
 
@@ -771,7 +771,7 @@ get object font.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | object Font. |
+| [Font](arkts-na-arkui-uicontext-font-c.md) | object Font. |
 
 ## getFrameNodeById
 
@@ -855,7 +855,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-apis/arkts-arkui-context-t.md) |  |
+| [Context](arkts-na-context-t.md) |  |
 
 ## getId
 
@@ -903,7 +903,7 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
+| [KeyboardAvoidMode](arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | The mode of keyboard avoid. |
 
 ## getLastFocusedUIContext
 
@@ -927,7 +927,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
 
 ## getLastForegroundUIContext
 
@@ -951,7 +951,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
+| [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
 
 ## getMagnifier
 
@@ -975,7 +975,7 @@ getMagnifier(): Magnifier
 
 | 类型 | 说明 |
 | --- | --- |
-| [Magnifier](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
+| [Magnifier](arkts-na-arkui-uicontext-magnifier-c.md) | Magnifier instance obtained. |
 
 ## getMaxFontScale
 
@@ -1023,7 +1023,7 @@ getMeasureUtils(): MeasureUtils
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureUtils](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
+| [MeasureUtils](arkts-na-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
 
 ## getMediaQuery
 
@@ -1047,7 +1047,7 @@ get object mediaQuery.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaQuery](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](arkts-na-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1101,7 +1101,7 @@ getOverlayManager(): OverlayManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManager](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
+| [OverlayManager](arkts-na-arkui-uicontext-overlaymanager-c.md) | object OverlayManager. |
 
 ## getOverlayManagerOptions
 
@@ -1125,7 +1125,7 @@ getOverlayManagerOptions(): OverlayManagerOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [OverlayManagerOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
+| [OverlayManagerOptions](arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | object OverlayManagerOptions. |
 
 ## getPageInfoByUniqueId
 
@@ -1155,7 +1155,7 @@ getPageInfoByUniqueId(id: int): PageInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PageInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-na-arkui-uicontext-pageinfo-i.md) | The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -1233,7 +1233,7 @@ get object PromptAction.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PromptAction](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md) | object PromptAction. |
+| [PromptAction](arkts-na-arkui-uicontext-promptaction-c.md) | object PromptAction. |
 
 ## getRouter
 
@@ -1257,7 +1257,7 @@ get object router.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Router](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md) | object Router. |
+| [Router](arkts-na-arkui-uicontext-router-c.md) | object Router. |
 
 ## getSharedLocalStorage
 
@@ -1305,7 +1305,7 @@ getSmartGestureController(): SmartGestureController
 
 | 类型 | 说明 |
 | --- | --- |
-| [SmartGestureController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
+| [SmartGestureController](arkts-na-arkui-uicontext-smartgesturecontroller-c.md) | object smart gesture controller. |
 
 ## getTextMenuController
 
@@ -1329,7 +1329,7 @@ getTextMenuController(): TextMenuController
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMenuController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
+| [TextMenuController](arkts-na-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
 
 ## getUIInspector
 
@@ -1353,7 +1353,7 @@ getUIInspector(): UIInspector
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIInspector](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
+| [UIInspector](arkts-na-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
 
 ## getUIObserver
 
@@ -1377,7 +1377,7 @@ getUIObserver(): UIObserver
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIObserver](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uiobserver-c.md) | The UI observer. |
+| [UIObserver](arkts-na-arkui-uicontext-uiobserver-c.md) | The UI observer. |
 
 ## getWindowHeightBreakpoint
 
@@ -1667,7 +1667,7 @@ Post a frame callback to run on the next frame after the specified delay.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-na-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
 | delayTime | long | 是 | The delay time in milliseconds, |
 
 ## postFrameCallback
@@ -1692,7 +1692,7 @@ Post a frame callback to run on the next frame.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameCallback | [FrameCallback](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
+| frameCallback | [FrameCallback](arkts-na-arkui-uicontext-framecallback-c.md) | 是 | The frame callback to run on the next frame. |
 
 ## px2fp
 
@@ -1836,7 +1836,7 @@ Require DynamicSyncScene by id.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[DynamicSyncScene](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](arkts-na-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -1860,7 +1860,7 @@ static resolveUIContext(): ResolvedUIContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [ResolvedUIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext实例 |
+| [ResolvedUIContext](arkts-na-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext实例 |
 
 ## runScopedTask
 
@@ -1908,7 +1908,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
+| feature | [CustomKeyboardContinueFeature](arkts-na-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 | 自定义键盘接续特性。 |
 
 ## setImageCacheCount
 
@@ -1980,7 +1980,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | 是 | The mode of keyboard avoid. |
+| value | [KeyboardAvoidMode](arkts-na-arkui-uicontext-keyboardavoidmode-e.md) | 是 | The mode of keyboard avoid. |
 
 ## setOverlayManagerOptions
 
@@ -2004,7 +2004,7 @@ Init OverlayManager.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OverlayManagerOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
+| options | [OverlayManagerOptions](arkts-na-arkui-uicontext-overlaymanageroptions-i.md) | 是 | Options. |
 
 **返回值：**
 
@@ -2090,7 +2090,7 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
+| policy | [TextSelectionClearPolicy](arkts-na-arkui-uicontext-textselectionclearpolicy-e.md) | 是 | 文本选择清除策略。 |
 
 ## setUIStates
 

@@ -88,7 +88,7 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates call back of addDeviceConfig. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates call back of addDeviceConfig. |
 
 **Error codes:**
 

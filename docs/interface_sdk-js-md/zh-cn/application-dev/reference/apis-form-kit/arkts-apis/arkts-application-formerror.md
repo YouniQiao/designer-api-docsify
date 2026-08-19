@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { formError } from '@kit.FormKit';
 ```
 
 ## 汇总

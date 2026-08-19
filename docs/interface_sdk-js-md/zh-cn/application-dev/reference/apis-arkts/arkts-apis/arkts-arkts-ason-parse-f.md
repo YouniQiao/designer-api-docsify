@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## parse

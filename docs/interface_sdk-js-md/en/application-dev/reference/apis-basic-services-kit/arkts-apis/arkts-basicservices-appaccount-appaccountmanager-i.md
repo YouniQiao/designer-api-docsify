@@ -37,7 +37,7 @@ Adds an application account with the given name. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -73,7 +73,7 @@ Adds an application account name and additional information. This API uses an as
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -428,7 +428,7 @@ Checks whether an application account has specific labels. This API uses an asyn
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | labels | Array&lt;string&gt; | Yes | Labels to check. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -542,7 +542,7 @@ Checks whether an application can access the data of an account. This API uses a
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -651,7 +651,7 @@ Checks whether data synchronization is enabled for an application account. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Examples**
 
@@ -732,7 +732,7 @@ Checks the visibility of an authorization token of the specified authentication 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -841,7 +841,7 @@ Checks whether data synchronization is enabled for an application account. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -957,7 +957,7 @@ Checks the visibility of an authorization token of the specified authentication 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 **Examples**
 
@@ -1038,7 +1038,7 @@ Creates an application account with the given name. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1089,7 +1089,7 @@ Creates an application account with custom data. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Yes | Options for creating the application account. You can customize data based on service requirements, but do not add sensitive data (such as passwords and tokens). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1368,7 +1368,7 @@ Deletes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1444,7 +1444,7 @@ Deletes the authorization token of the specified authentication type for an appl
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the token does not exist, no operation is performed. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1552,7 +1552,7 @@ Deletes the credential of the specified type from an application account. This A
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1663,7 +1663,7 @@ Deletes the authorization token of the specified authentication type for an appl
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1749,7 +1749,7 @@ Disables an application account from accessing an application. This API uses an 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1828,7 +1828,7 @@ Enables an application account to access an application. This API uses an asynch
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1911,7 +1911,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1993,7 +1993,7 @@ Obtains additional information of an application account. Additional information
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2070,7 +2070,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2176,7 +2176,7 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2248,7 +2248,7 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2344,7 +2344,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return information about all accessible application accounts. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return information about all accessible application accounts. |
 
 **Examples**
 
@@ -2426,7 +2426,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2535,7 +2535,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2620,7 +2620,7 @@ Obtains the associated data of an application account based on the specified key
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the data obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -2698,7 +2698,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of the authentication session. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2832,7 +2832,7 @@ Obtains the authorization list of the specified authentication type for an appli
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -2938,7 +2938,7 @@ Obtains the authorization token of the specified authentication type for an appl
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3048,7 +3048,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of the authentication session. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -3153,7 +3153,7 @@ Obtains the authenticator information of an application. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -3233,7 +3233,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3338,7 +3338,7 @@ Obtains the custom data of an application account based on the specified key. Th
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -3498,7 +3498,7 @@ Obtains the authorization list of the specified authentication type for an appli
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -3582,7 +3582,7 @@ Obtains the authorization token of the specified authentication type for an appl
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -3661,7 +3661,7 @@ Unsubscribes from account events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -3688,7 +3688,7 @@ Unsubscribes from account information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to unsubscribe from. The value is **'accountChange'**. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 **Error codes:**
 
@@ -3744,7 +3744,7 @@ Unsubscribes from account information changes. > **NOTE：**> > This API is supp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 **Examples**
 
@@ -3785,7 +3785,7 @@ Subscribes to the change events of accounts of the specified owners.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owners | Array&lt;string&gt; | Yes | Indicates the account owners, which are specified by AppAccount. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
@@ -3814,7 +3814,7 @@ Subscribes to account information changes of apps.
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to subscribe to. The value is **'accountChange'**. An event will be reported when the account information of the target application changes. |
 | owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Error codes:**
 
@@ -3865,7 +3865,7 @@ Subscribes to account information changes of apps. > **NOTE：**> > This API is 
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
 | owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Examples**
 
@@ -3903,7 +3903,7 @@ Obtains the authenticator information of an application. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4006,7 +4006,7 @@ Removes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4107,7 +4107,7 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes | Options for selecting accounts. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accounts selected. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accounts selected. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4224,7 +4224,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4308,7 +4308,7 @@ Sets additional information for an application account. This API uses an asynchr
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4388,7 +4388,7 @@ Sets the access to the data of an account for an application. This API uses an a
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isAccessible | boolean | Yes | Whether the access is allowed. The value **true** means to allow the access; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4500,7 +4500,7 @@ Sets data synchronization for an application account. This API uses an asynchron
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4586,7 +4586,7 @@ Sets data to be associated with an application account. This API uses an asynchr
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
 | value | string | Yes | Value of the data to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -4667,7 +4667,7 @@ Sets an authorization token of the specific authentication type for an applicati
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -4781,7 +4781,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5005,7 +5005,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5110,7 +5110,7 @@ Sets custom data for an application account. This API uses an asynchronous callb
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
 | value | string | Yes | Value of the custom data. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5218,7 +5218,7 @@ Sets data synchronization for an application account. This API uses an asynchron
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -5326,7 +5326,7 @@ Sets an authorization token of the specific authentication type for an applicati
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -5418,7 +5418,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Examples**
 

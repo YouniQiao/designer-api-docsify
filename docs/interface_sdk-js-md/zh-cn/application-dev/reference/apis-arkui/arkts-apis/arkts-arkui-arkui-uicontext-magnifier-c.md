@@ -1,6 +1,6 @@
 # Magnifier
 
-提供控制放大镜的显示与隐藏的能力，放大镜会对组件内容进行放大显示，便于查看组件细节。适用于非文本类组件（如图片）需要查看细节的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。 > > - 与文本类组件自带的放大镜能力互不影响，文本类组件推荐使用自带的放大镜能力。
+提供控制放大镜的显示与隐藏的能力，放大镜会对组件内容进行放大显示，便于查看组件细节。适用于非文本类组件（如图片）需要查看细节的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getMagnifier()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getmagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。 > > - 与文本类组件自带的放大镜能力互不影响，文本类组件推荐使用自带的放大镜能力。
 
 **起始版本：** 22
 
@@ -11,10 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, ContextMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UIContext, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUIContext, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
 ## bind
@@ -43,7 +39,7 @@ bind(id: string): void
 
 **示例**
 
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
+请参考[getMagnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
 
 ## show
 
@@ -72,7 +68,7 @@ show(x: number, y: number): void
 
 **示例**
 
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
+请参考[getMagnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
 
 ## unbind
 
@@ -94,5 +90,5 @@ unbind(): void
 
 **示例**
 
-请参考[getMagnifier](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
+请参考[getMagnifier](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getmagnifier)的示例。
 

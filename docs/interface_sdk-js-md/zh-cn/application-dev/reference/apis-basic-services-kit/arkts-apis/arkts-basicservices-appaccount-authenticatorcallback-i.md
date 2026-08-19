@@ -15,7 +15,6 @@ OAuth认证器回调接口。 > **说明：** > > 从API version 8开始支持�
 ## 导入模块
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestRedirected

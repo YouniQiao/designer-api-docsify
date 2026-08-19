@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
-import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -29,7 +27,7 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见 支持的系统时区 。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回系统时区。具体可见 支持的系统时区 。 |
 
 **错误码：**
 

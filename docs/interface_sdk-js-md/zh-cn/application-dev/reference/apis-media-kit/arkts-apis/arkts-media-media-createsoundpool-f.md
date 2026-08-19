@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## createSoundPool
@@ -30,7 +29,7 @@ function createSoundPool(
 | --- | --- | --- | --- |
 | maxStreams | number | 是 | soundPool实例的最大播放的流数，设置范围为1-32的正整数。 |
 | audioRenderInfo | audio.AudioRendererInfo | 是 | 音频播放参数信息。其中audioRenderInfo中的参数usage取值为STREAM_USAGE_UNKNOWN， STREAM_USAGE_MUSIC，STREAM_USAGE_MOVIE，STREAM_USAGE_AUDIOBOOK时，SoundPool播放短音时为混音模式，不会打断其他音频播放。SoundPool支持将 rendererFlags设置为1用于低时延通路播放。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SoundPool&gt; | 是 | 回调函数。异步返回SoundPool实例，失败时返回null。用于音频池实例的加载播放功能。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SoundPool&gt; | 是 | 回调函数。异步返回SoundPool实例，失败时返回null。用于音频池实例的加载播放功能。 |
 
 **错误码：**
 
@@ -85,7 +84,7 @@ Creates a **SoundPool** instance. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | maxStreams | int | 是 | Maximum number of streams that can be played by the **SoundPool** instance. The value is an integer ranging from 1 to 32. |
 | audioRenderInfo | audio.AudioRendererInfo | 是 | Audio renderer parameters. When the **usage** parameter in **audioRenderInfo** is set to **STREAM_USAGE_UNKNOWN**, **STREAM_USAGE_MUSIC**, **STREAM_USAGE_MOVIE**, or **STREAM_USAGE_AUDIOBOOK**, the SoundPool uses the audio mixing mode when playing a short sound, without interrupting the playback of other audios. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SoundPool \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;SoundPool \| undefined&gt; | 是 | Callback used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
 
 **错误码：**
 

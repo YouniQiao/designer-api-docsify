@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUI';
 ```
 
 ## 汇总

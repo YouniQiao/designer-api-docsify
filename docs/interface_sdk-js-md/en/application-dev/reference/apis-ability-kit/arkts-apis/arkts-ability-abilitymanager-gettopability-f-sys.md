@@ -56,7 +56,7 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the top ability name obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the top ability name obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

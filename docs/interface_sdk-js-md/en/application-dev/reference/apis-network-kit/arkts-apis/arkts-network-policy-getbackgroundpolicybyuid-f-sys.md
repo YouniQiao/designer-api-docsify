@@ -29,7 +29,7 @@ Checks whether the specified UID can access the background network. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. . |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md)&gt; | Yes | Callback used to return the result. . |
 
 **Error codes:**
 

@@ -56,7 +56,7 @@ type?: NodeRenderType
 
 节点的渲染类型。当取值为NodeRenderType.RENDER_TYPE_TEXTURE时，仅在BuilderNode持有组件树的根节点为自定义组件时设置生效。 默认值：NodeRenderType.RENDER_TYPE_DISPLAY
 
-**类型：** [NodeRenderType](../../apis-na/arkts-apis/arkts-na-buildernode-noderendertype-e.md)
+**类型：** [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md)
 
 **起始版本：** 11
 

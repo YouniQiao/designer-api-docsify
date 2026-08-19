@@ -11,7 +11,6 @@ USB设备类型信息，支持部分字段匹配。 - 与[UsbDeviceType](arkts-m
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
 ```
 
 ## baseClass

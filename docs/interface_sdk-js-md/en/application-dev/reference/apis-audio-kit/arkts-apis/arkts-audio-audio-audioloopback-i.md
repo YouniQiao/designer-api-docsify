@@ -194,7 +194,7 @@ Unsubscribes audio loopback status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to listen for the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to listen for the audio loopback status change event. |
 
 **Error codes:**
 
@@ -221,7 +221,7 @@ Unsubscribes from the audio loopback status event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to return the audio loopback status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No | Callback used to return the audio loopback status. |
 
 **Error codes:**
 
@@ -247,7 +247,7 @@ Subscribes to audio loopback status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status change event. |
 
 **Error codes:**
 
@@ -274,7 +274,7 @@ Subscribes to the audio loopback status change event, which is triggered when th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes | Callback used to return the audio loopback status. |
 
 **Error codes:**
 

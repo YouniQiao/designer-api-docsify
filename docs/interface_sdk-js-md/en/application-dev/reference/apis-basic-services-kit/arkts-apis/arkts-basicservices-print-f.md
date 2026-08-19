@@ -31,7 +31,7 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | files | Array&lt;string&gt; | Yes | List of files to print. Images (in .jpg, .png, .gif, .bmp, or .webp format) and PDF files are supported. You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Yes | Callback to be invoked when the print job is finished. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Yes | Callback to be invoked when the print job is finished. |
 
 **Error codes:**
 
@@ -143,7 +143,7 @@ Prints files. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | files | Array&lt;string&gt; | Yes | List of files to be printed. Currently, the following file types are supported: " .bm", ".bmp", ".doc", ".docm", ".docx", ".dot", ".dotm", ".dotx", ".gif", ".jfif", ".jpe", ".jpeg", ".jpg", " pdf", ".pot", ".potm", ".potx", ".pps", ".ppsm", ".ppsx", ".ppt", ".pptm", ".pptx", ".png", ".rtf", ".txt", " .webp", ".wps", ".xls", ".xlsb", ".xlsm", ".xlsx", ".xlt", ".xltx", and ".xml". You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | UIAbilityContext used to start the system print UI. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Yes | Callback to be invoked when the print job is finished. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Yes | Callback to be invoked when the print job is finished. |
 
 **Error codes:**
 

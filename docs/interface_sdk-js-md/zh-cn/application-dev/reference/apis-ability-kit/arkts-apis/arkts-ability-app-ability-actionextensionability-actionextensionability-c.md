@@ -15,6 +15,5 @@ ActionExtensionAbility是为开发者提供的自定义操作业务模板，继�
 ## 导入模块
 
 ```TypeScript
-import { ActionExtensionAbility } from '@kit.AbilityKit';
 ```
 

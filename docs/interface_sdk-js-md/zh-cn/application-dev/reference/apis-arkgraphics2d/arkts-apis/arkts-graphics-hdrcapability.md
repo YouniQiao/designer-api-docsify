@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hdrCapability } from '@kit.ArkGraphics2D';
 ```
 
 ## 汇总

@@ -34,7 +34,7 @@ attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | Att
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | AttributeModifier&lt;[SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -62,7 +62,7 @@ bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | u
 | spanType | TextSpanType \| undefined | 是 |  |
 | content | CustomBuilder \| undefined | 是 |  |
 | responseType | TextResponseType \| undefined | 是 |  |
-| options | [SelectionContainerMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | 否 |  |
+| options | [SelectionContainerMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | 否 |  |
 
 **返回值：**
 
@@ -134,7 +134,7 @@ editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | [SelectionContainerEditMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | 是 |  |
+| editMenu | [SelectionContainerEditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -296,7 +296,7 @@ textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [SelectionContainerTextJoinStyle](arkts-na-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | 是 |  |
+| style | [SelectionContainerTextJoinStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | 是 |  |
 
 **返回值：**
 

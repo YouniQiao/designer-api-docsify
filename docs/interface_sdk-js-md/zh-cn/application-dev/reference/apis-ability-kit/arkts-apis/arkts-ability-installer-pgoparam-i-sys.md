@@ -13,7 +13,6 @@ PGO（Profile-guided Optimization）配置文件参数信息。
 ## 导入模块
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
 ```
 
 ## moduleName

@@ -13,7 +13,6 @@ continueManager提供了应用跨端迁移的管理能力，如获取应用跨�
 ## 导入模块
 
 ```TypeScript
-import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

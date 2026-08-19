@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
 ```
 
 ## on_netQuotaPolicyChange('netQuotaPolicyChange')
@@ -29,7 +28,7 @@ function on(type: 'netQuotaPolicyChange', callback: Callback<Array<NetQuotaPolic
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netQuotaPolicyChange' | 是 | 订阅的事件类型。'netQuotaPolicyChange'：注册计量网络策略发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | 是 | 回调函数。注册计量网络策略发生改变时调用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[NetQuotaPolicy](arkts-network-policy-netquotapolicy-i-sys.md)&gt;&gt; | 是 | 回调函数。注册计量网络策略发生改变时调用。 |
 
 **错误码：**
 

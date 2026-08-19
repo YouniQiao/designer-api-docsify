@@ -11,7 +11,6 @@ ImageSource的初始化选项。
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## sourceDensity

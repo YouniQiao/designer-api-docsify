@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authenticateDevice
@@ -50,7 +49,7 @@ authenticateDevice(
 | --- | --- | --- | --- |
 | deviceInfo | DeviceInfo | 是 | 设备信息。 |
 | authParam | AuthParam | 是 | 认证参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |  |
 
 **错误码：**
 
@@ -151,7 +150,7 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | queryInfo | string | 是 | 删除凭据信息。长度范围1~64000字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ resultInfo: string }&gt; | 是 |  |
 
 **错误码：**
 
@@ -225,7 +224,7 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | 设备的网络标识。长度范围1~255字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | 是 | 获取指定设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceInfo&gt; | 是 | 获取指定设备信息。 |
 
 **错误码：**
 
@@ -342,7 +341,7 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceInfo&gt; | 是 | 获取本地设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DeviceInfo&gt; | 是 | 获取本地设备信息。 |
 
 **错误码：**
 
@@ -501,7 +500,7 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceInfo&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;DeviceInfo&gt;&gt; | 是 | 获取所有可信设备列表的回调，返回设备信息。 |
 
 **错误码：**
 
@@ -715,7 +714,7 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | credentialInfo | string | 是 | 导入凭据信息。长度范围1~64000字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ resultInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ resultInfo: string }&gt; | 是 |  |
 
 **错误码：**
 
@@ -818,7 +817,7 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | 是 | 取消注册设备发现回调，固定为deviceFound。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 否 |  |
 
 **错误码：**
 
@@ -884,7 +883,7 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 根据应用程序的包名取消注册设备状态回调，固定为deviceStateChange。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 否 |  |
 
 **错误码：**
 
@@ -950,7 +949,7 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | 是 | 取消注册设备发现失败回调，固定为discoverFail。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, reason: number }&gt; | 否 |  |
 
 **错误码：**
 
@@ -1006,7 +1005,7 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishFail' | 是 | 取消注册设备发布失败回调，固定为publishFail。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number, reason: number }&gt; | 否 |  |
 
 **错误码：**
 
@@ -1062,7 +1061,7 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishSuccess' | 是 | 取消注册设备发布成功回调，固定为publishSuccess。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number }&gt; | 否 |  |
 
 **错误码：**
 
@@ -1172,7 +1171,7 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'uiStateChange' | 是 | 取消注册的设备管理器 ui 状态回调，固定为uiStateChange。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string }&gt; | 否 |  |
 
 **错误码：**
 
@@ -1223,7 +1222,7 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceFound' | 是 | 注册设备发现回调，以便在发现周边设备时通知应用程序，固定为deviceFound。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, device: DeviceInfo }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1289,7 +1288,7 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceStateChange' | 是 | 注册设备状态回调，固定为deviceStateChange。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1355,7 +1354,7 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'discoverFail' | 是 | 注册设备发现失败回调，以便在发现周边设备失败时通知应用程序，固定为discoverFail。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ subscribeId: number, reason: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ subscribeId: number, reason: number }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1411,7 +1410,7 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishFail' | 是 | 注册设备发布失败回调，以便在发布设备失败时通知应用程序，固定为publishFail。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number, reason: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number, reason: number }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1467,7 +1466,7 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishSuccess' | 是 | 注册发布设备成功回调，以便将发布成功时通知应用程序，固定为publishSuccess。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ publishId: number }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1577,7 +1576,7 @@ ui状态变更回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'uiStateChange' | 是 | 注册的设备管理器 ui 状态回调，以便在状态改变时通知应用，固定为uiStateChange。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string }&gt; | 是 |  |
 
 **错误码：**
 
@@ -1751,7 +1750,7 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | requestInfo | string | 是 | 请求凭据信息。最大长度255字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ registerInfo: string }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ registerInfo: string }&gt; | 是 |  |
 
 **错误码：**
 
@@ -2226,7 +2225,7 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | authInfo | [AuthInfo](arkts-distributedservice-devicemanager-authinfo-i-sys.md) | 是 | 认证信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, level: number }&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceId: string, level: number }&gt; | 是 |  |
 
 **错误码：**
 

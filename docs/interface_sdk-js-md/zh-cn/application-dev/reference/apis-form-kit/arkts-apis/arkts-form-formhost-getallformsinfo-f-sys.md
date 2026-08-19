@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
 ```
 
 ## getAllFormsInfo
@@ -28,7 +27,7 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。当获取设备上所有应用提供的卡片信息成功，error为undefined，data为查询到的卡片信 息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | 是 | 回调函数。当获取设备上所有应用提供的卡片信息成功，error为undefined，data为查询到的卡片信 息；否则为错误对象。 |
 
 **错误码：**
 

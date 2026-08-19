@@ -535,7 +535,7 @@ Writes data to a tag.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | number[] | Yes | Indicates the data to be written to the tag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | The callback. data fails to be written to the tag. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | The callback. data fails to be written to the tag. |
 
 **Examples**
 
@@ -757,7 +757,7 @@ Writes data to a tag.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | int[] | Yes | Indicates the data to be written to the tag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | The callback. |
 
 **Error codes:**
 

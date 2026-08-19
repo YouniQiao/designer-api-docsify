@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## enable
@@ -12,7 +11,7 @@ import { inputDeviceCooperate } from '@kit.InputKit';
 function enable(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-开启、关闭键鼠穿越，使用callback异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md)、 > [cooperate.unprepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md) > 替代。
+开启、关闭键鼠穿越，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -31,7 +30,7 @@ function enable(enable: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 键鼠穿越使能状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启键鼠穿越成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开启键鼠穿越成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -77,7 +76,7 @@ struct Index {
 function enable(enable: boolean): Promise<void>
 ```
 
-开启、关闭键鼠穿越，使用Promise异步回调。 > **说明：** > > 从 API version 9开始支持，从API version 23开始废弃。建议使用 > [cooperate.prepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-preparecooperate-f-sys.md)、 > [cooperate.unprepareCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md)替代。
+开启、关闭键鼠穿越，使用Promise异步回调。
 
 **起始版本：** 9
 

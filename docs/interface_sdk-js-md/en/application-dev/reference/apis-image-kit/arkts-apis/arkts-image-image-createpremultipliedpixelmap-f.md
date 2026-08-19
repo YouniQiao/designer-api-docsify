@@ -26,7 +26,7 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 | --- | --- | --- | --- |
 | src | PixelMap | Yes | The source pixelmap. |
 | dst | PixelMap | Yes | The destination pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

@@ -26,7 +26,7 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | the callback of getMinHeight. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getMinHeight. |
 
 **Examples**
 

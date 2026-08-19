@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## onWifiScanStateChange
@@ -27,7 +25,7 @@ function onWifiScanStateChange(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 状态改变回调函数。返回0：扫描失败，1：扫描成功。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 状态改变回调函数。返回0：扫描失败，1：扫描成功。 |
 
 **错误码：**
 

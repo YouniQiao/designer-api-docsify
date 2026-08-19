@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { CompletionHandler } from '@kit.AbilityKit';
-import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
 ```
 
 ## 汇总

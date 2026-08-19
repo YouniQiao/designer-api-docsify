@@ -36,5 +36,5 @@ Subscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
 

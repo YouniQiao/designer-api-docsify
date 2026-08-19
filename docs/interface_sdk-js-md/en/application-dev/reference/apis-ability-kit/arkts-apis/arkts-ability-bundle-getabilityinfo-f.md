@@ -45,7 +45,7 @@ Obtains the ability information based on a given bundle name and ability name. T
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Callback used to return the ability information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Callback used to return the ability information. |
 
 
 ## getAbilityInfo

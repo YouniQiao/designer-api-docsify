@@ -25,7 +25,7 @@ Obtains the network search mode of the SIM card in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;[NETWORK_SELECTION_UNKNOWN](arkts-telephony-radio-networkselectionmode-e.md#network_selection_unknown) &lt;li&gt;[NETWORK_SELECTION_AUTOMATIC](arkts-telephony-radio-networkselectionmode-e.md#network_selection_automatic) &lt;li&gt;[NETWORK_SELECTION_MANUAL](arkts-telephony-radio-networkselectionmode-e.md#network_selection_manual) &lt;ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)&gt; | Yes | Indicates the callback for getting the network search mode of the SIM card. Available values are as follows: &lt;ul&gt; &lt;li&gt;[NETWORK_SELECTION_UNKNOWN](arkts-telephony-radio-networkselectionmode-e.md#network_selection_unknown) &lt;li&gt;[NETWORK_SELECTION_AUTOMATIC](arkts-telephony-radio-networkselectionmode-e.md#network_selection_automatic) &lt;li&gt;[NETWORK_SELECTION_MANUAL](arkts-telephony-radio-networkselectionmode-e.md#network_selection_manual) &lt;ul&gt; |
 
 **Error codes:**
 

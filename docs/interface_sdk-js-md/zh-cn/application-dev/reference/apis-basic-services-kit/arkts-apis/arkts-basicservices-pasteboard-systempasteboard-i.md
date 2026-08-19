@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## clear
@@ -36,7 +35,7 @@ clear(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -114,7 +113,7 @@ clearData(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当成功清空时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
@@ -360,7 +359,7 @@ getData(callback: AsyncCallback<PasteData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
 
 **错误码：**
 
@@ -696,7 +695,7 @@ getPasteData(callback: AsyncCallback<PasteData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
 
 **错误码：**
 
@@ -894,7 +893,7 @@ hasData(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，用于接收剪贴板是否有内容的判断结果。返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数，用于接收剪贴板是否有内容的判断结果。返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
 
 **错误码：**
 
@@ -1061,7 +1060,7 @@ hasPasteData(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 返回true表示系统剪贴板中有内容，返回false表示系统剪贴板中没有内容。 |
 
 **错误码：**
 
@@ -1422,7 +1421,7 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象，设置后会将该数据写入系统剪贴板，供应用读取和粘贴使用。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1577,7 +1576,7 @@ setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 是 | PasteData对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当写入成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

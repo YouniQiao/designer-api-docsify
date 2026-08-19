@@ -27,7 +27,7 @@ Checks whether a specified application can show as a floating window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
 
 **Examples**
 

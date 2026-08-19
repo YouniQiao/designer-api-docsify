@@ -11,7 +11,6 @@ WebMessagePort是Web组件中用于应用侧（ArkTS）与HTML5侧（JavaScript�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## close

@@ -71,7 +71,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext used to create the FrameNode |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Yes | UIContext used to create the FrameNode |
 | options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
 | id | string | Yes | XComponent id defined by the application |
 | type | XComponentType | Yes | XComponent type |

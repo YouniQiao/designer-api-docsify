@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## createTrustAnchorsWithKeyStore

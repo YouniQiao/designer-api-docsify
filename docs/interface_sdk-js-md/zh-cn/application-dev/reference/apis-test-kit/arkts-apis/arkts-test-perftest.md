@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## 汇总

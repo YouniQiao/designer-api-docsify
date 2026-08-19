@@ -11,7 +11,6 @@ Text change event info
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## content

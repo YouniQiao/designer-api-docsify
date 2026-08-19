@@ -30,7 +30,7 @@ Stops extended mode. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | expandScreen | Array&lt;long&gt; | Yes | IDs of the extended screens. Each ID is an integer. The size of the **expandScreen** array cannot exceed 1000. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If extended mode is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If extended mode is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

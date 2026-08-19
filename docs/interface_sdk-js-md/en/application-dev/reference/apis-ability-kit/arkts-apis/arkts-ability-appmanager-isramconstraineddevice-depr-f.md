@@ -65,7 +65,7 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM-constrained, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM-constrained, **false** otherwise. |
 
 **Examples**
 

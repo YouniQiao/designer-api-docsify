@@ -11,7 +11,6 @@ URLParams是一个用于解析、构造和操作URL参数的实用类。该类�
 ## 导入模块
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
 ```
 
 ## $_iterator

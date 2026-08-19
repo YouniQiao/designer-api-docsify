@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## getDLPGatheringPolicy
@@ -74,7 +73,7 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GatheringPolicyType](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)&gt; | 是 | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
 
 **错误码：**
 

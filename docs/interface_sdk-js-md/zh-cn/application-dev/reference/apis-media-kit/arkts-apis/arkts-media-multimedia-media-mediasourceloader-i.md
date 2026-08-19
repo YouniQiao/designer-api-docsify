@@ -11,7 +11,6 @@ Defines a media data loader, which needs to be implemented by applications.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## close

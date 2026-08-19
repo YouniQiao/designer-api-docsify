@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Available, SuppressWarnings, SuppressWarningsType } from '@kit.BasicServicesKit';
-import { Available } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

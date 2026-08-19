@@ -68,7 +68,7 @@ Bundle name of the publisher to be subscribed to. This parameter is used to rest
 publisherDeviceId?: string
 ```
 
-Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](../../apis-na/arkts-apis/arkts-deviceinfo.md) to obtain the UDID as the device ID of the publisher. Not supported currently.
+Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](arkts-deviceinfo.md) to obtain the UDID as the device ID of the publisher. Not supported currently.
 
 **Type:** string
 

@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## 汇总

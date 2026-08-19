@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getPreferredLanguageList
@@ -18,7 +17,7 @@ export function getPreferredLanguageList(): Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getPreferredLanguageList](arkts-localization-i18n-system-c.md#getpreferredlanguagelist)
+**替代接口：** [getPreferredLanguageList](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getpreferredlanguagelist)
 
 <!--Device-i18n-export function getPreferredLanguageList(): Array<string>--><!--Device-i18n-export function getPreferredLanguageList(): Array<string>-End-->
 

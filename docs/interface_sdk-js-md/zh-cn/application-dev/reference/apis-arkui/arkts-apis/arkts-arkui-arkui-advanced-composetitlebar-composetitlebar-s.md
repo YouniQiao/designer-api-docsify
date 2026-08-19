@@ -11,8 +11,6 @@ ComposeTitleBar是一种普通标题栏组件，支持设置标题、头像（�
 ## 导入模块
 
 ```TypeScript
-import { ComposeTitleBar, ComposeTitleBarMenuItem } from '@kit.ArkUI';
-import { ComposeTitleBarV2, ComposeTitleBarV2MenuItem, ComposeTitleBarV2MenuItemParams } from '@kit.ArkUI';
 ```
 
 ## item

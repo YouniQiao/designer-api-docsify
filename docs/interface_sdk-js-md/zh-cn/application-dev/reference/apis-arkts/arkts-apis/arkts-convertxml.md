@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { convertxml } from '@kit.ArkTS';
 ```
 
 ## 汇总

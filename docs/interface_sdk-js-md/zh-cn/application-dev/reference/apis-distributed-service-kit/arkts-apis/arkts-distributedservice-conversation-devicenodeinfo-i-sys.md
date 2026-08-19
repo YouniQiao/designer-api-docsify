@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceName

@@ -17,7 +17,6 @@
 ## 导入模块
 
 ```TypeScript
-import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## 汇总

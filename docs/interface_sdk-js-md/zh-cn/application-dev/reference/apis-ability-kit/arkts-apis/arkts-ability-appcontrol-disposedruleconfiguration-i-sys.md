@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
 ```
 
 ## appId

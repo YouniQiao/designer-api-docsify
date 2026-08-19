@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
 ```
 
 ## setRouterProxy
@@ -29,8 +28,8 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当指定卡片设置router跳转代理成功时，error为undefined；否则抛出异常。 |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当指定卡片设置router跳转代理成功时，error为undefined；否则抛出异常。 |
 
 **错误码：**
 
@@ -68,7 +67,7 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | 是 | 卡片标识数组。 |
-| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
+| proxy | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数。返回跳转所需要的Want信息。 |
 
 **返回值：**
 

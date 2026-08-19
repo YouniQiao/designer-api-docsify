@@ -65,7 +65,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
 
 **Examples**
 

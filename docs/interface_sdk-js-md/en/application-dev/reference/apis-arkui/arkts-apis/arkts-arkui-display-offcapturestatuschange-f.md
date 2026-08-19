@@ -24,7 +24,7 @@ Unregister the callback for the status of the device's screen content is being c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 

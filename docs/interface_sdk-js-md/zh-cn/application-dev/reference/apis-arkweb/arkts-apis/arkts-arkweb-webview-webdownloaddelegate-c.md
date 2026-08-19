@@ -11,7 +11,6 @@ WebDownloadDelegate是ArkWeb框架中用于监听和处理Web组件下载任务�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## onBeforeDownload
@@ -34,7 +33,7 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载开始前的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载开始前的回调。 |
 
 ## onDownloadFailed
 
@@ -56,7 +55,7 @@ onDownloadFailed(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载失败的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载失败的回调。 |
 
 ## onDownloadFinish
 
@@ -78,7 +77,7 @@ onDownloadFinish(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载完成的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载完成的回调。 |
 
 ## onDownloadUpdated
 
@@ -100,5 +99,5 @@ onDownloadUpdated(callback: Callback<WebDownloadItem>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载更新的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | 是 | 下载更新的回调。 |
 

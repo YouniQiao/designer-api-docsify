@@ -39,7 +39,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Indicates the data to be finally encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -74,7 +74,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Data to encrypt or decrypt. In symmetric encryption and decryption, this parameter can be **null**, but **{data: Uint8Array (empty)}** cannot be passed in. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -107,7 +107,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | Yes | Indicates the data to be finally encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -390,7 +390,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
 | key | Key | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | Indicates the algorithm parameters such as IV. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -427,7 +427,7 @@ Initializes the [cipher](#cipher) object for encryption and decryption. This API
 | opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
 | key | Key | Yes | Key for encryption or decryption. |
 | params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. In versions earlier than API version 10, only **ParamsSpec** is supported. Since API version 10, **null** is also supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -627,7 +627,7 @@ Updates the data to encrypt or decrypt by segment. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Data to be encrypted or decrypted. It cannot be null. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -660,7 +660,7 @@ Updates the crypto operation with the input data, and feeds back the encrypted o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | DataBlob | Yes | Indicates the data to be encrypted or decrypted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

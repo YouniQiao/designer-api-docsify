@@ -2,7 +2,7 @@
 
 Base class for smart gesture handling with a target node.
 
-**Inheritance/Implementation:** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
+**Inheritance/Implementation:** TargetedGestureProposal extends [BaseGestureHandlingProposal](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
 

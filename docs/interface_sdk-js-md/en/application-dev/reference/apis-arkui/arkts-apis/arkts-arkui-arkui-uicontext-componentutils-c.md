@@ -1,6 +1,6 @@
 # ComponentUtils
 
-Provides API for obtaining the coordinates and size of the drawing area of a component. > **NOTE：**> > - The initial APIs of this class are supported since API version 10. > > - In the following API examples, you must first use [getComponentUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) in > **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
+Provides API for obtaining the coordinates and size of the drawing area of a component. > **NOTE：**> > - The initial APIs of this class are supported since API version 10. > > - In the following API examples, you must first use [getComponentUtils()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcomponentutils) in > **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 

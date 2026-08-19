@@ -11,7 +11,6 @@ Buffer对象是处理二进制数据的缓冲区。
 ## 导入模块
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
 ```
 
 ## compare

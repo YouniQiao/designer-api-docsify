@@ -77,7 +77,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
-| [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
+| const AbilityBase_Want *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
 
 **返回：**
 
@@ -104,7 +104,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
-| [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
+| const AbilityBase_Want *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
 | const AbilityRuntime_StartOptions *options | 启动当前应用UIAbility时需要的StartOptions信息。详细内容参考{@link AbilityRuntime_StartOptions}。 |
 
 **返回：**

@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## listFile

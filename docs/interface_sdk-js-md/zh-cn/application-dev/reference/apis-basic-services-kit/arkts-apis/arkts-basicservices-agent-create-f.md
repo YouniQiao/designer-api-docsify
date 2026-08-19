@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## create
@@ -31,7 +29,7 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 基于应用程序的上下文。 |
 | config | Config | 是 | 上传/下载任务的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | 是 | 回调函数。当创建上传或下载任务成功，err为undefined，data为获取到的Task对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Task&gt; | 是 | 回调函数。当创建上传或下载任务成功，err为undefined，data为获取到的Task对象；否则为错误对象。 |
 
 **错误码：**
 

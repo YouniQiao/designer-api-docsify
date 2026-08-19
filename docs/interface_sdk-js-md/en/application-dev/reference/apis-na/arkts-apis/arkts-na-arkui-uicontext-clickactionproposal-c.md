@@ -2,7 +2,7 @@
 
 Class ClickActionProposal.
 
-**Inheritance/Implementation:** ClickActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**Inheritance/Implementation:** ClickActionProposal extends [TargetedGestureProposal](arkts-na-arkui-uicontext-targetedgestureproposal-c.md)
 
 **Since:** 26.0.0
 

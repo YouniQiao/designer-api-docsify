@@ -138,7 +138,7 @@ Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
 
 ## offStateChange
 
@@ -158,7 +158,7 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. AVScreenCaptureStateCode indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
 ## off_error('error')
 
@@ -179,7 +179,7 @@ Unsubscribes from AVScreenCaptureRecorder errors. You can specify a callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used for unsubscription. If this parameter is not specified, the last subscription is canceled. |
 
 ## off_stateChange('stateChange')
 
@@ -200,7 +200,7 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. If this parameter is not specified, the last subscription is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No | Callback used for unsubscription. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. If this parameter is not specified, the last subscription is canceled. |
 
 ## onError
 
@@ -220,7 +220,7 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -248,7 +248,7 @@ Subscribes to screen capture state changes. An application can subscribe to only
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. AVScreenCaptureStateCode indicates the new state. |
 
 ## on_error('error')
 
@@ -269,7 +269,7 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -298,7 +298,7 @@ Subscribes to screen capture state changes. An application can subscribe to only
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type, which is **'stateChange'** in this case. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes | Callback invoked when the event is triggered. [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) indicates the new state. |
 
 ## pauseRecording
 

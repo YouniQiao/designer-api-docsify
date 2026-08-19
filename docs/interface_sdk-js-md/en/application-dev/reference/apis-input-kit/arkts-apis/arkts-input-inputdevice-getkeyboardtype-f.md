@@ -26,7 +26,7 @@ Obtains the keyboard type of the input device, such as full keyboard and numeric
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyboardType](arkts-input-inputdevice-keyboardtype-e.md)&gt; | Yes | Callback function. If the query is successful, **err** is **undefined**, and **data** is the keyboard type of the input device. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyboardType](arkts-input-inputdevice-keyboardtype-e.md)&gt; | Yes | Callback function. If the query is successful, **err** is **undefined**, and **data** is the keyboard type of the input device. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

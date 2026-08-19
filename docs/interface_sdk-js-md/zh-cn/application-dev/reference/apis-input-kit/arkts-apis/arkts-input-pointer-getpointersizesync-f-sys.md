@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
 ```
 
 ## getPointerSizeSync
@@ -26,7 +25,7 @@ function getPointerSizeSync(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 鼠标光标大小，范围为[1-7]。 |
+| int | 鼠标光标大小，范围为[1, 7]。 |
 
 **错误码：**
 

@@ -11,7 +11,6 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 ## 导入模块
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## offSizeUpdate

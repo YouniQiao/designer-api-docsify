@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## 汇总

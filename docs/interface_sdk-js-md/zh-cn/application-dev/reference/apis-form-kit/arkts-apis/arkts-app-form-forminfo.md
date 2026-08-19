@@ -11,7 +11,6 @@ formInfo模块提供了卡片信息和状态等相关类型和枚举。 > **说�
 ## 导入模块
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
 ```
 
 ## 汇总

@@ -13,7 +13,6 @@ FormIntentInfo用于描述 @InsightIntentForm 装饰器支持的参数，例如�
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName

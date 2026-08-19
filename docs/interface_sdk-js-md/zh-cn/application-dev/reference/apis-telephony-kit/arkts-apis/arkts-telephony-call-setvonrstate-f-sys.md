@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
 ```
 
 ## setVoNRState
@@ -30,7 +29,7 @@ function setVoNRState(slotId: int, state: VoNRState, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | state | [VoNRState](arkts-telephony-call-vonrstate-e-sys.md) | 是 | 开关状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置NR语音的开关状态的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置NR语音的开关状态的结果。 |
 
 **错误码：**
 

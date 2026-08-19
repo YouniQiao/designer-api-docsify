@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hash } from '@kit.CoreFileKit';
 ```
 
 ## 汇总

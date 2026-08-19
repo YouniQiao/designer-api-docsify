@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## startCastDeviceDiscovery
@@ -26,7 +25,7 @@ function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
@@ -64,7 +63,7 @@ function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filter | int | 是 | 进行设备发现的过滤条件，由ProtocolType组合而成。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 

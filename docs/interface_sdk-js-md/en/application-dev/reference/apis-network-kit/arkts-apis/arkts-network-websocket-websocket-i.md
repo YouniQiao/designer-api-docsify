@@ -36,7 +36,7 @@ Closes the WebSocket connection. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Closes the WebSocket connection based on the options parameter. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | Yes | Request options. For details, see [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -194,7 +194,7 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for establishing a WebSocket connection. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -249,7 +249,7 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 | --- | --- | --- | --- |
 | url | string | Yes | URL for establishing a WebSocket connection. |
 | options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | Yes | Request options. For details, see [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -380,7 +380,7 @@ Cancels listening for receiving data ends events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |  |
 
 ## offHeaderReceive
 
@@ -401,7 +401,7 @@ Unregisters the observer for HTTP Response Header events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | the callback used to return the result.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | the callback used to return the result.<br>**Since:** 23 |
 
 ## offMessage
 
@@ -423,7 +423,7 @@ Cancels listening for the message events of a WebSocket connection. data in Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | No | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | No | the callback used to return the result. |
 
 ## offOpen
 
@@ -445,7 +445,7 @@ Cancels listening for the open events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | No | the callback used to return the result. |
 
 ## offWebSocketClose
 
@@ -465,7 +465,7 @@ Cancels listening for the close events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
 ## offWebSocketError
 
@@ -485,7 +485,7 @@ Cancels listening for the error events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
 
 ## off_close('close')
 
@@ -508,7 +508,7 @@ Unsubscribes from WebSocket close events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type.&lt;br /&gt; **close**: event indicating that a WebSocket connection has been closed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | Callback used to return the result. <br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | No | Callback used to return the result. <br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
 
 **Examples**
 
@@ -538,7 +538,7 @@ Unsubscribes from WebSocket data receiving end events. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataEnd' | Yes | Event type.&lt;br /&gt; **dataEnd**: event indicating the data receiving over the WebSocket connection has ended. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |  |
 
 **Examples**
 
@@ -570,7 +570,7 @@ Unsubscribes from WebSocket error events. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.&lt;br /&gt; **error**: event indicating the WebSocket connection has encountered an error. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. |
 
 **Examples**
 
@@ -600,7 +600,7 @@ Unsubscribes from HTTP response header events. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | Yes | Event type.&lt;br /&gt; Event type. The value is **headerReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | No | Callback used to return the result. |
 
 **Examples**
 
@@ -632,7 +632,7 @@ Unsubscribes from WebSocket server message receiving events. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.&lt;br /&gt; **message**: event indicating that a message has been received from the server. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | No | Callback used to return the result. |
 
 **Examples**
 
@@ -664,7 +664,7 @@ Unsubscribes from WebSocket open events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'open' | Yes | Event type.&lt;br /&gt; **open**: event indicating that a WebSocket connection has been opened. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | No | Callback used to return the result. |
 
 **Examples**
 
@@ -706,7 +706,7 @@ Cancels listening for the open info events of a WebSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## onDataEnd
 
@@ -726,7 +726,7 @@ Enables listening for receiving data ends events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 ## onHeaderReceive
 
@@ -747,7 +747,7 @@ Registers an observer for HTTP Response Header events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | the callback used to return the result.<br>**Since:** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | the callback used to return the result.<br>**Since:** 23 |
 
 ## onMessage
 
@@ -769,7 +769,7 @@ Enables listening for the message events of a WebSocket connection. data in Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | Yes | the callback used to return the result. |
 
 ## onOpen
 
@@ -791,7 +791,7 @@ Enables listening for the open events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## onWebSocketClose
 
@@ -811,7 +811,7 @@ Enables listening for the close events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
 ## onWebSocketError
 
@@ -831,7 +831,7 @@ Enables listening for the error events of a WebSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
 ## on_close('close')
 
@@ -854,7 +854,7 @@ Subscribes to WebSocket close events. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Event type.<br/> **close**: event indicating that a WebSocket connection has been closed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | Callback used to return the result. <br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | Yes | Callback used to return the result. <br>**close** and **reason** indicate the error code and error cause for closing the connection, respectively. |
 
 **Examples**
 
@@ -887,7 +887,7 @@ Subscribes to the WebSocket data receiving end event. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataEnd' | Yes | Event type.<br/> **dataEnd**: event indicating the data receiving over the WebSocket connection has ended. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -921,7 +921,7 @@ Subscribes to WebSocket error events. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type.<br/> **error**: event indicating the WebSocket connection has encountered an error. |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -954,7 +954,7 @@ Subscribes to HTTP response header events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | Yes | Event type.<br/> Event type. The value is **headerReceive**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -988,7 +988,7 @@ Subscribes to WebSocket server message receiving events. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.<br/> **message**: event indicating that a message has been received from the server. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1023,7 +1023,7 @@ Subscribes to WebSocket open events. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'open' | Yes | Event type.<br/> **open**: event indicating that a WebSocket connection has been opened. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1062,7 +1062,7 @@ Enables listening for the open info events of a WebSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## send
 
@@ -1087,7 +1087,7 @@ Sends data through a WebSocket connection. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | Yes | Data to send. <br>Only the string type is supported for API version 6 or earlier. Both the string and ArrayBuffer types are supported for API version 8 or later. A maximum of 5,242,864 bytes (that is, 5 x 1024 x 1024 - 16) can be sent. If the data size exceeds the upper limit, error code 401 will be returned. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

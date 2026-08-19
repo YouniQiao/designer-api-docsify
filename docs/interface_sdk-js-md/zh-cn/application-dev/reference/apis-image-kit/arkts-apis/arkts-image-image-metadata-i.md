@@ -11,7 +11,6 @@ Metadata类，用于存储图像的元数据。目前支持的元数据类型可
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## clone

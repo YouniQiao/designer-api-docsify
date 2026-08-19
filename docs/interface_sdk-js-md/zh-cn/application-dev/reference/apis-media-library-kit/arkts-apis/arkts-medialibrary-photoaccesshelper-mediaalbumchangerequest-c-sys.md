@@ -13,7 +13,6 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAlbumRequest

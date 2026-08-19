@@ -1,6 +1,6 @@
 # RouterPageState
 
-routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpageinfo-c.md)中，作为 [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#on_navdestinationupdatenavdestinationupdate)无感监听的返回值。
+routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md)中，作为 [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#on_navdestinationupdatenavdestinationupdate)无感监听的返回值。
 
 **起始版本：** 11
 

@@ -38,7 +38,7 @@ This API is called by the SA. After the request of connecting to the cloud serve
 | --- | --- | --- | --- |
 | requestId | string | Yes | ID of the request transferred by the SA. No value range restriction is specified. |
 | requestData | string | Yes | Data transferred by the SA. No value range restriction is specified. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | API transferred by the SA, which is used for callback. No value range restriction is specified. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | API transferred by the SA, which is used for callback. No value range restriction is specified. |
 
 **Error codes:**
 

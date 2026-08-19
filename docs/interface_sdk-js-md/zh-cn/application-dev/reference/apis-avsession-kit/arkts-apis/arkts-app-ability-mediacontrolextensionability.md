@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
 ```
 
 ## 汇总

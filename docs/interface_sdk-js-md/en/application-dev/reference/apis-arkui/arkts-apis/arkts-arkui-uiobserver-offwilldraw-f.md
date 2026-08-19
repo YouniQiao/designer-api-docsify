@@ -29,6 +29,6 @@ Unregisters the listener for drawing instruction dispatch in each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'willDraw' | Yes | Event event. The value **'willDraw'** indicates whether drawing is about to occur. |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Target listener to unregister. |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Target listener to unregister. |
 

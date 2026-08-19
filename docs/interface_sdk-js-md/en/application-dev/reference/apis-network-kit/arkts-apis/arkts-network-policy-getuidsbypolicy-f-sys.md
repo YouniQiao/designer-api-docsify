@@ -29,7 +29,7 @@ Obtains all UIDs that match the specified network policy. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Yes | Network policy for the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, the UID array of the application is returned. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, the UID array of the application is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

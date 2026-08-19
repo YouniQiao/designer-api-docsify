@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
 ```
 
 ## isImsSwitchEnabled
@@ -27,7 +26,7 @@ function isImsSwitchEnabled(slotId: int, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 以回调函数的方式返回判断Ims开关是否启用的结果。true表示Ims开关启用，false表示未启用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 以回调函数的方式返回判断Ims开关是否启用的结果。true表示Ims开关启用，false表示未启用。 |
 
 **错误码：**
 

@@ -11,7 +11,6 @@ ScrollEvent info.
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## axis
@@ -82,7 +81,7 @@ scrollEvent: ScrollEventType
 
 Changed ScrollEvent type.
 
-**类型：** [ScrollEventType](../../apis-na/arkts-apis/arkts-na-uiobserver-scrolleventtype-e.md)
+**类型：** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
 
 **起始版本：** 12
 

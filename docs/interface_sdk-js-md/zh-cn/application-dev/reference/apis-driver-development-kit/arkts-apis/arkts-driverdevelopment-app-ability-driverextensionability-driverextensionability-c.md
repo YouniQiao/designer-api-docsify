@@ -11,7 +11,6 @@ DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建�
 ## 导入模块
 
 ```TypeScript
-import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## onConnect

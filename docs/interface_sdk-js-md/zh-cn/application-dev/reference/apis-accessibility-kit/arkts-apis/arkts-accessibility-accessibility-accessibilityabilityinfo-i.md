@@ -11,11 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit';
-import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## abilityTypes
@@ -66,7 +61,7 @@ readonly capabilities: Array<Capability>
 
 辅助应用能力列表。
 
-**类型：** Array&lt;[Capability](arkts-accessibility-accessibility-capability-t.md)&gt;
+**类型：** Array&lt;Capability&gt;
 
 **起始版本：** 23
 

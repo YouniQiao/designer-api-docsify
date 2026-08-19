@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
 ```
 
 ## setDeviceIdleTrustlist
@@ -30,7 +29,7 @@ function setDeviceIdleTrustlist(uids: Array<int>, isAllowed: boolean, callback: 
 | --- | --- | --- | --- |
 | uids | Array&lt;int&gt; | 是 | app 唯一标识符。 |
 | isAllowed | boolean | 是 | 是否加入白名单。true：加入白名单；false：没有加入白名单。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。成功返回空，失败返回错误码错误信息。 |
 
 **错误码：**
 

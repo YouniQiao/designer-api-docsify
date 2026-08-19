@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
 ```
 
 ## isEncrypted

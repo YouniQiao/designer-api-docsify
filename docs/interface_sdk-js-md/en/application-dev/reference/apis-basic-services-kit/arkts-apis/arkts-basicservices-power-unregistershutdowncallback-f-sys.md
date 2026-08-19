@@ -28,7 +28,7 @@ Unregisters the callback to be invoked when the device is shut down or rebooted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback that returns no value. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that returns no value. |
 
 **Error codes:**
 

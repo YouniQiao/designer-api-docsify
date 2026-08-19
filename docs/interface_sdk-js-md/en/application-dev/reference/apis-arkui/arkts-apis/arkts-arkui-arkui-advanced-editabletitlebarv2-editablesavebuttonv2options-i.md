@@ -66,7 +66,7 @@ onAction?: OnActionCallback
 
 Callback function when click on the save button.
 
-**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

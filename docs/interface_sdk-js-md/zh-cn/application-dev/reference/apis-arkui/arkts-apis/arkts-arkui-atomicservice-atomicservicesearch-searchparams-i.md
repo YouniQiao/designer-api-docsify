@@ -11,7 +11,6 @@ AtomicServiceSearch中“搜索区”的可选属性。
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceSearch, InputFilterParams, SearchButtonParams, MenuAlignParams, SearchParams, SelectParams, OperationParams, } from '@kit.ArkUI';
 ```
 
 ## cancelIcon

@@ -11,7 +11,6 @@ Picture合成HDR时可配置的参数选项。
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## desiredPixelFormat

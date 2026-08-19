@@ -25,7 +25,7 @@ Obtains the type of the SIM card installed in a specified slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;CardType&gt; | Yes | Indicates the callback for getting the SIM card type. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CardType&gt; | Yes | Indicates the callback for getting the SIM card type. |
 
 **Error codes:**
 

@@ -11,7 +11,6 @@ WebDownloadItem是ArkWeb框架中用于表示和管理单个下载任务的类�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## cancel

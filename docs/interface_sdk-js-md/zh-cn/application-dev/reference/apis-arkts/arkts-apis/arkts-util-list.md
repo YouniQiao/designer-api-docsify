@@ -3,10 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
 ```
 
 ## 汇总

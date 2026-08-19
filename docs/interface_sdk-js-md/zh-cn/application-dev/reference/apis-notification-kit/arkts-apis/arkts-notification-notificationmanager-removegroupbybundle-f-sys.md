@@ -30,7 +30,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 应用的包信息。 |
 | groupName | string | 是 | 通知组名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定应用指定组下通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除指定应用指定组下通知的回调函数。 |
 
 **错误码：**
 

@@ -11,7 +11,6 @@ appRecovery模块提供了应用在故障状态下的恢复能力。 > **说明�
 ## 导入模块
 
 ```TypeScript
-import { appRecovery } from '@kit.AbilityKit';
 ```
 
 ## 汇总

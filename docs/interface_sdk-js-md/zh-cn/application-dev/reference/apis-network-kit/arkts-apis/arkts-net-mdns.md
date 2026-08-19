@@ -11,7 +11,6 @@ MDNS即多播DNS（Multicast DNS），提供局域网内的本地服务添加、
 ## 导入模块
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
 ```
 
 ## 汇总

@@ -78,7 +78,7 @@ onError?: ErrorCallback
 
 Callback triggered when an error occurs during running of the started ExtensionAbility. It is supported only when the atomic service runs in embedded mode, with the parameter being of type BusinessError.
 
-**Type:** [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)
+**Type:** [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ onReceive?: Callback<Record<string, RecordData>>
 
 Indicates the callback of onReceive.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ onTerminated?: Callback<TerminationInfo>
 
 Callback triggered when the EmbeddableUIAbility is terminated to receive the information about the termination. It is supported only when the atomic service runs in embedded mode, with the parameter being of type TerminationInfo.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TerminationInfo&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **Since:** 23
 

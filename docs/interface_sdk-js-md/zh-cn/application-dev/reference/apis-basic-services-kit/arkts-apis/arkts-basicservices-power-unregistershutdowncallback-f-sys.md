@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
 ```
 
 ## unregisterShutdownCallback
@@ -28,7 +27,7 @@ function unregisterShutdownCallback(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，无返回值。取消订阅成功后会调用该回调函数。不传入此参数时，取消订阅仍生效，但不会触发回调通知。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 回调函数，无返回值。取消订阅成功后会调用该回调函数。不传入此参数时，取消订阅仍生效，但不会触发回调通知。 |
 
 **错误码：**
 

@@ -67,7 +67,7 @@ onItemClicked?: Callback<number>
 
 Callback function triggered when a segment button option is tapped. The subscript of the tapped option is passed as a parameter. If this parameter is not passed, no callback is triggered when the option is tapped.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
 
 **Since:** 13
 

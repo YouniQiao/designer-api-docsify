@@ -3,10 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pPeerDevices
@@ -60,7 +56,7 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;WifiP2pDevice[]&gt; | 是 |  |
 
 **示例**
 

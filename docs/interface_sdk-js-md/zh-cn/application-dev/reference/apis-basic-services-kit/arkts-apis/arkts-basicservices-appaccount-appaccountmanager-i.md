@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccount
@@ -37,7 +36,7 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -73,7 +72,7 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -618,7 +617,7 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | labels | Array&lt;string&gt; | 是 | 标签数组。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示满足特定的标签集合，data为false表示不满足；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示满足特定的标签集合，data为false表示不满足；否则为错误对象。 |
 
 **错误码：**
 
@@ -785,7 +784,7 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
 
 **错误码：**
 
@@ -944,7 +943,7 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
 
 **示例**
 
@@ -1025,7 +1024,7 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 检查可见性的应用包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
 
 **错误码：**
 
@@ -1185,7 +1184,7 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
 
 **错误码：**
 
@@ -1351,7 +1350,7 @@ checkOAuthTokenVisibility(
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 检查可见性的应用包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
 
 **示例**
 
@@ -1432,7 +1431,7 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -1508,7 +1507,7 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | 是 | 创建应用账号的选项，可提供自定义数据，但不建议包含敏感数据（如密码、Token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当创建成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -1947,7 +1946,7 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -2023,7 +2022,7 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。如果授权令牌不存在，则不执行任何操作。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
@@ -2181,7 +2180,7 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
@@ -2341,7 +2340,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null；否则为错误对象。 |
 
 **示例**
 
@@ -2427,7 +2426,7 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -2506,7 +2505,7 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当允许指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当允许指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -2589,7 +2588,7 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
 
 **示例**
 
@@ -2671,7 +2670,7 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取此应用账号的额外信息成功时，err为null，data返回此应用账号的额外信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取此应用账号的额外信息成功时，err为null，data返回此应用账号的额外信息对象；否则为错误对象。 |
 
 **示例**
 
@@ -2748,7 +2747,7 @@ getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果获取成功，err为null，data为获取到的应用账号列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。如果获取成功，err为null，data为获取到的应用账号列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -2905,7 +2904,7 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
 
 **示例**
 
@@ -2977,7 +2976,7 @@ getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -3123,7 +3122,7 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 应用账号信息列表。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 应用账号信息列表。 |
 
 **示例**
 
@@ -3205,7 +3204,7 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -3364,7 +3363,7 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
 
 **示例**
 
@@ -3449,7 +3448,7 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 关联数据的键名。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为关联数据的取值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为关联数据的取值；否则为错误对象。 |
 
 **示例**
 
@@ -3527,7 +3526,7 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 鉴权会话的标识。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为鉴权会话的认证器回调对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为鉴权会话的认证器回调对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -3743,7 +3742,7 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -3899,7 +3898,7 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
 
 **错误码：**
 
@@ -4059,7 +4058,7 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 鉴权会话的标识。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | 是 | 回调函数。当获取鉴权会话的认证器回调函数成功时，err为null，data为认证器回调函数；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | 是 | 回调函数。当获取鉴权会话的认证器回调函数成功时，err为null，data为认证器回调函数；否则为错误对象。 |
 
 **示例**
 
@@ -4164,7 +4163,7 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
 
 **示例**
 
@@ -4244,7 +4243,7 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
 
 **错误码：**
 
@@ -4399,7 +4398,7 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 自定义数据的键名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为自定义数据的取值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为自定义数据的取值；否则为错误对象。 |
 
 **错误码：**
 
@@ -4608,7 +4607,7 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
 
 **示例**
 
@@ -4692,7 +4691,7 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
 
 **示例**
 
@@ -4771,7 +4770,7 @@ offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
 
 **错误码：**
 
@@ -4823,7 +4822,7 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
 
 **错误码：**
 
@@ -4877,7 +4876,7 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 | 需要注销的回调函数，默认为空，表示取消该类型事件的所有回调。 |
 
 **示例**
 
@@ -4921,7 +4920,7 @@ onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
 
 **错误码：**
 
@@ -4966,7 +4965,7 @@ on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAcc
 | --- | --- | --- | --- |
 | type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当目标应用更新账号信息时，触发该事件。 |
 | owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
 
 **错误码：**
 
@@ -5015,7 +5014,7 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
 | owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息发生变更的应用账号列表。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息发生变更的应用账号列表。 |
 
 **示例**
 
@@ -5052,7 +5051,7 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | 是 | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -5206,7 +5205,7 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当删除成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -5355,7 +5354,7 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | 是 | 选择账号的选项。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当根据选项选择请求方可访问的账号列表时，err为null，data为可访问的账号信息对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 回调函数。当根据选项选择请求方可访问的账号列表时，err为null，data为可访问的账号信息对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -5529,7 +5528,7 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
 | credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置此应用程序账号的凭据成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置此应用程序账号的凭据成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -5613,7 +5612,7 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | extraInfo | string | 是 | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -5693,7 +5692,7 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | bundleName | string | 是 | 第三方应用的包名。最大长度为512个字符。 |
 | isAccessible | boolean | 是 | 是否可访问。true表示允许访问，false表示禁止访问。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，如果设置成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，如果设置成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -5854,7 +5853,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | isEnable | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -5940,7 +5939,7 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 关联数据的键名。 |
 | value | string | 是 | 关联数据的取值。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置与此应用账号关联的数据成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置与此应用账号关联的数据成功时，err为null，否则为错误对象。 |
 
 **示例**
 
@@ -6021,7 +6020,7 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
@@ -6184,7 +6183,7 @@ setAuthTokenVisibility(
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 被设置可见性的应用包名。最大长度为512个字符。 |
 | isVisible | boolean | 是 | 是否可见。true表示可见，false表示不可见。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 **错误码：**
 
@@ -6520,7 +6519,7 @@ setCredential(name: string, credentialType: string, credential: string,
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | credentialType | string | 是 | 凭据类型。自定义的类型，最大长度为1024个字符。 |
 | credential | string | 是 | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当凭据设置成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当凭据设置成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -6674,7 +6673,7 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | key | string | 是 | 自定义数据的键名。最大长度为1024个字符。 |
 | value | string | 是 | 自定义数据的取值。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置自定义数据成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置自定义数据成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -6831,7 +6830,7 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | isEnabled | boolean | 是 | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
 
 **错误码：**
 
@@ -6986,7 +6985,7 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | token | string | 是 | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 **示例**
 
@@ -7078,7 +7077,7 @@ setOAuthTokenVisibility(
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
 | bundleName | string | 是 | 被设置可见性的应用包名。最大长度为512个字符。 |
 | isVisible | boolean | 是 | 是否可见。true表示可见，false表示不可见。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置成功时，err为null；否则为错误对象。 |
 
 **示例**
 

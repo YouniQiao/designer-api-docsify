@@ -107,7 +107,7 @@ Authenticates a sector with the key. Only successful authentication sector can b
 | sectorIndex | int | Yes | Index of sector to authenticate. |
 | key | int[] | Yes | The key(6-bytes) to authenticate. |
 | isKeyA | boolean | Yes | KeyA flag. true means KeyA, otherwise KeyB. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -246,7 +246,7 @@ Decreases the contents of a block, and stores the result in the internal transfe
 | --- | --- | --- | --- |
 | blockIndex | int | Yes | The index of block to decrease. |
 | value | int | Yes | The value to decrease, non-negative. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -627,7 +627,7 @@ Increments the contents of a block, and stores the result in the internal transf
 | --- | --- | --- | --- |
 | blockIndex | int | Yes | The index of block to increment. |
 | value | int | Yes | The value to increment, non-negative. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -796,7 +796,7 @@ Reads a block, one block size is 16 bytes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blockIndex | int | Yes | The index of block to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -931,7 +931,7 @@ Moves the contents of a block into the internal transfer buffer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blockIndex | int | Yes | The index of value block to be moved from. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -1066,7 +1066,7 @@ Writes the contents of the internal transfer buffer to a value block.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | blockIndex | int | Yes | The index of value block to be written. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -1205,7 +1205,7 @@ Writes a block, one block size is 16 bytes.
 | --- | --- | --- | --- |
 | blockIndex | int | Yes | The index of block to write. |
 | data | int[] | Yes | The block data to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 

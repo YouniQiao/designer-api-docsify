@@ -11,7 +11,6 @@ Describes the information of an Metrics Event.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## details

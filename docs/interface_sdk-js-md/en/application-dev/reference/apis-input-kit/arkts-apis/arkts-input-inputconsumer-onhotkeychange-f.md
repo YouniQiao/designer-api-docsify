@@ -25,7 +25,7 @@ Listening for hotkey event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hotkeyOptions | [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | Yes | Hotkey options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md)&gt; | Yes | Callback used to return hotkey event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md)&gt; | Yes | Callback used to return hotkey event. |
 
 **Error codes:**
 

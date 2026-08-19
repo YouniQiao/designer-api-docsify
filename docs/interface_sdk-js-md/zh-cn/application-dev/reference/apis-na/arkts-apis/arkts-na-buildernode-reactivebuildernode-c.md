@@ -1,6 +1,6 @@
 # ReactiveBuilderNode
 
-ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变 量。ReactiveBuilderNode中持有的FrameNode仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对 ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的 [getFrameNode](arkts-na-buildernode-c.md#getframenode)方法和FrameNode节点的 [getRenderNode](arkts-na-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](arkts-na-rendernode-c.md)的接 口对其进行属性设置与子节点操作。
+ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变 量。ReactiveBuilderNode中持有的FrameNode仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对 ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的 [getFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md#getframenode)方法和FrameNode节点的 [getRenderNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](arkts-na-rendernode-c.md)的接 口对其进行属性设置与子节点操作。
 
 **起始版本：** 26.0.0
 
@@ -33,7 +33,7 @@ build(builder: CustomBuilder, options?: BuildOptions): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | builder | CustomBuilder | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../ui/state-management/arkts-builder.md)。 |
-| options | [BuildOptions](arkts-na-buildernode-buildoptions-i.md) | 否 | build相关的配置项。<br/>默认值：参考[BuildOptions](arkts-na-buildernode-buildoptions-i.md)各个成员的默认值。 |
+| options | [BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md) | 否 | build相关的配置项。<br/>默认值：参考[BuildOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-buildoptions-i.md)各个成员的默认值。 |
 
 ## constructor
 
@@ -41,7 +41,7 @@ build(builder: CustomBuilder, options?: BuildOptions): void
 constructor(uiContext: UIContext, options?: RenderOptions)
 ```
 
-用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](arkts-na-rendernode-c.md)中显示时，需要显式指定 [RenderOptions](arkts-na-buildernode-renderoptions-i.md)中的[selfIdealSize](arkts-na-buildernode-renderoptions-i.md)，否则 ReactiveBuilderNode内的节点默认父组件布局约束为[0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
+用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](arkts-na-rendernode-c.md)中显示时，需要显式指定 [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md)中的[selfIdealSize](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md)，否则 ReactiveBuilderNode内的节点默认父组件布局约束为[0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
 
 **起始版本：** 26.0.0
 
@@ -57,8 +57,8 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
-| options | [RenderOptions](arkts-na-buildernode-renderoptions-i.md) | 否 | ReactiveBuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。<br/>默认值：undefined |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
+| options | [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md) | 否 | ReactiveBuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。<br/>默认值：undefined |
 
 ## dispose
 
@@ -118,7 +118,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
+| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
 
 ## isDisposed
 
@@ -166,7 +166,7 @@ postInputEvent(event: InputEventType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [InputEventType](arkts-na-inputeventtype-t.md) | 是 | 待分发的输入事件。 |
+| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | 是 | 待分发的输入事件。 |
 
 **返回值：**
 
@@ -196,7 +196,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [InputEventType](arkts-na-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
+| event | [InputEventType](../../apis-arkui/arkts-apis/arkts-arkui-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
 | competitionStrategy | CompetitionStrategy | 否 | 分发事件的手势是否为竞争场景，默认为非竞争。 |
 
 **返回值：**
@@ -211,7 +211,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 postTouchEvent(event: TouchEvent): boolean
 ```
 
-将原始事件派发到某个ReactiveBuilderNode创建的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-na-framenode-c.md#getpositiontoparent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。OffsetC为OffsetA 与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > 同一时间戳，postTouchEvent只能调用一次。<!--Del--> > > postTouchEvent的参数不支持UIExtensionComponent。 <!--DelEnd-->
+将原始事件派发到某个ReactiveBuilderNode创建的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getpositiontoparent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。OffsetC为OffsetA 与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > 同一时间戳，postTouchEvent只能调用一次。<!--Del--> > > postTouchEvent的参数不支持UIExtensionComponent。 <!--DelEnd-->
 
 **起始版本：** 26.0.0
 
@@ -241,7 +241,7 @@ postTouchEvent(event: TouchEvent): boolean
 recycle(): void
 ```
 
-触发ReactiveBuilderNode中自定义组件的回收。自定义组件的回收是组件复用机制中的环节，具体信息请参见 [@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。从API版本26.0.0开始，ReactiveBuilderNode中的自定义组件支持V 2组件复用，请参见[@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。 ReactiveBuilderNode通过[reuse](#reuse)和recycle完成其内外自定义组件之间的复用事件传递，具体使用场景请参见 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
+触发ReactiveBuilderNode中自定义组件的回收。自定义组件的回收是组件复用机制中的环节，具体信息请参见 [@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。从API版本26.0.0开始，ReactiveBuilderNode中的自定义组件支持V 2组件复用，请参见[@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。 ReactiveBuilderNode通过[reuse](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-reactivebuildernode-c.md#reuse)和recycle完成其内外自定义组件之间的复用事件传递，具体使用场景请参见 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
 
 **起始版本：** 26.0.0
 
@@ -259,7 +259,7 @@ recycle(): void
 reuse(param?: RecordData): void
 ```
 
-触发ReactiveBuilderNode中的自定义组件的复用。组件复用请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。关于 ReactiveBuilderNode的解绑场景请参见[节点解绑](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。从API版本26.0.0 开始，ReactiveBuilderNode中的自定义组件支持V2组件复用，请参见 [@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。 ReactiveBuilderNode通过reuse和[recycle](#recycle)完成其内外自定义组件之间的复用事件传递，具体使用场景请参见 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
+触发ReactiveBuilderNode中的自定义组件的复用。组件复用请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。关于 ReactiveBuilderNode的解绑场景请参见[节点解绑](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。从API版本26.0.0 开始，ReactiveBuilderNode中的自定义组件支持V2组件复用，请参见 [@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。 ReactiveBuilderNode通过reuse和[recycle](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-reactivebuildernode-c.md#recycle)完成其内外自定义组件之间的复用事件传递，具体使用场景请参见 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
 
 **起始版本：** 26.0.0
 
@@ -275,7 +275,7 @@ reuse(param?: RecordData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | 用于复用[ReactiveBuilderNode](#reactivebuildernode)的参数。该参数将直接用于 [ReactiveBuilderNode](#reactivebuildernode)中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定 义组件的[aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)生命周期 回调，并将该参数作为回调的入参。默认值为undefined，此时ReactiveBuilderNode中的自定义组件将直接使用构造时的数据源。 |
+| param | [RecordData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | 用于复用[ReactiveBuilderNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-reactivebuildernode-c.md)的参数。该参数将直接用于 [ReactiveBuilderNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-reactivebuildernode-c.md)中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定 义组件的[aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)生命周期 回调，并将该参数作为回调的入参。默认值为undefined，此时ReactiveBuilderNode中的自定义组件将直接使用构造时的数据源。 |
 
 ## updateConfiguration
 

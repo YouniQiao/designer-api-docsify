@@ -121,7 +121,7 @@ Generates a DLP file, which is an encrypted file that can be accessed only by au
 | plaintextFd | number | Yes | FD of the plaintext file to be encrypted. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 | ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 | property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | Yes | Authorization information, which includes the authorized user list, owner account, and contact account information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to return the result. If the DLP file generation is successful, **err** is **undefined**, and **data** is the DLP file information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to return the result. If the DLP file generation is successful, **err** is **undefined**, and **data** is the DLP file information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

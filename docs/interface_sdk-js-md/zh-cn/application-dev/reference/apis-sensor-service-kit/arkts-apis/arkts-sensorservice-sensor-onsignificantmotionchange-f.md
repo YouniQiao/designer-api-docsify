@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## onSignificantMotionChange
@@ -24,7 +23,7 @@ Subscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | 是 | callback significant motion data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md)&gt; | 是 | callback significant motion data. |
 | options | Options | 否 | Optional parameters specifying the interval at which sensor data is reported, <br> {@code Options}. |
 
 **错误码：**

@@ -47,7 +47,7 @@ Obtains the ability information of the specified user based on given Want. This 
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name. |
 | bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the ability information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the ability information. |
 
 
 ## queryAbilityByWant
@@ -74,7 +74,7 @@ Obtains the ability information based on given Want. This API uses an asynchrono
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name. |
 | bundleFlags | number | Yes | Ability information to be returned. For details about the available enumerated values, see the ability information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the ability information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the ability information. |
 
 
 ## queryAbilityByWant

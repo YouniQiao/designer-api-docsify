@@ -11,7 +11,6 @@ SSAP客户端属性读请求参数说明。
 ## 导入模块
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## address

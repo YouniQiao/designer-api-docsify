@@ -24,7 +24,7 @@ Obtains the index number of the card slot where the primary card is located if m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for getting the index number of the primary card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the callback for getting the index number of the primary card slot. |
 
 **Error codes:**
 

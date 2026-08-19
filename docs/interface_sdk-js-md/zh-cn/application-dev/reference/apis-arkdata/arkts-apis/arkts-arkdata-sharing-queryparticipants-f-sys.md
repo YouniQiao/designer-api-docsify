@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
 ```
 
 ## queryParticipants
@@ -27,7 +26,7 @@ function queryParticipants(sharingResource: string, callback: AsyncCallback<Resu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回查找共享参与者的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回查找共享参与者的结果。 |
 
 **错误码：**
 

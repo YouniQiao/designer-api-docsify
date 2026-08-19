@@ -26,7 +26,7 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVPlayer instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVPlayer instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
 
 **Error codes:**
 
@@ -69,7 +69,7 @@ Creates an **AVPlayer** instance. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | Yes | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **undefined** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | Yes | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **undefined** is returned. The instance can be used to play audio and video. |
 
 **Error codes:**
 

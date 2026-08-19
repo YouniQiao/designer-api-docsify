@@ -28,5 +28,5 @@ Plugin component request method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [RequestParameters](arkts-na-plugincomponentmanager-requestparameters-i.md) | Yes |  |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes |  |
 

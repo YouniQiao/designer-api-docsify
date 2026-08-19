@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -36,7 +35,7 @@ close(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:关闭请求创建成功；false:关闭请求创建失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。true:关闭请求创建成功；false:关闭请求创建失败。 |
 
 **错误码：**
 
@@ -102,7 +101,7 @@ close(options: WebSocketCloseOptions, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) | 是 | 参考[WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:关闭请求创建成功；false:关闭请求创建失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。true:关闭请求创建成功；false:关闭请求创建失败。 |
 
 **错误码：**
 
@@ -257,7 +256,7 @@ connect(url: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 建立WebSocket连接的URL地址。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:连接请求创建成功；false:连接请求创建失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。true:连接请求创建成功；false:连接请求创建失败。 |
 
 **错误码：**
 
@@ -331,7 +330,7 @@ connect(url: string, options: WebSocketRequestOptions, callback: AsyncCallback<b
 | --- | --- | --- | --- |
 | url | string | 是 | 建立WebSocket连接的URL地址。 |
 | options | [WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) | 是 | 参考[WebSocketRequestOptions](arkts-network-websocket-websocketrequestoptions-i.md) 。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:连接请求创建成功；false:连接请求创建失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。true:连接请求创建成功；false:连接请求创建失败。 |
 
 **错误码：**
 
@@ -490,7 +489,7 @@ offDataEnd(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 |  |
 
 **示例**
 
@@ -525,7 +524,7 @@ offHeaderReceive(callback?: Callback<ResponseHeaders>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 否 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -556,7 +555,7 @@ offMessage(callback?: AsyncCallback<string | ArrayBuffer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 否 | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | 否 | the callback used to return the result. |
 
 **示例**
 
@@ -592,7 +591,7 @@ offOpen(callback?: Callback<OpenResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 否 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 否 | the callback used to return the result. |
 
 **示例**
 
@@ -626,7 +625,7 @@ offWebSocketClose(callback?: AsyncCallback<CloseResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
 **示例**
 
@@ -661,7 +660,7 @@ offWebSocketError(callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | the callback used to return the result. |
 
 **示例**
 
@@ -693,7 +692,7 @@ off(type: 'close', callback?: AsyncCallback<CloseResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 取消订阅的事件类型。'close'：WebSocket的关闭事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | 回调函数。 <br>close：close错误码，reason：错误码说明 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 否 | 回调函数。 <br>close：close错误码，reason：错误码说明 |
 
 **示例**
 
@@ -723,7 +722,7 @@ off(type: 'dataEnd', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataEnd' | 是 | 取消订阅的事件类型。'dataEnd'：WebSocket的数据接收结束事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 |  |
 
 **示例**
 
@@ -755,7 +754,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 取消订阅的事件类型。'error'：WebSocket的Error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数。 |
 
 **示例**
 
@@ -785,7 +784,7 @@ off(type: 'headerReceive', callback?: Callback<ResponseHeaders>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | 是 | 取消订阅的事件类型。'headerReceive'：WebSocket的headerReceive事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 否 | 回调函数，返回订阅事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 否 | 回调函数，返回订阅事件。 |
 
 **示例**
 
@@ -817,7 +816,7 @@ off(type: 'message', callback?: AsyncCallback<string | ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 取消订阅的事件类型。'message'：WebSocket的接收到服务器消息事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 否 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | 否 | 回调函数。 |
 
 **示例**
 
@@ -849,7 +848,7 @@ off(type: 'open', callback?: AsyncCallback<Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'open' | 是 | 取消订阅的事件类型。'open'：WebSocket的打开事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 否 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | 否 | 回调函数。 |
 
 **示例**
 
@@ -891,7 +890,7 @@ off(type: 'openInfo', callback?: AsyncCallback<WebSocketOpenInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'openInfo' | 是 | 取消订阅的事件类型。'openInfo'：WebSocket的打开信息事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | 否 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | 否 | 回调函数。 |
 
 **示例**
 
@@ -930,7 +929,7 @@ onDataEnd(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | the callback used to return the result. |
 
 **示例**
 
@@ -962,7 +961,7 @@ onHeaderReceive(callback: Callback<ResponseHeaders>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 是 | the callback used to return the result.<br>**起始版本：** 23 |
 
 **示例**
 
@@ -995,7 +994,7 @@ onMessage(callback: AsyncCallback<string | ArrayBuffer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 是 | the callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | 是 | the callback used to return the result. |
 
 **示例**
 
@@ -1029,7 +1028,7 @@ onOpen(callback: Callback<OpenResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 是 | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OpenResult](arkts-network-websocket-openresult-i.md)&gt; | 是 | the callback used to return the result. |
 
 **示例**
 
@@ -1060,7 +1059,7 @@ onWebSocketClose(callback: AsyncCallback<CloseResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | the callback used to return the result. <br>close indicates the close error code and reason indicates the error code description. |
 
 **示例**
 
@@ -1092,7 +1091,7 @@ onWebSocketError(callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | the callback used to return the result. |
 
 **示例**
 
@@ -1127,7 +1126,7 @@ on(type: 'close', callback: AsyncCallback<CloseResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'close' | 是 | 订阅的事件类型。'close'：WebSocket的关闭事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | 回调函数。 <br>close：close错误码，reason：错误码说明 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CloseResult](arkts-network-websocket-closeresult-i.md)&gt; | 是 | 回调函数。 <br>close：close错误码，reason：错误码说明 |
 
 **示例**
 
@@ -1160,7 +1159,7 @@ on(type: 'dataEnd', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataEnd' | 是 | 订阅的事件类型。'dataEnd'：WebSocket的数据接收结束事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1194,7 +1193,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 订阅的事件类型。'error'：WebSocket的Error事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数。 |
 
 **示例**
 
@@ -1227,7 +1226,7 @@ on(type: 'headerReceive', callback: Callback<ResponseHeaders>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | 是 | 订阅的事件类型。'headerReceive'：WebSocket的headerReceive事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 是 | 回调函数，返回订阅事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ResponseHeaders](arkts-network-websocket-responseheaders-t.md)&gt; | 是 | 回调函数，返回订阅事件。 |
 
 **示例**
 
@@ -1261,7 +1260,7 @@ on(type: 'message', callback: AsyncCallback<string | ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'message' | 是 | 订阅的事件类型。'message'：WebSocket的接收服务器消息事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string \| ArrayBuffer&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1296,7 +1295,7 @@ on(type: 'open', callback: AsyncCallback<Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'open' | 是 | 订阅的事件类型。'open'：WebSocket的打开事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Object&gt; | 是 | 回调函数。 |
 
 **示例**
 
@@ -1335,7 +1334,7 @@ on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'openInfo' | 是 | 订阅的事件类型。'openInfo'：WebSocket的打开信息事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | 是 | 回调函数。返回WebSocket连接的详细信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WebSocketOpenInfo](arkts-network-websocket-websocketopeninfo-i.md)&gt; | 是 | 回调函数。返回WebSocket连接的详细信息。 |
 
 **示例**
 
@@ -1376,7 +1375,7 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | 是 | 发送的数据。 <br>API 6及更早版本仅支持string类型。API 8起同时支持string和ArrayBuffer类型。最大支持发送5242864字节数据(即5 1024 1024 - 16)，超过该大小会返回401 错误码。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。true:发送请求创建成功；false:发送请求创建失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。true:发送请求创建成功；false:发送请求创建失败。 |
 
 **错误码：**
 

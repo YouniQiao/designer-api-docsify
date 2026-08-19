@@ -13,7 +13,6 @@ DLP沙箱的状态信息。
 ## 导入模块
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## appIndex

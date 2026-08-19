@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onOperationSubmitMetadata
@@ -25,7 +24,7 @@ function onOperationSubmitMetadata(bundleName: string, callback: Callback<int>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 第三方应用的包名。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回截图事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 回调函数，返回截图事件。 |
 
 **错误码：**
 

@@ -397,7 +397,7 @@ Unregister uiStateChange, this interface can only be used by devicemanager ui.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | No | Indicates the devicemanager ui state to unregister. |
 
 **Error codes:**
 
@@ -429,7 +429,7 @@ Unsubscribes from the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | No |  |
 
 **Error codes:**
 
@@ -476,7 +476,7 @@ Register a callback from deviceManager service so that the devicemanager ui can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md)&gt; | Yes | Indicates the devicemanager ui state to register. |
 
 **Error codes:**
 
@@ -508,7 +508,7 @@ Subscribes to the reply to the UI operation result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'replyResult' | Yes | Event type, which has a fixed value of **replyResult**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ param: string; }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string; }&gt; | Yes |  |
 
 **Error codes:**
 

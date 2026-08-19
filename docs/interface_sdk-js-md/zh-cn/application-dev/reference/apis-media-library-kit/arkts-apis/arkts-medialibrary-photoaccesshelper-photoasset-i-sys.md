@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelPhotoRequest
@@ -109,7 +108,7 @@ commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>):
 | --- | --- | --- | --- |
 | editData | string | 是 | 提交的编辑数据。 |
 | uri | string | 是 | 提交的编辑后的图片或视频，在应用沙箱下的uri。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback对象，返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback对象，返回void。 |
 
 **错误码：**
 
@@ -456,7 +455,7 @@ getExif(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回Exif字段组成的json格式的字符串。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 返回Exif字段组成的json格式的字符串。 |
 
 **错误码：**
 
@@ -787,7 +786,7 @@ isEdited(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback对象，返回图片或视频资源是否被编辑过。 true为被编辑过，false为没有被编辑过，默认是false。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | Callback对象，返回图片或视频资源是否被编辑过。 true为被编辑过，false为没有被编辑过，默认是false。 |
 
 **错误码：**
 
@@ -921,7 +920,7 @@ open(mode: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | string | 是 | 打开文件方式，分别为：'r'（只读）, 'w'（只写）, 'rw'（读写）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | callback返回文件描述符。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | callback返回文件描述符。 |
 
 **错误码：**
 
@@ -1042,7 +1041,7 @@ requestEditData(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Callback对象，返回图片或视频资源的编辑数据。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Callback对象，返回图片或视频资源的编辑数据。 |
 
 **错误码：**
 
@@ -1163,7 +1162,7 @@ requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback对象，返回获取的缩略图，调用2次。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback对象，返回获取的缩略图，调用2次。 |
 
 **返回值：**
 
@@ -1233,7 +1232,7 @@ requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback invoked twice to return the quick and quality thumbnails obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback invoked twice to return the quick and quality thumbnails obtained. |
 
 **返回值：**
 
@@ -1273,7 +1272,7 @@ requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | 是 | 获取资源缩略图的选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback对象，返回获取的缩略图，根据选项的设置可能调用超过1次。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback对象，返回获取的缩略图，根据选项的设置可能调用超过1次。 |
 
 **返回值：**
 
@@ -1350,7 +1349,7 @@ requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | 是 | Options for obtaining the asset thumbnail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | Callback used to return the thumbnails obtained. The callback may be invoked more than once, depending on options. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | Callback used to return the thumbnails obtained. The callback may be invoked more than once, depending on options. |
 
 **返回值：**
 
@@ -1389,7 +1388,7 @@ requestSource(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Callback对象，返回源文件fd。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | Callback对象，返回源文件fd。 |
 
 **错误码：**
 
@@ -1510,7 +1509,7 @@ revertToOriginal(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback对象，返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback对象，返回void。 |
 
 **错误码：**
 
@@ -1610,7 +1609,7 @@ setFavorite(favoriteState: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | favoriteState | boolean | 是 | 是否设置为收藏文件， true：设置为收藏文件，false：取消收藏。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 
@@ -1748,7 +1747,7 @@ setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hiddenState | boolean | 是 | Whether to set a file to hidden state. **true** to hide, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback that returns no value. |
 
 **错误码：**
 
@@ -1881,7 +1880,7 @@ setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pendingState | boolean | 是 | 设置的pending状态，true为设置pending状态，false为解除pending状态。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback对象，返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback对象，返回void。 |
 
 **错误码：**
 
@@ -2006,7 +2005,7 @@ setUserComment(userComment: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userComment | string | 是 | 待修改的图片或视频的备注信息，备注信息最长为420字符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
 

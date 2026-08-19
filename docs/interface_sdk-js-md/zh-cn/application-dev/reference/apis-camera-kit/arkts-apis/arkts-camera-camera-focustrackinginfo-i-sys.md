@@ -13,8 +13,6 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## trackingMode

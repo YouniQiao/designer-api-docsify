@@ -28,7 +28,7 @@ Queries the app group of the calling application. The priority defined in a prio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the app group of the calling application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the app group of the calling application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -136,7 +136,7 @@ Queries the usage priority group by bundleName. The priority defined in a priori
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the usage priority group of the calling application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the usage priority group of the calling application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

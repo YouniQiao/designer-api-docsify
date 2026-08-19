@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## auth
@@ -401,7 +400,7 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, Object&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
@@ -465,7 +464,7 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
@@ -666,7 +665,7 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
 
 **错误码：**
 
@@ -854,7 +853,7 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号已存在；false表示指定的域账号不存在。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号已存在；false表示指定的域账号不存在。 |
 
 **错误码：**
 
@@ -1280,7 +1279,7 @@ static updateAccountToken(
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | token | Uint8Array | 是 | 指示域账号的令牌。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果更新成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果更新成功，err为null，否则为错误对象。 |
 
 **错误码：**
 

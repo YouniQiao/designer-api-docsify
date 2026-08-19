@@ -13,7 +13,6 @@ RGBA格式的颜色描述。
 ## 导入模块
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## alpha

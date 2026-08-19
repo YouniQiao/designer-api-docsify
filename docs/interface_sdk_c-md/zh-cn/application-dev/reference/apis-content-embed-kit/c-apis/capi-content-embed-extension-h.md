@@ -157,7 +157,7 @@ OE Extension实例创建时的生命周期函数类型。<br>开发者需要实�
 | 参数项 | 描述 |
 | -- | -- |
 | [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) instance | OE Extension实例对象的指针。 |
-| [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) \*want | [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md)实例的指针。 |
+| AbilityBase_Want \*want | [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md)实例的指针。 |
 
 ### OH_ContentEmbed_Extension_OnDestroyFunc()
 
@@ -746,7 +746,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_ContextStartSelfUIAbility(Conte
 | 参数项 | 描述 |
 | -- | -- |
 | [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) context | 指向OE Extension上下文对象的指针。 |
-| [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) *want | 启动UIAbility时传递的参数，详细信息参考[AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md)。 |
+| AbilityBase_Want *want | 启动UIAbility时传递的参数，详细信息参考[AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md)。 |
 
 **返回：**
 
@@ -771,7 +771,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_ContextStartSelfUIAbilityWithSt
 | 参数项 | 描述 |
 | -- | -- |
 | [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) context | 指向OE Extension上下文对象的指针。 |
-| [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) *want | 启动UIAbility时传递的参数，详细信息参考[AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md)。 |
+| AbilityBase_Want *want | 启动UIAbility时传递的参数，详细信息参考[AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md)。 |
 | AbilityRuntime_StartOptions *options | 启动UIAbility时的附加选项，详细信息参考{@link AbilityRuntime_StartOptions}。 |
 
 **返回：**

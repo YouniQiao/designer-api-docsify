@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## constructor
@@ -20,7 +19,7 @@ import { avSession } from '@kit.AVSessionKit';
 constructor(context: Context)
 ```
 
-创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)。
+创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#gethostcontext)。
 
 **起始版本：** 23
 
@@ -61,7 +60,7 @@ Unregister picker state change callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | The callback used to handle picker state changed event. |
 
 **错误码：**
 
@@ -90,7 +89,7 @@ off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pickerStateChange' | 是 | 取消对应的监听事件，支持事件`'pickerStateChange'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | 回调函数，参数state是变化后的半模态窗口状态。 <br>当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 否 | 回调函数，参数state是变化后的半模态窗口状态。 <br>当监听事件取消成功，err为undefined，否则返回错误对象。 <br>该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -117,7 +116,7 @@ Register picker state change callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | The callback used to handle picker state changed event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | The callback used to handle picker state changed event. |
 
 **错误码：**
 
@@ -146,7 +145,7 @@ on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pickerStateChange' | 是 | 事件回调类型，支持事件`'pickerStateChange'`：当半模态窗口变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | 回调函数，参数state是变化后的半模态窗口状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 是 | 回调函数，参数state是变化后的半模态窗口状态。 |
 
 **错误码：**
 

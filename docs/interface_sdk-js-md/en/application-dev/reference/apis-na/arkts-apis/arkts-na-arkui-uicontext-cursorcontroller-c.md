@@ -55,7 +55,7 @@ Set cursor style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Yes | cursor style enum. |
+| value | [PointerStyle](arkts-na-pointerstyle-t.md) | Yes | cursor style enum. |
 
 ## setCustomCursor
 

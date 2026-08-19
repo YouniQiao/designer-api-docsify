@@ -2,7 +2,7 @@
 
 Base shape class
 
-**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-na-arkui-shape-commonshapemethod-c.md)
 
 **Since:** 23
 

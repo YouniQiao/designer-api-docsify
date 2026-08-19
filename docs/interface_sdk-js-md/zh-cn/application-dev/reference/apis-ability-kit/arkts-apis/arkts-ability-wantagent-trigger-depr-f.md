@@ -31,7 +31,7 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 | WantAgent对象。 |
 | triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | 是 | TriggerInfo对象。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | 否 | 主动激发WantAgent实例的回调方法。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;CompleteData&gt; | 否 | 主动激发WantAgent实例的回调方法。 |
 
 **示例**
 

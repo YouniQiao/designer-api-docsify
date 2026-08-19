@@ -11,9 +11,6 @@ CMS验签的配置。
 ## 导入模块
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { certificateManager } from '@kit.DeviceCertificateKit';
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## contentData

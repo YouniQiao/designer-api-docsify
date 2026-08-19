@@ -32,7 +32,7 @@ SWIPE_DOWN = 0
 SWIPE_UP = 1
 ```
 
-Multi-finger upward swipe.
+多指向上滑动。
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Multi-finger upward swipe.
 SWIPE_LEFT = 2
 ```
 
-Multi-finger leftward swipe.
+多指向左滑动。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ Multi-finger leftward swipe.
 SWIPE_RIGHT = 3
 ```
 
-Multi-finger rightward swipe.
+多指向右滑动。
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ Multi-finger rightward swipe.
 PINCH_CLOSED = 4
 ```
 
-Multi-finger pinch closed.
+多指捏合。
 
 **起始版本：** 23
 
@@ -96,7 +96,7 @@ Multi-finger pinch closed.
 PINCH_OPENED = 5
 ```
 
-Multi-finger pinch opened.
+多指张开。
 
 **起始版本：** 23
 
@@ -112,7 +112,7 @@ Multi-finger pinch opened.
 GESTURE_END = 6
 ```
 
-Gesture ended.
+手势结束。
 
 **起始版本：** 23
 

@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## downloadPersonalizedHRTF
@@ -743,7 +741,7 @@ Unsubscribes to the adaptive spatial rendering enable state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **错误码：**
 
@@ -791,7 +789,7 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
@@ -842,7 +840,7 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 否 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 否 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **错误码：**
 
@@ -872,7 +870,7 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 否 | 回调用于 接收当前空间音频源类型变化 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 否 | 回调用于 接收当前空间音频源类型变化 |
 
 **错误码：**
 
@@ -917,7 +915,7 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
@@ -968,7 +966,7 @@ Unsubscribes to the head tracking enable state change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
 
 **错误码：**
 
@@ -1017,7 +1015,7 @@ Unsubscribes to the head tracking enable state change events by the specified de
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
@@ -1071,7 +1069,7 @@ Unsubscribes to the spatialization enable state change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
 
 **错误码：**
 
@@ -1118,7 +1116,7 @@ Unsubscribes to the spatialization enable state change events by the specified d
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
@@ -1167,7 +1165,7 @@ Subscribes to the adaptive spatial rendering enable state change events. When th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **错误码：**
 
@@ -1207,7 +1205,7 @@ Subscribes to the head tracking enable state change events by the specified devi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
@@ -1248,7 +1246,7 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 是 | 回调用于 通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 是 | 回调用于 通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **错误码：**
 
@@ -1278,7 +1276,7 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 是 | 回调用于 接收所述当前空间音源类型。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 是 | 回调用于 接收所述当前空间音源类型。 |
 
 **错误码：**
 
@@ -1317,7 +1315,7 @@ Subscribes to the spatialization enable state change events by the specified dev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
@@ -1362,7 +1360,7 @@ Subscribes to the head tracking enable state change events. When the head tracki
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
 
 **错误码：**
 
@@ -1403,7 +1401,7 @@ Subscribes to the head tracking enable state change events by the specified devi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
@@ -1449,7 +1447,7 @@ Subscribes to the spatialization enable state change events. When the spatializa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
 
 **错误码：**
 
@@ -1490,7 +1488,7 @@ Subscribes to the spatialization enable state change events by the specified dev
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
@@ -1608,7 +1606,7 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Head tracking enable state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
@@ -1831,7 +1829,7 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Spatialization enable state. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 

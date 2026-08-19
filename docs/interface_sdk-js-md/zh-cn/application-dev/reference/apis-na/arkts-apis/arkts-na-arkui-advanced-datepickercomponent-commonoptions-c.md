@@ -87,7 +87,7 @@ onChange?: Callback<DatePickerComponentResult>
 
 选择日期或时间后触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -107,7 +107,7 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 选择器项被选中且滚动停止时触发该回调。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DatePickerComponentResult](arkts-na-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
 

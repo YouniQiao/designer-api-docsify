@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
 ```
 
 ## 汇总

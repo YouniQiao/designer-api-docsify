@@ -29,7 +29,7 @@ Import contacts from the specified vcf file.
 | context | Context | Yes | Indicates the context of application or capability. |
 | filePath | string | Yes | Vcf file path. |
 | accountId | int | Yes | Contact account ID. When the app chooses to import the vcf file into a contact account, it needs to pass in the accountId. If the accountId is not passed, a new contact account will be added by default. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of the function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of the function. |
 
 **Error codes:**
 
@@ -145,7 +145,7 @@ Import contacts from the specified vcf file.
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | filePath | string | Yes | Vcf file path. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of the function. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of the function. |
 
 **Error codes:**
 

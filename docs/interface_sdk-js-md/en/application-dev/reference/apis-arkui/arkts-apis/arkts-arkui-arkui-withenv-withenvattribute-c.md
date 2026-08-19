@@ -43,7 +43,7 @@ Defining Custom Environment Variables
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
 
 ## env
 
@@ -74,5 +74,5 @@ Defining System Environment Variables
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](../../apis-na/arkts-apis/arkts-na-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
 

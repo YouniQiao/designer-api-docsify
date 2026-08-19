@@ -37,7 +37,7 @@ Constructor of EditableSaveButtonV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableSaveButtonV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | No | The options of the save button |
+| options | [EditableSaveButtonV2Options](arkts-na-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | No | The options of the save button |
 
 ## defaultFocus
 
@@ -94,7 +94,7 @@ Whether to show the save button.
 
 Callback function when click on the save button.
 
-**Type:** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

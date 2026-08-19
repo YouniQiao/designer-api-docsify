@@ -39,7 +39,7 @@ Attach application to the input method service.
 | --- | --- | --- | --- |
 | showKeyboard | boolean | Yes | show the keyboard or not when attach the input method. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of attach. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of attach. |
 
 **Error codes:**
 
@@ -195,7 +195,7 @@ Attach application to the input method service with UI context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | indicates the ui context where the attachment will be performed. |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Yes | indicates the ui context where the attachment will be performed. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | indicates the config of the textInput. |
 | attachOptions | AttachOptions | No | indicates the attach options. |
 
@@ -253,7 +253,7 @@ Notify the input method the selected text and the selection range of the current
 | text | string | Yes | the whole input text. |
 | start | int | Yes | start position of selected text. |
 | end | int | Yes | end position of selected text. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of changeSelection. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of changeSelection. |
 
 **Error codes:**
 
@@ -345,7 +345,7 @@ Detach the applications from the input method manager service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of detach. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of detach. |
 
 **Error codes:**
 
@@ -467,7 +467,7 @@ Hide soft keyboard. This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of hideSoftKeyboard. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of hideSoftKeyboard. |
 
 **Error codes:**
 
@@ -551,7 +551,7 @@ Hide the text input and stop typing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of hideTextInput. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of hideTextInput. |
 
 **Error codes:**
 
@@ -633,7 +633,7 @@ Unregister the callback of deleteLeft.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | the callback called when the input method deletes text to the left of the cursor. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | the callback called when the input method deletes text to the left of the cursor. |
 
 ## offDeleteRight
 
@@ -653,7 +653,7 @@ Unregister the callback of deleteRight.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | the callback called when the input method deletes text to the right of the cursor. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | the callback called when the input method deletes text to the right of the cursor. |
 
 ## offFinishTextPreview
 
@@ -673,7 +673,7 @@ Unsubscribe 'finishTextPreview' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the input method finishes text preview. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the input method finishes text preview. |
 
 ## offGetLeftTextOfCursor
 
@@ -755,7 +755,7 @@ Unregister the callback of handleExtendAction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ExtendAction&gt; | No | the callback called when the input method sends extend action. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | No | the callback called when the input method sends extend action. |
 
 ## offInsertText
 
@@ -775,7 +775,7 @@ Unregister the callback of insertText.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | the callback called when the input method inserts text. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | the callback called when the input method inserts text. |
 
 ## offMoveCursor
 
@@ -795,7 +795,7 @@ Unregister the callback of moveCursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Direction&gt; | No | the callback called when the input method moves cursor. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | No | the callback called when the input method moves cursor. |
 
 ## offSelectByMovement
 
@@ -815,7 +815,7 @@ Unregister the callback of selectedByMovement.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Movement&gt; | No | the callback called when the input method selects text by movement. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | the callback called when the input method selects text by movement. |
 
 ## offSelectByRange
 
@@ -835,7 +835,7 @@ Unregister the callback of selectedByRange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Range&gt; | No | the callback called when the input method selects text by range. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | the callback called when the input method selects text by range. |
 
 ## offSendFunctionKey
 
@@ -855,7 +855,7 @@ Unregister the callback of sendFunctionKey.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FunctionKey&gt; | No | the callback called when the input method send function key. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | No | the callback called when the input method send function key. |
 
 ## offSendKeyboardStatus
 
@@ -875,7 +875,7 @@ Unregister the callback of sendKeyboardStatus.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | No | the callback called when the inputmethod send keyboard's status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | No | the callback called when the inputmethod send keyboard's status. |
 
 ## offSetPreviewText
 
@@ -987,7 +987,7 @@ Unsubscribe 'finishTextPreview' event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | Yes | the type of unsubscribe event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback of off('finishTextPreview'). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback of off('finishTextPreview'). |
 
 **Examples**
 
@@ -1243,7 +1243,7 @@ Unregister the callback of selectedByMovement.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | event type, fixed as 'selectByMovement'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Movement&gt; | No | the callback of 'selectByMovement', when subscriber unsubscribes all callback functions of event 'selectByMovement', this parameter can be left blank. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | No | the callback of 'selectByMovement', when subscriber unsubscribes all callback functions of event 'selectByMovement', this parameter can be left blank. |
 
 **Examples**
 
@@ -1278,7 +1278,7 @@ Unregister the callback of selectedByRange.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | event type, fixed as 'selectByRange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Range&gt; | No | the callback of 'selectByRange', when subscriber unsubscribes all callback functions of event 'selectByRange', this parameter can be left blank. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | No | the callback of 'selectByRange', when subscriber unsubscribes all callback functions of event 'selectByRange', this parameter can be left blank. |
 
 **Examples**
 
@@ -1427,7 +1427,7 @@ Register a callback and when IME sends delete left event with length, the callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when the input method deletes text to the left of the cursor. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the left of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the input method deletes text to the left of the cursor. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the left of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
@@ -1453,7 +1453,7 @@ Register a callback and when IME sends delete right event with length, the callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called whenthe input method deletes text to theright of the cursor. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the right of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called whenthe input method deletes text to theright of the cursor. The length of delete is provided for this callback. Subscribers are expected to delete specified length of text to the right of the cursor and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
@@ -1479,7 +1479,7 @@ onFinishTextPreview(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the input method finishes text preview. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the input method finishes text preview. |
 
 ## onGetLeftTextOfCursor
 
@@ -1577,7 +1577,7 @@ Register a callback and when IME sends extend action code, the callback will be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ExtendAction&gt; | Yes | the callback called when the input method sends extend action. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExtendAction&gt; | Yes | the callback called when the input method sends extend action. |
 
 **Error codes:**
 
@@ -1603,7 +1603,7 @@ Register a callback and when IME sends insert text event, the callback will be i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | the callback called when the input method inserts text. Subscribers are expected to process the inserted text and update changes in editor by changeSelection and updateCursor as needed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | the callback called when the input method inserts text. Subscribers are expected to process the inserted text and update changes in editor by changeSelection and updateCursor as needed. |
 
 **Error codes:**
 
@@ -1629,7 +1629,7 @@ Register a callback and when IME sends move cursor, the callback will be invoked
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Direction&gt; | Yes | the callback called when the input method moves cursor. The direction of cursor is provided for this callback. Subscribers are expected to move the cursor and update changes in editor by changeSelection and updateCursor. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Direction&gt; | Yes | the callback called when the input method moves cursor. The direction of cursor is provided for this callback. Subscribers are expected to move the cursor and update changes in editor by changeSelection and updateCursor. |
 
 **Error codes:**
 
@@ -1655,7 +1655,7 @@ Register a callback and when IME sends select event witch movement of cursor, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Movement&gt; | Yes | the callback called when the input method selects text by movement. The movement of the cursor is provided for this callback, and subscribers are expected to select corresponding text in callback according to themovement. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | Yes | the callback called when the input method selects text by movement. The movement of the cursor is provided for this callback, and subscribers are expected to select corresponding text in callback according to themovement. |
 
 ## onSelectByRange
 
@@ -1675,7 +1675,7 @@ Register a callback and when IME sends select event with range of selection, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Range&gt; | Yes | the callback called when the input method selects text by range. The range of selection is provided for this callback, and subscribers are expected to select corresponding text in callback according to the range. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | Yes | the callback called when the input method selects text by range. The range of selection is provided for this callback, and subscribers are expected to select corresponding text in callback according to the range. |
 
 ## onSendFunctionKey
 
@@ -1695,7 +1695,7 @@ Register a callback and whenIME sends functionKey, the callback will be invoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FunctionKey&gt; | Yes | the callback called when the input method send function key. The functionKey is provided for this callback. Subscribers are expected to complete the corresponding task based on the value of functionKey. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FunctionKey&gt; | Yes | the callback called when the input method send function key. The functionKey is provided for this callback. Subscribers are expected to complete the corresponding task based on the value of functionKey. |
 
 **Error codes:**
 
@@ -1721,7 +1721,7 @@ Register a callback and when IME sends keyboard status, the callback will be inv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | Yes | the callback called when the input method send keyboard's status. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyboardStatus](arkts-ime-inputmethod-keyboardstatus-e.md)&gt; | Yes | the callback called when the input method send keyboard's status. |
 
 **Error codes:**
 
@@ -1840,7 +1840,7 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'finishTextPreview' | Yes | the type of subscribe event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback of on('finishTextPreview'). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback of on('finishTextPreview'). |
 
 **Error codes:**
 
@@ -2127,7 +2127,7 @@ Register a callback and when IME sends select event witch movement of cursor, th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByMovement' | Yes | event type, fixed as 'selectByMovement'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Movement&gt; | Yes | processes selectByMovement command. The movement of cursor is provided for this callback, and subscribers are expected to select corresponding text in callback according to the movement. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Movement&gt; | Yes | processes selectByMovement command. The movement of cursor is provided for this callback, and subscribers are expected to select corresponding text in callback according to the movement. |
 
 **Error codes:**
 
@@ -2162,7 +2162,7 @@ Register a callback and when IME sends select event with range of selection, the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectByRange' | Yes | event type, fixed as 'selectByRange'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Range&gt; | Yes | processes selectByRange command. The range of selection is provided for this callback, and subscribers are expected to select corresponding text in callback according to the range. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Range&gt; | Yes | processes selectByRange command. The range of selection is provided for this callback, and subscribers are expected to select corresponding text in callback according to the range. |
 
 **Error codes:**
 
@@ -2417,7 +2417,7 @@ Inform the system of the window ID of the application currently bound to the inp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | int | Yes | the window ID of the application currently bound to the input method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setCallingWindow. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCallingWindow. |
 
 **Error codes:**
 
@@ -2511,7 +2511,7 @@ Show soft keyboard. This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of showSoftKeyboard. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of showSoftKeyboard. |
 
 **Error codes:**
 
@@ -2595,7 +2595,7 @@ Show the text input and start typing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of showTextInput. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of showTextInput. |
 
 **Error codes:**
 
@@ -2729,7 +2729,7 @@ Stop input
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of stopInput. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of stopInput. |
 
 **Examples**
 
@@ -2807,7 +2807,7 @@ Stop input session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of stopInputSession. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of stopInputSession. |
 
 **Error codes:**
 
@@ -2896,7 +2896,7 @@ Update InputAttribute information of input text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attribute | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Yes | the InputAttribute object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of updateAttribute. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of updateAttribute. |
 
 **Error codes:**
 
@@ -2989,7 +2989,7 @@ Update Cursor and notify the input method that the current application cursor ha
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes | the CursorInfo object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of updateCursor. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of updateCursor. |
 
 **Error codes:**
 

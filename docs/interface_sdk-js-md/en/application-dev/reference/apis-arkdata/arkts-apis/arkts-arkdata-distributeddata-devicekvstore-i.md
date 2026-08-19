@@ -43,7 +43,7 @@ Closes the **KvStoreResultSet** object obtained by DeviceKVStore.getResultSet. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resultSet | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Yes | KvStoreResultSet** object to close. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -135,7 +135,7 @@ Obtains a string value that matches the specified device ID and key. This API us
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | key | string | Yes | Key to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean \| string \| number \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
 
 **Examples**
 
@@ -232,7 +232,7 @@ Obtains all KV pairs that match the specified device ID and key prefix. This API
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | keyPrefix | string | Yes | Key prefix to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs obtained. |
 
 **Examples**
 
@@ -356,7 +356,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs obtained. |
 
 **Examples**
 
@@ -485,7 +485,7 @@ Obtains the KV pairs that match the specified device ID and **Query** object. Th
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified device ID and **Query** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified device ID and **Query** object. |
 
 **Examples**
 
@@ -616,7 +616,7 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and k
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | keyPrefix | string | Yes | Key prefix to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object that matches the specified device ID and key prefix. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object that matches the specified device ID and key prefix. |
 
 **Examples**
 
@@ -712,7 +712,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object obtained. |
 
 **Examples**
 
@@ -847,7 +847,7 @@ Obtains a **KvStoreResultSet** object that matches the specified device ID and *
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object that matches the specified device ID and **Query** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Yes | Callback used to return the **KvStoreResultSet** object that matches the specified device ID and **Query** object. |
 
 **Examples**
 
@@ -982,7 +982,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Examples**
 
@@ -1104,7 +1104,7 @@ Obtains the number of results that match the specified device ID and **Query** o
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
 | query | Query | Yes | Query** object to match. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Examples**
 
@@ -1224,7 +1224,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
 **Examples**
 
@@ -1270,7 +1270,7 @@ Unsubscribes from sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
 **Examples**
 
@@ -1317,7 +1317,7 @@ Subscribes to data changes of the specified type.
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
 | type | SubscribeType | Yes | Type of data change. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1351,7 +1351,7 @@ Subscribes to sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
+| syncCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
 
 **Examples**
 
@@ -1396,7 +1396,7 @@ Deletes data of the specified device from this KV store. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the target device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

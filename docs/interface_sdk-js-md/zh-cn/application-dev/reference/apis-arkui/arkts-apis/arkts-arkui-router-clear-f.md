@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
 ```
 
 ## clear
@@ -12,13 +11,13 @@ import { router } from '@kit.ArkUI';
 function clear(): void
 ```
 
-清空页面栈中的所有历史页面，仅保留当前页面作为栈顶页面。 > **说明：** > > - 从API version 8开始支持，从API version 18开始废弃，建议使用[clear](arkts-arkui-arkui-uicontext-router-c.md#clear)替代。clear需先通过 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md)对象。
+清空页面栈中的所有历史页面，仅保留当前页面作为栈顶页面。 > **说明：** > > - 从API version 8开始支持，从API version 18开始废弃，建议使用[clear](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#clear)替代。clear需先通过 > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)对象。
 
 **起始版本：** 8
 
 **废弃版本：** 18
 
-**替代接口：** [clear](arkts-arkui-arkui-uicontext-router-c.md#clear)
+**替代接口：** [clear](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#clear)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

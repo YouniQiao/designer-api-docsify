@@ -30,7 +30,7 @@ Obtains the information about all modules with the overlay feature in another ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -91,7 +91,7 @@ Obtains the information about a module with the overlay feature in another appli
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Name of the module with the overlay feature. If this parameter is not specified, the API obtains the information of all modules with the overlay feature in that application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

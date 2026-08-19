@@ -11,10 +11,6 @@ Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-abil
 ## 导入模块
 
 ```TypeScript
-import { Ability } from '@kit.AbilityKit';
-import { AbilityConstant } from '@kit.AbilityKit';
-import { AbilityLifecycleCallback } from '@kit.AbilityKit';
-import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate

@@ -11,7 +11,6 @@ childProcessManager模块提供子进程管理能力，支持子进程创建和�
 ## 导入模块
 
 ```TypeScript
-import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

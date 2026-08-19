@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Base64Helper](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md)
+**替代接口：** [Base64Helper](arkts-arkts-util-base64helper-c.md)
 
 <!--Device-util-class Base64--><!--Device-util-class Base64-End-->
 
@@ -15,42 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
-import { util } from '@kit.ArkTS';
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
-import { stream } from '@kit.ArkTS';
-import { Vector } from '@kit.ArkTS';
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -65,7 +29,7 @@ constructor()
 
 **废弃版本：** 9
 
-**替代接口：** [constructor](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#constructor)
+**替代接口：** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
 
 <!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
 
@@ -89,7 +53,7 @@ decode(src: Uint8Array | string): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [decode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decode)
+**替代接口：** [decode](arkts-arkts-util-base64helper-c.md#decode)
 
 <!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
 
@@ -130,7 +94,7 @@ decodeSync(src: Uint8Array | string): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** [decodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decodesync)
+**替代接口：** [decodeSync](arkts-arkts-util-base64helper-c.md#decodesync)
 
 <!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
 
@@ -170,7 +134,7 @@ encode(src: Uint8Array): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [encode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encode)
+**替代接口：** [encode](arkts-arkts-util-base64helper-c.md#encode)
 
 <!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
 
@@ -211,7 +175,7 @@ encodeSync(src: Uint8Array): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** [encodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodesync)
+**替代接口：** [encodeSync](arkts-arkts-util-base64helper-c.md#encodesync)
 
 <!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
 
@@ -251,7 +215,7 @@ encodeToString(src: Uint8Array): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [encodeToString](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodetostring)
+**替代接口：** [encodeToString](arkts-arkts-util-base64helper-c.md#encodetostring)
 
 <!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
 
@@ -292,7 +256,7 @@ encodeToStringSync(src: Uint8Array): string
 
 **废弃版本：** 9
 
-**替代接口：** [encodeToStringSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodetostringsync)
+**替代接口：** [encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodetostringsync)
 
 <!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
 

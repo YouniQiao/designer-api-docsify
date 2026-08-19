@@ -11,7 +11,6 @@ Wi-Fi的SSID和BSSID信息。
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## bssid

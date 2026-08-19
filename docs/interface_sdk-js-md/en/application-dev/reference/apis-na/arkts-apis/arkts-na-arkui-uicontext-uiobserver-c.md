@@ -38,9 +38,9 @@ Registers a callback to monitor the gesture trigger information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [GestureListenerType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | Yes | The type of gesture to monitor. |
-| option | [GestureObserverConfigs](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | Yes | The options when bind the global listener. |
-| callback | [GestureListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-gesturelistenercallback-t.md) | Yes | The callback function to be called when any gesture's state is updated. |
+| type | [GestureListenerType](arkts-na-arkui-uicontext-gesturelistenertype-e.md) | Yes | The type of gesture to monitor. |
+| option | [GestureObserverConfigs](arkts-na-arkui-uicontext-gestureobserverconfigs-i.md) | Yes | The options when bind the global listener. |
+| callback | [GestureListenerCallback](arkts-na-gesturelistenercallback-t.md) | Yes | The callback function to be called when any gesture's state is updated. |
 
 ## offAfterPanEnd
 
@@ -64,7 +64,7 @@ Removes a callback function to be called after panGesture onActionEnd is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offAfterPanStart
 
@@ -88,7 +88,7 @@ Removes a callback function to be called after panGesture onActionStart is calle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offBeforePanEnd
 
@@ -112,7 +112,7 @@ Removes a callback function to be called before panGesture onActionEnd is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offBeforePanStart
 
@@ -136,7 +136,7 @@ Removes a callback function to be called before panGesture onActionStart is call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offDensityUpdate
 
@@ -160,7 +160,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.DensityInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.DensityInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offDidClick
 
@@ -184,7 +184,7 @@ Removes a callback function to be called after clickEvent is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ClickEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-clickeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [ClickEventListenerCallback](arkts-na-clickeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offDidLayout
 
@@ -208,7 +208,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offDidTap
 
@@ -232,7 +232,7 @@ Removes a callback function to be called after tapGesture is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-gestureeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [GestureEventListenerCallback](arkts-na-gestureeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationSizeChange
 
@@ -256,7 +256,7 @@ Removes a callback function that was previously registered with 'onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationSizeChangeByUniqueId
 
@@ -281,7 +281,7 @@ Removes a callback function that was previously registered with 'onNavDestinatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. <br>The value should be an integer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationSwitch
 
@@ -305,7 +305,7 @@ Removes a callback function that was previously registered with `onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationSwitch
 
@@ -333,7 +333,7 @@ Removes a callback function that was previously registered with `onNavDestinatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationUpdate
 
@@ -361,7 +361,7 @@ Removes a callback function that was previously registered with `onNavDestinatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | observer.NavDestinationSwitchObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
 
 ## offNavDestinationUpdate
 
@@ -385,7 +385,7 @@ Removes a callback function that was previously registered with `onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationUpdateByUniqueId
 
@@ -410,7 +410,7 @@ Removes a callback function that was previously registered with `onNavDestinatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | navigationUniqueId | int | Yes | The uniqueId of the navigation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNodeRenderState
 
@@ -434,8 +434,8 @@ Removes a callback function for node render state monitoring.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nodeIdentity | [NodeIdentity](../../apis-arkui/arkts-apis/arkts-arkui-nodeidentity-t.md) | Yes | The identity of the target node |
-| callback | [NodeRenderStateChangeCallback](../../apis-arkui/arkts-apis/arkts-arkui-noderenderstatechangecallback-t.md) | No | The callback function to remove. If not provided, all callbacks will be removed. |
+| nodeIdentity | [NodeIdentity](arkts-na-nodeidentity-t.md) | Yes | The identity of the target node |
+| callback | [NodeRenderStateChangeCallback](arkts-na-noderenderstatechangecallback-t.md) | No | The callback function to remove. If not provided, all callbacks will be removed. |
 
 ## offRouterPageSizeChange
 
@@ -459,7 +459,7 @@ Removes a callback function that was previously registered with 'onRouterPageSiz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.RouterPageInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.RouterPageInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offRouterPageUpdate
 
@@ -483,7 +483,7 @@ Removes a callback function that was previously registered with `onRouterPageUpd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.RouterPageInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.RouterPageInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offScrollEvent
 
@@ -508,7 +508,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | observer.ObserverOptions | Yes |  |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and scroll ID will be removed. |
 
 ## offScrollEvent
 
@@ -532,7 +532,7 @@ Removes a callback function that was previously registered with `onScrollEvent()
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offSwiperContentUpdate
 
@@ -556,7 +556,7 @@ Removes a callback function that was previously registered with `onSwiperContent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SwiperContentInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;[SwiperContentInfo](arkts-na-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offSwiperContentUpdate
 
@@ -581,7 +581,7 @@ Removes a callback function that was previously registered with `onSwiperContent
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SwiperContentInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;[SwiperContentInfo](arkts-na-arkui-uicontext-swipercontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offTabChange
 
@@ -606,7 +606,7 @@ Removes a callback function that was previously registered with `onTabChange`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
 ## offTabChange
 
@@ -630,7 +630,7 @@ Removes a callback function that was previously registered with `onTabChange`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offTabContentUpdate
 
@@ -655,7 +655,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
 ## offTabContentUpdate
 
@@ -679,7 +679,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
 ## offTextChange
 
@@ -703,7 +703,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offTextChange
 
@@ -728,7 +728,7 @@ Removes a callback function that was previously registered with `on()`.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | identity | observer.ObserverOptions | Yes | Identity options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offWillClick
 
@@ -752,7 +752,7 @@ Removes a callback function to be called before clickEvent is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ClickEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-clickeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [ClickEventListenerCallback](arkts-na-clickeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offWillDraw
 
@@ -776,7 +776,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offWillTap
 
@@ -800,7 +800,7 @@ Removes a callback function to be called before tapGesture is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-gestureeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| callback | [GestureEventListenerCallback](arkts-na-gestureeventlistenercallback-t.md) | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offWindowSizeLayoutBreakpointChange
 
@@ -824,7 +824,7 @@ Removes a previously registered callback function for window size layout breakpo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | No | The specific callback function to remove. If not provided, all callbacks for the given event type and context will be removed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | No | The specific callback function to remove. If not provided, all callbacks for the given event type and context will be removed. |
 
 ## onAfterPanEnd
 
@@ -848,7 +848,7 @@ Registers a callback function to be called after panGesture onActionEnd is calle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
 
 ## onAfterPanStart
 
@@ -872,7 +872,7 @@ Registers a callback function to be called after panGesture onActionStart is cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
 
 ## onBeforePanEnd
 
@@ -896,7 +896,7 @@ Registers a callback function to be called before panGesture onActionEnd is call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
 
 ## onBeforePanStart
 
@@ -920,7 +920,7 @@ Registers a callback function to be called before panGesture onActionStart is ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PanListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
+| callback | [PanListenerCallback](arkts-na-panlistenercallback-t.md) | Yes | The callback function to be called when the panGesture will be trigger or after. |
 
 ## onDensityUpdate
 
@@ -944,7 +944,7 @@ Registers a callback function to be called when the screen density in a ui conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.DensityInfo&gt; | Yes | The callback function to be called when the screen density is updated. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.DensityInfo&gt; | Yes | The callback function to be called when the screen density is updated. |
 
 ## onDidClick
 
@@ -968,7 +968,7 @@ Registers a callback function to be called after clickEvent is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ClickEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-clickeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
+| callback | [ClickEventListenerCallback](arkts-na-clickeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
 
 ## onDidLayout
 
@@ -992,7 +992,7 @@ Registers a callback function to be called when the layout is done.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the layout is done. |
 
 ## onDidTap
 
@@ -1016,7 +1016,7 @@ Registers a callback function to be called after tapGesture is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-gestureeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
+| callback | [GestureEventListenerCallback](arkts-na-gestureeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
 
 ## onNavDestinationSizeChange
 
@@ -1040,7 +1040,7 @@ Registers a callback function to be called when the visible NavDestination's siz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the visible NavDestination's size is changed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the visible NavDestination's size is changed. |
 
 ## onNavDestinationSizeChangeByUniqueId
 
@@ -1065,7 +1065,7 @@ Registers a callback function to be called when the size of the visible NavDesti
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. <br>The value should be an integer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the visible NavDestination's size is changed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the visible NavDestination's size is changed. |
 
 ## onNavDestinationSwitch
 
@@ -1089,7 +1089,7 @@ Registers a callback function to be called when the navigation switched to a new
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
 
 ## onNavDestinationSwitch
 
@@ -1117,7 +1117,7 @@ Registers a callback function to be called when the navigation switched to a new
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | observerOptions | observer.NavDestinationSwitchObserverOptions | Yes | Options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
 
 ## onNavDestinationUpdate
 
@@ -1145,7 +1145,7 @@ Registers a callback function to be called when the navigation destination is up
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | observer.NavDestinationSwitchObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
 
 ## onNavDestinationUpdate
 
@@ -1169,7 +1169,7 @@ Registers a callback function to be called when the navigation destination is up
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
 
 ## onNavDestinationUpdateByUniqueId
 
@@ -1194,7 +1194,7 @@ Registers a callback function to be called when the navigation destination is up
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | navigationUniqueId | int | Yes | The uniqueId of the navigation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the navigation destination is updated. |
 
 ## onNodeRenderState
 
@@ -1218,8 +1218,8 @@ Registers a callback function to be called when the specific node's render state
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nodeIdentity | [NodeIdentity](../../apis-arkui/arkts-apis/arkts-arkui-nodeidentity-t.md) | Yes | The identity of the target node |
-| callback | [NodeRenderStateChangeCallback](../../apis-arkui/arkts-apis/arkts-arkui-noderenderstatechangecallback-t.md) | Yes | The callback function executed when the rendering state of the component node changes. |
+| nodeIdentity | [NodeIdentity](arkts-na-nodeidentity-t.md) | Yes | The identity of the target node |
+| callback | [NodeRenderStateChangeCallback](arkts-na-noderenderstatechangecallback-t.md) | Yes | The callback function executed when the rendering state of the component node changes. |
 
 **Error codes:**
 
@@ -1249,7 +1249,7 @@ Registers a callback function to be called when the visible router page's size i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.RouterPageInfo&gt; | Yes | The callback function to be called when the visible router page's size is changed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.RouterPageInfo&gt; | Yes | The callback function to be called when the visible router page's size is changed. |
 
 ## onRouterPageUpdate
 
@@ -1273,7 +1273,7 @@ Registers a callback function to be called when the router page in a ui context 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.RouterPageInfo&gt; | Yes | The callback function to be called when the router page is updated. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.RouterPageInfo&gt; | Yes | The callback function to be called when the router page is updated. |
 
 ## onScrollEvent
 
@@ -1298,7 +1298,7 @@ Registers a callback function to be called when the scroll event starts or stops
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 ## onScrollEvent
 
@@ -1322,7 +1322,7 @@ Registers a callback function to be called when the scroll event starts or stops
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 ## onSwiperContentUpdate
 
@@ -1346,7 +1346,7 @@ Registers a callback function to be called when the swiper content is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SwiperContentInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | The callback function to be called when the content is updated. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;[SwiperContentInfo](arkts-na-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | The callback function to be called when the content is updated. |
 
 ## onSwiperContentUpdate
 
@@ -1371,7 +1371,7 @@ Registers a callback function to be called when the swiper content is updated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SwiperContentInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | The callback function to be called when the swiper content is updated. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;[SwiperContentInfo](arkts-na-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes | The callback function to be called when the swiper content is updated. |
 
 ## onTabChange
 
@@ -1396,7 +1396,7 @@ Registers a callback function to be called when the tabContent is showed or hidd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
 
 ## onTabChange
 
@@ -1420,7 +1420,7 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
 
 ## onTabContentUpdate
 
@@ -1445,7 +1445,7 @@ Registers a callback function to be called when the tabContent is showed or hidd
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | observer.ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent show or hide. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent show or hide. |
 
 ## onTabContentUpdate
 
@@ -1469,7 +1469,7 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
 
 ## onTextChange
 
@@ -1493,7 +1493,7 @@ Registers a callback function to be called when text field's content is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when text field's content is changed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when text field's content is changed. |
 
 ## onTextChange
 
@@ -1518,7 +1518,7 @@ Registers a callback function to be called when text field's content is changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | identity | observer.ObserverOptions | Yes | Identity options. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when the text field's content is changed. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.TextChangeEventInfo&gt; | Yes | The callback function to be called when the text field's content is changed. |
 
 ## onWillClick
 
@@ -1542,7 +1542,7 @@ Registers a callback function to be called before clickEvent is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ClickEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-clickeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
+| callback | [ClickEventListenerCallback](arkts-na-clickeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
 
 ## onWillDraw
 
@@ -1566,7 +1566,7 @@ Registers a callback function to be called when the draw command will be drawn.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the draw command will be drawn. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the draw command will be drawn. |
 
 ## onWillTap
 
@@ -1590,7 +1590,7 @@ Registers a callback function to be called before tapGesture is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureEventListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-gestureeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
+| callback | [GestureEventListenerCallback](arkts-na-gestureeventlistenercallback-t.md) | Yes | The callback function to be called when the clickEvent will be trigger or after. |
 
 ## onWindowSizeLayoutBreakpointChange
 
@@ -1614,7 +1614,7 @@ Registers a callback function to be called when the window size layout breakpoin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | Yes | The callback function to be called when the window size layout breakpoint changes. The callback receives a [WindowSizeLayoutBreakpointInfo](arkts-na-uiobserver-windowsizelayoutbreakpointinfo-i.md) object containing the current width and height breakpoint classifications. |
+| callback | [Callback](arkts-na-callback-t.md)&lt;observer.WindowSizeLayoutBreakpointInfo&gt; | Yes | The callback function to be called when the window size layout breakpoint changes. The callback receives a [WindowSizeLayoutBreakpointInfo](arkts-na-uiobserver-windowsizelayoutbreakpointinfo-i.md) object containing the current width and height breakpoint classifications. |
 
 ## removeGlobalGestureListener
 
@@ -1638,6 +1638,6 @@ Removes a callback function for one gesture listener type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [GestureListenerType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gesturelistenertype-e.md) | Yes | The type of event to remove the listener for. |
-| callback | [GestureListenerCallback](../../apis-arkui/arkts-apis/arkts-arkui-gesturelistenercallback-t.md) | No | The callback function to be removed. If not provided, all callbacks for the given gesture type will be removed. |
+| type | [GestureListenerType](arkts-na-arkui-uicontext-gesturelistenertype-e.md) | Yes | The type of event to remove the listener for. |
+| callback | [GestureListenerCallback](arkts-na-gesturelistenercallback-t.md) | No | The callback function to be removed. If not provided, all callbacks for the given gesture type will be removed. |
 

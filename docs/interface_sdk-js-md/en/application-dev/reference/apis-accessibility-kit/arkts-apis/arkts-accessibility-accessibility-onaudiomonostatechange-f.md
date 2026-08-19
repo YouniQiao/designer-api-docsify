@@ -30,7 +30,7 @@ Subscribes to the state changes of mono audio mode. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the mono audio mode enabled state changes. The value **true** indicates that the mono audio mode is enabled, and **false** indicates that the mono audio mode is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the mono audio mode enabled state changes. The value **true** indicates that the mono audio mode is enabled, and **false** indicates that the mono audio mode is disabled. |
 
 **Examples**
 

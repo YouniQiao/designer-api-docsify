@@ -163,7 +163,7 @@ layoutDirection?: DownloadLayoutDirection
 
 Layout direction.
 
-**Type:** [DownloadLayoutDirection](arkts-na-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md)
+**Type:** [DownloadLayoutDirection](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-downloadfilebutton-downloadlayoutdirection-e.md)
 
 **Since:** 23
 

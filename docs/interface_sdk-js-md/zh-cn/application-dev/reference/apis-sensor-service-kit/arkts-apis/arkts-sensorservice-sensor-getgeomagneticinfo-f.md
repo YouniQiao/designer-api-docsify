@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getGeomagneticInfo
@@ -26,7 +25,7 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, 
 | --- | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | 是 | 地理位置，包括经度、纬度和海拔高度。 |
 | timeMillis | long | 是 | 获取磁偏角的时间，unix时间戳，表示自1970-01-01 00:00:00 UTC以来的毫秒数。单位：ms（毫秒）。取值范围：正整数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | 是 | 回调函数，异步返回地磁场信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | 是 | 回调函数，异步返回地磁场信息。 |
 
 **错误码：**
 

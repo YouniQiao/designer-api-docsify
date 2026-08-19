@@ -15,7 +15,6 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 ## 导入模块
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

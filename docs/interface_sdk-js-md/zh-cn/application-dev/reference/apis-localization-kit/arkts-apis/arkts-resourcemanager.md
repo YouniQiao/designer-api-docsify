@@ -9,7 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## 汇总

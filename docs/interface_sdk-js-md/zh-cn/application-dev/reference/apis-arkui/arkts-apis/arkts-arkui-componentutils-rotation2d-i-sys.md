@@ -15,7 +15,6 @@ Describe a rotate in 2D, which can be defined by rotation angle and rotation cen
 ## 导入模块
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## angle

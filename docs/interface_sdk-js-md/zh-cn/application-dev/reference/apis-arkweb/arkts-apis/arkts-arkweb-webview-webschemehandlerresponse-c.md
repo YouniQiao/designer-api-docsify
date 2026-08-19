@@ -11,7 +11,6 @@ WebSchemeHandlerResponse是自定义scheme拦截场景中用于构造HTTP响应�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

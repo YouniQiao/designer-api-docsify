@@ -11,7 +11,6 @@ MediaSourceInfo 是表示媒体源信息的数据类。在 Web 媒体播放场�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## format

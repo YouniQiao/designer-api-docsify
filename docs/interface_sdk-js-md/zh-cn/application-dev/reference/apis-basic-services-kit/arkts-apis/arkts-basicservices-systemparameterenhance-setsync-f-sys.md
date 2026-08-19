@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { systemParameterEnhance } from '@kit.BasicServicesKit';
 ```
 
 ## setSync

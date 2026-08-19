@@ -39,7 +39,7 @@
 - [Mechanic Kit (71)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
 - [Media Kit (223)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
 - [Media Library Kit (238)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)
-- [Multimodal Awareness Kit (111)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-devicestatus.md)
+- [Multimodal Awareness Kit (131)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-carawareness.md)
 - [Na (2333)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-na/arkts-apis/arkts-app-ability-applicationstatechangecallback.md)
 - [Network Kit (468)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-network-kit/arkts-apis/arkts-app-ability-vpnextensionability.md)
 - [Notification Kit (352)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-notification-kit/arkts-apis/arkts-application-notificationsubscriberextensionability.md)

@@ -31,7 +31,7 @@ Defines ArcSwiper Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](arkts-na-arkui-arcswiper-arcswipercontroller-c.md) | No | ArcSwiper constructor options |
+| controller | [ArcSwiperController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No | ArcSwiper constructor options |
 | content_ | CustomBuilder | No | container |
 
 **Return value:**

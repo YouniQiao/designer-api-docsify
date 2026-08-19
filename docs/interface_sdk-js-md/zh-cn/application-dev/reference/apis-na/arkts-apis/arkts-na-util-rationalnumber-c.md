@@ -35,7 +35,7 @@ Compares the current RationalNumber object to the given object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| another | [RationalNumber](arkts-na-util-rationalnumber-c.md) | 是 | An object of other rational numbers |
+| another | [RationalNumber](../../apis-arkts/arkts-apis/arkts-arkts-util-rationalnumber-c.md) | 是 | An object of other rational numbers |
 
 **返回值：**
 
@@ -85,7 +85,7 @@ Creates a RationalNumber object based on a given string.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RationalNumber](arkts-na-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
+| [RationalNumber](../../apis-arkts/arkts-apis/arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
 
 ## equals
 
@@ -281,7 +281,7 @@ Used to create a RationalNumber instance with a given numerator and denominator.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RationalNumber](arkts-na-util-rationalnumber-c.md) |  |
+| [RationalNumber](../../apis-arkts/arkts-apis/arkts-arkts-util-rationalnumber-c.md) |  |
 
 ## toString
 

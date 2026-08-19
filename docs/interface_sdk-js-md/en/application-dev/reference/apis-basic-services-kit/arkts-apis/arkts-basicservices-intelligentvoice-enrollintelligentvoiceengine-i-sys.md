@@ -38,7 +38,7 @@ Commit enroll, This method uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -133,7 +133,7 @@ Enrolls for result, This method uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isLast | boolean | Yes | isLast indicates if it is the last time to enroll. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[EnrollCallbackInfo](arkts-basicservices-intelligentvoice-enrollcallbackinfo-i-sys.md)&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[EnrollCallbackInfo](arkts-basicservices-intelligentvoice-enrollcallbackinfo-i-sys.md)&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -295,7 +295,7 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter whose value is to be obtained. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | the callback used to return the value of the intelligent voice parameter. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | the callback used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -399,7 +399,7 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback used to return the supported regions. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback used to return the supported regions. |
 
 **Error codes:**
 
@@ -497,7 +497,7 @@ Initials the engine, This method uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [EnrollEngineConfig](arkts-basicservices-intelligentvoice-enrollengineconfig-i-sys.md) | Yes | config indicates enroll engine configuration. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -609,7 +609,7 @@ Releases the engine, This method uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -703,7 +703,7 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 | --- | --- | --- | --- |
 | key | string | Yes | the key of the intelligent voice parameter to set. |
 | value | string | Yes | the value of the intelligent voice parameter to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -807,7 +807,7 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sensibility | [SensibilityType](arkts-basicservices-intelligentvoice-sensibilitytype-e-sys.md) | Yes | sensibility to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -910,7 +910,7 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [WakeupHapInfo](arkts-basicservices-intelligentvoice-wakeuphapinfo-i-sys.md) | Yes | info indicates wakeup hap information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
@@ -1020,7 +1020,7 @@ Stops the engine, This method uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 

@@ -132,7 +132,7 @@ Common()
 | [PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md) | 像素扩展属性集合，用于描述像素扩展的信息。 |
 | [PointLightStyle](arkts-arkui-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
 | [PopupBorderLinearGradient](arkts-arkui-popupborderlineargradient-i.md) | 弹出边框线性渐变色。 |
-| [PopupCommonOptions](arkts-arkui-popupcommonoptions-i.md) | 配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的 [getPromptAction()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 [PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md)对象，再通过该对象调用 [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup)和 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup)时传入的options参数。 |
+| [PopupCommonOptions](arkts-arkui-popupcommonoptions-i.md) | 配置弹出气泡的参数。使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)中的 [getPromptAction()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到 [PromptAction](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md)对象，再通过该对象调用 [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup)和 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup)时传入的options参数。 |
 | [PopupMaskType](arkts-arkui-popupmasktype-i.md) | 设置遮罩层颜色。 |
 | [PopupMessageOptions](arkts-arkui-popupmessageoptions-i.md) | 气泡文本的样式。 |
 | [PopupOptions](arkts-arkui-popupoptions-i.md) | 基础气泡的信息。 |

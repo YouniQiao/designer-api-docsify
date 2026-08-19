@@ -43,7 +43,7 @@ swiperItemInfos: Array<SwiperItemInfo>
 
 The array of changed SwiperItemInfo.
 
-**Type:** Array&lt;[SwiperItemInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-swiperiteminfo-i.md)&gt;
+**Type:** Array&lt;[SwiperItemInfo](arkts-na-arkui-uicontext-swiperiteminfo-i.md)&gt;
 
 **Since:** 23
 

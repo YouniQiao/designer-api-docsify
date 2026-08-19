@@ -43,7 +43,7 @@ currentPhase: GestureActionPhase
 
 The gesture action callback phase.
 
-**Type:** [GestureActionPhase](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
+**Type:** [GestureActionPhase](arkts-na-arkui-uicontext-gestureactionphase-e.md)
 
 **Since:** 26.0.0
 

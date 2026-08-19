@@ -117,7 +117,7 @@ modeChangeCallback?: Callback<NavigationMode>
 
 Trigger callback when navigation mode changes.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavigationMode&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavigationMode&gt;
 
 **Since:** 12
 
@@ -215,7 +215,7 @@ the information of route page.Providers methods for controlling destination page
 
 the content of Navigation.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -234,7 +234,7 @@ the content of Navigation.
 
 Set side bar content.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 18
 
@@ -271,7 +271,7 @@ stateChangeCallback?: Callback<boolean>
 
 Trigger callback when the visibility of navigation bar change.
 
-**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
+**Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
 **Since:** 12
 

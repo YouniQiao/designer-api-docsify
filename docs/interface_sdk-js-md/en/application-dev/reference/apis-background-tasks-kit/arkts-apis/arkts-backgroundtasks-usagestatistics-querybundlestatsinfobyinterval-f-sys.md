@@ -36,7 +36,7 @@ Queries usage information about each bundle within a specified period at a speci
 | byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be BY_OPTIMIZED, BY_DAILY, BY_WEEKLY, BY_MONTHLY, or BY_ANNUALLY. |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;BundleStatsInfo&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the list of [BundleStatsInfo](arkts-backgroundtasks-usagestatistics-bundlestatsinfo-i-sys.md) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStatsInfo&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the list of [BundleStatsInfo](arkts-backgroundtasks-usagestatistics-bundlestatsinfo-i-sys.md) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

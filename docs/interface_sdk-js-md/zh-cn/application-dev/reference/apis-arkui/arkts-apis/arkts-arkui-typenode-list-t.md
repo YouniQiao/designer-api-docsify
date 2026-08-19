@@ -4,7 +4,7 @@
 type List = TypedFrameNode<ListInterface, ListAttribute>
 ```
 
-List类型的FrameNode节点类型。只允许添加[ListItem](../../apis-na/arkts-apis/arkts-na-typenode-listitem-t.md)、[ListItemGroup](../../apis-na/arkts-apis/arkts-na-typenode-listitemgroup-t.md)类型子组件。
+List类型的FrameNode节点类型。只允许添加[ListItem](arkts-arkui-typenode-listitem-t.md)、[ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md)类型子组件。
 
 **起始版本：** 12
 

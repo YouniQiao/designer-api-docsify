@@ -13,7 +13,6 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 ## 导入模块
 
 ```TypeScript
-import { AgentExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onAgentInvoked

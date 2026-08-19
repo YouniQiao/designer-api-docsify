@@ -29,7 +29,7 @@ Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the running lock. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the query result obtained, where the value **true** indicates that the specified type of the running lock is supported and **false** indicates the opposite. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the query result obtained, where the value **true** indicates that the specified type of the running lock is supported and **false** indicates the opposite. Otherwise, **err** is an error object. |
 
 **Examples**
 

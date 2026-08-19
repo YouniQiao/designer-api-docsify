@@ -28,7 +28,7 @@ Publishes a common event to a specified user. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | userId | int | Yes | ID of the user who will receive the common event. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -118,7 +118,7 @@ Publishes a common event to a specified user and specifies the information to be
 | event | string | Yes | Name of the common event to publish. |
 | userId | int | Yes | ID of the user who will receive the common event. |
 | options | CommonEventPublishData | Yes | Properties of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

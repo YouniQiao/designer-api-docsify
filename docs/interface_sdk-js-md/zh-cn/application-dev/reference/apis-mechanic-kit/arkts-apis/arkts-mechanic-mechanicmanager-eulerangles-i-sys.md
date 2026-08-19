@@ -13,7 +13,6 @@ Absolute euler angles relative to the home position.
 ## 导入模块
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## pitch

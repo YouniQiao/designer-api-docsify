@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
 ```
 
 ## startPrintJob
@@ -29,7 +28,7 @@ function startPrintJob(jobInfo: PrintJob, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | jobInfo | [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | 是 | 打印任务信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步开始打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步开始打印任务之后的回调。 |
 
 **错误码：**
 

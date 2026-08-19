@@ -11,42 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
-import { util } from '@kit.ArkTS';
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
-import { stream } from '@kit.ArkTS';
-import { Vector } from '@kit.ArkTS';
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -125,7 +89,7 @@ static create(encoding?: string): TextEncoder
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextEncoder](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md) | TextEncoder** 对象。 |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** 对象。 |
 
 **示例**
 
@@ -145,7 +109,7 @@ encode(input?: string): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** [encodeInto](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeinto)
+**替代接口：** [encodeInto](#encodeinto)
 
 <!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
@@ -221,7 +185,7 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **废弃版本：** 9
 
-**替代接口：** [encodeIntoUint8Array](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeintouint8array)
+**替代接口：** [encodeIntoUint8Array](#encodeintouint8array)
 
 <!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 
@@ -279,7 +243,7 @@ encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo
 | 类型 | 说明 |
 | --- | --- |
 | object | 返回该对象，其中 read 表示已编码的字符数，written 表示已编码字符所占用的字节数。<br>**适用版本：** 9 - 10 |
-| [EncodeIntoUint8ArrayInfo](../../apis-na/arkts-apis/arkts-na-util-encodeintouint8arrayinfo-i.md) | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的 字节数。<br>**适用版本：** 11+ |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的 字节数。<br>**适用版本：** 11+ |
 
 **示例**
 

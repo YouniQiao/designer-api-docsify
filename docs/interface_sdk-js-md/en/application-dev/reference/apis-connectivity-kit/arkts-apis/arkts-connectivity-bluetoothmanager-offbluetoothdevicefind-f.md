@@ -33,7 +33,7 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered. On 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bluetoothDeviceFind' | Yes | Type of the discovering event to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to listen for the discovering event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | No | Callback used to listen for the discovering event. |
 
 **Error codes:**
 

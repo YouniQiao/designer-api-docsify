@@ -86,7 +86,7 @@ Kill process with account.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | The process bundle name. |
 | accountId | number | Yes | The account id. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Cut off the callback function of the account process. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Cut off the callback function of the account process. |
 
 **Examples**
 

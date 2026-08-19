@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## verifyAbc
@@ -30,7 +29,7 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 | --- | --- | --- | --- |
 | abcPaths | Array&lt;string&gt; | 是 | .abc文件路径。 |
 | deleteOriginalFiles | boolean | 是 | 是否删除.abc文件，true删除，false不删除。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined；否则为错 误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时，err为undefined；否则为错 误对象。 |
 
 **错误码：**
 

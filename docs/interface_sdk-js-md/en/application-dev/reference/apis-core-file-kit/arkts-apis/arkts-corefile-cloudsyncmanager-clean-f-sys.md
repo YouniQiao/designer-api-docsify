@@ -87,7 +87,7 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
 | appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md) specifies the action to perform. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to clear the cloud data locally. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to clear the cloud data locally. |
 
 **Error codes:**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
 ```
 
 ## on_netBackgroundPolicyChange('netBackgroundPolicyChange')
@@ -29,7 +28,7 @@ function on(type: 'netBackgroundPolicyChange', callback: Callback<boolean>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netBackgroundPolicyChange' | 是 | 订阅的事件类型。'netBackgroundPolicyChange'：注册后台网络策略发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。注册后台网络策略发生改变时调用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数。注册后台网络策略发生改变时调用。 |
 
 **错误码：**
 

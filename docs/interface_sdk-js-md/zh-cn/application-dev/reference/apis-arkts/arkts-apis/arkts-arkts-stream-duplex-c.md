@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor

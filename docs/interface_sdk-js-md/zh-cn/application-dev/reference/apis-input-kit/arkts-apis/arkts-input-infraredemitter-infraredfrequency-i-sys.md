@@ -1,4 +1,4 @@
-# InfraredFrequency(IR Management)（系统接口）
+# InfraredFrequency(红外管理)（系统接口）
 
 红外信号的频率范围。
 
@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
 ```
 
 ## max

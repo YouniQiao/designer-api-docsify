@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## setFunctionKeyEnabled
@@ -42,7 +40,7 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [3900003](../errorcode-inputdevice.md#3900003-非输入法应用调用) | It is prohibited for non-input applications. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
 | [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) | There is currently no keyboard device connected. |
 
 **示例**

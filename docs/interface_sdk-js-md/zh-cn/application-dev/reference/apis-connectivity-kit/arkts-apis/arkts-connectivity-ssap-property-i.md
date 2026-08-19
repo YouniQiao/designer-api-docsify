@@ -11,7 +11,6 @@ SSAP属性。
 ## 导入模块
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## descriptors

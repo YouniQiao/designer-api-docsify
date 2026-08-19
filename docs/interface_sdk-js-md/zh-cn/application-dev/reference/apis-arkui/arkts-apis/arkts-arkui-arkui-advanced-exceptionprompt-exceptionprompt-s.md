@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { MarginType, PromptOptions, ExceptionPrompt } from '@kit.ArkUI';
-import { MarginTypeV2, PromptOptionsV2, PromptOptionsV2Config, ExceptionPromptV2 } from '@kit.ArkUI';
 ```
 
 ## build

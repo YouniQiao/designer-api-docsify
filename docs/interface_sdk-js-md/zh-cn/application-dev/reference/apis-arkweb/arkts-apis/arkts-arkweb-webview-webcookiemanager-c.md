@@ -11,7 +11,6 @@ WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## clearAllCookies
@@ -62,7 +61,7 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取清除所有cookie是否成功。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于获取清除所有cookie是否成功。 |
 
 **错误码：**
 
@@ -140,7 +139,7 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取清除所有会话cookie是否成功。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于获取清除所有会话cookie是否成功。 |
 
 **错误码：**
 
@@ -260,7 +259,7 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | url | string | 是 | 要设置的cookie所属的url，建议使用完整的url。 |
 | value | string | 是 | 要设置的cookie的值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取设置cookie的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于获取设置cookie的结果。 |
 
 **错误码：**
 
@@ -549,7 +548,7 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 要获取cookie的url，建议使用完整的url。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，用于获取cookie。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，用于获取cookie。 |
 
 **错误码：**
 
@@ -815,7 +814,7 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于获取cookie是否成功保存。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，用于获取cookie是否成功保存。 |
 
 **错误码：**
 

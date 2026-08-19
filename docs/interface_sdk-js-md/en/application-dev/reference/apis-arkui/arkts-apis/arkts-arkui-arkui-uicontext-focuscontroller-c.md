@@ -1,6 +1,6 @@
 # FocusController
 
-Provides capabilities to control focus, including features such as clearing, moving, and activating focus. > **NOTE：**> > In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller) in > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
+Provides capabilities to control focus, including features such as clearing, moving, and activating focus. > **NOTE：**> > In the following API examples, you must first use [getFocusController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getfocuscontroller) in > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
 

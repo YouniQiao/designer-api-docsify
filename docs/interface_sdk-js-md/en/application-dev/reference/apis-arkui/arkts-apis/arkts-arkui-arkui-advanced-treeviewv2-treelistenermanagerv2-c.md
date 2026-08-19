@@ -36,7 +36,7 @@ Get instance of treeListenerManagerV2.
 
 | Type | Description |
 | --- | --- |
-| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | Returns the treeListenerManagerV2 instance. |
+| [TreeListenerManagerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | Returns the treeListenerManagerV2 instance. |
 
 ## getTreeListener
 
@@ -60,5 +60,5 @@ Get treeListenerV2.
 
 | Type | Description |
 | --- | --- |
-| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) | Returns the treeListenerV2 object. |
+| [TreeListenerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treelistenerv2-c.md) | Returns the treeListenerV2 object. |
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleResourceInfo

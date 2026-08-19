@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

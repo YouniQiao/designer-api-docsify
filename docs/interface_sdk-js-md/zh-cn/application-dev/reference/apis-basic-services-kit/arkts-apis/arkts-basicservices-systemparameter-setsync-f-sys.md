@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## setSync
@@ -18,7 +17,7 @@ function setSync(key: string, value: string): void
 
 **废弃版本：** 9
 
-**替代接口：** etSync
+**替代接口：** setSync
 
 <!--Device-systemParameter-function setSync(key: string, value: string): void--><!--Device-systemParameter-function setSync(key: string, value: string): void-End-->
 

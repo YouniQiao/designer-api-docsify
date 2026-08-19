@@ -29,7 +29,7 @@ Applies a quick fix patch. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapModuleQuickFixFiles | Array&lt;string&gt; | Yes | Quick fix patch files, each of which must contain a valid file path. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the quick fix patch is installed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the quick fix patch is installed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

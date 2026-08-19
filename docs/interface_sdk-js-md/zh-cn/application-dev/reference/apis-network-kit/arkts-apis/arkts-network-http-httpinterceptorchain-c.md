@@ -11,7 +11,6 @@ HTTP拦截器链。
 ## 导入模块
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
 ```
 
 ## addChain

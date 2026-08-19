@@ -84,7 +84,7 @@ Checks whether the application with the specified bundle name is running across 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
 
 **Error codes:**
 

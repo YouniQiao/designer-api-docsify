@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## offDistributedSessionChange
@@ -27,7 +26,7 @@ Unregister distributed session changed callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | distributedSessionType | [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | 是 | Indicates the distributed session type |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt;&gt; | 否 | The callback will return remote changed AVSessionController. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt;&gt; | 否 | The callback will return remote changed AVSessionController. |
 
 **错误码：**
 

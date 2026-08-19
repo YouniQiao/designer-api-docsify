@@ -26,7 +26,7 @@ Obtains the altitude based on the atmospheric pressure. This API uses an asynchr
 | --- | --- | --- | --- |
 | seaPressure | double | Yes | Sea-level atmospheric pressure, in hPa. |
 | currentPressure | double | Yes | Specified atmospheric pressure, in hPa. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | Yes | Callback used to return the altitude, in meters. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | Callback used to return the altitude, in meters. |
 
 **Error codes:**
 

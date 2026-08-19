@@ -312,7 +312,7 @@ Obtains the service access token of a domain account. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, Object&gt; | Yes | Service parameters. The specific formats vary depending on the domain plug-in. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, an error object is returned. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -375,7 +375,7 @@ Gets the business access token of the current domain account.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the business parameters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Indicates the result callback. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Indicates the result callback. |
 
 **Error codes:**
 
@@ -524,7 +524,7 @@ Obtains information about a specified domain account. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -657,7 +657,7 @@ Checks whether a domain account exists. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the specified domain account exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the specified domain account exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -958,7 +958,7 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | token | Uint8Array | Yes | New domain account token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

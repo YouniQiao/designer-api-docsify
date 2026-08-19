@@ -11,7 +11,6 @@ VPN观察者对象。用于监听VPN相关事件。在调用VpnObserver的方法
 ## 导入模块
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## offAuthorizationResult

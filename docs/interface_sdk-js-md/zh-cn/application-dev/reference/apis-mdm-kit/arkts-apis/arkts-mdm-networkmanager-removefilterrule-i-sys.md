@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { networkManager } from '@kit.MDMKit';
 ```
 
 ## action

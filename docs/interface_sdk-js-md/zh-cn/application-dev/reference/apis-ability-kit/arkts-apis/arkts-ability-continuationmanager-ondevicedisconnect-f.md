@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## on_deviceDisconnect('deviceDisconnect')
@@ -31,7 +30,7 @@ function on(type: 'deviceDisconnect', callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceDisconnect' | 是 | 监听的事件类型，固定值"deviceDisconnect"。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
 
 **示例**
 

@@ -32,7 +32,7 @@ Unregister application state observer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | observerId | number | Yes | Indicates the number code of the observer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 **Examples**
 

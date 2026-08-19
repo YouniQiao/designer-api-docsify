@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## 汇总

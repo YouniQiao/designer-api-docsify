@@ -32,7 +32,7 @@ function setSyncNotificationEnabledWithoutApp(userId: int, enable: boolean, call
 | --- | --- | --- | --- |
 | userId | int | 是 | 用户ID。 |
 | enable | boolean | 是 | 是否启用（true：使能，false：禁止）。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置是否将通知同步到未安装应用的设备的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设置是否将通知同步到未安装应用的设备的回调函数。 |
 
 **错误码：**
 

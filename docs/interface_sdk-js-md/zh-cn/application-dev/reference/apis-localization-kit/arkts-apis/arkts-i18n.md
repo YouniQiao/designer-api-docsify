@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## 汇总
@@ -29,14 +28,14 @@ import { i18n } from '@kit.LocalizationKit';
 | [getInstance](arkts-localization-i18n-getinstance-f.md) | 创建并返回IndexUtil对象。 |
 | [getLineInstance](arkts-localization-i18n-getlineinstance-f.md) | 获取用于定位文本可换行点的BreakIterator对象。该对象内部维护一个换行迭代器，可以用于访问各个可换行点。 |
 | [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md) | 获取系统偏好语言列表。 |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md) | 通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md) | 通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md) | 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md) | 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md) | 通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md) | 通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md) | 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md) | 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。 |
 | [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md) | 通过框架字符串获取SimpleNumberFormat对象。 |
 | [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md) | 通过框架字符串获取SimpleNumberFormat对象。 |
 | [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md) | 获取系统语言。 |
-| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md) | > [System.getSystemLocale](arkts-localization-i18n-system-c.md#getsystemlocaleinstance)代替。 > 获取系统区域ID。 |
+| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md) | > [System.getSystemLocale](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getsystemlocaleinstance)代替。 > 获取系统区域ID。 |
 | [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md) | 获取系统地区。 |
 | [getTimeZone](arkts-localization-i18n-gettimezone-f.md) | 获取时区ID对应的时区对象。 |
 | [is24HourClock](arkts-localization-i18n-is24hourclock-f.md) | 判断系统时间是否为24小时制。 |
@@ -52,7 +51,7 @@ import { i18n } from '@kit.LocalizationKit';
 | [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | 提供文本换行相关的能力，包括可换行点的获取、移动和识别等。 |
 | [Calendar](arkts-localization-i18n-calendar-c.md) | 提供历法相关的能力，包括历法名称获取和日期计算等。 |
 | [Character](arkts-localization-i18n-character-c.md) | 提供Unicode字符属性相关的接口，例如：判断一个字符是否是数字。 |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](arkts-localization-i18n-calendar-c.md)，支持[Calendar](arkts-localization-i18n-calendar-c.md)的方法。 |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md)，支持[Calendar](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md)的方法。 |
 | [EntityRecognizer](arkts-localization-i18n-entityrecognizer-c.md) | 提供实体识别相关的能力，可以获取文本中实体的类型和起止位置。当前支持识别的实体包括电话号码和时间日期。 |
 | [HolidayManager](arkts-localization-i18n-holidaymanager-c.md) | 提供解析节假日数据的能力，包括节假日判断和指定年份节假日列表获取等。 |
 | [I18NUtil](arkts-localization-i18n-i18nutil-c.md) | 国际化工具类，提供单位转换、获取日期顺序、获取时段名称、区域匹配和路径本地化等能力。 |

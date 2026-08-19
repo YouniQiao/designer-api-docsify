@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -34,8 +33,8 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
-| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 否 |  |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
+| options | [StyledNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformatoptions-i.md) | 否 |  |
 
 **示例**
 
@@ -85,7 +84,7 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 **废弃版本：** 20
 
-**替代接口：** [constructor](#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
+**替代接口：** [constructor](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformat-c.md#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -97,8 +96,8 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
-| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 否 |  |
+| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
+| options | [StyledNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformatoptions-i.md) | 否 |  |
 
 **示例**
 

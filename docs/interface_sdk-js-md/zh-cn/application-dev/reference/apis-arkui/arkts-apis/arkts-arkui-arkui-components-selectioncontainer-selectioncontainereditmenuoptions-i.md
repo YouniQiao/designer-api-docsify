@@ -11,7 +11,6 @@ SelectionContainer自定义编辑菜单选项。
 ## 导入模块
 
 ```TypeScript
-import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
 ```
 
 ## onCreateMenu
@@ -42,7 +41,7 @@ onMenuItemClick?: OnMenuItemClickWithTextCallback
 
 点击菜单项时触发，可拦截系统默认菜单执行行为。默认值为空，不触发该回调。
 
-**类型：** [OnMenuItemClickWithTextCallback](../../apis-na/arkts-apis/arkts-na-onmenuitemclickwithtextcallback-t.md)
+**类型：** [OnMenuItemClickWithTextCallback](arkts-arkui-onmenuitemclickwithtextcallback-t.md)
 
 **起始版本：** 26.0.0
 

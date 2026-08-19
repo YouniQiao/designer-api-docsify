@@ -30,7 +30,7 @@ Obtains the geomagnetic field of a geographic location. This API uses an asynchr
 | --- | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location. |
 | timeMillis | number | Yes | Time for obtaining the magnetic declination, in milliseconds. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes | Callback used to return the geomagnetic field. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes | Callback used to return the geomagnetic field. |
 
 **Examples**
 

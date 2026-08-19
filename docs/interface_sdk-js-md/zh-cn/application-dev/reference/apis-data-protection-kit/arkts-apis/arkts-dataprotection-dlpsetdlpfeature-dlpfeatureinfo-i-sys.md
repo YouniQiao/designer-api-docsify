@@ -13,7 +13,6 @@ DLP特性开关的状态信息。
 ## 导入模块
 
 ```TypeScript
-import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## dlpFeatureStatus

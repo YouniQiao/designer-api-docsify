@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## 汇总

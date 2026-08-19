@@ -11,7 +11,6 @@ AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取�
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPictureInfo

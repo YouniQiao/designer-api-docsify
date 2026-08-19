@@ -37,7 +37,7 @@ Imports keys in secure mode. This API uses an asynchronous callback to return th
 | keyAlias | string | Yes | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | Yes | Alias of the data used to unwrap the key imported. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Tags required for the import and the wrapped key to import. The algorithm, key purpose, and key length are mandatory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no **err** value is returned; otherwise, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no **err** value is returned; otherwise, an error code is returned. |
 
 **Error codes:**
 

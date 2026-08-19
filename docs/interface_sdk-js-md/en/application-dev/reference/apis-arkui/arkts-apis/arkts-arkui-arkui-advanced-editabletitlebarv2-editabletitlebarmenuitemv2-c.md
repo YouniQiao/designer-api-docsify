@@ -36,7 +36,7 @@ Constructor of EditableTitleBarMenuItemV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableTitleBarMenuItemV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2options-i.md) | No | The options of the menu item |
+| options | [EditableTitleBarMenuItemV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2options-i.md) | No | The options of the menu item |
 
 ## accessibilityDescription
 
@@ -112,7 +112,7 @@ Accessibility text for screen reader.
 
 Callback function when click on this menu item.
 
-**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

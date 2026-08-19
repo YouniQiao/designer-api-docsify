@@ -62,7 +62,7 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result, indicating whether all cookies are cleared successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result, indicating whether all cookies are cleared successfully. |
 
 **Error codes:**
 
@@ -140,7 +140,7 @@ Clears all session cookies. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function used to return whether all session cookies are cleared successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function used to return whether all session cookies are cleared successfully. |
 
 **Error codes:**
 
@@ -260,7 +260,7 @@ Sets a single cookie value for a specified URL. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | url | string | Yes | URL of the cookie to set. A complete URL is recommended. |
 | value | string | Yes | Cookie value to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result of setting the cookie. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of setting the cookie. |
 
 **Error codes:**
 
@@ -549,7 +549,7 @@ Obtains the cookie value of a specified URL. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL for which the cookie is to be obtained. A complete URL is recommended. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to obtain the cookie. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the cookie. |
 
 **Error codes:**
 
@@ -815,7 +815,7 @@ Asynchronously saves all cookies (that can be obtained through **fetchCookie** a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to indicate whether the cookie is saved successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to indicate whether the cookie is saved successfully. |
 
 **Error codes:**
 

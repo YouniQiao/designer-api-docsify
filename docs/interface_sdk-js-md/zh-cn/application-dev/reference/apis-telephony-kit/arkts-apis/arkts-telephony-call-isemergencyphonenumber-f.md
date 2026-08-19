@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
 ```
 
 ## isEmergencyPhoneNumber
@@ -26,7 +25,7 @@ function isEmergencyPhoneNumber(phoneNumber: string, options: EmergencyNumberOpt
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
 | options | [EmergencyNumberOptions](arkts-telephony-call-emergencynumberoptions-i.md) | 是 | 电话号码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示是紧急电话号码，返回false表示不是紧急电话号码。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示是紧急电话号码，返回false表示不是紧急电话号码。 |
 
 **错误码：**
 
@@ -124,7 +123,7 @@ function isEmergencyPhoneNumber(phoneNumber: string, callback: AsyncCallback<boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示是紧急电话号码，返回false表示不是紧急电话号码。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示是紧急电话号码，返回false表示不是紧急电话号码。 |
 
 **错误码：**
 

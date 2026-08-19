@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -22,7 +21,7 @@ context: UIContext
 
 屏幕像素密度变化时页面对应的上下文信息。
 
-**类型：** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**类型：** [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 12
 

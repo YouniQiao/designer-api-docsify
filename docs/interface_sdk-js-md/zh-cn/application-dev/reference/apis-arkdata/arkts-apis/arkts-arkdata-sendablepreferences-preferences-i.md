@@ -13,7 +13,6 @@ Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable
 ## 导入模块
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## clear
@@ -534,7 +533,7 @@ off(type: 'change', callback?: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
@@ -583,7 +582,7 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
 | keys | Array&lt;string&gt; | 是 | 需要取消订阅的Key集合，当Keys为空数组时，表示取消订阅全部Key；当Keys为非空数组时，表示只取消订阅Key集合中的Key。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
@@ -634,7 +633,7 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | 是 | 事件类型，固定值'multiProcessChange'，表示多进程间的数据变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
 
 **错误码：**
 
@@ -682,7 +681,7 @@ on(type: 'change', callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定值'change'，表示数据变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回发生变更的Key。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | 回调函数。返回发生变更的Key。 |
 
 **错误码：**
 
@@ -730,7 +729,7 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
 | keys | Array&lt;string&gt; | 是 | 需要订阅的Key集合。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，值为变更后的数据：支持number、string、boolean、 bigint以及可序列化的object。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | 是 | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，值为变更后的数据：支持number、string、boolean、 bigint以及可序列化的object。 |
 
 **错误码：**
 
@@ -780,7 +779,7 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'multiProcessChange' | 是 | 事件类型，固定值'multiProcessChange'，表示多进程间的数据变更。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回发生变更的Key。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | 回调函数。返回发生变更的Key。 |
 
 **错误码：**
 

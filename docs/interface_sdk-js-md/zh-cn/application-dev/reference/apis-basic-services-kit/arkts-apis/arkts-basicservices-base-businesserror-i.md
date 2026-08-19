@@ -13,8 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AsyncCallback, BusinessError, Callback, ErrorCallback } from '@kit.BasicServicesKit';
-import { AsyncCallback, BusinessError, Callback, ErrorCallback, RecordData } from '@kit.BasicServicesKit';
 ```
 
 ## code

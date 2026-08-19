@@ -33,7 +33,7 @@ removeAllSlots removes all notification slots
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ removeAllSlots removes all notification slots
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationSlot \| null&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationSlot \| null&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -11,7 +11,6 @@ RouterPageInfo包含的信息，由系统返回给开发者。
 ## 导入模块
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -22,7 +21,7 @@ context: UIAbilityContext | UIContext
 
 触发生命周期的routerPage页面对应的上下文信息。
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 11
 
@@ -142,7 +141,7 @@ state: RouterPageState
 
 触发生命周期的routerPage页面的状态。
 
-**类型：** [RouterPageState](../../apis-na/arkts-apis/arkts-na-uiobserver-routerpagestate-e.md)
+**类型：** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 
 **起始版本：** 11
 

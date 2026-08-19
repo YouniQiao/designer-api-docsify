@@ -93,7 +93,7 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Yes | Application event object. You are advised to avoid the conflict between the custom event name and the system event name constant defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
 ```
 
 ## getRunningFormInfoById
@@ -120,7 +119,7 @@ function getRunningFormInfoById(formId: string, callback: AsyncCallback<formInfo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回已添加的卡片信息。error为undefined，data为查询到的卡片信息；否则为错误对 象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回已添加的卡片信息。error为undefined，data为查询到的卡片信息；否则为错误对 象。 |
 
 **错误码：**
 
@@ -164,7 +163,7 @@ function getRunningFormInfoById(
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
 | isUnusedIncluded | boolean | 是 | 表示是否包含未使用的卡片。 <br>true: 表示包含未使用的卡片。 <br>false: 表示不包含未使用的卡片。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回已添加的卡片信息。error为undefined，data为查询到的卡片信息；否则为错误对 象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;formInfo.RunningFormInfo&gt; | 是 | 回调函数。返回已添加的卡片信息。error为undefined，data为查询到的卡片信息；否则为错误对 象。 |
 
 **错误码：**
 

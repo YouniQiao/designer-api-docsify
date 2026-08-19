@@ -33,7 +33,7 @@ Switch current input method subtype. The caller must be the current inputmethod.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | indicates the target input method subtype. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of switchCurrentInputMethodSubtype. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of switchCurrentInputMethodSubtype. |
 
 **Error codes:**
 

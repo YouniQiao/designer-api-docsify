@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## path

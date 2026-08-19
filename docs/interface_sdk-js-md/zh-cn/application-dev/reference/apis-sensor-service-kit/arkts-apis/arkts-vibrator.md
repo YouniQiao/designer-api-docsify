@@ -11,7 +11,6 @@ vibrator模块是设备马达振动的控制模块，属于SensorServiceKit。�
 ## 导入模块
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## 汇总

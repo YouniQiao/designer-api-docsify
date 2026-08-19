@@ -4,7 +4,7 @@
 export type ErrorCallback<T extends Error = BusinessError> = (err: T) => void
 ```
 
-通用回调函数，携带错误参数。回调返回的信息为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型的信息。
+通用回调函数，携带错误参数。回调返回的信息为[BusinessError](arkts-basicservices-base-businesserror-c.md)类型的信息。
 
 **起始版本：** 23
 

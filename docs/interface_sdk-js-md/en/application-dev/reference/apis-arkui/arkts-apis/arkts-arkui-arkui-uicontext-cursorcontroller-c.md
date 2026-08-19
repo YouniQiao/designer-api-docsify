@@ -1,6 +1,6 @@
 # CursorController
 
-Provides the capability to set cursor styles. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller) in > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
+Provides the capability to set cursor styles. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - In the following API examples, you must first use [getCursorController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getcursorcontroller) in > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
 
@@ -57,7 +57,7 @@ Sets the cursor style. > **NOTE：**> > This API does not take effect immediatel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
+| value | [PointerStyle](../../apis-na/arkts-apis/arkts-na-pointerstyle-t.md) | Yes | Pointer style. |
 
 ## setCustomCursor
 

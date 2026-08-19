@@ -30,5 +30,5 @@ Subscribes to the state changes of the senior mode. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. The value **true** indicates that the senior mode is enabled, and **false** indicates that the senior mode is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. The value **true** indicates that the senior mode is enabled, and **false** indicates that the senior mode is disabled. |
 

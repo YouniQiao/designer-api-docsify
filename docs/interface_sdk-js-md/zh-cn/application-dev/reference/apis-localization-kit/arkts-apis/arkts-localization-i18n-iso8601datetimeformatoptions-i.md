@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## dateFormat
@@ -102,7 +101,7 @@ timeZone?: TimeZone
 
 时区。默认值：**UTC**。
 
-**类型：** [TimeZone](arkts-localization-i18n-timezone-c.md)
+**类型：** [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md)
 
 **起始版本：** 26.0.0
 

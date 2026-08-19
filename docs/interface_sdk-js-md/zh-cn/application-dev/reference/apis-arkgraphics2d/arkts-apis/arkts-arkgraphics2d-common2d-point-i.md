@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
 ```
 
 ## x

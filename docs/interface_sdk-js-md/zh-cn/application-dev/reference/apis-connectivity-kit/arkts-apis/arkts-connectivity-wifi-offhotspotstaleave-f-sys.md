@@ -3,10 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## off_hotspotStaLeave('hotspotStaLeave')
@@ -36,5 +32,5 @@ function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数 |
 

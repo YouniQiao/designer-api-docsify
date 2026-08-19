@@ -28,7 +28,7 @@ Listens for touchPad three fingers swipe events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ThreeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md)&gt; | Yes | Callback used to receive the reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ThreeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md)&gt; | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 

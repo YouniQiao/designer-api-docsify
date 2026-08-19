@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor

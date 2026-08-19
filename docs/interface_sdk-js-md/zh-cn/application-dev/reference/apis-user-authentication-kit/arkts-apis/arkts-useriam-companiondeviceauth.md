@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## 汇总

@@ -13,7 +13,6 @@ EntityInfo继承自[IntentEntityDecoratorInfo](arkts-ability-app-ability-insight
 ## 导入模块
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## className

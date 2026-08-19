@@ -36,7 +36,7 @@ Closes a distributed KV store. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -144,7 +144,7 @@ Deletes a distributed KV store. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -254,7 +254,7 @@ Obtains the IDs of all distributed KV stores that are created by getKVStore and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the IDs of all the distributed KV stores created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the IDs of all the distributed KV stores created. |
 
 **Error codes:**
 
@@ -359,7 +359,7 @@ Creates and obtains a distributed KV store based on the specified **options** an
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
 | options | Options | Yes | Configuration of the KV store to create. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the **SingleKVStore** or **DeviceKVStore** instance created. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the **SingleKVStore** or **DeviceKVStore** instance created. |
 
 **Error codes:**
 
@@ -486,7 +486,7 @@ Unregister the death callback. Not notification will be received when the data m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the data manager service is terminated callback which has been registered. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the data manager service is terminated callback which has been registered. |
 
 ## off_distributedDataServiceDie
 
@@ -507,7 +507,7 @@ Unsubscribes from the termination (death) of the distributed data service. The *
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates the termination of the distributed data service. |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the **distributedDataServiceDie** event. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the **distributedDataServiceDie** event. |
 
 **Error codes:**
 
@@ -552,7 +552,7 @@ Register a death callback to get notification when the data manager service is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | callback to be invoked when the data manager service is terminated. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | callback to be invoked when the data manager service is terminated. |
 
 ## on_distributedDataServiceDie
 
@@ -573,7 +573,7 @@ Subscribes to the termination (death) of the distributed data service. If the se
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'distributedDataServiceDie' | Yes | Event type. The value is **distributedDataServiceDie**, which indicates the termination of the distributed data service. |
-| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscription is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| deathCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscription is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

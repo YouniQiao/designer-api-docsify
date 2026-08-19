@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## registerDeviceSelectCallback

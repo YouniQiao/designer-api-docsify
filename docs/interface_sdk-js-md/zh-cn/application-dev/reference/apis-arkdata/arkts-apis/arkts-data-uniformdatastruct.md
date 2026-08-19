@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## 汇总

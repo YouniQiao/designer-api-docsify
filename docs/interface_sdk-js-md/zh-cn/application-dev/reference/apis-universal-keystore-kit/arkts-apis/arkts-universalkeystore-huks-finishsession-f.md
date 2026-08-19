@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## finishSession
@@ -29,7 +27,7 @@ finishSession操作密钥接口。使用callback异步回调。 huks.initSession
 | --- | --- | --- | --- |
 | handle | number | 是 | finishSession操作的uint64类型的handle值。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | finishSession的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | 回调函数。当密钥操作finish成功时，err为undefined，data为获取到的HuksReturnResult；否 则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | 回调函数。当密钥操作finish成功时，err为undefined，data为获取到的HuksReturnResult；否 则为错误对象。 |
 
 **错误码：**
 
@@ -86,7 +84,7 @@ Finishes the key operation. This API uses an asynchronous callback to return the
 | handle | number | 是 | Handle for the finishSession operation. <br>取值限定为整数。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Parameter set used for the **finishSession** operation. |
 | token | Uint8Array | 是 | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control) . |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **错误码：**
 

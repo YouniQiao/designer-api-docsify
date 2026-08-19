@@ -13,7 +13,6 @@ ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台
 ## 导入模块
 
 ```TypeScript
-import { ServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate

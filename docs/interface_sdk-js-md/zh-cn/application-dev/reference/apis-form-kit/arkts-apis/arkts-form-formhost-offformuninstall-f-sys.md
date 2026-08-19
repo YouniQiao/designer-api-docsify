@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
 ```
 
 ## offFormUninstall
@@ -26,7 +25,7 @@ Cancels listening to the event of uninstall form. You can use this method to can
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | The callback of formUninstall. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | The callback of formUninstall. |
 
 **错误码：**
 

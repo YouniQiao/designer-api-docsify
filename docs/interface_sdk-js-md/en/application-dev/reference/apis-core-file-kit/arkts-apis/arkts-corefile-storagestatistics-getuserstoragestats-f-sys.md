@@ -74,7 +74,7 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
 
 **Error codes:**
 
@@ -178,7 +178,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | long | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[StorageStats](arkts-corefile-storagestatistics-storagestats-i-sys.md)&gt; | Yes | Callback used to return the storage statistics obtained. |
 
 **Error codes:**
 

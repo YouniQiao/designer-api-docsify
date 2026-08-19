@@ -103,7 +103,7 @@ Asynchronously loads image and returns loading result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DrawableDescriptorLoadedResult](arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | The image loading result. |
+| Promise&lt;[DrawableDescriptorLoadedResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | The image loading result. |
 
 **Error codes:**
 
@@ -133,7 +133,7 @@ Synchronously loads the image and returns the loading result.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptorLoadedResult](arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | loading outcome. |
+| [DrawableDescriptorLoadedResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | loading outcome. |
 
 **Error codes:**
 

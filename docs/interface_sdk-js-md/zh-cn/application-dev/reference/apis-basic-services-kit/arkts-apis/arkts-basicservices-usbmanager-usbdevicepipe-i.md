@@ -11,8 +11,6 @@ USB设备连接通道，用于确定总线地址和设备地址。
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## busNum

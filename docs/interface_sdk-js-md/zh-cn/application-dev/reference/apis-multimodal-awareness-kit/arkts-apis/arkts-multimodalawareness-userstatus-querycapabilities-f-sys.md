@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## queryCapabilities

@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerInstance, SelectionContainerMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerOptions, SelectionContainerController } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -42,5 +41,5 @@ import { OnMenuItemClickWithTextCallback, SelectionContainer, SelectionContainer
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) |  |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) |  |
 

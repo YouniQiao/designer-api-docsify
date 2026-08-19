@@ -11,7 +11,6 @@ Picture类，一些包含特殊信息的图片可以解码为Picture（也可以
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPicture

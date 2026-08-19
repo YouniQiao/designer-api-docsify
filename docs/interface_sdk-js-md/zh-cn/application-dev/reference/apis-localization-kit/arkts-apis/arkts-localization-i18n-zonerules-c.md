@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## nextTransition
@@ -40,5 +39,5 @@ public nextTransition(date?: double): ZoneOffsetTransition
 
 | 类型 | 说明 |
 | --- | --- |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
+| [ZoneOffsetTransition](../../apis-na/arkts-apis/arkts-na-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
 

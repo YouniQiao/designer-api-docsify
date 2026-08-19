@@ -72,7 +72,7 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
 
 **Error codes:**
 
@@ -430,7 +430,7 @@ Obtains the information about running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
@@ -613,7 +613,7 @@ Kills all processes of this application. The application will not execute the no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If all the processes are killed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the processes are killed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -660,7 +660,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | int | Yes | ID of the listener to unregister. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 
 ## offAbilityLifecycle
 
@@ -710,7 +710,7 @@ Unregister applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | The applicationStateChange callback. |
 
 ## offEnvironment
 
@@ -733,7 +733,7 @@ Unregister environment callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | int | Yes | Indicates the number code of the callback. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of unregisterEnvironmentCallback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of unregisterEnvironmentCallback. |
 
 ## offEnvironment
 
@@ -833,7 +833,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for the lifecycle of a UIAbility within the application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -949,7 +949,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#on_abilitylifecycleabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#on_abilitylifecycleabilitylifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -1012,7 +1012,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](#on_abilitylifecycleabilitylifecycle) API is called to register a listener for system environment changes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1151,7 +1151,7 @@ Register applicationStateChange callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | The applicationStateChange callback. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | The applicationStateChange callback. |
 
 ## onEnvironment
 
@@ -1173,7 +1173,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | Yes | The environment callback. |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | The environment callback. |
 
 **Return value:**
 
@@ -1344,7 +1344,7 @@ Registers a listener for application process state changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
+| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | Yes | Callback triggered when the application process state is changed. |
 
 **Error codes:**
 
@@ -1406,7 +1406,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | Yes | Callback triggered when the system environment changes. |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
 
 **Return value:**
 

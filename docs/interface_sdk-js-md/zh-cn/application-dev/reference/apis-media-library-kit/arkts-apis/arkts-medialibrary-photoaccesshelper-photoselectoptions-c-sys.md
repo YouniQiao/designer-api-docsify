@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## themeColor
@@ -24,7 +23,7 @@ themeColor?: CustomColors
 
 Theme color
 
-**类型：** [CustomColors](../../apis-na/arkts-apis/arkts-na-customcolors-t.md)
+**类型：** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
 
 **起始版本：** 26.0.0
 

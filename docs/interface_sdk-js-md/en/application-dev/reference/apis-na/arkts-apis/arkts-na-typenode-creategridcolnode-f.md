@@ -22,7 +22,7 @@ Create a FrameNode of GridCol type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| context | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
 
 **Return value:**
 

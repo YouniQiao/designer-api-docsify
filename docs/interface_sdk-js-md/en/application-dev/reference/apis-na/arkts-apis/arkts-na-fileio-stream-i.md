@@ -68,7 +68,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is closed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is closed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -167,7 +167,7 @@ Flushes the file stream. This API returns the result asynchronously. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is refreshed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is refreshed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -287,7 +287,7 @@ Reads data from a stream file and returns the number of bytes read. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -329,7 +329,7 @@ Reads data from a stream file and returns the number of bytes read. The read opt
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
 | options | [ReadOptions](arkts-na-file-fs-readoptions-i.md) | Yes | The options are as follows: <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -462,7 +462,7 @@ Writes data to a stream file and returns the number of bytes written. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -507,7 +507,7 @@ Writes data to a stream file and returns the number of bytes written. The write 
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
 | options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | Yes | The options are as follows: <br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length. <br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
 

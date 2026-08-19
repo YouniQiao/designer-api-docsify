@@ -11,7 +11,6 @@ SM2密文参数，使用SM2密文格式转换函数进行格式转换时，需�
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## cipherTextData

@@ -41,7 +41,7 @@ Rounded corner radius of the indicator. It cannot be set in percentage. Default 
 drawable?: DrawableDescriptor
 ```
 
-Image resource of the indicator. Supported types: [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md), [PixelMapDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md), [LayeredDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md), and [AnimatedDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-animateddrawabledescriptor-c.md). If an invalid image resource is passed, the default solid indicator is displayed.
+Image resource of the indicator. Supported types: [DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md), [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md), [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md), and [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md). If an invalid image resource is passed, the default solid indicator is displayed.
 
 **Type:** [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
 

@@ -81,7 +81,7 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the content read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the content read. |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
 | options | [ReadTextOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readtextoptions-i.md) | Yes | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length.<br>- **encoding** (string): format of the data to be encoded. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the content read. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the content read. |
 
 **Error codes:**
 

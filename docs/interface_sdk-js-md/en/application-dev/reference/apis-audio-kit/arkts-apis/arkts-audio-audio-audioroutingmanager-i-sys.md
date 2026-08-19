@@ -302,7 +302,7 @@ Unsubscribes to preferred input device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -331,7 +331,7 @@ UnSubscribes to preferred output device change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -361,7 +361,7 @@ UnSubscribes to prefer output device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No | Callback used in subscribe. |
 
 **Error codes:**
 
@@ -417,7 +417,7 @@ Subscribes to preferred input device change events. When the preferred device fo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | Yes | Filter for capturer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback to receive information about the changed preferred devices. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback to receive information about the changed preferred devices. |
 
 **Error codes:**
 
@@ -448,7 +448,7 @@ Subscribes to prefer output device change events. When preferred device for targ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
@@ -480,7 +480,7 @@ Subscribes to prefer output device change events. When preferred device for targ
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | Yes | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to obtain the changed prefer devices information. |
 
 **Error codes:**
 
@@ -564,7 +564,7 @@ Select the input device. This method uses an asynchronous callback to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -753,7 +753,7 @@ Select the output device. This method uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes | Audio device description |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -866,7 +866,7 @@ Select the output device with desired AudioRenderer. This method uses an asynchr
 | --- | --- | --- | --- |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | Yes | Filter for AudioRenderer. |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | Yes | Audio device description. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

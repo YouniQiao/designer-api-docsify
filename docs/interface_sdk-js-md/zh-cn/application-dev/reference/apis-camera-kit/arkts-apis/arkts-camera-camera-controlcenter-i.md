@@ -13,8 +13,6 @@ ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquer
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableControlCenter

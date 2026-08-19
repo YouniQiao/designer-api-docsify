@@ -30,7 +30,7 @@ Checks whether a module can be removed. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the module can be removed, **false** otherwise). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** if the module can be removed, **false** otherwise). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 

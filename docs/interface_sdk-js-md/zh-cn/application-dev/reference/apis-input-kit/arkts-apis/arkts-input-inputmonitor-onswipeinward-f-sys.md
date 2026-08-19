@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## onSwipeInward
@@ -28,7 +27,7 @@ function onSwipeInward(receiver: Callback<SwipeInward>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwipeInward](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md)&gt; | 是 | 用于接收上报数据的回调函数。 |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SwipeInward](arkts-input-multimodalinput-gestureevent-swipeinward-i-sys.md)&gt; | 是 | 回调函数，返回向内滑动事件。 |
 
 **错误码：**
 

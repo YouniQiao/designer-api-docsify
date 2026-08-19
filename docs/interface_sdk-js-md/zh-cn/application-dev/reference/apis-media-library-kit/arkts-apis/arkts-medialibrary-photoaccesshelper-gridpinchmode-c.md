@@ -11,7 +11,6 @@ picker内宫格的捏合模式。
 ## 导入模块
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## defaultGridLevel

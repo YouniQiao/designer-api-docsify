@@ -13,7 +13,6 @@ UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自 [Exten
 ## 导入模块
 
 ```TypeScript
-import { UIExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground

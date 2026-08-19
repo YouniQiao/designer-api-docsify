@@ -55,7 +55,7 @@ Obtains the component buffer from the Image instance based on the color componen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | componentType | ComponentType | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
 
 ## getComponent
 
@@ -136,7 +136,7 @@ Releases this Image instance. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 

@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -36,7 +35,7 @@ public constructor(options?: ISO8601DateTimeFormatOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | 否 | 符合ISO 8601标准的日期格式化对象创建时的配置项。默认值：所有属性都取默认值时的配置项。 |
+| options | [ISO8601DateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-iso8601datetimeformatoptions-i.md) | 否 | 符合ISO 8601标准的日期格式化对象创建时的配置项。默认值：所有属性都取默认值时的配置项。 |
 
 ## format
 

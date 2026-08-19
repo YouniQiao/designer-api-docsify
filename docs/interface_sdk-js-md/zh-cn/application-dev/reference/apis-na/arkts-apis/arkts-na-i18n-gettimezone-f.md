@@ -33,5 +33,5 @@ export function getTimeZone(zoneID?: string): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
+| [TimeZone](arkts-na-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
 

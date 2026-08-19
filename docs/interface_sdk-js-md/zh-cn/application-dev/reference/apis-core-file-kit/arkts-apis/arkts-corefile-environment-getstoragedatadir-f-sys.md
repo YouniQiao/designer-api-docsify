@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getStorageDataDir
@@ -57,7 +56,7 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 异步获取内存存储根目录之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 异步获取内存存储根目录之后的回调。 |
 
 **错误码：**
 

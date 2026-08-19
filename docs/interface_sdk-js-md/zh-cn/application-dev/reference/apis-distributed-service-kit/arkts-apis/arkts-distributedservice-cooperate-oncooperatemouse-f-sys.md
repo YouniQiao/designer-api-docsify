@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## on_cooperateMouse('cooperateMouse')
@@ -30,7 +29,7 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 | --- | --- | --- | --- |
 | type | 'cooperateMouse' | 是 | 监听类型，取值为'cooperateMouse' |
 | networkId | string | 是 | 目标设备描述符 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 是 | 回调函数，异步返回指定监听设备鼠标光标位置信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MouseLocation](arkts-distributedservice-cooperate-mouselocation-i-sys.md)&gt; | 是 | 回调函数，异步返回指定监听设备鼠标光标位置信息。 |
 
 **错误码：**
 

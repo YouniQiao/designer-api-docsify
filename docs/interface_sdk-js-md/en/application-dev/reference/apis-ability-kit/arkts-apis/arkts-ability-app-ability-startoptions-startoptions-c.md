@@ -276,7 +276,7 @@ Parameters for the window for the UIAbility upon startup.
 windowHeight?: int
 ```
 
-Window height, in px. The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Window height, in px. The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call [vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 
@@ -348,7 +348,7 @@ Distance the window moves along the y-axis, with the top-left vertex of the scre
 windowWidth?: int
 ```
 
-Window width, in px. The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call [vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
+Window width, in px. The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call [vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value. **Constraints**: This function takes effect only in the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Type:** int
 

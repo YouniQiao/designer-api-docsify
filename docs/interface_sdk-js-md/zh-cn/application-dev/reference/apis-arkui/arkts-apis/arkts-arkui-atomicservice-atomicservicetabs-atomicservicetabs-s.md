@@ -11,7 +11,6 @@ AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行�
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceTabs, TabBarOptions, TabBarPosition, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## barBackgroundColor

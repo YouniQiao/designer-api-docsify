@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## apiVersion
@@ -196,13 +195,53 @@ screenShape: 'rect' | 'circle'
 
 **系统能力：** SystemCapability.Startup.SystemInfo.Lite
 
+## sdkMinorApiVersion
+
+```TypeScript
+sdkMinorApiVersion?: number
+```
+
+系统软件Minor API版本。从API 26.0.0 版本开始，系统API版本格式：apiVersion.sdkMinorApiVersion.sdkPatchApiVersion。该值获取失败时填充 -1，且不影响 getInfo 接口的整体返回状态。
+
+**类型：** number
+
+**起始版本：** 26.0.0
+
+**废弃版本：** 26.0.0
+
+**模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DeviceResponse-sdkMinorApiVersion?: number--><!--Device-DeviceResponse-sdkMinorApiVersion?: number-End-->
+
+**系统能力：** SystemCapability.Startup.SystemInfo.Lite
+
+## sdkPatchApiVersion
+
+```TypeScript
+sdkPatchApiVersion?: number
+```
+
+系统软件Patch API版本。从API 26.0.0 版本开始，系统API版本格式：apiVersion.sdkMinorApiVersion.sdkPatchApiVersion。该值获取失败时填充 -1，且不影响 getInfo 接口的整体返回状态。
+
+**类型：** number
+
+**起始版本：** 26.0.0
+
+**废弃版本：** 26.0.0
+
+**模型约束：** 此接口仅可在FA模型下使用。
+
+<!--Device-DeviceResponse-sdkPatchApiVersion?: number--><!--Device-DeviceResponse-sdkPatchApiVersion?: number-End-->
+
+**系统能力：** SystemCapability.Startup.SystemInfo.Lite
+
 ## windowHeight
 
 ```TypeScript
 windowHeight: number
 ```
 
-可使用的窗口宽度，单位px。不同设备的可使用窗口尺寸存在差异。
+可使用的窗口高度，单位px。不同设备的可使用窗口尺寸存在差异。
 
 **类型：** number
 

@@ -106,7 +106,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | Event | Yes | Event object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
 
 **Error codes:**
 
@@ -238,7 +238,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | events | Event[] | Yes | Array of Event objects. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -366,7 +366,7 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Event ID, which is the unique identifier of an event. If the input event ID is an integer, the event is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -499,7 +499,7 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ids | number[] | Yes | Array of event IDs. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -726,7 +726,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | --- | --- | --- | --- |
 | eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Yes | Filter criteria. |
 | eventKey | (keyof Event)[] | Yes | Filter field. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -805,7 +805,7 @@ Obtains all events in the current calendar. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
@@ -1029,7 +1029,7 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Yes | Calendar configuration information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1147,7 +1147,7 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | Event | Yes | Event object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of updateEvent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of updateEvent. |
 
 **Examples**
 

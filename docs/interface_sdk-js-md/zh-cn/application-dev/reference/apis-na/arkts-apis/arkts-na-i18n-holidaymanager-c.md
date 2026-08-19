@@ -74,7 +74,7 @@ getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[HolidayInfoItem](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-holidayinfoitem-i.md)&gt; | 返回节假日信息列表。 |
+| Array&lt;[HolidayInfoItem](arkts-na-i18n-holidayinfoitem-i.md)&gt; | 返回节假日信息列表。 |
 
 **错误码：**
 

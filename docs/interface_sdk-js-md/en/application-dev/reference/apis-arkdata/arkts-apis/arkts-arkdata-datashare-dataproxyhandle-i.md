@@ -220,7 +220,7 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | Yes | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | The callback function when data changes. |
 
 **Return value:**
 
@@ -263,7 +263,7 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. |
 | uris | string[] | Yes | Array of URIs to be unsubscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
 
 **Return value:**
 
@@ -327,7 +327,7 @@ Registers observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | Yes | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | The callback function when data changes. |
 
 **Return value:**
 
@@ -370,7 +370,7 @@ Subscribes to the change event of the shared configuration corresponding to a sp
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. This event is triggered when the publisher modifies the configuration. |
 | uris | string[] | Yes | Array of URIs to be subscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
 
 **Return value:**
 

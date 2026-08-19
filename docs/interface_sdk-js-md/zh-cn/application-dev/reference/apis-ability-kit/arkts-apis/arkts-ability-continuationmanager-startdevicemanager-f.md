@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## startDeviceManager
@@ -31,7 +30,7 @@ function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
 
 **示例**
 
@@ -75,7 +74,7 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
 | options | ContinuationExtraParams | 是 | 过滤可选择设备列表的额外参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
 
 **示例**
 

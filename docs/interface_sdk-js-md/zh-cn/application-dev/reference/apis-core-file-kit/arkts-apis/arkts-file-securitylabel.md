@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## 汇总

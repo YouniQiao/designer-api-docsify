@@ -197,7 +197,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'ringerModeChange' | Yes | Type of the event to listen for. Only the ringerModeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to get the updated ringer mode. |
 
 **Examples**
 
@@ -232,7 +232,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'volumeChange' | Yes | Type of the event to listen for. Only the volumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | Yes | Callback used to get the system volume change event. |
 
 **Examples**
 
@@ -265,7 +265,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | Yes | Audio scene mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

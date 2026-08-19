@@ -66,7 +66,7 @@ readonly capabilities: Array<Capability>
 
 Capabilities list of the accessibility application.
 
-**Type:** Array&lt;[Capability](arkts-accessibility-accessibility-capability-t.md)&gt;
+**Type:** Array&lt;Capability&gt;
 
 **Since:** 23
 

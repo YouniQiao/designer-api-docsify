@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 ```
 
 ## onLoadAd

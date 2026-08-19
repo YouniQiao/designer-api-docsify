@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { SelectTitleBar, SelectTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## badgeValue

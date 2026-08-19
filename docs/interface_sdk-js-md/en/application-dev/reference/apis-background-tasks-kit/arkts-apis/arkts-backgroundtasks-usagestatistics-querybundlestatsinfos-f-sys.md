@@ -30,7 +30,7 @@ Queries usage information about each bundle within a specified period. This meth
 | --- | --- | --- | --- |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md)&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md)&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

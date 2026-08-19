@@ -27,7 +27,7 @@ Register distributed session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | distributedSessionType | [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | Yes | Indicates the distributed session type |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt;&gt; | Yes | The callback will return remote changed AVSessionController. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt;&gt; | Yes | The callback will return remote changed AVSessionController. |
 
 **Error codes:**
 

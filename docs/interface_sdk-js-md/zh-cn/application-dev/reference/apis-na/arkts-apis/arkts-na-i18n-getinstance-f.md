@@ -33,5 +33,5 @@ export function getInstance(locale?:string): IndexUtil
 
 | 类型 | 说明 |
 | --- | --- |
-| [IndexUtil](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-indexutil-c.md) | 根据区域ID创建的IndexUtil对象。 |
+| [IndexUtil](arkts-na-i18n-indexutil-c.md) | 根据区域ID创建的IndexUtil对象。 |
 

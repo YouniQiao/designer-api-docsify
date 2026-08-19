@@ -11,7 +11,6 @@ Picker（选择器）是一个封装DocumentViewPicker、AudioViewPicker、Photo
 ## 导入模块
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
 ```
 
 ## 汇总

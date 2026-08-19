@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## 汇总

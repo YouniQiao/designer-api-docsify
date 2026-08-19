@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## off_deviceSelected('deviceSelected')

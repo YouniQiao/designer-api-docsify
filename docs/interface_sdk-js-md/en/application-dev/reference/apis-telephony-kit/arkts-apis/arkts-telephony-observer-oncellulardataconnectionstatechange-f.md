@@ -24,7 +24,7 @@ Callback when the cellular data link connection state corresponding to the defau
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **Error codes:**
 
@@ -57,7 +57,7 @@ Callback when the cellular data link connection state corresponding to the monit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ObserverOptions | Yes | Indicates the options for observer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | Yes | Indicates the callback for getting the cellular data link connection state, and networkType Indicates the radio access technology for cellular data services. |
 
 **Error codes:**
 

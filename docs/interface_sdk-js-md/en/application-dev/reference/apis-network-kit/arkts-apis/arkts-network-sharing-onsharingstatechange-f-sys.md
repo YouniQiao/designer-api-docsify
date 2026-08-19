@@ -29,7 +29,7 @@ Registers the network sharing status change event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sharingStateChange' | Yes | Event type.<br/> The value **sharingStateChange** indicates a network sharing status change event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the network sharing state changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the network sharing state changes. |
 
 **Error codes:**
 

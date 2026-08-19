@@ -11,7 +11,6 @@ Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addArc

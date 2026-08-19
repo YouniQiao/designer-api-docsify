@@ -31,7 +31,7 @@ Obtains the ability label based on the given bundle name, module name, and abili
 | bundleName | string | Yes | Bundle name. |
 | moduleName | string | Yes | Module name. |
 | abilityName | string | Yes | Name of the UIAbility component. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the label. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the label. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

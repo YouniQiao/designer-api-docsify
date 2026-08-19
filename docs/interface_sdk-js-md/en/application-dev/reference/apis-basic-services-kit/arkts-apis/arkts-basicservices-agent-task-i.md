@@ -73,7 +73,7 @@ Disables the 'faultOccur' callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | callback function with a `Faults` argument. |
 
 ## offPause
 
@@ -153,7 +153,7 @@ Disables the response callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | No | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | callback function with an `HttpResponse` argument. |
 
 ## offResume
 
@@ -193,7 +193,7 @@ Disables the wait callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | callback function with an `WaitingReason` argument. |
 
 ## off_completed
 
@@ -274,7 +274,7 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -387,7 +387,7 @@ Unsubscribes from task response headers. > **NOTE：**> > For details about how 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **response**: task response. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -441,7 +441,7 @@ Unsubscribes from task waiting events. > **NOTE：**> > For details about how to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -507,7 +507,7 @@ Enables the 'faultOccur' callback. This callback is triggered when the task fail
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | callback function with a `Faults` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | callback function with a `Faults` argument. |
 
 ## onPause
 
@@ -587,7 +587,7 @@ Enables the response callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | Yes | callback function with an `HttpResponse` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | callback function with an `HttpResponse` argument. |
 
 ## onResume
 
@@ -627,7 +627,7 @@ Enables the wait callback. This callback is triggered when the task changes from
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | callback function with an `WaitingReason` argument. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | callback function with an `WaitingReason` argument. |
 
 ## on_completed
 
@@ -708,7 +708,7 @@ Subscribes to task failure events. This API uses a callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
@@ -821,7 +821,7 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'response' | Yes | Event type.<br>- **'response'**: task response. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
@@ -875,7 +875,7 @@ Subscribes to task wait events. This API uses a callback to return the result. >
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
@@ -901,7 +901,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -959,7 +959,7 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1056,7 +1056,7 @@ Starts a task. This API uses an asynchronous callback to return the result. Task
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1118,7 +1118,7 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -185,7 +185,7 @@ getBitsByRange(fromIndex: int, toIndex: int): BitVector
 
 | 类型 | 说明 |
 | --- | --- |
-| [BitVector](../../apis-arkts/arkts-apis/arkts-arkts-collections-bitvector-c.md) | BitVector类型，返回位向量中一定索引范围内的比特值。 |
+| [BitVector](arkts-na-collections-bitvector-c.md) | BitVector类型，返回位向量中一定索引范围内的比特值。 |
 
 **错误码：**
 

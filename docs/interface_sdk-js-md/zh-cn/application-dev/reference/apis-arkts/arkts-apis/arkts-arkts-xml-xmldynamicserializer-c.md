@@ -11,7 +11,6 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 ## 导入模块
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
 ```
 
 ## addEmptyElement

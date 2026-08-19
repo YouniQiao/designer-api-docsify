@@ -1,6 +1,6 @@
 # FrameNode
 
-**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End--> > **NOTE：**> > - **FrameNode** is not available in DevEco Studio Previewer. > > - FrameNodes cannot be dragged. > > - FrameNode objects do not support JSON serialization. > > - When the API of the [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) object is invoked in the scenario of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see > [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance). > > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or > undefined.
+**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End--> > **NOTE：**> > - **FrameNode** is not available in DevEco Studio Previewer. > > - FrameNodes cannot be dragged. > > - FrameNode objects do not support JSON serialization. > > - When the API of the [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) object is invoked in the scenario of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the > [runScopedTask](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#runscopedtask) API of > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see > [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance). > > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or > undefined.
 
 **Since:** 11
 
@@ -221,7 +221,7 @@ A constructor used to create a FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 
 ## convertPosition
 
@@ -473,7 +473,7 @@ Creates a specified number of FrameNodes in batches and returns a FrameNode arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | count | number | Yes | Number of nodes to be created. The value is an integer greater than 0. If the value is less than or equal to 0 or is not an integer, an empty array is returned. |
 
 **Return value:**

@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## off_connectMulti('connectMulti')
@@ -30,7 +28,7 @@ function off(type: 'connectMulti', callback?: Callback<MultiVpnConnectState>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectMulti' | 是 | Indicates multi vpn connect state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiVpnConnectState&gt; | 否 | The callback of the multi vpn connect state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;MultiVpnConnectState&gt; | 否 | The callback of the multi vpn connect state. |
 
 **错误码：**
 

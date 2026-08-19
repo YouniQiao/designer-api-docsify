@@ -37,7 +37,7 @@ EditableTitleV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableTitleV2Options](arkts-na-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | 否 | 标题配置选项。 |
+| options | [EditableTitleV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | 否 | 标题配置选项。 |
 
 ## mainTitle
 

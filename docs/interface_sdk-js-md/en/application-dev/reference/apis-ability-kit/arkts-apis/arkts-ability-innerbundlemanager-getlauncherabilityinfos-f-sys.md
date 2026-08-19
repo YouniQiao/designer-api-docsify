@@ -35,7 +35,7 @@ Obtains an array of the launcher ability information based on a given bundle nam
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the launcher ability information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the launcher ability information. |
 
 
 ## getLauncherAbilityInfos

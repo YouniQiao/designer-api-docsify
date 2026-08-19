@@ -30,7 +30,7 @@ Checks whether the application specified by a given UID is allowed to access a m
 | --- | --- | --- | --- |
 | uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
 | isMetered | boolean | Yes | Whether the network is a metered network. The value **true** indicates that the network is a metered network, and the value **false** indicates the opposite. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the application is allowed to access metered networks, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the application is allowed to access metered networks, and the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -137,7 +137,7 @@ Obtains whether the network of the specified iface can be accessed by the corres
 | --- | --- | --- | --- |
 | uid | int | Yes | Unique app ID, which is a positive integer within the int32_t range. |
 | iface | string | Yes | Name of the target network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the application is allowed to access the specified network, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the application is allowed to access the specified network, and the value **false** means the opposite. |
 
 **Error codes:**
 

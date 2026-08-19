@@ -13,7 +13,6 @@ HDR PixelMap分解为Picture的配置选项，分解后的Picture包含一张SDR
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## desiredPixelFormat

@@ -37,7 +37,7 @@ EditableTitleBarStyleV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditableTitleBarStyleV2Options](arkts-na-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | 否 | 标题栏样式配置选项。 |
+| options | [EditableTitleBarStyleV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | 否 | 标题栏样式配置选项。 |
 
 ## backgroundBlurStyle
 

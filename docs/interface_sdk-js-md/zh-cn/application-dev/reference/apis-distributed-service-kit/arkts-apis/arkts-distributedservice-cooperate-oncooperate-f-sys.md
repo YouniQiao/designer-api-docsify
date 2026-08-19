@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## on_cooperate('cooperate')
@@ -31,7 +30,7 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cooperate' | 是 | 监听类型，取值为'cooperate' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | 是 |  |
 
 **错误码：**
 

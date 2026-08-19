@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## convertCanonicalLocaleIdentifier
@@ -351,7 +350,7 @@ static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl
 
 **废弃版本：** 20
 
-**替代接口：** [getUnicodeWrappedFilePath](#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
+**替代接口：** [getUnicodeWrappedFilePath](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md#getunicodewrappedfilepath)(path: string, delimiter?: string, locale?: Intl.Locale)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -464,8 +463,8 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 需要转换的单位。 |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 转换成的目标单位。 |
+| fromUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | 是 | 需要转换的单位。 |
+| toUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | 是 | 转换成的目标单位。 |
 | value | double | 是 | 需要转换的单位的数量值。 |
 | locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
 | style | string | 否 | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。 <br>不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |

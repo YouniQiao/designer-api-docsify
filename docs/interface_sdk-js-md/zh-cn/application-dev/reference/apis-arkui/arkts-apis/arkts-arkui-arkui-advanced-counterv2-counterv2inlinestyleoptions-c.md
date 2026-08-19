@@ -13,7 +13,6 @@ CounterV2InlineStyleOptions定义了数值内联型CounterV2的属性和事件�
 ## 导入模块
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUI';
 ```
 
 ## max

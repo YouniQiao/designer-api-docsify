@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## 汇总

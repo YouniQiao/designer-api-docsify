@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
 ```
 
 ## onCallSessionEvent
@@ -28,7 +27,7 @@ Subscribe to the callSessionEvent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of CallSessionEvent. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallSessionEvent](arkts-telephony-call-callsessionevent-i-sys.md)&gt; | 是 | Indicates the callback for getting the result of CallSessionEvent. |
 
 **错误码：**
 

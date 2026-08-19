@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { data } from '@kit.TelephonyKit';
 ```
 
 ## getDefaultCellularDataSlotId
@@ -24,7 +23,7 @@ function getDefaultCellularDataSlotId(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 以callback形式异步返回结果。&lt;br /&gt;- 0：卡槽1。 &lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- 2：esim和天际通场景下，默认移动数 据的slotId为2。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 以callback形式异步返回结果。&lt;br /&gt;- 0：卡槽1。 &lt;br /&gt;- 1：卡槽2。&lt;br /&gt;- 2：esim和天际通场景下，默认移动数 据的slotId为2。 |
 
 **示例**
 

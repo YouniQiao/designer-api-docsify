@@ -32,7 +32,7 @@ Unsubscribes from change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 ## off_frame('frame')
 
@@ -53,7 +53,7 @@ Unsubscribes from change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | No | Callback used for unsubscription. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -86,7 +86,7 @@ Subscribes to change events of each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
 
 ## on_frame('frame')
 
@@ -107,7 +107,7 @@ Subscribes to change events of each frame.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | Yes | Callback used for subscription. |
 
 **Examples**
 

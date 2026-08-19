@@ -11,7 +11,6 @@ DistributedExtensionAbility模块提供分布式相关扩展能力，提供分�
 ## 导入模块
 
 ```TypeScript
-import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
 ```
 
 ## onCollaborate

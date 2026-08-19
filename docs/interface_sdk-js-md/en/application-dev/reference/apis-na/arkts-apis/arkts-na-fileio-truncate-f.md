@@ -77,7 +77,7 @@ Truncates a file and deletes its content. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string \| int | Yes | Application sandbox path or FD of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -123,7 +123,7 @@ Truncates a file to the specified length. Excess content will be deleted. This A
 | --- | --- | --- | --- |
 | file | string \| int | Yes | Application sandbox path or FD of the file. |
 | len | long | Yes | File length after truncation, in bytes. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

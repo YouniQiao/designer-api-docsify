@@ -25,7 +25,7 @@ Unsubscribes from system events that are used to obtain the encoded metadata.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of a third-party application |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Call back the screenshot event |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Call back the screenshot event |
 
 **Error codes:**
 

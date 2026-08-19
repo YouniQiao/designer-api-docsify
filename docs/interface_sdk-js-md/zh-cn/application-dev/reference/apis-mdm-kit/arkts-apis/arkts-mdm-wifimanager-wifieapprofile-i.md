@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## altSubjectMatch

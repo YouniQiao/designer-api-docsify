@@ -40,5 +40,5 @@ A constructor used to create a **Material** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i-sys.md) | No | System material options, including the material type. <br>Default value: **{type:MaterialType.NONE}**. |
+| options | [MaterialOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-materialoptions-i-sys.md) | No | System material options, including the material type. <br>Default value: **{type:MaterialType.NONE}**. |
 

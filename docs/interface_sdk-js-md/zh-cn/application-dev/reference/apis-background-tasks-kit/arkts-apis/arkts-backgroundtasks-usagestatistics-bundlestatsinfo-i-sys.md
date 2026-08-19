@@ -13,7 +13,6 @@ FA模型的使用信息属性集合。
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityInFgTotalTime

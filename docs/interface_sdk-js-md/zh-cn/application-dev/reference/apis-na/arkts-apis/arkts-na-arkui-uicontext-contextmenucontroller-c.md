@@ -1,6 +1,6 @@
 # ContextMenuController
 
-提供控制菜单关闭的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > - 以下API需先使用UIContext中的[getContextMenuController()](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方 > 法获取ContextMenuController实例，再通过此实例调用对应方法。
+提供控制菜单关闭的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > - 以下API需先使用UIContext中的[getContextMenuController()](arkts-na-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方 > 法获取ContextMenuController实例，再通过此实例调用对应方法。
 
 **起始版本：** 23
 

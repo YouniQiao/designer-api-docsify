@@ -11,7 +11,6 @@ Web组件返回的请求/响应头对象。
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## headerKey

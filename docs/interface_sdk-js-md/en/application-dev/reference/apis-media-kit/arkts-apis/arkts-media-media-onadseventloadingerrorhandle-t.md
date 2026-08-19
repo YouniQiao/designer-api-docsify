@@ -19,5 +19,5 @@ Describes the callback function for the ad media resource loading error event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | adsId | string | Yes | ID of the advertisement resource that fails to be loaded. |
-| reason | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md) | Yes | Indicates the reason of the loading failure. |
+| reason | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md) | Yes | Indicates the reason of the loading failure. |
 

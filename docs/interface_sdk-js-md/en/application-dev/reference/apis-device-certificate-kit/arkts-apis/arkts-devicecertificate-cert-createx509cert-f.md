@@ -29,7 +29,7 @@ Creates an **X509Cert** instance. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;X509Cert&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509Cert&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509Cert** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

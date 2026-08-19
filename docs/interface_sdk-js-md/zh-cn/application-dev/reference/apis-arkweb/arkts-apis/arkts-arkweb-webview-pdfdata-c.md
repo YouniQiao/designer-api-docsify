@@ -11,7 +11,6 @@ PdfData是Web组件用于封装网页生成的PDF数据流的类。当应用需�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## pdfArrayBuffer

@@ -11,8 +11,6 @@ USB端点，用于主机与设备之间数据传输的通信端点。通过[USBI
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## address

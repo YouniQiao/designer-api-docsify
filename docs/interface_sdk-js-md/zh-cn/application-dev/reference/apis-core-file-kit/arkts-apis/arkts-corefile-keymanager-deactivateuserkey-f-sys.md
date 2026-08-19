@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { keyManager } from '@kit.CoreFileKit';
 ```
 
 ## deactivateUserKey

@@ -27,5 +27,5 @@ Unsubscribes NFC RF status change events. &lt;p&gt;All callback functions will b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'notify' | Yes | The callback type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | The callback function to be unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | The callback function to be unregistered. |
 

@@ -11,7 +11,7 @@
 export function isImmersiveMaterialSupported(): boolean
 ```
 
-Check whether [ImmersiveMaterial](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md) is supported on the current device. If it is true, the ImmersiveMaterial object can be used in the systemMaterial attribute. If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect. It is defined by the device and cannot be modified.
+Check whether [ImmersiveMaterial](arkts-na-uimaterial-immersivematerial-c.md) is supported on the current device. If it is true, the ImmersiveMaterial object can be used in the systemMaterial attribute. If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect. It is defined by the device and cannot be modified.
 
 **Since:** 26.0.0
 

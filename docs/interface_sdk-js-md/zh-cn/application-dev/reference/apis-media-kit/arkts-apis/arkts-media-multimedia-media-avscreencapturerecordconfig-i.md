@@ -11,7 +11,6 @@ Defines the screen capture parameters.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## audioBitrate

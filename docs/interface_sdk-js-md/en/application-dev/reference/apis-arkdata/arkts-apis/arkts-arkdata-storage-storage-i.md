@@ -37,7 +37,7 @@ Clears this **Storage** object. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -127,7 +127,7 @@ Deletes data with the specified key from this storage object. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -228,7 +228,7 @@ Saves the modification of this object to the **Storage** instance and synchroniz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -319,7 +319,7 @@ Obtains the value corresponding to a key. If the value is null or not of the def
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
 | defValue | ValueType | Yes | Default value to be returned. It can be a number, string, or Boolean value. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ValueType&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -430,7 +430,7 @@ Checks whether the storage object contains data with a given key. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 **Return value:**
 
@@ -551,7 +551,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback for the data change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback for the data change. |
 
 **Examples**
 
@@ -583,7 +583,7 @@ Subscribes to data changes. The **StorageObserver** needs to be implemented. Whe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value **change** indicates data change events. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -618,7 +618,7 @@ Obtains the **Storage** instance corresponding to the specified file, writes dat
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the data. It cannot be empty. |
 | value | ValueType | Yes | New value to store. It can be a number, string, or Boolean value. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 

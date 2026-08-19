@@ -33,7 +33,7 @@ Enables a device administrator application. The super device administrator appli
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | enterpriseInfo | [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md) | Yes | Enterprise information of the device administrator application. |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | Type of the device administrator application to enable. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ Enables a device administrator application for a user (specified by **userId**).
 | enterpriseInfo | [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md) | Yes | Enterprise information of the device administrator application. |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | Type of the device administrator application to enable. |
 | userId | number | Yes | User ID, which must be greater than or equal to 0. <br>The default value is the user ID of the caller. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

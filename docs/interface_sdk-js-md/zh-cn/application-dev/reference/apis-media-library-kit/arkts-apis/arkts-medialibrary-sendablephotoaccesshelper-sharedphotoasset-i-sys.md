@@ -15,7 +15,6 @@ Defines the shared photo asset
 ## 导入模块
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cameraShotKey

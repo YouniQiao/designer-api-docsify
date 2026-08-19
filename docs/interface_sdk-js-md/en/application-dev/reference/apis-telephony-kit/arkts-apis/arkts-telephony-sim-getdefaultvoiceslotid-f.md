@@ -24,7 +24,7 @@ Obtains the default card slot for the voice service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for getting the default card slot for the voice service. Returns {@code 0} if card 1 is used as the default card slot for the voice service; returns {@code 1} if card 2 is used as the default card slot for the voice service; returns {@code -1} if no card is available for the voice service. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the callback for getting the default card slot for the voice service. Returns {@code 0} if card 1 is used as the default card slot for the voice service; returns {@code 1} if card 2 is used as the default card slot for the voice service; returns {@code -1} if no card is available for the voice service. |
 
 **Examples**
 

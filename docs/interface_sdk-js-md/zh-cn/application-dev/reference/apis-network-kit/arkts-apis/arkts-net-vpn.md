@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## 汇总

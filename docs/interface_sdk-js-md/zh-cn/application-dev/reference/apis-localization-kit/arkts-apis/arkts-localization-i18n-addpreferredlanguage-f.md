@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addPreferredLanguage
@@ -18,7 +17,7 @@ export function addPreferredLanguage(language: string, index?: int): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [addPreferredLanguage](arkts-localization-i18n-system-c-sys.md#addpreferredlanguage)
+**替代接口：** [addPreferredLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c-sys.md#addpreferredlanguage)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 

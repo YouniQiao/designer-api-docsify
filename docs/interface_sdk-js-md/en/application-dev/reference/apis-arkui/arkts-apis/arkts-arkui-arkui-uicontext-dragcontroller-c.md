@@ -1,6 +1,6 @@
 # DragController
 
-Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. > **NOTE：**> > In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
+Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. > **NOTE：**> > In the following API examples, you must first use [getDragController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getdragcontroller) in > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 11
 
@@ -135,7 +135,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | --- | --- | --- | --- |
 | custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.<br> **NOTE：**<br>The global builder is not supported. If the Image component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
 | dragInfo | dragController.DragInfo | Yes | Drag information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;dragController.DragEventParam&gt; | Yes | Callback used to return the result.<br>- **event**: drag event information that includes only the drag result.<br>- **extraParams**: extra information about the drag event.<br>**Since:** 12 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;dragController.DragEventParam&gt; | Yes | Callback used to return the result.<br>- **event**: drag event information that includes only the drag result.<br>- **extraParams**: extra information about the drag event.<br>**Since:** 12 |
 
 **Error codes:**
 

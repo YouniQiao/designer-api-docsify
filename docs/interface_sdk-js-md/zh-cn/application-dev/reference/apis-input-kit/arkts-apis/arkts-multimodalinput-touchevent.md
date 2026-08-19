@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
 ```
 
 ## 汇总
@@ -29,7 +28,7 @@ import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode
 | 名称 | 说明 |
 | --- | --- |
 | [Action](arkts-input-multimodalinput-touchevent-action-e.md) | 触屏输入事件类型。 |
-| [SourceType](arkts-input-multimodalinput-touchevent-sourcetype-e.md) | 触屏来源的设备类型，当前仅支持触摸屏、触控板类型上报。 |
+| [SourceType](arkts-input-multimodalinput-touchevent-sourcetype-e.md) | 触屏来源的设备类型，当前支持触屏、手写笔、触控板类型上报。 |
 | [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md) | 操作触屏的工具类型。 |
 
 <!--Del-->
@@ -37,6 +36,6 @@ import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode
 
 | 名称 | 说明 |
 | --- | --- |
-| [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md) | 修正坐标的模式。 **系统API**: 此接口为系统接口。 |
+| [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md) | 修正坐标的模式。默认值为NONE。 **系统API**: 此接口为系统接口。 |
 <!--DelEnd-->
 

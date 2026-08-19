@@ -52,7 +52,7 @@ decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | 是 | Uint8Array值或字符串值 |
-| options | [Type](arkts-na-util-type-e.md) | 否 | Type枚举之一 |
+| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 否 | Type枚举之一 |
 
 **返回值：**
 
@@ -81,7 +81,7 @@ decodeSync(src: Uint8Array | string, options?: Type): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array \| string | 是 | Uint8Array值或字符串值 |
-| options | [Type](arkts-na-util-type-e.md) | 否 | Type枚举之一 |
+| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 否 | Type枚举之一 |
 
 **返回值：**
 
@@ -110,7 +110,7 @@ encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | Uint8Array值 |
-| options | [Type](arkts-na-util-type-e.md) | 否 | 枚举输入参数包含两种编码格式：BASIC和BASIC_URL_SAFE |
+| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 否 | 枚举输入参数包含两种编码格式：BASIC和BASIC_URL_SAFE |
 
 **返回值：**
 
@@ -139,7 +139,7 @@ encodeSync(src: Uint8Array, options?: Type): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | Uint8Array值 |
-| options | [Type](arkts-na-util-type-e.md) | 否 | 枚举输入参数包含两种编码格式：BASIC和BASIC_URL_SAFE |
+| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 否 | 枚举输入参数包含两种编码格式：BASIC和BASIC_URL_SAFE |
 
 **返回值：**
 
@@ -168,7 +168,7 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | Uint8Array值 |
-| options | [Type](arkts-na-util-type-e.md) | 否 | Type枚举之一 |
+| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 否 | Type枚举之一 |
 
 **返回值：**
 
@@ -197,7 +197,7 @@ encodeToStringSync(src: Uint8Array, options?: Type): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | Uint8Array | 是 | Uint8Array值 |
-| options | [Type](arkts-na-util-type-e.md) | 否 | Type枚举之一 |
+| options | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 否 | Type枚举之一 |
 
 **返回值：**
 

@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## addCustomizedTone
@@ -967,7 +966,7 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | type | RingtoneType | 是 | 待获取播放器的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RingtonePlayer&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined data为获取到的系统铃声播放器；否则为错误对象。 |
 
 **示例**
 
@@ -1070,7 +1069,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | type | RingtoneType | 是 | 待获取的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined， data为获取到的系统铃声uri；否则为错误对象。 |
 
 **示例**
 
@@ -1900,7 +1899,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 当前应用的上下文。 |
 | uri | string | 是 | 被设置的系统铃声的uri，资源支持 可参考[media.AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md)。 |
 | type | RingtoneType | 是 | 被设置的系统铃声的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
 **示例**
 

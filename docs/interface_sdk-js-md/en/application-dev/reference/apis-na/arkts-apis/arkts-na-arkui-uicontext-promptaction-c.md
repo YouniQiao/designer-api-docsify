@@ -382,7 +382,7 @@ Open menu with frameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | The content of menu. |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | The target of menu. |
+| target | [TargetInfo](arkts-na-arkui-uicontext-targetinfo-i.md) | Yes | The target of menu. |
 | options | MenuOptions | No | Options. |
 
 **Return value:**
@@ -425,7 +425,7 @@ Open popup with frameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | Yes | The content of popup. |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | The target of popup. |
+| target | [TargetInfo](arkts-na-arkui-uicontext-targetinfo-i.md) | Yes | The target of popup. |
 | options | PopupCommonOptions | No | Options. |
 
 **Return value:**
@@ -545,7 +545,7 @@ Displays the menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ActionMenuOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | the callback of showActionMenu. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | the callback of showActionMenu. |
 
 **Error codes:**
 
@@ -615,7 +615,7 @@ Displays the dialog box.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | promptAction.ShowDialogOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | the callback of showDialog. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | the callback of showDialog. |
 
 **Error codes:**
 

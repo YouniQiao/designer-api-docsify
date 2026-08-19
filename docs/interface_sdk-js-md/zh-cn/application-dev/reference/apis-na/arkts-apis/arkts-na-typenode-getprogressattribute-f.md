@@ -22,7 +22,7 @@ export function getProgressAttribute(node: FrameNode): ProgressAttribute | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-na-framenode-c.md) | 是 | 目标FrameNode。 |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | 目标FrameNode。 |
 
 **返回值：**
 

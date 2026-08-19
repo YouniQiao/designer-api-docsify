@@ -37,7 +37,7 @@ setDataSource(dataSource: IDataSourcePrefetching<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](../../apis-arkui/arkts-apis/arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | 是 | 支持预加载的数据源。 |
+| dataSource | [IDataSourcePrefetching](arkts-na-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | 是 | 支持预加载的数据源。 |
 
 ## visibleAreaChanged
 

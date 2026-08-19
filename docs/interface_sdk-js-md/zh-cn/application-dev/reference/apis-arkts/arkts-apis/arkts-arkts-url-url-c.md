@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { url } from '@kit.ArkTS';
 ```
 
 ## constructor

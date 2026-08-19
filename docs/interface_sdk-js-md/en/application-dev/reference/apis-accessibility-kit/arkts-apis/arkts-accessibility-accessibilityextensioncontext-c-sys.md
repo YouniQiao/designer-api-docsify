@@ -527,7 +527,7 @@ Unregister accessibilityExtensionAbility disconnect callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Indicates the callback function. |
 
 **Error codes:**
 
@@ -559,7 +559,7 @@ Unregisters the pre-disconnect callback registered with the accessibility servic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Event name, which is fixed to 'preDisconnect', indicating that the accessibility extension service is about to be closed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#on_predisconnectpredisconnect). If this parameter is not specified, all registered events are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#on_predisconnectpredisconnect). If this parameter is not specified, all registered events are unregistered. |
 
 **Error codes:**
 
@@ -634,7 +634,7 @@ Register accessibilityExtensionAbility disconnect callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Indicates the callback function. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Indicates the callback function. |
 
 **Error codes:**
 
@@ -666,7 +666,7 @@ Registers a callback with the accessibility service, which is invoked before the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Listening event name, which is fixed to 'preDisconnect', indicating the event that the Accessibility Extension Service is about to be closed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback invoked when the Accessibility Extension Service is about to be closed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the Accessibility Extension Service is about to be closed. |
 
 **Error codes:**
 

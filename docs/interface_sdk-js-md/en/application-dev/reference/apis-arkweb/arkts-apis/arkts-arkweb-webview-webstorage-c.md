@@ -121,7 +121,7 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Storage quota of the origin. <br>**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Storage quota of the origin. <br>**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
 
 **Error codes:**
 
@@ -186,7 +186,7 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Storage usage of the origin. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Storage usage of the origin. |
 
 **Error codes:**
 
@@ -244,7 +244,7 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Yes | Callback used to return the information about the origins. |
 
 **Error codes:**
 

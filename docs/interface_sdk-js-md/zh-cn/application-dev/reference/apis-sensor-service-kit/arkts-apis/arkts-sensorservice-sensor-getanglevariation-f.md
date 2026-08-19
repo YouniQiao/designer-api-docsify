@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getAngleVariation
@@ -27,7 +26,7 @@ function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatr
 | --- | --- | --- | --- |
 | currentRotationMatrix | Array&lt;double&gt; | 是 | 当前旋转矩阵。 |
 | preRotationMatrix | Array&lt;double&gt; | 是 | 相对旋转矩阵。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回绕z、x、y轴方向的旋转角度，单位：°（度）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数，异步返回绕z、x、y轴方向的旋转角度，单位：°（度）。 |
 
 **错误码：**
 

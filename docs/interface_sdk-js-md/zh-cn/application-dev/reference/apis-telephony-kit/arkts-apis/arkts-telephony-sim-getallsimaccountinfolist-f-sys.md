@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
 ```
 
 ## getAllSimAccountInfoList
@@ -28,7 +27,7 @@ Get the list of all SIM card account information.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | 是 | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md)&gt;&gt; | 是 | The callback is used to return the array of [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md). The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **错误码：**
 

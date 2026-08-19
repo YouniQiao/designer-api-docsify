@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllApplicationInfo
@@ -29,7 +28,7 @@ function getAllApplicationInfo(appFlags: int, callback: AsyncCallback<Array<Appl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appFlags | int | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考 [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时， err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时， err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 
@@ -88,7 +87,7 @@ function getAllApplicationInfo(appFlags: int,
 | --- | --- | --- | --- |
 | appFlags | int | 是 | 指定返回的ApplicationInfo所包含的信息，具体取值及不同含义参考 [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
 | userId | int | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时， err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时， err为undefined，data为获取到的Array&lt;ApplicationInfo&gt;；否则为错误对象。 |
 
 **错误码：**
 

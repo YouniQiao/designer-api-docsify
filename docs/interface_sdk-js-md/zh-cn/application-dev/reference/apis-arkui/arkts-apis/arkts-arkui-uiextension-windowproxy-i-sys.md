@@ -11,7 +11,6 @@ UIExtension窗口代理。
 ## 导入模块
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows

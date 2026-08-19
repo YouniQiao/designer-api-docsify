@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## alignment
@@ -522,7 +521,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 交互式关闭回调函数。 <br/>**说明：** <br/>1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。 在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。 <br/>2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
+**类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 12
 
@@ -562,7 +561,7 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 <br/>**说明：** <br/>- 默认值：[ImmersiveOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-immersiveoptions-i.md)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。 <br/>- 不同的材质具有不同的效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 背景模糊[backgroundBlurStyle](../arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、 背景效果[backgroundEffect](../arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
+设置弹窗的系统材质。 <br/>**说明：** <br/>- 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。 <br/>- 不同的材质具有不同的效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 背景模糊[backgroundBlurStyle](../arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、 背景效果[backgroundEffect](../arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、 边框颜色[borderColor](../arkui-ts/ts-universal-attributes-border.md#bordercolor)、 边框宽度[borderWidth](../arkui-ts/ts-universal-attributes-border.md#borderwidth)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** SystemUiMaterial
 

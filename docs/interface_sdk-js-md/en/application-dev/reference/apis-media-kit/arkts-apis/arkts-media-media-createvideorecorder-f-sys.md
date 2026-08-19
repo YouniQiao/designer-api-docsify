@@ -26,7 +26,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
 
 **Error codes:**
 
@@ -72,7 +72,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md) \| undefined&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns undefined otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md) \| undefined&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns undefined otherwise. |
 
 **Error codes:**
 

@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## getKeyItemProperties
@@ -35,7 +33,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | Key alias, which must be the same as the alias used when the key was generated. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Empty object (leave this parameter empty). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **properties** of **HuksReturnResult** are the parameters required for generating a key. |
 
 **错误码：**
 

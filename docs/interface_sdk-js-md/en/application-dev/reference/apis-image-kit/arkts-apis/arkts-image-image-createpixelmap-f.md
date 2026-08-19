@@ -26,7 +26,7 @@ Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to u
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | Yes | The image color buffer. |
 | options | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | Yes | Callback used to return the PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the PixelMap object. |
 
 **Examples**
 

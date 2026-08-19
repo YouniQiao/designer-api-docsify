@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## excludeOutputDevices
@@ -313,7 +311,7 @@ offPreferredInputDeviceChangeByFilter(callback?: Callback<AudioDeviceDescriptors
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 要侦听的事件类型。只有 支持的输入设备变更按过滤事件为precedenceInputDeviceChangeByFilter。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | 要侦听的事件类型。只有 支持的输入设备变更按过滤事件为precedenceInputDeviceChangeByFilter。 |
 
 **错误码：**
 
@@ -365,7 +363,7 @@ Unsubscribes to preferred output device change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -419,7 +417,7 @@ Unsubscribes to preferred output device change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 | Callback used in subscribe. |
 
 **错误码：**
 
@@ -475,7 +473,7 @@ onPreferredInputDeviceChangeByFilter(filter: AudioCapturerFilter, callback: Call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filter | [AudioCapturerFilter](arkts-audio-audio-audiocapturerfilter-i-sys.md) | 是 | 过滤capturer。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调用于接收首选设备变更信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | 回调用于接收首选设备变更信息。 |
 
 **错误码：**
 
@@ -521,7 +519,7 @@ Subscribes to preferred output device change events. When preferred device for t
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
 
 **错误码：**
 
@@ -569,7 +567,7 @@ Subscribes to preferred output device change events. When preferred device for t
 | --- | --- | --- | --- |
 | type | 'preferredOutputDeviceChangeByFilter' | 是 | Type of the event to listen for. Only the preferredOutputDeviceChangeByFilter event is supported. |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 | Callback used to obtain the changed preferred devices information. |
 
 **错误码：**
 
@@ -675,7 +673,7 @@ Select the input device. This method uses an asynchronous callback to return the
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 
@@ -864,7 +862,7 @@ Select the output device. This method uses an asynchronous callback to return th
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 
@@ -977,7 +975,7 @@ Select the output device with desired AudioRenderer. This method uses an asynchr
 | --- | --- | --- | --- |
 | filter | [AudioRendererFilter](arkts-audio-audio-audiorendererfilter-i-sys.md) | 是 | Filter for AudioRenderer. |
 | outputAudioDevices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | Audio device description. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **示例**
 

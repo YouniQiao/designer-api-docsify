@@ -11,7 +11,6 @@ ConvertXML类提供将XML文本转换为JavaScript对象的能力。 推荐使�
 ## 导入模块
 
 ```TypeScript
-import { convertxml } from '@kit.ArkTS';
 ```
 
 ## convert

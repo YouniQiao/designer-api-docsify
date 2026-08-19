@@ -17,7 +17,6 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 ## 导入模块
 
 ```TypeScript
-import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

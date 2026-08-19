@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## persistPermission

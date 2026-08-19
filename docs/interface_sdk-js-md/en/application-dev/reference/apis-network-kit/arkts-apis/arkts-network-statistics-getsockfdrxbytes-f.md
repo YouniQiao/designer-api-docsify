@@ -25,7 +25,7 @@ Obtains the downlink traffic (in bytes) of the specified socket. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sockfd | int | Yes | File description (FD) of the socket to query. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the downlink traffic of the socket is obtained successfully, **error** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the downlink traffic of the socket is obtained successfully, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 

@@ -2,7 +2,7 @@
 
 Class BackPressActionProposal.
 
-**Inheritance/Implementation:** BackPressActionProposal extends [BaseGestureHandlingProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
+**Inheritance/Implementation:** BackPressActionProposal extends [BaseGestureHandlingProposal](arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
 

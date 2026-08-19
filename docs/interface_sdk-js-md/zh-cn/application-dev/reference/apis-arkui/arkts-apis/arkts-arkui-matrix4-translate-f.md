@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## translate

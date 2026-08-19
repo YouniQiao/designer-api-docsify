@@ -29,7 +29,7 @@ Obtains information about the common live view that matches the specified filter
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | NotificationFilter | Yes | Filter criteria for querying the common live view. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationRequest&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -91,7 +91,7 @@ Obtains information about the common live view that matches the specified filter
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | NotificationFilter | Yes | Filter criteria for querying the common live view. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationRequest \| null&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationRequest \| null&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

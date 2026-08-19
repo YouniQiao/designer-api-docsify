@@ -29,7 +29,7 @@ Enables listening touchscreen swipe gesture events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fingers | int | Yes | Number of fingers. |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | Yes | Callback used to receive reported data. |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | Yes | Callback used to receive reported data. |
 
 **Error codes:**
 

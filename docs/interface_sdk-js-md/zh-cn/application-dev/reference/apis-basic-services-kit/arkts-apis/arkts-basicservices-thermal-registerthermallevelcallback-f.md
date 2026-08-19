@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { thermal } from '@kit.BasicServicesKit';
 ```
 
 ## registerThermalLevelCallback
@@ -24,7 +23,7 @@ function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | 是 | 回调函数，返回变化后的热档位。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)&gt; | 是 | 回调函数，返回变化后的热档位。 |
 
 **错误码：**
 

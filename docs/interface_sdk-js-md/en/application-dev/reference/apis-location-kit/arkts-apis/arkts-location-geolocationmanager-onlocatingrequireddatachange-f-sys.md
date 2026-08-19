@@ -30,7 +30,7 @@ Subscribe to changes in WiFi/BT scanning information, and use the WiFi/BT scanni
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [LocatingRequiredDataConfig](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md) | Yes | Indicates the locating required data configuration parameters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LocatingRequiredData](arkts-location-geolocationmanager-locatingrequireddata-i-sys.md)&gt;&gt; | Yes | Indicates the callback for reporting WiFi/BT scan info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LocatingRequiredData](arkts-location-geolocationmanager-locatingrequireddata-i-sys.md)&gt;&gt; | Yes | Indicates the callback for reporting WiFi/BT scan info. |
 
 **Error codes:**
 

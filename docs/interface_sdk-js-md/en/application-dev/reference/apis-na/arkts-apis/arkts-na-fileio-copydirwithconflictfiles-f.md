@@ -28,7 +28,7 @@ Copies the source directory to the destination path. This API uses an asynchrono
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void, Array&lt;[ConflictFiles](arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -61,7 +61,7 @@ Copies the source directory to the destination directory. You can set the copy m
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
 | mode | int | Yes | Copy mode. The default value is **0**. <br>- **0**: Throw an exception if a file conflict occurs. <br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The **data** attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](arkts-na-file-fs-conflictfiles-i.md)&gt; format. <br>- **1**: Forcibly overwrite the files with the same name in the destination directory. <br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void, Array&lt;[ConflictFiles](arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

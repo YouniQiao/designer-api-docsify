@@ -11,7 +11,6 @@ This module provides the capability to manage web modules.
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## 汇总

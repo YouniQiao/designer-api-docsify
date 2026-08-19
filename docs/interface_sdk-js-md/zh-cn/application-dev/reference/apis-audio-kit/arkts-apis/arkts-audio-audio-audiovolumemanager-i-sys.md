@@ -11,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
-import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## forceVolumeKeyControlType
@@ -502,7 +500,7 @@ Get the volume group list for a networkId. This method uses an asynchronous call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | networkId | string | 是 | Distributed deice net work id |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VolumeGroupInfos](arkts-audio-audio-volumegroupinfos-t-sys.md)&gt; | 是 | Callback used to return the result. |
 
 **示例**
 
@@ -745,7 +743,7 @@ Unsubscribes from active volume type changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
 
 **错误码：**
 
@@ -792,7 +790,7 @@ Unsubscribes to the app volume change events..
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
 
 **错误码：**
 
@@ -840,7 +838,7 @@ Unsubscribes to the system volume change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
 
 **错误码：**
 
@@ -887,7 +885,7 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 订阅中使用的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | 订阅中使用的回调。 |
 
 **错误码：**
 
@@ -916,7 +914,7 @@ Unsubscribes from system volume percentage change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to return the system volume percentage change event. |
 
 **错误码：**
 
@@ -965,7 +963,7 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | 是 | Type of the event to unregister. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 否 | Callback used to return the active volume type. |
 
 **错误码：**
 
@@ -1013,7 +1011,7 @@ Unsubscribes to the app volume change events..
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | 是 | Type of the event to be unregistered. Only the appVolumeChangeForUid event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
 
 **错误码：**
 
@@ -1062,7 +1060,7 @@ Unsubscribes to the system volume change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | 是 | Type of the event to be unregistered. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 | Callback used to obtain the invoking volume change event. |
 
 **错误码：**
 
@@ -1107,7 +1105,7 @@ Subscribes to active volume type changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
 
 **错误码：**
 
@@ -1147,7 +1145,7 @@ Listens for specified app volume change events. The app volume may changed by [s
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | int | 是 | The app's uid. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
 
 **错误码：**
 
@@ -1189,7 +1187,7 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
 
 **错误码：**
 
@@ -1229,7 +1227,7 @@ onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<Volu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filter | [SystemVolumeFilter](arkts-audio-audio-systemvolumefilter-i-sys.md) | 是 | 系统音量变化的过滤器。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调用于接收系统音量的变化。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调用于接收系统音量的变化。 |
 
 **错误码：**
 
@@ -1258,7 +1256,7 @@ Subscribes to system volume percentage change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to return the system volume percentage change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to return the system volume percentage change event. |
 
 **错误码：**
 
@@ -1299,7 +1297,7 @@ on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'activeVolumeTypeChange' | 是 | Type of the event to listen for. Only the activeVolumeTypeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)&gt; | 是 | Callback used to return the active volume type. |
 
 **错误码：**
 
@@ -1340,7 +1338,7 @@ Listens for specified app volume change events. The app volume may changed by [s
 | --- | --- | --- | --- |
 | type | 'appVolumeChangeForUid' | 是 | Type of the event to listen for. Only the appVolumeChangeForUid event is supported. |
 | uid | int | 是 | The app's uid. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the app volume change event. |
 
 **错误码：**
 
@@ -1383,7 +1381,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemVolumeChange' | 是 | Type of the event to listen for. Only the systemVolumeChange event is supported. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | Callback used to get the system volume change event. |
 
 **错误码：**
 

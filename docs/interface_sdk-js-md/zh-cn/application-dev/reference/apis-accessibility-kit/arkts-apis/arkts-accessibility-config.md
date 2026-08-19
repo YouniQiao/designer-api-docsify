@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 ```
 
 ## 汇总

@@ -31,7 +31,7 @@ Subscribes to device disconnection events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceDisconnect' | Yes | Event type. The value is fixed at **deviceDisconnect**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
 
 **Examples**
 

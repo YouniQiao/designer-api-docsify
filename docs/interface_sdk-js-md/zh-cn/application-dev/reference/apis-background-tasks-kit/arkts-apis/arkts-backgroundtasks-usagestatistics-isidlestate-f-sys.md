@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## isIdleState
@@ -29,7 +28,7 @@ function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示应用为常用应用；返回false表示指定应用不是常用应用或bundleName无效。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示应用为常用应用；返回false表示指定应用不是常用应用或bundleName无效。 |
 
 **错误码：**
 

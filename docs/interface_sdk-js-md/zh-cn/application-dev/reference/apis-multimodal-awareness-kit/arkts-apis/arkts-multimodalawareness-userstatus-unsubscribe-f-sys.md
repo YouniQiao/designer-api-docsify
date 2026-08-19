@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## unsubscribe
@@ -29,7 +28,7 @@ function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | 表示要取消订阅的用户状态检测功能类型。对应subscribe时传入的featureId值。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)&gt; | 否 | 表示取消指定的callback回调函数。如果输入空、undefined或null，则取消featureId订阅的所有通知事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)&gt; | 否 | 表示取消指定的callback回调函数。如果输入空、undefined或null，则取消featureId订阅的所有通知事件。 |
 
 **返回值：**
 

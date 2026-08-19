@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { LazyColumnLayout, LazyColumnLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## 汇总

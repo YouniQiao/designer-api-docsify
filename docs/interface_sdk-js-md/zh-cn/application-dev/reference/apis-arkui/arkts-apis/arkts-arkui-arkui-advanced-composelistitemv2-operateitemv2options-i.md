@@ -11,7 +11,6 @@ OperateItemV2构造函数的参数选项。
 ## 导入模块
 
 ```TypeScript
-import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUI';
 ```
 
 ## arrow
@@ -22,7 +21,7 @@ arrow?: OperateIconV2
 
 列表项右侧元素为箭头。 默认不设置或设置为undefined时，不显示箭头。
 
-**类型：** [OperateIconV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -42,7 +41,7 @@ button?: OperateButtonV2
 
 列表项右侧元素为按钮。 默认不设置或设置为undefined时，不显示按钮。
 
-**类型：** [OperateButtonV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
+**类型：** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -62,7 +61,7 @@ checkbox?: OperateCheckV2
 
 列表项右侧元素为多选框。 默认不设置或设置为undefined时，不显示多选框。
 
-**类型：** [OperateCheckV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -82,7 +81,7 @@ icon?: OperateIconV2
 
 左侧元素的图标资源。 默认不设置或设置为undefined，表示不显示icon图标资源。 同时设置symbolStyle时，只显示Symbol图标。
 
-**类型：** [OperateIconV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -122,7 +121,7 @@ radio?: OperateCheckV2
 
 列表项右侧元素为单选框。 默认不设置或设置为undefined时，不显示单选框。
 
-**类型：** [OperateCheckV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -142,7 +141,7 @@ subIcon?: OperateIconV2
 
 列表项右侧元素的第二个图标。 默认不设置或设置为undefined时，不显示第二个图标。
 
-**类型：** [OperateIconV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -202,7 +201,7 @@ toggle?: OperateCheckV2
 
 列表项右侧元素为开关。 默认不设置或设置为undefined时，不显示开关。
 
-**类型：** [OperateCheckV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 

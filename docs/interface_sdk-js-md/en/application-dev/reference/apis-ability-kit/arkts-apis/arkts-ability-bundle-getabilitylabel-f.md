@@ -45,7 +45,7 @@ Obtains the application name based on a given bundle name and ability name. This
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | abilityName | string | Yes | Ability name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the application name. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the application name. |
 
 
 ## getAbilityLabel

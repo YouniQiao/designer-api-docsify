@@ -13,7 +13,6 @@ quickFixManager模块提供快速修复的能力，快速修复是系统提供�
 ## 导入模块
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

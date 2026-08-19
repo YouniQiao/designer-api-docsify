@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio, FoldSplitContainer, HoverModeStatus, OnHoverStatusChangeHandler, } from '@kit.ArkUI';
 ```
 
 ## extraRegionPosition
@@ -40,7 +39,7 @@ extraRegionPosition?: ExtraRegionPosition
 horizontalSplitRatio?: number
 ```
 
-主要区域宽度与扩展区域宽度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。此字段在extra有效时生效。 默认值：[PresetSplitRatio](../../apis-na/arkts-apis/arkts-na-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_3V2
+主要区域宽度与扩展区域宽度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。此字段在extra有效时生效。 默认值：[PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_3V2
 
 **类型：** number
 
@@ -80,7 +79,7 @@ isExtraRegionPerpendicular?: boolean
 verticalSplitRatio?: number
 ```
 
-主要区域高度与次要区域高度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。例如：取值为1.5时，表示主要区域高度是次要区域高度的1.5倍（即3:2比例 ）。 默认值：[PresetSplitRatio](../../apis-na/arkts-apis/arkts-na-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_1V1
+主要区域高度与次要区域高度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。例如：取值为1.5时，表示主要区域高度是次要区域高度的1.5倍（即3:2比例 ）。 默认值：[PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_1V1
 
 **类型：** number
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
 ```
 
 ## disconnectPrinter
@@ -29,7 +28,7 @@ function disconnectPrinter(printerId: string, callback: AsyncCallback<void>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerId | string | 是 | 打印机ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步断开特定打印机的连接之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步断开特定打印机的连接之后的回调。 |
 
 **错误码：**
 

@@ -11,7 +11,6 @@ WebDownloadManager是ArkWeb框架下Web组件下载任务的静态管理类，�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## resumeDownload

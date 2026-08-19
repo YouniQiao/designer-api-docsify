@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## bindDeviceDriver
@@ -32,8 +31,8 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md)获得。 |
-| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)&gt; | 是 | 回调函数。当绑定设备驱动成功时，err为undefined，data为包括设备ID和远程对象的 [RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)对象；否则为错误对象。 |
+| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)&gt; | 是 | 回调函数。当绑定设备驱动成功时，err为undefined，data为包括设备ID和远程对象的 [RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)对象；否则为错误对象。 |
 
 **错误码：**
 
@@ -91,7 +90,7 @@ function bindDeviceDriver(deviceId: number, onDisconnect: AsyncCallback<number>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | number | 是 | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md)获得。 |
-| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
+| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数。当绑定设备断开时，err为undefined，data为解绑的设备ID；否则为错误对象。 |
 
 **返回值：**
 

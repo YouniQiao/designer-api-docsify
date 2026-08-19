@@ -11,7 +11,6 @@ Png metadata.
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## author

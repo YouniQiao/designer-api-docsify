@@ -14,7 +14,7 @@
 DEFAULT = 0
 ```
 
-Default
+默认
 
 **起始版本：** 23
 
@@ -28,7 +28,7 @@ Default
 EAST = 1
 ```
 
-East arrow
+向东箭头
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ East arrow
 WEST = 2
 ```
 
-West arrow
+向西箭头
 
 **起始版本：** 23
 
@@ -56,7 +56,7 @@ West arrow
 SOUTH = 3
 ```
 
-South arrow
+向南箭头
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ South arrow
 NORTH = 4
 ```
 
-North arrow
+向北箭头
 
 **起始版本：** 23
 
@@ -84,7 +84,7 @@ North arrow
 WEST_EAST = 5
 ```
 
-West-east arrow
+向西东箭头
 
 **起始版本：** 23
 
@@ -98,7 +98,7 @@ West-east arrow
 NORTH_SOUTH = 6
 ```
 
-North-south arrow
+向北南箭头
 
 **起始版本：** 23
 
@@ -112,7 +112,7 @@ North-south arrow
 NORTH_EAST = 7
 ```
 
-North-east arrow
+向东北箭头
 
 **起始版本：** 23
 
@@ -126,7 +126,7 @@ North-east arrow
 NORTH_WEST = 8
 ```
 
-North-west arrow
+向西北箭头
 
 **起始版本：** 23
 
@@ -140,7 +140,7 @@ North-west arrow
 SOUTH_EAST = 9
 ```
 
-South-east arrow
+向东南箭头
 
 **起始版本：** 23
 
@@ -154,7 +154,7 @@ South-east arrow
 SOUTH_WEST = 10
 ```
 
-South-west arrow
+向西南箭头
 
 **起始版本：** 23
 
@@ -168,7 +168,7 @@ South-west arrow
 NORTH_EAST_SOUTH_WEST = 11
 ```
 
-North-east and south-west adjustment
+东北西南调整
 
 **起始版本：** 23
 
@@ -182,7 +182,7 @@ North-east and south-west adjustment
 NORTH_WEST_SOUTH_EAST = 12
 ```
 
-North-west and south-east adjustment
+西北东南调整
 
 **起始版本：** 23
 
@@ -196,7 +196,7 @@ North-west and south-east adjustment
 CROSS = 13
 ```
 
-Cross (accurate selection)
+准确选择
 
 **起始版本：** 23
 
@@ -210,7 +210,7 @@ Cross (accurate selection)
 CURSOR_COPY = 14
 ```
 
-Copy
+复制
 
 **起始版本：** 23
 
@@ -224,7 +224,7 @@ Copy
 CURSOR_FORBID = 15
 ```
 
-Forbid
+不可用
 
 **起始版本：** 23
 
@@ -238,7 +238,7 @@ Forbid
 COLOR_SUCKER = 16
 ```
 
-Color picker
+取色器
 
 **起始版本：** 23
 
@@ -252,7 +252,7 @@ Color picker
 HAND_GRABBING = 17
 ```
 
-Grabbing hand
+并拢的手
 
 **起始版本：** 23
 
@@ -266,7 +266,7 @@ Grabbing hand
 HAND_OPEN = 18
 ```
 
-Opening hand
+张开的手
 
 **起始版本：** 23
 
@@ -280,7 +280,7 @@ Opening hand
 HAND_POINTING = 19
 ```
 
-Hand-shaped pointer
+手形指针
 
 **起始版本：** 23
 
@@ -294,7 +294,7 @@ Hand-shaped pointer
 HELP = 20
 ```
 
-Help
+帮助选择
 
 **起始版本：** 23
 
@@ -308,7 +308,7 @@ Help
 MOVE = 21
 ```
 
-Move
+移动
 
 **起始版本：** 23
 
@@ -322,7 +322,7 @@ Move
 RESIZE_LEFT_RIGHT = 22
 ```
 
-Left and right resizing
+内部左右调整
 
 **起始版本：** 23
 
@@ -336,7 +336,7 @@ Left and right resizing
 RESIZE_UP_DOWN = 23
 ```
 
-Up and down resizing
+内部上下调整
 
 **起始版本：** 23
 
@@ -350,7 +350,7 @@ Up and down resizing
 SCREENSHOT_CHOOSE = 24
 ```
 
-Screenshot crosshair
+截图十字准星
 
 **起始版本：** 23
 
@@ -364,7 +364,7 @@ Screenshot crosshair
 SCREENSHOT_CURSOR = 25
 ```
 
-Screenshot
+截图
 
 **起始版本：** 23
 
@@ -378,7 +378,7 @@ Screenshot
 TEXT_CURSOR = 26
 ```
 
-Text selection
+文本选择
 
 **起始版本：** 23
 
@@ -392,7 +392,7 @@ Text selection
 ZOOM_IN = 27
 ```
 
-Zoom in
+放大
 
 **起始版本：** 23
 
@@ -406,7 +406,7 @@ Zoom in
 ZOOM_OUT = 28
 ```
 
-Zoom out
+缩小
 
 **起始版本：** 23
 
@@ -420,7 +420,7 @@ Zoom out
 MIDDLE_BTN_EAST = 29
 ```
 
-Scrolling east
+向东滚动
 
 **起始版本：** 23
 
@@ -434,7 +434,7 @@ Scrolling east
 MIDDLE_BTN_WEST = 30
 ```
 
-Scrolling west
+向西滚动
 
 **起始版本：** 23
 
@@ -448,7 +448,7 @@ Scrolling west
 MIDDLE_BTN_SOUTH = 31
 ```
 
-Scrolling south
+向南滚动
 
 **起始版本：** 23
 
@@ -462,7 +462,7 @@ Scrolling south
 MIDDLE_BTN_NORTH = 32
 ```
 
-Scrolling north
+向北滚动
 
 **起始版本：** 23
 
@@ -476,7 +476,7 @@ Scrolling north
 MIDDLE_BTN_NORTH_SOUTH = 33
 ```
 
-Scrolling north-south
+向南北滚动
 
 **起始版本：** 23
 
@@ -490,7 +490,7 @@ Scrolling north-south
 MIDDLE_BTN_NORTH_EAST = 34
 ```
 
-Scrolling north-east
+向东北滚动
 
 **起始版本：** 23
 
@@ -504,7 +504,7 @@ Scrolling north-east
 MIDDLE_BTN_NORTH_WEST = 35
 ```
 
-Scrolling north-west
+向西北滚动
 
 **起始版本：** 23
 
@@ -518,7 +518,7 @@ Scrolling north-west
 MIDDLE_BTN_SOUTH_EAST = 36
 ```
 
-Scrolling south-east
+向东南滚动
 
 **起始版本：** 23
 
@@ -532,7 +532,7 @@ Scrolling south-east
 MIDDLE_BTN_SOUTH_WEST = 37
 ```
 
-Scrolling south-west
+向西南滚动
 
 **起始版本：** 23
 
@@ -546,7 +546,7 @@ Scrolling south-west
 MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
 ```
 
-Moving as a cone in four directions
+四向锥形移动
 
 **起始版本：** 23
 
@@ -560,7 +560,7 @@ Moving as a cone in four directions
 HORIZONTAL_TEXT_CURSOR = 39
 ```
 
-Horizontal text selection
+水平文本选择
 
 **起始版本：** 23
 
@@ -574,7 +574,7 @@ Horizontal text selection
 CURSOR_CROSS = 40
 ```
 
-Cross
+十字光标
 
 **起始版本：** 23
 
@@ -588,7 +588,7 @@ Cross
 CURSOR_CIRCLE = 41
 ```
 
-Circle
+圆形光标
 
 **起始版本：** 23
 
@@ -602,7 +602,7 @@ Circle
 LOADING = 42
 ```
 
-Animation loading
+正在载入动画光标
 
 **起始版本：** 23
 
@@ -618,7 +618,7 @@ Animation loading
 RUNNING = 43
 ```
 
-Animation running in the background
+后台运行中动画光标
 
 **起始版本：** 23
 
@@ -634,7 +634,7 @@ Animation running in the background
 MIDDLE_BTN_EAST_WEST = 44
 ```
 
-Scrolling east-west
+向东西滚动
 
 **起始版本：** 23
 
@@ -704,7 +704,7 @@ SCREENRECORDER_CURSOR = 48
 LASER_CURSOR = 49
 ```
 
-悬浮光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。 空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+悬浮光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
 
 **起始版本：** 23
 
@@ -718,7 +718,7 @@ LASER_CURSOR = 49
 LASER_CURSOR_DOT = 50
 ```
 
-点击光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。 空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+点击光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
 
 **起始版本：** 23
 
@@ -732,7 +732,7 @@ LASER_CURSOR_DOT = 50
 LASER_CURSOR_DOT_RED = 51
 ```
 
-激光笔光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。 空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+激光笔光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
 
 **起始版本：** 23
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## trigger
@@ -28,7 +27,7 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCal
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
 | triggerInfo | TriggerInfo | 是 | 表示触发WantAgent实例时携带的信息，如自定义的extraInfos。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CompleteData&gt; | 否 | 主动激发WantAgent实例的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;CompleteData&gt; | 否 | 主动激发WantAgent实例的回调方法。 |
 
 **错误码：**
 

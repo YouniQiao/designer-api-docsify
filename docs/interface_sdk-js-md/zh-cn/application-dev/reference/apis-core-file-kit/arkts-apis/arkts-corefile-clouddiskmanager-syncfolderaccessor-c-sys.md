@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor

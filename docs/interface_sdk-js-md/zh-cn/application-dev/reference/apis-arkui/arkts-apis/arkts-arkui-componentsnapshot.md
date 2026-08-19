@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## 汇总

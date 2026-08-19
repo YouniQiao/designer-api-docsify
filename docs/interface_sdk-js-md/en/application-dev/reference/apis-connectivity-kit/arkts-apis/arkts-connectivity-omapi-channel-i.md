@@ -299,7 +299,7 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | number[] | Yes | The APDU command to be transmitted, as a byte array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | The callback to return the response received, as a byte array. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | The callback to return the response received, as a byte array. |
 
 **Error codes:**
 

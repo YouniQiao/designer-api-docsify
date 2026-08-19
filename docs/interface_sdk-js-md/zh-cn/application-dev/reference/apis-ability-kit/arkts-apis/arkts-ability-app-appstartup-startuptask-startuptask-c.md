@@ -11,7 +11,6 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 ## 导入模块
 
 ```TypeScript
-import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init
@@ -87,7 +86,7 @@ onDependencyCompleted?(dependency: string, result: Object): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dependency | string | 是 | 依赖的启动任务名称。 |
-| result | Object | 是 | 依赖的启动任务[init](#init)返回的执行结果。 |
+| result | Object | 是 | 依赖的启动任务[init](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#init)返回的执行结果。 |
 
 **示例**
 

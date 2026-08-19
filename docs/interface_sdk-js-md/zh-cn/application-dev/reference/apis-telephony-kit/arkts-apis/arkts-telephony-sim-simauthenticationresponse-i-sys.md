@@ -13,7 +13,6 @@ Defines the SIM card authentication response.
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
 ```
 
 ## response

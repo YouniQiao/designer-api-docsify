@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onIndoorOrOutdoorIdentify
@@ -32,7 +31,7 @@ function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 是 | 测距接口配置参数 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md)&gt; | 是 | 回调函数，返回门内外信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DoorPositionResponse](arkts-multimodalawareness-spatialawareness-doorpositionresponse-i-sys.md)&gt; | 是 | 回调函数，返回门内外信息。 |
 
 **错误码：**
 

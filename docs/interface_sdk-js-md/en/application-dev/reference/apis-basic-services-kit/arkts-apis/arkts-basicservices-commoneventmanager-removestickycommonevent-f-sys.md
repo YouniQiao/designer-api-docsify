@@ -29,7 +29,7 @@ Removes a sticky common event. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Sticky common event to remove. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the sticky common event is successfully removed, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the sticky common event is successfully removed, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

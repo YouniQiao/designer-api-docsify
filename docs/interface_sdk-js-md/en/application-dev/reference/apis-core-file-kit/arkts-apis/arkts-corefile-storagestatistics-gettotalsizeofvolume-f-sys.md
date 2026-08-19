@@ -29,7 +29,7 @@ Get the total size of volume.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeUuid | string | Yes | The uuid of the volume |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | callback <br>Unit: Byte. |
 
 **Error codes:**
 

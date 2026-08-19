@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { locationManager } from '@kit.MDMKit';
 ```
 
 ## 汇总

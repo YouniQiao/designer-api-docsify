@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceOptions } from '@kit.AbilityKit';
 ```
 
 ## 汇总

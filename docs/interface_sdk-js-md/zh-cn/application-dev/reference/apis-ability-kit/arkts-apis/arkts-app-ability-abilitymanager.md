@@ -11,7 +11,6 @@ AbilityManager模块提供获取、新增、修改Ability相关信息和运行�
 ## 导入模块
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

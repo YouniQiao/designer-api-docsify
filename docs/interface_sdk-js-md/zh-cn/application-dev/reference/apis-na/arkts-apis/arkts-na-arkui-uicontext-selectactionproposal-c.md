@@ -2,7 +2,7 @@
 
 类SelectActionProposal。
 
-**继承/实现关系：** SelectActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**继承/实现关系：** SelectActionProposal extends [TargetedGestureProposal](arkts-na-arkui-uicontext-targetedgestureproposal-c.md)
 
 **起始版本：** 26.0.0
 

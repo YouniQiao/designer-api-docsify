@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## onDownloadSuccess
@@ -25,7 +24,7 @@ function onDownloadSuccess(url: string, callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 待注册回调的url，url字符串的最大长度为8192字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
 

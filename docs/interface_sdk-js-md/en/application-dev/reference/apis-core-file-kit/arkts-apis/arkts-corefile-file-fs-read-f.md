@@ -80,7 +80,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the length of the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -125,7 +125,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | fd | number | Yes | FD of the file. |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
 | options | [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md) | Yes | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the length of the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the length of the data read, in bytes. |
 
 **Error codes:**
 

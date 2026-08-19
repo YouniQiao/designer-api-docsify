@@ -44,7 +44,7 @@ iconType?: EditableLeftIconTypeV2
 
 Icon type, Back or Cancel.
 
-**Type:** [EditableLeftIconTypeV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
+**Type:** [EditableLeftIconTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ onAction?: OnActionCallback
 
 Callback function when click on the left icon.
 
-**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

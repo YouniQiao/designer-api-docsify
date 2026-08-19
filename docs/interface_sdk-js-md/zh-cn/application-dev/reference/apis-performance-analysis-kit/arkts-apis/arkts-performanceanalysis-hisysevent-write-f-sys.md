@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## write
@@ -146,7 +145,7 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | 是 | 系统事件。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。 <br/>- 0表示事件校验成功，事件正常异步写入事件文件； <br/>- 正值表示事件打点存在异常，但可以正常写入； <br/>- 负值表示事件打点失败。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。 <br/>- 0表示事件校验成功，事件正常异步写入事件文件； <br/>- 正值表示事件打点存在异常，但可以正常写入； <br/>- 负值表示事件打点失败。 |
 
 **错误码：**
 

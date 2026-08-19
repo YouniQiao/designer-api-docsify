@@ -123,7 +123,7 @@ Register a callback that is triggered if the heap memory exceeds the critical wa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
 | heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Yes | Indicates the percentage threshold of the heap memory to trigger the callback after a GC. The value range is [70, 95]. |
 
 **Return value:**

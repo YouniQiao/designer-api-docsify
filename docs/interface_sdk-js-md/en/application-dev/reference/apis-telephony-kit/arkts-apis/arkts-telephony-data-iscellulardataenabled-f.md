@@ -26,7 +26,7 @@ Checks whether the cellular data service is enabled. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br>**true**: The cellular data service is enabled. <br>**false**: The cellular data service is disabled. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br>**true**: The cellular data service is enabled. <br>**false**: The cellular data service is disabled. |
 
 **Error codes:**
 

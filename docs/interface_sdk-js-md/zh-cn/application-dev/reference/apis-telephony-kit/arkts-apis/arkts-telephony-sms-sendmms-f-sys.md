@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
 ```
 
 ## sendMms
@@ -30,7 +29,7 @@ function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文。 <br>FA模型的应用Context定义见Context。 <br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md)。 |
 | mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | 是 | 发送彩信的参数和回调，参考[MmsParams](arkts-telephony-sms-mmsparams-i-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发送彩信的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 发送彩信的回调函数。 |
 
 **错误码：**
 

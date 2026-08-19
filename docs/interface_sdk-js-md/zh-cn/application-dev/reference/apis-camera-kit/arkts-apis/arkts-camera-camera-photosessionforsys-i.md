@@ -15,7 +15,5 @@ Implements a photo session for system applications, which sets the parameters of
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 

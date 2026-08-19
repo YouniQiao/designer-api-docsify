@@ -34,7 +34,7 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 | --- | --- | --- | --- |
 | assetKey | string | Yes | Key of the joint asset in the distributed data object. |
 | bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | Yes | Information about the joint asset in the RDB store, including the RDB store name, table name, primary key, column name, and asset name in the RDB store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -744,7 +744,7 @@ Revokes the data of this distributed data object saved. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | Yes | Callback used to return RevokeSaveSuccessResponse, which contains the session ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | Yes | Callback used to return RevokeSaveSuccessResponse, which contains the session ID. |
 
 **Error codes:**
 
@@ -850,7 +850,7 @@ Saves a distributed data object. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | ID of the device where the data is stored. The value local indicates a local device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | Yes | Callback used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | Yes | Callback used to return SaveSuccessResponse, which contains information such as session ID, version, and device ID. |
 
 **Error codes:**
 
@@ -1101,7 +1101,7 @@ Sets a session ID. This API uses an asynchronous callback to return the result. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of a distributed data object on a trusted network. The value can contain only letters, digits, and underscores (_), and cannot exceed 128 characters. If this parameter is set to "" or null, the distributed data object exits the network. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback invoked when the session ID is successfully set. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback invoked when the session ID is successfully set. |
 
 **Error codes:**
 
@@ -1145,7 +1145,7 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the distributed data object exits all sessions. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the distributed data object exits all sessions. |
 
 **Error codes:**
 

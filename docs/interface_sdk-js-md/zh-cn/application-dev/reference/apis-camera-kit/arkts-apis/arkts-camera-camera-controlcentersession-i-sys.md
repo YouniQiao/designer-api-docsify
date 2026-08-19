@@ -15,8 +15,6 @@ Control center session object.
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## enableAutoFraming

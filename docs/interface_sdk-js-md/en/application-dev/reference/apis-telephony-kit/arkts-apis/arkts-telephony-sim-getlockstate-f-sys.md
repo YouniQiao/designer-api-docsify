@@ -30,7 +30,7 @@ Get the lock status of the SIM card in the specified slot.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | lockType | [LockType](arkts-telephony-sim-locktype-e-sys.md) | Yes | Indicates the lock type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LockState](arkts-telephony-sim-lockstate-e-sys.md)&gt; | Yes | Indicates the callback for getting the sim card lock status. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockState](arkts-telephony-sim-lockstate-e-sys.md)&gt; | Yes | Indicates the callback for getting the sim card lock status. |
 
 **Error codes:**
 

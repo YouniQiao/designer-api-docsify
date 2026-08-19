@@ -71,7 +71,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
@@ -223,7 +223,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | Yes | Callback used to return the ID of the registered listener. |
+| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
 
 **Return value:**
 
@@ -258,7 +258,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterAbilityLifecycleCallback
 
@@ -327,7 +327,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) |
-| envcallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+| envcallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterEnvironmentCallback
 

@@ -523,7 +523,7 @@ Obtains the data stream of a specified web page using an asynchronous callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | Yes | Parameters required for creating a PDF file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | Yes | Callback used to return the data stream of an online PDF file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | Yes | Callback used to return the data stream of an online PDF file. |
 
 **Error codes:**
 
@@ -1095,7 +1095,7 @@ Obtains the certificate information of the current website. When the **Web** com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | Callback used to obtain the X.509 certificate array of the current website. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | Callback used to obtain the X.509 certificate array of the current website. |
 
 **Error codes:**
 
@@ -1865,7 +1865,7 @@ Checks whether this page contains images. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. <br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -2198,7 +2198,7 @@ Deregisters the attach state event of **WebViewController**. After the deregistr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | Yes | Attach state event of **WebViewController**, whose value is fixed to **controllerAttachStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No | Callback triggered when the attach state of **WebViewController** changes. By default, this parameter is left blank. If **Callback** is specified, only the specified callback is deregistered. Otherwise, all callbacks will be deregistered. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No | Callback triggered when the attach state of **WebViewController** changes. By default, this parameter is left blank. If **Callback** is specified, only the specified callback is deregistered. Otherwise, all callbacks will be deregistered. <br>If **null** or **undefined** is passed, error code **401** is thrown. |
 
 ## onActive
 
@@ -2285,7 +2285,7 @@ Registers the attach state event of **WebViewController**, which obtains the att
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controllerAttachStateChange' | Yes | Attach state event of **WebViewController**, whose value is fixed to **controllerAttachStateChange**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes | Callback triggered when the attach state of **WebViewController** changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes | Callback triggered when the attach state of **WebViewController** changes. |
 
 ## pageDown
 
@@ -2967,7 +2967,7 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string | Yes | JavaScript script. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. **null** is returned if the JavaScript script fails to be executed or no value is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. **null** is returned if the JavaScript script fails to be executed or no value is returned. |
 
 **Error codes:**
 
@@ -3033,7 +3033,7 @@ Executes a JavaScript script. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | Yes | JavaScript script.<br>**Since:** 12 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -4354,7 +4354,7 @@ Stores this web page. This API uses an asynchronous callback to return the resul
 | --- | --- | --- | --- |
 | baseName | string | Yes | Save path of the web page. The value cannot be null. |
 | autoName | boolean | Yes | Whether to automatically generate a file name. <br>The value **false** means the file is stored with the file name specified by **baseName**, and **true** means the file name is automatically generated based on the current URL and stored in the directory specified by **baseName**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the save path if the operation is successful and null otherwise. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the save path if the operation is successful and null otherwise. |
 
 **Error codes:**
 
@@ -4493,7 +4493,7 @@ Obtains the full drawing result of the web page. > **NOTE：**> > - This API doe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | Yes | Information for obtaining the full drawing result. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | Yes | Callback used to return the result. |
 
 ## zoom
 

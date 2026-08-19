@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## createQuaternion
@@ -29,7 +28,7 @@ function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | rotationVector | Array&lt;number&gt; | 是 | 表示旋转矢量。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回四元数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 异步返回四元数。 |
 
 **示例**
 

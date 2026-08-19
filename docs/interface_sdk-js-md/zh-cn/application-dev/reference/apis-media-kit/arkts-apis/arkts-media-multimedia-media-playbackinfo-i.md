@@ -11,6 +11,5 @@ Provides player statistic info.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 

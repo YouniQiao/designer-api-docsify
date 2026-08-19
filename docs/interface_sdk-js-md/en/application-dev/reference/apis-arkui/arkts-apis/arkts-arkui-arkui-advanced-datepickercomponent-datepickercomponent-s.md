@@ -25,7 +25,7 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 
 Defines options for the date time picker component.
 
-**Type:** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
+**Type:** [DatePickerComponentOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **Since:** 26.0.0
 

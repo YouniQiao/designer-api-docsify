@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## on_SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION
@@ -32,6 +31,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION | 是 | 要订阅的计步检测传感器类型为SENSOR_TYPE_ID_PEDOMETER_DETECTION。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 是 | 注册计步检测传感器的回调函数，上报的数据类型为PedometerDetectionResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md)&gt; | 是 | 注册计步检测传感器的回调函数，上报的数据类型为PedometerDetectionResponse。 |
 | options | Options | 否 | 用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 

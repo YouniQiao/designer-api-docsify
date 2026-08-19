@@ -13,8 +13,6 @@ LinkIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-
 ## 导入模块
 
 ```TypeScript
-import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, InsightIntentForm, InsightIntentEntity } from '@kit.AbilityKit';
-import { InsightIntentLink, InsightIntentPage, InsightIntentFunctionMethod, InsightIntentFunction, InsightIntentEntry, LinkParamCategory, LinkIntentParamMapping, InsightIntentEntity, InsightIntentForm } from '@kit.AbilityKit';
 ```
 
 ## paramMappings
@@ -25,7 +23,7 @@ paramMappings?: LinkIntentParamMapping[]
 
 意图参数和uri信息的映射。
 
-**类型：** [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
+**类型：** [LinkIntentParamMapping](../../apis-na/arkts-apis/arkts-na-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
 
 **起始版本：** 20
 

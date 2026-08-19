@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
 ```
 
 ## localeMatcher

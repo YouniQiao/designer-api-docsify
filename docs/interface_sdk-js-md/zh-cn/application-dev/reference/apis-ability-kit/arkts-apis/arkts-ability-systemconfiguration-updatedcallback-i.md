@@ -11,7 +11,6 @@ UpdatedCallback是监听系统环境变化的回调函数，开发者可通过 [
 ## 导入模块
 
 ```TypeScript
-import { systemConfiguration } from '@kit.AbilityKit';
 ```
 
 ## onColorModeUpdated

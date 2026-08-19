@@ -17,6 +17,5 @@ AgentUIExtensionAbility继承自[UIExtensionAbility](arkts-ability-app-ability-u
 ## 导入模块
 
 ```TypeScript
-import { AgentUIExtensionAbility } from '@kit.AbilityKit';
 ```
 

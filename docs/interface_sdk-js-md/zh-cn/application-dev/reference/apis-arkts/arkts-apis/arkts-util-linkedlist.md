@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
 ```
 
 ## 汇总

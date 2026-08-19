@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## 汇总

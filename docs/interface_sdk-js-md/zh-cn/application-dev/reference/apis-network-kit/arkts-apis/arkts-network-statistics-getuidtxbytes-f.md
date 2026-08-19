@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
 ```
 
 ## getUidTxBytes
@@ -28,7 +27,7 @@ function getUidTxBytes(uid: int, callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | int | 是 | 指定查询的应用 uid。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。当成功获取应用实时上行流量时，error为undefined，stats为获取到的应用上行流量(单位:字节)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。当成功获取应用实时上行流量时，error为undefined，stats为获取到的应用上行流量(单位:字节)；否则为错误对象。 |
 
 **错误码：**
 

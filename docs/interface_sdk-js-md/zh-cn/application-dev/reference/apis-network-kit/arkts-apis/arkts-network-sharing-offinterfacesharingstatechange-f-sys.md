@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
 ```
 
 ## off_interfaceSharingStateChange('interfaceSharingStateChange')
@@ -29,7 +28,7 @@ function off(type: 'interfaceSharingStateChange', callback?: Callback<InterfaceS
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'interfaceSharingStateChange' | 是 | 注销的事件类型。'interfaceSharingStateChange'：注销网卡网络共享状态变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | 否 | 回调函数，注销指定网卡共享状态变化通知。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterfaceSharingStateInfo](arkts-network-sharing-interfacesharingstateinfo-i-sys.md)&gt; | 否 | 回调函数，注销指定网卡共享状态变化通知。<br>**起始版本：** 11 |
 
 **错误码：**
 

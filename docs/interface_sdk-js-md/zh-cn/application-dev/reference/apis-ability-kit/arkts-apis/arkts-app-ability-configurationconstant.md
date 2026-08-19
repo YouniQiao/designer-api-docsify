@@ -11,7 +11,6 @@ ConfigurationConstant模块提供了[Configuration](arkts-ability-app-ability-co
 ## 导入模块
 
 ```TypeScript
-import { ConfigurationConstant } from '@kit.AbilityKit';
 ```
 
 ## 汇总

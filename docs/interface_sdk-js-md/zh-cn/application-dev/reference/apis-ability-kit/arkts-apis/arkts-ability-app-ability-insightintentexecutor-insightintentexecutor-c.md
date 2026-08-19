@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { InsightIntentExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecuteInServiceExtensionAbility

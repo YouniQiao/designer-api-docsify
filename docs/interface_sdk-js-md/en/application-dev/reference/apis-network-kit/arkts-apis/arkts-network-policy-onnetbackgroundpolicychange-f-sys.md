@@ -29,7 +29,7 @@ Registers the callback for background network policy changes. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netBackgroundPolicyChange' | Yes | Event type.<br/> The value **netBackgroundPolicyChange** indicates a background network policy change event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. It is called when the registered background network policy changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. It is called when the registered background network policy changes. |
 
 **Error codes:**
 

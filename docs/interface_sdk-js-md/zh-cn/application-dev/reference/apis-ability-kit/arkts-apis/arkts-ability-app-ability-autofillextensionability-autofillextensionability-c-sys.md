@@ -15,7 +15,6 @@ AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类�
 ## 导入模块
 
 ```TypeScript
-import { AutoFillExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground

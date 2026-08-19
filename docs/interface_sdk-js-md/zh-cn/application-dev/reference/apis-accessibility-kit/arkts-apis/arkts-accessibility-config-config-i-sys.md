@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
 ```
 
 ## get
@@ -78,7 +77,7 @@ get(callback: AsyncCallback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。当获取属性成功，err为undefined，data为属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | 是 | 回调函数。当获取属性成功，err为undefined，data为属性值；否则为错误对象。 |
 
 **错误码：**
 
@@ -140,7 +139,7 @@ off(callback?: Callback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on()的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on()的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -183,7 +182,7 @@ on(callback: Callback<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | 是 | 回调函数，在属性变化时通过此函数进行通知。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | 是 | 回调函数，在属性变化时通过此函数进行通知。 |
 
 **错误码：**
 
@@ -279,7 +278,7 @@ set(value: T, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | T | 是 | 设置的属性值，值类型与对应Config属性的类型一致。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置属性成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置属性成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

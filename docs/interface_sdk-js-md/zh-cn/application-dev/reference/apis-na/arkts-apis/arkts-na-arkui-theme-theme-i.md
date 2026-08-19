@@ -23,7 +23,7 @@ colors: Colors
 
 主题颜色资源。
 
-**类型：** [Colors](arkts-na-arkui-theme-colors-i.md)
+**类型：** [Colors](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md)
 
 **起始版本：** 23
 

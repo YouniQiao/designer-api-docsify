@@ -31,7 +31,7 @@ Enables listening for screen hopping status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cooperate' | Yes | Event type. The value is **cooperate**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | Yes |  |
 
 **Error codes:**
 

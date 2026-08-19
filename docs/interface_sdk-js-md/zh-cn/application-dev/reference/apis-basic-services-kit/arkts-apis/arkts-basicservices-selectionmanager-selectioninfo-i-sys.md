@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## bundleName

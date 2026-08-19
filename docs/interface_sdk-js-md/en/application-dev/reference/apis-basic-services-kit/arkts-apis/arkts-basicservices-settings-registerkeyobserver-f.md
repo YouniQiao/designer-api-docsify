@@ -30,7 +30,7 @@ Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.perm
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
 | domainName | string | Yes | Indicates the name of the domain name to set. |
-| observer | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | callback when monitored key value is changed. |
+| observer | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | callback when monitored key value is changed. |
 
 **Return value:**
 

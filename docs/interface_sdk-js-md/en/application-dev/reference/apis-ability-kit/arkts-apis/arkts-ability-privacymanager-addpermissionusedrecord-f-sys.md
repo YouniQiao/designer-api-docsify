@@ -116,7 +116,7 @@ When an application protected by a permission is called by another service or ap
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
 | successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
 | failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

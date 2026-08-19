@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { DynamicLayout, DynamicLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## 汇总

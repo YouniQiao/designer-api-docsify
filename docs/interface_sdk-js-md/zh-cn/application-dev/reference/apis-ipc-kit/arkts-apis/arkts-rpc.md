@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
 ```
 
 ## 汇总

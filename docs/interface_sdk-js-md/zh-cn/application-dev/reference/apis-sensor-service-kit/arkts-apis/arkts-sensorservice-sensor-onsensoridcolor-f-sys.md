@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## on_SensorId.COLOR
@@ -27,7 +26,7 @@ function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: O
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.COLOR | 是 | 传感器类型，该值固定为SensorId.COLOR。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ColorResponse](arkts-sensorservice-sensor-colorresponse-i-sys.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为ColorResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ColorResponse](arkts-sensorservice-sensor-colorresponse-i-sys.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为ColorResponse。 |
 | options | Options | 否 | 可选参数列表，用于设置传感器上报频率。默认值：200000000ns。不传入时使用默认频率。 |
 
 **错误码：**

@@ -24,7 +24,6 @@ The **measure** module provides APIs for measuring text metrics, such as text he
 ## 导入模块
 
 ```TypeScript
-import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## 汇总

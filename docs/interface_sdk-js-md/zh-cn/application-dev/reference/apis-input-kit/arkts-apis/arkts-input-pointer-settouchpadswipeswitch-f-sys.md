@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
 ```
 
 ## setTouchpadSwipeSwitch
@@ -27,7 +26,7 @@ function setTouchpadSwipeSwitch(state: boolean, callback: AsyncCallback<void>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | state | boolean | 是 | 触控板多指滑动开关开启状态。 true代表多指滑动开启，false代表多指滑动关闭，默认开启。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置触控板多指滑动功能开关成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置触控板多指滑动功能开关成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

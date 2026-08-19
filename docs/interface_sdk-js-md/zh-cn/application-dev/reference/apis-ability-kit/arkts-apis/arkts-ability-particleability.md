@@ -13,7 +13,6 @@ particleAbility模块提供了操作Data和Service类型的Ability的能力，�
 ## 导入模块
 
 ```TypeScript
-import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## 汇总

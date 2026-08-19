@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## getBundlesLocalFilePresentStatus

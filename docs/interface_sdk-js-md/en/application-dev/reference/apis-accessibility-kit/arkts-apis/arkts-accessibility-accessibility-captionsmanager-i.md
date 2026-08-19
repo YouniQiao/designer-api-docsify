@@ -36,7 +36,7 @@ Unregister the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |  |
 
 ## offStyleChange
 
@@ -56,7 +56,7 @@ Unregister the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
 
 ## off_enableChange('enableChange')
 
@@ -79,7 +79,7 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#on_enablechangeenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#on_enablechangeenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -138,7 +138,7 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#on_enablechangeenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#on_enablechangeenablechange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -194,7 +194,7 @@ Register the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |  |
 
 ## onStyleChange
 
@@ -214,7 +214,7 @@ Register the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
 
 ## on_enableChange('enableChange')
 
@@ -237,7 +237,7 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. When the enabled state changes, the state is notified through this callback. The value **true** indicates that the caption configuration is enabled, and **false** indicates that the caption configuration is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. When the enabled state changes, the state is notified through this callback. The value **true** indicates that the caption configuration is enabled, and **false** indicates that the caption configuration is disabled. |
 
 **Error codes:**
 
@@ -291,7 +291,7 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
 
 **Error codes:**
 

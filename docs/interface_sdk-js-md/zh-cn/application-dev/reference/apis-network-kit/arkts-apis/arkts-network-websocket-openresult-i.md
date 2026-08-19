@@ -11,7 +11,6 @@ WebSocket连接成功后的详细信息。
 ## 导入模块
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## message

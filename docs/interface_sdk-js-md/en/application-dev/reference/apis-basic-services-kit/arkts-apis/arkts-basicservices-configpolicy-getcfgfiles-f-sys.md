@@ -27,7 +27,7 @@ Obtains a list of all files with the specified names, in ascending order of prio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -58,7 +58,7 @@ Obtains a list of all files of a specified file name based on the provided follo
 | --- | --- | --- | --- |
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Obtains a list of all files of a specified file name based on the provided follo
 | relPath | string | Yes | Name of the configuration file. |
 | followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | Yes | Follow mode. |
 | extra | string | Yes | Custom follow rule. This parameter is valid only when **followMode** is set to [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the file list is successfully obtained, **err** is **undefined**, and **data** is the obtained file list. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

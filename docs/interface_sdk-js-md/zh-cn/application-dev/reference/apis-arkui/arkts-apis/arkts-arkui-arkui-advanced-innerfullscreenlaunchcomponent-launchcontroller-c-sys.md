@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 ```
 
 ## launchAtomicService

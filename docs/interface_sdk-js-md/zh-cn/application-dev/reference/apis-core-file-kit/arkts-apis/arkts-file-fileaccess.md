@@ -15,7 +15,6 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 ## 导入模块
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## 汇总

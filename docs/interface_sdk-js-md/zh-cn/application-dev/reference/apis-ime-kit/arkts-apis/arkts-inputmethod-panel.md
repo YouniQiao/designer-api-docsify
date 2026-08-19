@@ -20,7 +20,6 @@
 ## 导入模块
 
 ```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 ```
 
 ## 汇总

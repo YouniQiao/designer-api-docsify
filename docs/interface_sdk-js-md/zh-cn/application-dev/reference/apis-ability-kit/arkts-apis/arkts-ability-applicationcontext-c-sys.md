@@ -269,7 +269,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
+| environmentCallback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 

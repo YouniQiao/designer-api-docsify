@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUI';
 ```
 
 ## defaultFocus
@@ -44,7 +43,7 @@ iconType?: EditableLeftIconTypeV2
 
 图标类型。
 
-**类型：** [EditableLeftIconTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
+**类型：** [EditableLeftIconTypeV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 
 **起始版本：** 26.0.0
 
@@ -64,7 +63,7 @@ onAction?: OnActionCallback
 
 点击左侧图标的回调函数。未设置时，Back类型默认执行路由返回，Cancel类型无操作。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

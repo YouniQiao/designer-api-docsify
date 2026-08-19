@@ -19,13 +19,13 @@ A time picker dialog box is a dialog box that allows users to select a time from
 static show(options?: TimePickerDialogOptions)
 ```
 
-Shows a time picker dialog box. **NOTE：**- Since API version 10, you can use the [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API in [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the time picker dialog box is shown in the intended UI instance.
+Shows a time picker dialog box. **NOTE：**- Since API version 10, you can use the [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API in [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md), which ensures that the time picker dialog box is shown in the intended UI instance.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [showTimePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtimepickerdialog)
+**Substitutes:** [showTimePickerDialog](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#showtimepickerdialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

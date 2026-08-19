@@ -33,7 +33,7 @@ function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallba
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
 | numMax | number | 是 | 任务信息数量上限。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | 是 | 回调函数，返回任务信息数组。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | 是 | 回调函数，返回任务信息数组。 |
 
 **示例**
 

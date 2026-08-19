@@ -528,7 +528,7 @@ Rendering current Web page into Pdf data, return the result in async mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | configuration | [PdfConfiguration](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfconfiguration-i.md) | Yes | configuration for createPdf, including page width and height, etc. {@Link PdfConfiguration} |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | Yes | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-pdfdata-c.md)&gt; | Yes | Callbacks execute createPdf results. PdfData is pdf data stream of current web page in Uint8Array {@Link PdfData}. |
 
 **Error codes:**
 
@@ -1116,7 +1116,7 @@ Get certificate for the current website.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | the callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;cert.X509Cert&gt;&gt; | Yes | the callback of getCertificate. |
 
 **Error codes:**
 
@@ -1874,7 +1874,7 @@ Checks whether this page contains images. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result.<br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.<br> The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -2214,7 +2214,7 @@ Unregister the callback for controller attach state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No | Callback used to return the controller attach state. |
 
 ## onActive
 
@@ -2258,7 +2258,7 @@ Register the callback for controller attach state change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes | Callback used to return the controller attach state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes | Callback used to return the controller attach state. |
 
 ## onCreateNativeMediaPlayer
 
@@ -2997,7 +2997,7 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string | Yes | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callbacks execute JavaScript script results. |
 
 **Error codes:**
 
@@ -3063,7 +3063,7 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | script | string \| ArrayBuffer | Yes | JavaScript Script. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | Yes | Callbacks execute JavaScript script results. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-jsmessageext-c.md)&gt; | Yes | Callbacks execute JavaScript script results. |
 
 **Error codes:**
 
@@ -4432,7 +4432,7 @@ Stores the current page as a web archive.
 | --- | --- | --- | --- |
 | baseName | string | Yes | Where the generated offline webpage is stored, This value cannot be null. |
 | autoName | boolean | Yes | Decide whether to automatically generate the file name. If false, it is stored by the file name of baseName. If true, the file name is automatically generated based on the current URL and stored in the file directory of baseName. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | called after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | called after the web archive has been stored. The parameter will either be the filename under which the file was stored, or empty if storing the file failed. |
 
 **Error codes:**
 
@@ -4575,7 +4575,7 @@ Web page snapshot. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Only scre
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [SnapshotInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotinfo-i.md) | Yes | The snapshot info. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SnapshotResult](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotresult-i.md)&gt; | Yes | the callback of snapshot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-snapshotresult-i.md)&gt; | Yes | the callback of snapshot. |
 
 ## zoom
 

@@ -38,7 +38,7 @@ Checks whether a new version is available. The result includes whether a new ver
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | Yes | Callback used to receive the version check result. The callback parameters include **err** and **checkResult**. **err** is **null** when the operation is successful; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CheckResult](arkts-basicservices-update-checkresult-i-sys.md)&gt; | Yes | Callback used to receive the version check result. The callback parameters include **err** and **checkResult**. **err** is **null** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -130,7 +130,7 @@ Clears errors. When the upgrade package fails to be downloaded or installed, del
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | clearOptions | [ClearOptions](arkts-basicservices-update-clearoptions-i-sys.md) | Yes | Clearing options, which specify the errors to be cleared. The **status** field must be **UPGRADE_FAIL**. If the upgrade fails, the system retains the error state to prevent the upgrade from being performed again. In this case, you need to pass **UPGRADE_FAIL** so that errors can be cleared, and the system can be restored to the initial state to restart the upgrade process. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of clearing errors. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of clearing errors. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -249,7 +249,7 @@ Downloads the upgrade package to the device. This method provides the online upg
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | downloadOptions | [DownloadOptions](arkts-basicservices-update-downloadoptions-i-sys.md) | Yes | Download options, which are used to control the download behavior. The **allowNetwork** field specifies the network type allowed for download. You are advised to select a network type based on the upgrade package size and network environment. If the upgrade package exceeds 100 MB, you are advised to set the network type to **WIFI** to reduce mobile data usage and improve the download speed. If you are in a mobile scenario or there is no Wi-Fi available, you can set the network type to **CELLULAR**. If the network environment is uncertain, you are advised to set the network type to **CELLULAR_AND_WIFI**. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the download result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the download result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -368,7 +368,7 @@ Obtains the description of the current version. This method provides the online 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | Yes | Description options. This parameter specifies the format and language of the description file. The **format** field specifies the description format (**STANDARD** or **SIMPLIFIED**). The **language** field specifies the language of the description file. The value is a string of 2 to 10 characters, for example, **zh-cn** (Chinese), **en-us** (English), and **ja-jp** (Japanese). Valid characters include letters (case sensitive) and hyphens (-). Lowercase letters are recommended. An exception is thrown if the value is out of range or contains invalid characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the current version. The callback parameters include **err** and **info**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **info** is the current version description array, including the version description. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the current version. The callback parameters include **err** and **info**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **info** is the current version description array, including the version description. |
 
 **Error codes:**
 
@@ -471,7 +471,7 @@ Obtains information about the current version. After the API is successfully cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the current version information (**CurrentVersionInfo**). The callback parameters include **err** and **currentInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **currentInfo** indicates the current version information, including the **osVersion**, **deviceName**, and **versionComponents** fields. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CurrentVersionInfo](arkts-basicservices-update-currentversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the current version information (**CurrentVersionInfo**). The callback parameters include **err** and **currentInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **currentInfo** indicates the current version information, including the **osVersion**, **deviceName**, and **versionComponents** fields. |
 
 **Error codes:**
 
@@ -567,7 +567,7 @@ Obtains the description of the new version. This method provides the online upgr
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information, including the version ID ( **versionDigest** field). This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API. The version digest uniquely identifies a version generated by the server and is used for subsequent version query, download, and upgrade operations. This parameter is valid only when **isExistNewVersion** is **true**. |
 | descriptionOptions | [DescriptionOptions](arkts-basicservices-update-descriptionoptions-i-sys.md) | Yes | Description options. This parameter specifies the format and language of the description file. The **format** field specifies the description format (**STANDARD** or **SIMPLIFIED**). The **language** field specifies the language of the description file. The value is a string of 2 to 10 characters, for example, **zh-cn** (Chinese), **en-us** (English), and **ja-jp** (Japanese). Valid characters include letters (case sensitive) and hyphens (-). Lowercase letters are recommended. An exception is thrown if the value is out of range or contains invalid characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the new version. The callback parameters include **err** and **descriptionInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **descriptionInfo** is the new version description array, including the version description of each component. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **descriptionInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **descriptionInfo** is **null**. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ComponentDescription](arkts-basicservices-update-componentdescription-i-sys.md)&gt;&gt; | Yes | Callback used to receive the description of the new version. The callback parameters include **err** and **descriptionInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **descriptionInfo** is the new version description array, including the version description of each component. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **descriptionInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **descriptionInfo** is **null**. |
 
 **Error codes:**
 
@@ -689,7 +689,7 @@ Obtains the new version information and sends requests to the upgrade package ma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the new version information ( **NewVersionInfo**). The callback parameters include **err** and **newInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **newInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **newInfo** is **null**. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)&gt; | Yes | Callback used to receive the new version information ( **NewVersionInfo**). The callback parameters include **err** and **newInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. Before calling this API, you must call **checkNewVersion** to check whether a new version is available. **newInfo** is valid only when **isExistNewVersion** is **true**. If **isExistNewVersion** is **false**, **newInfo** is **null**. |
 
 **Error codes:**
 
@@ -777,7 +777,7 @@ Obtains information about the update task. This method provides the online upgra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;TaskInfo&gt; | Yes | Callback used to receive the upgrade task information (**TaskInfo** ). The callback parameters include **err** and **taskInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **taskInfo** indicates the upgrade task information, including the **existTask** and **taskBody** fields. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;TaskInfo&gt; | Yes | Callback used to receive the upgrade task information (**TaskInfo** ). The callback parameters include **err** and **taskInfo**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **taskInfo** indicates the upgrade task information, including the **existTask** and **taskBody** fields. |
 
 **Error codes:**
 
@@ -863,7 +863,7 @@ Obtains the upgrade policy. If this API is called successfully, an **UpgradePoli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | Yes | Callback used to receive the upgrade policy. The callback parameters include **err** and **policy**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **policy** includes the **downloadStrategy**, **autoUpgradeStrategy**, and **autoUpgradePeriods** fields. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md)&gt; | Yes | Callback used to receive the upgrade policy. The callback parameters include **err** and **policy**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. **policy** includes the **downloadStrategy**, **autoUpgradeStrategy**, and **autoUpgradePeriods** fields. |
 
 **Error codes:**
 
@@ -1041,7 +1041,7 @@ Pauses download of the new version. This method provides the online upgrade func
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-update-pausedownloadoptions-i-sys.md) | Yes | Pausing download options, which are used to control the pause behavior. If there is no ongoing download task, using this parameter will cause the pause operation to fail or the parameter to be invalid. The **isAllowAutoResume** field specifies whether to allow automatically resuming the download. You are advised to set this parameter to **true** when the network is unstable, improving the download success rate. You are advised to set this parameter to **false** when the download time needs to be precisely controlled or resuming download needs to be prevented in specific network environments. In this case, you can call **resumeDownload** to control when to resume the download. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the download pause result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the download pause result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1160,7 +1160,7 @@ Resumes a paused download task for the upgrade package, which can prevent repeat
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-update-resumedownloadoptions-i-sys.md) | Yes | Resuming download options, which are used to specify the network type for resuming download. This parameter takes effect only after the **pauseDownload** API is called to pause download. If **pauseDownload** is not called to pause download, using this parameter will cause the download resumption to fail or the parameter to be invalid. The **allowNetwork** field specifies the network type allowed for resuming download. You are advised to select a network type based on the upgrade package size and network environment. If the upgrade package exceeds 100 MB, you are advised to set the network type to **WIFI** to reduce mobile data usage and improve the download speed. If you are in a mobile scenario or there is no Wi-Fi available, you can set the network type to **CELLULAR**. If the network environment is uncertain, you are advised to set the network type to **CELLULAR_AND_WIFI**. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the download resumption result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the download resumption result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1274,7 +1274,7 @@ Sets the upgrade policy to control the upgrade behavior. After the API is called
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | policy | [UpgradePolicy](arkts-basicservices-update-upgradepolicy-i-sys.md) | Yes | Upgrade policy, which is used to control the upgrade behavior. This parameter includes the **downloadStrategy** (automatic download policy), **autoUpgradeStrategy** (automatic upgrade policy), and **autoUpgradePeriods** (automatic upgrade period) fields. **downloadStrategy** specifies whether automatic download is allowed. The value **true** indicates that automatic download is allowed (applicable to scenarios where the system automatically detects and downloads the new version), and the value **false** indicates that automatic download is not allowed (applicable to scenarios where users need to manually confirm the download). **autoUpgradeStrategy** specifies whether automatic upgrade is allowed. The value **true** indicates that automatic upgrade is allowed (applicable to the scenario where the system needs to automatically complete the upgrade process), and the value **false** indicates that automatic upgrade is not allowed (applicable to the scenario where users need to manually confirm the upgrade). **autoUpgradePeriods** specifies the automatic upgrade period (optional). Pass this parameter when automatic upgrade needs to be performed in a specified period, for example, at night. If this parameter is not passed, the default value is an empty array **[]**, indicating that the automatic upgrade period is not specified. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the upgrade policy configuration result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the upgrade policy configuration result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1376,7 +1376,7 @@ Terminates the current upgrade task and cancels the ongoing installation. This m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the result of terminating upgrade. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of terminating upgrade. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -1464,7 +1464,7 @@ Upgrades the version by installing the upgrade package. After the API is success
 | --- | --- | --- | --- |
 | versionDigestInfo | [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md) | Yes | Version digest information. This parameter can be used only after the **checkNewVersion** API is called to check for a new version and the value of **isExistNewVersion** is **true**. The parameter value is obtained from the **newVersionInfo** field in the result returned by the **checkNewVersion** API, which identifies a specific version. This parameter is valid only when **isExistNewVersion** is **true**. |
 | upgradeOptions | [UpgradeOptions](arkts-basicservices-update-upgradeoptions-i-sys.md) | Yes | Upgrade options, which are used to specify the upgrade operation type. The **order** field specifies the upgrade command, which should be set based on the upgrade status and service requirements. The options are as follows: **DOWNLOAD**: download the upgrade package, which needs to be manually installed later; **INSTALL**: install the upgrade package that has been downloaded; **DOWNLOAD_AND_INSTALL**: download and install the upgrade package, which is the complete upgrade process; **APPLY**: apply the upgrade package that has been installed by restarting device; **INSTALL_AND_APPLY**: install the upgrade package and apply it immediately by restarting the device. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to receive the upgrade package installation result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the upgrade package installation result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 

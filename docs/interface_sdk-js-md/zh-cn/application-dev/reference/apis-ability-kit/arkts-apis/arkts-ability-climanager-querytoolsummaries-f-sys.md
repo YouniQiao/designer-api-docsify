@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## queryToolSummaries

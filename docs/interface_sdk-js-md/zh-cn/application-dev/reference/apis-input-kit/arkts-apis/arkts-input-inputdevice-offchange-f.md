@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## offChange
@@ -13,7 +11,7 @@ import { inputDeviceCooperate } from '@kit.InputKit';
 function offChange(listener?: Callback<DeviceListener>): void
 ```
 
-Stops listening for an input device event.
+取消监听输入设备的热插拔事件。在应用退出前调用，取消监听。
 
 **起始版本：** 23
 
@@ -25,7 +23,7 @@ Stops listening for an input device event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | 否 | Callback for the input device event. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceListener](arkts-input-inputdevice-devicelistener-i.md)&gt; | 否 | 取消监听的回调函数，缺省时取消所有输入设备热插拔事件的监听。 |
 
 **错误码：**
 

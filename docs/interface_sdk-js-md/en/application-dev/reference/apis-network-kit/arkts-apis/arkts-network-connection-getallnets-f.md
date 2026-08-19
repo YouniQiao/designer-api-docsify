@@ -26,7 +26,7 @@ Obtains the list of all connected networks. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;NetHandle&gt;&gt; | Yes | Callback used to return the result. If the list of all connected networks is obtained successfully, **error** is **undefined** and **data** is the list of activated networks. Otherwise, **error** is an error object. <br> Note: If Wi-Fi and cellular data are both enabled, and no application specifies the use of cellular data, only Wi-Fi is activated. In this case, only the **NetHandle** of Wi-Fi is returned. The NetHandle of Wi-Fi and cellular data can be obtained at the same time only when a specific application enables the cellular network. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetHandle&gt;&gt; | Yes | Callback used to return the result. If the list of all connected networks is obtained successfully, **error** is **undefined** and **data** is the list of activated networks. Otherwise, **error** is an error object. <br> Note: If Wi-Fi and cellular data are both enabled, and no application specifies the use of cellular data, only Wi-Fi is activated. In this case, only the **NetHandle** of Wi-Fi is returned. The NetHandle of Wi-Fi and cellular data can be obtained at the same time only when a specific application enables the cellular network. |
 
 **Error codes:**
 

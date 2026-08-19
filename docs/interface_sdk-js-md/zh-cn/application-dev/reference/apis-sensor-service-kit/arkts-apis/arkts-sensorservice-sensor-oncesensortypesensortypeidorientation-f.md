@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## once_SensorType.SENSOR_TYPE_ID_ORIENTATION
@@ -29,5 +28,5 @@ function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Or
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_ORIENTATION | 是 | 方向传感器类型为SENSOR_TYPE_ID_ORIENTATION。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | 是 | 注册一次方向传感器的回调函数，上报的数据类型为OrientationResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md)&gt; | 是 | 注册一次方向传感器的回调函数，上报的数据类型为OrientationResponse。 |
 

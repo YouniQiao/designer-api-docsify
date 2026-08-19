@@ -13,7 +13,6 @@ UDPSocket连接的其他属性。继承自[ExtraOptionsBase](arkts-network-socke
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
 ```
 
 ## broadcast

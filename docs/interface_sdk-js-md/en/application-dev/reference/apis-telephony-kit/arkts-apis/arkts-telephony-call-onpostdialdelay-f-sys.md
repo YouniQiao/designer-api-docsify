@@ -28,7 +28,7 @@ Subscribe to the postDialDelay event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of post-dial string. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of post-dial string. |
 
 **Error codes:**
 

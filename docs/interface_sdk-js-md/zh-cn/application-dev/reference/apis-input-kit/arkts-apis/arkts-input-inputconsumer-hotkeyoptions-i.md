@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## finalKey
@@ -20,7 +19,7 @@ import { inputConsumer } from '@kit.InputKit';
 finalKey: int
 ```
 
-被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md)。 例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
+被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md)。<br>例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
 
 **类型：** int
 
@@ -52,7 +51,7 @@ isRepeat?: boolean
 preKeys: Array<int>
 ```
 
-修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。 例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
+修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。<br>例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
 
 **类型：** Array&lt;int&gt;
 

@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -190,7 +189,7 @@ getBitsByRange(fromIndex: number, toIndex: number): BitVector
 
 | 类型 | 说明 |
 | --- | --- |
-| [BitVector](arkts-arkts-collections-bitvector-c.md) | 包含所获取 bit 值的 BitVector。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| [BitVector](../../apis-na/arkts-apis/arkts-na-collections-bitvector-c.md) | 包含所获取 bit 值的 BitVector。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
 
 **错误码：**
 

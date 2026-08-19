@@ -13,7 +13,6 @@ HiPlay 设备类型定义
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## castMode

@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

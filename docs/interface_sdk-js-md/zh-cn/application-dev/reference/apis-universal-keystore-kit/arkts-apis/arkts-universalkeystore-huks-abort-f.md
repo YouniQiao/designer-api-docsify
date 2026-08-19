@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## abort
@@ -31,7 +29,7 @@ abort终止密钥操作。使用callback异步回调。 > **说明：** > > 从A
 | --- | --- | --- | --- |
 | handle | number | 是 | Abort操作的uint64类型的handle值。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | Abort操作的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当密钥操作abort成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当密钥操作abort成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
 **示例**
 

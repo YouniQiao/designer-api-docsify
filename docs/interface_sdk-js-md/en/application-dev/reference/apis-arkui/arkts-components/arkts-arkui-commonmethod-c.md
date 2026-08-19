@@ -2751,7 +2751,7 @@ Sets whether to clip this component based on the given shape.
 clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 ```
 
-Clips this component according to the specified shape (which may include position information). > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
+Clips this component according to the specified shape (which may include position information). > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
 
 **Since:** 12
 
@@ -2783,7 +2783,7 @@ Clips this component according to the specified shape (which may include positio
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape), this API supports the **undefined** type. > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
+Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape), this API supports the **undefined** type. > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
 
 **Since:** 18
 
@@ -6497,7 +6497,7 @@ Triggered when the component enters a state prior to a gesture-based drag operat
 onSizeChange(event: SizeChangeCallback): T
 ```
 
-Triggered when the component size changes due to layout updates. > **NOTE：**> > 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may > deviate slightly from the actual physical size. > > 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state > variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically, > animations compare the layout state before the animation starts with the state after the animation closure is > executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the > changes made in this callback will be processed as part of the animation, along with the changes in the animation > closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or > [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside > **onSizeChange** to defer the UI processing logic to asynchronous execution.
+Triggered when the component size changes due to layout updates. > **NOTE：**> > 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may > deviate slightly from the actual physical size. > > 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state > variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically, > animations compare the layout state before the animation starts with the state after the animation closure is > executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the > changes made in this callback will be processed as part of the animation, along with the changes in the animation > closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md) or > [postFrameCallback](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside > **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
 

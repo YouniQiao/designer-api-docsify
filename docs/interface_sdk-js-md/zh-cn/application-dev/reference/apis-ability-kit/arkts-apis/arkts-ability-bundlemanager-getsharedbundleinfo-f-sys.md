@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getSharedBundleInfo
@@ -30,7 +29,7 @@ function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
 | moduleName | string | 是 | 表示被查询的module的name。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SharedBundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时 ，err为undefined，data为获取的指定共享包信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;SharedBundleInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时 ，err为undefined，data为获取的指定共享包信息。 |
 
 **错误码：**
 

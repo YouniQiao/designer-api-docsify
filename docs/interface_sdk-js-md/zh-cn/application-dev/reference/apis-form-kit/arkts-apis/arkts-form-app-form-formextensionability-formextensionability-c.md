@@ -11,7 +11,6 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## 导入模块
 
 ```TypeScript
-import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## onAcquireFormState

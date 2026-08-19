@@ -26,7 +26,7 @@ Converts a phone number into the E.164 format. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
 | countryCode | string | Yes | Country code, for example, **CN** (China). All country codes are supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

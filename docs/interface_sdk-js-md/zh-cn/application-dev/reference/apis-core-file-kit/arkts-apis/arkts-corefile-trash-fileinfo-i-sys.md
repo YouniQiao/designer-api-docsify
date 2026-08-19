@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { trash } from '@kit.CoreFileKit';
 ```
 
 ## ctime

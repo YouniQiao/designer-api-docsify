@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## onThreeFingersSwipe
@@ -28,7 +27,7 @@ function onThreeFingersSwipe(receiver: Callback<ThreeFingersSwipe>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ThreeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md)&gt; | 是 | 回调函数，异步上报三指滑动输入事件。 |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ThreeFingersSwipe](arkts-input-multimodalinput-gestureevent-threefingersswipe-i.md)&gt; | 是 | 回调函数，返回三指滑动输入事件。 |
 
 **错误码：**
 

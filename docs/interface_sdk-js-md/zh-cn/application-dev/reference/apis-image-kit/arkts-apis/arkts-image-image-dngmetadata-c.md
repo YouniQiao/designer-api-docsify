@@ -11,7 +11,6 @@ Dng图像元数据类，用于存储图像的元数据。
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## activeArea

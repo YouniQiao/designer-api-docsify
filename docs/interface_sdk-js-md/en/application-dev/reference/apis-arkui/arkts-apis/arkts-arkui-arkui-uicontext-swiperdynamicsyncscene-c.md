@@ -1,8 +1,8 @@
 # SwiperDynamicSyncScene
 
-Provides frame rate configuration APIs for the **Swiper** component. > **NOTE：**> - The initial APIs of this class are supported since API version 12. > > - **SwiperDynamicSyncScene** inherits from [DynamicSyncScene](arkts-arkui-arkui-uicontext-uicontext-c.md) and represents the > dynamic sync scene of the **Swiper** component.
+Provides frame rate configuration APIs for the **Swiper** component. > **NOTE：**> - The initial APIs of this class are supported since API version 12. > > - **SwiperDynamicSyncScene** inherits from [DynamicSyncScene](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) and represents the > dynamic sync scene of the **Swiper** component.
 
-**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)
+**Inheritance/Implementation:** SwiperDynamicSyncScene extends [DynamicSyncScene](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dynamicsyncscene-c.md)
 
 **Since:** 12
 
@@ -27,7 +27,7 @@ readonly type: SwiperDynamicSyncSceneType
 
 Dynamic sync scene of the **Swiper** component.
 
-**Type:** [SwiperDynamicSyncSceneType](arkts-arkui-arkui-uicontext-swiperdynamicsyncscenetype-e.md)
+**Type:** [SwiperDynamicSyncSceneType](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-swiperdynamicsyncscenetype-e.md)
 
 **Since:** 12
 

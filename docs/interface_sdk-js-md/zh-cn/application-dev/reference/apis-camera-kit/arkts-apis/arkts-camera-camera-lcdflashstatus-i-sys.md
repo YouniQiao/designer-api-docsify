@@ -13,8 +13,6 @@ Describes the LCD flash information.
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## isLcdFlashNeeded

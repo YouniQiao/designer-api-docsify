@@ -2,7 +2,7 @@
 
 Interface for RectShape constructor parameters with separate radius values.
 
-**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-shapesize-i.md)
+**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-na-arkui-shape-shapesize-i.md)
 
 **Since:** 23
 

@@ -27,7 +27,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | long | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| onDisconnect | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
 
 **Return value:**
 

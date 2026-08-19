@@ -25,7 +25,7 @@ Cancels notifications under a notification group of this application. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) when the notification is published. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getInstance
@@ -34,13 +33,13 @@ static getInstance(mode: NormalizerMode): Normalizer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | 是 | 文本标准化范式。 |
+| mode | [NormalizerMode](../../apis-na/arkts-apis/arkts-na-i18n-normalizermode-e.md) | 是 | 文本标准化范式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Normalizer](arkts-localization-i18n-normalizer-c.md) | 返回指定范式的文本标准化对象。 |
+| [Normalizer](../../apis-na/arkts-apis/arkts-na-i18n-normalizer-c.md) | 返回指定范式的文本标准化对象。 |
 
 **错误码：**
 

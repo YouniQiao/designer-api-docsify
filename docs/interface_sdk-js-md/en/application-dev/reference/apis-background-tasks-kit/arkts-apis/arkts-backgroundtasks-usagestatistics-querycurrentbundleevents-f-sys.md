@@ -28,7 +28,7 @@ Queries state data of the current bundle within a specified period.
 | --- | --- | --- | --- |
 | begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
 | end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md) object Array containing the state data of the current bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleEvents](arkts-backgroundtasks-usagestatistics-bundleevents-i-sys.md) object Array containing the state data of the current bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## offAdvertisingStateChange
@@ -26,7 +25,7 @@ function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AdvertisingStateChangeInfo](arkts-connectivity-advertising-advertisingstatechangeinfo-i.md)&gt; | 否 | 用于监听广播状态的回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AdvertisingStateChangeInfo](arkts-connectivity-advertising-advertisingstatechangeinfo-i.md)&gt; | 否 | 用于监听广播状态的回调。 |
 
 **错误码：**
 

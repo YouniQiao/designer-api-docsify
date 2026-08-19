@@ -3,10 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Ability } from '@kit.AbilityKit';
-import { AbilityConstant } from '@kit.AbilityKit';
-import { AbilityLifecycleCallback } from '@kit.AbilityKit';
-import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## 汇总

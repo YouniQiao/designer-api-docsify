@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## on_sessionDestroy('sessionDestroy')

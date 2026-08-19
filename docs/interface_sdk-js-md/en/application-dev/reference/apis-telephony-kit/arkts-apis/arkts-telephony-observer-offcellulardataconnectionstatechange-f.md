@@ -24,7 +24,7 @@ Cancel callback when the cellular data link connection state is updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | No | Indicates the callback to unsubscribe from the cellularDataConnectionStateChange event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | No | Indicates the callback to unsubscribe from the cellularDataConnectionStateChange event. |
 
 **Error codes:**
 

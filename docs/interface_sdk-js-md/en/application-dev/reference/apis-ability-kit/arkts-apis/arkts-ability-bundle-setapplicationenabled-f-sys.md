@@ -49,7 +49,7 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setApplicationEnabled

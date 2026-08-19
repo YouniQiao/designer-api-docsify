@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
 ```
 
 ## onFoldAngleChange
@@ -24,7 +23,7 @@ Register the callback for fold angle changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | Callback used to return the current fold angle of device. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | 是 | Callback used to return the current fold angle of device. |
 
 **错误码：**
 

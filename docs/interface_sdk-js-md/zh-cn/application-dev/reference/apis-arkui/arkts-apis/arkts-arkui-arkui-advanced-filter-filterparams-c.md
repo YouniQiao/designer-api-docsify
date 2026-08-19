@@ -11,7 +11,6 @@ This parameter is used to define the input of each filtering dimension.
 ## 导入模块
 
 ```TypeScript
-import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 ```
 
 ## name

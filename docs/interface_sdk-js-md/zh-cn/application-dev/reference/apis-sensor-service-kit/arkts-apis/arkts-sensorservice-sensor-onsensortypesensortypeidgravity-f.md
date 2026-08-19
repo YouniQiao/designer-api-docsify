@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## on_SensorType.SENSOR_TYPE_ID_GRAVITY
@@ -30,6 +29,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityR
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_GRAVITY | 是 | 要订阅的重力传感器类型为SENSOR_TYPE_ID_GRAVITY。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | 是 | 注册重力传感器的回调函数，上报的数据类型为GravityResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md)&gt; | 是 | 注册重力传感器的回调函数，上报的数据类型为GravityResponse。 |
 | options | Options | 否 | 用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 

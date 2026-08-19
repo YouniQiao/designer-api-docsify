@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
 ```
 
 ## setBackgroundAllowed
@@ -29,7 +28,7 @@ function setBackgroundAllowed(isAllowed: boolean, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isAllowed | boolean | 是 | 是否允许应用后台使用数据。true：允许应用后台使用数据；false：不允许应用后台使用数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，成功时，err 为 undefined，失败返回错误码错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，成功时，err 为 undefined，失败返回错误码错误信息。 |
 
 **错误码：**
 

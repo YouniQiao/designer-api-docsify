@@ -13,7 +13,6 @@ formObserver模块提供了卡片监听方相关接口的能力，包括对同�
 ## 导入模块
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
 ```
 
 ## 汇总

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { InputMethodExtensionContext } from '@kit.IMEKit';
 ```
 
 ## 汇总

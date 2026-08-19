@@ -11,7 +11,6 @@ Font类用于描述字型绘制时所使用的属性（如大小、字体、粗�
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## countText

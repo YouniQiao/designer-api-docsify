@@ -15,7 +15,6 @@ UIServiceExtensionAbility提供浮窗组件相关扩展能力，继承自[Extens
 ## 导入模块
 
 ```TypeScript
-import { UIServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect

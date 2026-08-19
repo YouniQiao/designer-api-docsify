@@ -606,7 +606,7 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
 
 **Return value:**
 

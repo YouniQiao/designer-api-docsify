@@ -11,7 +11,6 @@ Provides preferred playback settings for player.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## enableCameraPostprocessing

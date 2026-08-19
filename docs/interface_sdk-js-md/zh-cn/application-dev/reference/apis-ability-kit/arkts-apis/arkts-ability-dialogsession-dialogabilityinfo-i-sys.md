@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## abilityIconId

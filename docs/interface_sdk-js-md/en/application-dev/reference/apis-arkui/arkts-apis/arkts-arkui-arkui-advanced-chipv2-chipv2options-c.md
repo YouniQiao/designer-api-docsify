@@ -36,7 +36,7 @@ The constructor of ChipV2Options
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
+| config | [IChipV2OptionsConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
 
 ## accessibilityDescription
 

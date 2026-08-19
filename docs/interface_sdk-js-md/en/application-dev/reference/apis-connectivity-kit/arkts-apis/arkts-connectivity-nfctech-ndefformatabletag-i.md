@@ -72,7 +72,7 @@ Formats a tag as NDEF tag, writes NDEF message into the NDEF Tag.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write while format. It can be null, then only format the tag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -145,7 +145,7 @@ Formats a tag as NDEF tag, writes NDEF message into the NDEF Tag, then sets the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | message | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to write while format. It can be null, then only format the tag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 

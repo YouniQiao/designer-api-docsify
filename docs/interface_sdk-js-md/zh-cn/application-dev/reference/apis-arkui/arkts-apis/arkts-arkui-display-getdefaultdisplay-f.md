@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
 ```
 
 ## getDefaultDisplay
@@ -28,7 +27,7 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | 是 | 回调函数。返回当前默认的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | 是 | 回调函数。返回当前默认的Display对象。 |
 
 **示例**
 

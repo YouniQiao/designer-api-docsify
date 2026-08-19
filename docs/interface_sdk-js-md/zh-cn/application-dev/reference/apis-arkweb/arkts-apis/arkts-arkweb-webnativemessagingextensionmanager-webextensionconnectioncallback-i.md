@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## onConnect
@@ -34,7 +33,7 @@ onConnect(connection: ConnectionNativeInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | 是 | 连接信息，包含连接ID、扩展应用包名、浏览器扩展源URL和扩展进程ID等信息。 |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | 是 | 连接信息，包含连接ID、扩展应用包名、浏览器扩展源URL和扩展进程ID等信息。 |
 
 **示例**
 
@@ -155,7 +154,7 @@ onDisconnect(connection: ConnectionNativeInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | 是 | 连接信息，包含连接ID、扩展应用包名、浏览器扩展源URL和扩展进程ID等信息。 |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | 是 | 连接信息，包含连接ID、扩展应用包名、浏览器扩展源URL和扩展进程ID等信息。 |
 
 **示例**
 
@@ -276,7 +275,7 @@ onFailed(code: NmErrorCode, errMsg: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [NmErrorCode](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-nmerrorcode-e.md) | 是 | 错误码。 |
+| code | [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | 是 | 错误码。 |
 | errMsg | string | 是 | 错误码对应信息。 |
 
 **示例**

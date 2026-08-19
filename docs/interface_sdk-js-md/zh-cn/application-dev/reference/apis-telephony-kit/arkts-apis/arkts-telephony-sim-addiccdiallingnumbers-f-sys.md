@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
 ```
 
 ## addIccDiallingNumbers
@@ -31,7 +30,7 @@ Add dialing number information to SIM card.
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | type | [ContactType](arkts-telephony-sim-contacttype-e-sys.md) | 是 | Indicates contact type. |
 | diallingNumbers | [DiallingNumbersInfo](arkts-telephony-sim-diallingnumbersinfo-i-sys.md) | 是 | Indicates dialing number information. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback of addIccDiallingNumbers. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The callback of addIccDiallingNumbers. |
 
 **错误码：**
 

@@ -31,7 +31,7 @@ Registers a listener for screen hopping state changes. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cooperation' | Yes | Event type. The value is **cooperation**. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{ deviceDescriptor: string, eventMsg: EventMsg }&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceDescriptor: string, eventMsg: EventMsg }&gt; | Yes |  |
 
 **Error codes:**
 

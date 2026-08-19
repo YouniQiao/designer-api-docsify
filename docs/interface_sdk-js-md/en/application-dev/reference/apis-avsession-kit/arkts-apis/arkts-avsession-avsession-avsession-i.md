@@ -32,7 +32,7 @@ Activate the session, indicating that the session can accept control commands
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is activated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is activated. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is deactivated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the session is deactivated. |
 
 **Error codes:**
 
@@ -144,7 +144,7 @@ Destroy this session, the server will clean up the session resources
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -202,7 +202,7 @@ Dispatch the session event of this session.
 | --- | --- | --- | --- |
 | event | string | Yes | Session event name to dispatch |
 | args | {[key: string]: Object} | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -234,7 +234,7 @@ Dispatch the session event of this session.
 | --- | --- | --- | --- |
 | event | string | Yes | Session event name to dispatch |
 | args | Record&lt;string, Object&gt; | Yes | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -370,7 +370,7 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -397,7 +397,7 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
@@ -511,7 +511,7 @@ Get the current session's own controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | Yes | async callback for the AVSessionController. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | Yes | async callback for the AVSessionController. |
 
 **Error codes:**
 
@@ -598,7 +598,7 @@ Get output device information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | async callback for the OutputDeviceInfo. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes | async callback for the OutputDeviceInfo. |
 
 **Error codes:**
 
@@ -741,7 +741,7 @@ Unregister listener for cast display information changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -795,7 +795,7 @@ Unsubscribes from custom data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
 
 **Error codes:**
 
@@ -824,7 +824,7 @@ Unregister desktop lyric state changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -853,7 +853,7 @@ Unregister desktop lyric visible state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -907,7 +907,7 @@ Unregister media key handling callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | No | Used to handle key events.The callback provides the KeyEvent |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | No | Used to handle key events.The callback provides the KeyEvent |
 
 **Error codes:**
 
@@ -1015,7 +1015,7 @@ Unregister play command callback. When canceling the callback, need to update th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('play') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -1042,7 +1042,7 @@ Unregister playNext command callback. When canceling the callback, need to updat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playNext') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -1069,7 +1069,7 @@ Unregister playPrevious command callback. When canceling the callback, need to u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playPrevious') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -1098,7 +1098,7 @@ Unsubscribes from playWithAssetId events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -1152,7 +1152,7 @@ Unregister seek command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | No | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Used to handle seek command.The callback provides the seek time(ms) |
 
 **Error codes:**
 
@@ -1179,7 +1179,7 @@ Unregister setLoopMode command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -1206,7 +1206,7 @@ Unregister setSpeed command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | No | Used to handle setSpeed command.The callback provides the speed value |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | No | Used to handle setSpeed command.The callback provides the speed value |
 
 **Error codes:**
 
@@ -1233,7 +1233,7 @@ Unregister setTargetLoopMode command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -1260,7 +1260,7 @@ Unregister the item to play from the playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
 
 **Error codes:**
 
@@ -1341,7 +1341,7 @@ Unregister toggle favorite command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **Error codes:**
 
@@ -1371,7 +1371,7 @@ Unregister answer command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'answer' | Yes | Command to register 'answer'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle ('answer') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle ('answer') command |
 
 **Error codes:**
 
@@ -1402,7 +1402,7 @@ Unregister listener for cast display information changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | Yes | Type of the 'castDisplayChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -1464,7 +1464,7 @@ Unsubscribes from custom data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Custom data type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to return the custom data. |
 
 **Error codes:**
 
@@ -1556,7 +1556,7 @@ Unregister hangUp command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hangUp' | Yes | Command to register 'hangUp'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle ('hangUp') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle ('hangUp') command |
 
 **Error codes:**
 
@@ -1777,7 +1777,7 @@ Unsubscribes from playWithAssetId events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | Yes | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -1931,7 +1931,7 @@ Unregister setTargetLoopMode command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes | Registration Type 'setTargetLoopMode' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
 
 **Error codes:**
 
@@ -2023,7 +2023,7 @@ Unregister toggleCallMute command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | Yes | Command to register 'toggleCallMute'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Used to handle ('toggleCallMute') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle ('toggleCallMute') command |
 
 **Error codes:**
 
@@ -2109,7 +2109,7 @@ Register listener for cast display information changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -2163,7 +2163,7 @@ Register listener for custom data sent from remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2192,7 +2192,7 @@ Register desktop lyric state changed callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
@@ -2221,7 +2221,7 @@ Register desktop lyric visible state change callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
@@ -2275,7 +2275,7 @@ Register media key handling callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | Yes | Used to handle key events.The callback provides the KeyEvent |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | Yes | Used to handle key events.The callback provides the KeyEvent |
 
 **Error codes:**
 
@@ -2383,7 +2383,7 @@ Register play command callback. The application will receive [CommandInfo](arkts
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('play') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -2410,7 +2410,7 @@ Register playNext command callback. The application will receive [CommandInfo](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playNext') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -2439,7 +2439,7 @@ Register playPrevious command callback. The application will receive [CommandInf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playPrevious') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -2466,7 +2466,7 @@ Subscribes to playWithAssetId events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -2522,7 +2522,7 @@ Register seek command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Used to handle seek command.The callback provides the seek time(ms) |
 
 **Error codes:**
 
@@ -2549,7 +2549,7 @@ Register setLoopMode command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -2576,7 +2576,7 @@ Register setSpeed command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;double&gt; | Yes | Used to handle setSpeed command.The callback provides the speed value |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;double&gt; | Yes | Used to handle setSpeed command.The callback provides the speed value |
 
 **Error codes:**
 
@@ -2603,7 +2603,7 @@ Register setTargetLoopMode command callback Application should change playmode t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command. The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -2630,7 +2630,7 @@ Register the item to play from the playlist change callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
 
 **Error codes:**
 
@@ -2711,7 +2711,7 @@ Register toggle favorite command callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **Error codes:**
 
@@ -2741,7 +2741,7 @@ Register answer command callback. As long as it is registered, it means that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'answer' | Yes | Command to register 'answer'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle ('answer') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle ('answer') command |
 
 **Error codes:**
 
@@ -2772,7 +2772,7 @@ Register listener for cast display information changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'castDisplayChange' | Yes | Type of the 'castDisplayChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes | Callback used to return cast display information. |
 
 **Error codes:**
 
@@ -2834,7 +2834,7 @@ Register listener for custom data sent from remote device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
@@ -2926,7 +2926,7 @@ Register hangUp command callback. As long as it is registered, it means that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hangUp' | Yes | Command to register 'hangUp'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle ('hangUp') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle ('hangUp') command |
 
 **Error codes:**
 
@@ -3147,7 +3147,7 @@ Subscribes to playWithAssetId events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playWithAssetId' | Yes | Event type. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to handle the 'playWithAssetId' command. |
 
 **Error codes:**
 
@@ -3301,7 +3301,7 @@ Register setTargetLoopMode command callback Application should change playmode t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes | Registration Type 'setTargetLoopMode' |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes | Used to handle setTargetLoopMode command.The callback provides the {@ link LoopMode} |
 
 **Error codes:**
 
@@ -3393,7 +3393,7 @@ Register toggleCallMute command callback. As long as it is registered, it means 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleCallMute' | Yes | Command to register 'toggleCallMute'. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Used to handle ('toggleCallMute') command |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle ('toggleCallMute') command |
 
 **Error codes:**
 
@@ -3488,7 +3488,7 @@ Set the call state of this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) | Yes | [AVCallState](arkts-avsession-avsession-avcallstate-i.md) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3551,7 +3551,7 @@ Set the metadata of this session. In addition to the required properties, users 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | AVMetadata | Yes | { |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3616,7 +3616,7 @@ Set the playback state of this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | state | [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | Yes | { |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3681,7 +3681,7 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | items | Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes | An array of the AVQueueItem |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3746,7 +3746,7 @@ Set the name of the playlist presented by this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | title | string | Yes | The name of the playlist |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -3846,7 +3846,7 @@ Set the metadata related with current call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | Yes | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -3983,7 +3983,7 @@ Set the custom media packets for this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extras | {[key: string]: Object} | Yes | The custom media packets |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -4014,7 +4014,7 @@ Set the custom media packets for this session.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | extras | Record&lt;string, Object&gt; | Yes | The custom media packets |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
@@ -4113,7 +4113,7 @@ Set the ability to start the session corresponding to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) | Yes | The WantAgent for launch the ability |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
@@ -4286,7 +4286,7 @@ Stop current cast and disconnect device connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | A callback instance used to return when cast stopped completed. |
 
 **Error codes:**
 

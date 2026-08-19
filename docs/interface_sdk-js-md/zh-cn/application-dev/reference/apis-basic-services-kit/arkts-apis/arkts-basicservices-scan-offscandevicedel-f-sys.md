@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## offScanDeviceDel
@@ -28,7 +27,7 @@ Unregister event callback for scanner device delete (system API).
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 否 | Optional callback to unregister. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 否 | Optional callback to unregister. |
 
 **错误码：**
 

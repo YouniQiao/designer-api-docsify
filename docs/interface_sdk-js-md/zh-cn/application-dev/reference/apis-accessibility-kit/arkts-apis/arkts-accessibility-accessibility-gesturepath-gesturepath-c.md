@@ -11,7 +11,6 @@ GesturePath表示手势路径信息。 本模块用于创建手势路径信息�
 ## 导入模块
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## constructor

@@ -101,7 +101,7 @@ Obtain a Json file that describes local capabilities.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 

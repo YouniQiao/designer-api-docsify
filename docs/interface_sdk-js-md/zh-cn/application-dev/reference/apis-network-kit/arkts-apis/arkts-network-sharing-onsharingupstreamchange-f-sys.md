@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
 ```
 
 ## on_sharingUpstreamChange('sharingUpstreamChange')
@@ -29,7 +28,7 @@ function on(type: 'sharingUpstreamChange', callback: Callback<NetHandle>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sharingUpstreamChange' | 是 | 订阅的事件类型。'sharingUpstreamChange'：注册上行网络变化事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 是 | 回调函数，上行网络变化时调用。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | 是 | 回调函数，上行网络变化时调用。 |
 
 **错误码：**
 

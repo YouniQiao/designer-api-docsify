@@ -11,7 +11,6 @@ NativeMediaPlayerSurfaceInfo 使用enableNativeMediaPlayer来进行同层渲染�
 ## 导入模块
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
 ```
 
 ## id

@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

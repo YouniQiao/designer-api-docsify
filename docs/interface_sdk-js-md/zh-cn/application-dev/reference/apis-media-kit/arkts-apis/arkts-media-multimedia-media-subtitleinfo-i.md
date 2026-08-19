@@ -11,7 +11,6 @@ Provides subtitle information. When a subtitle update event is subscribed to, th
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## duration

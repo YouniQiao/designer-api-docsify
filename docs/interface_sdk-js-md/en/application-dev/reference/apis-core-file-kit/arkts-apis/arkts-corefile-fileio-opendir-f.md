@@ -59,5 +59,5 @@ Opens a file directory. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory to open. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; | Yes | Callback invoked when the directory is opened asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; | Yes | Callback invoked when the directory is opened asynchronously. |
 

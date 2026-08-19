@@ -30,7 +30,7 @@ Unsubscribe from imsRegStateChange event.
 | --- | --- | --- | --- |
 | slotId | int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | imsType | [ImsServiceType](arkts-telephony-radio-imsservicetype-e-sys.md) | Yes | Indicates the ims service type of the [ImsServiceType](arkts-telephony-radio-imsservicetype-e-sys.md). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md)&gt; | No | Indicates the callback for getting an instance of the [ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md) class. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md)&gt; | No | Indicates the callback for getting an instance of the [ImsRegInfo](arkts-telephony-radio-imsreginfo-i-sys.md) class. |
 
 **Error codes:**
 

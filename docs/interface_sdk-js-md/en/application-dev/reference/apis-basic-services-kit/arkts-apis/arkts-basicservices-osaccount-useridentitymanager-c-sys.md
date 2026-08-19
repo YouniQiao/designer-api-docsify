@@ -351,7 +351,7 @@ Obtains authentication information. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -405,7 +405,7 @@ Obtains authentication information of the specified type. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authType | AuthType | Yes | Authentication credential type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -645,7 +645,7 @@ Unsubscribes from credential change events. If no callback is not specified, thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
 
 **Error codes:**
 
@@ -712,7 +712,7 @@ Subscribes to one or more credential change events. This API uses a callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | credentialTypes | AuthType[] | Yes | Credential types subscribed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
 
 **Error codes:**
 
@@ -772,7 +772,7 @@ Opens a session to obtain the challenge value. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

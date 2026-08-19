@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## 汇总

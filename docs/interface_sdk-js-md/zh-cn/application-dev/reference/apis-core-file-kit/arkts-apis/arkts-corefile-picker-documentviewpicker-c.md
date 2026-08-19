@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -324,7 +323,7 @@ save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | 是 | documentPicker保存选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -402,7 +401,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker保存后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -547,7 +546,7 @@ select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | 是 | documentPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 
@@ -620,7 +619,7 @@ select(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | callback 返回documentPicker选择后的结果集。 <br>**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
 
 **示例**
 

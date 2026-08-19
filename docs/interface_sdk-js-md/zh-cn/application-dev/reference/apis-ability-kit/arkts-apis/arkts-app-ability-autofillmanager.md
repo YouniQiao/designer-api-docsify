@@ -13,7 +13,6 @@ autoFillManager模块为应用提供账号、密码、地址、电话号码等�
 ## 导入模块
 
 ```TypeScript
-import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

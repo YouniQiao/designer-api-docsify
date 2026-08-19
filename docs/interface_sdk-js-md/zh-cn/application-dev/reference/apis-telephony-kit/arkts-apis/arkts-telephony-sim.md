@@ -11,7 +11,6 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
 ```
 
 ## 汇总

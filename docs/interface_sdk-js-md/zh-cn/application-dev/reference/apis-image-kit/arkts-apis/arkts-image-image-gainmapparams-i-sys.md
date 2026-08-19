@@ -13,7 +13,6 @@ Gainmap（增益图）参数设置选项。
 ## 导入模块
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
 ```
 
 ## isFullSizeGainmap

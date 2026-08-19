@@ -26,7 +26,7 @@ Obtains an RdbStore instance. You can set the **config** parameter as required a
 | --- | --- | --- | --- |
 | context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context.<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
 | config | StoreConfig | Yes | Configuration of the RDB store. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RdbStore&gt; | Yes | Callback invoked to return the RDB store obtained. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | Yes | Callback invoked to return the RDB store obtained. |
 
 **Error codes:**
 

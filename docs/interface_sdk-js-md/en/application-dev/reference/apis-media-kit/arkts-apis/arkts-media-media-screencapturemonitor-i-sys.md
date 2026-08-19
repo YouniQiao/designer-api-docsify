@@ -36,7 +36,7 @@ Unsubscribes from state change events of the system screen recorder. This event 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ Unsubscribes from state change events of the system screen recorder.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | Yes | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | No | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
 
 **Error codes:**
 
@@ -99,7 +99,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | Yes | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-media-screencaptureevent-e-sys.md)&gt; | Yes | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
 
 **Error codes:**
 

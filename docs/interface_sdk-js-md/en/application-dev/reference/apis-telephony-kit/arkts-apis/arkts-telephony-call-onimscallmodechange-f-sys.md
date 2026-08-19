@@ -28,7 +28,7 @@ Subscribe to the imsCallModeChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ImsCallModeInfo](arkts-telephony-call-imscallmodeinfo-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of ImsCallModeInfo details. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ImsCallModeInfo](arkts-telephony-call-imscallmodeinfo-i-sys.md)&gt; | Yes | Indicates the callback for getting the result of ImsCallModeInfo details. |
 
 **Error codes:**
 

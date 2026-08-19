@@ -15,8 +15,6 @@ huks Handle结构体。 > **说明：** > > 从API version 9开始废弃，建�
 ## 导入模块
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## errorCode

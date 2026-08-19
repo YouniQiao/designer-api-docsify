@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## once_SensorId.ACCELEROMETER
@@ -27,7 +26,7 @@ function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorId.ACCELEROMETER | 是 | 传感器类型，该值固定为SensorId.ACCELEROMETER。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为AccelerometerResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AccelerometerResponse&gt; | 是 | 回调函数，异步上报的传感器数据固定为AccelerometerResponse。 |
 
 **错误码：**
 

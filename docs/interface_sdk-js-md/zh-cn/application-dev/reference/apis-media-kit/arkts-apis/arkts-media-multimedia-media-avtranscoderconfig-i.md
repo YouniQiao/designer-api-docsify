@@ -11,7 +11,6 @@ Describes the video transcoding parameters.
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## audioBitrate

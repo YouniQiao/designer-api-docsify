@@ -15,6 +15,5 @@ FaultLogExtensionContext是 [FaultLogExtensionAbility](arkts-performanceanalysis
 ## 导入模块
 
 ```TypeScript
-import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```
 

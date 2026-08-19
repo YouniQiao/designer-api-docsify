@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
-import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## setDate
@@ -32,7 +30,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | date | Date | 是 | 目标日期。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **错误码：**
 

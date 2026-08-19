@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
-import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## setKeyboardRepeatDelay
@@ -27,8 +25,8 @@ function setKeyboardRepeatDelay(delay: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delay | int | 是 | 键盘按键重复延迟时间，默认值500ms，调节范围[300ms，1000ms]。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置键盘按键重复延迟时间成功，err为undefined，否则为错误对象。 |
+| delay | int | 是 | 键盘按键的重复时延，默认值500ms，调节范围[300ms, 1000ms]。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置键盘按键重复时延成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -124,7 +122,7 @@ function setKeyboardRepeatDelay(delay: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delay | int | 是 | 键盘按键重复延迟时间，默认值500ms，调节范围[300ms，1000ms]。 |
+| delay | int | 是 | 键盘按键重复延迟时间，默认值500ms，调节范围[300ms, 1000ms]。 |
 
 **返回值：**
 

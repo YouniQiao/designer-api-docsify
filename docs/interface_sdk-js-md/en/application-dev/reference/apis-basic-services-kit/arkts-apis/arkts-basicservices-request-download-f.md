@@ -34,7 +34,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | Download configuration. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

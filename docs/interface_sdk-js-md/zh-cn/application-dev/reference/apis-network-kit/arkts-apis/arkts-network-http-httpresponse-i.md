@@ -11,7 +11,6 @@ request方法回调函数的返回值类型。
 ## 导入模块
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
 ```
 
 ## connectionExtraInfo

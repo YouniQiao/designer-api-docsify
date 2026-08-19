@@ -29,7 +29,7 @@ Checks whether the super device administrator application of the first user (u10
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | String | Yes | Super device administrator application. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 

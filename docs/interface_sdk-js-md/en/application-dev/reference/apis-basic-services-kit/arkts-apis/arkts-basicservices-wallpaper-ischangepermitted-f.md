@@ -26,7 +26,7 @@ Checks whether to allow the application to change the wallpaper for the current 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
 
 **Examples**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
 ## isDefaultApplication
@@ -25,7 +24,7 @@ function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 要查询的应用类型，取[ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md)或者 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md)类型中的值。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为bool值 ，true表示是默认应用，false表示不是默认应用；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)，当获取成功时，err为undefined，data为bool值 ，true表示是默认应用，false表示不是默认应用；否则为错误对象。 |
 
 **错误码：**
 

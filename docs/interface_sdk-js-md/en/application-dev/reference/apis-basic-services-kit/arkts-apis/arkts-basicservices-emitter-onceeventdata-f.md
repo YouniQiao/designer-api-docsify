@@ -25,7 +25,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
 
 **Examples**
 

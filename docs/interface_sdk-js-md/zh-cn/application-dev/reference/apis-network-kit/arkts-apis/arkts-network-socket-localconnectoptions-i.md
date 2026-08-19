@@ -11,7 +11,6 @@ LocalSocket客户端在连接服务端时传入的参数信息。
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

@@ -15,7 +15,6 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 ## 导入模块
 
 ```TypeScript
-import { Vector } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

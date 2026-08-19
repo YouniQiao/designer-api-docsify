@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## 汇总

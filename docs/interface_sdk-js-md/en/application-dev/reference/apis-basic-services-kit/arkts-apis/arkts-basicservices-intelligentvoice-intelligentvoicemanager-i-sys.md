@@ -77,7 +77,7 @@ Unsubscribes service change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -109,7 +109,7 @@ Unsubscribes service change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the event to listen for. Only the serviceChange event is supported. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Subscribes service change events. When the state of intelligent voice service ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 
@@ -180,7 +180,7 @@ Subscribes service change events. When the state of intelligent voice service ch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the event to listen for. Only the serviceChange event is supported. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 

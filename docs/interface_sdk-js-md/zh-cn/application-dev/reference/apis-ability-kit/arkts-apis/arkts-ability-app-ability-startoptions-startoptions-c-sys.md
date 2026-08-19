@@ -11,7 +11,6 @@ StartOptions可以作为启动UIAbility接口（例如 [startAbility()](arkts-ab
 ## 导入模块
 
 ```TypeScript
-import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## windowFocused

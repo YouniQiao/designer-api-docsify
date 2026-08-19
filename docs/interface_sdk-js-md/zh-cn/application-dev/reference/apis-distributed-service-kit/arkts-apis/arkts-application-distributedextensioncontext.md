@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 ```
 
 ## 汇总

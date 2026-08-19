@@ -37,13 +37,13 @@ static getInstance(mode: NormalizerMode): Normalizer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizermode-e.md) | 是 | 文本标准化范式。 |
+| mode | [NormalizerMode](arkts-na-i18n-normalizermode-e.md) | 是 | 文本标准化范式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Normalizer](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-normalizer-c.md) | 返回指定范式的文本标准化对象。 |
+| [Normalizer](arkts-na-i18n-normalizer-c.md) | 返回指定范式的文本标准化对象。 |
 
 **错误码：**
 

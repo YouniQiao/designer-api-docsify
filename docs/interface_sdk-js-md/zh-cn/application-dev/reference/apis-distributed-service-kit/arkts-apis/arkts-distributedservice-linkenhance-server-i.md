@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## close
@@ -81,7 +80,7 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **错误码：**
 
@@ -139,7 +138,7 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | Registered callback, where **int** indicates the returned error code. |
 
 **错误码：**
 
@@ -198,7 +197,7 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数，参数为连接对象[Connection](arkts-distributedservice-linkenhance-connection-i.md)。 需传入对应on方法 最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效果与传入行为一致。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数，参数为连接对象[Connection](arkts-distributedservice-linkenhance-connection-i.md)。 需传入对应on方法 最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效果与传入行为一致。 |
 
 **错误码：**
 
@@ -257,7 +256,7 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。需传入对应on方法最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效 果与传入行为一致。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。需传入对应on方法最后一次注册的回调函数，用于取消该回调的订阅，默认缺省效 果与传入行为一致。 |
 
 **错误码：**
 
@@ -315,7 +314,7 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Callback used to listen for the server is connected event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Callback used to listen for the server is connected event. |
 
 **错误码：**
 
@@ -373,7 +372,7 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | Registered callback, where **int** indicates the returned error code. |
 
 **错误码：**
 
@@ -432,7 +431,7 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **错误码：**
 
@@ -491,7 +490,7 @@ on(type: 'serverStopped', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 注册的回调函数，当底层服务异常停止时触发，number为返回的错误码。 |
 
 **错误码：**
 

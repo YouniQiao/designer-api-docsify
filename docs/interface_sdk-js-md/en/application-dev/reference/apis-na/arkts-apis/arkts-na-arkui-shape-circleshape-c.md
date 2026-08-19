@@ -2,7 +2,7 @@
 
 Defines a circle drawing class.
 
-**Inheritance/Implementation:** CircleShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md)
+**Inheritance/Implementation:** CircleShape extends [BaseShape](arkts-na-arkui-shape-baseshape-c.md)
 
 **Since:** 23
 
@@ -39,5 +39,5 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-shapesize-i.md) | No |  |
+| options | [ShapeSize](arkts-na-arkui-shape-shapesize-i.md) | No |  |
 

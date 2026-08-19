@@ -13,7 +13,6 @@ DateOptions定义日期选择器的选项。 继承于[CommonOptions](../../apis
 ## 导入模块
 
 ```TypeScript
-import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode, TimeFormat, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## lunar

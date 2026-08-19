@@ -11,9 +11,6 @@ CompletionHandler提供了 [onRequestSuccess](#onrequestsuccess)和 [onRequestFa
 ## 导入模块
 
 ```TypeScript
-import { CompletionHandler } from '@kit.AbilityKit';
-import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
 ```
 
 ## onRequestFailure

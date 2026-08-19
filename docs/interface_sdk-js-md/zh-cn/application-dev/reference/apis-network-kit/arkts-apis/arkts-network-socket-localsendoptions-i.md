@@ -11,7 +11,6 @@ LocalSocket发送请求的参数。
 ## 导入模块
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
 ```
 
 ## data

@@ -29,7 +29,7 @@ Compresses a file. This API uses an asynchronous callback to return the result. 
 | inFile | string | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md) is used to decompress the folder. |
 | outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
 | options | Options | Yes | Compression parameters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
 

@@ -13,8 +13,6 @@ WLAN代理配置。
 ## 导入模块
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## exclusionObjects

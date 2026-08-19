@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## isStartupTaskInitialized
@@ -26,7 +25,7 @@ function isStartupTaskInitialized(startupTask: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startupTask | string | 是 | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| startupTask | string | 是 | 启动任务[StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
 
 **返回值：**
 

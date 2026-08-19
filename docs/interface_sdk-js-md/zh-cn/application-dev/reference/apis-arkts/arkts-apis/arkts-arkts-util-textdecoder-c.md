@@ -11,42 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
-import { ArrayListComparatorFn } from '@kit.ArkTS';
-import { ArrayListForEachCb } from '@kit.ArkTS';
-import { ArrayListReplaceCb } from '@kit.ArkTS';
-import { util } from '@kit.ArkTS';
-import { Deque } from '@kit.ArkTS';
-import { DequeForEachCb } from '@kit.ArkTS';
-import { HashMap } from '@kit.ArkTS';
-import { HashMapCbFn } from '@kit.ArkTS';
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
-import { LightWeightSet } from '@kit.ArkTS';
-import { LightWeightSetForEachCb } from '@kit.ArkTS';
-import { LinkedList } from '@kit.ArkTS';
-import { LinkedListForEachCb } from '@kit.ArkTS';
-import { List } from '@kit.ArkTS';
-import { ListComparatorFn } from '@kit.ArkTS';
-import { ListForEachCb } from '@kit.ArkTS';
-import { ListReplaceCb } from '@kit.ArkTS';
-import { PlainArray } from '@kit.ArkTS';
-import { PlainArrayForEachCb } from '@kit.ArkTS';
-import { Queue } from '@kit.ArkTS';
-import { QueueForEachCb } from '@kit.ArkTS';
-import { Stack } from '@kit.ArkTS';
-import { StackForEachCb } from '@kit.ArkTS';
-import { TreeMap } from '@kit.ArkTS';
-import { TreeMapForEachCb } from '@kit.ArkTS';
-import { TreeMapComparator } from '@kit.ArkTS';
-import { TreeSet } from '@kit.ArkTS';
-import { TreeSetForEachCb } from '@kit.ArkTS';
-import { TreeSetComparator } from '@kit.ArkTS';
-import { stream } from '@kit.ArkTS';
-import { Vector } from '@kit.ArkTS';
-import { JSON } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -86,7 +50,7 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 
 **废弃版本：** 9
 
-**替代接口：** [create](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#create)
+**替代接口：** [create](#create)
 
 <!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
 
@@ -126,13 +90,13 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。<br>**起始版本：** 11 |
-| options | [TextDecoderOptions](../../apis-na/arkts-apis/arkts-na-util-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
+| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextDecoder](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md) | 创建的 **TextDecoder** 对象。 |
+| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | 创建的 **TextDecoder** 对象。 |
 
 **示例**
 
@@ -159,7 +123,7 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 **废弃版本：** 9
 
-**替代接口：** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodetostring)
+**替代接口：** [decodeToString](#decodetostring)
 
 <!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
 
@@ -216,7 +180,7 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
-| options | [DecodeToStringOptions](../../apis-na/arkts-apis/arkts-na-util-decodetostringoptions-i.md) | 否 | 解码相关的选项。默认值为 **undefined**。 |
+| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | 否 | 解码相关的选项。默认值为 **undefined**。 |
 
 **返回值：**
 
@@ -273,7 +237,7 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 **废弃版本：** 12
 
-**替代接口：** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodetostring)
+**替代接口：** [decodeToString](#decodetostring)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -28,7 +28,7 @@ Register system event related to screen lock service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SystemEvent](arkts-basicservices-screenlock-systemevent-i-sys.md)&gt; | Yes | the callback of onSystemEvent. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SystemEvent](arkts-basicservices-screenlock-systemevent-i-sys.md)&gt; | Yes | the callback of onSystemEvent. |
 
 **Return value:**
 

@@ -29,7 +29,7 @@ Registers a listener for the DLP sandbox uninstall event, which is used to detec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'uninstallDLPSandbox' | Yes | Event type. It has a fixed value of **uninstallDLPSandbox**, which indicates the DLP sandbox application uninstall event. |
-| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DLPSandboxState](arkts-dataprotection-dlppermission-dlpsandboxstate-i-sys.md)&gt; | Yes | Callback used when a sandbox application is uninstalled. |
+| listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DLPSandboxState](arkts-dataprotection-dlppermission-dlpsandboxstate-i-sys.md)&gt; | Yes | Callback used when a sandbox application is uninstalled. |
 
 **Error codes:**
 

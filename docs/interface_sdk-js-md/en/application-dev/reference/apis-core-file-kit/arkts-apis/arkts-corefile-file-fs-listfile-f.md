@@ -72,7 +72,7 @@ Lists the names of all files and directories in the current path. Filtering is s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 
@@ -111,7 +111,7 @@ Lists the names of all files and directories in the current path. Filtering is s
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
 | options | [ListFileOptions](../../apis-na/arkts-apis/arkts-na-file-fs-listfileoptions-i.md) | Yes | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 

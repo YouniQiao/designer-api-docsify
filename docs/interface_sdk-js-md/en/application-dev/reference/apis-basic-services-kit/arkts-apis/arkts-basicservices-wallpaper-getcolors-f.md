@@ -27,7 +27,7 @@ Obtains the wallpaper colors for the wallpaper of the specified type. Returns rg
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | Yes | the callback of getColors. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | Yes | the callback of getColors. |
 
 **Examples**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryKey
@@ -31,7 +30,7 @@ function queryKey(id: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | number | 是 | 联系人对象的id属性。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -71,7 +70,7 @@ function queryKey(context: Context, id: number, callback: AsyncCallback<string>)
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文Context。 |
 | id | number | 是 | 联系人对象的id属性，是联系人对象在数据库中的唯一标识符。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
 **错误码：**
 
@@ -127,7 +126,7 @@ function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): 
 | --- | --- | --- | --- |
 | id | number | 是 | 联系人对象的id属性。 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
 **示例**
 
@@ -172,7 +171,7 @@ function queryKey(context: Context, id: number, holder: Holder, callback: AsyncC
 | context | Context | 是 | 应用上下文Context。 |
 | id | number | 是 | 联系人对象的id属性。 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 | 创建联系人的应用信息类，如果传入参数为空则默认使用系统联系人应用查询。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数。成功返回查询到的联系人对应的key；失败返回具体的错误码信息。 |
 
 **错误码：**
 

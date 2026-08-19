@@ -11,7 +11,6 @@ ARGB格式的颜色描述，颜色分量值为0.0~1.0的浮点数。
 ## 导入模块
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
 ```
 
 ## alpha

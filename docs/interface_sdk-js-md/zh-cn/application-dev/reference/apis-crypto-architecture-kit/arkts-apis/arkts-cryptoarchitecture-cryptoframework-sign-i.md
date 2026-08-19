@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getSignSpec
@@ -92,7 +91,7 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | 是 | 用于Sign的初始化。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名初始化成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当签名初始化成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -386,7 +385,7 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 待签名的数据。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
 
 **错误码：**
 
@@ -421,7 +420,7 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;DataBlob&gt; | 是 | 回调函数。当签名成功时，err为undefined，data为获取到的签名结果DataBlob；否则 为错误对象。 |
 
 **错误码：**
 
@@ -832,7 +831,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob | 是 | 传入的消息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当签名更新成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当签名更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

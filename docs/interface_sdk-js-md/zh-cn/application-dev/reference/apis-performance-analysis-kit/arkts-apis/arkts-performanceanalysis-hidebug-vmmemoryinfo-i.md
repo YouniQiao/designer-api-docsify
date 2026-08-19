@@ -11,7 +11,6 @@ VM内存信息。
 ## 导入模块
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## allArraySize

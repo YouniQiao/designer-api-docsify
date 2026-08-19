@@ -11,7 +11,6 @@ AbilityDelegatorRegistry是自动化测试框架使用指南模块，该模块�
 ## 导入模块
 
 ```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
 ```
 
 ## 汇总

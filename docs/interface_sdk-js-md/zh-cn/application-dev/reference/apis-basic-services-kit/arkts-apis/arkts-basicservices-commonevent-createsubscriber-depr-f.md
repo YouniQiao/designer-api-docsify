@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## createSubscriber
@@ -32,7 +31,7 @@ function createSubscriber(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 是 | 表示订阅信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 是 | 表示创建订阅者的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)&gt; | 是 | 表示创建订阅者的回调方法。 |
 
 **示例**
 

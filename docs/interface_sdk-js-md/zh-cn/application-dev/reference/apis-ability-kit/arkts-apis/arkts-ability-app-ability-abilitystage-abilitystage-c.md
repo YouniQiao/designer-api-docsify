@@ -11,7 +11,6 @@ AbilityStage是一个[Module](../../../quick-start/application-package-overview.
 ## 导入模块
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility

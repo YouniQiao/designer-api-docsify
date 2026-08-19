@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { InputMethodExtensionAbility } from '@kit.IMEKit';
 ```
 
 ## onCreate

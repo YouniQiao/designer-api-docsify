@@ -17,10 +17,6 @@ WLAN热点配置信息。
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## band

@@ -130,7 +130,7 @@ Opens an overlay with the specified ComponentContent and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;Object&gt; | Yes | The content will be added to the OverlayManager. |
-| options | [OrderOverlayOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
+| options | [OrderOverlayOptions](arkts-na-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
 

@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
 ```
 
 ## setCallRestriction
@@ -30,7 +29,7 @@ function setCallRestriction(slotId: int, info: CallRestrictionInfo, callback: As
 | --- | --- | --- | --- |
 | slotId | int | 是 | 卡槽ID。<br/>- 0：卡槽1。<br/>- 1：卡槽2。 |
 | info | [CallRestrictionInfo](arkts-telephony-call-callrestrictioninfo-i-sys.md) | 是 | 呼叫限制信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫限制状态的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回设置呼叫限制状态的结果。 |
 
 **错误码：**
 

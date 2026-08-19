@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
 ```
 
 ## setPointerSpeedSync
@@ -26,7 +25,7 @@ function setPointerSpeedSync(speed: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | int | 是 | 鼠标移动速度，范围1-20，默认为10。 |
+| speed | int | 是 | 鼠标移动速度，取值范围[1, 20]，默认为10。 |
 
 **错误码：**
 

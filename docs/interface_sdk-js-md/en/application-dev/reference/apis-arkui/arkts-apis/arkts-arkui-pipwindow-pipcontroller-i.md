@@ -152,7 +152,7 @@ Unregister picture-in-picture active status change listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -179,7 +179,7 @@ Unregister picture-in-picture control event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
 
 ## offControlPanelActionEvent
 
@@ -213,7 +213,7 @@ Unregister picture-in-picture window size change event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
@@ -256,7 +256,7 @@ Unsubscribes from PiP window active status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -288,7 +288,7 @@ Unsubscribes from PiP action events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Examples**
 
@@ -348,7 +348,7 @@ Unsubscribes from the PiP window size change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
@@ -426,7 +426,7 @@ Register picture-in-picture active status change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
 
 **Error codes:**
 
@@ -453,7 +453,7 @@ Register picture-in-picture control event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Used to handle {'controlEvent'} command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Used to handle {'controlEvent'} command. |
 
 ## onControlPanelActionEvent
 
@@ -493,7 +493,7 @@ Register picture-in-picture window size change event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the picture-in-picture window size. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the picture-in-picture window size. |
 
 **Error codes:**
 
@@ -543,7 +543,7 @@ Subscribes to PiP window active status change events. To avoid potential memory 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
 
 **Examples**
 
@@ -575,7 +575,7 @@ Subscribes to PiP action events. To avoid potential memory leaks, you are advise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Action event callback of the PiP controller. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Action event callback of the PiP controller. |
 
 **Examples**
 
@@ -683,7 +683,7 @@ Subscribes to PiP window size change events. To avoid potential memory leaks, yo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the size of the current PiP window. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the size of the current PiP window. |
 
 **Error codes:**
 

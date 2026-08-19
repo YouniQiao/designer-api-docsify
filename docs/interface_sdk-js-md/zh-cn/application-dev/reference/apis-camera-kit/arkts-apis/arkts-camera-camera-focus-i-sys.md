@@ -13,8 +13,6 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。 对焦类，�
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getFocusAssist

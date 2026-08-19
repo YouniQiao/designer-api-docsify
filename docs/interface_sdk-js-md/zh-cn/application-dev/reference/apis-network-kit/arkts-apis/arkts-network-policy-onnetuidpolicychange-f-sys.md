@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
 ```
 
 ## on_netUidPolicyChange('netUidPolicyChange')
@@ -29,7 +28,7 @@ function on(type: 'netUidPolicyChange', callback: Callback<NetUidPolicyInfo>): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'netUidPolicyChange' | 是 | 订阅的事件类型。'netUidPolicyChange'：注册policy发生改变事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | 是 | 回调函数。注册 policy 发生改变时调用。<br>**起始版本：** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetUidPolicyInfo](arkts-network-policy-netuidpolicyinfo-i-sys.md)&gt; | 是 | 回调函数。注册 policy 发生改变时调用。<br>**起始版本：** 11 |
 
 **错误码：**
 

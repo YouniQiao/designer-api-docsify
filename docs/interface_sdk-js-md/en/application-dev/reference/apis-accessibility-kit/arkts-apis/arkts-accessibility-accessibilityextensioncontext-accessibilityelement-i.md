@@ -28,7 +28,7 @@ Obtains the names of all actions supported by the node element. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the action names are obtained successfully, **err** is **undefined** and **data** contains all action names supported by the node element; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the action names are obtained successfully, **err** is **undefined** and **data** contains all action names supported by the node element; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -98,7 +98,7 @@ Obtains all attribute names of the node element. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback invoked to return the result. If the attribute names are obtained successfully, **err** is undefined and **data** contains all attribute names of the node element; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback invoked to return the result. If the attribute names are obtained successfully, **err** is undefined and **data** contains all attribute names of the node element; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -176,7 +176,7 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attributeName | T | Yes | Attribute name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the result. If the attribute value is obtained successfully, err is undefined and data is the value of the corresponding attribute; otherwise, the value is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the result. If the attribute value is obtained successfully, err is undefined and data is the value of the corresponding attribute; otherwise, the value is an error object. |
 
 **Error codes:**
 
@@ -276,7 +276,7 @@ Finds an element based on the content type. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | type | 'content' | Yes | Fixed to 'content', which means the search type is node element content. |
 | condition | string | Yes | Keyword condition for searching, used to match the text content of node elements. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. If the node elements are found successfully, **err** is **undefined** and **data** is all node elements that meet the specified search keyword; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. If the node elements are found successfully, **err** is **undefined** and **data** is all node elements that meet the specified search keyword; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -373,7 +373,7 @@ Finds a node element based on the focus element type. This API uses an asynchron
 | --- | --- | --- | --- |
 | type | 'focusType' | Yes | Type of element finding. The value is fixed at **'focusType'**. |
 | condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | Focus type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the node element is found, **err** is **undefined** and **data** is the node element that matches the specified query focus element type; otherwise, an error object is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the node element is found, **err** is **undefined** and **data** is the node element that matches the specified query focus element type; otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -472,7 +472,7 @@ Finds a node element based on the next focus element direction. This API uses an
 | --- | --- | --- | --- |
 | type | 'focusDirection' | Yes | Fixed value **'focusDirection'**, representing the query type as the direction of the next focus element of the node. |
 | condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Direction for querying the next focus element. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the node element is found successfully, **err** is **undefined** and **data** is the node element that meets the specified direction for querying the next focus element; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the node element is found successfully, **err** is **undefined** and **data** is the node element that meets the specified direction for querying the next focus element; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -571,7 +571,7 @@ Performs the specified action on the accessibility node element. This API uses a
 | --- | --- | --- | --- |
 | actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md). |
 | parameters | object | Yes | Parameters required for executing the action. Different action types require different parameter structures. For details about the parameter format, see the description of each Action. For example, setSelection requires the selectTextBegin, selectTextEnd, and selectTextInForWard parameters, and setCursorPosition requires the offset parameter. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the action is executed successfully, err is undefined; otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the action is executed successfully, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -716,7 +716,7 @@ Performs the specified action on the accessibility node element. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the operation is executed. If the operation succeeds, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the operation is executed. If the operation succeeds, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

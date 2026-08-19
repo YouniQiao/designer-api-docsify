@@ -13,7 +13,6 @@ agentConstant模块提供Agent相关的常量，包括Agent卡片类型[AgentCar
 ## 导入模块
 
 ```TypeScript
-import { agentConstant } from '@kit.AbilityKit';
 ```
 
 ## 汇总

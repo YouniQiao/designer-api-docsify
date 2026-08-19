@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## injectEvent
@@ -102,7 +101,7 @@ function injectEvent(keyEvent: KeyEventInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyEvent | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i-sys.md) | 是 | 按键注入描述信息。. |
+| keyEvent | [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i-sys.md) | 是 | 按键注入描述信息。 |
 
 **错误码：**
 

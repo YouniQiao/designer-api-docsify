@@ -13,7 +13,6 @@ EmbeddableUIAbility组件是为原子化服务提供可嵌入式的UIAbility组�
 ## 导入模块
 
 ```TypeScript
-import { EmbeddableUIAbility } from '@kit.AbilityKit';
 ```
 
 ## context

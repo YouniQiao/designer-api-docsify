@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { SelectionExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

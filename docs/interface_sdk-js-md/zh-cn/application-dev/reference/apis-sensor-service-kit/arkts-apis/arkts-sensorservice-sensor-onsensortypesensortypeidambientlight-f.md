@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## on_SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT
@@ -30,6 +29,6 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<Li
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT | 是 | 要订阅的环境光传感器类型为SENSOR_TYPE_ID_AMBIENT_LIGHT。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | 是 | 注册环境光传感器的回调函数，上报的数据类型为LightResponse。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;LightResponse&gt; | 是 | 注册环境光传感器的回调函数，上报的数据类型为LightResponse。 |
 | options | Options | 否 | 用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 

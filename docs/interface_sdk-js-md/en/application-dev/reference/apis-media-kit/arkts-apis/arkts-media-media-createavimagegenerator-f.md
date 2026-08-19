@@ -96,7 +96,7 @@ Creates an AVImageGenerator instance. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
@@ -139,7 +139,7 @@ Creates an **AVImageGenerator** instance. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 

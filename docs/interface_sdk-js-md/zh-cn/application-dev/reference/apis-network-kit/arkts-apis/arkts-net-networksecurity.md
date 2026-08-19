@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## 汇总

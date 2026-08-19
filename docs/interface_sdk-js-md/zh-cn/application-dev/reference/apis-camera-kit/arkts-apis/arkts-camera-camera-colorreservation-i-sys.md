@@ -15,8 +15,6 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreserv
 ## 导入模块
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
-import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## getColorReservation

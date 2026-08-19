@@ -37,7 +37,7 @@ Constructor of EditableTitleV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableTitleV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | No | The options of the title |
+| options | [EditableTitleV2Options](arkts-na-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | No | The options of the title |
 
 ## mainTitle
 

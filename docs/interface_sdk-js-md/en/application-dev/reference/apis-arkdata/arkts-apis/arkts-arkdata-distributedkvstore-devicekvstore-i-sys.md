@@ -39,7 +39,7 @@ Obtains the KVStoreResultSet object matching the local device ID and specified p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the local device ID and specified {@code dataSharePredicates.DataSharePredicates} object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the local device ID and specified {@code dataSharePredicates.DataSharePredicates} object. |
 
 **Error codes:**
 
@@ -115,7 +115,7 @@ Obtains the KVStoreResultSet object matching a specified Device ID and Predicate
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the ID of the device to which the results belong. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the dataSharePredicates. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the specified deviceId and {@code dataSharePredicates.DataSharePredicates} object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the specified deviceId and {@code dataSharePredicates.DataSharePredicates} object. |
 
 **Error codes:**
 

@@ -123,7 +123,7 @@ Starts BLE advertising. The API returns a advertising ID. The ID can be used to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | advertisingParams | AdvertisingParams | Yes | Indicates the params for BLE advertising. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | the callback of advertise ID. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | the callback of advertise ID. |
 
 **Error codes:**
 

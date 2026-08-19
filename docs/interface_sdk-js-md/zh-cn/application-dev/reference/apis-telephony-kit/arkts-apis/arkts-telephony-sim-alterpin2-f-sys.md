@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
 ```
 
 ## alterPin2
@@ -31,7 +30,7 @@ Change Pin2 password.
 | slotId | int | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
 | newPin2 | string | 是 | Indicates a new password. |
 | oldPin2 | string | 是 | Indicates old password. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | 是 | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | 是 | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **错误码：**
 

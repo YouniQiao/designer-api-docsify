@@ -34,7 +34,7 @@ Invoked to notify the app before the download starts. The app must call **WebDow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback invoked before the download starts. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback invoked before the download starts. |
 
 ## onDownloadFailed
 
@@ -56,7 +56,7 @@ Callback invoked when the download fails. The app can obtain detailed informatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback for the download failure. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback for the download failure. |
 
 ## onDownloadFinish
 
@@ -78,7 +78,7 @@ Callback invoked when the download is complete. The app can obtain the informati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback invoked when the download is complete. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback invoked when the download is complete. |
 
 ## onDownloadUpdated
 
@@ -100,5 +100,5 @@ Callback invoked during the download process. The app can obtain information suc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback used to return the download update. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | Callback used to return the download update. |
 

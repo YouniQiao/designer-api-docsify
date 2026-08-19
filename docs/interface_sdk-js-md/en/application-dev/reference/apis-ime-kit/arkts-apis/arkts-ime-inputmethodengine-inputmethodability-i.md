@@ -34,7 +34,7 @@ Creates an input method panel. This API can be called only by the input method a
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
 | info | PanelInfo | Yes | Information about the input method panel. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
 
 **Error codes:**
 
@@ -138,7 +138,7 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | panel | Panel | Yes | Input method panel to destroy. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -295,7 +295,7 @@ Unsubscribe 'callingDisplayDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | optional, the callback called when calling display id changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | optional, the callback called when calling display id changed. |
 
 ## offDiscardTypingText
 
@@ -315,7 +315,7 @@ Unsubscribe 'discardTypingText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the edit box requests to discard typing text. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the edit box requests to discard typing text. |
 
 ## offInputStart
 
@@ -355,7 +355,7 @@ Unsubscribe 'inputStop'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
 
 ## offKeyboardHide
 
@@ -375,7 +375,7 @@ Unsubscribe 'keyboardHide'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when hiding keyboard. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when hiding keyboard. |
 
 ## offKeyboardShow
 
@@ -395,7 +395,7 @@ Unsubscribe 'keyboardShow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when showing keyboard. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when showing keyboard. |
 
 ## offPrivateCommand
 
@@ -415,7 +415,7 @@ Unsubscribe 'privateCommand'. This function can only be called by default input 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | optional, the callback called when receiving private command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | optional, the callback called when receiving private command. |
 
 **Error codes:**
 
@@ -441,7 +441,7 @@ Unsubscribe 'securityModeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | optional, the callback called when the security mode changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | optional, the callback called when the security mode changes. |
 
 ## offSetCallingWindow
 
@@ -461,7 +461,7 @@ Unsubscribe 'setCallingWindow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
 
 ## offSetSubtype
 
@@ -481,7 +481,7 @@ Unsubscribe 'setSubtype'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | No | optional, the callback called when the system notify to switch subtype. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | No | optional, the callback called when the system notify to switch subtype. |
 
 ## off_callingDisplayDidChange('callingDisplayDidChange')
 
@@ -502,7 +502,7 @@ Disables listening for changes of the screen ID of the window associated with th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -531,7 +531,7 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. <br> - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -680,7 +680,7 @@ Disables listening for the private data event of the input method. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
@@ -720,7 +720,7 @@ Disables listening for the security mode changes of the input method. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -810,7 +810,7 @@ Subscribe 'callingDisplayDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when calling display id changed. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when calling display id changed. |
 
 **Error codes:**
 
@@ -836,7 +836,7 @@ Subscribe 'discardTypingText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the edit box requests to discard typing text. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the edit box requests to discard typing text. |
 
 ## onInputStart
 
@@ -876,7 +876,7 @@ Subscribe 'inputStop'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
 
 ## onKeyboardHide
 
@@ -896,7 +896,7 @@ Subscribe 'keyboardHide'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when hiding keyboard. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when hiding keyboard. |
 
 ## onKeyboardShow
 
@@ -916,7 +916,7 @@ Subscribe 'keyboardShow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when showing keyboard. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when showing keyboard. |
 
 ## onPrivateCommand
 
@@ -936,7 +936,7 @@ Subscribe 'privateCommand'. This function can only be called by default input me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | the callback called when receiving private command. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | the callback called when receiving private command. |
 
 **Error codes:**
 
@@ -962,7 +962,7 @@ Subscribe 'securityModeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | the callback called when the security mode changes. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | the callback called when the security mode changes. |
 
 ## onSetCallingWindow
 
@@ -982,7 +982,7 @@ Subscribe 'setCallingWindow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
 
 ## onSetSubtype
 
@@ -1002,7 +1002,7 @@ Subscribe 'setSubtype'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | Yes | the callback called when the system notify to switch subtype. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | Yes | the callback called when the system notify to switch subtype. |
 
 ## on_callingDisplayDidChange('callingDisplayDidChange')
 
@@ -1023,7 +1023,7 @@ Enables listening for changes of the screen ID of the window associated with the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
 
 **Error codes:**
 
@@ -1059,7 +1059,7 @@ Subscribes to the event of discarding candidate words and sends the event to the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. <br> - **'discardTypingText'** : indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -1213,7 +1213,7 @@ Enables listening for the private data event of the input method. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
 
 **Error codes:**
 
@@ -1252,7 +1252,7 @@ Enables listening for the security mode changes of the input method. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
 
 **Examples**
 

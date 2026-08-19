@@ -11,7 +11,6 @@ Typeface类用于表示和管理字体对象。支持的字体操作包括：获
 ## 导入模块
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## getFamilyName

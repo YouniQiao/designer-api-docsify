@@ -2,7 +2,7 @@
 
 Define the data structure for PixelMap animations.
 
-**Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Creates a new AnimatedDrawableDescriptor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pixelMaps | Array&lt;image.PixelMap&gt; | Yes | PixelMap List. |
-| options | [AnimationOptions](arkts-na-arkui-drawabledescriptor-animationoptions-i.md) | No | Animation control options. |
+| options | [AnimationOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | No | Animation control options. |
 
 ## constructor
 
@@ -65,7 +65,7 @@ Creates a new AnimatedDrawableDescriptor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | ResourceStr \| Array&lt;image.PixelMap&gt; | Yes | animated images or local resource. |
-| options | [AnimationOptions](arkts-na-arkui-drawabledescriptor-animationoptions-i.md) | No | Animation control options. |
+| options | [AnimationOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | No | Animation control options. |
 
 ## getAnimationController
 
@@ -95,5 +95,5 @@ Get the animation controller of the component based on the component id.
 
 | Type | Description |
 | --- | --- |
-| [AnimationController](arkts-na-arkui-drawabledescriptor-animationcontroller-i.md) | Return the component of animation controller. |
+| [AnimationController](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationcontroller-i.md) | Return the component of animation controller. |
 

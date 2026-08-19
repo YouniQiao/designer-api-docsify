@@ -18,7 +18,7 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Deprecated since:** 9
 
-**Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)
+**Substitutes:** [hideAlertBeforeBackPage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#hidealertbeforebackpage)
 
 <!--Device-router-function disableAlertBeforeBackPage(): void--><!--Device-router-function disableAlertBeforeBackPage(): void-End-->
 

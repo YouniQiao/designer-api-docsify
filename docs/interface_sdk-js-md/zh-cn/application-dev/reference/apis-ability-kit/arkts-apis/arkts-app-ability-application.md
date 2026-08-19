@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { application } from '@kit.AbilityKit';
 ```
 
 ## 汇总

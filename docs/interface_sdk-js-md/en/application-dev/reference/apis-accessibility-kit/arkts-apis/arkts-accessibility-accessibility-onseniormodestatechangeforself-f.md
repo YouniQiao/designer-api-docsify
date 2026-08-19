@@ -30,5 +30,5 @@ Subscribes to the "senior mode" change event of the app itself. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the app's own senior mode is enabled, and **false** indicates that the app's own senior mode is disabled. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the app's own senior mode is enabled, and **false** indicates that the app's own senior mode is disabled. |
 

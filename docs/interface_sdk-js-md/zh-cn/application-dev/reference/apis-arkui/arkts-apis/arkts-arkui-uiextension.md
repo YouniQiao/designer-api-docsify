@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## 汇总

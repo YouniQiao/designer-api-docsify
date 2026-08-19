@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { HashSet } from '@kit.ArkTS';
-import { HashSetCbFn } from '@kit.ArkTS';
 ```
 
 ## 汇总

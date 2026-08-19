@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
 ```
 
 ## removePrinters
@@ -29,7 +28,7 @@ function removePrinters(printerIds: Array<string>, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | printerIds | Array&lt;string&gt; | 是 | 表示需移除的打印机列表。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步移除打印机之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步移除打印机之后的回调。 |
 
 **错误码：**
 

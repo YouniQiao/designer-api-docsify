@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { LightWeightMap } from '@kit.ArkTS';
-import { LightWeightMapCbFn } from '@kit.ArkTS';
 ```
 
 ## 汇总

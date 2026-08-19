@@ -11,7 +11,6 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 ## 导入模块
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details

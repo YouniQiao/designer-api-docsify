@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
 ```
 
 ## getUidsByPolicy
@@ -29,7 +28,7 @@ function getUidsByPolicy(policy: NetUidPolicy, callback: AsyncCallback<Array<int
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | policy | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | 是 | 应用对应的计量网络下的策略。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | 是 | 回调函数。成功返回应用的 uid 数组，失败返回错误码错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | 是 | 回调函数。成功返回应用的 uid 数组，失败返回错误码错误信息。 |
 
 **错误码：**
 

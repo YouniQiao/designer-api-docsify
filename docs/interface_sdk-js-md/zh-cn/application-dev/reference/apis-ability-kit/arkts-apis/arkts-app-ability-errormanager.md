@@ -11,7 +11,6 @@ ErrorManager模块提供对应用运行时各类异常的全局观测能力，�
 ## 导入模块
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

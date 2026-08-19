@@ -39,7 +39,7 @@ Get connection strategy of this profile.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md)&gt; | Yes | the callback of getConnectionStrategy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md)&gt; | Yes | the callback of getConnectionStrategy. |
 
 **Error codes:**
 
@@ -171,7 +171,7 @@ Set connection strategy of this profile.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
 | strategy | [ConnectionStrategy](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md) | Yes | the connection strategy of this profile. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setConnectionStrategy. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setConnectionStrategy. |
 
 **Error codes:**
 

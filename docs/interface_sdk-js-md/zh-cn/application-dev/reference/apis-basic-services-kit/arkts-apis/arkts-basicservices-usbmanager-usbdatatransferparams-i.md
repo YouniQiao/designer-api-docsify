@@ -11,8 +11,6 @@ USB数据传输参数对象，包含USB数据传输所需的所有参数，用�
 ## 导入模块
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## buffer
@@ -39,7 +37,7 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 传输完成时的回调函数，签名：(err: Error, data: SubmitTransferCallback) => void。err为错误对象（成功时为null），data包含传输状态、实际长度等信息。
 
-**类型：** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
+**类型：** [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
 **起始版本：** 23
 

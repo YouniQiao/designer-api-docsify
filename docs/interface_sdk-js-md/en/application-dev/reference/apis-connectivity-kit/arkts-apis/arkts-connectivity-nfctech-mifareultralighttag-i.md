@@ -124,7 +124,7 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pageIndex | int | Yes | The index of page to read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | The callback. |
 
 **Error codes:**
 
@@ -262,7 +262,7 @@ Writes a page, total 4 bytes.
 | --- | --- | --- | --- |
 | pageIndex | int | Yes | The index of page to write. |
 | data | int[] | Yes | The page data to write. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback. |
 
 **Error codes:**
 

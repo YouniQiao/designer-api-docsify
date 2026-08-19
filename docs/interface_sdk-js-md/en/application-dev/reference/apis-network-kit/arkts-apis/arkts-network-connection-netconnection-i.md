@@ -32,7 +32,7 @@ Registers a listener for netBlockStatusChange events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## onNetLost
 
@@ -54,7 +54,7 @@ Registers a listener for **netLost** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | the callback used to return the result. |
 
 ## onNetUnavailable
 
@@ -76,7 +76,7 @@ Registers a listener for netUnavailable events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 ## on_netAvailable('netAvailable')
 
@@ -99,7 +99,7 @@ Registers a listener for **netAvailable** events. Before you call this API, make
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netAvailable' | Yes | Event type. This field has a fixed value of **netAvailable**. <br>**netAvailable**: event indicating that the data network is available. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | Yes | Callback used to return the network handle. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the network handle. |
 
 **Examples**
 
@@ -145,7 +145,7 @@ Registers a listener for **netBlockStatusChange** events. Before you call this A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netBlockStatusChange' | Yes | Event type. This field has a fixed value of **netBlockStatusChange**. <br>**netBlockStatusChange**: event indicating a change in the network blocking status. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Examples**
 
@@ -193,7 +193,7 @@ Registers a listener for **netCapabilitiesChange** events. Before you call this 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netCapabilitiesChange' | Yes | Event type. This field has a fixed value of **netCapabilitiesChange**. <br>**netCapabilitiesChange**: event indicating that the network capabilities have changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | Yes | Callback used to return the network handle (**netHandle**) and capability information (**netCap**). |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetCapabilityInfo](arkts-network-connection-netcapabilityinfo-i.md)&gt; | Yes | Callback used to return the network handle (**netHandle**) and capability information (**netCap**). |
 
 **Examples**
 
@@ -239,7 +239,7 @@ Registers a listener for **netConnectionPropertiesChange** events. Before you ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netConnectionPropertiesChange' | Yes | Event type. This field has a fixed value of **netConnectionPropertiesChange**. <br>**netConnectionPropertiesChange**: event indicating that network connection properties have changed. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetConnectionPropertyInfo](arkts-network-connection-netconnectionpropertyinfo-i.md)&gt; | Yes | Callback used to return the result.<br>**Since:** 11 |
 
 **Examples**
 
@@ -287,7 +287,7 @@ Registers a listener for **netLost** events. Before you call this API, make sure
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netLost' | Yes | Event type. This field has a fixed value of **netLost**. <br>**netLost**: event indicating that the network is interrupted or normally disconnected. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NetHandle&gt; | Yes | Callback used to return the result, which is a **netHandle** object. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes | Callback used to return the result, which is a **netHandle** object. |
 
 **Examples**
 
@@ -335,7 +335,7 @@ Registers a listener for **netUnavailable** events. Before you call this API, ma
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'netUnavailable' | Yes | Event type. This field has a fixed value of **netUnavailable**. <br>**netUnavailable**: event indicating that the network is unavailable. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result, which is empty. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result, which is empty. |
 
 **Examples**
 
@@ -384,7 +384,7 @@ Registers a listener for network status changes. To listen for a specific type o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If a listener for network status changes is registered successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a listener for network status changes is registered successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
@@ -429,7 +429,7 @@ Unregisters the listener for network status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If a listener for network status changes is unregistered successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a listener for network status changes is unregistered successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 

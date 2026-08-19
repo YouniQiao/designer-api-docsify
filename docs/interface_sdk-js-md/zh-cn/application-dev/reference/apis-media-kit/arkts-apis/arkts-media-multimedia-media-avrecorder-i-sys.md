@@ -11,7 +11,6 @@ AVRecorder是音视频录制管理类，用于音视频录制的全流程管理�
 ## 导入模块
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
 ```
 
 ## getInputMetaSurface

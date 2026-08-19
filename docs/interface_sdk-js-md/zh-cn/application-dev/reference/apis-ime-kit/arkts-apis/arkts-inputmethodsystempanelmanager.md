@@ -15,7 +15,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## 汇总

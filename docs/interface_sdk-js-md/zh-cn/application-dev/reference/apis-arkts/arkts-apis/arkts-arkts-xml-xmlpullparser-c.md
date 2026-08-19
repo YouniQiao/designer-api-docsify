@@ -11,7 +11,6 @@ XmlPullParser接口用于解析现有的XML文件，适用于对XML文本进行�
 ## 导入模块
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
 ```
 
 ## constructor

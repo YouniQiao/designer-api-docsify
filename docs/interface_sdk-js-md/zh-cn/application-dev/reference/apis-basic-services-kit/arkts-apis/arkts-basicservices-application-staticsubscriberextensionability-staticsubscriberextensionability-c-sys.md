@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onReceiveEvent

@@ -148,7 +148,7 @@ Triggered when an index item is selected. The return value is the index of the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | Optional&lt;[OnSelectCallback](../../apis-na/arkts-apis/arkts-na-onselectcallback-t.md)&gt; | Yes | Callback used to return the result. |
+| handler | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes | Callback used to return the result. |
 
 **Return value:**
 

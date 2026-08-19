@@ -30,7 +30,7 @@ Unsubscribes from vpn connect state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' | Yes | Indicates vpn connect state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;VpnConnectState&gt; | No | The callback of the vpn connect state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VpnConnectState&gt; | No | The callback of the vpn connect state. |
 
 **Error codes:**
 

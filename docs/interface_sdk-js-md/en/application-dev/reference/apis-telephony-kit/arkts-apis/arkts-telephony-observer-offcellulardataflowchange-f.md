@@ -24,7 +24,7 @@ Cancel callback when the uplink and downlink data flow state of cellular data se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DataFlowType&gt; | No | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | No | Indicates the callback to unsubscribe from the cellularDataFlowChange event. |
 
 **Error codes:**
 

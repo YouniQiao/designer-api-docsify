@@ -718,13 +718,13 @@ Creates a deep copy of a size constraint.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* | Returns the pointer to the new size constraint. |
+| [ArkUI_LayoutConstraint*](capi-arkui-nativemodule-arkui-layoutconstraint.md) | Returns the pointer to the new size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_Dispose()
 
@@ -742,7 +742,7 @@ Destroys the pointer to a size constraint.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_GetMaxWidth()
 
@@ -760,7 +760,7 @@ Obtains the maximum width for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -784,7 +784,7 @@ Obtains the minimum width for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -808,7 +808,7 @@ Obtains the maximum height for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -832,7 +832,7 @@ Obtains the minimum height for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -856,7 +856,7 @@ Obtains the width percentage reference for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -880,7 +880,7 @@ Obtains the height percentage reference for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -904,7 +904,7 @@ Sets the maximum width.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinWidth()
@@ -923,7 +923,7 @@ Sets the minimum width.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMaxHeight()
@@ -942,7 +942,7 @@ Sets the maximum height.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinHeight()
@@ -961,7 +961,7 @@ Sets the minimum height.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceWidth()
@@ -980,7 +980,7 @@ Sets the width percentage reference.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the width percentage reference, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceHeight()
@@ -999,7 +999,7 @@ Sets the height percentage reference.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the height percentage reference, in px. |
 
 ### OH_ArkUI_DrawContext_GetCanvas()
@@ -1018,7 +1018,7 @@ Obtains the pointer to a canvas for drawing, which can be converted into the <b>
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
+| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
 
 **Returns**:
 
@@ -1042,13 +1042,13 @@ Obtains the size of a drawing area.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
+| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_IntSize | Returns the size of the drawing area. |
+| [ArkUI_IntSize](capi-arkui-nativemodule-arkui-intsize.md) | Returns the size of the drawing area. |
 
 ### OH_ArkUI_SwiperDigitIndicator_SetFontWeight()
 
@@ -1066,7 +1066,7 @@ Sets the font weight of total count in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
 | ArkUI_FontWeight fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetFontWeight()
@@ -1085,7 +1085,7 @@ Gets the font weight of total count in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator* indicator | The pointer to the digital indicator. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md)* indicator | The pointer to the digital indicator. |
 
 **Returns**:
 
@@ -1109,7 +1109,7 @@ Sets the font weight of selected index in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
 | ArkUI_FontWeight selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetSelectedFontWeight()
@@ -1128,7 +1128,7 @@ Gets the font weight of selected index in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator* indicator | The pointer to the digital indicator. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md)* indicator | The pointer to the digital indicator. |
 
 **Returns**:
 
@@ -1787,7 +1787,7 @@ Obtains the child node at the specified index in an [ArkUI_ActiveChildrenInfo](c
 
 | Type | Description |
 | -- | -- |
-| ArkUI_NodeHandle | Handle to the child node at the specified index, or nullptr if an error occurs. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Handle to the child node at the specified index, or nullptr if an error occurs. |
 
 ### OH_ArkUI_ActiveChildrenInfo_GetCount()
 
@@ -2369,7 +2369,7 @@ Set custom text menu node of text.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_NodeHandle node | The custom menu node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | The custom menu node. |
 
 **Returns**:
 
@@ -2394,7 +2394,7 @@ Get custom text menu node of text.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_NodeHandle* node | The custom menu node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | The custom menu node. |
 
 **Returns**:
 
@@ -3591,7 +3591,7 @@ Obtains the caret-selected rectangle using the styled string controller.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorStyledStringController* controller | Pointer to the [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) object. |
-| ArkUI_Rect* rect | Pointer to the caret-selected rectangle information. The value is an enumerated value of[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
+| [ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md)* rect | Pointer to the caret-selected rectangle information. The value is an enumerated value of[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
 
 **Returns**:
 
@@ -3690,7 +3690,7 @@ Sets the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | Pointer to the PixelMap for paragraph indentation. |
+| struct OH_PixelmapNative* pixelmap | Pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
@@ -3715,7 +3715,7 @@ Obtains the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
+| struct OH_PixelmapNative** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
@@ -4878,7 +4878,7 @@ Sets the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorSelectionMenuOptions* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| ArkUI_NodeHandle node | Content node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Content node. |
 
 **Returns**:
 
@@ -4903,7 +4903,7 @@ Obtains the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorSelectionMenuOptions* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| ArkUI_NodeHandle* node | Pointer to the content node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | Pointer to the content node. |
 
 **Returns**:
 
@@ -5344,8 +5344,8 @@ Set the parameters of background style.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
-| [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md)* background | The parameters of background style. |
+| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
+| ArkUI_PickerIndicatorBackground* background | The parameters of background style. |
 
 **Returns**:
 
@@ -5369,8 +5369,8 @@ Set the parameters of divider style.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md)* style | The ArkUI_PickerIndicatorStyle instance. |
-| [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md)* divider | The parameters of divider style. |
+| ArkUI_PickerIndicatorStyle* style | The ArkUI_PickerIndicatorStyle instance. |
+| ArkUI_PickerIndicatorDivider* divider | The parameters of divider style. |
 
 **Returns**:
 

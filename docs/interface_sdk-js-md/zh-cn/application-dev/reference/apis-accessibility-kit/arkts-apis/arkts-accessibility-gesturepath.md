@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## 汇总

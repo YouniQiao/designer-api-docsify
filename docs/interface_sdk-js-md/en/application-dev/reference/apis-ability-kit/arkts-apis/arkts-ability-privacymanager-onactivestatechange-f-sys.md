@@ -33,7 +33,7 @@ Subscribes to permission usage status change events for a specified permission l
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of subscribed permission names. An empty value indicates subscription to the usage status changes of all permissions. Passing an invalid value returns error code 12100001. <br>Value constraint: The array length cannot exceed 1024. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | Yes | Callback used to return the event object for the subscribed permission state change. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | Yes | Callback used to return the event object for the subscribed permission state change. |
 
 **Error codes:**
 

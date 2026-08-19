@@ -41,7 +41,7 @@ Inserts a batch of data into a table. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
 | values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
 
 **Examples**
 
@@ -290,7 +290,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | Yes | Deletion conditions specified by the **RdbPredicates** object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of rows deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of rows deleted. |
 
 **Examples**
 
@@ -373,7 +373,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
 | bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -455,7 +455,7 @@ Inserts a row of data into a table. This API uses an asynchronous callback to re
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
 | values | ValuesBucket | Yes | Row of data to insert. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
 
 **Examples**
 
@@ -571,7 +571,7 @@ Obtains the distributed table name of a remote device based on the local table n
 | --- | --- | --- | --- |
 | device | string | Yes | ID of the remote device. |
 | table | string | Yes | Local table name of the remote device. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
 
 **Examples**
 
@@ -681,7 +681,7 @@ Unregisters the observer of the specified type from the RDB store. This API uses
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
 | type | SubscribeType | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 **Examples**
 
@@ -723,7 +723,7 @@ Registers an observer for this RDB store. When the data in the RDB store changes
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
 | type | SubscribeType | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 **Examples**
 
@@ -765,7 +765,7 @@ Queries data from the RDB store based on specified conditions. This API uses an 
 | --- | --- | --- | --- |
 | predicates | RdbPredicates | Yes | Query conditions specified by the **RdbPredicates** object. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is not specified, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
 
 **Examples**
 
@@ -851,7 +851,7 @@ Queries data using the specified SQL statement. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
 | bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
 
 **Examples**
 
@@ -986,7 +986,7 @@ Sets distributed tables. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | Yes | Names of the distributed tables to set. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -1069,7 +1069,7 @@ Synchronizes data across devices. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | Data sync mode. The value can be **push** or **pull**. |
 | predicates | RdbPredicates | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller. <br>**string** indicates the device ID. <br>**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller. <br>**string** indicates the device ID. <br>**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 **Examples**
 
@@ -1193,7 +1193,7 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 | --- | --- | --- | --- |
 | values | ValuesBucket | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
 | predicates | RdbPredicates | Yes | Update conditions specified by the **RdbPredicates** object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked to return the number of rows updated. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the number of rows updated. |
 
 **Examples**
 

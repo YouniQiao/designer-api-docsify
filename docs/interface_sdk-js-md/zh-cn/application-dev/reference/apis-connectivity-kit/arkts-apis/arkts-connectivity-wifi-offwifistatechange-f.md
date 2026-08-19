@@ -3,10 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
-import { wifiext } from '@kit.ConnectivityKit';
-import { wifiManager } from '@kit.ConnectivityKit';
-import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## off_wifiStateChange('wifiStateChange')
@@ -34,7 +30,7 @@ function off(type: 'wifiStateChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'wifiStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。0:未激活，1:已激活，2:激活中，3:去激活中 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 状态改变回调函数。0:未激活，1:已激活，2:激活中，3:去激活中 |
 
 **示例**
 

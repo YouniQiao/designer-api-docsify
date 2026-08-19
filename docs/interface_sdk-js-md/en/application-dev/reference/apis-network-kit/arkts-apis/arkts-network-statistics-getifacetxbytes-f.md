@@ -25,7 +25,7 @@ Obtains the total uplink traffic (in bytes) of the specified NIC from the last s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | nic | string | Yes | NIC name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the traffic data is successfully obtained, **error** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 

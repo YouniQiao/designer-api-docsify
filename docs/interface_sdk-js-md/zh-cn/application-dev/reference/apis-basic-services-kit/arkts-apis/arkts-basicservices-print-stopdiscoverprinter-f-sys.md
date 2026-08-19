@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
 ```
 
 ## stopDiscoverPrinter
@@ -30,7 +29,7 @@ function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 停止发现打印机的异步回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 停止发现打印机的异步回调。 |
 
 **错误码：**
 

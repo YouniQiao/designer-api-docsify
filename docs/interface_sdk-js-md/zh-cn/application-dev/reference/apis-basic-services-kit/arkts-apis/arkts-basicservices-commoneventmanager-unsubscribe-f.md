@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## unsubscribe
@@ -27,7 +26,7 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数。当取消公共事件订阅成功时，err为undefined；取消失败时， err为错误对象。不传该参数时，默认取消订阅且不返回结果。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | 回调函数。当取消公共事件订阅成功时，err为undefined；取消失败时， err为错误对象。不传该参数时，默认取消订阅且不返回结果。 |
 
 **错误码：**
 

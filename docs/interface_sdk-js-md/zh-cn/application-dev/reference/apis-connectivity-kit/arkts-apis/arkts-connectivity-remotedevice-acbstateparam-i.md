@@ -11,7 +11,6 @@ ACB连接状态参数。
 ## 导入模块
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## address

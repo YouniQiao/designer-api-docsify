@@ -26,7 +26,7 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br> Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br> Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.<br>Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
 
 **Examples**
 
@@ -84,7 +84,7 @@ Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
 
 **Error codes:**
 

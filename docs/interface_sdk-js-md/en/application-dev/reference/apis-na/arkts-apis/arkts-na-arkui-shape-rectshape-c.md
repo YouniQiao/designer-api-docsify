@@ -2,7 +2,7 @@
 
 Defines a rect drawing class.
 
-**Inheritance/Implementation:** RectShape extends [BaseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-baseshape-c.md)
+**Inheritance/Implementation:** RectShape extends [BaseShape](arkts-na-arkui-shape-baseshape-c.md)
 
 **Since:** 23
 
@@ -39,7 +39,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | No |  |
+| options | [RectShapeOptions](arkts-na-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](arkts-na-arkui-shape-roundrectshapeoptions-i.md) | No |  |
 
 ## radius
 

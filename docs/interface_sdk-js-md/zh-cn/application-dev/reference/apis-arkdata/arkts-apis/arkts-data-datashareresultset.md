@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { DataShareResultSet, DataType } from '@kit.ArkData';
 ```
 
 ## 汇总

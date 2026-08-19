@@ -11,7 +11,6 @@ formProvider模块提供了获取卡片信息、更新卡片、设置卡片刷�
 ## 导入模块
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
 ```
 
 ## 汇总

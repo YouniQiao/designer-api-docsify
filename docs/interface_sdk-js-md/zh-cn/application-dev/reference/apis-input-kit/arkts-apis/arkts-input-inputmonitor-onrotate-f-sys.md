@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## onRotate
@@ -28,8 +27,8 @@ function onRotate(fingers: int, receiver: Callback<Rotate>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fingers | int | 是 | 旋转的手指数，手指数不能小于0，当前仅支持收到旋转手势的回调。 |
-| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Rotate](arkts-input-multimodalinput-gestureevent-rotate-i.md)&gt; | 是 | 回调函数，异步上报旋转输入事件。 |
+| fingers | int | 是 | 旋转的手指数，目前支持监听手指数是2。 |
+| receiver | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Rotate](arkts-input-multimodalinput-gestureevent-rotate-i.md)&gt; | 是 | 回调函数，返回旋转输入事件。 |
 
 **错误码：**
 

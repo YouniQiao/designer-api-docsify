@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
 ```
 
 ## setPointerSizeSync
@@ -26,7 +25,7 @@ function setPointerSizeSync(size: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | int | 是 | 鼠标光标大小，范围为[1-7]，默认为1。 |
+| size | int | 是 | 鼠标光标大小，范围为[1, 7]，默认为1。 |
 
 **错误码：**
 

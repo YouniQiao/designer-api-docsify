@@ -11,7 +11,6 @@ ArcSwiper自定义切换动画相关信息。
 ## 导入模块
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
 ```
 
 ## timeout

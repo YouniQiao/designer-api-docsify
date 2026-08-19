@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
 ```
 
 ## breakpointConfig
@@ -40,11 +39,11 @@ breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BreakpointOptions](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-breakpointoptions-i.md) | 否 | 断点配置选项，包含宽度和高度的断点阈值数组。 |
+| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | 否 | 断点配置选项，包含宽度和高度的断点阈值数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContainerReaderAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-containerreaderattribute-i.md) |  |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
 

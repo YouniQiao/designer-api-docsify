@@ -11,7 +11,6 @@ wantConstant模块提供want中操作want常数和解释Flags说明的能力。
 ## 导入模块
 
 ```TypeScript
-import { wantConstant } from '@kit.AbilityKit';
 ```
 
 ## 汇总

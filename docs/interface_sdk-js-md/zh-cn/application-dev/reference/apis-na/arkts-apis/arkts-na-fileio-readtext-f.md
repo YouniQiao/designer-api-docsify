@@ -78,7 +78,7 @@ function readText(filePath: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回读取文件的内容。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回读取文件的内容。 |
 
 **错误码：**
 
@@ -125,7 +125,7 @@ function readText(
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
 | options | [ReadTextOptions](arkts-na-file-fs-readtextoptions-i.md) | 是 | 支持如下选项：<br/>- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br/>-  length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认文件长度。<br/>- encoding，string类型，表示数据的编码方式，默认 'utf-8'，仅支持 'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回读取文件的内容。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回读取文件的内容。 |
 
 **错误码：**
 

@@ -113,7 +113,7 @@ Presents a custom-style dialog box with the provided content. The content parame
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | Yes | Custom dialog content. |
+| content | CustomBuilder \| [CustomBuilderWithId](../../apis-na/arkts-apis/arkts-na-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | Yes | Custom dialog content. |
 | options | dialog.DialogCustomOptions | No | Custom dialog options. |
 
 **Return value:**

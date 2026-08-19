@@ -29,7 +29,7 @@ Obtains the JSON string array of the current application's configuration file ba
 | moduleName | string | Yes | Module name. |
 | extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
 | metadataName | string | Yes | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

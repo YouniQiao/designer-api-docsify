@@ -29,7 +29,7 @@ Subscribes to data receive events. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | channelId | int | Yes | Channel ID obtained when opening a proxy channel. The value range is 1 to 2147483647. Using an invalid or closed channelId returns error code 32390004. If the value is out of range, error code 3239 0006 is returned. The channelId takes effect only when the proxy channel is available, and becomes unavailable after the channel is closed or disconnected. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataInfo](arkts-distributedservice-proxychannelmanager-datainfo-i.md)&gt; | Yes | Callback invoked to return the data received through the proxy channel. The callback parameter is a [DataInfo](arkts-distributedservice-proxychannelmanager-datainfo-i.md) object, which contains channelId ( channel ID) and data (received byte data). Data can be received only after a proxy channel is opened by calling openProxyChannel. If registered multiple times, only the last registration takes effect. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataInfo](arkts-distributedservice-proxychannelmanager-datainfo-i.md)&gt; | Yes | Callback invoked to return the data received through the proxy channel. The callback parameter is a [DataInfo](arkts-distributedservice-proxychannelmanager-datainfo-i.md) object, which contains channelId ( channel ID) and data (received byte data). Data can be received only after a proxy channel is opened by calling openProxyChannel. If registered multiple times, only the last registration takes effect. |
 
 **Error codes:**
 

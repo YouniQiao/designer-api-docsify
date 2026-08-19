@@ -795,7 +795,7 @@ offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#on_applicationstatechangeapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](#on_applicationstatechangeapplicationstatechange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
 
 **示例**
 
@@ -1208,7 +1208,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#on_abilitylifecycleabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#on_abilitylifecycleabilitylifecycle) 方法定义的callback回调，也可以为空。<br/>-?如果传入已定义的回调，则取消该监听。 <br/>-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
 
 **错误码：**
 
@@ -1487,7 +1487,7 @@ onApplicationStateChange(callback: ApplicationStateChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 应用前后台切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 是 | 应用前后台切换时触发的回调方法。 |
 
 **示例**
 
@@ -1545,7 +1545,7 @@ onEnvironment(callback: EnvironmentCallback): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
+| callback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -1806,7 +1806,7 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](../../apis-na/arkts-apis/arkts-na-app-ability-applicationstatechangecallback-applicationstatechangecallback-i.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 是 | 当前应用进程状态切换时触发的回调方法。 |
 
 **错误码：**
 
@@ -1852,7 +1852,7 @@ export default class MyAbility extends UIAbility {
 on(type: 'environment', callback: EnvironmentCallback): number
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。 > **说明：** > > - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较 > 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更 > 加灵活，不仅可以在应用组件中使用，还可以在页面中使用，但是支持订阅的环境变量与Ability的 > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction > 、screenDensity、displayId，详见[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)中各个环境变量的说明。 > > - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](#setlanguage)接口设置应用的语言，即便系统语 > 言发生变化，系统也不再触发当前接口的[callback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)回调。详见 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
+注册对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。 > **说明：** > > - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较 > 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更 > 加灵活，不仅可以在应用组件中使用，还可以在页面中使用，但是支持订阅的环境变量与Ability的 > [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction > 、screenDensity、displayId，详见[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)中各个环境变量的说明。 > > - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](#setlanguage)接口设置应用的语言，即便系统语 > 言发生变化，系统也不再触发当前接口的[callback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md)回调。详见 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **起始版本：** 9
 
@@ -1869,7 +1869,7 @@ on(type: 'environment', callback: EnvironmentCallback): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'environment' | 是 | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | 是 | 系统环境变化时触发的回调方法。 |
+| callback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | 是 | 系统环境变化时触发的回调方法。 |
 
 **返回值：**
 
@@ -2221,7 +2221,7 @@ setLanguage(language: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| language | string | 是 | 设置语言，当前支持的语言列表可以通过 [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getsystemlanguages)获取。 |
+| language | string | 是 | 设置语言，当前支持的语言列表可以通过 [getSystemLanguages()](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getsystemlanguages)获取。 |
 
 **错误码：**
 

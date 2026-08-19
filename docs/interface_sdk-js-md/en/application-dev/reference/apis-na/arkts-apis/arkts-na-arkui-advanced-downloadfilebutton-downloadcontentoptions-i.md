@@ -23,7 +23,7 @@ icon?: DownloadIconStyle
 
 DownloadFileButton icon Style.
 
-**Type:** [DownloadIconStyle](arkts-na-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
+**Type:** [DownloadIconStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-downloadfilebutton-downloadiconstyle-e.md)
 
 **Since:** 23
 
@@ -43,7 +43,7 @@ text?: DownloadDescription
 
 DownloadFileButton description.
 
-**Type:** [DownloadDescription](arkts-na-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
+**Type:** [DownloadDescription](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-downloadfilebutton-downloaddescription-e.md)
 
 **Since:** 23
 

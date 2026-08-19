@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
 ```
 
 ## fixedMode
@@ -22,7 +21,7 @@ import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode
 fixedMode?: FixedMode
 ```
 
-修正坐标的模式。
+修正坐标的模式。默认值为FixedMode.NONE。
 
 **类型：** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
@@ -40,7 +39,7 @@ fixedMode?: FixedMode
 isInject?: boolean
 ```
 
-表示该触屏输入事件是否为注入事件。注入事件详细介绍可参考 [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md)。
+表示该触屏输入事件是否为注入事件。默认值为false。注入事件详细介绍可参考 [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md)。
 
 **类型：** boolean
 

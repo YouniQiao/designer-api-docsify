@@ -1,6 +1,6 @@
 # @ohos.multimodalInput.pointer
 
-本模块提供鼠标光标管理能力，包括查询、设置鼠标光标属性。 > **说明：**
+鼠标光标管理模块，用于查询和设置鼠标光标相关属性。
 
 **起始版本：** 23
 
@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
 ```
 
 ## 汇总
@@ -26,9 +25,9 @@ import { pointer } from '@kit.InputKit';
 | [isPointerVisible](arkts-input-pointer-ispointervisible-f.md) | 获取鼠标光标显示状态，使用callback异步回调。 |
 | [isPointerVisible](arkts-input-pointer-ispointervisible-f.md) | 获取鼠标光标显示状态，使用Promise异步回调。 |
 | [isPointerVisibleSync](arkts-input-pointer-ispointervisiblesync-f.md) | 获取当前窗口鼠标光标的显示状态，使用同步方式。 |
-| [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) | 设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用 Promise异步回调。 |
-| [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) | 设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用 Promise异步回调。 应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。 |
-| [setCustomCursorSync](arkts-input-pointer-setcustomcursorsync-f.md) | 设置指定窗口的自定义光标样式，使用同步方式进行设置。此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)。 |
+| [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) | 设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用 Promise异步回调。<br>应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。 |
+| [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) | 设置指定窗口的自定义光标样式，此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)，使用 Promise异步回调。<br>应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。 |
+| [setCustomCursorSync](arkts-input-pointer-setcustomcursorsync-f.md) | 设置指定窗口的自定义光标样式，使用同步方式进行设置。此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅 [setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)。<br>应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动， 以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。 |
 | [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md) | 设置指定窗口的鼠标样式类型，此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅 [setCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcursor12)，使用callback异步回调。 |
 | [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md) | 设置指定窗口的鼠标样式类型，此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅 [setCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcursor12)，使用Promise异步回调。 |
 | [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md) | 设置指定窗口的鼠标样式类型，使用同步方式返回结果。此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅 [setCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcursor12)。 |

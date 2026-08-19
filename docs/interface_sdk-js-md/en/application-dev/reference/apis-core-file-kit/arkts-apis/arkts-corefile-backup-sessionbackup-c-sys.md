@@ -187,7 +187,7 @@ Append new bundles to backup.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundlesToBackup | string[] | Yes | Bundles to backup. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
 
 **Error codes:**
 

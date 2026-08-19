@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
-import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## on_connect('connect')
@@ -30,7 +28,7 @@ function on(type: 'connect', callback: Callback<VpnConnectState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connect' | 是 | Indicates vpn connect state changes. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VpnConnectState&gt; | 是 | The callback of the vpn connect state. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;VpnConnectState&gt; | 是 | The callback of the vpn connect state. |
 
 **错误码：**
 

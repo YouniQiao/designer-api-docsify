@@ -13,7 +13,6 @@ ReminderRequestAlarm extends ReminderRequest 闹钟实例对象，用于设置�
 ## 导入模块
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## daysOfWeek

@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

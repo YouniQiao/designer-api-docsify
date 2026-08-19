@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
 ```
 
 ## 汇总

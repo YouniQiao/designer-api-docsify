@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -38,11 +37,11 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ContainerReaderInfo](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-containerreaderinfo-i.md) | 是 | 容器读取配置选项，包含尺寸数据和断点配置。 |
+| value | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | 是 | 容器读取配置选项，包含尺寸数据和断点配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContainerReaderAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-containerreaderattribute-i.md) |  |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
 

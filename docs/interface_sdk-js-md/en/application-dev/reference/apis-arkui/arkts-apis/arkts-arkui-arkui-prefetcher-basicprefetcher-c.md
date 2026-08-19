@@ -2,7 +2,7 @@
 
 **BasicPrefetcher** is a fundamental implementation of **IPrefetcher**. It offers an intelligent data prefetching algorithm that decides the data items to prefetch based on real-time changes in the visible area on the screen and variations in the prefetch duration. It can also determine the prefetch requests to be canceled based on the user's scrolling actions. **BasicPrefetcher** objects do not support JSON serialization.
 
-**Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-iprefetcher-i.md)
+**Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Passes the data source that supports prefetching and binds it to **Prefetcher** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-idatasourceprefetching-i.md) | No | Prefetching-capable data source. If this parameter is not specified, the value is empty by default. You can set a data source using **setDataSource** later. |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | No | Prefetching-capable data source. If this parameter is not specified, the value is empty by default. You can set a data source using **setDataSource** later. |
 
 ## setDataSource
 
@@ -62,7 +62,7 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-idatasourceprefetching-i.md) | Yes | Prefetching-capable data source. |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | Yes | Prefetching-capable data source. |
 
 ## visibleAreaChanged
 

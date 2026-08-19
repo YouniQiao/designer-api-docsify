@@ -29,7 +29,7 @@ Indicates the initialization of signature and signature verification using crede
 | --- | --- | --- | --- |
 | authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
 | spec | [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Yes | Parameters for the signing or signature verification operation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CMHandle](arkts-devicecertificate-certificatemanager-cmhandle-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

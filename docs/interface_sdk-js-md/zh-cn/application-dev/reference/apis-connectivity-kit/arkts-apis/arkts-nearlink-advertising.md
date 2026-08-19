@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

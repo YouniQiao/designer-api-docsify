@@ -9,7 +9,6 @@ system.request部件主要给应用提供上传下载文件的基础能力。
 ## 导入模块
 
 ```TypeScript
-import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
