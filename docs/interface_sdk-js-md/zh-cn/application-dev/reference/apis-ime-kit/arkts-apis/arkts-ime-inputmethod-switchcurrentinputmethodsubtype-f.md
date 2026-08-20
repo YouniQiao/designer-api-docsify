@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchCurrentInputMethodSubtype(target: InputMethodSubtype, callback: AsyncCallback<boolean>): void
 ```
 
-切换当前输入法的子类型。使用callback异步回调。
-
 **起始版本：** 23
 
 **需要权限：** 
@@ -112,8 +110,6 @@ inputMethod.switchCurrentInputMethodSubtype({
 function switchCurrentInputMethodSubtype(target: InputMethodSubtype): Promise<boolean>
 ```
 
-切换当前输入法的子类型。使用promise异步回调。
-
 **起始版本：** 23
 
 **需要权限：** 
@@ -133,7 +129,7 @@ function switchCurrentInputMethodSubtype(target: InputMethodSubtype): Promise<bo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前输入法切换子类型成功，返回false表示当前输入法切换子类型失败。 |
+| Promise&lt;boolean&gt; | Promise对象。resolve时返回true表示当前输入法切换子类型成功，返回false表示当前输入法切换子类型失败；reject时返回错误对象，表示切换输入法子类型 时发生错误。 |
 
 **错误码：**
 

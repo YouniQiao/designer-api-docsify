@@ -1,7 +1,5 @@
 # InputMethodSetting
 
-InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能： - **输入法变化订阅**：通过 on('imeChange') 订阅输入法及子类型变化事件，当用户切换输入法时收到通知。 - **输入法列表查询**：通过 [getInputMethods](#getinputmethods) 查询已激活/未激活输入法列表，通过 [getAllInputMethods](#getallinputmethods) 查询所有已安装输入法列表，通过 [listInputMethodSubtype](#listinputmethodsubtype) 查询指定输入法的子类型列表。 - **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。 - **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。 需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取InputMethodSetting实例后使用。 下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取到InputMethodSetting实例后，通过实例调用。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-interface InputMethodSetting--><!--Device-inputMethod-interface InputMethodSetting-End-->
@@ -24,8 +22,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```TypeScript
 displayOptionalInputMethod(callback: AsyncCallback<void>): void
 ```
-
-显示输入法选择对话框。使用callback异步回调。
 
 **起始版本：** 8
 
@@ -63,8 +59,6 @@ inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
 displayOptionalInputMethod(): Promise<void>
 ```
 
-显示输入法选择对话框。使用promise异步回调。
-
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -79,7 +73,7 @@ displayOptionalInputMethod(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -99,8 +93,6 @@ inputMethod.getSetting().displayOptionalInputMethod().then(() => {
 getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-获取所有输入法应用列表。使用callback异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
@@ -111,7 +103,7 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回所有输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数。当返回所有输入法列表成功，err为undefined， data为获取到的InputMethodProperty列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -156,8 +148,6 @@ inputMethodSetting.getAllInputMethods((err?: BusinessError, data?: Array<inputMe
 ```TypeScript
 getAllInputMethods(): Promise<Array<InputMethodProperty>>
 ```
-
-获取所有输入法应用列表。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -211,8 +201,6 @@ inputMethodSetting.getAllInputMethods().then((data: Array<inputMethod.InputMetho
 getAllInputMethodsSync(): Array<InputMethodProperty>
 ```
 
-获取所有输入法应用列表。同步接口。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>-End-->
@@ -223,7 +211,7 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; | 返回所有输入法列表。 |
+| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; | 返回所有输入法列表 |
 
 **错误码：**
 
@@ -244,8 +232,6 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getInputMethodState(): Promise<EnabledState>
 ```
 
-查询输入法的启用状态。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
@@ -256,7 +242,7 @@ getInputMethodState(): Promise<EnabledState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise对象，返回EnabledState.DISABLED表示未启用; 返回EnabledState.BASIC_MODE表示基础模式; 返回 EnabledState.FULL_EXPERIENCE_MODE表示完整体验模式。 |
+| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise对象，返回EnabledState.DISABLED表示未启用； 返回EnabledState.BASIC_MODE表示基础模式； 返回EnabledState.FULL_EXPERIENCE_MODE表示完整体验模式 |
 
 **错误码：**
 
@@ -298,8 +284,6 @@ inputMethodSetting.getInputMethodState().then((status: inputMethod.EnabledState)
 getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-获取已激活/未激活的输入法应用列表。使用callback异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
@@ -311,7 +295,7 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | true表示返回已激活输入法列表，false表示返回未激活输入法列表。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已激活/未激活输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，当返回已激活/未激活输入法列表成功，err为undefined， data为获取到的InputMethodProperty列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -357,8 +341,6 @@ inputMethodSetting.getInputMethods(true, (err?: BusinessError, data?: Array<inpu
 ```TypeScript
 getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
-
-获取已激活/未激活的输入法应用列表。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -420,8 +402,6 @@ inputMethodSetting.getInputMethods(true).then((data: Array<inputMethod.InputMeth
 getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
-获取已激活/未激活的输入法应用列表。同步接口。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>-End-->
@@ -460,8 +440,6 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void
 ```
 
-查询当前输入法应用的所有子类型。使用callback异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void-End-->
@@ -472,7 +450,7 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | 是 | 回调函数，返回当前输入法应用的所有子类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | 是 | 回调函数，当返回当前输入法应用的所有子类型成功，err为undefined， data为获取到的InputMethodSubtype列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -520,8 +498,6 @@ inputMethodSetting.listCurrentInputMethodSubtype((err?: BusinessError, data?: Ar
 ```TypeScript
 listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 ```
-
-查询当前输入法应用的所有子类型。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -580,8 +556,6 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
 listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-查询已安装的输入法列表。使用callback异步回调。
-
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -596,7 +570,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已安装的输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数。当返回已安装的输入法列表成功，err为undefined， data为获取到的InputMethodProperty列表；否则为错误对象。 |
 
 **示例**
 
@@ -617,8 +591,6 @@ inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputM
 ```TypeScript
 listInputMethod(): Promise<Array<InputMethodProperty>>
 ```
-
-查询已安装的输入法列表。使用promise异步回调。
 
 **起始版本：** 8
 
@@ -656,8 +628,6 @@ listInputMethodSubtype(
       callback: AsyncCallback<Array<InputMethodSubtype>>
     ): void
 ```
-
-获取指定输入法应用的所有子类型。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -732,8 +702,6 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty, (err?: BusinessEr
 listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>
 ```
 
-获取指定输入法应用的所有子类型。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>-End-->
@@ -807,8 +775,6 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
 offImeChange(callback?: ImeChangeCallback): void
 ```
 
-取消订阅输入法或子类型切换事件。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void--><!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void-End-->
@@ -819,7 +785,7 @@ offImeChange(callback?: ImeChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 否 | the callback called when the current input method changes, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 否 | 回调函数，返回取消订阅的输入法属性对象及子类型对象。 |
 
 **示例**
 
@@ -836,8 +802,6 @@ off(
       callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
     ): void
 ```
-
-取消订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -864,8 +828,6 @@ inputMethod.getSetting().off('imeChange');
 onImeChange(callback: ImeChangeCallback): void
 ```
 
-订阅输入法或子类型切换事件。
-
 **起始版本：** 23
 
 <!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void--><!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void-End-->
@@ -876,7 +838,7 @@ onImeChange(callback: ImeChangeCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 是 | the callback called when the current input method changes. |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 是 | 回调函数，返回输入法属性对象及子类型对象。 |
 
 **示例**
 
@@ -897,8 +859,6 @@ on(
       callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
     ): void
 ```
-
-订阅输入法及子类型变化监听事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -930,8 +890,6 @@ inputMethod.getSetting()
 ```TypeScript
 showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 ```
-
-显示输入法选择对话框。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -979,8 +937,6 @@ inputMethod.getSetting().showOptionalInputMethods((err: BusinessError, result: b
 showOptionalInputMethods(): Promise<boolean>
 ```
 
-显示输入法选择对话框。使用promise异步回调。
-
 **起始版本：** 9
 
 **废弃版本：** 18
@@ -995,7 +951,7 @@ showOptionalInputMethods(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。当输入法选择对话框显示成功，err为undefined，data为true；否则为错误对象。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示输入法选择对话框显示成功，返回false表示显示失败。 |
 
 **错误码：**
 

@@ -1,7 +1,5 @@
 # RequestKeyboardReason
 
-枚举，请求键盘输入的原因。 | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | NONE | 0 | 表示没有特定的原因触发键盘请求。 | | MOUSE | 1 | 表示键盘请求是由鼠标操作触发的。 | | TOUCH | 2 | 表示键盘请求是由触摸操作触发的。 | | OTHER | 20 | 表示键盘请求是由其他原因触发的。 |
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum RequestKeyboardReason--><!--Device-inputMethodEngine-export enum RequestKeyboardReason-End-->
@@ -13,8 +11,6 @@
 ```TypeScript
 NONE = 0
 ```
-
-表示没有特定的原因触发键盘请求。
 
 **起始版本：** 23
 
@@ -28,8 +24,6 @@ NONE = 0
 MOUSE = 1
 ```
 
-表示键盘请求是由鼠标操作触发的。
-
 **起始版本：** 23
 
 <!--Device-RequestKeyboardReason-MOUSE = 1--><!--Device-RequestKeyboardReason-MOUSE = 1-End-->
@@ -42,8 +36,6 @@ MOUSE = 1
 TOUCH = 2
 ```
 
-表示键盘请求是由触摸操作触发的。
-
 **起始版本：** 23
 
 <!--Device-RequestKeyboardReason-TOUCH = 2--><!--Device-RequestKeyboardReason-TOUCH = 2-End-->
@@ -55,8 +47,6 @@ TOUCH = 2
 ```TypeScript
 OTHER = 20
 ```
-
-表示键盘请求是由其他原因触发的。
 
 **起始版本：** 23
 

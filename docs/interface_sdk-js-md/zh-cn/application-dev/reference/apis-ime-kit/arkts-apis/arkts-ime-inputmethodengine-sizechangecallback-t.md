@@ -4,8 +4,6 @@
 export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void
 ```
 
-当输入法面板大小变化时触发的回调。
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void--><!--Device-inputMethodEngine-export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void-End-->

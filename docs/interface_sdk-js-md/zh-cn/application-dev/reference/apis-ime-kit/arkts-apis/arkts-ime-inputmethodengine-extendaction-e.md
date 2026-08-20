@@ -1,7 +1,5 @@
 # ExtendAction
 
-编辑框中文本的扩展编辑操作类型，如剪切、复制等。
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum ExtendAction--><!--Device-inputMethodEngine-export enum ExtendAction-End-->
@@ -13,8 +11,6 @@
 ```TypeScript
 SELECT_ALL = 0
 ```
-
-全选。
 
 **起始版本：** 23
 
@@ -28,8 +24,6 @@ SELECT_ALL = 0
 CUT = 3
 ```
 
-剪切。
-
 **起始版本：** 23
 
 <!--Device-ExtendAction-CUT = 3--><!--Device-ExtendAction-CUT = 3-End-->
@@ -42,8 +36,6 @@ CUT = 3
 COPY = 4
 ```
 
-复制。
-
 **起始版本：** 23
 
 <!--Device-ExtendAction-COPY = 4--><!--Device-ExtendAction-COPY = 4-End-->
@@ -55,8 +47,6 @@ COPY = 4
 ```TypeScript
 PASTE = 5
 ```
-
-粘贴。
 
 **起始版本：** 23
 

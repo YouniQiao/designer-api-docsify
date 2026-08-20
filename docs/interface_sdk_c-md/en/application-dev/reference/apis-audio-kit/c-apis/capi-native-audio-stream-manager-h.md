@@ -58,7 +58,7 @@ Fetch the audio streammanager handle, which is a singleton.
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | @return          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds          [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) if system state error |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | @return          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) if execution succeeds          [AUDIOCOMMON_RESULT_ERROR_SYSTEM](capi-native-audio-common-h.md#oh_audiocommon_result) if system state error |
 
 ### OH_AudioStreamManager_GetDirectPlaybackSupport()
 
@@ -85,7 +85,7 @@ Gets the mode of direct playback available for a given audio format with current
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioStreamManager is nullptr;                                                         2.The param of streamInfo is nullptr;                                                         3.The param of usage invalid;                                                         4.The param of directPlaybackMode is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:          [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.          [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                         1.The param of audioStreamManager is nullptr;                                                         2.The param of streamInfo is nullptr;                                                         3.The param of usage invalid;                                                         4.The param of directPlaybackMode is nullptr. |
 
 ### OH_AudioStreamManager_IsAcousticEchoCancelerSupported()
 
@@ -111,7 +111,7 @@ Query whether acoustic echo canceler is supported by input source.
 
 | Type | Description |
 | -- | -- |
-| OH_AudioCommon_Result | Function result code:      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                     1.The input param streamManager is nullptr;                                                     2.Source type is invalid.                                                     3.The input param supported is nullptr. |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | Function result code:      [AUDIOCOMMON_RESULT_SUCCESS](capi-native-audio-common-h.md#oh_audiocommon_result) If the execution is successful.      [AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM](capi-native-audio-common-h.md#oh_audiocommon_result):                                                     1.The input param streamManager is nullptr;                                                     2.Source type is invalid.                                                     3.The input param supported is nullptr. |
 
 ### OH_AudioStreamManager_IsFastPlaybackSupported()
 

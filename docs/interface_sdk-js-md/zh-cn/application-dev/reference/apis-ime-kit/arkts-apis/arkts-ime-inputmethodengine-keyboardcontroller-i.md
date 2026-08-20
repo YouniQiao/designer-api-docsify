@@ -1,7 +1,5 @@
 # KeyboardController
 
-下列API均需使用 on('inputStart') 获取到KeyboardController实例后，通过实例调用。
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface KeyboardController--><!--Device-inputMethodEngine-interface KeyboardController-End-->
@@ -19,8 +17,6 @@ import { inputMethodEngine } from '@kit.IMEKit';
 ```TypeScript
 exitCurrentInputType(callback: AsyncCallback<void>): void
 ```
-
-退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -61,8 +57,6 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 exitCurrentInputType(): Promise<void>
 ```
 
-退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-KeyboardController-exitCurrentInputType(): Promise<void>--><!--Device-KeyboardController-exitCurrentInputType(): Promise<void>-End-->
@@ -73,7 +67,7 @@ exitCurrentInputType(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -99,8 +93,6 @@ keyboardController.exitCurrentInputType().then(() => {
 ```TypeScript
 hide(callback: AsyncCallback<void>): void
 ```
-
-隐藏输入法。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -140,8 +132,6 @@ keyboardController.hide((err: BusinessError) => {
 hide(): Promise<void>
 ```
 
-隐藏输入法。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-KeyboardController-hide(): Promise<void>--><!--Device-KeyboardController-hide(): Promise<void>-End-->
@@ -152,7 +142,7 @@ hide(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -177,8 +167,6 @@ keyboardController.hide().then(() => {
 ```TypeScript
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
-
-隐藏输入法。使用callback异步回调。
 
 **起始版本：** 8
 
@@ -216,8 +204,6 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 hideKeyboard(): Promise<void>
 ```
 
-隐藏输入法。使用promise异步回调。
-
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -232,7 +218,7 @@ hideKeyboard(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

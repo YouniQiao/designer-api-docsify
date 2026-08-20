@@ -2647,6 +2647,7 @@
     - [NavigationToolbarOptions](arkts-na-navigation-navigationtoolbaroptions-i.md)
     - [NavigationTransitionProxy](arkts-na-navigation-navigationtransitionproxy-i.md)
     - [PopInfo](arkts-na-navigation-popinfo-i.md)
+    - [PreloadOptions](arkts-na-navigation-preloadoptions-i.md)
     - [ScrollEffectOptions](arkts-na-navigation-scrolleffectoptions-i.md)
     - [ToolbarItem](arkts-na-navigation-toolbaritem-i.md)
     - [InterceptionCallback](arkts-na-interceptioncallback-t.md)

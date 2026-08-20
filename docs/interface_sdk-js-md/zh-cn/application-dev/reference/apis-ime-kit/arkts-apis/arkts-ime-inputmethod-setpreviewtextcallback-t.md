@@ -4,8 +4,6 @@
 export type SetPreviewTextCallback = (text: string, range: Range) => void
 ```
 
-当输入法框架需要显示预览文本时触发的回调。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void--><!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void-End-->

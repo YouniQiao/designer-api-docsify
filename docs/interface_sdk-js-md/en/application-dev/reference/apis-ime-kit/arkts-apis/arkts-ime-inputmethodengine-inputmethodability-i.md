@@ -587,7 +587,7 @@ Disables listening for the input method stop event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
-| callback | () =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | () =&gt; void | Yes | Callback to unregister. |
 
 **Examples**
 

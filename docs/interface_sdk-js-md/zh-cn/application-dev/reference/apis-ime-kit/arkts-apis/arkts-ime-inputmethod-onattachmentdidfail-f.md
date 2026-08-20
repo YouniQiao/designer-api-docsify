@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 ```
 
-订阅绑定失败事件。使用callback异步回调。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void-End-->

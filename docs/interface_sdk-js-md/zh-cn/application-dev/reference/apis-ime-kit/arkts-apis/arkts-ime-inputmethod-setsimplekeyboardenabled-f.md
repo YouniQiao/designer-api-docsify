@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function setSimpleKeyboardEnabled(enable: boolean): void
 ```
 
-编辑框应用设置简单键盘标志。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void--><!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void-End-->

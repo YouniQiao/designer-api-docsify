@@ -1,7 +1,5 @@
 # ImmersiveEffect
 
-沉浸效果。
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
@@ -20,8 +18,6 @@ import { inputMethodEngine } from '@kit.IMEKit';
 gradientHeight: int
 ```
 
-渐变高度，不能超过屏幕高度的15%。
-
 **类型：** int
 
 **起始版本：** 23
@@ -35,8 +31,6 @@ gradientHeight: int
 ```TypeScript
 gradientMode: GradientMode
 ```
-
-渐变模式。
 
 **类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 

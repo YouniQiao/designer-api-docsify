@@ -1,7 +1,5 @@
 # FunctionKey
 
-输入法功能键类型。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-export interface FunctionKey--><!--Device-inputMethod-export interface FunctionKey-End-->
@@ -24,8 +22,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```TypeScript
 enterKeyType: EnterKeyType
 ```
-
-输入法enter键类型。
 
 **类型：** EnterKeyType
 

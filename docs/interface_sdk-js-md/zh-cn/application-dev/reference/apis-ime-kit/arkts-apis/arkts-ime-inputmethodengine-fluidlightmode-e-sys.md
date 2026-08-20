@@ -1,7 +1,5 @@
 # FluidLightMode（系统接口）
 
-枚举，输入法流光模式。 | 名称 | 值 | 说明 | | ------------ | -- | ------------------ | | NONE | 0 | 不使用流光模式。 | | BACKGROUND_FLUID_LIGHT | 1 | 开启背景流光模式。系统面板变为透明，流光效果由编辑框宿主应用实现。 |
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum FluidLightMode--><!--Device-inputMethodEngine-export enum FluidLightMode-End-->
@@ -16,8 +14,6 @@
 NONE = 0
 ```
 
-不使用流光模式。
-
 **起始版本：** 23
 
 <!--Device-FluidLightMode-NONE = 0--><!--Device-FluidLightMode-NONE = 0-End-->
@@ -31,8 +27,6 @@ NONE = 0
 ```TypeScript
 BACKGROUND_FLUID_LIGHT = 1
 ```
-
-开启背景流光模式。此时系统面板会变为透明，流光效果需要由编辑框宿主应用实现。
 
 **起始版本：** 23
 

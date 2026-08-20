@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getDefaultInputMethod(userId?: int): InputMethodProperty
 ```
 
-获取指定用户的默认输入法。
-
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -33,7 +31,7 @@ function getDefaultInputMethod(userId?: int): InputMethodProperty
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | int | 否 | 用户ID。如果不提供： <br>- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 <br>- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | int | 否 | 用户ID。取值范围为有效用户的ID。如果不提供： <br>- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 <br>- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 

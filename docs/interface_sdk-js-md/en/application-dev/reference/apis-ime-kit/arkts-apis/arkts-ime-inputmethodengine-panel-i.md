@@ -1368,7 +1368,7 @@ Update the panel rectangle. This API uses a promise to return the result. &gt; *
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt;&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

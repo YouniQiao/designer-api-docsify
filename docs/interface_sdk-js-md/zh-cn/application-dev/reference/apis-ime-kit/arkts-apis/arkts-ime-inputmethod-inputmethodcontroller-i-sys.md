@@ -1,7 +1,5 @@
 # InputMethodController
 
-下列API示例中都需使用[getController](arkts-ime-inputmethod-getcontroller-f.md)获取到InputMethodController实例，再通过实例调用对应方法。 InputMethodController是输入法客户端控制器，面向前台应用提供与输入法交互的核心能力。通过`inputMethod.getController()`获取实例后，可进行以下操作： - **绑定管理**：通过 [attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) 建立与输入法的绑定，通过[detach](arkts-ime-inputmethod-inputmethodcontroller-i.md#detach)解除绑定。attach和 detach必须配对使用。 - **键盘控制**：通过[showTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#showtextinput)拉 起软键盘进入编辑状态，通过[hideTextInput](arkts-ime-inputmethod-inputmethodcontroller-i.md#hidetextinput)隐 藏软键盘退出编辑状态。showTextInput和hideTextInput必须配对使用。 - **编辑框状态同步**：通过 [updateCursor](arkts-ime-inputmethod-inputmethodcontroller-i.md#updatecursor) 、 [changeSelection](arkts-ime-inputmethod-inputmethodcontroller-i.md#changeselection) 、 [updateAttribute](arkts-ime-inputmethod-inputmethodcontroller-i.md#updateattribute) 等接口向输入法同步光标、选区、属性等编辑框状态信息。 - **事件订阅**：通过on('insertText')、on('deleteLeft')等接口订阅输入法应用发送的文本操作事件。 典型调用序列：`getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` &gt; **注意：** &gt; &gt; attach和detach必须配对使用，showTextInput和hideTextInput必须配对使用，否则可能导致资源泄漏或状态不一致。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-interface InputMethodController--><!--Device-inputMethod-interface InputMethodController-End-->
@@ -24,8 +22,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```TypeScript
 hideSoftKeyboard(displayId: long): Promise<void>
 ```
-
-隐藏指定屏幕上的输入法软键盘。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -93,8 +89,6 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 ```TypeScript
 showSoftKeyboard(displayId: long): Promise<void>
 ```
-
-在指定屏幕上显示输入法软键盘。使用Promise异步回调。
 
 **起始版本：** 23
 

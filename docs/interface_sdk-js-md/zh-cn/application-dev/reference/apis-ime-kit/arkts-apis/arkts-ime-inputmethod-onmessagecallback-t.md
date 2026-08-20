@@ -4,8 +4,6 @@
 type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void
 ```
 
-Callback function on receiving a custom message.
-
 **起始版本：** 23
 
 <!--Device-inputMethod-type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void--><!--Device-inputMethod-type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void-End-->
@@ -16,6 +14,6 @@ Callback function on receiving a custom message.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgId | string | 是 | the identifier of the message. |
-| msgParam | ArrayBuffer | 否 | the parameter of the custom message. |
+| msgId | string | 是 | 接收到的自定义通信数据的标识符。 |
+| msgParam | ArrayBuffer | 否 | 接收到的自定义通信数据的消息体。 |
 

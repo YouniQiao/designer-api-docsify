@@ -636,7 +636,7 @@ Creates a **PhotoOutput** instance. This API can only be used to create a **Phot
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md)* profile | Pointer to the profile used for creating the **Camera_PhotoOutput** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PhotoOutput** instance. |
-| Camera_PhotoOutput** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
+| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
 
 **Returns**:
 
@@ -662,7 +662,7 @@ Creates a **PhotoOutput** instance to be used in a preconfiguration stream.
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PhotoOutput** instance. |
-| Camera_PhotoOutput** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
+| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)** photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
 
 **Returns**:
 
@@ -688,7 +688,7 @@ Creates a **PhotoOutput** instance. **surfaceId** is not required in this functi
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md) *cameraManager | Pointer to the **Camera_Manager** instance. |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md) *profile | Pointer to the profile used for creating the **Camera_PhotoOutput** instance. |
-| Camera_PhotoOutput **photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
+| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md) **photoOutput | Double pointer to the **Camera_PhotoOutput** instance created, if the function is successfullycalled. |
 
 **Returns**:
 
@@ -715,7 +715,7 @@ Creates a **VideoOutput** instance.
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | [const Camera_VideoProfile](capi-oh-camera-camera-videoprofile.md)* profile | Pointer to the profile for creating the **Camera_VideoOutput** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_VideoOutput** instance. |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfullycalled. |
+| Camera_VideoOutput** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfullycalled. |
 
 **Returns**:
 
@@ -741,7 +741,7 @@ Creates a **VideoOutput** instance to be used in a preconfiguration stream.
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_VideoOutput** instance. |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfullycalled. |
+| Camera_VideoOutput** videoOutput | Double pointer to the **Camera_VideoOutput** instance created, if the function is successfullycalled. |
 
 **Returns**:
 

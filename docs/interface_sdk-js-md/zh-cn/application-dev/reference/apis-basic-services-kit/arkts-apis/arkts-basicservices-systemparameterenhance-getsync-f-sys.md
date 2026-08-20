@@ -33,7 +33,7 @@ function getSync(key: string, def?: string): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 系统参数值。 <br> 若key存在,返回设定的值。 <br> 若key不存在且未指定def或def为undefined，抛异常。 |
+| string | 系统参数值。 <br> 若key存在,返回设定的值。 <br> 若key不存在且指定了def（def不为undefined），返回def。 <br> 若key不存在且未指定def或def为undefined，抛异常。 |
 
 **错误码：**
 

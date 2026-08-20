@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>
 ```
 
-切换输入法，使用promise异步回调。
-
 **起始版本：** 23
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
@@ -40,7 +38,7 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

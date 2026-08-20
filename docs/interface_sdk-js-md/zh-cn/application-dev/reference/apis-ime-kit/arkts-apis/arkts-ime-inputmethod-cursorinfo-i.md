@@ -1,7 +1,5 @@
 # CursorInfo
 
-光标信息。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-export interface CursorInfo--><!--Device-inputMethod-export interface CursorInfo-End-->
@@ -25,9 +23,9 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 displayId?: long
 ```
 
-光标所在显示器的ID。
-
 **类型：** long
+
+**默认值：** 0
 
 **起始版本：** 26.0.0
 
@@ -43,8 +41,6 @@ displayId?: long
 height: double
 ```
 
-光标的高度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
-
 **类型：** double
 
 **起始版本：** 23
@@ -58,8 +54,6 @@ height: double
 ```TypeScript
 left: double
 ```
-
-光标的横坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
 **类型：** double
 
@@ -75,8 +69,6 @@ left: double
 top: double
 ```
 
-光标的纵坐标，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的高度。
-
 **类型：** double
 
 **起始版本：** 23
@@ -90,8 +82,6 @@ top: double
 ```TypeScript
 width: double
 ```
-
-光标的宽度，单位为px。该参数应为整数，最小值为0，最大值为当前屏幕的宽度。
 
 **类型：** double
 

@@ -37,6 +37,7 @@
 | [NavigationToolbarOptions](arkts-na-navigation-navigationtoolbaroptions-i.md) | Indicates the options of Navigation's Toolbar. |
 | [NavigationTransitionProxy](arkts-na-navigation-navigationtransitionproxy-i.md) | Navigation transition proxy. |
 | [PopInfo](arkts-na-navigation-popinfo-i.md) | Indicates the information of the popped page. |
+| [PreloadOptions](arkts-na-navigation-preloadoptions-i.md) | Indicates options for preloading a page. |
 | [ScrollEffectOptions](arkts-na-navigation-scrolleffectoptions-i.md) | Defines the scroll effect options for the title bar. |
 | [ToolbarItem](arkts-na-navigation-toolbaritem-i.md) | Defines configurable parameters for toolbar item. |
 

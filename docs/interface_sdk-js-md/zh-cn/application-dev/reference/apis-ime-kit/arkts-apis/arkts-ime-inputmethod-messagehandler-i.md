@@ -1,7 +1,5 @@
 # MessageHandler
 
-自定义通信对象。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-interface MessageHandler--><!--Device-inputMethod-interface MessageHandler-End-->
@@ -24,8 +22,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```TypeScript
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
-
-接收输入法应用发送的自定义数据回调函数。
 
 **起始版本：** 15
 
@@ -62,8 +58,6 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-监听对象终止回调函数。
-
 **起始版本：** 15
 
 <!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
@@ -92,8 +86,6 @@ inputMethodController.recvMessage(messageHandler);
 onMessage: OnMessageCallback
 ```
 
-onMessage(msgId: string, msgParam?: ArrayBuffer): void
-
 **类型：** OnMessageCallback
 
 **起始版本：** 23
@@ -107,8 +99,6 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```TypeScript
 onTerminated: Callback<void>
 ```
-
-onTerminated(): void 监听对象终止回调函数。
 
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 

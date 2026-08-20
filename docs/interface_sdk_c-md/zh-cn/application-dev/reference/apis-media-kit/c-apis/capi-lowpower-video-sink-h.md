@@ -166,7 +166,7 @@ OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, co
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| [const OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md)* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
+| const OHNativeWindow* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 
@@ -431,7 +431,7 @@ LowPowerVideoSink设置用于音画同步的OH_LowPowerAudioSink。
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* videoSink | Pointer to an OH_LowPowerVideoSink instance |
-| OH_LowPowerAudioSink* audioSink | Pointer to an OH_LowPowerAudioSink instance |
+| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* audioSink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -509,7 +509,7 @@ OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_A
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| OH_AVSamplesBuffer* samples | Pointer to an OH_AVSamplesBuffer instance |
+| [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)* samples | Pointer to an OH_AVSamplesBuffer instance |
 
 **返回：**
 

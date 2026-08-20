@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, userId?: int): Promise<void>
 ```
 
-切换输入法，使用promise异步回调。
-
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
@@ -37,7 +35,7 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 目标输入法的包名。 |
 | subtypeId | string | 否 | 输入法子类型的ID。如果不设置该参数，则切换到使用默认子类型的目标输入法。 |
-| userId | int | 否 | 用户ID。如果不提供： <br>- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 <br>- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | int | 否 | 用户ID。取值范围为有效用户的ID。如果不提供： <br>- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 <br>- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 

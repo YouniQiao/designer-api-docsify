@@ -21,8 +21,6 @@ function switchCurrentInputMethodAndSubtype(
   ): void
 ```
 
-切换至指定输入法的指定子类型，适用于跨输入法切换子类型。使用callback异步回调。
-
 **起始版本：** 23
 
 **需要权限：** 
@@ -103,8 +101,6 @@ function switchCurrentInputMethodAndSubtype(
   ): Promise<boolean>
 ```
 
-切换至指定输入法的指定子类型，适用于跨输入法切换子类型。使用promise异步回调。
-
 **起始版本：** 23
 
 **需要权限：** 
@@ -125,7 +121,7 @@ function switchCurrentInputMethodAndSubtype(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示切换至指定输入法的指定子类型成功，返回false表示切换至指定输入法的指定子类型失败。 |
+| Promise&lt;boolean&gt; | Promise对象。resolve时返回true表示切换至指定输入法的指定子类型成功，返回false表示切换至指定输入法的指定子类型失败；reject时返回错误对象，表示 切换至指定输入法的指定子类型时发生错误。 |
 
 **错误码：**
 

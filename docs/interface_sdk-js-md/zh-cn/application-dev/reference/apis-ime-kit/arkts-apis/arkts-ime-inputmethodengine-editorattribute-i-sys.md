@@ -1,7 +1,5 @@
 # EditorAttribute
 
-编辑框属性值。
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface EditorAttribute--><!--Device-inputMethodEngine-interface EditorAttribute-End-->
@@ -19,8 +17,6 @@ import { inputMethodEngine } from '@kit.IMEKit';
 ```TypeScript
 readonly fluidLightMode?: FluidLightMode
 ```
-
-流光模式。未设置或设置非法值时，默认不使用流光模式。 该属性仅系统应用可以使用。
 
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 

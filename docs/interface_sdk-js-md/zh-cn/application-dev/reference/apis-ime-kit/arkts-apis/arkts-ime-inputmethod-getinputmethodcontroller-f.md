@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getInputMethodController(): InputMethodController
 ```
 
-获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
-
 **起始版本：** 6
 
 **废弃版本：** 9

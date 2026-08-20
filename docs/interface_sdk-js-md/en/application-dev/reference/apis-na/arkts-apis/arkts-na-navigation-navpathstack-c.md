@@ -469,6 +469,45 @@ Pops the specified NavDestination out of the stack.
 | --- | --- |
 | int | Returns the index of the NavDestination if it exists in the stack, otherwise returns -1; |
 
+## preloadPath
+
+```TypeScript
+preloadPath(info: NavPathInfo, options?: PreloadOptions): Promise<void>
+```
+
+Preloads navigation destination page specified by **info**. The preload page will not be displayed immediately, but will be cached. When **pushPath** is called later with matching parameters, preloaded instance will be used for fast display.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NavPathStack-preloadPath(info: NavPathInfo, options?: PreloadOptions): Promise<void>--><!--Device-NavPathStack-preloadPath(info: NavPathInfo, options?: PreloadOptions): Promise<void>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| info | [NavPathInfo](arkts-na-navigation-navpathinfo-c.md) | Yes | Indicates NavDestination to be preloaded. |
+| options | [PreloadOptions](arkts-na-navigation-preloadoptions-i.md) | No | Indicates options for preloading. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../../apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+
 ## pushDestination
 
 ```TypeScript

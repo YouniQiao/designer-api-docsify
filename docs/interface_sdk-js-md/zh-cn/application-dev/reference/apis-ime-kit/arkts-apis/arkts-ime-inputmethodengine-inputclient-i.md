@@ -1,7 +1,5 @@
 # InputClient
 
-InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的 on('inputStart') 事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。 **核心功能概述：** - **文本获取**：通过 [getForward](#getforward)/ [getForwardSync](#getforwardsync)获取光标前的文本，通过 [getBackward](#getbackward)/ [getBackwardSync](#getbackwardsync)获取光标后的文本，用于分析已输入内容并提供智能补全。 - **文本编辑**：通过 [insertText](#inserttext)/ [insertTextSync](#inserttextsync)插入文本，通过 [deleteForward](#deleteforward)/ [deleteForwardSync](#deleteforwardsync)删除光标前的文本，通过 [deleteBackward](#deletebackward) /[deleteBackwardSync](#deletebackwardsync)删除光标后的文本。 - **功能键与光标**：通过 [sendKeyFunction](#sendkeyfunction) 发送功能键（如回车键），通过 [moveCursor](#movecursor)/ [moveCursorSync](#movecursorsync)移动光标。 - **选区操作**：通过 [selectByRange](#selectbyrange)/ [selectByRangeSync](#selectbyrangesync)按范围选中文本，通过 [selectByMovement](#selectbymovement) /[selectByMovementSync](#selectbymovementsync)按方向选中文本。 - **编辑框属性**：通过 [getEditorAttribute](#geteditorattribute) /[getEditorAttributeSync](#geteditorattributesync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键 盘布局。 - **文本预览**：通过[setPreviewText](#setpreviewtext)/ [setPreviewTextSync](#setpreviewtextsync)设置预览文本，通过 [finishTextPreview](#finishtextpreview)/ [finishTextPreviewSync](#finishtextpreviewsync)结束文本预览。 - **私有通信**：通过[sendPrivateCommand](#sendprivatecommand)向应用发送私有命令，通过 [sendMessage](#sendmessage)/ [recvMessage](#recvmessage)进行消息通信。 下列API均需使用 on('inputStart') 获取到InputClient实例后，通过实例调用。
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-interface InputClient--><!--Device-inputMethodEngine-interface InputClient-End-->
@@ -19,8 +17,6 @@ import { inputMethodEngine } from '@kit.IMEKit';
 ```TypeScript
 deleteBackward(length: int, callback: AsyncCallback<boolean>): void
 ```
-
-删除光标后固定长度的文本。使用callback异步回调。 **使用场景：** 实现删除键功能、删除光标后的字符、快速修正输入、实现自定义删除逻辑等。 **使用后效果：** 成功时返回true，编辑框中光标后指定长度的文本被删除。
 
 **起始版本：** 23
 
@@ -88,8 +84,6 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 ```TypeScript
 deleteBackward(length: int): Promise<boolean>
 ```
-
-删除光标后固定长度的文本。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -159,8 +153,6 @@ inputClient.deleteBackward(length).then((result: boolean) => {
 deleteBackwardSync(length: int): void
 ```
 
-删除光标后固定长度的文本。
-
 **起始版本：** 23
 
 <!--Device-InputClient-deleteBackwardSync(length: int): void--><!--Device-InputClient-deleteBackwardSync(length: int): void-End-->
@@ -202,8 +194,6 @@ inputClient.deleteBackwardSync(length);
 ```TypeScript
 deleteForward(length: int, callback: AsyncCallback<boolean>): void
 ```
-
-删除光标前固定长度的文本。使用callback异步回调。 **使用场景：** 实现退格键功能、逐字删除输入、删除错误的输入、实现自定义删除逻辑等。 **使用后效果：** 成功时返回true，编辑框中光标前指定长度的文本被删除。
 
 **起始版本：** 23
 
@@ -271,8 +261,6 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 ```TypeScript
 deleteForward(length: int): Promise<boolean>
 ```
-
-删除光标前固定长度的文本。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -342,8 +330,6 @@ inputClient.deleteForward(length).then((result: boolean) => {
 deleteForwardSync(length: int): void
 ```
 
-删除光标前固定长度的文本。
-
 **起始版本：** 23
 
 <!--Device-InputClient-deleteForwardSync(length: int): void--><!--Device-InputClient-deleteForwardSync(length: int): void-End-->
@@ -386,8 +372,6 @@ inputClient.deleteForwardSync(length);
 finishTextPreview(): Promise<void>
 ```
 
-结束预上屏。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-finishTextPreview(): Promise<void>--><!--Device-InputClient-finishTextPreview(): Promise<void>-End-->
@@ -398,7 +382,7 @@ finishTextPreview(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -425,8 +409,6 @@ inputClient.finishTextPreview().then(() => {
 finishTextPreviewSync(): void
 ```
 
-结束预上屏。
-
 **起始版本：** 23
 
 <!--Device-InputClient-finishTextPreviewSync(): void--><!--Device-InputClient-finishTextPreviewSync(): void-End-->
@@ -451,8 +433,6 @@ inputClient.finishTextPreviewSync();
 ```TypeScript
 getAttachOptions(): AttachOptions
 ```
-
-获取绑定输入法时的附加选项。
 
 **起始版本：** 19
 
@@ -485,8 +465,6 @@ console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptio
 getAttachOptions(): AttachOptions | null
 ```
 
-获取绑定输入法时的附加选项。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getAttachOptions(): AttachOptions | null--><!--Device-InputClient-getAttachOptions(): AttachOptions | null-End-->
@@ -504,8 +482,6 @@ getAttachOptions(): AttachOptions | null
 ```TypeScript
 getBackward(length: int, callback: AsyncCallback<string>): void
 ```
-
-获取光标后固定长度的文本。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -565,8 +541,6 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 ```TypeScript
 getBackward(length: int): Promise<string>
 ```
-
-获取光标后固定长度的文本。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -628,8 +602,6 @@ inputClient.getBackward(length).then((text: string) => {
 getBackwardSync(length: int): string
 ```
 
-获取光标后固定长度的文本。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getBackwardSync(length: int): string--><!--Device-InputClient-getBackwardSync(length: int): string-End-->
@@ -680,8 +652,6 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
-获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。
-
 **起始版本：** 12
 
 <!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>-End-->
@@ -721,8 +691,6 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 getCallingWindowInfo(): Promise<WindowInfo | null>
 ```
 
-获取当前拉起输入法的输入框所在应用窗口信息。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>-End-->
@@ -748,8 +716,6 @@ getCallingWindowInfo(): Promise<WindowInfo | null>
 ```TypeScript
 getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 ```
-
-获取编辑框属性值。使用callback异步回调。 **使用场景：** 根据编辑框类型调整输入法界面、根据编辑框配置提供不同的输入建议、实现特定输入逻辑、适配不同类型的输入框等。 **使用后效果：** 返回编辑框属性信息（包括inputPattern输入类型和enterKeyType回车键类型），输入法应用据此调整键盘布局。
 
 **起始版本：** 9
 
@@ -790,8 +756,6 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 ```
 
-获取编辑框属性值。使用callback异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void-End-->
@@ -802,7 +766,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null&gt; | 是 | 回调函数。当编辑框属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 **错误码：**
 
@@ -815,8 +779,6 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
 ```TypeScript
 getEditorAttribute(): Promise<EditorAttribute>
 ```
-
-获取编辑框属性值。使用promise异步回调。
 
 **起始版本：** 9
 
@@ -855,8 +817,6 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 getEditorAttribute(): Promise<EditorAttribute | null>
 ```
 
-获取编辑框属性值。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>-End-->
@@ -880,8 +840,6 @@ getEditorAttribute(): Promise<EditorAttribute | null>
 ```TypeScript
 getEditorAttributeSync(): EditorAttribute
 ```
-
-获取编辑框属性值。
 
 **起始版本：** 10
 
@@ -915,8 +873,6 @@ console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 getEditorAttributeSync(): EditorAttribute | null
 ```
 
-获取编辑框属性值。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null-End-->
@@ -940,8 +896,6 @@ getEditorAttributeSync(): EditorAttribute | null
 ```TypeScript
 getForward(length: int, callback: AsyncCallback<string>): void
 ```
-
-获取光标前固定长度的文本。使用callback异步回调。 **使用场景：** 分析已输入文本内容以提供智能补全建议、检查文本格式、实现文本预测功能、实现文本语义分析等。 **使用后效果：** 成功时返回光标前指定长度的文本字符串，输入法应用可据此更新候选词或输入建议。
 
 **起始版本：** 23
 
@@ -1001,8 +955,6 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 ```TypeScript
 getForward(length: int): Promise<string>
 ```
-
-获取光标前固定长度的文本。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -1064,8 +1016,6 @@ inputClient.getForward(length).then((text: string) => {
 getForwardSync(length: int): string
 ```
 
-获取光标前固定长度的文本。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getForwardSync(length: int): string--><!--Device-InputClient-getForwardSync(length: int): string-End-->
@@ -1115,8 +1065,6 @@ console.info(`Succeeded in getting forward, text: ${text}`);
 ```TypeScript
 getTextIndexAtCursor(callback: AsyncCallback<int>): void
 ```
-
-获取光标所在处的文本索引。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1173,8 +1121,6 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: int) => {
 getTextIndexAtCursor(): Promise<int>
 ```
 
-获取光标所在处的文本索引。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getTextIndexAtCursor(): Promise<int>--><!--Device-InputClient-getTextIndexAtCursor(): Promise<int>-End-->
@@ -1226,8 +1172,6 @@ inputClient.getTextIndexAtCursor().then((index: int) => {
 getTextIndexAtCursorSync(): int
 ```
 
-获取光标所在处的文本索引。
-
 **起始版本：** 23
 
 <!--Device-InputClient-getTextIndexAtCursorSync(): int--><!--Device-InputClient-getTextIndexAtCursorSync(): int-End-->
@@ -1269,8 +1213,6 @@ console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 insertText(text: string, callback: AsyncCallback<boolean>): void
 ```
 
-插入文本。使用callback异步回调。 **使用场景：** 插入候选词、插入特殊符号、实现文本自动补全、快速插入常用短语等。 **使用后效果：** 成功时返回true，文本已插入到编辑框光标位置。
-
 **起始版本：** 23
 
 <!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
@@ -1281,7 +1223,7 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 文本内容。建议长度不超过1KB。 |
+| text | string | 是 | 文本内容。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当文本插入成功，err为undefined，data为true；否则为错误对象。 |
 
 **错误码：**
@@ -1316,8 +1258,6 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 ```TypeScript
 insertText(text: string): Promise<boolean>
 ```
-
-插入文本。使用promise异步回调。
 
 **起始版本：** 23
 
@@ -1367,8 +1307,6 @@ inputClient.insertText('test').then((result: boolean) => {
 insertTextSync(text: string): void
 ```
 
-插入文本。
-
 **起始版本：** 23
 
 <!--Device-InputClient-insertTextSync(text: string): void--><!--Device-InputClient-insertTextSync(text: string): void-End-->
@@ -1379,7 +1317,7 @@ insertTextSync(text: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 文本内容。建议长度不超过1KB。建议长度不超过1KB。 |
+| text | string | 是 | 文本内容。 |
 
 **错误码：**
 
@@ -1400,8 +1338,6 @@ inputClient.insertTextSync('test');
 ```TypeScript
 moveCursor(direction: int, callback: AsyncCallback<void>): void
 ```
-
-移动光标。使用callback异步回调。 **使用场景：** 实现光标移动到特定位置、实现上下左右移动光标功能、实现快速定位、实现自定义光标控制等。 **使用后效果：** 成功时编辑框中的光标按指定方向移动一步。direction取值参见
 
 **起始版本：** 23
 
@@ -1443,8 +1379,6 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 moveCursor(direction: int): Promise<void>
 ```
 
-移动光标。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-moveCursor(direction: int): Promise<void>--><!--Device-InputClient-moveCursor(direction: int): Promise<void>-End-->
@@ -1461,7 +1395,7 @@ moveCursor(direction: int): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1487,8 +1421,6 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 ```TypeScript
 moveCursorSync(direction: int): void
 ```
-
-移动光标。
 
 **起始版本：** 23
 
@@ -1521,8 +1453,6 @@ inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 ```
 
-取消订阅附加选项变更（attachOptionsDidChange）事件，停止监听输入法附加配置项的变更动作。
-
 **起始版本：** 23
 
 <!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void--><!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void-End-->
@@ -1533,7 +1463,7 @@ offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有attachOptionsDidChange事件的订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | 否 | 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有 attachOptionsDidChange事件的订阅。 |
 
 **示例**
 
@@ -1558,8 +1488,6 @@ inputMethodEngine.getInputMethodAbility()
 ```TypeScript
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 ```
-
-取消订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **起始版本：** 19
 
@@ -1593,8 +1521,6 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 ```TypeScript
 onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
 ```
-
-订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1631,8 +1557,6 @@ inputMethodEngine.getInputMethodAbility()
 ```TypeScript
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 ```
-
-订阅绑定输入法时的附加选项变更事件。使用callback异步回调。
 
 **起始版本：** 19
 
@@ -1675,8 +1599,6 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 ```TypeScript
 recvMessage(msgHandler?: MessageHandler): void
 ```
-
-注册或取消注册Messagehandler。
 
 **起始版本：** 23
 
@@ -1722,8 +1644,6 @@ inputMethodEngine.getInputMethodAbility()
 selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 ```
 
-根据光标移动方向选中文本。使用callback异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void-End-->
@@ -1766,8 +1686,6 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 selectByMovement(movement: Movement): Promise<void>
 ```
 
-根据光标移动方向选中文本。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>--><!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>-End-->
@@ -1784,7 +1702,7 @@ selectByMovement(movement: Movement): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1812,8 +1730,6 @@ inputClient.selectByMovement(movement).then(() => {
 ```TypeScript
 selectByMovementSync(movement: Movement): void
 ```
-
-根据光标移动方向选中文本。
 
 **起始版本：** 23
 
@@ -1847,8 +1763,6 @@ inputClient.selectByMovementSync(movement);
 ```TypeScript
 selectByRange(range: Range, callback: AsyncCallback<void>): void
 ```
-
-根据索引范围选中文本。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -1893,8 +1807,6 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 selectByRange(range: Range): Promise<void>
 ```
 
-根据索引范围选中文本。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-selectByRange(range: Range): Promise<void>--><!--Device-InputClient-selectByRange(range: Range): Promise<void>-End-->
@@ -1911,7 +1823,7 @@ selectByRange(range: Range): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1940,8 +1852,6 @@ inputClient.selectByRange(range).then(() => {
 ```TypeScript
 selectByRangeSync(range: Range): void
 ```
-
-根据索引范围选中文本。
 
 **起始版本：** 23
 
@@ -1976,8 +1886,6 @@ inputClient.selectByRangeSync(range);
 ```TypeScript
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
-
-发送扩展编辑操作。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2020,8 +1928,6 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
-发送扩展编辑操作。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>--><!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>-End-->
@@ -2038,7 +1944,7 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2065,8 +1971,6 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 ```TypeScript
 sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 ```
-
-发送功能键。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -2136,8 +2040,6 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 sendKeyFunction(action: int): Promise<boolean>
 ```
 
-发送功能键。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>--><!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>-End-->
@@ -2205,8 +2107,6 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-发送自定义通信至已绑定当前输入法应用的编辑框应用。使用Promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
@@ -2217,14 +2117,14 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgId | string | 是 | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的标识符。最大长度256字节。最大长度256字节。 |
-| msgParam | ArrayBuffer | 否 | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的消息体。 |
+| msgId | string | 是 | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的标识符。最大长度256字节。超出范围时返回错误码401。 |
+| msgParam | ArrayBuffer | 否 | 需要发送至已绑定当前输入法应用的编辑框应用的自定义数据的消息体。最大大小128KB。超出范围时返回错误码401。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2257,8 +2157,6 @@ inputClient.sendMessage(msgId, msgParam).then(() => {
 sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-发送私有数据至需要与输入法应用通信的系统其他部分。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
@@ -2275,7 +2173,7 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2311,8 +2209,6 @@ inputMethodEngine.getInputMethodAbility().on('inputStart', (kbController, textIn
 setPreviewText(text: string, range: Range): Promise<void>
 ```
 
-设置预上屏文本。使用promise异步回调。
-
 **起始版本：** 23
 
 <!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>--><!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>-End-->
@@ -2323,14 +2219,14 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 预上屏的文本。建议长度不超过1KB。 |
+| text | string | 是 | 预上屏的文本。 |
 | range | Range | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参 数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2361,8 +2257,6 @@ inputClient.setPreviewText('test', range).then(() => {
 setPreviewTextSync(text: string, range: Range): void
 ```
 
-设置预上屏文本。
-
 **起始版本：** 23
 
 <!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void--><!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void-End-->
@@ -2373,7 +2267,7 @@ setPreviewTextSync(text: string, range: Range): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 预上屏的文本。建议长度不超过1KB。 |
+| text | string | 是 | 预上屏的文本。 |
 | range | Range | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参 数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **错误码：**

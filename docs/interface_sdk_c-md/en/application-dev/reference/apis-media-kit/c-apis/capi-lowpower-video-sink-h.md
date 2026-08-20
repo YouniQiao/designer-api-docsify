@@ -166,7 +166,7 @@ Sets the rendering window for an OH_LowPowerVideoSink instance. This function mu
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| [const OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md)* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
+| const OHNativeWindow* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **Returns**:
 
@@ -431,7 +431,7 @@ Sets an OH_LowPowerAudioSink instance for audio-video synchronization in an OH_L
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* videoSink | Pointer to an OH_LowPowerVideoSink instance |
-| OH_LowPowerAudioSink* audioSink | Pointer to an OH_LowPowerAudioSink instance |
+| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* audioSink | Pointer to an OH_LowPowerAudioSink instance |
 
 **Returns**:
 
@@ -509,7 +509,7 @@ Provides a buffer to an OH_LowPowerVideoSink instance for procesing.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| OH_AVSamplesBuffer* samples | Pointer to an OH_AVSamplesBuffer instance |
+| [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)* samples | Pointer to an OH_AVSamplesBuffer instance |
 
 **Returns**:
 

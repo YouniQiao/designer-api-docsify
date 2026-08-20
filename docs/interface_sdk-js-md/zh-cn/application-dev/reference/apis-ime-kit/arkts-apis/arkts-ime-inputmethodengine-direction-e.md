@@ -1,7 +1,5 @@
 # Direction
 
-光标的移动方向。
-
 **起始版本：** 23
 
 <!--Device-inputMethodEngine-export enum Direction--><!--Device-inputMethodEngine-export enum Direction-End-->
@@ -13,8 +11,6 @@
 ```TypeScript
 CURSOR_UP = 1
 ```
-
-向上。
 
 **起始版本：** 23
 
@@ -28,8 +24,6 @@ CURSOR_UP = 1
 CURSOR_DOWN
 ```
 
-向下。
-
 **起始版本：** 23
 
 <!--Device-Direction-CURSOR_DOWN--><!--Device-Direction-CURSOR_DOWN-End-->
@@ -42,8 +36,6 @@ CURSOR_DOWN
 CURSOR_LEFT
 ```
 
-向左。
-
 **起始版本：** 23
 
 <!--Device-Direction-CURSOR_LEFT--><!--Device-Direction-CURSOR_LEFT-End-->
@@ -55,8 +47,6 @@ CURSOR_LEFT
 ```TypeScript
 CURSOR_RIGHT
 ```
-
-向右。
 
 **起始版本：** 23
 

@@ -17,8 +17,6 @@ import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 function getSystemInputMethodConfigAbility(): ElementName
 ```
 
-获取系统输入法设置界面Ability信息。
-
 **起始版本：** 23
 
 <!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName--><!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName-End-->

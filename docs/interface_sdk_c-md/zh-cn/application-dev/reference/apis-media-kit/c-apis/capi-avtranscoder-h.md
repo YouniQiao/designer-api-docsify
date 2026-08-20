@@ -56,7 +56,7 @@ OH_AVTranscoder_Config *OH_AVTranscoderConfig_Create()
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVTranscoder_Config * | 如果创建成功返回指向OH_AVTranscoder_Config实例的指针，否则返回空指针。 |
+| [OH_AVTranscoder_Config *](capi-avtranscoder-oh-avtranscoder-config.md) | 如果创建成功返回指向OH_AVTranscoder_Config实例的指针，否则返回空指针。 |
 
 ### OH_AVTranscoderConfig_Release()
 
@@ -74,7 +74,7 @@ OH_AVErrCode OH_AVTranscoderConfig_Release(OH_AVTranscoder_Config* config)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config* config | Pointer to an OH_AVTranscoder_Config instance. |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md)* config | Pointer to an OH_AVTranscoder_Config instance. |
 
 **返回：**
 
@@ -98,7 +98,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetSrcFD(OH_AVTranscoder_Config *config, int3
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance. |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance. |
 | int32_t srcFd | Source file descriptor. |
 | int64_t srcOffset | The offset into the file where the data to be read, in bytes. |
 | int64_t length | The length in bytes of the data to be read |
@@ -125,7 +125,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstFD(OH_AVTranscoder_Config *config, int3
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t dstFd | Destination file descriptor |
 
 **返回：**
@@ -150,7 +150,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoType(OH_AVTranscoder_Config *confi
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | const char *mimeType | Destination video mime type. See native_avcodec_base.h |
 
 **返回：**
@@ -175,7 +175,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioType(OH_AVTranscoder_Config *confi
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | const char *mimeType | Destination audio mime type. See native_avcodec_base.h |
 
 **返回：**
@@ -200,7 +200,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstFileType(OH_AVTranscoder_Config *config
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | [OH_AVOutputFormat](../AVCodecKit/capi-native-avcodec-base-h.md#oh_avoutputformat) mimeType | Destination file type. See native_avcodec_base.h |
 
 **返回：**
@@ -225,7 +225,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstAudioBitrate(OH_AVTranscoder_Config *co
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t bitrate | Destination audio bitrate, in bit/s. |
 
 **返回：**
@@ -250,7 +250,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoBitrate(OH_AVTranscoder_Config *co
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t bitrate | Destination video bitrate, in bit/s. |
 
 **返回：**
@@ -275,7 +275,7 @@ OH_AVErrCode OH_AVTranscoderConfig_SetDstVideoResolution(OH_AVTranscoder_Config 
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t width | Destination for video width, in px. |
 | int32_t height | Destination for video height, in px. |
 
@@ -301,7 +301,7 @@ OH_AVTranscoder *OH_AVTranscoder_Create(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AVTranscoder * | 如果创建成功返回指向OH_AVTranscoder实例的指针，否则返回空指针。 |
+| [OH_AVTranscoder *](capi-avtranscoder-oh-avtranscoder.md) | 如果创建成功返回指向OH_AVTranscoder实例的指针，否则返回空指针。 |
 
 ### OH_AVTranscoder_Prepare()
 
@@ -319,8 +319,8 @@ OH_AVErrCode OH_AVTranscoder_Prepare(OH_AVTranscoder *transcoder, OH_AVTranscode
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance,see [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance,see [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) |
 
 **返回：**
 
@@ -344,7 +344,7 @@ OH_AVErrCode OH_AVTranscoder_Start(OH_AVTranscoder *transcoder)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **返回：**
 
@@ -368,7 +368,7 @@ OH_AVErrCode OH_AVTranscoder_Pause(OH_AVTranscoder *transcoder)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **返回：**
 
@@ -392,7 +392,7 @@ OH_AVErrCode OH_AVTranscoder_Resume(OH_AVTranscoder *transcoder)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **返回：**
 
@@ -416,7 +416,7 @@ OH_AVErrCode OH_AVTranscoder_Cancel(OH_AVTranscoder *transcoder)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **返回：**
 
@@ -440,7 +440,7 @@ OH_AVErrCode OH_AVTranscoder_Release(OH_AVTranscoder *transcoder)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **返回：**
 
@@ -464,8 +464,8 @@ OH_AVErrCode OH_AVTranscoder_SetStateCallback(OH_AVTranscoder *transcoder, OH_AV
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_OnStateChange callback | State callback function, see [OH_AVTranscoder_OnStateChange](capi-avtranscoder-base-h.md#oh_avtranscoder_onstatechange) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_OnStateChange](capi-avtranscoder-base-h.md#oh_avtranscoder_onstatechange) callback | State callback function, see [OH_AVTranscoder_OnStateChange](capi-avtranscoder-base-h.md#oh_avtranscoder_onstatechange) |
 | void *userData | Pointer to user specific data |
 
 **返回：**
@@ -490,8 +490,8 @@ OH_AVErrCode OH_AVTranscoder_SetErrorCallback(OH_AVTranscoder *transcoder, OH_AV
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_OnError callback | Error callback function, see [OH_AVTranscoder_OnError](capi-avtranscoder-base-h.md#oh_avtranscoder_onerror) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_OnError](capi-avtranscoder-base-h.md#oh_avtranscoder_onerror) callback | Error callback function, see [OH_AVTranscoder_OnError](capi-avtranscoder-base-h.md#oh_avtranscoder_onerror) |
 | void *userData | Pointer to user specific data |
 
 **返回：**
@@ -516,8 +516,8 @@ OH_AVErrCode OH_AVTranscoder_SetProgressUpdateCallback(OH_AVTranscoder *transcod
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_OnProgressUpdate callback | Uri callback function,see [OH_AVTranscoder_OnProgressUpdate](capi-avtranscoder-base-h.md#oh_avtranscoder_onprogressupdate) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_OnProgressUpdate](capi-avtranscoder-base-h.md#oh_avtranscoder_onprogressupdate) callback | Uri callback function,see [OH_AVTranscoder_OnProgressUpdate](capi-avtranscoder-base-h.md#oh_avtranscoder_onprogressupdate) |
 | void *userData | Pointer to user specific data |
 
 **返回：**
@@ -542,7 +542,7 @@ OH_AVErrCode OH_AVTranscoderConfig_EnableBFrame(OH_AVTranscoder_Config *config, 
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | bool enabled | Whether enable B Frame. If this function is not called, B Frame is disabled. |
 
 **返回：**
